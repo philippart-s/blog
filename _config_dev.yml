@@ -1,0 +1,3 @@
+# Dev config, override _config.yml
+theme: minimal-mistakes-jekyll
+remote_theme: foo

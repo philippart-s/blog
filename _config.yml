@@ -7,15 +7,24 @@ twitter_username: wildagsx
 github_username: philippart-s
 minimal_mistakes_skin: default
 search: true
+repository               : "philippart-s/blog"
 
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
+
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: Europe/Paris # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+# Gestion des commentaires dans les posts
+comments:
+  provider: "utterances"
+  utterances:
+    theme: "github-light" # "github-dark"
+    issue_term: "pathname"
 
 include:
   - _pages
@@ -28,6 +37,13 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+
+# Analytics
+analytics:
+  provider               : "google-universal" # false (default), "google", "google-universal", "custom"
+  google:
+    tracking_id          : "UA-1509890-3"
+    anonymize_ip         : true
 
 author:
   name   : "Stéphane Philippart"

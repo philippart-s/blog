@@ -9,11 +9,14 @@ tags:
   - Jenkins
   - Test
 ---
-Depuis maintenant pas mal de temps j'ai en charge le développement des pipelines de notre CI/CD sous Jenkins.
+Depuis maintenant pas mal de temps j'ai en charge le développement des pipelines de notre CI/CD sous Jenkins 2.
 
 J'ai bien dis développement car après avoir joué à *clique pour configurer* dans Jenkins 1, le passage à Jenkins 2 nous a permis de faire du *pipeline as code* ... ouf !
 
-Cependant on ne se refait pas durant ces mois de développements un truc me manquait: les tests unitaires ! En effet le mode de développement était un peu empirique:
+Cependant on ne se refait pas et durant ces mois de développements un truc me manquait: les tests unitaires et l'industrialisation du développement ! 
+
+L'approche script de groovy et le côté *amateur* que l'on avait me dérangeait.
+En effet le mode de développement était un peu empirique:
  1. je code 
  1. je commit
  1. je push
@@ -23,11 +26,11 @@ Cependant on ne se refait pas durant ces mois de développements un truc me manq
  1. retour en 1
 
  Tout d'abord autant le dire tout de suite, si on m'avait posé la question il y a deux ans concernant le développement des pipelines le premier truc que j'aurais répondu : 
- > mais pourquoi Groovy ? Pourquoi un truc au dessus de Java pas typé qui détecte rien à la compilation !
+ > Mais pourquoi Groovy ? Pourquoi un truc au dessus de Java pas typé qui détecte rien à la compilation !
 
- Mais ça c'était avant, je n'irai pas dire que c'est mon langage préféré mais j'avoue commencer à apprécier certains choix faits pas l'équipe et les closures c'est assez sympa.
+ Mais ça c'était avant, je n'irai pas dire que c'est mon langage préféré mais j'avoue commencer à apprécier certains choix faits pas l'équipe et les closures c'est assez sympa (même si le scoping des variables peu prendre du temps à débuguer).
 
- Les différents exemples que je vais utiliser seront basés sur le fait d'utiliser une sharedlib Jenkins, en gros on factoruse du code dans une lib permettant de ne pas copier coller du code à outrance dans les Jenkinsfile. Plus d'informations: https://jenkins.io/doc/book/pipeline/shared-libraries/.
+ Les différents exemples que je vais utiliser seront basés sur le fait d'utiliser une sharedlib Jenkins, en gros on factorise du code dans une lib permettant de ne pas copier coller du code à outrance dans les Jenkinsfile. Plus d'informations: https://jenkins.io/doc/book/pipeline/shared-libraries/.
 
  Revenons à nos moutons, améliorer mon process de développement, premier réfelexe ammener un peu de compilation et de contrôles sur le poste de développement.
 
@@ -69,6 +72,7 @@ Cependant on ne se refait pas durant ces mois de développements un truc me manq
       </dependencies>
   </plugin>
  ```
+ 
  :warning: Le développement des sharedlib impose une arborescence de sources, qui en résumé doit avoir un `src` qui contient directement les classes utilitaires et un `vars` pour les scripts des pipelines, plus d'informations dans la [doc](https://jenkins.io/doc/book/pipeline/shared-libraries/#directory-structure).
 
  Du coup il faut modifier les arborescences où trouver les sources car par défaut le plugin s'attends à trouver les sources dans `src/main/groovy` et `src/test/groovy`:
@@ -107,9 +111,8 @@ Cependant on ne se refait pas durant ces mois de développements un truc me manq
       </executions>
   </plugin>
  ```
-
  Une fois que l'on a tout ça il nous reste les dépendances, afin que la compilation se passe bien et qu'accessoirement on accède à toute la sandbox de Jenkins, aux API Groovy, ... il va falloir ajouter les bonnes dépendances:
- ```xml
+{% highlight xml linenos %}
  <!-- Dépendances pour le build-->
     <dependencies>
         <!-- Groovy ...-->
@@ -143,7 +146,7 @@ Cependant on ne se refait pas durant ces mois de développements un truc me manq
             <scope>provided</scope>
         </dependency>
     </dependencies>
- ```
+ {% endhighlight %}
 
  Pour les tests je me suis basé sur le framework de tests [JenkinsPipelineUnits](https://github.com/jenkinsci/JenkinsPipelineUnit) à l'origine créé par lesfurets.com et intégré dans la communeauté Jenkins, là encore quelques dépendances à ajouter:
  ```xml
@@ -198,3 +201,7 @@ Cependant on ne se refait pas durant ces mois de développements un truc me manq
  ```
 
  Le [pom complet](https://github.com/philippart-s/groovy-examples/blob/master/pom.xml) et le [projet complet](https://github.com/philippart-s/groovy-examples/).
+
+ Voilà à ce stade on a un projet qui compile, la complétion qui marche bien dans Intellij et ... la possibilité de faire des tests.
+
+ Cerise sur le gâteau notre développement peut lui même être buildé par Jenkins 2 mais dans mon cas ce sera sur GitHub Actions car je n'ai pas d'instances Jenkins 2 gratuites :wink:.

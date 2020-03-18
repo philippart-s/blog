@@ -200,8 +200,8 @@ Enfin pour éviter de chercher trop longtemps les repos où trouver tout ça:
   </pluginRepositories>
  ```
 
-Le [pom complet](https://github.com/philippart-s/groovy-examples/blob/master/pom.xml){:target="_blank"} et le [projet complet](https://github.com/philippart-s/groovy-examples/){:target="_blank"}.
+Le [pom complet](https://github.com/philippart-s/jenkins-examples/blob/master/pom.xml){:target="_blank"} et le [projet complet](https://github.com/philippart-s/jenkins-examples/){:target="_blank"}.
 
 Voilà à ce stade on a un projet qui compile, la complétion qui marche bien dans Intellij et ... la possibilité de faire des tests (ce sera l'objet du prochain article).
 
-Cerise sur le gâteau notre développement peut lui même être buildé par Jenkins 2 mais dans mon cas ce sera sur [GitHub Actions](https://github.com/philippart-s/groovy-examples/actions?query=workflow%3A%22Java+CI+with+Maven%22) car je n'ai pas d'instances Jenkins 2 gratuites :wink:.
+Cerise sur le gâteau notre développement peut lui même être buildé par Jenkins 2 mais dans mon cas ce sera sur [GitHub Actions](https://github.com/philippart-s/jenkins-examples/actions?query=workflow%3A%22Java+CI+with+Maven%22) car je n'ai pas d'instances Jenkins 2 gratuites :wink:.

@@ -10,7 +10,7 @@ tags:
   - Jenkins
   - Test
 ---
-En rédigeant l'article sur comment faire des tests unitaires lors de développements de sharedlib pour les pipelines Jenkins je me suis rendu compte pour bien le comprendre il fallait tout d'abord expliquer rapidement ce que sons les dits pipelines et sharedlib ! :innocent:
+En rédigeant la [première partie de l'article]({% post_url 2020-03-15-test-shared-lib-part1 %}) sur comment faire des tests unitaires lors de développements de sharedlib pour les pipelines Jenkins je me suis rendu compte pour bien le comprendre il fallait tout d'abord expliquer rapidement ce que sons les dits pipelines et sharedlib ! :innocent:
 
 On va donc reprendre par le début !
 
@@ -56,15 +56,14 @@ Jenkins 2, qui a vu le jour en 2016, a apporter une grosse nouveauté: la géné
 L'autre grosse nouveauté c'est que l'on peut désormait "embarqué" le pipeline directement dans l'arborescence projet sans devoir créer le job dans l'interface de Jenkins, le pipeline se définit par du code dynamiquement chargé et exécuté par le moteur de Jenkins.
 
 ### Pipeline as code
-Jenkins est écrit en Java
+Jenkins est écrit en Java et permet d'exéécuter des pipelines écris en Groovy (je pense qu'il serait possible de le faire en Java aussi mais ce n'est clairement pas comme cela que ça a été pensé).
 
-Pour développer son pipeline il y a plusieurs possibilités, tout faire en code, dans ce cas on est plutôt dans une approche *Scripted Pipeline* ou utiliser le DSL (Domain Specific Language) proposé par Jenkins et dans ce cas on plutôt dans l'approche *Declarative Pipeline*.
+Pour développer son pipeline il y a deux possibilités: *[Scripted Pipeline](https://jenkins.io/doc/book/pipeline/syntax/#scripted-pipeline){:target="_blank"}* ou *[Declarative Pipeline](https://jenkins.io/doc/book/pipeline/syntax/#declarative-pipeline){:target="_blank"}*. Les deux sont basées sur Groovy et le DSL (Domain Specific Language) proposé par Jenkins. Le *Scripted Pipeline* est la première façon qui a vue le jour pour développer ses pipelines, le *Declarative Pipeline* est plus récent et permet, principalement, de simplifier le développement des pipelines en n'utilisant que du DSL qui fait plus penser à de la config as code (mais où les espaces ne sont pas représentatifs ... :devil:).
 
-Pour ce qui nous interresse nous allons partir sur l'approche *Declarative Pipeline* qui est plus simple, plus récente et qui semble être ce vers quoi poussent les équipes Jenkins.
-
-
+Au final nous allons essentiellement conserver la phylosophie des *Declaratives Pipelines*: ne pas mettre de code Groovy dans nos Jenkinsfile, réserver cela à des classes utilitaires ou la définition de nos propres steps.
 
 
+---
 
 Jenkins permet de coder ses pipelines de plusieurs manières, les deux principales : *Syntaxique Pipelines* et *Declarative Pipelines*.
 

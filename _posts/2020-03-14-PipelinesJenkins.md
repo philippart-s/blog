@@ -15,7 +15,7 @@ En rédigeant la [première partie de l'article]({% post_url 2020-03-15-test-sha
 On va donc reprendre depuis le début !
 
 ### CI / CD et automatisation 
-En ces périodes de *DevOps* à outrance il apparaît une chose commune à toutes celles et ceux qui s'y essaient: la nécessité d'automatiser et de fluidifier le processus de build, de livraison et de déploiement.
+En ces périodes de *DevOps* à outrance, il apparaît une chose commune à toutes celles et ceux qui s'y essaient: la nécessité d'automatiser et de fluidifier le processus de build, de livraison et de déploiement.
 
 C'est là qu'interviennent la construction continue (Continuous Integration), la livraison continue (Continuous Delivery) et le déploiement continu (Continuous Deployment), en résumé ce que l'on appelle le **CI / CD**.
 

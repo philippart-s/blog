@@ -93,7 +93,7 @@ pipeline {
 [source](https://jenkins.io/doc/book/pipeline/jenkinsfile/){:target="_blank"}
 
 L'idée n'est pas d'expliquer dans le détail comment développer un pipeline (cela viendra ensuite et dans d'autres articles :wink:) mais simplement d'illustrer comment cela se déroule. 
-Un pipeline est une suite d'étape (*stages*) qui comportent plus au moins de sous-étapes (*steps*), elles même pouvant regrouper plusieurs commandes (par exemple *echo*).
+Un pipeline est une suite d'étape (*stages*) qui comportent plus au moins de sous-étapes (*steps*), elles-mêmes pouvant regrouper plusieurs commandes (par exemple *echo*).
 
 Jenkins fourni donc pas mal de [steps](https://jenkins.io/doc/pipeline/steps/){:target="_blank"}, les différents plugins que l'on rajoute dans Jenkins mettent aussi souvent des steps à disposition mais malgré tout cela il est possible que dans le contexte d'une entreprise il soit nécessaire de faire une action particulière ou d'utiliser un outil qui ne possède pas de plugin Jenkins. De manière assez naturelle on a tendance à utiliser le step *sh* qui permet d'exécuter n'importe quelle commande bash (y comprit d'appeler un script) comme on l'aurait fait avec Jenkins 1. Cela fonctionne mais je trouve que l'on tombe le travers boîte noire car une fois que l'on passe la main à un script il est plus compliqué d’interagir avec les éléments qui le composent et surtout cela fait deux référentiels de code à maintenir pour notre pipeline (le jenkinsfile et le script bash).
 

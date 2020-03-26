@@ -39,7 +39,7 @@ Citons quelques uns de ces outils:
 
 Il y en a pleins d'autres, mais l'idée est juste d'illustrer que ce n'est pas le choix qui manque !
 
-Les deux derniers (GitLab et GitHub) sont un peu particuliers car ce ne sont pas *que* des outils de CI/CD mais bien plus, mais ça je vous laisse aller voir cela par vos propres moyens (peut être que cela fera l'objet de prochains articles :wink:).
+Les deux derniers (GitLab et GitHub) sont un peu particuliers car ce ne sont pas *que* des outils de CI/CD mais bien plus: je vous laisse aller voir cela par vos propres moyens (peut être que cela fera l'objet de prochains articles :wink:).
 
 Intéressons nous à Jenkins, sujet de cet article.
 

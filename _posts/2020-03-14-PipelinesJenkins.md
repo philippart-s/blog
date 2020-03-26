@@ -19,7 +19,7 @@ En ces périodes de *DevOps* à outrance il apparaît une chose commune à toute
 
 C'est là qu'interviennent la construction continue (Continuous Integration), la livraison continue (Continuous Delivery) et le déploiement continu (Continuous Deployment), en résumé ce que l'on appelle le **CI / CD**.
 
-A cela s'ajoute le terme de *Pipelines* (comment concevoir et représenter les processus précédemment cités) qui ne sont au final qu'un enchaînement de tâches séquentielles ou parallèles permettant d'atteindre le but, à savoir la construction d'un livrable et son déploiement.
+A cela s'ajoute le terme de *Pipelines* (comment concevoir et représenter les processus précédemment cités) qui n'est, au final, qu'un enchaînement de tâches séquentielles ou parallèles permettant d'atteindre le but, à savoir la construction d'un livrable et son déploiement.
 
 Par exemple un pipeline classique de construction d'une application (Java par exemple :wink:):
 ![simple pipeline ci/cd]({{ site.url }}{{ site.baseurl }}/assets/images/PipelineJenkins/JavaSimplePipeline.png)
@@ -48,7 +48,7 @@ Deux versions existent, même si la version 1 n'est plus beaucoup utilisée (à 
 
 La version 2 de Jenkins est celle qui nous intéresse et celle qui sera utilisée pour mes articles, non pas que les autres soient mauvais (j'utilise à titre perso GitHub Actions car c'est gratuit) mais je ne les utilise pas au quotidien dans mon travail.
 
-Dans sa première mouture Jenkins permettait de définir un *job* qui était un ensemble de *steps*: tâche maven, appel sonar, bash, ...
+Dans sa première mouture Jenkins permettait de définir un *job* qui était un ensemble de *stages*: tâche maven, appel sonar, bash, ...
 Toute la configuration se faisait par le biais de l'interface graphique, pratique mais pas très industrialisable ni facile à généraliser: une modification transverse et c'était sur l'ensemble des jobs qu'il fallait repasser.
 
 Jenkins 2, qui a vu le jour en 2016, a apporté une grosse nouveauté: la généralisation du pipeline as code pour définir ses jobs.
@@ -90,21 +90,20 @@ pipeline {
     }
 }
 ``` 
-[source](https://jenkins.io/doc/book/pipeline/jenkinsfile/){:target="_blank"}
 
 L'idée n'est pas d'expliquer dans le détail comment développer un pipeline (cela viendra ensuite et dans d'autres articles :wink:) mais simplement d'illustrer comment cela se déroule. 
 Un pipeline est une suite d'étape (*stages*) qui comportent plus au moins de sous-étapes (*steps*), elles même pouvant regrouper plusieurs commandes (par exemple *echo*).
 
-Jenkins fourni donc pas mal de [steps](https://jenkins.io/doc/pipeline/steps/){:target="_blank"}, les différents plugins que l'on rajoute dans Jenkins mettent aussi souvent des steps à disposition mais malgré tout cela il est possible que dans le contexte d'une entreprise il soit nécessaire de faire une action particulière ou d'utiliser un outil qui ne possède pas de plugin Jenkins. De manière assez naturelle on a tendance à utiliser le step *sh* qui permet d'exécuter n'importe quelle commande bash (y comprit d'appeler un script) comme on l'aurait fait avec Jenkins 1. Cela fonctionne mais je trouve que l'on tombe le travers boîte noire car une fois que l'on passe la main à un script il est plus compliqué d’interagir avec les éléments qui le composent et surtout cela fait deux référentiels de code à maintenir pour notre pipeline (le jenkinsfile et le script bash).
+Jenkins fourni donc pas mal de [steps](https://jenkins.io/doc/pipeline/steps/){:target="_blank"}, les différents plugins que l'on rajoute dans Jenkins mettent aussi souvent des steps à disposition mais malgré tout cela il est possible que dans le contexte d'une entreprise il soit nécessaire de faire une action particulière ou d'utiliser un outil qui ne possède pas de plugin Jenkins. De manière assez naturelle on a tendance à utiliser le step *sh* qui permet d'exécuter n'importe quelle commande bash (y comprit d'appeler un script) comme on l'aurait fait avec Jenkins 1. Cela fonctionne mais je trouve que l'on tombe le travers boîte noire car une fois que l'on passe la main à un script il est plus compliqué d’interagir avec les éléments qui le composent et surtout cela fait deux référentiels de code à maintenir pour notre pipeline (le jenkinsfile et le script bash) :unamused:.
 
 C'est pourquoi on va devoir, pour sortir du pipeline *hello world*, faire nos propres "steps" (au final ce ne sont pas des vrais steps mais ils s'utilisent de la même façon) en codant de début à la fin notre pipeline dans une lib afin d'ensuite n'avoir à coder que le minimum dans le Jenkinsfile, le gain est double:
-1. on factorise du code et donc les modifications sont plus simples
-2. on contextualise à notre société ce qui doit l'étre
+1. on factorise du code et donc les modifications sont plus simples,
+2. on contextualise à notre société ce qui doit l’être.
 
 Cette lib s'appelle dans Jenkins une *SharedLib*.
 
 ### Les sharedlib
-Comme je l'ai déjà indiqué, une fois que l'on a commencé à coder des pipelines dans nos *Jenkinsfile* on a fait un grand pas par rapport à l'approche *click to config* de Jenkins 1 mais on se retrouve avec le même problème: toutes les actions identiques entre les projets sont dupliquées et lors d'un changement, par exemple de plugin que l'on utilise, on se retrouve à faire une maintenance sur tous les *Jenkinsfiles*.
+Comme je l'ai déjà indiqué, une fois que l'on a commencé à coder des pipelines dans nos *Jenkinsfile* on a fait un grand pas par rapport à l'approche *click to config* de Jenkins 1 mais on se retrouve avec le même problème: toutes les actions identiques entre les projets sont dupliquées et lors d'un changement, par exemple un plugin que l'on utilise, on se retrouve à faire une maintenance sur tous les *Jenkinsfiles*.
 Il faut donc pouvoir factoriser le code pour pouvoir le réutiliser, c'est là qu’interviennent les [sharedlib](https://jenkins.io/doc/book/pipeline/shared-libraries/){:target="_blank"}: une lib qui regroupe des classes / scripts réutilisables dans les *Jenkinsfile*. 
 
 Imaginons que nous voulions reprendre l'exemple précédent sans utiliser le step *sh* mais un développement maison permettant d'appeler du maven.
@@ -133,6 +132,8 @@ class Utilities implements Serializable{
     }
 }
 ```
+[source](https://github.com/philippart-s/jenkins-examples/blob/master/src/fr/ourson/utils/Utilities.groovy){:style="font-size: smaller"}{:target="_blank"}
+
 En dehors de l'utilité même de cette classe utilitaire ce qu'il faut retenir:
 1. la classe implémente *Serializable*: c'est une obligation pour une classe utilisée dans un pipeline Jenkins car celui-ci doit pouvoir "sauvegarder" à tous moments l'état du pipeline, c'est notamment induit par le fait que Jenkins utilise le CPS (Continuation Passing Style). Principe assez complexe et obscure mais il faut être au courant que ça existe car il n'est pas rare d'avoir une exception du genre *Caused: java.io.NotSerializableException:* :wink: et dans ce cas la doc de Jenkins a une [section dédiée](https://wiki.jenkins.io/display/JENKINS/Pipeline+CPS+method+mismatches){:target="_blank"} au fonctionnement du CPS et comment s'en sortir dans le code.
 2. la classe possède un constructeur avec un paramètre (habituellement appelé *steps*) permettant de passer le contexte Jenkins et notamment permettant l'utilisation des steps déjà présents dans Jenkins

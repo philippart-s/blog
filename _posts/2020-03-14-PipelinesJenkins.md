@@ -255,7 +255,7 @@ Simple non ? :tada:
 
 ### ~~One~~ Two more thing 
 #### Branches
-Ce qui est bien en déportant la sharedlib dans un repo git c'est que l'on va pouvoir utiliser le mécanisme de branches pour tester une fonctionnalité sans impacter l'ensemble des pipelines qui dépendent de la sharedlib:
+Ce qui est bien en déportant la sharedlib dans un repo git, c'est que l'on va pouvoir utiliser le mécanisme de branches pour tester une fonctionnalité sans impacter l'ensemble des pipelines qui dépendent de la sharedlib:
 ```groovy
 @Library('ourson-lib@feature/test') _
 

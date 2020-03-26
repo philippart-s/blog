@@ -289,7 +289,7 @@ Jusqu'à présent, les différents exemples de code montrent qu'il faut tout de 
 - un changement de paradigme d'entreprise sur les pipelines (par exemple ajout systématique d'un stage dédié à la performance) implique la modification de tous les Jenkinsfiles,
 - il est simple pour un projet d'alléger son pipeline voir de le rendre instable en le modifiant de manière erronée.
 
-Pour pallier à cela il est possible de pousser encore plus le principe de la factorisation de code: concevoir l'ensemble du pipeline dans la sharedlib et ne l'exposer que sous forme de step dans un Jenkinsfile.
+Pour pallier à cela, il est possible de pousser encore plus le principe de la factorisation de code: concevoir l'ensemble du pipeline dans la sharedlib et ne l'exposer que sous forme de step dans un Jenkinsfile.
 C'est une sorte de merge de tout ce qui a été présenté jusqu'ici:
 - on reprend la classe utilitaire
 - on reprend le principe de step maison ... mais amélioré :wink:

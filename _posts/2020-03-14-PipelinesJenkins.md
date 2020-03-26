@@ -19,7 +19,7 @@ En ces périodes de *DevOps* à outrance, il apparaît une chose commune à tout
 
 C'est là qu'interviennent la construction continue (Continuous Integration), la livraison continue (Continuous Delivery) et le déploiement continu (Continuous Deployment), en résumé ce que l'on appelle le **CI / CD**.
 
-A cela s'ajoute le terme de *Pipelines* (comment concevoir et représenter les processus précédemment cités) qui ne sont au final qu'un enchaînement de tâches séquentielles ou parallèles permettant d'atteindre le but, à savoir la construction d'un livrable et son déploiement.
+A cela s'ajoute le terme de *Pipelines* (comment concevoir et représenter les processus précédemment cités) qui ne sont au final qu'un enchaînement de tâches séquentielles ou parallèles permettant d'atteindre un but, à savoir la construction d'un livrable et son déploiement.
 
 Par exemple un pipeline classique de construction d'une application (Java par exemple :wink:):
 ![simple pipeline ci/cd]({{ site.url }}{{ site.baseurl }}/assets/images/PipelineJenkins/JavaSimplePipeline.png)

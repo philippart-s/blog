@@ -46,7 +46,7 @@ Intéressons-nous à Jenkins, sujet de cet article.
 ### Jenkins
 Deux versions existent, même si la version 1 n'est plus beaucoup utilisée (à part dans du legacy) c'est avec elle que beaucoup ont commencé (dont moi). Je ne vais pas m’appesantir dessus car ce n'est pas avec cette version que je vais illustrer mes articles.
 
-La version 2 de Jenkins est celle qui nous intéresse et celle qui sera utilisée pour mes articles, non pas que les autres soient mauvais (j'utilise à titre perso GitHub Actions car c'est gratuit) mais je ne les utilise pas au quotidien dans mon travail.
+La version 2 de Jenkins est celle qui nous intéresse et celle qui sera utilisée pour mes articles, non pas que les autres soient mauvais (j'utilise à titre personnel d'autres outils gratuits) mais je ne les utilise pas au quotidien dans mon travail.
 
 Dans sa première mouture Jenkins permettait de définir un *job* qui était un ensemble de *steps*: tâche maven, appel sonar, bash, ...
 Toute la configuration se faisait par le biais de l'interface graphique, pratique mais pas très industrialisable ni facile à généraliser: une modification transverse et c'était sur l'ensemble des jobs qu'il fallait repasser.

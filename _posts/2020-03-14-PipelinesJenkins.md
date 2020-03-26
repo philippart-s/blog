@@ -104,7 +104,7 @@ C'est pourquoi on va devoir, pour sortir du pipeline *hello world*, faire nos pr
 Cette lib s'appelle dans Jenkins une *SharedLib*.
 
 ### Les sharedlib
-Comme je l'ai déjà indiqué, une fois que l'on a commencé à coder des pipelines dans nos *Jenkinsfile* on a fait un grand pas par rapport à l'approche *click to config* de Jenkins 1 mais on se retrouve avec le même problème: toutes les actions identiques entre les projets sont dupliquées et lors d'un changement, par exemple de plugin que l'on utilise, on se retrouve à faire une maintenance sur tous les *Jenkinsfiles*.
+Comme je l'ai déjà indiqué, une fois que l'on a commencé à coder des pipelines dans nos *Jenkinsfile* on a fait un grand pas par rapport à l'approche *click to config* de Jenkins 1. Mais on se retrouve avec le même problème: toutes les actions identiques entre les projets sont dupliquées et lors d'un changement, par exemple de plugin que l'on utilise, on se retrouve à faire une maintenance sur tous les *Jenkinsfiles*.
 Il faut donc pouvoir factoriser le code pour pouvoir le réutiliser, c'est là qu’interviennent les [sharedlib](https://jenkins.io/doc/book/pipeline/shared-libraries/){:target="_blank"}: une lib qui regroupe des classes / scripts réutilisables dans les *Jenkinsfile*. 
 
 Imaginons que nous voulions reprendre l'exemple précédent sans utiliser le step *sh* mais un développement maison permettant d'appeler du maven.

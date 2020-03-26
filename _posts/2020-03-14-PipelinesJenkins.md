@@ -63,7 +63,7 @@ Pour développer son [pipeline](https://jenkins.io/doc/book/pipeline/){:target="
 Au final nous allons essentiellement conserver la philosophie des *Declaratives Pipelines*: ne pas mettre de code Groovy dans nos Jenkinsfiles, réserver cela à des classes utilitaires ou la définition de nos propres steps.
 
 ### Jenkinsfile
-Bon on a les notions de base maintenant il faut nous lancer et pour cela il va falloir que l'on code notre premier pipeline, par convention on code le pipeline dans un fichier se nommant *Jenkinsfile* mais au final peut importe le nom tant que c'est un script groovy !
+Bon, on a les notions de base, maintenant il faut nous lancer et pour cela il va falloir que l'on code notre premier pipeline: par convention on code le pipeline dans un fichier se nommant *Jenkinsfile* mais au final peut importe le nom tant que c'est un script groovy !
 
 Un *Jenkinsfile* en mode *Declarative pipeline*:
 ```groovy

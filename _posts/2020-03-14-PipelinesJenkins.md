@@ -58,21 +58,12 @@ L'autre grosse nouveauté c'est que l'on peut désormait "embarqué" le pipeline
 ### Pipeline as code
 Jenkins est écrit en Java et permet d'exéécuter des pipelines écris en Groovy (je pense qu'il serait possible de le faire en Java aussi mais ce n'est clairement pas comme cela que ça a été pensé).
 
-Pour développer son pipeline il y a deux possibilités: *[Scripted Pipeline](https://jenkins.io/doc/book/pipeline/syntax/#scripted-pipeline){:target="_blank"}* ou *[Declarative Pipeline](https://jenkins.io/doc/book/pipeline/syntax/#declarative-pipeline){:target="_blank"}*. Les deux sont basées sur Groovy et le DSL (Domain Specific Language) proposé par Jenkins. Le *Scripted Pipeline* est la première façon qui a vue le jour pour développer ses pipelines, le *Declarative Pipeline* est plus récent et permet, principalement, de simplifier le développement des pipelines en n'utilisant que du DSL qui fait plus penser à de la config as code (mais où les espaces ne sont pas représentatifs ...  :smiling_imp:).
+Pour développer son [pipeline](https://jenkins.io/doc/book/pipeline/){:target="_blank"} il y a deux possibilités: *[Scripted Pipeline](https://jenkins.io/doc/book/pipeline/syntax/#scripted-pipeline){:target="_blank"}* ou *[Declarative Pipeline](https://jenkins.io/doc/book/pipeline/syntax/#declarative-pipeline){:target="_blank"}*. Les deux sont basées sur Groovy et le DSL (Domain Specific Language) proposé par Jenkins. Le *Scripted Pipeline* est la première façon qui a vue le jour pour développer ses pipelines, le *Declarative Pipeline* est plus récent et permet, principalement, de simplifier le développement des pipelines en n'utilisant que du DSL qui fait plus penser à de la config as code (mais où les espaces ne sont pas représentatifs ...  :smiling_imp:).
 
-Au final nous allons essentiellement conserver la phylosophie des *Declaratives Pipelines*: ne pas mettre de code Groovy dans nos Jenkinsfile, réserver cela à des classes utilitaires ou la définition de nos propres steps.
-
-
----
-
-Jenkins permet de coder ses pipelines de plusieurs manières, les deux principales : *Syntaxique Pipelines* et *Declarative Pipelines*.
-
-Pour continuer je vais devoir expliquer simplement les concepts de base de la conception des pipelines Jenkins avec du code groovy et plus particulièrement ce que l'on appelle les *Declarative Pipelines*, bien entendu rien de remplacera les riches articles dans la [documentation](https://jenkins.io/doc/book/pipeline/){:target="_blank"} officielle, je vais juste essayer de résumer pour que l'on parle le même langage et comprenne le reste de l'article sur les tests unitaires et d'intégration.
-
-
+Au final nous allons essentiellement conserver la philosophie des *Declaratives Pipelines*: ne pas mettre de code Groovy dans nos Jenkinsfile, réserver cela à des classes utilitaires ou la définition de nos propres steps.
 
 ### Jenkinsfile
-Bon on a les notions de base maintenant il faut nous lancer et pour cela il va falloir que l'on code notre premier pipeline, par convention code le pipeline dans un fichier se nommant *Jenkinsfile* mais au final peut importe le nom tant que c'est un script groovy !
+Bon on a les notions de base maintenant il faut nous lancer et pour cela il va falloir que l'on code notre premier pipeline, par convention on code le pipeline dans un fichier se nommant *Jenkinsfile* mais au final peut importe le nom tant que c'est un script groovy !
 
 Un *Jenkinsfile* en mode *Declarative pipeline*:
 ```groovy
@@ -100,8 +91,14 @@ pipeline {
 ``` 
 [source](https://jenkins.io/doc/book/pipeline/jenkinsfile/){:target="_blank"}
 
+L'idée n'est pas d'expliquer dans le détail comment développer un pipeline (cela viendra ensuite dans d'autres articles :wink:) mais simplement d'illustre comment cela se déroule. 
+Un pipeline est une suite d'étape (*stages*) qui comportent plus au moins de sous-étapes (*steps*), elles même pouvant regrouper plusieurs commandes (par exemple *echo*).
+
+
+
+
 ### Les sharedlib
-Une fois que l'on a commencé à codé des pipelines dans nos *Jenkinsfile* on a fait un grand pas par rapport à l'approche *click to config* de Jenkins 1 mais on se retrouve avec le même problème: toutes les actions identiques entre les projets sont dupliquées et lors d'un changement par exemple de plugin que l'on utilise on se retrouve à faire une maintenance sur tous les *Jenkinsfiles*.
+Une fois que l'on a commencé à coder des pipelines dans nos *Jenkinsfile* on a fait un grand pas par rapport à l'approche *click to config* de Jenkins 1 mais on se retrouve avec le même problème: toutes les actions identiques entre les projets sont dupliquées et lors d'un changement par exemple de plugin que l'on utilise on se retrouve à faire une maintenance sur tous les *Jenkinsfiles*.
 Il faut donc pouvoir factoriser le code pour pouvoir le réutiliser, c'est là qu'intervienent les [sharedlib](https://jenkins.io/doc/book/pipeline/shared-libraries/): une lib qui regroupe des classes / scripts réutilisables dans les *Jenkinsfile*.  Cette lib étant récupérée directement depuis le référentiel de sources au moment de son utlisation, cela explique le mode opératoir empirique expliqué dans la première partie de l'article (devoir push son code pour tester), un exemple simple d'utilisation de sharedlib:
 ```groovy
 @Library('utils') import org.foo.Utilities

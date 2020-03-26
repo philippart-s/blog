@@ -285,7 +285,7 @@ pipeline {
 Notez le *@feature/test* qui permet de cibler une branche qui s'appelle *feature/test* dans mon repo git.
 
 #### Tout le pipeline as code
-Jusqu'à présent les différents exemples de code montrent qu'il faut tout de même définir une partie du pipeline dans le Jenkinsfile, pas grand chose mais tout de même assez pour que cela apporte quelques problèmes:
+Jusqu'à présent, les différents exemples de code montrent qu'il faut tout de même définir une partie du pipeline dans le Jenkinsfile: pas grand chose mais tout de même assez pour que cela apporte quelques problèmes:
 - un changement de paradigme d'entreprise sur les pipelines (par exemple ajout systématique d'un stage dédié à la performance) implique la modification de tous les Jenkinsfiles,
 - il est simple pour un projet d'alléger son pipeline voir de le rendre instable en le modifiant de manière erronée.
 

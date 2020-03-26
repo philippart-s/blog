@@ -53,7 +53,7 @@ Toute la configuration se faisait par le biais de l'interface graphique, pratiqu
 
 Jenkins 2, qui a vu le jour en 2016, a apporté une grosse nouveauté: la généralisation du pipeline as code pour définir ses jobs.
 
-L'autre grosse nouveauté c'est que l'on peut désormais "embarquer" le pipeline directement dans l'arborescence projet sans devoir créer le job dans l'interface de Jenkins, le pipeline se définit par du code dynamiquement chargé et exécuté par le moteur de Jenkins.
+L'autre grosse nouveauté c'est que l'on peut désormais "embarquer" le pipeline directement dans l'arborescence projet sans devoir créer le job dans l'interface de Jenkins: le pipeline se définit par du code dynamiquement chargé et exécuté par le moteur de Jenkins.
 
 ### Pipeline as code
 Jenkins est écrit en Java et permet d'exécuter des pipelines écris en Groovy (je pense qu'il serait possible de le faire en Java aussi mais ce n'est clairement pas comme cela que ça a été pensé).

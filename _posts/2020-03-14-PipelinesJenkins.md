@@ -207,7 +207,7 @@ node {
 #### Passer par la définition de steps custom
 L'idée d'un *[custom step](https://jenkins.io/doc/book/pipeline/shared-libraries/#defining-custom-steps){:target="_blank"}* est d'avoir la facilité d'écriture d'un *Declarative Pipeline* sans le *boilerplate code* qui est nécessaire pour appeler du code groovy.
 
-Pour cela il va falloir rajouter un script (et non une classe) dans le répertoire *vars* de notre projet sharedlib, les scripts dans ce répertoire ne contiennent qu'une seule méthode (*call*) et accessible [comme un step](https://jenkins.io/doc/book/pipeline/shared-libraries/#defining-custom-steps){:target="_blank"}.
+Pour cela il va falloir rajouter un script (et non une classe) dans le répertoire *vars* de notre projet sharedlib. Les scripts dans ce répertoire ne contiennent qu'une seule méthode (*call*) et accessible [comme un step](https://jenkins.io/doc/book/pipeline/shared-libraries/#defining-custom-steps){:target="_blank"}.
 
 Le code de notre script:
 ```groovy

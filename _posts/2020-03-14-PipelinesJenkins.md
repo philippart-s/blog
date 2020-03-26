@@ -140,7 +140,7 @@ En dehors de l'utilité même de cette classe utilitaire ce qu'il faut retenir:
 
 :warning:Spoiler alerte: :warning: un jour il faudra être capable de tester tout ça sans lancer un Jenkins :wink:.
 
-Il ne reste plus qu'à mettre à disposition la classe pour n'importe quel pipeline définit dans Jenkins, cela se fait simplement en mettant le source dans un repo git avec la [bonne arborescence](https://jenkins.io/doc/book/pipeline/shared-libraries/#directory-structure){:target="_blank"} (la classe doit se trouver dans un répertoire *src*), ensuite il faut la [déclarer](https://jenkins.io/doc/book/pipeline/shared-libraries/#using-libraries){:target="_blank"} dans Jenkins en indiquant l'endroit où elle se trouve:
+Il ne reste plus qu'à mettre à disposition la classe pour n'importe quel pipeline défini dans Jenkins. Cela se fait simplement en mettant le source dans un repo git avec la [bonne arborescence](https://jenkins.io/doc/book/pipeline/shared-libraries/#directory-structure){:target="_blank"} (la classe doit se trouver dans un répertoire *src*). Ensuite il faut la [déclarer](https://jenkins.io/doc/book/pipeline/shared-libraries/#using-libraries){:target="_blank"} dans Jenkins en indiquant l'endroit où elle se trouve:
 ![config-sharedlib-jenkins]({{ site.url }}{{ site.baseurl }}/assets/images/PipelineJenkins/config-sharedlib-jenkins.png)
 
 Enfin il ne reste plus qu'à la référencer grâce à l'instruction *@Library* dans le code du JenkinsFIle.

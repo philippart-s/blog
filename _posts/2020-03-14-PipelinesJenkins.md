@@ -178,7 +178,7 @@ pipeline {
 ```
 Quelques explications:
 1. la sharedlib se charge grâce à *@Library('ourson-lib') _*, le nom étant celui donné lors de la déclaration dans Jenkins
-2. il est nécessaire dans notre exemple d'utiliser le steps *script* car nous essayons d'exécuter du script (en fait du code groovy) dans un pipeline de type *Declarative Pipeline*, pour éviter cela il ne faut utiliser un step prédéfinit ou en faire un nous même (on va voir que l'on arrive à quelque chose de similaire un peu plus loin :wink:)
+2. il est nécessaire dans notre exemple d'utiliser le steps *script* car nous essayons d'exécuter du script (en fait du code groovy) dans un pipeline de type *Declarative Pipeline*. Pour éviter cela, il faut utiliser un step prédéfini ou en faire un nous même (on va voir que l'on arrive à quelque chose de similaire un peu plus loin :wink:)
 
 Comment simplifier l'utilisation de notre shared lib ? :thinking:
 

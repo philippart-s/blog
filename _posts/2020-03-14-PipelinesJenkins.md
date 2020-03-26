@@ -41,7 +41,7 @@ Il y en a pleins d'autres, mais l'idée est juste d'illustrer que ce n'est pas l
 
 Les deux derniers (GitLab et GitHub) sont un peu particuliers car ce ne sont pas *que* des outils de CI/CD mais bien plus: je vous laisse aller voir cela par vos propres moyens (peut être que cela fera l'objet de prochains articles :wink:).
 
-Intéressons nous à Jenkins, sujet de cet article.
+Intéressons-nous à Jenkins, sujet de cet article.
 
 ### Jenkins
 Deux versions existent, même si la version 1 n'est plus beaucoup utilisée (à part dans du legacy) c'est avec elle que beaucoup ont commencé (dont moi), je ne vais pas m’appesantir dessus car ce n'est pas avec cette version que je vais illustrer mes articles.

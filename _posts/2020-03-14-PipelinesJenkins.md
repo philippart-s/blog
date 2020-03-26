@@ -333,7 +333,7 @@ myMavenStep mvnArgs: 'clean compile'
 ```
 Plutôt concis non ? :sunglasses:
 
-Et comme indiqué le paramètre *mvnArgs* est celui que l'on récupère dans la map de notre script.
+Et comme indiqué, le paramètre *mvnArgs* est celui que l'on récupère dans la map de notre script.
 
 A ce stade je pense que l'on a plutôt réussi ce que l'on voulait non ?
 1. Avoir du pipeline as code

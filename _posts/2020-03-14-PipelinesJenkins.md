@@ -25,7 +25,7 @@ Par exemple un pipeline classique de construction d'une application (Java par ex
 ![simple pipeline ci/cd]({{ site.url }}{{ site.baseurl }}/assets/images/PipelineJenkins/JavaSimplePipeline.png)
 
 ### Outillage
-On se doute bien que l'on peut faire ça à la main en script bash par exemple mais que cela risque de vite prendre du temps et ne pas être très simple à maintenir !
+On se doute bien que l'on peut construire tout cela manuellement, en script bash par exemple, mais que cela risque de vite prendre du temps et ne pas être très simple à maintenir !
 
 Il existe pléthore d'outils dédiés plus ou moins à cela, le plus ou moins venant du fait que certains outils dont ce n'est pas le coeur de métier historique finissent par le proposer afin de permettre aux utilisateurs de bénéficier d'une "suite" logicielle complète pour la fabrication de leur application (entre nous cela permet aussi de garder l’utilisateur bien au chaud dans son giron sans qu'il aille voir ailleurs :wink:).
 

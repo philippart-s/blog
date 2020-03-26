@@ -10,7 +10,7 @@ tags:
 - Jenkins
 - Test
 ---
-En rédigeant la [première partie de l'article]({% post_url 2020-03-15-test-shared-lib-part1 %}) sur comment faire des tests unitaires lors de développements de sharedlib pour les pipelines Jenkins je me suis rendu compte que pour bien le comprendre il fallait tout d'abord expliquer rapidement ce que sons les dits pipelines et sharedlib ! :innocent:
+En rédigeant la [première partie de l'article]({% post_url 2020-03-15-test-shared-lib-part1 %}) sur comment faire des tests unitaires lors de développements de sharedlib pour les pipelines Jenkins, je me suis rendu compte que pour bien le comprendre il fallait tout d'abord expliquer rapidement ce que sont les dits pipelines et sharedlib ! :innocent:
 
 On va donc reprendre depuis le début !
 

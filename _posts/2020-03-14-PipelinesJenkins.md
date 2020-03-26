@@ -44,7 +44,7 @@ Les deux derniers (GitLab et GitHub) sont un peu particuliers car ce ne sont pas
 Intéressons-nous à Jenkins, sujet de cet article.
 
 ### Jenkins
-Deux versions existent, même si la version 1 n'est plus beaucoup utilisée (à part dans du legacy) c'est avec elle que beaucoup ont commencé (dont moi), je ne vais pas m’appesantir dessus car ce n'est pas avec cette version que je vais illustrer mes articles.
+Deux versions existent, même si la version 1 n'est plus beaucoup utilisée (à part dans du legacy) c'est avec elle que beaucoup ont commencé (dont moi). Je ne vais pas m’appesantir dessus car ce n'est pas avec cette version que je vais illustrer mes articles.
 
 La version 2 de Jenkins est celle qui nous intéresse et celle qui sera utilisée pour mes articles, non pas que les autres soient mauvais (j'utilise à titre perso GitHub Actions car c'est gratuit) mais je ne les utilise pas au quotidien dans mon travail.
 

@@ -10,7 +10,7 @@ tags:
   - Jenkins
   - Test
 ---
-Depuis maintenant pas mal de temps j'ai en charge le développement des pipelines de notre CI/CD sous Jenkins 2.
+Depuis maintenant pas mal de temps j'ai en charge le développement des pipelines de notre CI/CD sous Jenkins 2 (voir l'[article]({{ site.baseurl }}{% post_url 2020-03-14-PipelinesJenkins %}) qui en dit plus long sur ce sujet).
 
 J'ai bien dit développement car après avoir joué à *clique pour configurer* dans Jenkins 1, le passage à Jenkins 2 nous a permis de faire du *pipeline as code* ... ouf !
 

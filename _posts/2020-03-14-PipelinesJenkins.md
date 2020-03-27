@@ -97,8 +97,8 @@ Un pipeline est une suite d'étape (*stages*) qui comportent plus au moins de so
 Jenkins fournit donc pas mal de [steps](https://jenkins.io/doc/pipeline/steps/){:target="_blank"}. Les différents plugins que l'on rajoute dans Jenkins mettent aussi souvent des steps à disposition mais malgré tout, il est possible que dans le contexte d'une entreprise, il soit nécessaire de faire une action particulière ou d'utiliser un outil qui ne possède pas de plugin Jenkins. De manière assez naturelle on a tendance à utiliser le step *sh* qui permet d'exécuter n'importe quelle commande bash (y comprit d'appeler un script) comme on l'aurait fait avec Jenkins 1. Cela fonctionne mais je trouve que l'on tombe dans le travers boîte noire, car une fois que l'on passe la main à un script, il est plus compliqué d’interagir avec les éléments qui le composent et surtout cela fait deux référentiels de code à maintenir pour notre pipeline (le jenkinsfile et le script bash).
 
 C'est pourquoi on va devoir, pour sortir du pipeline *hello world*, faire nos propres "steps" (au final ce ne sont pas des vrais steps mais ils s'utilisent de la même façon) en codant du début à la fin notre pipeline dans une lib afin de n'avoir à coder que le minimum dans le Jenkinsfile. Le gain est double:
-1. on factorise du code et donc les modifications sont plus simples
-2. on contextualise à notre société ce qui doit l'étre
+1. on factorise du code et donc les modifications sont plus simples,
+2. on contextualise à notre société ce qui doit l’être.
 
 Cette lib s'appelle dans Jenkins une *SharedLib*.
 
@@ -124,7 +124,7 @@ class Utilities implements Serializable{
     }
 
     /**
-    * Simple method to exceute maven commands
+    * Simple method to execute maven commands
     * @param args Maven arguments.
     */
     void mvn(String args) {
@@ -144,7 +144,7 @@ En dehors de l'utilité même de cette classe utilitaire ce qu'il faut retenir:
 Il ne reste plus qu'à mettre à disposition la classe pour n'importe quel pipeline défini dans Jenkins. Cela se fait simplement en mettant le source dans un repo git avec la [bonne arborescence](https://jenkins.io/doc/book/pipeline/shared-libraries/#directory-structure){:target="_blank"} (la classe doit se trouver dans un répertoire *src*). Ensuite il faut la [déclarer](https://jenkins.io/doc/book/pipeline/shared-libraries/#using-libraries){:target="_blank"} dans Jenkins en indiquant l'endroit où elle se trouve:
 ![config-sharedlib-jenkins]({{ site.url }}{{ site.baseurl }}/assets/images/PipelineJenkins/config-sharedlib-jenkins.png)
 
-Enfin il ne reste plus qu'à la référencer grâce à l'instruction *@Library* dans le code du JenkinsFIle.
+Enfin il ne reste plus qu'à la référencer grâce à l'instruction *@Library* dans le code du JenkinsFile.
 
 Le code de notre pipeline devient donc:
 ```groovy
@@ -210,7 +210,7 @@ L'idée d'un *[custom step](https://jenkins.io/doc/book/pipeline/shared-librarie
 
 Pour cela il va falloir rajouter un script (et non une classe) dans le répertoire *vars* de notre projet sharedlib. Les scripts dans ce répertoire ne contiennent qu'une seule méthode (*call*) et accessible [comme un step](https://jenkins.io/doc/book/pipeline/shared-libraries/#defining-custom-steps){:target="_blank"}.
 
-Le code de notre script:
+Le code de notre script (*myMaven.groovy*):
 ```groovy
 import fr.ourson.utils.Utilities
 
@@ -298,7 +298,7 @@ C'est une sorte de merge de tout ce qui a été présenté jusqu'ici:
 - on reprend la classe utilitaire
 - on reprend le principe de step maison ... mais amélioré :wink:
 
-Le code du step devient:
+Le code du step (*myMavenStep.groovy*) devient:
 ```groovy
 import fr.ourson.utils.Utilities
 
@@ -313,7 +313,7 @@ def call(Map config) {
     node() {
         stage('Build') {
             echo 'Building..'
-            myMaven config.mvnArgs
+            util.mvn config.mvnArgs
         }
         stage('Test') {
             echo 'Testing..'

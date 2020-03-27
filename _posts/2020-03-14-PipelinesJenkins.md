@@ -186,7 +186,7 @@ Comment simplifier l'utilisation de notre shared lib ? :thinking:
 #### Passer en mode Scripted Pipeline
 C'est moins joli mais c'est plus simple d'appeler directement du code exposé par une sharedlib:
 ```groovy
-@Library('ourson-lib@sharedlib-part2') _
+@Library('ourson-lib') _
 
 import fr.ourson.utils.Utilities
 def utils = new Utilities(this)

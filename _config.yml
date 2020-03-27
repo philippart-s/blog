@@ -8,8 +8,8 @@ github_username: philippart-s
 minimal_mistakes_skin: default
 search: true
 repository               : "philippart-s/blog"
-url :    https://philippart-s.github.io
-baseurl : /blog
+url : "https://philippart-s.github.io"
+baseurl : "/blog"
 
 
 

@@ -344,7 +344,7 @@ Et comme indiqué, le paramètre *mvnArgs* est celui que l'on récupère dans la
 A ce stade je pense que l'on a plutôt réussi ce que l'on voulait non ?
 1. Avoir du pipeline as code
 1. Avoir du code centralisé pour aider la maintenance
-1. Pouvoir coder des steps maisons pour adapter nos pipelines à nos outils
+1. Pouvoir coder des steps maison pour adapter nos pipelines à nos outils
 
 Voilà, c'est la fin de cet article de présentation de la notion de pipeline as code avec Jenkins 2. Le mode développement n'a pas été abordé dans cet article, mais le fait de devoir mettre à disposition le code dans le repo git et ensuite lancer dans Jenkins ne permet pas une bonne industrialisation de développement: ce sera l'objet des articles dédiés au tests des shared lib Jenkins ([part 1]({{ site.baseurl }}{% post_url 2020-03-15-test-shared-lib-part1 %}) & part 2 - coming soon !)
 

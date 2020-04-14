@@ -170,6 +170,11 @@ Quelques explications sont nécessaires il me semble !
  - `assertCallStackContains('mvn clean compile')`: le framework propose des méthodes utilitaire, celle-ci permet de rechercher dans l'arbre d'appel une commande en particulier, dans mon cas je veux vérifier que l'on appel bien la commande *mvn* avec les paramètres passés *clean compile*
 
  ### Tester le custom step
- A ce stade nous savons donc tester des classes utilitaires mais il nous manque notre custom steps qui est utiliser dans les Jenkinsfiles.
+ A ce stade nous savons donc tester des classes utilitaires mais il nous manque notre custom steps qui est utilisé dans les Jenkinsfiles.
 
- Pour cela il va falloir 
+ La première façon de le tester est de tester le script représentant le custom step, dans notre cas *myMavenStep.groovy*:
+ ```groovy
+ ``` 
+ 
+ 
+ Pour cela il va falloir charger un Jenkinsfile utilisant notre custom step et l'exécuter pour vérifier qu'il s'exécute correctement :crossed_fingers:.

@@ -56,7 +56,7 @@ Cela semble être une évidence, mais c'est très souvent au début de tous les 
 #### Alors stop ou encore ?
 En conclusion: oui, je suis soulagé d'arriver à la fin du projet et je vais pouvoir souffler un peu en termes de rythme et de parallélisation de tâches mais - car il y a un "mais" - j'ai déjà un nouveau projet qui se profile, projet qui concernera plus de la conception d'architecture CI / CD que du développement.
 
-Et devinez quoi j'ai déjà identifié ma core team, mes clients, prévu quelques ateliers de brain storming avec eux, des ateliers de raffinement de backlog avec la core team et des itérations courtes pour voir assez vite si on va dans le bon sens ou non !
+Et devinez quoi? J'ai déjà identifié ma core team, mes clients, prévu quelques ateliers de brainstorming avec eux, des ateliers de raffinement de backlog avec la core team et des itérations courtes pour voir assez vite si on va dans le bon sens ou non !
 
 Je crois que lorsque l'on a goûté à cette façon de fonctionner et que l'on y adhère il est compliqué de faire autrement. Alors oui on l'adapte mais on y revient.
 

@@ -18,7 +18,7 @@ J'ai tout de même souhaité par appétence, et parce que j'y crois, d'utiliser 
 Derrière le "à ma façon" il faut voir l'organisation suivante:
  - j'ai un client identifié qui sera l'utilisateur de l'application
  - j'ai un développeur à plein temps dans la dev team
- - je suis le PO et fait office de peer reviewer pour le code mais ne code pas (presque pas :wink:)
+ - je suis le Product Owner (PO) et fait office de peer reviewer pour le code mais ne code pas (presque pas :wink:)
  - l'équipe gère de manière autonome le rôle de Scrum Master (SM)
 
 Les itérations sont organisées en sprint de 15 jours calendar et contiennent un grooming de backlog avec le dev et une démo au client le dernier jour. Durant le sprint la MEP du sprint précédent est effectuée (pas de déploiement continu donc les durées de MEP sont forcément un peu longues).
@@ -37,7 +37,7 @@ Mais alors pourquoi ce soulagement ? :thinking:
 
 Selon moi il y a plusieurs raisons et quoi de mieux qu'un REX pour les identifier !
 
-#### L'agilité demande beaucoup d’implication
+### L'agilité demande beaucoup d’implication
 C'est quelque chose que j'avais constaté auprès des équipes qui utilisaient les principes agiles: l'implication que demande cette approche use au fil du temps.
 Je m'explique, si le SM ou l'équipe arrive à bien s'organiser: l'équipe à toujours quelque chose à faire, en résumé la backlog est toujours alimentée, il y a toujours du dev à faire, des démos, ...
 
@@ -48,12 +48,12 @@ Dans mon cas on peut se dire que cela va car comme j'ai des pauses entre les spr
 
 L'implication et donc le fais d'avoir toujours quelque chose à faire avec les sprints qui s’enchaînent explique, je pense, cette forme de lassitude.
 
-#### Ne pas être dédié
-C'est peut être la raison principale, en effet, hormis l'évidence que le switch de contexte est toujours compliqué à vivre, cela entretient aussi une culpabilité / stress permanent d'avoir l'impression que la tâche courante se fait au détriment d'une autre tâche et pour peu que l'on veuille bien faire les choses, cela débouche souvent sur du travail en temps masqué (donc très souvent sur le temps perso ...).
+### Ne pas être dédié
+C'est peut être la raison principale, en effet, hormis l'évidence que le switch de contexte est toujours compliqué à vivre, cela entretien aussi une culpabilité / stress permanent d'avoir l'impression que la tâche courante se fait au détriment d'une autre tâche et pour peu que l'on veuille bien faire les choses, cela débouche souvent sur du travail en temps masqué (donc très souvent sur le temps perso ...).
 
 Cela semble être une évidence, mais c'est très souvent au début de tous les livres traitant d'agilité: le fait d'être dédié est une condition importante voire essentielle pour le succès d'une équipe organisée selon les principes agiles et lorsque l'on regarde dans la réalité: c'est rarement le cas, notamment par les collègues et managers proches qui peuvent avoir du mal à comprendre que lorsque vous faites partie d'une équipe agile et êtes en plein sprint, même 1 heure à faire autre chose c'est un switch de contexte qui peut avoir de plus lourdes conséquences.
 
-#### Alors stop ou encore ?
+### Alors stop ou encore ?
 En conclusion: oui, je suis soulagé d'arriver à la fin du projet et je vais pouvoir souffler un peu en termes de rythme et de parallélisation de tâches mais - car il y a un "mais" - j'ai déjà un nouveau projet qui se profile, projet qui concernera plus de la conception d'architecture CI / CD que du développement.
 
 Et devinez quoi? J'ai déjà identifié ma core team, mes clients, prévu quelques ateliers de brainstorming avec eux, des ateliers de raffinement de backlog avec la core team et des itérations courtes pour voir assez vite si on va dans le bon sens ou non !

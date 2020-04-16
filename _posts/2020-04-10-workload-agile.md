@@ -19,7 +19,7 @@ Derrière le "à ma façon" il faut voir l'organisation suivante:
  - j'ai un client identifié qui sera l'utilisateur de l'application
  - j'ai un développeur à plein temps dans la dev team
  - je suis le PO et fait office de peer reviewer pour le code mais ne code pas (presque pas :wink:)
- - l'équipe gère de manière autonome le rôle de SM
+ - l'équipe gère de manière autonome le rôle de Scrum Master (SM)
 
 Les itérations sont organisées en sprint de 15 jours calendar et contiennent un grooming de backlog avec le dev et une démo au client le dernier jour. Durant le sprint la MEP du sprint précédent est effectuée (pas de déploiement continu donc les durées de MEP sont forcément un peu longues).
 

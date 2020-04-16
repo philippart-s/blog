@@ -49,7 +49,7 @@ Dans mon cas on peut se dire que cela va car comme j'ai des pauses entre les spr
 L'implication et donc le fais d'avoir toujours quelque chose à faire avec les sprints qui s’enchaînent explique, je pense, cette forme de lassitude.
 
 #### Ne pas être dédié
-C'est peut être la raison principale, en effet, hormis l'évidence que le switch de contexte est toujours compliqué à vivre cela entretien aussi une culpabilité / stress permanent d'avoir l'impression que la tâche courante se fait au détriment d'une autre tâche et pour peu que l'on veuille bien faire les choses cela débouche souvent sur du travail en temps masqué (donc très souvent sur le temps perso ...).
+C'est peut être la raison principale, en effet, hormis l'évidence que le switch de contexte est toujours compliqué à vivre, cela entretient aussi une culpabilité / stress permanent d'avoir l'impression que la tâche courante se fait au détriment d'une autre tâche et pour peu que l'on veuille bien faire les choses, cela débouche souvent sur du travail en temps masqué (donc très souvent sur le temps perso ...).
 
 Cela semble être un évidence mais c'est très souvent au début de tous les livres traitant d'agilité: le fait d'être dédié est une condition importante voir essentielle pour le succès d'une équipe organisée selon les principes agiles et lorsque l'on regarde dans la réalité c'est rarement le cas, notamment par les collègues et managers proches qui peuvent avoir du mal à comprendre que lorsque vous faites parti d'une équipe agile et êtes en plein sprint: même 1 heure à faire autre chose c'est un switch de contexte qui peut avoir de plus lourdes conséquences.
 

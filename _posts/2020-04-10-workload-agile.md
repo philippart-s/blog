@@ -10,7 +10,7 @@ tags:
 ---
 ![Image d'un business man avec trop de travail]({{ site.url }}{{ site.baseurl }}/assets/images/workload-agile/businessman-very-busy-at-work-doing-several-things-at-once.jpg){: .align-left}
 
-Depuis maintenant bientôt 2 ans j'ai, parmi certaines de mes activités, la responsabilité d'une application en développement spécifique (Angular & Spring).
+Depuis maintenant bientôt 2 ans, j'ai, parmi certaines de mes activités, la responsabilité d'une application en développement spécifique (Angular & Spring).
 
 Nous sommes une (très) petite équipe puisque il y a un développeur et moi !
 J'ai tout de même souhaité par appétence, et parce que j'y crois, décidé d'utiliser les principes agiles pour gérer le développement de cette application et fais du SCRUM "à ma façon".

@@ -54,7 +54,7 @@ C'est peut être la raison principale, en effet, hormis l'évidence que le switc
 Cela semble être une évidence, mais c'est très souvent au début de tous les livres traitant d'agilité: le fait d'être dédié est une condition importante voire essentielle pour le succès d'une équipe organisée selon les principes agiles et lorsque l'on regarde dans la réalité: c'est rarement le cas, notamment par les collègues et managers proches qui peuvent avoir du mal à comprendre que lorsque vous faites partie d'une équipe agile et êtes en plein sprint, même 1 heure à faire autre chose c'est un switch de contexte qui peut avoir de plus lourdes conséquences.
 
 #### Alors stop ou encore ?
-En conclusion oui je suis soulagé d'arriver à la fin du projet et je vais pouvoir souffler un peu en termes de rythmes et certainement parallélisation de tâches mais, car il y a un mais j'ai déjà un nouveau projet qui se profile, projet qui sera plus sur de la conception d'architecture CI / CD que développement.
+En conclusion: oui, je suis soulagé d'arriver à la fin du projet et je vais pouvoir souffler un peu en termes de rythme et de parallélisation de tâches mais - car il y a un "mais" - j'ai déjà un nouveau projet qui se profile, projet qui concernera plus de la conception d'architecture CI / CD que du développement.
 
 Et devinez quoi j'ai déjà identifié ma core team, mes clients, prévu quelques ateliers de brain storming avec eux, des ateliers de raffinement de backlog avec la core team et des itérations courtes pour voir assez vite si on va dans le bon sens ou non !
 

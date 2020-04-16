@@ -13,7 +13,7 @@ tags:
 Depuis maintenant bientôt 2 ans, j'ai, parmi certaines de mes activités, la responsabilité d'une application en développement spécifique (Angular & Spring).
 
 Nous sommes une (très) petite équipe puisque il y a un développeur et moi !
-J'ai tout de même souhaité par appétence, et parce que j'y crois, décidé d'utiliser les principes agiles pour gérer le développement de cette application et fais du SCRUM "à ma façon".
+J'ai tout de même souhaité par appétence, et parce que j'y crois, d'utiliser les principes agiles pour gérer le développement de cette application et ai fait du SCRUM "à ma façon".
 
 Derrière le "à ma façon" il faut voir l'organisation suivante:
  - j'ai un client identifié qui sera l'utilisateur de l'application

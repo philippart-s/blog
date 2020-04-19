@@ -10,7 +10,7 @@ tags:
 - Jenkins
 - Test
 ---
-En rédigeant la [première partie de l'article]({{ site.baseurl }}{% post_url 2020-03-15-test-shared-lib-part1 %}) sur comment faire des tests unitaires lors de développements de sharedlib pour les pipelines Jenkins, je me suis rendu compte que pour bien le comprendre il fallait tout d'abord expliquer rapidement ce que sont les dits pipelines et sharedlib ! :innocent:
+En rédigeant la [première partie de l'article]({{ site.baseurl }}{% post_url 2020-03-15-maveniser-sharedlib %}) sur comment faire des tests unitaires lors de développements de sharedlib pour les pipelines Jenkins, je me suis rendu compte que pour bien le comprendre il fallait tout d'abord expliquer rapidement ce que sont les dits pipelines et sharedlib ! :innocent:
 
 On va donc reprendre depuis le début !
 
@@ -346,6 +346,6 @@ A ce stade je pense que l'on a plutôt réussi ce que l'on voulait non ?
 1. Avoir du code centralisé pour aider la maintenance
 1. Pouvoir coder des steps maison pour adapter nos pipelines à nos outils
 
-Voilà, c'est la fin de cet article de présentation de la notion de pipeline as code avec Jenkins 2. Le mode développement n'a pas été abordé dans cet article, mais le fait de devoir mettre à disposition le code dans le repo git et ensuite lancer dans Jenkins ne permet pas une bonne industrialisation de développement: ce sera l'objet des articles dédiés au tests des shared lib Jenkins ([part 1]({{ site.baseurl }}{% post_url 2020-03-15-test-shared-lib-part1 %}) & part 2 - coming soon !)
+Voilà, c'est la fin de cet article de présentation de la notion de pipeline as code avec Jenkins 2. Le mode développement n'a pas été abordé dans cet article, mais le fait de devoir mettre à disposition le code dans le repo git et ensuite lancer dans Jenkins ne permet pas une bonne industrialisation de développement: ce sera l'objet des articles dédiés au tests des shared lib Jenkins ([part 1]({{ site.baseurl }}{% post_url 2020-03-15-maveniser-sharedlib %}) & part 2 - coming soon !)
 
 Le projet dans sa globalité est disponible sur mon [repo](https://github.com/philippart-s/jenkins-examples){:target="_blank"} github.

@@ -1,6 +1,6 @@
 ---
-title: "Tester une classe utilitaire dans une Sharedlib Jenkins : partie 2"
-excerpt: "Tester c'est douter , Vraiment ?"
+title: "Tester une Sharedlib (et ses classes utilitaires) Jenkins"
+excerpt: "Tester c'est douter , Vraiment ? :thinking:"
 classes: wide
 categories:
   - Articles
@@ -10,7 +10,7 @@ tags:
   - Jenkins
   - Test
 ---
-Suite de l'[article]({{ site.baseurl }}{% post_url 2020-03-15-test-shared-lib-part1 %}) qui expliquait comment mettre en place un projet maven lors du développement d'une sharedlib Jenkins 2,(mais au final plus généralement d'un projet Groovy) l'objectif maintenant va être de tester son code, notamment en local, afin d'éviter de devoir push son code sur le repo git ou monter une instance de tests. 
+Suite de l'[article]({{ site.baseurl }}{% post_url 2020-03-15-maveniser-sharedlib %}) qui expliquait comment mettre en place un projet maven lors du développement d'une sharedlib Jenkins 2,(mais au final plus généralement d'un projet Groovy) l'objectif maintenant va être de tester son code, notamment en local, afin d'éviter de devoir push son code sur le repo git ou monter une instance de tests. 
 
 Pour mémoire il est, je pense, nécessaire de se rafraîchir la mémoire sur le développement de pipelines Jenkins avec [article]({{ site.baseurl }}{% post_url 2020-03-14-PipelinesJenkins %}) qui en parle sur ce même blog :wink:.
 
@@ -45,10 +45,6 @@ class Utilities implements Serializable{
 ```groovy
 import fr.ourson.utils.Utilities
 
-/**
-* Custom full step example.
-* @param config Step parameters
-*/
 def call(Map config) {
 
     Utilities util = new Utilities(this)
@@ -56,7 +52,7 @@ def call(Map config) {
     node() {
         stage('Build') {
             echo 'Building..'
-            myMaven config.mvnArgs
+            util.mvn config.mvnArgs
         }
         stage('Test') {
             echo 'Testing..'
@@ -65,12 +61,13 @@ def call(Map config) {
             echo 'Deploying....'
         }
     }
+} }
 }
 ```
 [source](https://github.com/philippart-s/jenkins-examples/blob/master/vars/myMavenStep.groovy){:style="font-size: smaller"}{:target="_blank"}
  - et enfin le code du Jenkinsfile qu'il l'utilise:
  
- ```groovy
+```groovy
 @Library('ourson-lib') _
 
 myMavenStep mvnArgs: 'clean compile'
@@ -81,23 +78,21 @@ Ca y est on a lu la doc en entier (2 fois parce que la première fois ce n'étai
 
 Et se pose alors mes deux questions d'origine:
  - que se passe t il si je touche une partie du code de la shared lib ? Je test tous les pipelines pour m'assurer qu'il n'y a pas de régression ? 
- - il n'y a pas plus simple que de push mon code pour le tester ? Cela fait un peu je teste sur la prod (même si le mécanisme de branche me permet d'éviter cela) :scream:.
+ - il n'y a pas plus simple que de push mon code pour le tester ? Cela fait un peu je teste sur la prod  :scream: (même si le mécanisme de branche me permet d'éviter cela).
  
 Comme vous vous en doutez c'est là que les tests unitaires vont répondre à ces deux problématiques.
 
 ### Outillage
 La première chose qui m'est venu à l'esprit c'est ... Docker ! :sunglasses:
-La vrai fausse bonne idée, en effet je n'ai pas besoin de me connecter à mon instance distante mais il reste tout de même le problème de push le code sur le repo git pour la prise en compte par Jenkins. Il existe bien un moyen de référencer une lib de manière locale sur le file system mais ce n'est pas simple, pas très fiable et qu'en bien même le process reste lourd pour tester mon développement il faut que je lance un pipeline via l'interface de Jenkins.
+La vrai fausse bonne idée: je n'ai pas besoin de me connecter à mon instance distante mais il reste tout de même le problème de push le code sur le repo git pour la prise en compte par Jenkins. Il existe bien un moyen de référencer une lib de manière locale sur le file system mais ce n'est pas simple, pas très fiable et qu'en bien même le process reste lourd pour tester mon développement il faut que je lance un pipeline via l'interface de Jenkins.
 
 Non définitivement je veux pouvoir faire des test unitaires et d'intégration directement dans mon IDE et sur ma PIC (attention inception inside: un job Jenkins qui build / test mon développement de sharedlib !).
 
 Il y a plusieurs façon de faire des tests et avec elles les frameworks associés, moi je viens du monde Java donc forcément cela va se ressentir sur mes choix :wink:.
 
-J'utilise [JUnit 4](https://junit.org/junit4/){:target="_blank"} comme "ordonnanceur" de tests. 
-Pourquoi le 4 et non le 5 ? 
-Tout simplement parce que mon framework de tests principal utilise la version 4 et non 5 de JUnit .
+J'utilise [JUnit](https://junit.org/){:target="_blank"} comme "ordonnanceur" de tests. 
 
-Ce fameux framework est le framework de tests [JenkinsPipelineUnit](https://github.com/jenkinsci/JenkinsPipelineUnit){:target="_blank"} qui a été créé à l'origine par l'équipe des furets.com. 
+J'adosse à JUnit un framework qui va me permettre de mocker Jenkins. Ce fameux framework est le framework de tests [JenkinsPipelineUnit](https://github.com/jenkinsci/JenkinsPipelineUnit){:target="_blank"} qui a été créé à l'origine par l'équipe des furets.com. 
 Après quelques mois d'inactivé une nouvelle équipe l'a repris en main et de nombreuses nouvelles fonctionnalités ont été ajoutées ainsi que quelques corrections de bugs.
 C'est officiellement le framework de tests pour les pipelines et il fait partie de l'organisation GitHub Jenkinsci.
 
@@ -105,21 +100,21 @@ Il faut un certain temps pour le prendre en main mais il y a de [nombreux exempl
 
 En résumé ce qu'il faut comprendre:
  - le framework permet d'exécuter les pipelines comme si on était dans une instance Jenkins
- - le framework permet de mocker les steps qui sont propres à Jenkins (que cela vienne du moteur ou de plugins installés.)
+ - le framework permet de mocker les steps qui sont propres à Jenkins
 
 Un petit mot sur le mocking: *JenkinsPipelineUnit* permet de mocker simplement les méthodes qui sont appelées par les pipelines.
 Le framework vient avec plein de méthodes déjà mockées mais il est tout à fait possible de surcharger le mock afin qu'il fasse ce que l'on souhaite.
 
-Il est tout à fait possible d'utiliser d'autres frameworks pour mocker comme *PowerMock* ou *Mockito* qui dans certains cas peuvent faciliter la vie :smile:.
+On peut aussi utiliser d'autres frameworks pour mocker comme *PowerMock* ou *Mockito* qui dans certains cas peuvent faciliter la vie :smile:.
 
-### Ce que l'on va tester
-L'idée ici n'est pas de réécrire la documentation qui est fournie avec le framework *JenkinsPipelineUnit*, je ne vais donc pas expliquer comment faire pour tester des pipelines en mode *ScriptedPipeline* ou *Declartive Pipelines* (voir l'article]({{ site.baseurl }}{% post_url 2020-03-14-PipelinesJenkins %}) pour la différence entre les *Scripted Pipelines* et *Declarative Pipelines*) mais plutôt comment tester des sharedlib qui sont faites pour écrire des pipelines avec des [customs steps](https://jenkins.io/doc/book/pipeline/shared-libraries/#defining-custom-steps){:target="_blank"}.
+### Ce que l'on va tester
+L'idée ici n'est pas de réécrire la documentation qui est fournie avec le framework *JenkinsPipelineUnit*, je ne vais donc pas expliquer comment faire pour tester des pipelines en mode *ScriptedPipeline* ou *Declartive Pipelines* (voir l'[article]({{ site.baseurl }}{% post_url 2020-03-14-PipelinesJenkins %}) pour la différence entre les *Scripted Pipelines* et *Declarative Pipelines*) mais plutôt comment tester des sharedlib qui sont faites pour écrire des pipelines avec des [customs steps](https://jenkins.io/doc/book/pipeline/shared-libraries/#defining-custom-steps){:target="_blank"}.
 
 Et on va voir que cela nécessite quelques adaptations.
 
 ### Tester la classe utilitaire
-Pour découvrir comment faire nous allons partir d'un test unitaire pour aller jusqu'à un test d'intégration.
-Notre test unitaire concerne donc la classe utilitaire *Utilities* qui permet d'exécuter une commande maven et avec notamment le steps *sh* fournit par Jenkins.
+Pour découvrir comment faire nous allons partir d'un test unitaire d'une méthode pour aller jusqu'à tester le custom step.
+Notre premier test unitaire concerne donc la classe utilitaire *Utilities* qui permet d'exécuter une commande maven et avec notamment le steps *sh* fournit par Jenkins.
 
 Heureusement le framework *JenkinsPipelineUnits* nous mock une grande partie des steps de Jenkins et dans notre cas *sh*.
 
@@ -159,8 +154,9 @@ Quelques explications sont nécessaires il me semble !
  - `extends BasePipelineTest`: nécessaire pour bénéficier du framework *JenkinsPipelineUnit* 
  - `def steps`: variable qui va stocker le *contexte* Jenkins et accéder aux steps qu'il met à disposition
  - `setup`: nécessaire pour positionner quelques paramétrages pour la bonne exécution du test
-   - `scriptRoots += 'test/resources'`et `this.scriptRoots += 'src'`: positionnement des racines de paths où se trouvent les scripts et classes des pipelines
+   - `this.scriptRoots += 'test/resources'`et `this.scriptRoots += 'src'`: positionnement des racines de paths où se trouvent les scripts et classes des pipelines
    - `steps = loadScript('foo.groovy')`: c'est cette instruction qui va nous permettre de charger le contexte Jenkins émulé par le framework *JenkinsPipelineUnit* mais pour cela, rappelez-vous à l'origine le framework a été pensé pour du *Scripted Pipeline* il faut donc charger un script et c'est ce que l'on fait, le script en lui-même ne fait rien d'autre il est donc vide:
+   
    ```groovy
     def version = '1.0'
 
@@ -169,12 +165,63 @@ Quelques explications sont nécessaires il me semble !
  - `Utilities utilities = new Utilities(steps)`: il maintenant possible d'instancier la classe pour pouvoir l'appeler et la tester
  - `assertCallStackContains('mvn clean compile')`: le framework propose des méthodes utilitaire, celle-ci permet de rechercher dans l'arbre d'appel une commande en particulier, dans mon cas je veux vérifier que l'on appel bien la commande *mvn* avec les paramètres passés *clean compile*
 
- ### Tester le custom step
- A ce stade nous savons donc tester des classes utilitaires mais il nous manque notre custom steps qui est utilisé dans les Jenkinsfiles.
+### Tester le custom step
+A ce stade nous savons donc tester des classes utilitaires mais il nous manque notre custom steps qui est utilisé dans les Jenkinsfiles.
 
- La première façon de le tester est de tester le script représentant le custom step, dans notre cas *myMavenStep.groovy*:
+Pour cela il suffit de tester le script représentant le custom step, dans notre cas *myMavenStep.groovy*:
  ```groovy
- ``` 
- 
- 
- Pour cela il va falloir charger un Jenkinsfile utilisant notre custom step et l'exécuter pour vérifier qu'il s'exécute correctement :crossed_fingers:.
+import com.lesfurets.jenkins.unit.BasePipelineTest
+import org.junit.jupiter.api.BeforeEach
+import org.junit.jupiter.api.Test
+
+/**
+ * Classe permettant de tester le script représentant le custom step myMavenStepTest
+ */
+class MyMavenStepTest extends BasePipelineTest{
+
+    @Override
+    @BeforeEach
+    void setUp() {
+        this.scriptRoots += 'test/resources'
+        this.scriptRoots += 'src'
+        this.scriptRoots += 'vars'
+        super.setUp()
+
+    }
+
+    @Test
+    void should_run_custom_step() {
+        def customStepToTest = loadScript('myMavenStep.groovy')
+
+        Map params = [mvnArgs:'clean compile']
+        customStepToTest.call(params)
+
+        assertCallStackContains('mvn clean compile')
+    }
+
+}
+ ```
+Quelques explications:
+ - on ajoute le répertoire *vars* dans la liste des endroits où trouver des scripts
+ - plutôt que de charger un script *bidon* on charge le script qui représente le custom step
+ - il ne reste plus qu'à appeler la méthode *call* de notre script pour tester son bon fonctionnement
+ - ensuite on utilise la méthode *assertCallStackContains* pour tester que la commande maven est bien appelée
+
+#### Une limitation: ne pas pouvoir utiliser un Jenkinsfile avec le custom step
+On vient de le voir: à ce stade on a testé de manière unitaire une méthode utilisant des steps Jenkins, puis on testé un custom step qui utilise cette méthode.
+
+Même si on couvre l'ensemble de ce que l'on veut tester j'aurai aimé pouvoir tester l'utilisation du custom step en situation réelle.
+Ce que j'entends par réelle c'est tester un Jenkinsfile du genre:
+```groovy
+@Library('ourson-lib') _
+
+myMavenStep mvnArgs: 'clean compile'
+```
+Malheureusement un test unitaire qui charge ce genre de fichier ne fonctionne pas, les mocks proposés par le frameworks ne sont pas utilisés.
+C'est peut être moi qui n'ai pas compris comment faire ou le framework qui ne le permet (pas encore :wink:).
+
+
+Voilà c'est la fin de cet article autour des tests unitaires qui permettent (doivent) accompagner le développement des sharedlib Jenkins.
+J'espère que cela vous aura donner quelques astuces pour tester vos sharedlib et améliorer le process de développement de celles-ci.
+
+L'ensemble des sources est disponible [ici]().

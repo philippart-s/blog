@@ -10,7 +10,7 @@ tags:
   - Jenkins
   - Test
 ---
-Suite de l'[article]({{ site.baseurl }}{% post_url 2020-03-15-maveniser-sharedlib %}) qui expliquait comment mettre en place un projet maven lors du développement d'une sharedlib Jenkins 2,(mais au final plus généralement d'un projet Groovy) l'objectif maintenant va être de tester son code, notamment en local, afin d'éviter de devoir push son code sur le repo git ou monter une instance de tests. 
+Suite de l'[article]({{ site.baseurl }}{% post_url 2020-03-15-maveniser-sharedlib %}) qui expliquait comment mettre en place un projet maven lors du développement d'une sharedlib Jenkins 2 (mais au final plus généralement d'un projet Groovy), l'objectif maintenant va être de tester son code, notamment en local, afin d'éviter de devoir push son code sur le repo git ou monter une instance de tests. 
 
 Pour mémoire il est, je pense, nécessaire de se rafraîchir la mémoire sur le développement de pipelines Jenkins avec [article]({{ site.baseurl }}{% post_url 2020-03-14-PipelinesJenkins %}) qui en parle sur ce même blog :wink:.
 
@@ -31,7 +31,7 @@ class Utilities implements Serializable{
     }
 
     /**
-    * Simple method to exceute maven commands
+    * Simple method to execute maven commands
     * @param args Maven arguments.
     */
     void mvn(String args) {
@@ -92,9 +92,9 @@ Il y a plusieurs façon de faire des tests et avec elles les frameworks associé
 
 J'utilise [JUnit](https://junit.org/){:target="_blank"} comme "ordonnanceur" de tests. 
 
-J'adosse à JUnit un framework qui va me permettre de mocker Jenkins. Ce fameux framework est le framework de tests [JenkinsPipelineUnit](https://github.com/jenkinsci/JenkinsPipelineUnit){:target="_blank"} qui a été créé à l'origine par l'équipe des furets.com. 
+J'adosse à JUnit un framework qui va me permettre de mocker Jenkins. Ce fameux framework est  [JenkinsPipelineUnit](https://github.com/jenkinsci/JenkinsPipelineUnit){:target="_blank"} qui a été créé à l'origine par l'équipe des furets.com. 
 Après quelques mois d'inactivé une nouvelle équipe l'a repris en main et de nombreuses nouvelles fonctionnalités ont été ajoutées ainsi que quelques corrections de bugs.
-C'est officiellement le framework de tests pour les pipelines et il fait partie de l'organisation GitHub Jenkinsci.
+C'est [officiellement](https://jenkins.io/doc/book/pipeline/development/#unit-test){:target="_blank"} le framework de tests pour les pipelines et il fait partie de l'organisation GitHub Jenkinsci.
 
 Il faut un certain temps pour le prendre en main mais il y a de [nombreux exemples](https://github.com/jenkinsci/JenkinsPipelineUnit/blob/master/README.md#demos-and-examples){:target="_blank"} en lien dans la [documentation](https://github.com/jenkinsci/JenkinsPipelineUnit/blob/master/README.md){:target="_blank"}.
 
@@ -149,6 +149,7 @@ class UtilitiesTest extends BasePipelineTest {
     }
 }
 ```
+[source](https://github.com/philippart-s/jenkins-examples/master/test/groovy/fr/ourson/utils/UtilitiesTest.groovy){:style="font-size: smaller"}{:target="_blank"}
 
 Quelques explications sont nécessaires il me semble !
  - `extends BasePipelineTest`: nécessaire pour bénéficier du framework *JenkinsPipelineUnit* 
@@ -162,6 +163,7 @@ Quelques explications sont nécessaires il me semble !
 
     return this
    ```
+[source](https://github.com/philippart-s/jenkins-examples/master/test/resources/foo.groovy){:style="font-size: smaller"}{:target="_blank"}   
  - `Utilities utilities = new Utilities(steps)`: il maintenant possible d'instancier la classe pour pouvoir l'appeler et la tester
  - `assertCallStackContains('mvn clean compile')`: le framework propose des méthodes utilitaire, celle-ci permet de rechercher dans l'arbre d'appel une commande en particulier, dans mon cas je veux vérifier que l'on appel bien la commande *mvn* avec les paramètres passés *clean compile*
 
@@ -201,6 +203,7 @@ class MyMavenStepTest extends BasePipelineTest{
 
 }
  ```
+[source](https://github.com/philippart-s/jenkins-examples/master/test/groovy/vars/MyMavenStepTest.groovy){:style="font-size: smaller"}{:target="_blank"}  
 Quelques explications:
  - on ajoute le répertoire *vars* dans la liste des endroits où trouver des scripts
  - plutôt que de charger un script *bidon* on charge le script qui représente le custom step
@@ -224,4 +227,4 @@ C'est peut être moi qui n'ai pas compris comment faire ou le framework qui ne l
 Voilà c'est la fin de cet article autour des tests unitaires qui permettent (doivent) accompagner le développement des sharedlib Jenkins.
 J'espère que cela vous aura donner quelques astuces pour tester vos sharedlib et améliorer le process de développement de celles-ci.
 
-L'ensemble des sources est disponible [ici]().
+L'ensemble des sources est disponible [ici](https://github.com/philippart-s/jenkins-examples){:target="_blank"}.

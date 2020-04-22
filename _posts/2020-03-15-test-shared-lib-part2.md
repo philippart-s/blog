@@ -220,7 +220,7 @@ Quelques explications:
 #### Une limitation: ne pas pouvoir utiliser un Jenkinsfile avec le custom step
 On vient de le voir: à ce stade on a testé de manière unitaire une méthode utilisant des steps Jenkins, puis on testé un custom step qui utilise cette méthode.
 
-Même si on couvre l'ensemble de ce que l'on veut tester j'aurai aimé pouvoir tester l'utilisation du custom step en situation réelle.
+Même si on couvre l'ensemble de ce que l'on veut tester, j'aurai aimé pouvoir tester l'utilisation du custom step en situation réelle.
 Ce que j'entends par réelle c'est tester un Jenkinsfile du genre:
 ```groovy
 @Library('ourson-lib') _

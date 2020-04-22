@@ -108,7 +108,7 @@ En résumé ce qu'il faut comprendre:
 Un petit mot sur le mocking: *JenkinsPipelineUnit* permet de mocker simplement les méthodes qui sont appelées par les pipelines.
 Le framework vient avec plein de méthodes déjà mockées, mais il est tout à fait possible de surcharger le mock afin qu'il fasse ce que l'on souhaite.
 
-On peut aussi utiliser d'autres frameworks pour mocker comme *PowerMock*, *Mockito* ou tout simplment le [mocking intégré](https://groovy-lang.org/testing.html#_mocking_and_stubbing) à Groovy. Dans certains cas cela peut faciliter la vie :smile:.
+On peut aussi utiliser d'autres frameworks pour mocker comme *PowerMock*, *Mockito* ou tout simplment le [mocking intégré](https://groovy-lang.org/testing.html#_mocking_and_stubbing){:target="_blank"} à Groovy. Dans certains cas cela peut faciliter la vie :smile:.
 
 ### Ce que l'on va tester
 L'idée ici n'est pas de réécrire la documentation qui est fournie avec le framework *JenkinsPipelineUnit*. Je ne vais pas non plus expliquer comment faire pour tester des pipelines en mode *ScriptedPipeline* ou *Declartive Pipelines* (voir l'[article]({{ site.baseurl }}{% post_url 2020-03-14-PipelinesJenkins %}) pour la différence entre les *Scripted Pipelines* et *Declarative Pipelines*) mais plutôt comment tester des sharedlib qui sont faites pour écrire des pipelines avec des [customs steps](https://jenkins.io/doc/book/pipeline/shared-libraries/#defining-custom-steps){:target="_blank"}.
@@ -162,11 +162,12 @@ Quelques explications sont nécessaires il me semble !
  - `setup`: nécessaire pour positionner quelques paramétrages pour la bonne exécution du test
    - `this.scriptRoots += 'test/resources'`et `this.scriptRoots += 'src'`: positionnement des racines de paths où se trouvent les scripts et classes des pipelines
    - `steps = loadScript('foo.groovy')`: c'est cette instruction qui va nous permettre de charger le contexte Jenkins émulé par le framework *JenkinsPipelineUnit* mais pour cela, rappelez-vous: à l'origine le framework a été pensé pour du *Scripted Pipeline*. Il faut donc charger un script et c'est ce que l'on fait, le script en lui-même ne fait rien d'autre, il est donc vide:
-   ```groovy
+
+```groovy
     def version = '1.0'
 
     return this
-   ```
+```
 [source](https://github.com/philippart-s/jenkins-examples/master/test/resources/foo.groovy){:style="font-size: smaller"}{:target="_blank"}   
  - `Utilities utilities = new Utilities(steps)`: il est maintenant possible d'instancier la classe pour pouvoir l'appeler et la tester
  - `assertCallStackContains('mvn clean compile')`: le framework propose des méthodes utilitaires: celle-ci permet de rechercher dans l'arbre d'appel une commande en particulier, dans mon cas je veux vérifier que l'on appelle bien la commande *mvn* avec les paramètres passés: *clean compile*
@@ -192,7 +193,6 @@ class MyMavenStepTest extends BasePipelineTest{
         this.scriptRoots += 'src'
         this.scriptRoots += 'vars'
         super.setUp()
-
     }
 
     @Test
@@ -207,7 +207,6 @@ class MyMavenStepTest extends BasePipelineTest{
 
         assertCallStackContains('mvn clean compile')
     }
-
 }
  ```
 [source](https://github.com/philippart-s/jenkins-examples/master/test/groovy/vars/MyMavenStepTest.groovy){:style="font-size: smaller"}{:target="_blank"}  

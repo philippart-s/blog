@@ -117,7 +117,7 @@ Et on va voir que cela nécessite quelques adaptations.
 
 ### Tester la classe utilitaire
 Pour découvrir comment faire, nous allons partir d'un test unitaire d'une méthode pour aller jusqu'à tester le custom step.
-Notre premier test unitaire concerne donc la classe utilitaire *Utilities* qui permet d'exécuter une commande maven avec, notamment, le steps *sh* fournit par Jenkins.
+Notre premier test unitaire concerne donc la classe utilitaire *Utilities* qui permet d'exécuter une commande maven avec, notamment, le step *sh* fourni par Jenkins.
 
 Heureusement le framework *JenkinsPipelineUnits* nous mock une grande partie des steps de Jenkins et dans notre cas *sh*.
 

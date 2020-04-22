@@ -82,7 +82,7 @@ Se posent alors mes deux questions d'origine:
  - que se passe-t-il si je touche une partie du code de la shared lib ? Je teste tous les pipelines pour m'assurer qu'il n'y a pas de régression ? 
  - n'y a-t-il pas plus simple que de push mon code pour le tester ? Cela fait un peu "je teste sur la prod"  :scream: (même si le mécanisme de branche me permet d'éviter cela).
  
-Comme vous vous en doutez c'est là que les tests unitaires vont répondre à ces deux problématiques.
+Comme vous vous en doutez, c'est là que les tests unitaires vont répondre à ces deux problématiques.
 
 ### Outillage
 La première chose qui m'est venu à l'esprit c'est ... Docker ! :sunglasses:

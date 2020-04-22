@@ -202,7 +202,7 @@ class MyMavenStepTest extends BasePipelineTest{
 
         Map params = [mvnArgs:'clean compile']
         
-        // Appel de la métode principal du custom step
+        // Appel de la méthode principale du custom step
         customStepToTest.call(params)
 
         assertCallStackContains('mvn clean compile')

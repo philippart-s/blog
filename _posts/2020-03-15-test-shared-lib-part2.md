@@ -87,7 +87,7 @@ Comme vous vous en doutez, c'est là que les tests unitaires vont répondre à c
 ### Outillage
 La première chose qui m'est venu à l'esprit c'est ... Docker ! :sunglasses:
 
-La vrai fausse bonne idée: je n'ai pas besoin de me connecter à mon instance distante mais il reste tout de même le problème de push le code sur le repo git pour la prise en compte par Jenkins. Il existe bien un moyen de référencer une lib de manière locale sur le file system mais ce n'est pas simple, pas très fiable, peut performant et qu'en bien même, le process reste lourd pour tester mon développement: il faut que je lance un pipeline via l'interface de Jenkins.
+La vraie fausse bonne idée: je n'ai pas besoin de me connecter à mon instance distante mais il reste tout de même le problème de push le code sur le repo git pour la prise en compte par Jenkins. Il existe bien un moyen de référencer une lib de manière locale sur le file system mais ce n'est pas simple, pas très fiable, peu performant et quand bien même, le process reste lourd pour tester mon développement: il faut que je lance un pipeline via l'interface de Jenkins.
 
 Non, définitivement, je veux pouvoir faire des test unitaires et d'intégration directement dans mon IDE et sur ma PIC (attention inception inside: un job Jenkins qui build / test mon développement de sharedlib !).
 

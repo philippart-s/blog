@@ -228,7 +228,7 @@ Ce que j'entends par "réelle" c'est tester un Jenkinsfile du genre:
 myMavenStep mvnArgs: 'clean compile'
 ```
 Malheureusement, un test unitaire qui charge ce genre de fichier ne fonctionne pas: les mocks proposés par le frameworks ne sont pas utilisés.
-C'est peut être moi qui n'ai pas compris comment faire ou le framework qui ne le permet pas (encore :wink:).
+C'est peut-être moi qui n'ai pas compris comment faire ou le framework qui ne le permet pas (encore :wink:).
 
 
 Voilà, c'est la fin de cet article autour des tests unitaires qui permettent (doivent) accompagner le développement des sharedlib Jenkins.

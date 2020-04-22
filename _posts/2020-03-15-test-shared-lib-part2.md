@@ -76,7 +76,7 @@ myMavenStep mvnArgs: 'clean compile'
 ```
 
 ### Les tests ... une nécessité 
-Ca y est on a lu la doc en entier (2 fois parce que la première fois ce n'était pas clair :wink:), on a fait quelques aller / retour sur Stack Overflow mais oui ça y on a un premier pipeline assez clair avec du code factorisé dans une belle sharedlib ! Et tout ça avec simplement 25O commits et 150 pushs sur le référentiel Git pour pouvoir tester au sein de l'instance Jenkins.
+Ca y est! On a lu la doc en entier (2 fois parce que la première fois ce n'était pas clair :wink:), on a fait quelques allers / retours sur Stack Overflow, et oui ça y est: on a un premier pipeline assez clair avec du code factorisé dans une belle sharedlib ! Et tout ça avec simplement 25O commits et 150 pushs sur le référentiel Git pour pouvoir tester au sein de l'instance Jenkins.
 
 Et se posent alors mes deux questions d'origine:
  - que se passe t il si je touche une partie du code de la shared lib ? Je test tous les pipelines pour m'assurer qu'il n'y a pas de régression ? 

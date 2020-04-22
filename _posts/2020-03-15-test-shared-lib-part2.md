@@ -91,7 +91,7 @@ La vraie fausse bonne idée: je n'ai pas besoin de me connecter à mon instance 
 
 Non, définitivement, je veux pouvoir faire des test unitaires et d'intégration directement dans mon IDE et sur ma PIC (attention inception inside: un job Jenkins qui build / test mon développement de sharedlib !).
 
-Il y a plusieurs façon de faire des tests et avec elles les frameworks associés, moi je viens du monde Java donc forcément cela va se ressentir sur mes choix :wink:.
+Il y a plusieurs façons de faire des tests et avec elles les frameworks associés: moi je viens du monde Java donc forcément cela va se ressentir sur mes choix :wink:.
 
 J'utilise [JUnit](https://junit.org/){:target="_blank"} comme "ordonnanceur" de tests. 
 

@@ -63,8 +63,7 @@ def call(Map config) {
             echo 'Deploying....'
         }
     }
-} }
-}
+} 
 ```
 [source](https://github.com/philippart-s/jenkins-examples/blob/master/vars/myMavenStep.groovy){:style="font-size: smaller"}{:target="_blank"}
  - et enfin le code du Jenkinsfile qui l'utilise:
@@ -154,7 +153,7 @@ class UtilitiesTest extends BasePipelineTest {
     }
 }
 ```
-[source](https://github.com/philippart-s/jenkins-examples/master/test/groovy/fr/ourson/utils/UtilitiesTest.groovy){:style="font-size: smaller"}{:target="_blank"}
+[source](https://github.com/philippart-s/jenkins-examples/blob/master/test/groovy/fr/ourson/utils/UtilitiesTest.groovy){:style="font-size: smaller"}{:target="_blank"}
 
 Quelques explications sont nécessaires il me semble !
  - `extends BasePipelineTest`: nécessaire pour bénéficier du framework *JenkinsPipelineUnit* 
@@ -168,7 +167,7 @@ Quelques explications sont nécessaires il me semble !
 
     return this
 ```
-[source](https://github.com/philippart-s/jenkins-examples/master/test/resources/foo.groovy){:style="font-size: smaller"}{:target="_blank"}   
+[source](https://github.com/philippart-s/jenkins-examples/blob/master/test/resources/foo.groovy){:style="font-size: smaller"}{:target="_blank"}   
  - `Utilities utilities = new Utilities(steps)`: il est maintenant possible d'instancier la classe pour pouvoir l'appeler et la tester
  - `assertCallStackContains('mvn clean compile')`: le framework propose des méthodes utilitaires: celle-ci permet de rechercher dans l'arbre d'appel une commande en particulier, dans mon cas je veux vérifier que l'on appelle bien la commande *mvn* avec les paramètres passés: *clean compile*
 
@@ -209,7 +208,7 @@ class MyMavenStepTest extends BasePipelineTest{
     }
 }
  ```
-[source](https://github.com/philippart-s/jenkins-examples/master/test/groovy/vars/MyMavenStepTest.groovy){:style="font-size: smaller"}{:target="_blank"}  
+[source](https://github.com/philippart-s/jenkins-examples/blob/master/test/groovy/vars/MyMavenStepTest.groovy){:style="font-size: smaller"}{:target="_blank"}  
 Quelques explications:
  - `this.scriptRoots += 'vars'`: on ajoute le répertoire *vars* dans la liste des endroits où trouver des scripts car le custom step est dedans
  - `def customStepToTest = loadScript('myMavenStep.groovy')`: plutôt que de charger un script *bidon* on charge le script qui représente le custom step

@@ -67,7 +67,7 @@ def call(Map config) {
 }
 ```
 [source](https://github.com/philippart-s/jenkins-examples/blob/master/vars/myMavenStep.groovy){:style="font-size: smaller"}{:target="_blank"}
- - et enfin le code du Jenkinsfile qu'il l'utilise:
+ - et enfin le code du Jenkinsfile qui l'utilise:
  
 ```groovy
 @Library('ourson-lib') _

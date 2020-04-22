@@ -1,5 +1,5 @@
 ---
-title: "Tester une classe utilitaire dans une Sharedlib Jenkins : partie 1"
+title: "Maveniser le développement d'une sharedlib Jenkins"
 excerpt: ":rocket: Rendre un développement d'une sharedlib industrialisable et ready to test. :rocket:"
 classes: wide
 categories:

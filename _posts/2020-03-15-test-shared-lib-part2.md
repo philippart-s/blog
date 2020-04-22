@@ -99,7 +99,7 @@ J'adosse à JUnit un framework qui va me permettre de mocker Jenkins. Ce fameux 
 Après quelques mois d'inactivé, une nouvelle équipe l'a repris en main et de nombreuses nouvelles fonctionnalités ont été ajoutées ainsi que quelques corrections de bugs.
 C'est [officiellement](https://jenkins.io/doc/book/pipeline/development/#unit-test){:target="_blank"} le framework de tests pour les pipelines et il fait partie de l'organisation GitHub Jenkinsci.
 
-Il faut un certain temps pour le prendre en main mais il y a de [nombreux exemples](https://github.com/jenkinsci/JenkinsPipelineUnit/blob/master/README.md#demos-and-examples){:target="_blank"} en liens dans la [documentation](https://github.com/jenkinsci/JenkinsPipelineUnit/blob/master/README.md){:target="_blank"}.
+Il faut un certain temps pour le prendre en main mais il y a de [nombreux exemples](https://github.com/jenkinsci/JenkinsPipelineUnit/blob/master/README.md#demos-and-examples){:target="_blank"} en lien dans la [documentation](https://github.com/jenkinsci/JenkinsPipelineUnit/blob/master/README.md){:target="_blank"}.
 
 En résumé ce qu'il faut comprendre:
  - le framework permet d'exécuter les pipelines comme si on était dans une instance Jenkins

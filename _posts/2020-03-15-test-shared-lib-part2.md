@@ -79,7 +79,7 @@ myMavenStep mvnArgs: 'clean compile'
 Ca y est! On a lu la doc en entier (2 fois parce que la première fois ce n'était pas clair :wink:), on a fait quelques allers / retours sur Stack Overflow, et oui ça y est: on a un premier pipeline assez clair avec du code factorisé dans une belle sharedlib ! Et tout ça avec simplement 25O commits et 150 pushs sur le référentiel Git pour pouvoir tester au sein de l'instance Jenkins.
 
 Se posent alors mes deux questions d'origine:
- - que se passe t il si je touche une partie du code de la shared lib ? Je test tous les pipelines pour m'assurer qu'il n'y a pas de régression ? 
+ - que se passe-t-il si je touche une partie du code de la shared lib ? Je teste tous les pipelines pour m'assurer qu'il n'y a pas de régression ? 
  - il n'y a pas plus simple que de push mon code pour le tester ? Cela fait un peu je teste sur la prod  :scream: (même si le mécanisme de branche me permet d'éviter cela).
  
 Comme vous vous en doutez c'est là que les tests unitaires vont répondre à ces deux problématiques.

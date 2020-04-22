@@ -161,7 +161,7 @@ Quelques explications sont nécessaires il me semble !
  - `def steps`: variable qui va stocker le *contexte* Jenkins et accéder aux steps qu'il met à disposition
  - `setup`: nécessaire pour positionner quelques paramétrages pour la bonne exécution du test
    - `this.scriptRoots += 'test/resources'`et `this.scriptRoots += 'src'`: positionnement des racines de paths où se trouvent les scripts et classes des pipelines
-   - `steps = loadScript('foo.groovy')`: c'est cette instruction qui va nous permettre de charger le contexte Jenkins émulé par le framework *JenkinsPipelineUnit* mais pour cela, rappelez-vous à l'origine le framework a été pensé pour du *Scripted Pipeline* il faut donc charger un script et c'est ce que l'on fait, le script en lui-même ne fait rien d'autre il est donc vide:
+   - `steps = loadScript('foo.groovy')`: c'est cette instruction qui va nous permettre de charger le contexte Jenkins émulé par le framework *JenkinsPipelineUnit* mais pour cela, rappelez-vous: à l'origine le framework a été pensé pour du *Scripted Pipeline*. Il faut donc charger un script et c'est ce que l'on fait, le script en lui-même ne fait rien d'autre, il est donc vide:
    ```groovy
     def version = '1.0'
 

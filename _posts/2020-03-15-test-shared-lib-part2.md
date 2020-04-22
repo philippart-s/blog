@@ -169,7 +169,7 @@ Quelques explications sont nécessaires il me semble !
    ```
 [source](https://github.com/philippart-s/jenkins-examples/master/test/resources/foo.groovy){:style="font-size: smaller"}{:target="_blank"}   
  - `Utilities utilities = new Utilities(steps)`: il est maintenant possible d'instancier la classe pour pouvoir l'appeler et la tester
- - `assertCallStackContains('mvn clean compile')`: le framework propose des méthodes utilitaires, celle-ci, permet de rechercher dans l'arbre d'appel une commande en particulier, dans mon cas je veux vérifier que l'on appel bien la commande *mvn* avec les paramètres passés: *clean compile*
+ - `assertCallStackContains('mvn clean compile')`: le framework propose des méthodes utilitaires: celle-ci permet de rechercher dans l'arbre d'appel une commande en particulier, dans mon cas je veux vérifier que l'on appelle bien la commande *mvn* avec les paramètres passés: *clean compile*
 
 ### Tester le custom step
 A ce stade nous savons donc tester des classes utilitaires mais il nous manque notre custom steps qui est utilisé dans les Jenkinsfiles.

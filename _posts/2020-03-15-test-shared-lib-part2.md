@@ -106,7 +106,7 @@ En résumé ce qu'il faut comprendre:
  - le framework permet de mocker les steps qui sont propres à Jenkins
 
 Un petit mot sur le mocking: *JenkinsPipelineUnit* permet de mocker simplement les méthodes qui sont appelées par les pipelines.
-Le framework vient avec plein de méthodes déjà mockées mais il est tout à fait possible de surcharger le mock afin qu'il fasse ce que l'on souhaite.
+Le framework vient avec plein de méthodes déjà mockées, mais il est tout à fait possible de surcharger le mock afin qu'il fasse ce que l'on souhaite.
 
 On peut aussi utiliser d'autres frameworks pour mocker comme *PowerMock*, *Mockito* ou tout simplment le [mocking intégré](https://groovy-lang.org/testing.html#_mocking_and_stubbing) à Groovy. Dans certains cas cela peut faciliter la vie :smile:.
 

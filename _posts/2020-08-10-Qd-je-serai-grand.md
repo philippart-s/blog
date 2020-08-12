@@ -29,3 +29,13 @@ J'en profite pour faire un aparté sur l'humilité des personnes que j'ai crois�
 Voilà ça dure 5 ans puis n'étant pas un parisien de souche l'envie de revenir dans la région étudiante et plus particulièrement la belle ville de Tours se fait de plus en plus sentir, je saute le pas et reviens donc à Tours dans une société d'édition de logiciel comme exper Java / J2E (on disait comme ça à l'époque :wink:).
 
 Si vous avez bien suivi j'ai 30 ans et le dev et ma principale activité mais avec l'âge et l'expérience on commence à me demander plus de choses et plus de responsabilités. Pas de problème, c'est le jeu et si en plus cela permet de diluer de la connaissance que j'ai acquise on est bien dans les principes qui m'animent.
+
+### Le début de la fin
+Eh oui on se doute qu'il y a bien un truc qui va changer, sinon pourquoi faire un article ? :wink:
+
+Avec l'âge et l'expérience qui augmentent vient la question de la juste rémunération, n'étant plus un développeur junior forcément je pense (et j'espère que c'est vrai) avoir acquis un bon niveau d'expertise dans le développement (Java pour ma part) et donc, comme souvent, les demandes d'augmentations sont souvent attachées à une augmentation de resposabilité. Cela ne me pose pas problème : ok !
+
+Prenons un peu de temps sur cette étape: est-ce vraiment normal que le salaire soit conditionné aux responsabilités ? Ne peut il pas aussi tout simplement l'être à la compétence ? Je vais faire l'analogie avec un artisant : n'est-ce pas normal de rétribuer un ébéniste qui va me faire la même pièce mais plus vite, de meilleure qualité et plus robuste dans le temps ? Oui cela me semble évident que pour un employeur il est normal que cet ébeniste soit payer plus cher qu'un ébéniste qui va travailler moins bien ou moins vite. Mais pour autant si mon ébeniste qui découvrait le métier aubout de quelques années est devenu très bon va-t-on lui demander en plus de gérer les relations fournissuers, client, la compta, ... pour justifier une augmentation de son salaire, je ne pense pas ! A l'époque ou le *plus de responsabilités* rimait avec gérer une équipe, faire des specs, des réunions clients, des chiffrages financiers, ... j'aurai dû sentir le truc venir mais bon j'avais encore du temps pour développer et j'avais cette étiquette de référent technique ou tech lead comme dis les jeunes (qui fait plaisir à l'égo :wink:) qui permettait de me faire sentir toujours en encore développeur.
+
+### Le changement ... Powerpoint à la place d'Intellij
+

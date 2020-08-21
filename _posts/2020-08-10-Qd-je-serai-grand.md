@@ -58,4 +58,14 @@ Ce qui est dommage c'est que là où pour un sportif cela peut se justifier par 
 ### Redevenir sportif amateur
 Pour continuer dans l'analogie du sportif j'ai l'impression que la seule façon de coder de nouveau est de le faire "en amateur" sur mon temps perso. Le problème est que la vie perso quand on vieilli est occupée (famille, amis, ...) et qu'il est de plus en plus difficile de trouver du temps (j'avoue aussi la motivation, je suis assez mauvais pour les "hello world", je préfère les vrais projets !).
 
-En conclusion je trouve vraiment dommage d'être mis dans une case juste par rapport à un âge ou un salaire, peut être que je me trompe et que ce n'est que ma vision des choses par rapport à mon vécu et ce que je connais du marché du travail :wink:.
+### En conclusion : est-ce normal ?
+Je ne pense pas que cela soit normal dans notre métier, si les compétences sont toujours là, de devoir ne plus coder à cause de l'âge ou des prétentions salariales (bien entendu il faut savoir rester raisonnable :wink:).
+Lorsque l'on me demande ce que je suis naturellement je réponds *développeur* puis je me ravise en disant architecte (en ayant du mal à définir réellement à quoi cela correspond !).
+
+Je pense qu'il est possible de continuer à développer, même passé 20 ans d'expérience, et de continuer à apporter quelque chose. J'aime le développement, le *clean code* qui apporte quelque chose, les tests unitaires, ... Je pense qu'en ces jours où le développement par *StackOverFlow* se rencontre de plus en plus comprendre ce que l'on fait et le faire par envie et passion est un réel plus.
+
+Cela va certainement faire *vieux con* mais en ces périodes où un nouveau langage sort tous les 3 mois et devient le super langange qu'il faut absoluement utiliser un peu d'expérience sur des langanges qui ont fait leurs preuves ne fait pas de mal.
+
+Alors oui il faut que les jeunes diplomés développent, nous pousse à continuer à faire de la veille et de la R&D pour ne pas s'endormir sur nos lauriers. Il faut aussi du monde pour accompagner ces jeunes et ne pas les laisser seuls avec pour seuls compagnon *StackOverFlow*.
+
+Il y a de la place pour tout le monde, y compris pour les *vieux* développeurs de ... 45 ans !

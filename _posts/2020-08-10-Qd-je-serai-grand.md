@@ -35,7 +35,7 @@ Si vous avez bien suivi j'ai 30 ans et le dev est ma principale activité mais a
 ### Le début de la fin
 Eh oui on se doute qu'il y a bien un truc qui va changer, sinon pourquoi faire un article ? :wink:
 
-Avec l'âge et l'expérience qui augmentent vient la question de la juste rémunération, n'étant plus un développeur junior forcément je pense (et j'espère que c'est vrai) avoir acquis un bon niveau d'expertise dans le développement (Java pour ma part) et donc, comme souvent, les demandes d'augmentations sont liées à une augmentation de responsabilités. Cela ne me pose pas problème (cela me semble même normal) : ok !
+Avec l'âge et l'expérience qui augmentent vient la question de la juste rémunération, n'étant plus un développeur junior forcément je pense (et j'espère que c'est vrai) avoir acquis un bon niveau d'expertise dans le développement (Java pour ma part) et donc, comme souvent, les demandes d'augmentations sont liées à une augmentation de responsabilités. Cela ne me pose pas problème : ok !
 
 Prenons un peu de temps sur cette étape: est-ce vraiment normal que le salaire soit conditionné aux responsabilités ? Ne peut il pas aussi tout simplement l'être à la compétence ? 
 
@@ -43,17 +43,15 @@ Je vais faire l'analogie avec un artisan : n'est-ce pas normal de rétribuer un 
 
 Cependant il n'est pas choquant de payer plus cher cet ébéniste, qui, mécaniquement, va rapporter plus grâce à son expertise et ses compétences.
 
-A l'époque ou le *plus de responsabilités* rimait avec gérer une équipe, faire des specs, des réunions clients, des chiffrages financiers, ... j'aurai dû sentir le truc venir mais bon j'avais encore du temps pour développer et j'avais cette étiquette de référent technique ou tech lead comme dis les jeunes (qui fait plaisir à l'ego :wink:) qui permettait de me faire sentir encore développeur.
+A l'époque ou le *plus de responsabilités* rimait avec gérer une équipe, faire des specs, des réunions clients, des chiffrages financiers, ... j'aurai dû sentir le truc venir mais bon j'avais encore du temps pour développer et j'avais cette étiquette de référent technique ou tech lead comme disent les jeunes (ça fait toujours plaisir à l'ego :wink:) qui permettait de me faire sentir encore développeur.
 
 ### Le changement ... PowerPoint à la place d'Intelliji
 Là où ça commence à se gâter c'est quand vous vous rendez compte à la fin de la journée que vous n'avez pas lancé votre éditeur de code préféré mais simplement la suite office et plus particulièrement PowerPoint !
 
-Ca y est j'ai de l'expérience (plus de 15 ans) et d'évolutions et en évolutions je suis devenu architecte (applicatif, logiciel, technique, choisissez celui qui vous plaît le plus :wink:). Je ne rentrerai pas dans le détail du poste d'architecte qui varie selon l'entreprise dans laquelle on se trouve mais j'ai surtout l'impression qu'une fois de plus c'est pour flatter un peu l'ego que ce poste existe: selon moi un développeur senior peut (doit ?) avoir assez de recul pour concevoir l'architecture d'un projet, a-t-il besoin que quelqu'un d'autre (souvent externe au projet dans le cas des architectes d'entreprise) le fasse ?
-
-Selon moi non.
+Ca y est j'ai de l'expérience (plus de 15 ans) et d'évolutions et en évolutions je suis devenu architecte (applicatif, logiciel, technique, choisissez celui qui vous plaît le plus :wink:). Je ne rentrerai pas dans le détail du poste d'architecte qui varie selon l'entreprise dans laquelle on se trouve mais j'ai surtout l'impression qu'une fois de plus c'est pour flatter un peu l'ego que ce poste existe :smiley:.
 
 ### Le développeur, sportif de haut niveau ?
-J'ai un peu l'impression d'être un sportif de haut niveau, non pas dans les performances mais dans le fait de devoir arrêter ma passion juste parce-que je suis trop vieux. Et du coup pour rester dans le milieu j'accepte des postes périphériques à ma passion d'origine (un peu comme coach, agent, préparateur pour les sportifs).
+J'ai un peu l'impression d'être un sportif de haut niveau, non pas dans les performances (:sweat_smile:) mais dans le fait de devoir arrêter ma passion juste parce-que je suis trop vieux. Et du coup pour rester dans le milieu j'accepte des postes périphériques à ma passion d'origine (un peu comme coach, agent, préparateur pour les sportifs).
 
 Ce qui est dommage c'est que là où pour un sportif cela peut se justifier par les performances brutes par rapport à l'âge, pour un développeur je ne pense pas que cela soit le cas. Certes les jeunes poussent mais j'estime être encore capable de développer et de manière qualitative.
 
@@ -64,12 +62,12 @@ Pour continuer dans l'analogie du sportif j'ai l'impression que la seule façon 
 Je ne pense pas que cela soit normal dans notre métier, si les compétences sont toujours là, de devoir ne plus coder à cause de l'âge ou des prétentions salariales (bien entendu il faut savoir rester raisonnable :wink:).
 Lorsque l'on me demande ce que je suis naturellement je réponds *développeur* puis je me ravise en disant architecte (en ayant du mal à définir réellement à quoi cela correspond !).
 
-Je pense qu'il est possible de continuer à développer, même passé 20 ans d'expérience, et de continuer à apporter quelque chose. J'aime le développement, le *clean code* qui apporte quelque chose, les tests unitaires, ... Je pense qu'en ces jours où le développement par *StackOverFlow* se rencontre de plus en plus comprendre ce que l'on fait et le faire par envie et passion est un réel plus.
+Je pense qu'il est possible de continuer à développer, même passé 20 ans d'expérience, et de continuer à apporter quelque chose. J'aime le développement, le *clean code* qui apporte quelque chose, les tests unitaires, ... Je pense, qu'en ces jours où le développement par *StackOverFlow* se rencontre de plus en plus, que comprendre ce que l'on fait et le faire par envie et passion est un réel plus.
 
-Cela va certainement faire *vieux con* mais en ces périodes où un nouveau langage sort tous les 3 mois et devient le super langage qu'il faut absolument utiliser un peu d'expérience sur des langages qui ont fait leurs preuves ne fait pas de mal.
+Cela va certainement faire *vieux con* mais en ces périodes où un nouveau langage sort tous les 3 mois et devient le super langage qu'il faut absolument utiliser, un peu d'expérience sur des langages qui ont fait leurs preuves ne fait pas de mal.
 
-Il y a forcément pleins de contre exemple mais quand je fais le compte autour de moi de mes amis de promo ou de collègues de mon âge peu sont encore développeurs. Peut être aussi la localisation explique des choses et que ce phénomène se voit moins sur Paris ou les grandes villes, je n'ai pas de chiffres mais là encore par rapport à mes constations sur les différents salons (à l'époque où on pouvait y aller :wink:) j'ai l'impression que les quarantenaires ne sont pas les plus nombreux à être 100 % développeurs !
+Il y a forcément pleins de contre exemples mais quand je fais le compte autour de moi de mes amis de promo ou de collègues de mon âge peu sont encore développeurs. Peut être aussi la localisation explique des choses et que ce phénomène se voit moins sur Paris ou les grandes villes, je n'ai pas de chiffres mais là encore par rapport à mes constations sur les différents salons (à l'époque où on pouvait y aller :wink:) j'ai l'impression que les quarantenaires ne sont pas les plus nombreux à être 100 % développeurs !
 
-Alors oui il faut que les jeunes diplômés développent, nous pousse à continuer à faire de la veille et de la R&D pour ne pas s'endormir sur nos lauriers. Il faut aussi du monde pour accompagner ces jeunes et ne pas les laisser seuls avec pour seuls compagnon *StackOverFlow*.
+Alors oui il faut que les jeunes diplômés développent, nous pousse à continuer à faire de la veille et de la R&D pour ne pas s'endormir sur nos lauriers. Il faut aussi du monde pour accompagner ces jeunes et ne pas les laisser seuls avec pour seul compagnon *StackOverFlow*.
 
 Il y a de la place pour tout le monde, y compris pour les *vieux* développeurs de ... 45 ans !

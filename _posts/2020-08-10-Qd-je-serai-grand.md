@@ -26,7 +26,7 @@ J'avoue avoir longtemps hésité à écrire ce billet : ne vais-je pas passer po
 ### Les années développeur
 Pourtant tout commençait bien : des sociétés et projets intéressants, des rencontres enrichissantes avec des développeurs pointus et humbles qui m'apprenaient une quantité faramineuse de choses et, en prime, un super salaire (explosion de la bulle internet des années 2000 et vie à Paris), bref l'éclate au quotidien en codant !
 
-J'en profite pour faire un aparté sur l'humilité des personnes que j'ai croisé à l'époque : je sortais fraîchement de l'école et ces personnes ont eu la gentillesse, malgré leur niveau largement supérieur au miens, de m'expliquer de transmettre leur savoir tout en pardonnant les erreurs de jeunesse que j'ai pu faire. Partage et empathie : des notions qui me sont chères et que l'on trouve de moins en moins dans le milieu professionnel selon moi. 
+J'en profite pour faire un aparté sur l'humilité des personnes que j'ai croisées à l'époque : je sortais fraîchement de l'école et ces personnes ont eu la gentillesse, malgré leur niveau largement supérieur au mien, de m'expliquer et de transmettre leur savoir tout en pardonnant les erreurs de jeunesse que j'ai pu faire. Partage et empathie : des notions qui me sont chères aujourd'hui et que l'on trouve de moins en moins dans le milieu professionnel selon moi. 
 
 Ca dure 5 ans, puis, n'étant pas un parisien de souche, l'envie de revenir dans la région étudiante et plus particulièrement la belle ville de [Tours](https://www.tours.fr/){:target="_blank"} se fait de plus en plus sentir. Je saute le pas et reviens donc à Tours dans une société d'édition de logiciel comme expert Java / J2E (on disait comme ça à l'époque :wink:).
 

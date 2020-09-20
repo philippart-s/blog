@@ -14,7 +14,7 @@ Voilà, en résumé, ce que je me dis depuis que j'ai 9 ans ... Alors oui, plus 
 
 Pour être honnête, à cet âge là, c'est surtout les jeux vidéos qui m'intéressaient et mes stars étaient des journalistes testeurs des magazines [Joypad](https://fr.wikipedia.org/wiki/Joypad_(magazine)){:target="_blank"} et [Joystick](https://fr.wikipedia.org/wiki/Joystick_(magazine)){:target="_blank"} (pour les plus jeunes : les youtubeurs de l'époque quoi ! :smile:).
 
-Très vite je me suis rendu compte que dans *journaliste / testeur* il y a" journaliste" et que ce n'était pas fait pour moi !
+Très vite je me suis rendu compte que dans *journaliste / testeur* il y a "journaliste" et que ce n'était pas fait pour moi !
 Alors j'ai commencé à développer, d'abord sur ce qu'il y avait à l'époque : MO5, TO5, Commodore, Amstrad, ... puis à étudier (DUT / école de d'ingénieur) en continuant avec des *vraies* machines (SX286, 386, 486, DX, Pentium, ...) et des *vrais* langages (C, C++, DBase, HTML, JS, Java, ...) et enfin, fraîchement diplômé, j'en ai fait mon métier en 1999 en tant que développeur Java en SS2I puis en start-up !
 
 Alors oui, on était loin des jeux vidéos, mais je développais ! Et oui, vous avez bien lu : j'ai commencé ma vie professionnelle en 1999, j'ai donc 20 ans d'expérience et 45 ans !
@@ -48,7 +48,7 @@ A l'époque où le *plus de responsabilités* rimait avec gérer une équipe, fa
 ### Le changement ... PowerPoint à la place d'Intelliji
 Tout cela commence à se gâter, lorsque vous vous rendez compte qu'à la fin de la journée vous n'avez pas lancé votre éditeur de code préféré mais simplement la suite office et plus particulièrement PowerPoint !
 
-J'ai maintenant plus de 15 ans d'expérience et suis devenu architecte (applicatif, logiciel, technique, choisissez celui qui vous plaît le plus :wink:). Je ne rentrerai pas dans le détail du poste d'architecte, qui varie selon l'entreprise dans laquelle on se trouve, mais j'ai surtout l'impression, qu'une fois de plus, c'est pour flatter un peu l'ego que ce poste existe :smiley:.
+J'ai maintenant plus de 15 ans d'expérience et suis devenu architecte (applicatif, logiciel, technique, choisissez celui qui vous plaît le plus :wink:). Je ne rentrerai pas dans le détail du poste d'architecte, qui varie selon l'entreprise dans laquelle on se trouve.
 
 ### Le développeur, sportif de haut niveau ?
 J'ai un peu l'impression d'être un sportif de haut niveau, non pas dans les performances (:sweat_smile:) mais dans le fait de devoir arrêter ma passion juste parce-que je suis trop vieux. Et du coup pour rester dans le milieu, j'accepte des postes périphériques à ma passion d'origine (un peu comme coach, agent, préparateur pour les sportifs).
@@ -60,7 +60,7 @@ Pour continuer dans l'analogie du sportif, j'ai l'impression que la seule façon
 
 ### En conclusion : est-ce normal ?
 Je ne pense pas que cela soit normal, dans notre métier, de devoir ne plus coder à cause de l'âge ou des prétentions salariales si les compétences sont toujours là (bien entendu il faut savoir rester raisonnable :wink:).
-Lorsque l'on me demande ce que je suis, je réponds naturellement *développeur* puis je me ravise en disant architecte (en ayant du mal à définir réellement à quoi cela correspond !).
+Lorsque l'on me demande ce que je suis, je réponds naturellement *développeur* puis je me ravise en disant architecte.
 
 Je pense qu'il est possible de continuer à développer, même passé 20 ans d'expérience, et de continuer à apporter quelque chose. J'aime le développement, le *clean code* qui apporte quelque chose, les tests unitaires, ... Je pense, qu'en ces jours où le développement par *StackOverFlow* se rencontre de plus en plus, comprendre ce que l'on fait et le faire par envie et passion est un réel plus.
 

@@ -53,7 +53,7 @@ J'ai maintenant plus de 15 ans d'expérience et suis devenu architecte (applicat
 ### Le développeur, sportif de haut niveau ?
 J'ai un peu l'impression d'être un sportif de haut niveau, non pas dans les performances (:sweat_smile:) mais dans le fait de devoir arrêter ma passion juste parce-que je suis trop vieux. Et du coup pour rester dans le milieu, j'accepte des postes périphériques à ma passion d'origine (un peu comme coach, agent, préparateur pour les sportifs).
 
-Ce qui est dommage c'est que là où pour un sportif cela peut se justifier par les performances brutes par rapport à l'âge, pour un développeur je ne pense pas que cela soit le cas. Certes les jeunes poussent mais j'estime être encore capable de développer et de manière qualitative.
+Ce qui est dommage, c'est que là où pour un sportif cela peut se justifier par les performances brutes par rapport à l'âge, pour un développeur je ne pense pas que cela soit le cas. Certes les jeunes poussent mais j'estime être encore capable de développer et de manière qualitative.
 
 ### Redevenir sportif amateur
 Pour continuer dans l'analogie du sportif j'ai l'impression que la seule façon de coder de nouveau est de le faire "en amateur" sur mon temps perso. Le problème est que la vie perso quand on vieilli est occupée (famille, amis, ...) et qu'il est de plus en plus difficile de trouver du temps (j'avoue aussi la motivation, je suis assez mauvais pour les "hello world", je préfère les vrais projets !).

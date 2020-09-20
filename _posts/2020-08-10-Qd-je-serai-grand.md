@@ -51,7 +51,7 @@ Tout cela commence à se gâter, lorsque vous vous rendez compte qu'à la fin de
 J'ai maintenant plus de 15 ans d'expérience et suis devenu architecte (applicatif, logiciel, technique, choisissez celui qui vous plaît le plus :wink:). Je ne rentrerai pas dans le détail du poste d'architecte, qui varie selon l'entreprise dans laquelle on se trouve, mais j'ai surtout l'impression, qu'une fois de plus, c'est pour flatter un peu l'ego que ce poste existe :smiley:.
 
 ### Le développeur, sportif de haut niveau ?
-J'ai un peu l'impression d'être un sportif de haut niveau, non pas dans les performances (:sweat_smile:) mais dans le fait de devoir arrêter ma passion juste parce-que je suis trop vieux. Et du coup pour rester dans le milieu j'accepte des postes périphériques à ma passion d'origine (un peu comme coach, agent, préparateur pour les sportifs).
+J'ai un peu l'impression d'être un sportif de haut niveau, non pas dans les performances (:sweat_smile:) mais dans le fait de devoir arrêter ma passion juste parce-que je suis trop vieux. Et du coup pour rester dans le milieu, j'accepte des postes périphériques à ma passion d'origine (un peu comme coach, agent, préparateur pour les sportifs).
 
 Ce qui est dommage c'est que là où pour un sportif cela peut se justifier par les performances brutes par rapport à l'âge, pour un développeur je ne pense pas que cela soit le cas. Certes les jeunes poussent mais j'estime être encore capable de développer et de manière qualitative.
 

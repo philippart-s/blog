@@ -33,7 +33,7 @@ Ca dure 5 ans, puis, n'étant pas un parisien de souche, l'envie de revenir dans
 Si vous avez bien suivi, j'ai alors 30 ans et le dev est ma principale activité. Mais avec l'âge et l'expérience, on commence à me demander plus de choses et plus de responsabilités. Pas de problème ! C'est le jeu, et si en plus cela permet de distiller de la connaissance que j'ai acquise, on est bien dans les principes qui m'animent.
 
 ### Le début de la fin
-Eh oui on se doute qu'il y a bien un truc qui va changer, sinon pourquoi faire un article ? :wink:
+Eh oui on se doute bien qu'il y a un truc qui va changer, sinon pourquoi faire un article ? :wink:
 
 Avec l'âge et l'expérience qui augmentent vient la question de la juste rémunération, n'étant plus un développeur junior forcément je pense (et j'espère que c'est vrai) avoir acquis un bon niveau d'expertise dans le développement (Java pour ma part) et donc, comme souvent, les demandes d'augmentations sont liées à une augmentation de responsabilités. Cela ne me pose pas problème : ok !
 

@@ -46,7 +46,7 @@ Cependant il n'est pas choquant de payer plus cher cet ébéniste, qui, mécaniq
 A l'époque où le *plus de responsabilités* rimait avec gérer une équipe, faire des specs, des réunions clients, des chiffrages financiers, ... j'aurai dû sentir le truc venir ! Mais j'avais encore du temps pour développer et j'avais cette étiquette de référent technique ou tech lead - comme disent les jeunes - (ça fait toujours plaisir à l'ego :wink:) qui permettait de me faire sentir encore développeur.
 
 ### Le changement ... PowerPoint à la place d'Intelliji
-Là où ça commence à se gâter c'est quand vous vous rendez compte à la fin de la journée que vous n'avez pas lancé votre éditeur de code préféré mais simplement la suite office et plus particulièrement PowerPoint !
+Tout cela commence à se gâter, lorsque vous vous rendez compte qu'à la fin de la journée vous n'avez pas lancé votre éditeur de code préféré mais simplement la suite office et plus particulièrement PowerPoint !
 
 Ca y est j'ai de l'expérience (plus de 15 ans) et d'évolutions et en évolutions je suis devenu architecte (applicatif, logiciel, technique, choisissez celui qui vous plaît le plus :wink:). Je ne rentrerai pas dans le détail du poste d'architecte qui varie selon l'entreprise dans laquelle on se trouve mais j'ai surtout l'impression qu'une fois de plus c'est pour flatter un peu l'ego que ce poste existe :smiley:.
 

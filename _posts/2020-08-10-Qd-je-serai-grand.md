@@ -30,7 +30,7 @@ J'en profite pour faire un aparté sur l'humilité des personnes que j'ai crois�
 
 Ca dure 5 ans, puis, n'étant pas un parisien de souche, l'envie de revenir dans la région étudiante et plus particulièrement la belle ville de [Tours](https://www.tours.fr/){:target="_blank"} se fait de plus en plus sentir. Je saute le pas et reviens donc à Tours dans une société d'édition de logiciel comme expert Java / J2E (on disait comme ça à l'époque :wink:).
 
-Si vous avez bien suivi j'ai 30 ans et le dev est ma principale activité mais avec l'âge et l'expérience on commence à me demander plus de choses et plus de responsabilités. Pas de problème, c'est le jeu et si en plus cela permet de distiller de la connaissance que j'ai acquise on est bien dans les principes qui m'animent.
+Si vous avez bien suivi, j'ai alors 30 ans et le dev est ma principale activité. Mais avec l'âge et l'expérience, on commence à me demander plus de choses et plus de responsabilités. Pas de problème ! C'est le jeu, et si en plus cela permet de distiller de la connaissance que j'ai acquise, on est bien dans les principes qui m'animent.
 
 ### Le début de la fin
 Eh oui on se doute qu'il y a bien un truc qui va changer, sinon pourquoi faire un article ? :wink:

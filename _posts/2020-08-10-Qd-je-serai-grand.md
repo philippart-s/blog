@@ -12,7 +12,7 @@ tags:
 ### Un peu d'histoire
 Voilà, en résumé, ce que je me dis depuis que j'ai 9 ans ... Alors oui, plus jeune encore, je suis passé par la case cuisinier (je suis un gourmand) mais très vite je me suis orienté vers l'informatique.
 
-Pour être honnête à cet âge là c'est surtout les jeux vidéos qui m'intéressaient et mes stars étaient les journalistes testeurs des magazines [Joypad](https://fr.wikipedia.org/wiki/Joypad_(magazine)){:target="_blank"} et [Joystick](https://fr.wikipedia.org/wiki/Joystick_(magazine)){:target="_blank"} (pour les plus jeunes : les youtubeurs de l'époque quoi ! :smile:).
+Pour être honnête, à cet âge là, c'est surtout les jeux vidéos qui m'intéressaient et mes stars étaient des journalistes testeurs des magazines [Joypad](https://fr.wikipedia.org/wiki/Joypad_(magazine)){:target="_blank"} et [Joystick](https://fr.wikipedia.org/wiki/Joystick_(magazine)){:target="_blank"} (pour les plus jeunes : les youtubeurs de l'époque quoi ! :smile:).
 
 Très vite je me suis rendu compte que dans *journaliste / testeur* il y a journaliste et que ce n'était pas fait pour moi !
 Alors j'ai commencé à développer, d'abord sur ce qu'il y avait à l'époque : MO5, TO5, Commodore, Amstrad, ... puis d'en faire mes études (DUT / école de d'ingénieur) en continuant avec des *vraies* machines (SX286, 386, 486, DX, Pentium, ...) et des *vrais* langages (C, C++, DBase, HTML, JS, Java, ...) et enfin d'en faire mon métier à la sortie de mes études en 1999 en tant que développeur Java en SS2I puis en start-up !

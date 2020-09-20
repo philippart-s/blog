@@ -59,7 +59,7 @@ Ce qui est dommage c'est que là où pour un sportif cela peut se justifier par 
 Pour continuer dans l'analogie du sportif j'ai l'impression que la seule façon de coder de nouveau est de le faire "en amateur" sur mon temps perso. Le problème est que la vie perso quand on vieilli est occupée (famille, amis, ...) et qu'il est de plus en plus difficile de trouver du temps (j'avoue aussi la motivation, je suis assez mauvais pour les "hello world", je préfère les vrais projets !).
 
 ### En conclusion : est-ce normal ?
-Je ne pense pas que cela soit normal dans notre métier, si les compétences sont toujours là, de devoir ne plus coder à cause de l'âge ou des prétentions salariales (bien entendu il faut savoir rester raisonnable :wink:).
+Je ne pense pas que cela soit normal, dans notre métier, de devoir ne plus coder à cause de l'âge ou des prétentions salariales si les compétences sont toujours là (bien entendu il faut savoir rester raisonnable :wink:).
 Lorsque l'on me demande ce que je suis naturellement je réponds *développeur* puis je me ravise en disant architecte (en ayant du mal à définir réellement à quoi cela correspond !).
 
 Je pense qu'il est possible de continuer à développer, même passé 20 ans d'expérience, et de continuer à apporter quelque chose. J'aime le développement, le *clean code* qui apporte quelque chose, les tests unitaires, ... Je pense, qu'en ces jours où le développement par *StackOverFlow* se rencontre de plus en plus, que comprendre ce que l'on fait et le faire par envie et passion est un réel plus.

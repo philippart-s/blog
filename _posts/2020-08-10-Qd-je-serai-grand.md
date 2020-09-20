@@ -35,7 +35,7 @@ Si vous avez bien suivi, j'ai alors 30 ans et le dev est ma principale activité
 ### Le début de la fin
 Eh oui on se doute bien qu'il y a un truc qui va changer, sinon pourquoi faire un article ? :wink:
 
-Avec l'âge et l'expérience qui augmentent vient la question de la juste rémunération, n'étant plus un développeur junior forcément je pense (et j'espère que c'est vrai) avoir acquis un bon niveau d'expertise dans le développement (Java pour ma part) et donc, comme souvent, les demandes d'augmentations sont liées à une augmentation de responsabilités. Cela ne me pose pas problème : ok !
+Avec l'âge et l'expérience qui augmentent, vient la question de la juste rémunération. N'étant plus un développeur junior, je pense (et j'espère que c'est vrai) avoir acquis un bon niveau d'expertise dans le développement (Java pour ma part). Comme souvent, les demandes d'augmentations sont liées à une augmentation de responsabilités. Cela ne me pose pas problème : ok !
 
 Prenons un peu de temps sur cette étape: est-ce vraiment normal que le salaire soit conditionné aux responsabilités ? Ne peut il pas aussi tout simplement l'être à la compétence ? 
 

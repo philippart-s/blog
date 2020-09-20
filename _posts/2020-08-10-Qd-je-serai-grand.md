@@ -17,7 +17,7 @@ Pour être honnête, à cet âge là, c'est surtout les jeux vidéos qui m'inté
 Très vite je me suis rendu compte que dans *journaliste / testeur* il y a" journaliste" et que ce n'était pas fait pour moi !
 Alors j'ai commencé à développer, d'abord sur ce qu'il y avait à l'époque : MO5, TO5, Commodore, Amstrad, ... puis à étudier (DUT / école de d'ingénieur) en continuant avec des *vraies* machines (SX286, 386, 486, DX, Pentium, ...) et des *vrais* langages (C, C++, DBase, HTML, JS, Java, ...) et enfin, fraîchement diplômé, j'en ai fait mon métier en 1999 en tant que développeur Java en SS2I puis en start-up !
 
-Alors oui, on est loin des jeux vidéos, mais je développe et oui vous avez bien lu j'ai commencé ma vie professionnelle en 1999, j'ai donc 20 ans d'expérience et 45 ans !
+Alors oui, on était loin des jeux vidéos, mais je développais ! Et oui, vous avez bien lu : j'ai commencé ma vie professionnelle en 1999, j'ai donc 20 ans d'expérience et 45 ans !
 
 Et c'est de là que tout part, un constat à la moitié de ma vie professionnelle : je ne suis plus développeur alors que j'adore ça, mais pourquoi ?
 

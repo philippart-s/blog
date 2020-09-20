@@ -24,7 +24,7 @@ Et c'est de là que tout part, un constat à la moitié de ma vie professionnell
 J'avoue avoir longtemps hésité à écrire ce billet : ne vais-je pas passer pour un *Caliméro* ? qu'est-ce que je risque à écrire publiquement ma psychanalyse ? De ce que j'ai pu lire et entendre dire, je ne suis pas le seul à traverser cette remise en question. Je profite donc d'avoir mon propre espace pour écrire un article sur ce thème et exprimer mon ressenti.
 
 ### Les années développeur
-Pourtant tout commençait bien : des sociétés et projets intéressants, des rencontres enrichissantes avec des développeurs pointus et humbles qui m'apprennent une quantité faramineuse de choses et, en prime, un super salaire (explosion de la bulle internet des années 2000 et vie à Paris), bref l'éclate au quotidien en codant !
+Pourtant tout commençait bien : des sociétés et projets intéressants, des rencontres enrichissantes avec des développeurs pointus et humbles qui m'apprenaient une quantité faramineuse de choses et, en prime, un super salaire (explosion de la bulle internet des années 2000 et vie à Paris), bref l'éclate au quotidien en codant !
 
 J'en profite pour faire un aparté sur l'humilité des personnes que j'ai croisé à l'époque : je sortais fraîchement de l'école et ces personnes ont eu la gentillesse, malgré leur niveau largement supérieur au miens, de m'expliquer de transmettre leur savoir tout en pardonnant les erreurs de jeunesse que j'ai pu faire. Partage et empathie : des notions qui me sont chères et que l'on trouve de moins en moins dans le milieu professionnel selon moi. 
 

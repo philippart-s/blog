@@ -7,7 +7,7 @@ categories:
 tags:
   - Humeur 
 ---
-> Quand je serai grand je serai développeur !
+> Quand je serai grand, je serai développeur !
 
 ### Un peu d'histoire
 Voilà en résumé ce que je me dis depuis que j'ai 9 ans ... Alors oui je suis passé par la case cuisinier (je suis un gourmand) plus jeune mais très vite j'ai été vers l'informatique.

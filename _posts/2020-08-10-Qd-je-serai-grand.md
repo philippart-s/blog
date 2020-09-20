@@ -48,7 +48,7 @@ A l'époque où le *plus de responsabilités* rimait avec gérer une équipe, fa
 ### Le changement ... PowerPoint à la place d'Intelliji
 Tout cela commence à se gâter, lorsque vous vous rendez compte qu'à la fin de la journée vous n'avez pas lancé votre éditeur de code préféré mais simplement la suite office et plus particulièrement PowerPoint !
 
-Ca y est j'ai de l'expérience (plus de 15 ans) et d'évolutions et en évolutions je suis devenu architecte (applicatif, logiciel, technique, choisissez celui qui vous plaît le plus :wink:). Je ne rentrerai pas dans le détail du poste d'architecte qui varie selon l'entreprise dans laquelle on se trouve mais j'ai surtout l'impression qu'une fois de plus c'est pour flatter un peu l'ego que ce poste existe :smiley:.
+J'ai maintenant plus de 15 ans d'expérience et suis devenu architecte (applicatif, logiciel, technique, choisissez celui qui vous plaît le plus :wink:). Je ne rentrerai pas dans le détail du poste d'architecte, qui varie selon l'entreprise dans laquelle on se trouve, mais j'ai surtout l'impression, qu'une fois de plus, c'est pour flatter un peu l'ego que ce poste existe :smiley:.
 
 ### Le développeur, sportif de haut niveau ?
 J'ai un peu l'impression d'être un sportif de haut niveau, non pas dans les performances (:sweat_smile:) mais dans le fait de devoir arrêter ma passion juste parce-que je suis trop vieux. Et du coup pour rester dans le milieu j'accepte des postes périphériques à ma passion d'origine (un peu comme coach, agent, préparateur pour les sportifs).

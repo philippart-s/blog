@@ -43,7 +43,7 @@ Je vais faire l'analogie avec un artisan : n'est-ce pas normal de rétribuer un 
 
 Cependant il n'est pas choquant de payer plus cher cet ébéniste, qui, mécaniquement, va rapporter plus grâce à son expertise et ses compétences.
 
-A l'époque ou le *plus de responsabilités* rimait avec gérer une équipe, faire des specs, des réunions clients, des chiffrages financiers, ... j'aurai dû sentir le truc venir mais bon j'avais encore du temps pour développer et j'avais cette étiquette de référent technique ou tech lead comme disent les jeunes (ça fait toujours plaisir à l'ego :wink:) qui permettait de me faire sentir encore développeur.
+A l'époque où le *plus de responsabilités* rimait avec gérer une équipe, faire des specs, des réunions clients, des chiffrages financiers, ... j'aurai dû sentir le truc venir ! Mais j'avais encore du temps pour développer et j'avais cette étiquette de référent technique ou tech lead - comme disent les jeunes - (ça fait toujours plaisir à l'ego :wink:) qui permettait de me faire sentir encore développeur.
 
 ### Le changement ... PowerPoint à la place d'Intelliji
 Là où ça commence à se gâter c'est quand vous vous rendez compte à la fin de la journée que vous n'avez pas lancé votre éditeur de code préféré mais simplement la suite office et plus particulièrement PowerPoint !

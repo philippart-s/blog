@@ -21,7 +21,7 @@ Alors oui, on était loin des jeux vidéos, mais je développais ! Et oui, vous 
 
 Et c'est de là que tout part, un constat à la moitié de ma vie professionnelle : je ne suis plus développeur alors que j'adore ça, mais pourquoi ?
 
-J'avoue avoir longtemps hésité à écrire ce billet, par peur que cela fasse un peu trop *Caliméro* ou psychanalyse mais après tout c'est mon ressenti et autant profiter d'avoir son propre espace pour écrire un article !
+J'avoue avoir longtemps hésité à écrire ce billet : ne vais-je pas passer pour un *Caliméro* ? qu'est-ce que je risque à écrire publiquement ma psychanalyse ? De ce que j'ai pu lire et entendre dire, je ne suis pas le seul à traverser cette remise en question. Je profite donc d'avoir mon propre espace pour écrire un article sur ce thème et exprimer mon ressenti.
 
 ### Les années développeur
 Pourtant tout commençait bien : des sociétés et projets intéressants, des rencontres enrichissantes avec des développeurs pointus et humbles qui m'apprennent une quantité faramineuse de choses et, en prime, un super salaire (explosion de la bulle internet des années 2000 et vie à Paris), bref l'éclate au quotidien en codant !

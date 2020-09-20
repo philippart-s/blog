@@ -10,7 +10,7 @@ tags:
 > Quand je serai grand, je serai développeur !
 
 ### Un peu d'histoire
-Voilà en résumé ce que je me dis depuis que j'ai 9 ans ... Alors oui je suis passé par la case cuisinier (je suis un gourmand) plus jeune mais très vite j'ai été vers l'informatique.
+Voilà, en résumé, ce que je me dis depuis que j'ai 9 ans ... Alors oui, plus jeune encore, je suis passé par la case cuisinier (je suis un gourmand) mais très vite je me suis orienté vers l'informatique.
 
 Pour être honnête à cet âge là c'est surtout les jeux vidéos qui m'intéressaient et mes stars étaient les journalistes testeurs des magazines [Joypad](https://fr.wikipedia.org/wiki/Joypad_(magazine)){:target="_blank"} et [Joystick](https://fr.wikipedia.org/wiki/Joystick_(magazine)){:target="_blank"} (pour les plus jeunes : les youtubeurs de l'époque quoi ! :smile:).
 

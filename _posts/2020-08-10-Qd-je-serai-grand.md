@@ -39,7 +39,7 @@ Avec l'âge et l'expérience qui augmentent, vient la question de la juste rému
 
 Prenons un peu de temps sur cette étape: est-ce vraiment normal que le salaire soit conditionné aux responsabilités ? Ne peut il pas aussi tout simplement l'être à la compétence ? 
 
-Je vais faire l'analogie avec un artisan : n'est-ce pas normal de rétribuer un ébéniste qui va me faire la même pièce mais plus vite, de meilleure qualité et plus robuste dans le temps ? Oui cela me semble évident que pour un employeur il est normal que cet ébéniste soit payé plus cher qu'un ébéniste qui va travailler moins bien ou moins vite. Mais pour autant si mon ébéniste qui découvrait le métier au bout de quelques années est devenu très bon va-t-on lui demander en plus de gérer les relations fournisseurs, client, la compta, ... pour justifier une augmentation de son salaire, je ne pense pas !
+Je vais faire l'analogie avec un artisan : n'est-ce pas normal de rétribuer un ébéniste qui va me faire la même pièce mais plus vite, de meilleure qualité et plus robuste dans le temps ? Oui cela me semble évident que pour un employeur il est normal que cet ébéniste soit payé plus cher qu'un ébéniste qui va travailler moins bien ou moins vite. Mais pour autant, si mon ébéniste est devenu très bon au fil des années, va-t-on lui demander en plus de gérer les relations fournisseurs, client, la compta, ... pour justifier une augmentation de son salaire? Je ne pense pas !
 
 Cependant il n'est pas choquant de payer plus cher cet ébéniste, qui, mécaniquement, va rapporter plus grâce à son expertise et ses compétences.
 

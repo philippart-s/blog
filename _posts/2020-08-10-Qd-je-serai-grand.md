@@ -66,7 +66,7 @@ Je pense qu'il est possible de continuer à développer, même passé 20 ans d'e
 
 Cela va certainement faire *vieux con* mais en ces périodes où un nouveau langage sort tous les 3 mois et devient le super langage qu'il faut absolument utiliser, un peu d'expérience sur des langages qui ont fait leurs preuves ne fait pas de mal.
 
-Il y a forcément pleins de contre exemples mais quand je fais le compte autour de moi de mes amis de promo ou de collègues de mon âge peu sont encore développeurs. Peut être aussi la localisation explique des choses et que ce phénomène se voit moins sur Paris ou les grandes villes, je n'ai pas de chiffres mais là encore par rapport à mes constations sur les différents salons (à l'époque où on pouvait y aller :wink:) j'ai l'impression que les quarantenaires ne sont pas les plus nombreux à être 100 % développeurs !
+Il y a forcément beaucoup de contre-exemples mais quand je fais le compte autour de moi, de mes amis de promo ou de collègues de mon âge, peu sont encore développeurs. La localisation de nos postes peut aussi expliquer des choses et il est possible que ce phénomène se voie moins sur Paris ou les grandes villes, je n'ai pas de chiffres. Mais là encore, par rapport à mes constations sur les différents salons (à l'époque où on pouvait y aller :wink:), j'ai l'impression que les quarantenaires ne sont pas les plus nombreux à être 100 % développeurs !
 
 Alors oui il faut que les jeunes diplômés développent, nous pousse à continuer à faire de la veille et de la R&D pour ne pas s'endormir sur nos lauriers. Il faut aussi du monde pour accompagner ces jeunes et ne pas les laisser seuls avec pour seul compagnon *StackOverFlow*.
 

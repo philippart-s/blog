@@ -56,7 +56,7 @@ J'ai un peu l'impression d'être un sportif de haut niveau, non pas dans les per
 Ce qui est dommage, c'est que là où pour un sportif cela peut se justifier par les performances brutes par rapport à l'âge, pour un développeur je ne pense pas que cela soit le cas. Certes les jeunes poussent mais j'estime être encore capable de développer et de manière qualitative.
 
 ### Redevenir sportif amateur
-Pour continuer dans l'analogie du sportif j'ai l'impression que la seule façon de coder de nouveau est de le faire "en amateur" sur mon temps perso. Le problème est que la vie perso quand on vieilli est occupée (famille, amis, ...) et qu'il est de plus en plus difficile de trouver du temps (j'avoue aussi la motivation, je suis assez mauvais pour les "hello world", je préfère les vrais projets !).
+Pour continuer dans l'analogie du sportif, j'ai l'impression que la seule façon de coder de nouveau est de le faire "en amateur" sur mon temps personnel. Le problème est que la vie perso, quand on vieillit, est très occupée (famille, amis, ...) et qu'il est de plus en plus difficile de trouver du temps (j'avoue aussi la motivation, je suis assez mauvais pour les "hello world", je préfère les vrais projets !).
 
 ### En conclusion : est-ce normal ?
 Je ne pense pas que cela soit normal, dans notre métier, de devoir ne plus coder à cause de l'âge ou des prétentions salariales si les compétences sont toujours là (bien entendu il faut savoir rester raisonnable :wink:).

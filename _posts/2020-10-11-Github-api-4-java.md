@@ -9,24 +9,24 @@ tags:
   - Java
   - GitHub 
 ---
-Récemment j'ai eu besoin d'accéder aux éléments de mes repositories via une application codée en Java.
+Récemment j'ai eu besoin d'accéder aux éléments de mes repositories GitHub via une application codée en Java.
 
 Le premier réflexe : utiliser les API [REST](https://docs.github.com/en/free-pro-team@latest/rest){:target="_blank"} ou [GraphQL](https://docs.github.com/en/free-pro-team@latest/graphql){:target="_blank"} documentées sur le [site](https://docs.github.com/en/free-pro-team@latest/developers){:target="_blank"} développeur de GitHub.
 
 Le graphQL c'est bien (il paraît :wink:) mais, je trouve, avec un ticket d'entrée assez élevé.
-Du coup je me suis tourné vers la version REST, estampillée v3, qui semblait dans un premier temps vouée à être abandonnées ou profit de la v4 (graphQL) mais les équipes GitHub ont dû se rendre compte que ce n'était pas une si bonne idée et la v3 continue de vivre tranquillement et d'évoluer :smiley:. 
+Du coup je me suis tourné vers la version REST, estampillée v3, qui semblait dans un premier temps vouée à être abandonnée au profit de la v4 (graphQL) mais les équipes GitHub ont dû se rendre compte que ce n'était pas une si bonne idée et la v3 continue de vivre tranquillement et d'évoluer :smiley:. 
 
 En creusant un peu les docs côté GitHub on tombe sur une [page](https://developer.github.com/v3/libraries/){:target="_blank"} qui liste des librairies permettant une intégration plus aisée dans le code.
 
 GitHub ne fournit pas nativement une librairie pour Java mais donne une liste de quelques librairies tierces, c'est là qu'est indiquée celle qui nous intéresse : [GitHub for Java](http://github-api.kohsuke.org/){:target="_blank"}.
 
-La documentation présente sur le [site](https://github-api.kohsuke.org/){:target="_blank"} est essentiellement pour se connecter à GitHub (sur une organisation  ou non) et pour le reste c'est simplement la [javadoc](https://github-api.kohsuke.org/apidocs/index.html){:target="_blank"} de l'API, à l'ancienne :wink:. A noter que le nom des classes et méthodes permettent aussi de facilement retrouver ce que font les méthodes dans le détail en regardant la documentation de l'API REST correspondante sur le site de GitHub.
+La documentation présente sur le [site](https://github-api.kohsuke.org/){:target="_blank"} est essentiellement pour se connecter à GitHub (sur une organisation  ou non) et pour le reste c'est simplement la [javadoc](https://github-api.kohsuke.org/apidocs/index.html){:target="_blank"} de l'API, à l'ancienne :wink:. A noter que le nom des classes et méthodes permet aussi de facilement retrouver ce que font les méthodes dans le détail en regardant la documentation de l'API REST correspondante sur le site de GitHub.
 
 A noter que la [mailing](https://groups.google.com/forum/#!forum/github-api){:target="_blank"} list a l'air plus ou moins abandonnée au profit des issues du [repository](https://github.com/hub4j/github-api){:target="_blank"} GitHub.
 
 ## Activer les dépendances
 
-Bon les présentations sont faites, place à l'action et on commence par activer la dépendance (maven dans mon cas).
+Bon, les présentations sont faites, place à l'action et on commence par activer la dépendance (maven dans mon cas).
 
 ```xml
     <!-- GitHubAPI for Java -->
@@ -37,7 +37,7 @@ Bon les présentations sont faites, place à l'action et on commence par activer
     </dependency>
 ```
 
-La librairie ne vient pas avec des classes utilitaires pour les tests unitaires, pour ma part je suis parti sur l'utilisation de [mock server](https://www.mock-server.com/){:target="_blank"}. Cela tombe bien car en regardant les tests unitaires de la librairie ils utilisent aussi cette librairie pour *mocker* les accès à GitHub et vérifier que les requêtes envoyées à GitHub sont bien formées.
+La librairie ne vient pas avec des classes utilitaires pour les tests unitaires, pour ma part je suis parti sur l'utilisation de [mock server](https://www.mock-server.com/){:target="_blank"}. Cela tombe bien car en regardant les tests unitaires de la librairie, ils utilisent aussi cette librairie pour *mocker* les accès à GitHub et vérifier que les requêtes envoyées à GitHub sont bien formées.
 
 
 ## Premières utilisations
@@ -62,7 +62,7 @@ Plutôt simple et efficace ! :sunglasses:
 
 Bien entendu il est possible de faire des modifications sur le contenu du repository, les issues, les pull requests, ...
 
-Certaines de ces actions ne seront pas possible sans être authentifié avec un token.
+Certaines de ces actions ne seront pas possibles sans être authentifié avec un token.
 
 ```java
 GitHub.connect("philippart-s", args[0]) //arg[0] est le token associé au compte
@@ -94,7 +94,7 @@ La [documentation](https://docs.github.com/en/free-pro-team@latest/rest/overview
 
 C'est à prendre en compte si on souhaite effectuer de nombreuses requêtes, notamment de commit de fichiers. Pour cela il est possible d'utiliser des notions git de plus bas niveau : [Git DataBase](https://docs.github.com/en/free-pro-team@latest/rest/reference/git){:target="_blank"}.
 
-Cela va permettre, notamment de préparer une arborescence complète de fichier et de la commiter en une requête comme on le ferait avec un push qui embarque plusieurs commits sauf que dans notre cas il y aura un seul commit.
+Cela va permettre, notamment, de préparer une arborescence complète de fichier et de la commiter en une requête comme on le ferait avec un push qui embarque plusieurs commits sauf que dans notre cas il y aura un seul commit.
 
 Le code s'en retrouve un peu plus verbeux et moins accessible mais cela fonctionne plutôt bien !
 ```java
@@ -133,4 +133,4 @@ mainRef.updateTo(commitSha);
 
 Voilà maintenant il ne vous reste plus qu'à imaginer tous les cas d'utilisations qui vous passent par la tête !
 
-L'ensemble des sources sont disponible sur le [projet](https://github.com/philippart-s/githubApi4Java){:target="_blank"} GitHub.
+L'ensemble des sources est disponible sur le [projet](https://github.com/philippart-s/githubApi4Java){:target="_blank"} GitHub.

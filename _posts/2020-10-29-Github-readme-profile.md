@@ -18,33 +18,34 @@ Pour accéder à cette fonctionnalité, rien de plus simple : il suffit de crée
 
 Et ... c'est tout ! Plutôt simple. :zap:
 
-Ensuite en se connectant à la racine de votre compte, dans mon cas https://github.com/philippart-s, le contenu du readme du repository précédemment créé est affiché. :art:
+Ensuite, en se connectant à la racine de votre compte, dans mon cas https://github.com/philippart-s, le contenu du readme du repository précédemment créé est affiché. :art:
 
 ## Ne plus afficher le readme comme descriptif de profile ##
 Bien entendu il est possible de ne plus l'afficher, la méthode la plus simple : supprimer le repository ! :boom:
 
 Bon si vous ne souhaitez pas tout perdre et plus mesuré :
- - rendre de le repository *private*
+ - rendre le repository *private*
  - renommer le fichier *readme.md* en autre chose
  - le déplacer dans un sous répertoire 
 
 
 ## Pour aller plus loin ##
-Comme d'habitude de nombreuses personnes ont déjà fait de jolie choses plus ou moins utile :wink:.
-Il existe un repository qui liste pas mal de ressources pour s'aider à la conception mais aussi voir tout ce qu'il est possible : https://github.com/abhisheknaiidu/awesome-github-profile-readme.
+Comme d'habitude de nombreuses personnes ont déjà fait de jolies choses plus ou moins utiles :wink:.
+Il existe un repository qui liste pas mal de ressources pour s'aider à la conception mais aussi voir tout ce qu'il est possible : [https://github.com/abhisheknaiidu/awesome-github-profile-readme](https://github.com/abhisheknaiidu/awesome-github-profile-readme){:target="_blank"}.
 
-Pour ma part mon objectif était de faire un CV rapide et concis afin d'avoir ça sous la main, à vous de voir ce que vous souhaitez en faire !
+Pour ma part, mon objectif était de faire un CV rapide et concis afin d'avoir ça sous la main, à vous de voir ce que vous souhaitez en faire !
 
 Mais on ne se refait pas et à force de regarder ici ou là j'ai voulu intégrer pleins de trucs et petit à petit commencer à aller plus loin voir devoir développer certains trucs ! :rofl:
 
 ### Se présenter
-On commence par une petite présentation, pour des soucis de lisibilité j'ai choisi de mettre un petit texte qui explique qui je suis et ce que je fais à l'heur actuelle, pour plus de détails cela se passera dans une section affichée à la demande.
+On commence par une petite présentation, pour des soucis de lisibilité j'ai choisi de mettre un petit texte qui explique qui je suis et ce que je fais à l'heure actuelle, pour plus de détails cela se passera dans une section affichée à la demande.
 
 ### Les badges des réseaux sociaux ###
-Commençons par un truc simple mais qui peut toujours servir : les différents comptes des réseaux sociaux, et plutôt que de simples liens autant avoir de jolis badges / icons.
-J'ai hésité entre le format badges (comme ceux dans les repositories de librairies qui indiquent les informations de CI) et des icons, un peut plus joli je trouve mais moins geek :stuck_out_tongue:.
+Commençons par un truc simple mais qui peut toujours servir : les différents comptes des réseaux sociaux, et plutôt que de simples liens autant avoir de jolis badges / icones.
+J'ai hésité entre le format badges (comme ceux dans les repositories de librairies qui indiquent les informations de CI) et des icones, un peut plus joli je trouve, mais moins geek :stuck_out_tongue:.
 
-Du coup, je suis parti sur le badges avec [sheilds.io](https://shields.io/){:target="_blank"}. Il existe des badges pré-définis mais il est assez simple de fabriquer ses propres badges.
+Du coup, je suis parti sur le badges avec [sheilds.io](https://shields.io/){:target="_blank"}. 
+Il existe des badges pré-définis mais il est assez simple de fabriquer ses propres badges.
 
 ```md
 <img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fwildagsx">

@@ -1,5 +1,6 @@
 ---
 title: "Créer un CLI multiplateformes en GO"
+date: 2022-01-17
 #excerpt: 
 classes: wide
 categories:

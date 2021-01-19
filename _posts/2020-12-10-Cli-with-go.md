@@ -54,6 +54,32 @@ L'[API de Google](https://developers.google.com/calendar/){:target="_blank"} en 
 
 Bon eh bien il n'y a plus qu'à ! Et le premier POC, vous vous en doutez ce sera du Go et le sujet de cet article !
 
+## Par où commencer ?
+Je ne connais pas du tout Go du coup il va falloir que je me documente : 
+ - la [doc](https://golang.org/){:target="_blank"} officielle
+ - [A Tour of Go](https://tour.golang.org/welcome/1){:target="_blank"} : tuto interactif pour faire ses premiers pas en Go
+ - le très bon [article](https://dzone.com/articles/how-to-create-a-cli-in-go-in-few-minutes){:target="_blank"} d'Aurélie Vache sur comment écrire un CLI en Go (ça tombe bien !)
+
+Bon je ne suis pas expert mais cela va me permettre de jeter les premières bases pour mon POC.
+
+Je n'irai pas dans le détail car je ne ferai que paraphraser Aurélie et la doc officielle, la seul chose que je n'ai pas faite par rapport à l'article d'Aurélie est l'installation de GVM car je n'ai pas besoin, pour mes tests, de gérer plusieurs version de Go.
+
+Je peux juste indiqué que j'ai utilisé VsCode et le plugin [vscode-go](https://github.com/golang/vscode-go){:target="_blank"} qui est plutôt bien fait même si je n'arrive pas avoir la completion pour les fonctions issues des libs externes ... Avec Intellij cela fonctionne (est étonnant :wink: ?) mais l'idée était d'avoir un IDE plus léger, bon un (petit) mauvais point.
+
+Comme je l'ai indiqué j'ai, en suivant les bons conseils d'Aurélie, utilisé [Cobra](https://github.com/spf13/cobra){:target="_blank"} pour mes tests. C'est bien cela fait plein de trucs pour moi ! Par contre je me retrouve avec pas mal de *magic code* mais c'est le jeu en utilisant une lib externe dans un langage inconnu.
+
+## Un peu de code
+:warning: **Je tiens à mettre un gros disclaimer ici : ne connaissant pas le Go il y a moyen que le code qui vient pique les yeux des développeurs Go ! :laughing: :warning: 
+
+
+
+
+
+
+
+
+
+
 Suivre le tuto d'Aurélie : https://dzone.com/articles/how-to-create-a-cli-in-go-in-few-minutes
 :warning:
  - GOPATH à positionner => https://golang.org/doc/gopath_code.html

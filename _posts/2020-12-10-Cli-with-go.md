@@ -184,8 +184,28 @@ $ GOOS=windows GOARCH=386 go install
 ```
 Et le tour est joué, dans le répertoire *bin* du GO_PATH apparaît un répertoire *windaws_386* et dedans un exécutable *gogli.exe* !
 
-TODO : mettre capture powershell
+```console
+C:\temp> dir
+    Répertoire : C:\temp
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----       26/01/2021     18:46            430 credentials.json
+-a----       26/01/2021     13:47       15357440 gocli.exe
+-a----       26/01/2021     18:47            385 token.json
 
+C:\temp> ./gocli nextEvent
+Upcoming events:
+xxxxx (2021-01-29T08:00:00+01:00)
+xx (2021-01-30)
+xxxxxx (2021-02-11T18:15:00+01:00)
+xxxxx (2021-02-13)
+xx (2021-02-27)
+xx (2021-03-13)
+xxxx (2021-03-27)
+xxxxxx (2021-04-10)
+xx (2021-04-13T20:00:00+02:00)
+xxxxxx (2021-04-20T14:00:00+02:00)
+```
 Vraiment bluffant la facilité avec laquelle on peut générer un livrable quelque soit la cible, plus d'informations dans la [documentation](https://golang.org/doc/install/source#environment){:target="_blank"} pour savoir toutes les cibles possibles.
 
 Une dernière chose : il se peut qu'il vous manque des dépendances pour les cibles générées car par défaut Go récupère les dépendances pour architecture de la machine qui exécute la commande *go get* si on ne précise rien. 
@@ -193,4 +213,4 @@ Du coup pour générer un CLI avec Cobra pour Windows il faut récupérer les d�
 
 Voilà c'est fini, vous n'êtes pas devenu expert Go mais comme moi vous commencez à voir les possibilités de ce langage et notamment ce qu'il est possible de faire pour avoir un CLI (avec Cobra).
 
-Comme d'habitude l'ensemble des sources est disponible sur le [repository](){:target="_blank"} GitHub.
+Comme d'habitude l'ensemble des sources est disponible sur le [repository](https://github.com/philippart-s/go-cli){:target="_blank"} GitHub.

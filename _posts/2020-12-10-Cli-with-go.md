@@ -32,7 +32,7 @@ Et je n'ai pas été déçu ! J'en repars avec une jolie liste de courses :
  - [GraalVM](https://www.graalvm.org/){:target="_blank"} Native + [Kotlin](https://kotlinlang.org/){:target="_blank"}
  - [Picocli](https://picocli.info/){:target="_blank"} (Java) avec [QuarkusIO](https://quarkus.io/){:target="_blank"}
 
-Bon c'est sûr qu'il y en a d'autres mais là ça va il y a de quoi m'occuper :wink:. Pas sûr que je vais tout faire mais bon ça fait une bonne base de travail, et pour choisir je vais faire un POC (on aime bien faire ça : on a une excuse pour faire du code moche :laughing:).
+C'est sûr qu'il y en a d'autres mais là ça va il y a de quoi m'occuper :wink:. Pas sûr que je vais tout faire mais bon ça fait une bonne base de travail, et pour choisir je vais faire un POC (on aime bien faire ça : on a une excuse pour faire du code moche :laughing:).
 Le POC est assez simple : j'affiche les dix prochains événements de mon agenda Google.
 
 ```bash
@@ -62,7 +62,7 @@ Je ne connais pas du tout Go du coup il va falloir que je me documente :
 
 Je ne suis pas expert mais cela va me permettre de jeter les premières bases pour mon POC.
 
-Je n'irai pas dans le détail car je ne ferai que paraphraser Aurélie et la doc officielle, la seul chose que je n'ai pas faite par rapport à l'article d'Aurélie est l'installation de GVM car je n'ai pas besoin, pour mes tests, de gérer plusieurs version de Go.
+Je n'irai pas dans le détail car je ne ferai que paraphraser Aurélie et la doc officielle, la seul chose que je n'ai pas faite par rapport à l'article d'Aurélie est l'installation de GVM car je n'ai pas besoin, pour mes tests, de gérer plusieurs versions de Go.
 
 Je peux juste indiquer que j'ai utilisé VsCode et le plugin [vscode-go](https://github.com/golang/vscode-go){:target="_blank"} qui est plutôt bien fait même si je n'arrive pas avoir la completion pour les fonctions issues des libs externes ... Avec Intellij cela fonctionne (est-ce étonnant :wink: ?) mais l'idée était d'avoir un IDE plus léger, bon un (petit) mauvais point.
 
@@ -126,7 +126,7 @@ Eh bien voilà merci, le POC est fini !
 
 Non restez, on va quand même essayer d'aller jusqu'à afficher les événements et peut-être même lancer un éditeur de code quand même !
 
-On file sur la page de google pour l'API du calendrier Google (voir plus haut dans l'article) pour tout configurer et récupérer le code nécessaire à mon POC (pas sûr que l'on va coder tant que ça :wink:).
+On file sur la page développeur de google pour l'API du calendrier Google (voir plus haut dans l'article) pour tout configurer et récupérer le code nécessaire à mon POC (pas sûr que l'on va coder tant que ça :wink:).
 Je vous ferai grâce du code fournit car je n'ai rien touché à ce que google fournit comme exemple. 
 J'ai juste collé le code dans un fichier *googleCalendar.go* et appelé la fonction dans mon code :
 ```go
@@ -173,17 +173,18 @@ La partie écriture en elle-même ne révolutionne pas le monde et, à force d'�
 Ce qui me perturbe est l'impression, parfois, de revenir à faire du C avec les pointeurs et d'avoir moins de *guides* pour développer. 
 Les nombreuses années à faire des choses structurées avec des classes, de l'héritage, des objets ... et de manière très formelles dans l'écriture font que, je trouve, on est un peu perdu au début face à du source Go.
 
-Je me trompe, certainement par manque d'habitude, mais je ne me vois pas écrire toute une application de gestion en Go, par contre je comprends pourquoi il séduit autant côté Ops pour des profils issus du monde du développement : on a, je trouve, beaucoup plus de possibilité qu'en bash par exemple.
+Je me trompe, certainement par manque d'habitude, mais je ne me vois pas écrire toute une application de gestion en Go, par contre je comprends pourquoi il séduit autant côté Ops pour des profils issus du monde du développement : on a, je trouve, beaucoup plus de possibilités qu'en bash par exemple.
 
 
 ##  One more things !
 J'allais oublier un truc !
-Je voulais un CLI multiplateformes (ou du moins qui fonctionne et sur Linux et sur Windows), là, j'avoue que Go m'a bluffé, une commande et c'est joué :
+Je voulais un CLI multiplateformes (ou du moins qui fonctionne et sur Linux et sur Windows), là, j'avoue que Go m'a bluffé, une seule commande :
 ```bash
 $ GOOS=windows GOARCH=386 go install
 ```
-Et le tour est joué, dans le répertoire *bin* du GO_PATH apparaît un répertoire *windaws_386* et dedans un exécutable *gogli.exe* !
+Et le tour est joué, dans le répertoire *bin* du GO_PATH apparaît un répertoire *windows_386* et dedans un exécutable *gogli.exe* !
 
+Ensuite il ne reste plus qu'à l'exécuter dans un command DOS ou un powershell.
 ```console
 C:\temp> dir
     Répertoire : C:\temp
@@ -208,9 +209,11 @@ xxxxxx (2021-04-20T14:00:00+02:00)
 ```
 Vraiment bluffant la facilité avec laquelle on peut générer un livrable quelque soit la cible, plus d'informations dans la [documentation](https://golang.org/doc/install/source#environment){:target="_blank"} pour savoir toutes les cibles possibles.
 
-Une dernière chose : il se peut qu'il vous manque des dépendances pour les cibles générées car par défaut Go récupère les dépendances pour architecture de la machine qui exécute la commande *go get* si on ne précise rien. 
+Une dernière chose : il se peut qu'il vous manque des dépendances pour les cibles générées car par défaut Go récupère les dépendances pour l'architecture de la machine qui exécute la commande *go get* si on ne précise rien. 
 Du coup pour générer un CLI avec Cobra pour Windows il faut récupérer les dépendances Cobra en indiquant l'architecture cible voulue : `$ GOOS=windows go get -u github.com/spf13/cobra`.
 
 Voilà c'est fini, vous n'êtes pas devenu expert Go mais comme moi vous commencez à voir les possibilités de ce langage et notamment ce qu'il est possible de faire pour avoir un CLI (avec Cobra).
+
+La suite, pour moi : dérouler la liste de langages à tester et refaire mon POC :wink:. Le prochain : Rust !
 
 Comme d'habitude l'ensemble des sources est disponible sur le [repository](https://github.com/philippart-s/go-cli){:target="_blank"} GitHub.

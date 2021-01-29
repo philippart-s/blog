@@ -171,14 +171,14 @@ Je trouve, pour un développeur Java comme moi, le ticket d'entrée assez import
 
 La partie écriture en elle-même ne révolutionne pas le monde et, à force d'écriture, on comprends les différences.
 Ce qui me perturbe est l'impression, parfois, de revenir à faire du C avec les pointeurs et d'avoir moins de *guides* pour développer. 
-Les nombreuses années à faire des choses structurées avec des classes, de l'héritage, des objets ... et de manière très formelles dans l'écriture font que, je trouve, on est un peu perdu au début face à du source Go.
+Les nombreuses années à faire des choses structurées avec des classes, de l'héritage, des objets ... et de manière très formelle dans l'écriture font que, je trouve, on est un peu perdu au début face à du source Go.
 
-Je me trompe, certainement par manque d'habitude, mais je ne me vois pas écrire toute une application de gestion en Go, par contre je comprends pourquoi il séduit autant côté Ops pour des profils issus du monde du développement : on a, je trouve, beaucoup plus de possibilités qu'en bash par exemple.
+Je me trompe certainement par manque d'habitude, mais je ne me vois pas écrire toute une application de gestion en Go. Par contre je comprends pourquoi il séduit autant côté Ops pour des profils issus du monde du développement : on a, je trouve, beaucoup plus de possibilités qu'en bash par exemple.
 
 
 ##  One more things !
 J'allais oublier un truc !
-Je voulais un CLI multiplateformes (ou du moins qui fonctionne et sur Linux et sur Windows), là, j'avoue que Go m'a bluffé, une seule commande :
+Je voulais un CLI multiplateformes (ou du moins qui fonctionne sur Linux et sur Windows), là, j'avoue que Go m'a bluffé, une seule commande :
 ```bash
 $ GOOS=windows GOARCH=386 go install
 ```

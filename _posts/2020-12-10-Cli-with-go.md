@@ -55,7 +55,7 @@ L'[API de Google](https://developers.google.com/calendar/){:target="_blank"} en 
 Eh bien il n'y a plus qu'à ! Et le premier POC, vous vous en doutez ce sera du Go ! Il y avait un indice dans le titre de l'article ....
 
 ## Par où commencer ?
-Je ne connais pas du tout Go du coup il va falloir que je me documente : 
+Je ne connais pas du tout Go, du coup il va falloir que je me documente : 
  - la [doc](https://golang.org/){:target="_blank"} officielle
  - [A Tour of Go](https://tour.golang.org/welcome/1){:target="_blank"} : tuto interactif pour faire ses premiers pas en Go
  - le très bon [article](https://dzone.com/articles/how-to-create-a-cli-in-go-in-few-minutes){:target="_blank"} d'Aurélie Vache sur comment écrire un CLI en Go (ça tombe bien !)
@@ -72,7 +72,7 @@ Comme je l'ai indiqué j'ai, en suivant les bons conseils d'Aurélie, utilisé [
 :warning: **Je tiens à mettre un gros disclaimer ici : ne connaissant pas le Go il y a moyen que le code qui suive pique les yeux des développeurs Go !** :laughing: :warning: 
 
 Alors une fois cobra installé, il suffit de suivre la doc et d'initialiser un projet, mais avant ça il faut choisir un endroit où mettre les sources :wink:, chose banale me direz-vous ... pas forcément en Go où on ne nous laisse pas trop le choix (en tout cas c'est ce que j'ai compris).
-En effet il faut commencer par déclarer la racine de l'endroit où on va mettre tous ses éléments Go en renseignant la variable *GO_PATH* (par exemple /go).
+En effet, il faut commencer par déclarer la racine de l'endroit où on va mettre tous ses éléments Go en renseignant la variable *GO_PATH* (par exemple /go).
 Ensuite dans ce répertoire on retrouvera les sources et les binaires dont on a besoin pour développer notre projet.
 C'est ce qui s'appelle le [workspace](https://golang.org/doc/gopath_code.html){:target="_blank"}.
 

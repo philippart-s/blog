@@ -32,7 +32,7 @@ Et je n'ai pas été déçu ! J'en repars avec une jolie liste de courses :
  - [GraalVM](https://www.graalvm.org/){:target="_blank"} Native + [Kotlin](https://kotlinlang.org/){:target="_blank"}
  - [Picocli](https://picocli.info/){:target="_blank"} (Java) avec [QuarkusIO](https://quarkus.io/){:target="_blank"}
 
-C'est sûr qu'il y en a d'autres mais là ça va il y a de quoi m'occuper :wink:. Pas sûr que je vais tout faire mais bon ça fait une bonne base de travail, et pour choisir je vais faire un POC (on aime bien faire ça : on a une excuse pour faire du code moche :laughing:).
+C'est sûr qu'il y en a d'autres, mais là ça va il y a de quoi m'occuper :wink:. Pas sûr que je vais tout faire mais bon ça fait une bonne base de travail. Pour choisir je vais faire un POC (on aime bien faire ça : on a une excuse pour faire du code moche :laughing:).
 Le POC est assez simple : j'affiche les dix prochains événements de mon agenda Google.
 
 ```bash

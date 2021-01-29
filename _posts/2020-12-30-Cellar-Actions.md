@@ -9,7 +9,8 @@ tags:
   - S3
    
 ---
-Cela fait quelques temps que j'utilise [GitHub Pages](https://pages.github.com/){:target="_blank"} pour le site de l'association [TADx](www.tadx.fr){:target="_blank"} avec [Jekyll](https://jekyllrb.com/){:target="_blank"}.
+Cela fait quelques temps que j'utilise [GitHub Pages](https://pages.github.com/){:target="_blank"} pour le site de l'association [TADx](https://www.tadx.fr){:target="_blank"} avec [Jekyll](https://jekyllrb.com/){:target="_blank"}.
+
 Et cela fonctionne plutôt bien !
 
 Oui mais il me manque quelque chose : un environnement de staging qui me permet de voir ce que donne une modification du site représentée par une branche.

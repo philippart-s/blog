@@ -23,10 +23,24 @@ jobs:
     - name: Build
       uses: lemonarc/jekyll-action@1.0.0
 
-    - name: Sync output to S3   
-      run: |
-        aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws s3 sync ./_site/ s3://${{github.head_ref}} --endpoint-url https://${{ secrets.CLEVER_END_POINT }} --acl public-read
-        
+    - name: Deploy to Netlify
+      uses: nwtgck/actions-netlify@v1.1
+      with:
+        publish-dir: './_site'
+        #production-branch: master
+        #github-token: ${{ secrets.GITHUB_TOKEN }}
+        deploy-message: "Deploy from GitHub Actions : ${{ github.event.pull_request.title }}"
+        enable-pull-request-comment: true
+        enable-commit-comment: true
+        overwrites-pull-request-comment: true
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      timeout-minutes: 1
+#    - name: Sync output to S3   
+#      run: |
+#        aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
+#        aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#        aws s3 sync ./_site/ s3://${{github.head_ref}} --endpoint-url https://${{ secrets.CLEVER_END_POINT }} --acl public-read
+#        
 #        aws s3 ls --endpoint-url ${{ secrets.CLEVER_END_POINT }}

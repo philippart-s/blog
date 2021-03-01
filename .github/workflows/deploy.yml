@@ -24,7 +24,7 @@ jobs:
       uses: lemonarc/jekyll-action@1.0.0
 
     - name: Deploy to Netlify
-      uses: nwtgck/actions-netlify@v1.1
+      uses: nwtgck/actions-netlify@v1.1.13
       with:
         publish-dir: './_site'
         #production-branch: master 

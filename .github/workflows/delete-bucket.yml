@@ -13,4 +13,4 @@ jobs:
         run: |
             aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
             aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-            aws s3 rb s3://${{github.head_ref}} --force --endpoint-url ${{ secrets.CLEVER_END_POINT }}
+            aws s3 rb s3://${{github.head_ref}} --force --endpoint-url https://${{ secrets.CLEVER_END_POINT }}

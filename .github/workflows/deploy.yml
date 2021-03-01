@@ -1,0 +1,32 @@
+name: Jekyll site CI
+
+on:
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  jekyll:
+    name: Build and deploy Jekyll site
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - uses: actions/cache@v2
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
+
+    - name: Build
+      uses: lemonarc/jekyll-action@1.0.0
+
+    - name: Sync output to S3   
+      run: |
+        aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws s3 sync ./_site/ s3://${{github.head_ref}} --endpoint-url ${{ secrets.CLEVER_END_POINT }} --acl public-read
+        
+#        aws s3 ls --endpoint-url ${{ secrets.CLEVER_END_POINT }}

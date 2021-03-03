@@ -8,7 +8,8 @@ jobs:
   jekyll:
     name: Build and deploy Jekyll site
     runs-on: ubuntu-latest
-
+    outputs:
+      site: './site'
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -30,7 +31,7 @@ jobs:
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.1.13
         with:
-          publish-dir: './_site'
+          publish-dir: ${{needs.jekyll.outputs.site}}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: "Deploy from GitHub Actions : ${{ github.event.pull_request.title }}"
           enable-pull-request-comment: true

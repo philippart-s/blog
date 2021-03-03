@@ -9,7 +9,7 @@ minimal_mistakes_skin: default
 search: true
 repository               : "philippart-s/blog"
 url : "https://philippart-s.github.io"
-#baseurl : "/blog"
+baseurl : "/blog"
 
 
 

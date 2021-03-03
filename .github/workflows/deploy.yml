@@ -23,6 +23,7 @@ jobs:
     - name: Build
       uses: lemonarc/jekyll-action@1.0.0
   deploy:
+    needs: jekyll
     name: Deploy to Netlify
     runs-on: ubuntu-latest
     steps:

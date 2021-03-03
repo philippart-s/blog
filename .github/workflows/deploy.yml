@@ -8,6 +8,7 @@ jobs:
   jekyll:
     name: Build and deploy Jekyll site
     runs-on: ubuntu-latest
+
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -18,14 +19,13 @@ jobs:
         key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
         restore-keys: |
           ${{ runner.os }}-gems-
-
     - name: Build
       uses: lemonarc/jekyll-action@1.0.0
-    
+
     - name: Deploy to Netlify
       uses: nwtgck/actions-netlify@v1.1.13
       with:
-        publish-dir: './site'
+        publish-dir: './_site'
         github-token: ${{ secrets.GITHUB_TOKEN }}
         deploy-message: "Deploy from GitHub Actions : ${{ github.event.pull_request.title }}"
         enable-pull-request-comment: true

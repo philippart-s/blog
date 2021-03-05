@@ -1,5 +1,5 @@
 ---
-title: "Utiliser Netlify comme environnement de staging pour un site Jekyll"
+title: "Netlify, Jekyll et GitHub actions sont dans un bateau ..."
 #excerpt: 
 classes: wide
 categories:
@@ -12,10 +12,12 @@ tags:
 ---
 Cela fait quelque temps que je cherche un moyen d'avoir un environnement de staging pour mes sites [Jekyll](https://jekyllrb.com/){:target="_blank"} qui sont déployés sur *GitHub Pages*.
 En effet, lorsque l'on est plusieurs à contribuer c'est plutôt pratique de pouvoir voir ce que cela donne pour relire avant de le faire sur la prod !
+
 La version *prod* est déployée sur [GitHub Pages](https://pages.github.com/){:target="_blank"}, mais comme cela ne permet pas d'avoir un aperçu de ce que donne une PR / branche (visiblement cela va bientôt arriver mais je ne suis pas patient :wink:) je me suis mis à la recherche d'une solution automatisée pour faire ça !
 
 Ma première version d'environnement de staging reposait sur un [bucket S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html){:target="_blank"} à travers l'offre [cellar](https://www.clever-cloud.com/doc/deploy/addon/cellar/){:target="_blank"} de [Clever Cloud](https://www.clever-cloud.com/){:target="_blank"} : voir l'article [Déployer un site statique sur un bucket S3 avec GitHub Actions]({{ site.baseurl }}{% post_url 2020-12-30-Cellar-Actions %}){:target="_blank"}.
-Si cela fonctionne il manque un élément important : la possibilité d'activer la fonctionnalité *[website](https://docs.aws.amazon.com/AmazonS3/latest/userguide/EnableWebsiteHosting.html){:target="_blank"}* qui permet une navigation plus fluide comme si c'était déployé sur un serveur HTTP.
+Si cela fonctionne, il manque un élément important : la possibilité d'activer la fonctionnalité *[website](https://docs.aws.amazon.com/AmazonS3/latest/userguide/EnableWebsiteHosting.html){:target="_blank"}* qui permet une navigation plus fluide comme si c'était déployé sur un serveur HTTP.
+
 Par exemple, si on n'active pas cette fonctionnalité, il faut spécifier une page html à chaque requête (ce qui n'est pas le cas avec un site Jekyll) sinon on obtient une erreur du genre :
 ```xml
 <Error>
@@ -25,7 +27,7 @@ Par exemple, si on n'active pas cette fonctionnalité, il faut spécifier une pa
   <HostId>a4bc63c-default-default</HostId>
 </Error>
 ```
-Après avoir contacté le support de Clever cette fonctionnalité n'est pas encore disponible avec l'addon *cellar* mais devrait arriver dans les semaines qui viennent mais comme pour GitHub pages je ne suis pas patient et cela me fait une excuse pour tester un nouveau truc !
+Après avoir contacté le support de Clever cette fonctionnalité n'est pas encore disponible avec l'addon *cellar* (cela devrait arriver dans les semaines qui viennent) mais, comme pour GitHub pages, je ne suis pas patient et cela me fait une excuse pour tester un nouveau truc !
 
 ## Ce que je veux faire :bulb:
 Pour mémoire mon workflow est assez simple:
@@ -48,7 +50,7 @@ Plutôt sympa comme stack :sunglasses: !
 
 C'est peut être bête mais je n'ai pas trouvé le moyen de créer un site *vide* dans l'interface de Netlify: il faut soit donner une URL GitHub, GitLab ou BitBucket, soit déposer un répertoire contenant un site statique.
 Cela s'explique certainement qu'à l'origine un site sous Netlify est fait pour être *mis en production* (accédé depuis l'extérieur).
-Hors, dans mon cas la production est dans GitHub pages donc cela ne m'intéresse pas.
+Hors, dans mon cas, la production est dans GitHub pages donc cela ne m'intéresse pas.
 
 J'aurai pu déposer un répertoire vide ou avec un fichier *index.html* vide mais j'ai préféré créé un site vide en utilisant l'[API REST](https://docs.netlify.com/api/get-started/){:target="_blank"} de Netlify.
 
@@ -131,8 +133,9 @@ Pour cela on utilise l"action `nwtgck/actions-netlify@v1.1.13` qui permet de :
 :warning:c'est ici que l'on réutilise le *site_id* précédemment récupéré en le positionnant dans un secret GitHub, on fait de même avec le token associé à notre site de staging dans Netlyfi. :warning:
 
 A chaque modification de ma PR un build puis un déploiement dans Netlify de la branche est déclenché, plutôt cool :sunglasses:.
+Et un joli message apparaît dans la PR avec le lien de la version staging:
 
-TODO image message dans PR
+![message bot netlify]({{ site.url }}{{ site.baseurl }}/assets/images/netlify-actions/bot.png)
 
 ### Suppression de la version staging du site :wastebasket:
 Netlify ne permet pas de supprimer les déploiements de type preview, il sont stockés et accessibles tant que le site est créé dans Netlify.
@@ -184,7 +187,8 @@ jobs:
 
 
 ### TODO :clipboard:
-Le fait que les *preview deployment* ne soient pas supprimables n'est pas quelque chose qui me dérange par rapport aux informations contenu dans mes sites (tadx et mon blog) mais je trouve cela dommage de laisser quelque chose de déployé qui consomme de l'énergie pour rien :earth_africa:.
+Le fait que les *preview deployment* ne soient pas supprimables n'est pas quelque chose qui me dérange par rapport aux informations contenu dans mes sites ([tadx](https://www.tadx.fr){:target="_blank"} et mon blog) mais je trouve cela dommage de laisser quelque chose de déployé qui consomme de l'énergie pour rien :earth_africa:.
+
 Du coup cet article n'est pas totalement terminé, on va dire que c'est la V1 :wink:.
 La V2 verra la possibilité de supprimer les sites de staging déployés et cela me permettra d'écrire mes premières actions GitHub qui auront comme fonction de créer le site au début de la PR puis de le supprimer une fois que la PR sera fermée.
 

@@ -18,8 +18,8 @@ jobs:
           echo "is_created: $is_created"
           echo "::set-output name=site-created::$is_created"
   create_env:
-    needs: check_site
     if: ${{needs.check_site.outputs.site-created != 200}}
+    needs: check_site
     name: Site creation on netlify
     runs-on: ubuntu-latest
     outputs:

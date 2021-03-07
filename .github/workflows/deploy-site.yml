@@ -12,6 +12,5 @@ jobs:
       site-created: ${{ steps.check_site.outputs.site-created }}
     steps:
       - id: check-site
-      - name: Check site existance
         run: |
           ::set-output name=is-site-created::curl -s -o /dev/null --head -w "%{http_code}" -I -X GET -H "Authorization: Bearer ZZawBL8rkFx_YsPrcQbT6uJtt6zD5KgaBI2AIFuKuvQ" https://api.netlify.com/api/v1/sites\?name\='t${{github.head_ref}}'

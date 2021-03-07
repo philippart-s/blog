@@ -12,7 +12,20 @@ jobs:
       site-created: ${{ steps.check_site.outputs.site-created }}
     steps:
       - id: check-site
-        name: CHeck if the site exist
+        name: Check if the site exist
         run: |
           is_created=$(curl -s -o /dev/null --head -w "%{http_code}" -I -X GET -H "Authorization: Bearer ZZawBL8rkFx_YsPrcQbT6uJtt6zD5KgaBI2AIFuKuvQ" https://api.netlify.com/api/v1/sites?name='${{github.head_ref}}')
           echo "::set-output name=site-created::$is_created"
+  create_env:
+    needs: check_site
+    if: ${{needs.check_site.outputs.site-created != 200}}
+    name: Site creation on netlify
+    runs-on: ubuntu-latest
+    outputs:
+      site-id: ${{ steps.create-site.outputs.site-id }}
+    steps:
+      - id: create-site
+        name: Create Site
+        run: |
+          echo 'output: ${{needs.check_site.outputs.site-created}}'
+          ::set-output name=site-id::curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" -d '{"name": "${{github.head_ref}}"}' https://api.netlify.com/api/v1/sites | jq --raw-output '.id'          

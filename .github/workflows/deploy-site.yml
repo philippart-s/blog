@@ -9,16 +9,16 @@ jobs:
     name: Check if the site existe
     runs-on: ubuntu-latest
     outputs:
-      site-created: ${{ steps.check_site.outputs.site-created }}
+      httpStatus: ${{ steps.check_site.outputs.httpStatus }}
     steps:
       - id: check-site
         name: Check if the site exist
         run: |
           is_created=$(curl -s -o /dev/null --head -w "%{http_code}" -I -X GET -H "Authorization: Bearer ZZawBL8rkFx_YsPrcQbT6uJtt6zD5KgaBI2AIFuKuvQ" https://api.netlify.com/api/v1/sites?name='${{github.head_ref}}')
           echo "is_created: $is_created"
-          echo "::set-output name=site-created::$is_created"
+          echo "::set-output name=httpStatus::$is_created"
   create_env:
-    #if: ${{needs.check_site.outputs.site-created != 200}}
+    if: ${{needs.check_site.outputs.httpStatus != 200}}
     needs: check_site
     name: Site creation on netlify
     runs-on: ubuntu-latest
@@ -28,7 +28,7 @@ jobs:
       - id: create-site
         name: Create Site
         run: |
-          echo ${{needs.check_site.outputs.site-created}}
+          echo ${{needs.check_site.outputs.httpStatus}}
           site_id=$(curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" -d '{"name": "${{github.head_ref}}"}' https://api.netlify.com/api/v1/sites | jq --raw-output '.id')
           echo "site_id : $site_id"
           echo "::set-output name=site-id::$site_id"

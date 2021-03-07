@@ -28,7 +28,7 @@ jobs:
       - id: create-site
         name: Create Site
         run: |
-          echo 'output: ${{needs.check_site.outputs.site-created}}'
+          echo "output: ${{needs.check_site.outputs.site-created}}""
           site_id=$(curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" -d '{"name": "${{github.head_ref}}"}' https://api.netlify.com/api/v1/sites | jq --raw-output '.id')
           echo "site_id : $site_id"
           echo "::set-output name=site-id::$site_id"

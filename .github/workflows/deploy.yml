@@ -5,7 +5,33 @@ on:
     branches: [ master ]
 
 jobs:
+  check_site:
+    name: Check if the site existe
+    runs-on: ubuntu-latest
+    outputs:
+      site-created: ${{ steps.check_site.outputs.site-created }}
+    steps:
+      - id: check-site
+      - name: Check site existance
+        run: |
+          ::set-output name=is-site-created::curl -s -o /dev/null --head -w "%{http_code}" -I -X GET -H "Authorization: Bearer ZZawBL8rkFx_YsPrcQbT6uJtt6zD5KgaBI2AIFuKuvQ" https://api.netlify.com/api/v1/sites\?name\='t${{github.head_ref}}'
+
+  create_env:
+    needs: check_site
+    if: ${{needs.check_site.outputs.site-created != 200}}
+    name: Site creation on netlify
+    runs-on: ubuntu-latest
+    outputs:
+      site-id: ${{ steps.create-site.outputs.site-id }}
+    steps:
+      - id: create-site
+      - name: Create Site
+        run: |
+          echo 'output: ${{needs.check_site.outputs.site-created}}'
+          ::set-output name=site-id::curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" -d '{"name": "${{github.head_ref}}"}' https://api.netlify.com/api/v1/sites | jq --raw-output '.id'
+
   jekyll:
+    needs: create_env
     name: Build and deploy Jekyll site
     runs-on: ubuntu-latest
 
@@ -34,5 +60,5 @@ jobs:
         alias: ${{ github.head_ref }}
       env:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        NETLIFY_SITE_ID: ${{needs.create_env.outputs.site-id}}
       timeout-minutes: 1

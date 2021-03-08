@@ -14,8 +14,6 @@ jobs:
       - id: check-site
         name: Check if the site exist
         run: |
-          echo "github.event : ${{github.event.type}}"
-          echo "github.event_name : ${{github.event_name}}"
           is_created=$(curl -s -o /dev/null --head -w "%{http_code}" -I -X GET -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" https://api.netlify.com/api/v1/sites?name='${{github.head_ref}}')
           echo "::set-output name=httpStatus::200"
   create_env:
@@ -23,13 +21,8 @@ jobs:
     needs: check_site
     name: Site creation on netlify
     runs-on: ubuntu-latest
-    outputs:
-      site-id: ${{ steps.create-site.outputs.site-id }}
     steps:
       - id: create-site
         name: Create Site
         run: |
-          echo ${{needs.check_site.outputs.httpStatus}}
           site_id=$(curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" -d '{"name": "${{github.head_ref}}"}' https://api.netlify.com/api/v1/sites | jq --raw-output '.id')
-          echo "site_id : $site_id"
-          echo "::set-output name=site-id::$site_id"

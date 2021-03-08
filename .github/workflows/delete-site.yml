@@ -1,0 +1,15 @@
+name: Delete env for branch
+
+on:
+    pull_request:
+        types: [closed]
+    
+jobs:
+  delete_env:
+    name: Deletesite in Netlify for the branch
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete site for branch
+        run: |
+          site_id=$(curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" -d '{"name": "${{github.head_ref}}"}' https://api.netlify.com/api/v1/sites | jq --raw-output '.id')
+          curl -X DELETE -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" https://api.netlify.com/api/v1/sites/$site_id

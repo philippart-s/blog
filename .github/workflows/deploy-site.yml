@@ -14,7 +14,7 @@ jobs:
       - id: check-site
         name: Check if the site exist
         run: |
-          is_created=$(curl -s -o /dev/null --head -w "%{http_code}" -I -X GET -H "Authorization: Bearer ZZawBL8rkFx_YsPrcQbT6uJtt6zD5KgaBI2AIFuKuvQ" https://api.netlify.com/api/v1/sites?name='${{github.head_ref}}')
+          is_created=$(curl -s -o /dev/null --head -w "%{http_code}" -I -X GET -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" https://api.netlify.com/api/v1/sites?name='${{github.head_ref}}')
           echo "is_created: $is_created"
           echo "::set-output name=httpStatus::$is_created"
   create_env:

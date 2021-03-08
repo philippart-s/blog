@@ -14,7 +14,7 @@ jobs:
       - id: check-site
         name: Check if the site exist
         run: |
-          echo "github.event : ${{github.event}}"
+          echo "github.event : ${{github.event.types}}"
           echo "github.event_name : ${{github.event_name}}"
           is_created=$(curl -s -o /dev/null --head -w "%{http_code}" -I -X GET -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" https://api.netlify.com/api/v1/sites?name='${{github.head_ref}}')
           echo "::set-output name=httpStatus::200"

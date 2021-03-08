@@ -48,21 +48,54 @@ Plutôt sympa comme stack :sunglasses: !
 
 ## Création de l'environnement de staging dans Netlify :gear:
 
-C'est peut être bête mais je n'ai pas trouvé le moyen de créer un site *vide* dans l'interface de Netlify: il faut soit donner une URL GitHub, GitLab ou BitBucket, soit déposer un répertoire contenant un site statique.
-Cela s'explique certainement qu'à l'origine un site sous Netlify est fait pour être *mis en production* (accédé depuis l'extérieur).
-Hors, dans mon cas, la production est dans GitHub pages donc cela ne m'intéresse pas.
+J'ai délibérément choisi d'utiliser les appels d'API REST via curl pour faire mes actions sur le site Netlify.
+J'avais aussi le choix de faire une action mais je n'avais pas envi de faire du javascript et je trouvais trop lourds de faire une image Docker pour ça.
+J'aurai bien l'occasion de créer ma propre action un de ces jours !
 
-J'aurai pu déposer un répertoire vide ou avec un fichier *index.html* vide mais j'ai préféré créé un site vide en utilisant l'[API REST](https://docs.netlify.com/api/get-started/){:target="_blank"} de Netlify.
+Du coup le job de création est le suivant:
+```yaml
+name: Jekyll site CI
 
-Il faut donc appeler l'API suivante en POST : `https://api.netlify.com/api/v1/sites` avec comme body :
-```json
-{
-    "name": "philippart-s-blog-staging"
-}
+on:
+  # Dès qu'une activité sur la PR ciblant la master est détectée on déclenche le workflow
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  check_site:
+    # Ce job a pour objectif de vérifier si un site Netlify existe avec le nom de la branche ciblée par la PR
+    name: Check if the site existe
+    runs-on: ubuntu-latest
+    outputs:
+      # Cet output du job sera utilisé par le job de création du site pour savoir si il a besoin de créer ou non le site Netlify
+      httpStatus: ${{ steps.check-site.outputs.httpStatus }}
+    steps:
+      - id: check-site
+        name: Check if the site exist
+        # Récupération du code retour de la recherche d'un site Netlify avec le nom de la branche
+        # export en output le code retour pour le job suivant.
+        run: |
+          is_created=$(curl -s -o /dev/null --head -w "%{http_code}" -I -X GET -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" https://api.netlify.com/api/v1/sites?name='${{github.head_ref}}')
+          echo "::set-output name=httpStatus::$is_created"
+  create_env:
+    # Ce job doit créer le site si il n'existe pas
+    if: ${{needs.check_site.outputs.httpStatus != 200}}
+    needs: check_site
+    name: Site creation on netlify
+    runs-on: ubuntu-latest
+    outputs:
+      # Cet output servira au job de déploiement du site sur Netlify
+      site-id: ${{ steps.create-site.outputs.site-id }}    
+    steps:
+      - id: create-site
+        # Step permettant la création d'un site Netlify avec comme nom le nom de la branche ciblé pas la PR
+        # Il permet aussi de récupérer le site_id pour le futur déploiement.
+        name: Create Site
+        run: |
+          site_id=$(curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" -d '{"name": "${{github.head_ref}}"}' https://api.netlify.com/api/v1/sites | jq --raw-output '.id')
+          echo "::set-output name=site-id::$site_id"
 ```
-:warning: il faudra pour cela utiliser une authentification avec un token généré via la console de gestion de Netlify :warning:
-
-L'élément important dans le retour de l'appel est le **site_id** mais il est possible de le retrouver dans la console de gestion de Netlify, sauvegardez le il sera utilisé plus tard.
+L'élément important dans le retour de l'appel est le **site_id** mais il est possible de le retrouver dans la console de gestion de Netlify, il sera utilisé plus tard pour le déploiement.
 
 ## Mise à jour de l'environnement de staging à la création / modification de la PR :rocket:
 C'est là que GitHub Actions entre en scène.

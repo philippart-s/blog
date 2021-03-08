@@ -9,7 +9,7 @@ jobs:
     name: Check if the site existe
     runs-on: ubuntu-latest
     outputs:
-      httpStatus: ${{ steps.check_site.outputs.httpStatus }}
+      httpStatus: ${{ steps.check-site.outputs.httpStatus }}
     steps:
       - id: check-site
         name: Check if the site exist

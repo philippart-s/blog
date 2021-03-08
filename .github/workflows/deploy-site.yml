@@ -16,7 +16,7 @@ jobs:
         run: |
           is_created=$(curl -s -o /dev/null --head -w "%{http_code}" -I -X GET -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" https://api.netlify.com/api/v1/sites?name='${{github.head_ref}}')
           echo "is_created: $is_created"
-          echo "::set-output name=httpStatus::$is_created"
+          echo "::set-output name=httpStatus::200"
   create_env:
     if: ${{needs.check_site.outputs.httpStatus != 200}}
     needs: check_site

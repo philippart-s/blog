@@ -26,7 +26,6 @@ jobs:
   
   create_env:
     # Ce job doit créer le site si il n'existe pas
-    if: ${{env.SITE_ID != null}}
     needs: check_site
     name: Site creation on netlify
     runs-on: ubuntu-latest
@@ -38,6 +37,7 @@ jobs:
         # Step permettant la création d'un site Netlify avec comme nom le nom de la branche ciblé pas la PR
         # Il permet aussi de récupérer le site_id pour le futur déploiement.
         name: Create Site
+        if: ${{env.SITE_ID != null}}
         run: |
           site_id=$(curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" -d '{"name": "${{github.head_ref}}"}' https://api.netlify.com/api/v1/sites | jq --raw-output '.id')
           $SITE_ID=$site_id

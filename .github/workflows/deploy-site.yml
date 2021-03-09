@@ -26,7 +26,7 @@ jobs:
   
   create_env:
     # Ce job doit créer le site si il n'existe pas
-    if: env.SITE_ID != null
+    if: ${{env.SITE_ID != null}}
     needs: check_site
     name: Site creation on netlify
     runs-on: ubuntu-latest

@@ -5,9 +5,6 @@ on:
   pull_request:
     branches: [ master ]
 
-env:
-  SITE_ID: null
-
 jobs:
   check_site:
     # Ce job a pour objectif de vérifier si un site Netlify existe avec le nom de la branche ciblée par la PR
@@ -15,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       # Cet output du job sera utilisé par le job de création du site pour savoir si il a besoin de créer ou non le site Netlify
-      httpStatus: ${{ steps.check-site.outputs.httpStatus }}
+      site-id: ${{ steps.check-site.outputs.site-id }}
     steps:
       - id: check-site
         name: Check if the site exist
@@ -23,10 +20,11 @@ jobs:
         # export en output le code retour pour le job suivant.
         run: |
           SITE_ID=$(curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" https://api.netlify.com/api/v1/sites?name=${{github.head_ref}} | jq --raw-output '.[0].id')
-          echo "site-id: $SITE_ID"
+          echo "::set-output name=sote-id::$SITE_ID"
   
   create_env:
     # Ce job doit créer le site si il n'existe pas
+    if: ${{steps.check-site.outputs.site-id  == null}}
     needs: check_site
     name: Site creation on netlify
     runs-on: ubuntu-latest
@@ -38,7 +36,7 @@ jobs:
         # Step permettant la création d'un site Netlify avec comme nom le nom de la branche ciblé pas la PR
         # Il permet aussi de récupérer le site_id pour le futur déploiement.
         name: Create Site
-        if: ${{env.SITE_ID == null}}
         run: |
-          echo "site-id: $SITE_ID"
           SITE_ID=$(curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" -d '{"name": "${{github.head_ref}}"}' https://api.netlify.com/api/v1/sites | jq --raw-output '.id')
+
+

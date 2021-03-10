@@ -23,6 +23,7 @@ jobs:
         # export en output le code retour pour le job suivant.
         run: |
           SITE_ID=$(curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" https://api.netlify.com/api/v1/sites?name=${{github.head_ref}} | jq --raw-output '.[0].id')
+          echo "site-id: $SITE_ID"
   
   create_env:
     # Ce job doit créer le site si il n'existe pas
@@ -37,48 +38,7 @@ jobs:
         # Step permettant la création d'un site Netlify avec comme nom le nom de la branche ciblé pas la PR
         # Il permet aussi de récupérer le site_id pour le futur déploiement.
         name: Create Site
-        if: ${{env.SITE_ID != null}}
+        if: ${{env.SITE_ID == null}}
         run: |
-          site_id=$(curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" -d '{"name": "${{github.head_ref}}"}' https://api.netlify.com/api/v1/sites | jq --raw-output '.id')
-          $SITE_ID=$site_id
-          echo "::set-output name=site-id::$site_id"
-
-  jekyll:
-    needs: create_env
-    # Ce job permet de construire et déployer le site Jekyll
-    name: Build and deploy Jekyll site
-    runs-on: ubuntu-latest
-
-    steps:
-      # Récupération des sources
-    - name: Checkout
-      uses: actions/checkout@v2
-
-      # Mise en cache des dépendances Ruby
-    - uses: actions/cache@v2
-      with:
-        path: vendor/bundle
-        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-gems-
-
-      # Build du site Jekyll    
-    - name: Build
-      uses: lemonarc/jekyll-action@1.0.0
-
-      # Déploiement sur Netlify
-    - name: Deploy to Netlify
-      uses: nwtgck/actions-netlify@v1.1.13
-      with:
-        publish-dir: './_site'
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        deploy-message: "Deploy from GitHub Actions : ${{ github.event.pull_request.title }}"
-        enable-pull-request-comment: true
-        enable-commit-comment: true
-        overwrites-pull-request-comment: true
-        alias: ${{ github.head_ref }}
-      env:
-        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        # Réutilisation de l'identifiant du site précédemment créé
-        NETLIFY_SITE_ID: ${{ env.SITE_ID }}
-      timeout-minutes: 1
+          echo "site-id: $SITE_ID"
+          SITE_ID=$(curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" -d '{"name": "${{github.head_ref}}"}' https://api.netlify.com/api/v1/sites | jq --raw-output '.id')

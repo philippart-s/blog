@@ -6,7 +6,7 @@ on:
     branches: [ master ]
 
 env:
-  SITE_ID: null
+  SITE_ID: "foo"
 
 jobs:
   check_site:

@@ -40,6 +40,7 @@ jobs:
           SITE_ID=$(curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" -d '{"name": "${{github.head_ref}}"}' https://api.netlify.com/api/v1/sites | jq --raw-output '.id')
 
   jekyll:
+    if: always()
     needs: create_env
     # Ce job permet de construire et déployer le site Jekyll
     name: Build and deploy Jekyll site

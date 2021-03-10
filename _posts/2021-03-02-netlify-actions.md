@@ -1,7 +1,6 @@
 ---
 title: "Netlify, Jekyll et GitHub actions sont dans un bateau ..."
 #excerpt: 
-date: 2022-10-23
 classes: wide
 categories:
   - Articles
@@ -186,60 +185,7 @@ jobs:
       # Suppression du site correspondant au nom de la branche ciblée par la PR
       - name: Delete site for branch
         run: |
-          site_id=$(curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" -d '{"name": "${{github.head_ref}}"}' https://api.netlify.com/api/v1/sites | jq --raw-output '.id')
-          curl -X DELETE -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" https://api.netlify.com/api/v1/sites/$site_id
+          SITE_ID=$(curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" https://api.netlify.com/api/v1/sites?name=${{github.head_ref}} | jq --raw-output '.[0].id')
+          curl -X DELETE -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" https://api.netlify.com/api/v1/sites/$SITE_ID
 ```
 {% endraw %}
-
-A ce stade voici le pipeline complet:
-{% raw %}
-```yaml
-name: Jekyll site CI
-
-on:
-  pull_request:
-    branches: [ master ]
-
-jobs:
-  jekyll:
-    name: Build and deploy Jekyll site
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-
-    - uses: actions/cache@v2
-      with:
-        path: vendor/bundle
-        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-gems-
-    - name: Build
-      uses: lemonarc/jekyll-action@1.0.0
-
-    - name: Deploy to Netlify
-      uses: nwtgck/actions-netlify@v1.1.13
-      with:
-        publish-dir: './_site'
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        deploy-message: "Deploy from GitHub Actions : ${{ github.event.pull_request.title }}"
-        enable-pull-request-comment: true
-        enable-commit-comment: true
-        overwrites-pull-request-comment: true
-        alias: ${{ github.head_ref }}
-      env:
-        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-      timeout-minutes: 1
-```
-{% endraw %}
-
-
-### TODO :clipboard:
-Le fait que les *preview deployment* ne soient pas supprimables n'est pas quelque chose qui me dérange par rapport aux informations contenu dans mes sites ([tadx](https://www.tadx.fr){:target="_blank"} et mon blog) mais je trouve cela dommage de laisser quelque chose de déployé qui consomme de l'énergie pour rien :earth_africa:.
-
-Du coup cet article n'est pas totalement terminé, on va dire que c'est la V1 :wink:.
-La V2 verra la possibilité de supprimer les sites de staging déployés et cela me permettra d'écrire mes premières actions GitHub qui auront comme fonction de créer le site au début de la PR puis de le supprimer une fois que la PR sera fermée.
-
-To be continued ...

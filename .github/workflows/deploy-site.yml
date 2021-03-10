@@ -20,8 +20,8 @@ jobs:
         # Il permet aussi de récupérer le site_id pour le futur déploiement.
         name: Create Site
         run: |
+          return -1
           SITE_ID=$(curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" https://api.netlify.com/api/v1/sites?name=${{github.head_ref}} | jq --raw-output '.[0].id')
-          echo $SITE_ID
           if [ $SITE_ID == 'null' ];
           then
             echo "Site inexistant"
@@ -55,9 +55,6 @@ jobs:
       # Build du site Jekyll    
     - name: Build
       uses: lemonarc/jekyll-action@1.0.0
-
-    - name: Debug
-      run: echo "site id  ${{needs.create_env.outputs.site-id }}"
 
       # Déploiement sur Netlify
     - name: Deploy to Netlify

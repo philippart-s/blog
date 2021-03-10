@@ -41,7 +41,7 @@ jobs:
 
   jekyll:
     if: always()
-    needs: create_env
+    needs: [create_env,check_site]
     # Ce job permet de construire et déployer le site Jekyll
     name: Build and deploy Jekyll site
     runs-on: ubuntu-latest

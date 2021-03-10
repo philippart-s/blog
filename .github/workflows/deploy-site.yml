@@ -6,7 +6,7 @@ on:
     branches: [ master ]
 
 env:
-  SITE_ID: "foo"
+  SITE_ID: null
 
 jobs:
   check_site:
@@ -22,7 +22,7 @@ jobs:
         # Récupération du code retour de la recherche d'un site Netlify avec le nom de la branche
         # export en output le code retour pour le job suivant.
         run: |
-          $SITE_ID=$(curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" https://api.netlify.com/api/v1/sites?name=${{github.head_ref}} | jq --raw-output '.[0].id')
+          SITE_ID=$(curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" https://api.netlify.com/api/v1/sites?name=${{github.head_ref}} | jq --raw-output '.[0].id')
   
   create_env:
     # Ce job doit créer le site si il n'existe pas

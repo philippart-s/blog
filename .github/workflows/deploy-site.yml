@@ -6,26 +6,9 @@ on:
     branches: [ master ]
 
 jobs:
-  check_site:
-    # Ce job a pour objectif de vérifier si un site Netlify existe avec le nom de la branche ciblée par la PR
-    name: Check if the site existe
-    runs-on: ubuntu-latest
-    outputs:
-      # Cet output du job sera utilisé par le job de création du site pour savoir si il a besoin de créer ou non le site Netlify
-      site-id: ${{ steps.check-site.outputs.site-id }}
-    steps:
-      - id: check-site
-        name: Check if the site exist
-        # Récupération du code retour de la recherche d'un site Netlify avec le nom de la branche
-        # export en output le code retour pour le job suivant.
-        run: |
-          SITE_ID=$(curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" https://api.netlify.com/api/v1/sites?name=${{github.head_ref}} | jq --raw-output '.[0].id')
-          echo "::set-output name=site-id::$SITE_ID"
-  
   create_env:
     # Ce job doit créer le site si il n'existe pas
     if: ${{needs.check_site.outputs.site-id == null}}
-    needs: check_site
     name: Site creation on netlify
     runs-on: ubuntu-latest
     outputs:
@@ -37,11 +20,21 @@ jobs:
         # Il permet aussi de récupérer le site_id pour le futur déploiement.
         name: Create Site
         run: |
-          SITE_ID=$(curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" -d '{"name": "${{github.head_ref}}"}' https://api.netlify.com/api/v1/sites | jq --raw-output '.id')
+          SITE_ID=$(curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" https://api.netlify.com/api/v1/sites?name=${{github.head_ref}} | jq --raw-output '.[0].id')
+          echo $SITE_ID
+          if [ $SITE_ID == 'null' ];
+          then
+            echo "Site inexistant"
+            SITE_ID=$(curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" -d '{"name": "${{github.head_ref}}"}' https://api.netlify.com/api/v1/sites | jq --raw-output '.id')
+          fi
+          if [ $SITE_ID == 'null' ];
+          then
+            return -1
+          fi
+          echo "::set-output name=site-id::$SITE_ID"
 
   jekyll:
-    if: always()
-    needs: [create_env,check_site]
+    needs: create_env
     # Ce job permet de construire et déployer le site Jekyll
     name: Build and deploy Jekyll site
     runs-on: ubuntu-latest
@@ -64,7 +57,7 @@ jobs:
       uses: lemonarc/jekyll-action@1.0.0
 
     - name: Debug
-      run: echo "site id  ${{needs.check_site.outputs.site-id }}"
+      run: echo "site id  ${{needs.create_env.outputs.site-id }}"
 
       # Déploiement sur Netlify
     - name: Deploy to Netlify
@@ -80,6 +73,6 @@ jobs:
       env:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         # Réutilisation de l'identifiant du site précédemment créé
-        NETLIFY_SITE_ID: ${{needs.check_site.outputs.site-id }}
+        NETLIFY_SITE_ID: ${{needs.create_env.outputs.site-id }}
       timeout-minutes: 1
 

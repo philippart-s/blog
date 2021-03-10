@@ -63,9 +63,11 @@ jobs:
     - name: Build
       uses: lemonarc/jekyll-action@1.0.0
 
+    - name: Debug
+      run: echo "site id  ${{needs.check_site.outputs.site-id }}"
+
       # Déploiement sur Netlify
     - name: Deploy to Netlify
-      run: echo "site id  ${{needs.check_site.outputs.site-id }}"
       uses: nwtgck/actions-netlify@v1.1.13
       with:
         publish-dir: './_site'

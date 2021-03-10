@@ -1,6 +1,7 @@
 ---
 title: "Netlify, Jekyll et GitHub actions sont dans un bateau ..."
 #excerpt: 
+date: 2022-10-23
 classes: wide
 categories:
   - Articles
@@ -49,10 +50,11 @@ Plutôt sympa comme stack :sunglasses: !
 ## Création de l'environnement de staging dans Netlify :gear:
 
 J'ai délibérément choisi d'utiliser les appels d'API REST via curl pour faire mes actions sur le site Netlify.
-J'avais aussi le choix de faire une action mais je n'avais pas envi de faire du javascript et je trouvais trop lourds de faire une image Docker pour ça.
+J'avais aussi le choix de faire une action mais je n'avais pas envie de faire du javascript et je trouvais trop lourds de faire une image Docker pour ça.
 J'aurai bien l'occasion de créer ma propre action un de ces jours !
 
 Du coup le job de création est le suivant:
+{% raw %}
 ```yaml
 name: Jekyll site CI
 
@@ -62,25 +64,8 @@ on:
     branches: [ master ]
 
 jobs:
-  check_site:
-    # Ce job a pour objectif de vérifier si un site Netlify existe avec le nom de la branche ciblée par la PR
-    name: Check if the site existe
-    runs-on: ubuntu-latest
-    outputs:
-      # Cet output du job sera utilisé par le job de création du site pour savoir si il a besoin de créer ou non le site Netlify
-      httpStatus: ${{ steps.check-site.outputs.httpStatus }}
-    steps:
-      - id: check-site
-        name: Check if the site exist
-        # Récupération du code retour de la recherche d'un site Netlify avec le nom de la branche
-        # export en output le code retour pour le job suivant.
-        run: |
-          is_created=$(curl -s -o /dev/null --head -w "%{http_code}" -I -X GET -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" https://api.netlify.com/api/v1/sites?name='${{github.head_ref}}')
-          echo "::set-output name=httpStatus::$is_created"
   create_env:
     # Ce job doit créer le site si il n'existe pas
-    if: ${{needs.check_site.outputs.httpStatus != 200}}
-    needs: check_site
     name: Site creation on netlify
     runs-on: ubuntu-latest
     outputs:
@@ -88,37 +73,29 @@ jobs:
       site-id: ${{ steps.create-site.outputs.site-id }}    
     steps:
       - id: create-site
-        # Step permettant la création d'un site Netlify avec comme nom le nom de la branche ciblé pas la PR
+        # Step permettant la création d'un site Netlify avec comme nom le nom de la branche ciblé par la PR
         # Il permet aussi de récupérer le site_id pour le futur déploiement.
         name: Create Site
         run: |
-          site_id=$(curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" -d '{"name": "${{github.head_ref}}"}' https://api.netlify.com/api/v1/sites | jq --raw-output '.id')
-          echo "::set-output name=site-id::$site_id"
+          SITE_ID=$(curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" https://api.netlify.com/api/v1/sites?name=${{github.head_ref}} | jq --raw-output '.[0].id')
+          if [ $SITE_ID == 'null' ];
+          then
+            echo "Site inexistant"
+            SITE_ID=$(curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" -d '{"name": "${{github.head_ref}}"}' https://api.netlify.com/api/v1/sites | jq --raw-output '.id')
+          fi
+          if [ $SITE_ID == 'null' ];
+          then
+            return -1
+          fi
+          echo "::set-output name=site-id::$SITE_ID"
+
+#...
 ```
-L'élément important dans le retour de l'appel est le **site_id** mais il est possible de le retrouver dans la console de gestion de Netlify, il sera utilisé plus tard pour le déploiement.
+{% endraw %}
+
+L'élément important dans le retour de l'appel est le **SITE_ID** mais il est possible de le retrouver dans la console de gestion de Netlify, il sera utilisé plus tard pour le déploiement.
 
 ## Mise à jour de l'environnement de staging à la création / modification de la PR :rocket:
-C'est là que GitHub Actions entre en scène.
-
-### Initialisation du pipeline
-Rien de bien original, on le déclenche sur la création / modification d'une pull request à destination de la master.
-```yaml
-name: Jekyll site CI
-
-on:
-  pull_request:
-    branches: [ master ]
-
-jobs:
-  jekyll:
-    name: Build and deploy Jekyll site
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-```
-
 ### Build du site Jekyll
 On utilise deux actions : 
 1. une action pour builder le site : `lemonarc/jekyll-action@1.0.0`
@@ -127,6 +104,18 @@ On utilise deux actions :
 {% raw %}
 ```yaml
 ### ... 
+  jekyll:
+    needs: create_env
+    # Ce job permet de construire et déployer le site Jekyll
+    name: Build and deploy Jekyll site
+    runs-on: ubuntu-latest
+
+    steps:
+      # Récupération des sources
+    - name: Checkout
+      uses: actions/checkout@v2
+
+      # Mise en cache des dépendances Ruby
     - uses: actions/cache@v2
       with:
         path: vendor/bundle
@@ -134,18 +123,22 @@ On utilise deux actions :
         restore-keys: |
           ${{ runner.os }}-gems-
 
+      # Build du site Jekyll    
     - name: Build
       uses: lemonarc/jekyll-action@1.0.0
+# ...      
 ```
 {% endraw %}
 
 ### Déploiement du site généré sur Netlify
-Pour cela on utilise l"action `nwtgck/actions-netlify@v1.1.13` qui permet de :
-- utiliser le nom de la branch comme début du nom de l'URL du site déployé
-- ajouter un message à la PR avec l'URL du site déployé
+Pour cela on utilise l"action `nwtgck/actions-netlify@v1.1.13` qui permet :
+- d'utiliser le nom de la branch comme début du nom de l'URL du site déployé
+- d'ajouter un message à la PR avec l'URL du site déployé
 
 {% raw %}
 ```yaml
+#...
+      # Déploiement sur Netlify
     - name: Deploy to Netlify
       uses: nwtgck/actions-netlify@v1.1.13
       with:
@@ -158,12 +151,13 @@ Pour cela on utilise l"action `nwtgck/actions-netlify@v1.1.13` qui permet de :
         alias: ${{ github.head_ref }}
       env:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        # Réutilisation de l'identifiant du site précédemment créé
+        NETLIFY_SITE_ID: ${{needs.create_env.outputs.site-id }}
       timeout-minutes: 1
 ```
 {% endraw %}
 
-:warning:c'est ici que l'on réutilise le *site_id* précédemment récupéré en le positionnant dans un secret GitHub, on fait de même avec le token associé à notre site de staging dans Netlyfi. :warning:
+:warning:c'est ici que l'on réutilise le *site_id* positionné dans un *output* du job précédent. :warning:
 
 A chaque modification de ma PR un build puis un déploiement dans Netlify de la branche est déclenché, plutôt cool :sunglasses:.
 Et un joli message apparaît dans la PR avec le lien de la version staging:
@@ -173,6 +167,29 @@ Et un joli message apparaît dans la PR avec le lien de la version staging:
 ### Suppression de la version staging du site :wastebasket:
 Netlify ne permet pas de supprimer les déploiements de type preview, il sont stockés et accessibles tant que le site est créé dans Netlify.
 Il y a un [thread](https://answers.netlify.com/t/does-each-deploy-preview-stay-available-forever/12601){:target="_blank"} dans le forum de support qui indique que la fonctionnalité de pouvoir supprimer des déploiements en *preview* a été demandée et qu'elle sera disponible un jour :wink:.
+
+Il est donc nécessaire d'avoir un workflow qui se charge de cette suppression:
+{% raw %}
+```yaml
+name: Delete env for branch
+
+on:
+    # Dès qu'une pull request est fermée on déclenche le workflow
+    pull_request:
+        types: [closed]
+    
+jobs:
+  delete_env:
+    name: Delete site in Netlify for the branch
+    runs-on: ubuntu-latest
+    steps:
+      # Suppression du site correspondant au nom de la branche ciblée par la PR
+      - name: Delete site for branch
+        run: |
+          site_id=$(curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" -d '{"name": "${{github.head_ref}}"}' https://api.netlify.com/api/v1/sites | jq --raw-output '.id')
+          curl -X DELETE -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" https://api.netlify.com/api/v1/sites/$site_id
+```
+{% endraw %}
 
 A ce stade voici le pipeline complet:
 {% raw %}

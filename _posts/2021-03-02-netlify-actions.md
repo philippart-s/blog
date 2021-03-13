@@ -18,7 +18,7 @@ La version *prod* est déployée sur [GitHub Pages](https://pages.github.com/){:
 Ma première version d'environnement de staging reposait sur un [bucket S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html){:target="_blank"} à travers l'offre [cellar](https://www.clever-cloud.com/doc/deploy/addon/cellar/){:target="_blank"} de [Clever Cloud](https://www.clever-cloud.com/){:target="_blank"} : voir l'article [Déployer un site statique sur un bucket S3 avec GitHub Actions]({{ site.baseurl }}{% post_url 2020-12-30-Cellar-Actions %}){:target="_blank"}.
 Si cela fonctionne, il manque un élément important : la possibilité d'activer la fonctionnalité *[website](https://docs.aws.amazon.com/AmazonS3/latest/userguide/EnableWebsiteHosting.html){:target="_blank"}* qui permet une navigation plus fluide comme si c'était déployé sur un serveur HTTP.
 
-Par exemple, si on n'active pas cette fonctionnalité, il faut spécifier une page html à chaque requête (ce qui n'est pas le cas avec un site Jekyll) sinon on obtient une erreur du genre :
+Par exemple, si on n'active pas cette fonctionnalité, il faut spécifier une page html à chaque requête (ce qui n'est pas le cas avec le template de site Jekyll que j'utilise) sinon on obtient une erreur du genre :
 ```xml
 <Error>
   <Code>NoSuchKey</Code>
@@ -72,7 +72,7 @@ jobs:
       site-id: ${{ steps.create-site.outputs.site-id }}    
     steps:
       - id: create-site
-        # Step permettant la création d'un site Netlify avec comme nom le nom de la branche ciblé par la PR
+        # Step permettant la création d'un site Netlify avec comme nom le nom de la branche ciblée par la PR
         # Il permet aussi de récupérer le site_id pour le futur déploiement.
         name: Create Site
         run: |
@@ -189,3 +189,9 @@ jobs:
           curl -X DELETE -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" https://api.netlify.com/api/v1/sites/$SITE_ID
 ```
 {% endraw %}
+
+## En conclusion :dart:
+Au final j'ai ce que je voulais : un site de staging attaché à une PR qui a dure le temps de la PR.
+Ce n'est pas parfait et il y a des améliorations à faire (comme tester que le nom de la branche ne comporte pas des caractères non compatibles par exemple). En tout cas cela permet d'attendre que GitHub ajoute cette fonctionnalité de preview pour GitHub pages :wink:.
+
+L'ensemble des sources des workflows sont disponible [ici](https://github.com/philippart-s/blog/tree/master/.github/workflows){:target="_blank"}.

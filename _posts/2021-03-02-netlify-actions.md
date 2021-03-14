@@ -1,7 +1,6 @@
 ---
 title: "Netlify, Jekyll et GitHub actions sont dans un bateau ..."
 #excerpt: 
-date: 2022-10-23
 classes: wide
 categories:
   - Articles
@@ -19,7 +18,7 @@ La version *prod* est déployée sur [GitHub Pages](https://pages.github.com/){:
 Ma première version d'environnement de staging reposait sur un [bucket S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html){:target="_blank"} à travers l'offre [cellar](https://www.clever-cloud.com/doc/deploy/addon/cellar/){:target="_blank"} de [Clever Cloud](https://www.clever-cloud.com/){:target="_blank"} : voir l'article [Déployer un site statique sur un bucket S3 avec GitHub Actions]({{ site.baseurl }}{% post_url 2020-12-30-Cellar-Actions %}){:target="_blank"}.
 Si cela fonctionne, il manque un élément important : la possibilité d'activer la fonctionnalité *[website](https://docs.aws.amazon.com/AmazonS3/latest/userguide/EnableWebsiteHosting.html){:target="_blank"}* qui permet une navigation plus fluide comme si c'était déployé sur un serveur HTTP.
 
-Par exemple, si on n'active pas cette fonctionnalité, il faut spécifier une page html à chaque requête (ce qui n'est pas le cas avec un site Jekyll) sinon on obtient une erreur du genre :
+Par exemple, si on n'active pas cette fonctionnalité, il faut spécifier une page html à chaque requête (ce qui n'est pas le cas avec le template de site Jekyll que j'utilise) sinon on obtient une erreur du genre :
 ```xml
 <Error>
   <Code>NoSuchKey</Code>
@@ -73,7 +72,7 @@ jobs:
       site-id: ${{ steps.create-site.outputs.site-id }}    
     steps:
       - id: create-site
-        # Step permettant la création d'un site Netlify avec comme nom le nom de la branche ciblé par la PR
+        # Step permettant la création d'un site Netlify avec comme nom le nom de la branche ciblée par la PR
         # Il permet aussi de récupérer le site_id pour le futur déploiement.
         name: Create Site
         run: |
@@ -186,60 +185,13 @@ jobs:
       # Suppression du site correspondant au nom de la branche ciblée par la PR
       - name: Delete site for branch
         run: |
-          site_id=$(curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" -d '{"name": "${{github.head_ref}}"}' https://api.netlify.com/api/v1/sites | jq --raw-output '.id')
-          curl -X DELETE -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" https://api.netlify.com/api/v1/sites/$site_id
+          SITE_ID=$(curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" https://api.netlify.com/api/v1/sites?name=${{github.head_ref}} | jq --raw-output '.[0].id')
+          curl -X DELETE -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" https://api.netlify.com/api/v1/sites/$SITE_ID
 ```
 {% endraw %}
 
-A ce stade voici le pipeline complet:
-{% raw %}
-```yaml
-name: Jekyll site CI
+## En conclusion :dart:
+Au final j'ai ce que je voulais : un site de staging attaché à une PR qui a dure le temps de la PR.
+Ce n'est pas parfait et il y a des améliorations à faire (comme tester que le nom de la branche ne comporte pas des caractères non compatibles par exemple). En tout cas cela permet d'attendre que GitHub ajoute cette fonctionnalité de preview pour GitHub pages :wink:.
 
-on:
-  pull_request:
-    branches: [ master ]
-
-jobs:
-  jekyll:
-    name: Build and deploy Jekyll site
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-
-    - uses: actions/cache@v2
-      with:
-        path: vendor/bundle
-        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-gems-
-    - name: Build
-      uses: lemonarc/jekyll-action@1.0.0
-
-    - name: Deploy to Netlify
-      uses: nwtgck/actions-netlify@v1.1.13
-      with:
-        publish-dir: './_site'
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        deploy-message: "Deploy from GitHub Actions : ${{ github.event.pull_request.title }}"
-        enable-pull-request-comment: true
-        enable-commit-comment: true
-        overwrites-pull-request-comment: true
-        alias: ${{ github.head_ref }}
-      env:
-        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-      timeout-minutes: 1
-```
-{% endraw %}
-
-
-### TODO :clipboard:
-Le fait que les *preview deployment* ne soient pas supprimables n'est pas quelque chose qui me dérange par rapport aux informations contenu dans mes sites ([tadx](https://www.tadx.fr){:target="_blank"} et mon blog) mais je trouve cela dommage de laisser quelque chose de déployé qui consomme de l'énergie pour rien :earth_africa:.
-
-Du coup cet article n'est pas totalement terminé, on va dire que c'est la V1 :wink:.
-La V2 verra la possibilité de supprimer les sites de staging déployés et cela me permettra d'écrire mes premières actions GitHub qui auront comme fonction de créer le site au début de la PR puis de le supprimer une fois que la PR sera fermée.
-
-To be continued ...
+L'ensemble des sources des workflows sont disponible [ici](https://github.com/philippart-s/blog/tree/master/.github/workflows){:target="_blank"}.

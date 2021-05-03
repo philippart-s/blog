@@ -120,7 +120,7 @@ deployment.apps/nginx-deployment   1/1     1            1           5m58s
 NAME                                          DESIRED   CURRENT   READY   AGE
 replicaset.apps/nginx-deployment-5c7c9d84f9   1         1         1       101s
 ```
-![plain-app1]({{ site.url }}{{ site.baseurl }}/assets/images//helm-for-dev/plain-app1.png)
+![plain-app1]({{ site.url }}{{ site.baseurl }}/assets/images/helm-for-dev/plain-app1.png)
 
 Bon c'est pas mal tout ça mais du coup je fais autant de fichiers que de modifications que je souhaite faire (par exemple un changement de port ou de config de déploiement) ? :thinking:
 
@@ -604,7 +604,7 @@ replicaset.apps/helm-for-dev-1-deployment-646bb7f7c5   1         1         1    
 ```
 Tada ! :tada:
 
-![helm-app1]({{ site.url }}{{ site.baseurl }}/assets/images//helm-for-dev/helm-app1.png)
+![helm-app1]({{ site.url }}{{ site.baseurl }}/assets/images/helm-for-dev/helm-app1.png)
 
 
 Un petit deuxième :
@@ -625,7 +625,7 @@ NAME                                                   DESIRED   CURRENT   READY
 replicaset.apps/helm-for-dev-2-deployment-79f94f754b   1         1         1       32s
 
 ```
-![helm-app2]({{ site.url }}{{ site.baseurl }}/assets/images//helm-for-dev/helm-app2.png)
+![helm-app2]({{ site.url }}{{ site.baseurl }}/assets/images/helm-for-dev/helm-app2.png)
 
 L'exemple est simple car on ne change pas tout mais on voit tout de suite qu'en une seule commande sans dupliquer les fichiers de ressources on a déployé une nouvelle application *du même type* (qui se déploie de la même façon) dans le cluster. A noter que pour bien faire il aurait fallut rendre aussi le port de l'ingress paramétrable pour ne pas se marcher dessus, mais ça vous savez faire maintenant :wink:.
 
@@ -670,4 +670,4 @@ helm install my-release bitnami/nginx
 ```
 Et voilà :
 
-![binami-nginx]({{ site.url }}{{ site.baseurl }}/assets/images//helm-for-dev/bitnami-nginx.png)
+![binami-nginx]({{ site.url }}{{ site.baseurl }}/assets/images/helm-for-dev/bitnami-nginx.png)

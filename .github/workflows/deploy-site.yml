@@ -56,7 +56,7 @@ jobs:
 
       # Déploiement sur Netlify
     - name: Deploy to Netlify
-      uses: nwtgck/actions-netlify@v1.1.13
+      uses: nwtgck/actions-netlify@v1.2.0
       with:
         publish-dir: './_site'
         github-token: ${{ secrets.GITHUB_TOKEN }}

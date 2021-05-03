@@ -10,11 +10,11 @@ tags:
   - Kubernetes
 ---
 En ce moment ma principale occupation est de mettre en place Openshift avec notamment une adaptation de toute la delivery.
-Je me suis dit du coup que j'allais partager mes différentes petites trouvailles qui pourront servir pour des personnes voulant se lancer ou des dev désireux de toucher un peu la partie Kube / Helm.
+Je me suis dit, du coup, que j'allais partager mes différentes petites trouvailles qui pourront servir pour des personnes voulant se lancer ou des dev désireux de toucher un peu la partie Kube / Helm.
 Je sais qu'il existe de nombreux posts sur Internet sur le même sujet mais celui-ci sera en Français et restera volontairement simple pour être le plus accessible possible.
 
 # Installation de K3s
-On a dit simple donc pour faire du Kube sans se prendre la tête j'ai choisi [K3s](https://rancher.com/products/k3s/){:target="_blank"} de Rancher.
+On a dit simple, donc pour faire du Kube sans se prendre la tête j'ai choisi [K3s](https://rancher.com/products/k3s/){:target="_blank"} de Rancher.
 Et pour le coup quand je dis simple c'est simple, une commande et 30s plus tard on a un cluster Kube pour jouer :
 ```bash
 curl -sfL https://get.k3s.io | sh -
@@ -35,9 +35,11 @@ kube-system   metrics-server-86cbb8457f-spjjd           1/1     Running     1   
 kube-system   traefik-6f9cbd9bd4-4vx6r                  1/1     Running     1          67m
 kube-system   local-path-provisioner-5ff76fc89d-7tbsg   1/1     Running     2          68m
 ```
-# Un petit Hello world 
+# Un petit Hello world 
+
 Pour illustrer ça on va déjà déployer une version *statique* de notre exemple, dans mon cas un POD contenant un conteneur NGinx.
 Après quelques `kubecti apply -f ...` des fichiers suivants on a un hello world qui fonctionne.
+
 ## Namespace
 ```yaml
 apiVersion: v1
@@ -88,7 +90,7 @@ spec:
       targetPort: 80
 ```
 
-# Ingress
+## Ingress
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -153,7 +155,7 @@ Cela crée tout l'arborescence avec les fichiers nécessaires à faire un chart 
 A ce stade tout est prêt, on retrouve :
  - *Chart.yaml* : les différentes infos décrivant notre chart
  - *templates* : répertoire qui contient les templates (:sweat_smile:), ce ne sont que les fichiers décrivant les ressources Kubernetes (on y retrouve le deployment, service, ...)
- - *charts : permet de définir des charts enfants
+ - *charts* : permet de définir des charts enfants
  - *tests* : répertoire contenant ... les tests 
  - *values.yaml* : fichier qui va permettre de rendre les templates dynamiques en stockant les différentes valeurs à injecter aux templates
 
@@ -241,7 +243,7 @@ Allez, on va créer tout ça dans notre cluster en une seule commande !
 Ca commence à être sympa : une commande on crée et un commande on supprime, on verra que c'est la même chose pour mettre à jour : pour cela on utilise *upgrade* à la place d'*install*.
 
 ### One ring to rule them all :ring:
-Maintenant que l'on a les bases et la base de notre template on va regarder comment l'utiliser pour déployer le même type d'application tout en apportant des modifications et sans pour autant dupliquer tous nos fichiers de configuration !
+Maintenant que l'on a les bases et les grandes lignes de notre template on va regarder comment l'utiliser pour déployer le même type d'application tout en apportant des modifications sans dupliquer tous nos fichiers de configuration !
 
 La base pour identifier ce qui va pouvoir varier est le fichier *values.xml*.
 C'est assez simple : ce fichier va liste des variables que l'on va pouvoir *injecter* dans les différents fichiers qui composent le template.
@@ -279,11 +281,12 @@ resources:
 ```
 Nous verrons plus loin comment l'utiliser.
 
-#### Le nom de l'application
+### Le nom de l'application
 Pour positionner le nom de l'application j'utilise un objet prédéfinit d'Helm : `Release.Name`.
 Je ne l'ai pas encore dit, mais les templates Helm utilisent le moteur de templating de Go et donc sa syntaxe qui est loin d'être intuitive, enfin selon moi :wink:.
 La [documentation](https://golang.org/pkg/text/template/){:target="_blank"} complète est sur le site de Go.
 Voici ce que cela donne dans notre *deployment.yaml* :
+{% raw %}
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -308,18 +311,22 @@ spec:
         ports:
         - containerPort: 80
 ``` 
-Voyez l'utilisation des `{{ ... }}` qui permet d'accéder à la syntaxe, et donc aux objets, de templating.
+{% endraw %}
+
+Voyez l'utilisation des {% raw %}`{{ ... }}`{% endraw %} qui permet d'accéder à la syntaxe, et donc aux objets, de templating.
 Les autres fichiers suivent le même principe dès que l'on a besoin de positionner le nom de l'application.
 
-#### Le namespace
+### Le namespace
 Passons à positionner quelque chose qui n'est pas fournit par Helm et qui est donc listé dans le *values.yaml*.
 L'accès fonctionne de la même façon, je ne rentrerai pas dans le détail de la syntaxe du templating Go car il me faudrait 10 fois la taille de ce post !
+{% raw %}
 ```yaml
 apiVersion: v1
 kind: Namespace
 metadata:
   name: {{ .Values.namespace }}
 ```
+{% endraw %}
 Là encore c'est le même principe dans les autres fichiers qui ont besoins de positionner le namespace.
 Si vous avez bien suivi la variable *namespace* ne contient pas de valeur dans le fichier *values.yaml* il va donc falloir la positionner au déploiement du chart, encore une fois utilisons d'abord la commande *template* pour tester.
 `helm template nginx ./helm-for-dev-chart --set-string namespace=helm-for-dev -s templates/namespace.yaml`
@@ -337,9 +344,10 @@ metadata:
 ```
 Donc c'est plutôt cool on a ce que l'on veut !
 
-#### Le choix de l'image
+### Le choix de l'image
 Pour l'instant le nom de l'image est statique (*wilda/app1*). On sait que nous allons vouloir changer d'image à un moment donné, rendons donc le nom d'image dynamique.
 Pour cela rien de plus simple, cela fonctionne comme pour le namespace:
+{% raw %}
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -364,7 +372,8 @@ spec:
         ports:
         - containerPort: 80
 ```
-Il faut donc ajouter le paramètre représentant l'image lors de notre commande helm : `helm template nginx ./helm-for-dev-chart --set-string namespace=helm-for-dev, image=wilda/app1 -s templates/deployment.yaml`
+{% endraw %}
+Il faut donc ajouter le paramètre représentant l'image lors de notre commande helm : `helm template nginx ./helm-for-dev-chart --set-string namespace=helm-for-dev --set image=wilda/app1 -s templates/deployment.yaml`
 Vérifions que tout va bien:
 ```yaml
 # Source: helm-for-dev-chart/templates/deployment.yaml
@@ -392,9 +401,11 @@ spec:
         - containerPort: 80
 ```
 
-#### Positionnement des quotas
-Là ce qui va nous intéresser est d'inclure un bloc YAML dans notre fichier *deployment.yaml* à chaque fois qu'un POD est déployé.
+### Positionnement des quotas
+
+Là, ce qui va nous intéresser, est d'inclure un bloc YAML dans notre fichier *deployment.yaml* à chaque fois qu'un POD est déployé.
 On ne va pas surcharger ce qui est positionné dans le *values.yaml* mais juste l'insérer tel quel dans notre fichier *deployment.yaml*.
+{% raw %}
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -421,6 +432,7 @@ spec:
         resources:
 {{ toYaml .Values.resources | indent 10 }}
 ```
+{% endraw %}
 La petite nouveauté ici est l'utilisation de fonctions permettant d'insérer correctement du YAML à la bonne position (ah le yaml ...).
 On indique que l'on insère un bloc YAML à partir de la dixième colonne dans notre fichier.
 Un petit coup de commande Helm : `helm template nginx ./helm-for-dev-chart --set-string namespace=helm-for-dev --set image=wilda/app1 -s templates/deployment.yaml`.
@@ -459,9 +471,10 @@ spec:
             memory: 256Mi
 ```
 
-#### Variable d'environnement
+### Variable d'environnement
 On ajoute la gestion de la variable d'environnement, cela fonctionne comme toutes les autres variables à la différence qu'elle possède une valeur par défaut et qu'il n'est donc pas obligatoire de la positionner (mais c'est possible).
 Et comme on est des fous fous on va tester qu'il y a quelque chose de positionné avant de l'utiliser :wink:.
+{% raw %}
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -492,8 +505,9 @@ spec:
 {{ toYaml .Values.env | indent 10}}
         {{- end }}
 ```
+{% endraw %}
 On reprend le même principe pour ajouter un bloc YAML pour insérer les valeurs et on voit ici la possibilité avec le templating Go de faire une condition de type *if then else*.
-Un peut de magie Helm : `helm template nginx ./helm-for-dev-chart --set-string namespace=helm-for-dev -s templates/deployment.yaml`.
+Un peut de magie Helm : `helm template nginx ./helm-for-dev-chart --set-string namespace=helm-for-dev --set image=wilda/app1 -s templates/deployment.yaml`.
 Et voilà le résultat : 
 ```yaml
 ---
@@ -532,8 +546,8 @@ spec:
             value: debug
 ```
 Une petite subtilité, on peut aussi surcharger une variable qui a déjà une valeur : 
-`helm template nginx ./helm-for-dev-chart --set-string namespace=helm-for-dev --set image=wilda/app1 -s templates/deployment.yaml --set env[0].name=LOG_LEVEL,env[0].value=info`
-Ce qui noue donne : 
+`helm template nginx ./helm-for-dev-chart --set-string namespace=helm-for-dev --set image=wilda/app1 --set env[0].name=LOG_LEVEL,env[0].value=info -s templates/deployment.yaml`
+Ce qui nous donne : 
 ```yaml
 ---
 # Source: helm-for-dev-chart/templates/deployment.yaml
@@ -644,7 +658,7 @@ Et pour conclure :
 
 ## One more thing
 J'ai directement pris l'option de créer un chart *maison*.
-Il faut savoir qu'une grosse force de Helm est l'écosystème Helm qui propose déjà beaucoup de charts prêts à l'emploi :wink:.
+Il faut savoir qu'une grosse force de Helm est l'écosystème de celui-ci, qui propose déjà beaucoup de charts prêts à l'emploi :wink:.
 > C'est maintenant que tu nous dis ça !
 
 Oui mais c'est mon côté j'aime bien voir comment ça marche quand j'utilise un truc.
@@ -655,4 +669,5 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm install my-release bitnami/nginx
 ```
 Et voilà :
+
 ![binami-nginx]({{ site.url }}{{ site.baseurl }}/assets/images//helm-for-dev/bitnami-nginx.png)

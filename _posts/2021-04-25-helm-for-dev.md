@@ -246,7 +246,7 @@ Ca commence à être sympa : une commande on crée et un commande on supprime, o
 Maintenant que l'on a les bases et les grandes lignes de notre template on va regarder comment l'utiliser pour déployer le même type d'application tout en apportant des modifications sans dupliquer tous nos fichiers de configuration !
 
 La base pour identifier ce qui va pouvoir varier est le fichier *values.xml*.
-C'est assez simple : ce fichier va liste des variables que l'on va pouvoir *injecter* dans les différents fichiers qui composent le template.
+C'est assez simple : ce fichier va lister des variables que l'on va pouvoir *injecter* dans les différents fichiers qui composent le template.
 Il est possible d'y déclarer des listes (tableau et map), des structures, du YAML, ...
 On ne fait pas que déclarer des variables on peut aussi donner des valeurs par défaut (qui sont surchargeables).
 
@@ -317,7 +317,7 @@ Voyez l'utilisation des {% raw %}`{{ ... }}`{% endraw %} qui permet d'accéder �
 Les autres fichiers suivent le même principe dès que l'on a besoin de positionner le nom de l'application.
 
 ### Le namespace
-Passons à positionner quelque chose qui n'est pas fournit par Helm et qui est donc listé dans le *values.yaml*.
+Passons à positionner quelque chose qui n'est pas fourni par Helm et qui est donc listé dans le *values.yaml*.
 L'accès fonctionne de la même façon, je ne rentrerai pas dans le détail de la syntaxe du templating Go car il me faudrait 10 fois la taille de ce post !
 {% raw %}
 ```yaml
@@ -327,12 +327,12 @@ metadata:
   name: {{ .Values.namespace }}
 ```
 {% endraw %}
-Là encore c'est le même principe dans les autres fichiers qui ont besoins de positionner le namespace.
+Là encore c'est le même principe dans les autres fichiers qui ont besoin de positionner le namespace.
 Si vous avez bien suivi la variable *namespace* ne contient pas de valeur dans le fichier *values.yaml* il va donc falloir la positionner au déploiement du chart, encore une fois utilisons d'abord la commande *template* pour tester.
 `helm template nginx ./helm-for-dev-chart --set-string namespace=helm-for-dev -s templates/namespace.yaml`
 
 Au passage on voit que l'on peut demander à exécuter le moteur de templating sur un seul fichier avec l'option `-s`, ce qui est pratique pour tester un template :wink:.
-L'autre option est le positionnement de la valeur de la variable *namespace* de notre fichier *values.yaml* avec l'option *--set-string* suivit de la variable avec sa valeur (ici *namespace=helm-for-dev*).
+L'autre option est le positionnement de la valeur de la variable *namespace* de notre fichier *values.yaml* avec l'option *--set-string* suivi de la variable avec sa valeur (ici *namespace=helm-for-dev*).
 Au final le template, une fois passé dans le moteur donne :
 ```yaml
 ---
@@ -507,7 +507,7 @@ spec:
 ```
 {% endraw %}
 On reprend le même principe pour ajouter un bloc YAML pour insérer les valeurs et on voit ici la possibilité avec le templating Go de faire une condition de type *if then else*.
-Un peut de magie Helm : `helm template nginx ./helm-for-dev-chart --set-string namespace=helm-for-dev --set image=wilda/app1 -s templates/deployment.yaml`.
+Un peu de magie Helm : `helm template nginx ./helm-for-dev-chart --set-string namespace=helm-for-dev --set image=wilda/app1 -s templates/deployment.yaml`.
 Et voilà le résultat : 
 ```yaml
 ---
@@ -627,7 +627,7 @@ replicaset.apps/helm-for-dev-2-deployment-79f94f754b   1         1         1    
 ```
 ![helm-app2]({{ site.url }}{{ site.baseurl }}/assets/images/helm-for-dev/helm-app2.png)
 
-L'exemple est simple car on ne change pas tout mais on voit tout de suite qu'en une seule commande sans dupliquer les fichiers de ressources on a déployé une nouvelle application *du même type* (qui se déploie de la même façon) dans le cluster. A noter que pour bien faire il aurait fallut rendre aussi le port de l'ingress paramétrable pour ne pas se marcher dessus, mais ça vous savez faire maintenant :wink:.
+L'exemple est simple car on ne change pas tout mais on voit tout de suite qu'en une seule commande sans dupliquer les fichiers de ressources on a déployé une nouvelle application *du même type* (qui se déploie de la même façon) dans le cluster. A noter que pour bien faire il aurait fallu rendre aussi le port de l'ingress paramétrable pour ne pas se marcher dessus, mais ça vous savez faire maintenant :wink:.
 
 Et enfin une modification :
 `helm upgrade helm-for-dev-2 ./helm-for-dev-chart --set-string namespace=helm-for-dev-2-ns --set image=wilda/app2 --set env[0].name=LOG_LEVEL,env[0].value=info`
@@ -651,7 +651,7 @@ L'objectif de cet article n'était pas de devenir un expert en Helm et d'avoir u
 L'idée était de présenter comment Helm pouvait aider simplement en local pour s'éviter de gérer de nombreuses versions de fichiers YAML et accélérer le déploiement et la configuration de plusieurs types d'applications qui partageraient une base commune de paramétrage pour Kubernetes.
 Je n'ai pas abordé la partie release du chart et partage dans une registry mais il faut savoir que c'est possible.
 
-Comme d'habitude l'ensemble des sources de cet articles sont disponibles dans le repository [helm-for-dev](https://github.com/philippart-s/helm-for-dev){:target="_blank"}.
+Comme d'habitude l'ensemble des sources de cet article sont disponibles dans le repository [helm-for-dev](https://github.com/philippart-s/helm-for-dev){:target="_blank"}.
 
 Et pour conclure :
 > Happy Helming !
@@ -663,7 +663,7 @@ Il faut savoir qu'une grosse force de Helm est l'écosystème de celui-ci, qui p
 
 Oui mais c'est mon côté j'aime bien voir comment ça marche quand j'utilise un truc.
 
-Pour déployer un Nginx depuis un chart existant c'est très simple, si on prends le chart de Bitnami cela donne:
+Pour déployer un Nginx depuis un chart existant c'est très simple, si on prend le chart de Bitnami cela donne:
 ```bash
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm install my-release bitnami/nginx

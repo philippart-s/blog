@@ -38,7 +38,7 @@ kube-system   local-path-provisioner-5ff76fc89d-7tbsg   1/1     Running     2   
 # Un petit Hello world 
 
 Pour illustrer ça on va déjà déployer une version *statique* de notre exemple, dans mon cas un POD contenant un conteneur NGinx.
-Après quelques `kubecti apply -f ...` des fichiers suivants on a un hello world qui fonctionne.
+Après quelques `kubectl apply -f ...` des fichiers suivants on a un hello world qui fonctionne.
 
 ## Namespace
 ```yaml

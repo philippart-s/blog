@@ -37,14 +37,14 @@ L'installation est très simple et pour le coup il suffit de suivre la [document
 Et voilà :tada: !
 
 Notre VS Code a sa partie graphique qui s'exécute sur ma machine Windows mais le terminal et les extensions que j'utilise pour développer s'exécutent sur ma session Linux.
-C'est plutôt très fluide et, pour mon utilisation qui est essentiellement la manipulation d'images avec Podman rempli très bien le contrat !
+C'est plutôt très fluide et, pour mon utilisation qui est essentiellement la manipulation d'images avec Podman, cela rempli très bien le contrat !
 
 ## :warning: Espace disque :warning:
 Par défaut la partie serveur s'installe dans `~/.vscode-server`, cela représente environ 150 Mo sans aucune extension !
 Ensuite les différentes extensions serveur vont s'installer dans ce dossier et ça peut grossir très vite ...
 
 Dans mon cas, la machine sur laquelle je me connecte ne permet pas d'avoir des _home_ utilisateurs ayant une grosse taille.
-Il a donc fallut que je trouve le moyen de ne pas tout stocker dans le _home_ : en standard VS Code ne permet de choisir le chemin d'installation de la partie serveur de cette extension.
+Il a donc fallut que je trouve le moyen de ne pas tout stocker dans le _home_ : en standard VS Code ne permet pas de choisir le chemin d'installation de la partie serveur de cette extension.
 
 Il y a une [issue](https://github.com/microsoft/vscode-remote-release/issues/472){:target="_blank"} ouverte chez Microsoft mais pour l'instant elle n'est pas prise en compte :slightly_frowning_face:.
 En la parcourant je suis tombé sur l'[astuce](https://github.com/microsoft/vscode-remote-release/issues/940#issuecomment-510232416){:target="_blank"} qui permet de contourner le problème : créer un lien symbolique vers un endroit qui a plus de place ! 

@@ -47,7 +47,7 @@ Le logiciel de synchronisation est écrit en [Sylverligth](https://www.microsoft
 Google étant ton ami (enfin parfois :yum:) je me suis mis à la recherche d'une façon de faire sous Ubuntu, quitte  à faire quelques commandes en Shell.
 
 :white_check_mark: Et c'est là que vient la bonne surprise je tombe sur deux projets écrits en C et en Python : 
- - [Concordance](hhttps://phildev.net/concordance/{:target="_blank"} qui permet de communiquer avec la télécommande et de faire toutes les actions nécessaires : flash de firmeware, apprentissage par IR, ... Tout se base sur des fichiers propriétaires issus du site Web de Logitech permetttant la création de la configuration (j'y reviendrai plus tard)
+ - [Concordance](hhttps://phildev.net/concordance/){:target="_blank"} qui permet de communiquer avec la télécommande et de faire toutes les actions nécessaires : flash de firmeware, apprentissage par IR, ... Tout se base sur des fichiers propriétaires issus du site Web de Logitech permetttant la création de la configuration (j'y reviendrai plus tard)
  - [Congruity](https://sourceforge.net/projects/congruity/){:target="_blank"} est une interface graphique au dessus de concordance qui permet de simplifier grandement l'utilisation de celui-ci :wink:
 
 ## :hammer_and_wrench: Installation de Concordance & Congruity

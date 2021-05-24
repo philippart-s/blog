@@ -16,11 +16,12 @@ Pour pallier à cela il y a déjà une bonne dizaine d'années j'ai voulu prendr
 Jusque là rien de bien passionnant. 
 Mon côté _fashion geek_ et développeur ne datent pas d'aujourd'hui, je me suis donc tourné vers les télécommandes _programmables_.
 
-Autant le dire tout suite : ici pas de code mais la notion de pouvoir enchaîner des actions en appuyant sur un seul bouton ainsi répartir sur une seule télécommande le pilotage de plusieurs appareils sans changer de télécommande ou de _profile_ sur la télécommande universelle.
+Autant le dire tout suite : ici pas de code mais la notion de pouvoir enchaîner des actions en appuyant sur un seul bouton et ainsi répartir sur une seule télécommande le pilotage de plusieurs appareils sans changer de télécommande ou de _profile_ sur la télécommande universelle.
 Pour illustrer mon propos : pour regarder un Blu-Ray avec une télé, un lecteur et un ampli la télécommande, une fois _programmée_, se comporte de la manière suivante:
  - les touches de son pilotent l'ampli
  - les touches play, stop, etc le lecteur
  - les touches de format d'image la télé
+
 Ajoutons à cela que lorsque l'on sélectionne l’activité _regarder un film_ cela allume tout ce beau monde dans l'ordre et sélectionne les bonnes entrées audio / vidéo.
 A ce jour le constructeur qui faisait, selon moi, les meilleures télécommandes de ce type, à un prix abordable, était Logitech.
 
@@ -52,7 +53,7 @@ Google étant ton ami (enfin parfois :yum:) je me suis mis à la recherche d'une
 
 ## :hammer_and_wrench: Installation de Concordance & Congruity
 
-La partie communication, Concordance,  est écrite en C ([repository](https://github.com/jaymzh/concordance){:target="_blank"} GitHUb), la partie interface en Pyton ([repository](https://github.com/congruity/congruity){:target="_blank"} GitHub).
+La partie communication, Concordance,  est écrite en C ([repository](https://github.com/jaymzh/concordance){:target="_blank"} GitHub), la partie interface en Pyton ([repository](https://github.com/congruity/congruity){:target="_blank"} GitHub).
 Chacun des deux outils peuvent s'installer sur les trois plate-formes Windows, Linux et MacOs. 
 Je n'ai testé que la partie Linux :wink:.
 
@@ -69,10 +70,10 @@ L'installation de Congruity n'est pas plus compliquée mais demande quelques ét
   ```bash
   sudo apt-get install python3-libconcord
   ```
-  - pip : https://pypi.org/project/pip/
-  - setuptools : https://pypi.org/project/setuptools/
- - récupérer la dernière version sur [sourceforge](https://sourceforge.net/projects/congruity/files/congruity/20/congruity-20.tar.bz2/download){:target="_blank"} ou cloner le repository. 
- - puis lancer l'installation :
+  - pip : [https://pypi.org/project/pip/](https://pypi.org/project/pip/)
+  - setuptools : [https://pypi.org/project/setuptools/](https://pypi.org/project/setuptools/)
+ - récupérer la dernière version de Congruity sur [sourceforge](https://sourceforge.net/projects/congruity/files/congruity/20/congruity-20.tar.bz2/download){:target="_blank"} ou cloner le repository. 
+ - puis, une fois dans le répertoire principal, lancer l'installation :
  ```bash
  # Installation / mise à jour des setuptools
  pip install --upgrade setuptools
@@ -88,18 +89,18 @@ Concordance 1.4
 Copyright 2007 Kevin Timmerman and Phil Dibowitz
 This software is distributed under the GPLv3.
 
-ongruity --version
+congruity --version
 20
 ```
 
 ## :gear: Mise à jour de la télécommande
 La partie configuration va se faire sur un site mis à disposition tout droit sorti des années 2000 :laughing:, mais il a le mérite de faire le boulot !
-Je vous laisse le prendre en main, on y trouve vite ses petits, le site en question : http://members.harmonyremote.com/EasyZapper/.
+Je vous laisse le prendre en main, on y trouve vite ses petits, le site en question : [http://members.harmonyremote.com/EasyZapper/](http://members.harmonyremote.com/EasyZapper/).
 Ensuite les interractions vont se dérouler toujours en suivant le cheminement suivant :
 ![architecture communication]({{ site.url }}{{ site.baseurl }}/assets/images/harmony-logitech/archi.png)
 
 Donc on résume : 
- - toute la configuration de la télécommande s'effectue sur le site http://members.harmonyremote.com/EasyZapper/
+ - toute la configuration de la télécommande s'effectue sur le site [http://members.harmonyremote.com/EasyZapper/](http://members.harmonyremote.com/EasyZapper/)
  - on lance la mise à jour de la télécommande : _Update My Remote_
  - un premier fichier est généré : _Connectivity.EZHex_
  - lancer la commande `congruity Connectivity.EZHex` qui a comme conséquence d'afficher l'interface graphique, dérouler (_forward_) jusqu'à la fin. L'objectif de cette étape est de valider que la communication avec votre télécommande se passe bien

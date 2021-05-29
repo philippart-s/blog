@@ -1,5 +1,5 @@
 ---
-title: "Promotion d'image Docker dans Artifactory"
+title: ":frog: Promotion d'image Docker dans Artifactory :whale:"
 classes: wide
 categories:
   - Articles
@@ -33,10 +33,10 @@ Pour illustrer mes propos je vais utiliser une instance dans le cloud offerte pa
 > L'idée est de partager ce que je connais pour faciliter la vie des utilisateurs Artifactory et non de dire que c'est le meilleur produit du monde !
 
 ## Rapide tours d'horizon du propriétaire :house:
-Avant toute chose, si tu es ici c'est que tu ne l'as pas trouvé mais la doc JFrog est très bien faite alors dans ma grande bonté je te mets le lien :wink: : [https://www.jfrog.com/confluence/display/JFROG/JFrog+Artifactory](https://www.jfrog.com/confluence/display/JFROG/JFrog+Artifactory){:target="_blank"}
+Avant toute chose, si tu es ici c'est que tu ne l'as pas trouvé, mais la doc JFrog est très bien faite alors dans ma grande bonté je te mets le lien :wink: : [https://www.jfrog.com/confluence/display/JFROG/JFrog+Artifactory](https://www.jfrog.com/confluence/display/JFROG/JFrog+Artifactory){:target="_blank"}.
 
 
-Une fois créée l'instance sur Google Cloud Platform via l'option permettant de créer gratuitement une instance Artifactory j'ai mon instance qui est prête :
+Une fois créée l'instance sur Google Cloud Platform via l'option permettant de [créer gratuitement](https://jfrog.com/start-free/){:target="_blank"} une instance Artifactory j'ai mon instance qui est prête :
 ![accueil  artifactory]({{ site.url }}{{ site.baseurl }}/assets/images/docker-promote-arti/accueilArti.png)
 
 L'instance Artifactory vient avec des repositories pré-configurés, dont 1 Docker, cela tombe bien :wink:.
@@ -44,7 +44,7 @@ L'instance Artifactory vient avec des repositories pré-configurés, dont 1 Dock
 
 Pour la fin de la démo on va créer un autre repository Docker il nous servira plus tard :
 ![repository docker supplémentaire]({{ site.url }}{{ site.baseurl }}/assets/images/docker-promote-arti/StefDockerRepo.png)
-Et comme ils sont sympa chez JFrog ils fournissent les commandes pour utiliser notre registry nouvellement créée : 
+Et comme ils sont sympa chez JFrog, ils fournissent les commandes pour utiliser notre registry nouvellement créée : 
 ![set me up artifactory 1/2]({{ site.url }}{{ site.baseurl }}/assets/images/docker-promote-arti/setMeUp1.png)
 ![set me up artifactory 2/2]({{ site.url }}{{ site.baseurl }}/assets/images/docker-promote-arti/setMeUp2.png)
 
@@ -85,7 +85,7 @@ hello-world                                          latest              d1165f2
 xxxx.jfrog.io/default-docker-local/hello-world   1.0.0               d1165f221234        2 months ago        13.3kB
 ```
 
-Ensuite on va uploader l'image avec _push_, pour cela il faut le faire identifié
+Ensuite on va uploader l'image avec _push_, pour cela il faut le faire identifié :
 ```bash
 docker login xxxx.jfrog.io
 Username: xxxx@gmail.com

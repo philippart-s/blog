@@ -10,29 +10,29 @@ tags:
   - Promotion
 ---
 Lorsque l'on utilise Docker (ou un de ses variants) nous manipulons des images et dans certains cas en créons.
-Dans les deux cas lorsque l'on sort du POC effectué localement sur la machine vient se poser le problème du stockage des images et de leurs partage avec d'autres utilisateurs.
+Dans les deux cas lorsque l'on sort du POC effectué localement sur la machine vient se poser le problème du stockage des images et de leur partage avec d'autres utilisateurs.
 
 ## Faisons les présentations :handshake:
 
 Naturellement en gratuit et simple il y a le [Docker Hub](https://hub.docker.com/){:target="_blank"}.
-C'est vrai que cela fonctionne mais là encore, suite aux derniers changements sur les [conditions d'utilisations](https://www.docker.com/blog/rate-limiting-questions-we-have-answers/), cela ne va pas aller beaucoup plus loin que le POC si on ne prends pas une version entreprise.
+C'est vrai que cela fonctionne mais là encore, suite aux derniers changements sur les [conditions d'utilisations](https://www.docker.com/blog/rate-limiting-questions-we-have-answers/), cela ne va pas aller beaucoup plus loin que le POC si on ne prend pas une version entreprise.
 Je ne vais pas parler de la version entreprise (je vous laisse vous faire votre propre idée) mais d'une solution qui permet d'avoir on-premise (c'est à dire utilisant votre propre infrastructure) ou dans le cloud une registry Docker : [Artifactory](https://jfrog.com/artifactory/){:target="_blank"} de chez [JFrog](https://jfrog.com/){:target="_blank"}.
 
 Il existe deux produits pour avoir une registry Docker : 
  - [JFrog Container Registry](https://jfrog.com/container-registry/){:target="_blank"}
  - [Artifacory](https://jfrog.com/artifactory/){:target="_blank"}
 
-JFrog Container Registry ne fournit comme service que d'être une registry Docker et Helm alors qu'Artifactory permet en plus d'être un repository d'artefacts divers et variés, on citera les deux plus célèbre que sont [Npm](https://www.npmjs.com/){:target="_blank"} et [Maven](https://maven.apache.org/){:target="_blank"}.
+JFrog Container Registry ne fournit comme service que d'être une registry Docker et Helm alors qu'Artifactory permet en plus d'être un repository d'artefacts divers et variés, on citera les deux plus célèbres que sont [Npm](https://www.npmjs.com/){:target="_blank"} et [Maven](https://maven.apache.org/){:target="_blank"}.
 
 Je ne m’étendrai pas sur l'installation d'Artifactory, ce n'est pas le but de ce post.
 Pour illustrer mes propos je vais utiliser une instance dans le cloud offerte par JFrog, les actions / manipulations sont les mêmes que si c'était on-premise.
 
 > Disclaimer :loudspeaker:
 >
-> Je ne travaille pas pour JFrog, je trouve juste leurs outils pratiques et il se trouve que je les utilisent depuis plusieurs années dans mon boulot.
+> Je ne travaille pas pour JFrog, je trouve juste leurs outils pratiques et il se trouve que je les utilise depuis plusieurs années dans mon boulot.
 > L'idée est de partager ce que je connais pour faciliter la vie des utilisateurs Artifactory et non de dire que c'est le meilleur produit du monde !
 
-## Rapide tours d'horizon du propriétaire :house:
+## Rapide tour d'horizon du propriétaire :house:
 Avant toute chose, si tu es ici c'est que tu ne l'as pas trouvé, mais la doc JFrog est très bien faite alors dans ma grande bonté je te mets le lien :wink: : [https://www.jfrog.com/confluence/display/JFROG/JFrog+Artifactory](https://www.jfrog.com/confluence/display/JFROG/JFrog+Artifactory){:target="_blank"}.
 
 
@@ -44,7 +44,7 @@ L'instance Artifactory vient avec des repositories pré-configurés, dont 1 Dock
 
 Pour la fin de la démo on va créer un autre repository Docker il nous servira plus tard :
 ![repository docker supplémentaire]({{ site.url }}{{ site.baseurl }}/assets/images/docker-promote-arti/StefDockerRepo.png)
-Et comme ils sont sympa chez JFrog, ils fournissent les commandes pour utiliser notre registry nouvellement créée : 
+Et comme ils sont sympas chez JFrog, ils fournissent les commandes pour utiliser notre registry nouvellement créée : 
 ![set me up artifactory 1/2]({{ site.url }}{{ site.baseurl }}/assets/images/docker-promote-arti/setMeUp1.png)
 ![set me up artifactory 2/2]({{ site.url }}{{ site.baseurl }}/assets/images/docker-promote-arti/setMeUp2.png)
 
@@ -85,7 +85,7 @@ hello-world                                          latest              d1165f2
 xxxx.jfrog.io/default-docker-local/hello-world   1.0.0               d1165f221234        2 months ago        13.3kB
 ```
 
-Ensuite on va uploader l'image avec _push_, pour cela il faut le faire identifié :
+Ensuite on va uploader l'image avec _push_, pour cela il faut le faire identifier :
 ```bash
 docker login xxxx.jfrog.io
 Username: xxxx@gmail.com
@@ -116,7 +116,7 @@ En réalité, Artifactory permet ce mécanisme sur n'importe quel type d'artefac
 
 Artifactory permet d'effectuer les promotions via des appels de leur [API](https://www.jfrog.com/confluence/display/JFROG/Artifactory+REST+API){:target="_blank"} mais aussi via leur [CLI](https://www.jfrog.com/confluence/display/CLI/CLI+for+JFrog+Artifactory){:target="_blank"} (qui en fait appelle l'API :wink:).
 
-Dans les deux cas les informations à apporter à la promotion : 
+Dans les deux cas les informations à apporter à la promotion sont : 
  - la registry de départ
  - la registry d'arrivée
  - l'image de départ et son tag

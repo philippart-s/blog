@@ -88,3 +88,4 @@ Le seul hic est que le lien fournit sur le README était erroné ! Et voilà ma 
   - La première prise de contact
   - la première PR
   - le rythme de travail
+  - d

@@ -1,5 +1,5 @@
 ---
-title: ":monocle_face: L'Open Source au secours du développeur (et de l'architecte) ?"
+title: "L'Open Source au secours du développeur (et de l'architecte) ?"
 classes: wide
 categories:
   - Articles
@@ -30,7 +30,7 @@ L'autre raison est que, comme beaucoup d'entre nous, je suis utilisateur de libr
 La dernière raison, comme indiqué en préambule de cet article, l'envie de revenir au développement. 
 En effet, je me suis rendu compte que je suis resté bloqué plus ou moins à Java 8 (en gros comme ma société :wink:) et que même si je suis l'actualité, en mode opérationnel je n'ai presque pas manipulé les derniers JDK (et dieu sait comme cela change vite maintenant).
 
-## :compass: Par où commencer ?
+## :world_map: Par où commencer ?
 
 J'avoue avoir été pas mal perdu pour choisir un projet pour commencer mon aventure Open Source.
 J'ai donc commencé par me documenter à la recherche de recettes et autres modes opératoires, celui qui m'a les plus servi a été la [conférence](https://blog.jetbrains.com/idea/2020/08/jetbrains-technology-day-for-java-how-i-started-contributing-to-open-source-and-why-you-should-too/?utm_source=pocket_mylist){:target="_blank"} donnée par Helen Scott qui explique comment elle a débutée sa propre aventure Open Source. 

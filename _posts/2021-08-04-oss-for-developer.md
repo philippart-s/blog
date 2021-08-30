@@ -1,5 +1,5 @@
 ---
-title: ":face_with_monocle: L'Open Source au secours du développeur (et de l'architecte) ?"
+title: ":monocle_face: L'Open Source au secours du développeur (et de l'architecte) ?"
 classes: wide
 categories:
   - Articles

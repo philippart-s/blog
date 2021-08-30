@@ -1,5 +1,5 @@
 ---
-title: "🧐 L'Open Source au secours du développeur (et de l'architecte) ?"
+title: ":face_with_monocle: L'Open Source au secours du développeur (et de l'architecte) ?"
 classes: wide
 categories:
   - Articles
@@ -8,11 +8,11 @@ tags:
   - Opensource
 ---
 Ces dernières années (à peu près 6 ou 7 ans) je suis devenu architecte logiciel, mais aussi garant de la Plateforme d'Intégration Continue (PIC pour les intimes :wink:) et de la delivery de manière générale, appelée souvent à tord, chaîne DevOps mais peut être que cela parlera plus à certains sous cette terminologie.
-La casquette d'architecte me permet de découvrir pleins de nouvelles technologies à mettre en place, la dernière du moment par exemple consiste à la mise en place d'Openshift.
+La casquette d'architecte me permet de découvrir pleins de nouvelles technologies à mettre en place, la dernière du moment, par exemple, consiste à la mise en place d'Openshift.
 La casquette PIC consiste essentiellement au développement de pipelines Jenkins transverses à l'ensemble des équipes de développement (donc en groovy).
 
 Pour ceux qui me connaissent je suis, à l'origine, développeur Java.
-Mes deux activités professionnelles, passionnantes, réduisent de plus en plus la part de développement pour de nombreuses raisons (la PIC est stable, le métier d'architecte est plus dans la phase de conception, l'organisation de ma société, ...).
+Mes deux activités professionnelles réduisent de plus en plus la part de développement pour de nombreuses raisons (la PIC est stable, le métier d'architecte est plus dans la phase de conception, l'organisation de ma société, ...).
 
 Il me fallait donc quelque chose qui me permette de renouer avec le développement mais pas que.
 Un besoin de partager, échanger, aider, ...
@@ -59,7 +59,7 @@ Je me suis donc tourné vers Jenkins que j'utilise tous les jours en développan
 
 Je ne l'ai pas retenu pour diverses raisons :
  - c'est du groovy et un de mes objectifs est de faire plus de Java,
- - la communauté est un peu en baisse de vitesse, les personnes issues de la société à l'origine de la librairie ont moins de temps à y consacré (même si ils l'utilisent toujours),
+ - la communauté est un peu en baisse de vitesse, les personnes issues de la société à l'origine de la librairie ont moins de temps à y consacrer (même si ils l'utilisent toujours),
  - ça reste du pro et j'ai dans ma liste de _todo_ le fait de motiver ma société pour commencer à rendre à l'Open Source ce que l'on y a pris, du coup ce projet serait parfait :wink:
 
 Tout de même, Jenkins est écrit en Java, ce serait dommage de ne pas aller regarder de ce côté pour trouver un projet sympa auquel contribuer.
@@ -83,7 +83,7 @@ Ou plutôt forkons !
 Selon les projets, la documentation de prise en main du projet pour le compiler mais aussi faire sa première PR est plus ou moins bien faite. 
 Dans le cas du projet choisi je n'ai pas à me plaindre car elle est plutôt bien faite : [https://github.com/jenkinsci/ansicolor-plugin/blob/master/.github/CONTRIBUTING.md](https://github.com/jenkinsci/ansicolor-plugin/blob/master/.github/CONTRIBUTING.md){:target="_blank"}.
 
-Je fait une petite digression sur la partie documentation : lors de mes recherches de projet je me suis rendu compte que c'était souvent la partie faible du projet et que rentrer dans le projet sans l'avoir beaucoup utilisé voir parcouru les différentes classes est très ardu.
+Je fais une petite digression sur la partie documentation : lors de mes recherches de projet je me suis rendu compte que c'était souvent la partie faible du projet et que rentrer dans le projet sans l'avoir beaucoup utilisé voir parcouru les différentes classes est très ardu.
 Un des conseils pour rentrer dans le monde Open Source est de, justement, participer à la documentation.
 Oui mais voilà pour écrire la documentation il faut comprendre le projet ! 
 C'est peut être un une mauvaise habitude suite à mon métier mais je trouve qu'une petite documentation d'architecture ou de conception aiderait pour prendre en main le projet manière macro.
@@ -98,7 +98,7 @@ La première étape est de faire compiler le projet, c'est toujours une étape u
 L'autre élément à faire est de bien la lire les règles de contribution : comment nommer les PR, les commits, le format des sources, ... 
 Cela évite de se faire refuser la proposition pour des éléments connexes.
 C'est aussi une bonne façon d'apprendre à ne pas s'accrocher à ses habitudes et dans mon cas aussi à suivre des choses mises en place par d'autres (en règle générale c'est le contraire dans mon métier :wink:).
-La dernière chose non technique à bien prendre le temps de prendre en compte est le "code of conduct".
+La dernière chose non technique à bien prendre en compte : le "code of conduct".
 En effet, chaque projet est adossé à sa communauté et cette communauté à ses règles, souvent emprunt de bon sens (politesse, ...).
 
 C'est fait !
@@ -111,7 +111,7 @@ Cela ne paraît pas grand chose mais cette première contribution simple m'a per
 Maintenant que je sais que je peux faire des choses j'ai envie d'aller plus loin et de vraiment coder !
 Je recherche donc un plugin où je me sens à l'aise.
 J'avoue que l'architecture de développement n'est pas forcément clairement expliquée dans les documentations de développeurs des plugins (ou alors je ne l'ai pas trouvé :sweat_smile:).
-Du coup c'est un peu ardu de trouver le projet qui convienne mais aussi de tenter de comprendre comment le développement est architecturé.
+Du coup c'est un peu ardu de trouver le projet qui convienne mais aussi de tenter de comprendre comment le développement est architecturé.A l'origine j'avais jeté mon dévolu sur le plugin Maven mais celui-ci utilise JIRA (qui n'est pas très à jour) et est complexe, du coup je suis retombé dans le côté ce n'est pas pour moi :flushed:.
 
 Mais j'ai trouvé mon projet : [https://github.com/jenkinsci/conventional-commits-plugin/](https://github.com/jenkinsci/conventional-commits-plugin/){:target="_blank"}.
 Plugin assez recent avec peu code et surtout pas releasé, cela me permet de bien voir comment est architecturé un plugin Jenkins et aussi d'avoir une petite communauté active.
@@ -125,12 +125,12 @@ L'autre élément sympa est que la communauté Jenkins à l'habitude d'avoir des
 Et c'est parti après quelques échanges on m'affecte une première issue et je me lance !
 Le code est assez simple, c'est du Java 8 (bon j'aurai préféré 11 mais c'est une contrainte de Jenkins).
 C'est tout bête mais c'est cool, je code pour le plaisir, c'est à dire pour la raison pour laquelle j'ai commencé l'informatique et fait ce métier !
-Et c'est là que le plaisir est plus grand car ce n'est pas professionnel avec tous les éléments déviants (budgets, managers, ...) mais juste pour le plaisir pour aider :heartbeat:
+Et c'est là que le plaisir est plus grand car ce n'est pas professionnel avec tous les éléments déviants (budgets, managers, ...) mais juste pour le plaisir d'aider :heartbeat:.
 
 Depuis le début de mon aventure j'en suis à quelques issues (5-6) et PR avec l'impression de vraiment aider.
 
 > :bulb: TIP :bulb:
-Il ne faut pas hésiter à créer la PR très tôt en indiquant clairement ce que l'on veut faire, cela évite de coder pour rien mais surtout permet de montrer à l'ensemble de la communauté ce que l'on compte faire et avoir leur retour très tôt.
+Il ne faut pas hésiter à créer la PR très tôt en indiquant clairement ce que l'on veut faire, cela évite de coder pour rien mais surtout permet de montrer à l'ensemble de la communauté ce que l'on compte faire et avoir leurs retours très tôt.
 
 ## :clock1: Rythme de travail
 Lorsque l'on développe en entreprise si il y a une chose qui marque beaucoup de gens c'est le rythme, en résumé on est toujours en retard !
@@ -148,15 +148,15 @@ Pour ma part j'y travaille essentiellement le WE, durant les poses déjeuné ou 
 A titre d'exemple mon premier commit date du 6 juillet et j'y ai consacré 30h, ce qui fait au moment de la rédaction de cet article une moyenne de 3.75h / semaine consacré au projet.
 
 > :bulb: TIPS :bulb:
-Sauf si vous avez la chance d'avoir une entreprise qui vous laisse faire ce genre de chose dans votre cadre professionnel attention à ne pas trop se faire débordé et regarder le projet auquel on participe lors de ses journées de travail, on a vite fait de préférer quelque chose que l'on fait pour la plaisir par rapport à des contraintes professionnelles :wink:.
-Pour ma part je ne clone pas les projets sur mon ordinateur professionnel, comme ça ne je suis pas tenté de regardé.
+Sauf si vous avez la chance d'avoir une entreprise qui vous laisse faire ce genre de chose dans votre cadre professionnel attention à ne pas trop se faire déborder et regarder le projet auquel on participe lors de ses journées de travail, on a vite fait de préférer quelque chose que l'on fait pour la plaisir par rapport à des contraintes professionnelles :wink:.
+Pour ma part je ne clone pas les projets sur mon ordinateur professionnel, comme ça ne je suis pas tenté de regarder.
 >
 J'ai décidé aussi de ne participer, pour l'instant, qu'à un seul projet.
 Cela simplifie la rentrée dans le monde Open Source mais aussi de Jenkins.
 Cela me permet aussi de ne pas devoir switcher de contexte trop souvent (c'est une chose que je dois faire énormément au travail et que je trouve pénible :rage:).
 Et puis, dans le cas ou il y a un peu de latence dans les réponses, cela permet aussi de couper un peu avec l'informatique !
 
-Il faut aussi accepter le rythme de travail des autres, comme vous ce n'est pas leur travail de valider les PR ou répondre aux questions, soyez patients et proposez votre aide pour review les autres PR c'est aussi très instructif !
+Il faut aussi accepter le rythme de travail des autres, comme vous, ce n'est pas leur travail de valider les PR ou répondre aux questions, soyez patients et proposez votre aide pour review les autres PR c'est aussi très instructif !
 ## :gift: Bonus
 Le fait de travailler sur un projet Open Source m'a permis aussi de grandement améliorer mon anglais.
 C'est tout bête mais cela m'a obliger à bien faire attention à mes tournures de phrases pour être sûr de ne pas faire passer le message inverse de ce que je pensais ! :sweat_smile:
@@ -170,7 +170,7 @@ C'est cool et en plus j'apprends encore des choses ... même en Java 8 !
 
 Je suis tombé sur des personnes très bienveillantes et pédagogues, c'est très important pour ne pas retomber un dans n-ième syndrôme de l'imposteur.
 
-J'ai encore plain d'envies : participer à un projet plus gros, trouver un projet en JDK 11 ou 17, ....
+J'ai encore plain d'envies : participer au plugin Maven, au core de Jenkuins, à un projet plus gros, trouver un projet en JDK 11 ou 17, ....
 
 En tout cas je vous conseille vraiment de tenter l'expérience, en espérant que je vous ai un peu donnée envie, voir donné quelques astuces.
 

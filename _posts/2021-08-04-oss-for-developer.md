@@ -8,7 +8,7 @@ tags:
   - Opensource
 ---
 Ces dernières années (à peu près 6 ou 7 ans) je suis devenu architecte logiciel, mais aussi garant de la Plateforme d'Intégration Continue (PIC pour les intimes :wink:) et de la delivery de manière générale, appelée souvent à tort, chaîne DevOps mais peut être que cela parlera plus à certains sous cette terminologie.
-La casquette d'architecte me permet de découvrir pleins de nouvelles technologies à mettre en place, la dernière du moment, par exemple, consiste à la mise en place d'Openshift.
+La casquette d'architecte me permet de découvrir plein de nouvelles technologies à mettre en place, la dernière du moment, par exemple, consiste à la mise en place d'Openshift.
 La casquette PIC consiste essentiellement au développement de pipelines Jenkins transverses à l'ensemble des équipes de développement (donc en groovy).
 
 Pour ceux qui me connaissent je suis, à l'origine, développeur Java.

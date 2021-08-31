@@ -1,0 +1,9 @@
+
+vscode:
+  extensions:
+    - streetsidesoftware.code-spell-checker-french
+    - coenraads.bracket-pair-colorizer-2
+    - streetsidesoftware.code-spell-checker
+    - github.vscode-pull-request-github
+    - eamodio.gitlens
+    - bierner.emojisense

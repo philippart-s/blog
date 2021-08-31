@@ -159,7 +159,7 @@ Et puis, dans le cas ou il y a un peu de latence dans les réponses, cela permet
 Il faut aussi accepter le rythme de travail des autres, comme vous, ce n'est pas leur travail de valider les PR ou répondre aux questions, soyez patients et proposez votre aide pour review les autres PR c'est aussi très instructif !
 ## :gift: Bonus
 Le fait de travailler sur un projet Open Source m'a permis aussi de grandement améliorer mon anglais.
-C'est tout bête mais cela m'a obliger à bien faire attention à mes tournures de phrases pour être sûr de ne pas faire passer le message inverse de ce que je pensais ! :sweat_smile:
+C'est tout bête mais cela m'a obligé à bien faire attention à mes tournures de phrases pour être sûr de ne pas faire passer le message inverse de ce que je pensais ! :sweat_smile:
 
 :sunglasses: Petite fierté personnelle au bout de quelques semaines les maintainers m'ont promu maintainer :wink:.
 

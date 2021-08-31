@@ -68,7 +68,7 @@ Là encore j'ai été un peu perdu pour savoir par où commencer, même si la pa
 On se rend vite compte qu'il y a plusieurs mondes (infra, core, plugins, ...) et que chacun a ses propres règles.
 De mon côté ne me sentant pas assez légitime pour le core j'ai regardé du côté des plugins et j'ai trouvé un plugin que l'on utilise dans nos pipelines et qui me semblait assez simple pour aborder ce premier pas : [Ansicolor-plugin](https://github.com/jenkinsci/ansicolor-plugin){:target="_blank"}.
 
-> :point_up_2: Je tiens à préciser une chose : ce que je vais indiquer par la suite n'est pas une généralité du monde Open Source ou encore même une certitude de comment est organisé la communauté Jenkins.
+> :point_up_2: Je tiens à préciser une chose : ce que je vais indiquer par la suite n'est pas une généralité du monde Open Source ou encore même une certitude de comment est organisée la communauté Jenkins.
 C'est ce que j'en ai compris et comment je l'ai ressenti. 
 
 Une spécificité de Jenkins est qu'il y a deux endroits possibles où l'on peut voir des issues : 

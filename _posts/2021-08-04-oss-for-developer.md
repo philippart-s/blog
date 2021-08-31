@@ -20,7 +20,7 @@ Retrouver ma définition du métier de développeur : un travail en équipe pour
 
 ## :eyes: Pourquoi l'Open Source ?
 
-Pour moi c'était une évidence : j'ai essayé de créer des "sides projects" et il faut reconnaître que ce fût un échec !
+Pour moi c'était une évidence : j'ai essayé de créer des "sides projects" et il faut reconnaître que ce fut un échec !
 J'ai un cimetière de projets inachevés impressionnant ! 
 
 Ce qui me semblait une bonne chose avec l'Open Source : c'est que le projet est réel, existant, avec une communauté d'utilisateurs, ...

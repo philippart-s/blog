@@ -114,7 +114,7 @@ J'avoue que l'architecture de développement n'est pas forcément clairement exp
 Du coup c'est un peu ardu de trouver le projet qui convienne mais aussi de tenter de comprendre comment le développement est architecturé. A l'origine j'avais jeté mon dévolu sur le plugin Maven mais celui-ci utilise JIRA (qui n'est pas très à jour et est complexe), du coup je suis retombé dans le côté ce n'est pas pour moi :flushed:.
 
 Mais j'ai trouvé mon projet : [https://github.com/jenkinsci/conventional-commits-plugin/](https://github.com/jenkinsci/conventional-commits-plugin/){:target="_blank"}.
-Plugin assez recent avec peu code et surtout pas releasé, cela me permet de bien voir comment est architecturé un plugin Jenkins et aussi d'avoir une petite communauté active.
+Plugin assez récent avec peu code et surtout pas releasé, cela me permet de bien voir comment est architecturé un plugin Jenkins et aussi d'avoir une petite communauté active.
 
 > :bulb: TIP :bulb:
 C'est autre conseil que j'aurai tendance à donner : essayer de trouver un projet d'une taille pas trop grosse qui permet de faciliter sa prise en main mais aussi d'avoir une communauté réduite et donc simple à contacter et identifier (qui fait quoi, notamment les maintainers)

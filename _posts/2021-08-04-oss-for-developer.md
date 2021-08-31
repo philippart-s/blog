@@ -110,7 +110,7 @@ Cela ne paraît pas grand chose mais cette première contribution simple m'a per
 ## :rocket: Le vrai début de l'aventure !
 Maintenant que je sais que je peux faire des choses j'ai envie d'aller plus loin et de vraiment coder !
 Je recherche donc un plugin où je me sens à l'aise.
-J'avoue que l'architecture de développement n'est pas forcément clairement expliquée dans les documentations de développeurs des plugins (ou alors je ne l'ai pas trouvé :sweat_smile:).
+J'avoue que l'architecture de développement n'est pas forcément clairement expliquée dans les documentations de développeurs des plugins (ou alors je ne l'ai pas trouvée :sweat_smile:).
 Du coup c'est un peu ardu de trouver le projet qui convienne mais aussi de tenter de comprendre comment le développement est architecturé. A l'origine j'avais jeté mon dévolu sur le plugin Maven mais celui-ci utilise JIRA (qui n'est pas très à jour et est complexe), du coup je suis retombé dans le côté ce n'est pas pour moi :flushed:.
 
 Mais j'ai trouvé mon projet : [https://github.com/jenkinsci/conventional-commits-plugin/](https://github.com/jenkinsci/conventional-commits-plugin/){:target="_blank"}.

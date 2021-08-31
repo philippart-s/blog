@@ -137,7 +137,7 @@ Lorsque l'on développe en entreprise si il y a une chose qui marque beaucoup de
 C'est, pour moi, générateur de beaucoup de frustrations (pas le temps de faire comme on veut) et de pénibilité.
 L'idée était de ne pas avoir cela aussi sur le temps perso et c'était une petite appréhension.
 Eh bien j'ai eu là dessus aussi une très bonne surprise car pas de stress ou de question pour savoir quand est-ce que le développement doit être terminé, même pour les petits développements.
-C'est quelque chose que je n'avais pas forcément anticipé : les projets Open Source reposent sur le fait que des anonymes offrent du temps personnel pour travailler sur le projet, et le temps personnel par définition une fois enlevé le temps de travail et de sommeille eh bien il en reste pas beaucoup (et je ne parle pas de la vie de famille :wink:).
+C'est quelque chose que je n'avais pas forcément anticipé : les projets Open Source reposent sur le fait que des anonymes offrent du temps personnel pour travailler sur le projet, et le temps personnel par définition une fois enlevé le temps de travail et de sommeil, eh bien il n'en reste pas beaucoup (et je ne parle pas de la vie de famille :wink:).
 A ce jour j'ai pu avoir le rythme que je voulais, je code une feature en moyenne en une ou deux semaine et les reviews se font entre 3 et 5 jours après la fin du développement.
 
 > :bulb: TIP :bulb:

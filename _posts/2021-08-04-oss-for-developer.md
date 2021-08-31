@@ -172,7 +172,7 @@ Je suis tombé sur des personnes très bienveillantes et pédagogues, c'est trè
 
 J'ai encore plein d'envies : participer au plugin Maven, au core de Jenkuins, à un projet plus gros, trouver un projet en JDK 11 ou 17, ....
 
-En tout cas je vous conseille vraiment de tenter l'expérience, en espérant que je vous ai un peu donnée envie, voir donné quelques astuces.
+En tout cas je vous conseille vraiment de tenter l'expérience, en espérant que je vous ai un peu donné envie, voire donné quelques astuces.
 
 Et parce que je n'y résiste pas c'est cool de voir ça sur la page de release d'un projet Open Source :grinning:
 

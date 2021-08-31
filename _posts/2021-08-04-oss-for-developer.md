@@ -86,7 +86,7 @@ Dans le cas du projet choisi je n'ai pas à me plaindre car elle est plutôt bie
 Je fais une petite digression sur la partie documentation : lors de mes recherches de projet je me suis rendu compte que c'était souvent la partie faible du projet et que rentrer dans le projet sans l'avoir beaucoup utilisé voir parcouru les différentes classes est très ardu.
 Un des conseils pour rentrer dans le monde Open Source est de, justement, participer à la documentation.
 Oui mais voilà pour écrire la documentation il faut comprendre le projet ! 
-C'est peut être un une mauvaise habitude suite à mon métier mais je trouve qu'une petite documentation d'architecture ou de conception aiderait pour prendre en main le projet manière macro.
+C'est peut être une mauvaise habitude liée à mon métier mais je trouve qu'une petite documentation d'architecture ou de conception aiderait pour prendre en main le projet manière macro.
 
 > :bulb: TIP :bulb: : regarder les tests unitaires, en règle générale les projets Open Source ont pas mal de tests, cela aide à comprendre comment le projet doit être utilisé :wink:.
 

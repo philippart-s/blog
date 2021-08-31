@@ -165,7 +165,7 @@ C'est tout bête mais cela m'a obligé à bien faire attention à mes tournures 
 
 ## En conclusion
 
-J'ai atteins mon premier objectif : reprendre un rythme de développement en Java.
+J'ai atteint mon premier objectif : reprendre un rythme de développement en Java.
 C'est cool et en plus j'apprends encore des choses ... même en Java 8 !
 
 Je suis tombé sur des personnes très bienveillantes et pédagogues, c'est très important pour ne pas retomber un dans n-ième syndrôme de l'imposteur.

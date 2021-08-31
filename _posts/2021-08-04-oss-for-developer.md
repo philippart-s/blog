@@ -90,7 +90,7 @@ C'est peut être une mauvaise habitude liée à mon métier mais je trouve qu'un
 
 > :bulb: TIP :bulb: : regarder les tests unitaires, en règle générale les projets Open Source ont pas mal de tests, cela aide à comprendre comment le projet doit être utilisé :wink:.
 
-Le seul hic est que le lien fournit sur le README était erroné ! 
+Le seul hic est que le lien fourni sur le README était erroné ! 
 Et voilà ma première contribution qui m'apparaît : corriger le lien et proposer la correction à l'équipe qui maintien le projet :smile:.
 
 ## :memo: La première contribution

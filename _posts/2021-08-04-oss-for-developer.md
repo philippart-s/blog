@@ -144,7 +144,7 @@ A ce jour j'ai pu avoir le rythme que je voulais, je code une feature en moyenne
 Avant de se lancer dans l'aventure de participer à un projet Open Source il faut s'assurer que l'on a le temps pour cela une fois déduites toutes les activités habituelles (travail, sommeil, famille, ...).
 Si il n'y a pas de grosses pressions, s'engager sur des implémentations de features et ne pas le faire par manque de temps pénalise le projet mais aussi les personnes qui auraient pu travailler sur ces features.
 
-Pour ma part j'y travaille essentiellement le WE, durant les poses déjeuné ou encore en temps partagé devant une série avec ma chérie :kissing_heart:.
+Pour ma part j'y travaille essentiellement le WE, durant les pauses déjeuners ou encore en temps partagé devant une série avec ma chérie :kissing_heart:.
 A titre d'exemple mon premier commit date du 6 juillet et j'y ai consacré 30h, ce qui fait au moment de la rédaction de cet article une moyenne de 3.75h / semaine consacré au projet.
 
 > :bulb: TIPS :bulb:

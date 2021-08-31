@@ -170,7 +170,7 @@ C'est cool et en plus j'apprends encore des choses ... même en Java 8 !
 
 Je suis tombé sur des personnes très bienveillantes et pédagogues, c'est très important pour ne pas retomber un dans n-ième syndrôme de l'imposteur.
 
-J'ai encore plain d'envies : participer au plugin Maven, au core de Jenkuins, à un projet plus gros, trouver un projet en JDK 11 ou 17, ....
+J'ai encore plein d'envies : participer au plugin Maven, au core de Jenkuins, à un projet plus gros, trouver un projet en JDK 11 ou 17, ....
 
 En tout cas je vous conseille vraiment de tenter l'expérience, en espérant que je vous ai un peu donnée envie, voir donné quelques astuces.
 

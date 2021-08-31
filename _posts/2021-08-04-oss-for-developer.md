@@ -117,7 +117,7 @@ Mais j'ai trouvé mon projet : [https://github.com/jenkinsci/conventional-commit
 Plugin assez récent avec peu code et surtout pas releasé, cela me permet de bien voir comment est architecturé un plugin Jenkins et aussi d'avoir une petite communauté active.
 
 > :bulb: TIP :bulb:
-C'est autre conseil que j'aurai tendance à donner : essayer de trouver un projet d'une taille pas trop grosse qui permet de faciliter sa prise en main mais aussi d'avoir une communauté réduite et donc simple à contacter et identifier (qui fait quoi, notamment les maintainers)
+Cet autre conseil que j'aurai tendance à donner : essayer de trouver un projet d'une taille pas trop grosse qui permet de faciliter sa prise en main mais aussi d'avoir une communauté réduite et donc simple à contacter et identifier (qui fait quoi, notamment les maintainers)
 
 Et là je reconnais que j'ai eu de la chance car non seulement le projet est simple à prendre en main mais il fait partit du programme Google Student Of Code (GSoC) et donc les maintainers (mentors pour le GSoC) sont très didactiques et prennent le temps d'expliquer les choses.
 L'autre élément sympa est que la communauté Jenkins à l'habitude d'avoir des salons gitters, c'est super cool car cela permet d'échanger un peu plus librement que sur les issues et notamment parler astuces de développements ou juste d'idées que l'on a pour améliorer le projet.

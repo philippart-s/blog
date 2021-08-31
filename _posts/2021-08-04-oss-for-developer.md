@@ -38,7 +38,7 @@ J'ai donc commencé par me documenter à la recherche de recettes et autres mode
 Me voilà donc lancé dans l'aventure, j'avais juste un petit problème. 
 Que ce soit dans la conférence d'Helen ou dans les divers articles que j'ai lus, beaucoup conseille de partir sur un projet que l'on utilise tous les jours, que l'on connaît déjà bien, et auquel on souhait participer.
 
-Mais voilà, souvenez-vous, un des objectifs pour moi est, de justement, retrouver un rythme de développement car je ne développe plus assez durant mes journées professionnelles donc c'est un peut le serpent qui se mord la queue 🤨.
+Mais voilà, souvenez-vous, un des objectifs pour moi est, de justement, retrouver un rythme de développement car je ne développe plus assez durant mes journées professionnelles donc c'est un peu le serpent qui se mord la queue 🤨.
 
 J'ai d'abord regardé du côté des projets qui me parlent : [Open JDK](https://openjdk.java.net/contribute/?utm_source=pocket_mylist){:target="_blank"}, [SpringBoot](https://github.com/spring-projects/spring-boot/blob/main/CONTRIBUTING.adoc){:target="_blank"} et [Jenkins](https://www.jenkins.io/participate/){:target="_blank"}, chacun ayant une page expliquant comment participer au projet.
 

@@ -33,7 +33,7 @@ En effet, je me suis rendu compte que je suis resté bloqué plus ou moins à Ja
 ## :world_map: Par où commencer ?
 
 J'avoue avoir été pas mal perdu pour choisir un projet pour commencer mon aventure Open Source.
-J'ai donc commencé par me documenter à la recherche de recettes et autres modes opératoires, celui qui m'a les plus servi a été la [conférence](https://blog.jetbrains.com/idea/2020/08/jetbrains-technology-day-for-java-how-i-started-contributing-to-open-source-and-why-you-should-too/?utm_source=pocket_mylist){:target="_blank"} donnée par Helen Scott qui explique comment elle a débutée sa propre aventure Open Source. 
+J'ai donc commencé par me documenter à la recherche de recettes et autres modes opératoires, celui qui m'a le plus servi a été la [conférence](https://blog.jetbrains.com/idea/2020/08/jetbrains-technology-day-for-java-how-i-started-contributing-to-open-source-and-why-you-should-too/?utm_source=pocket_mylist){:target="_blank"} donnée par Helen Scott qui explique comment elle a débuté sa propre aventure Open Source. 
 
 Me voilà donc lancé dans l'aventure, j'avais juste un petit problème. 
 Que ce soit dans la conférence d'Helen ou dans les divers articles que j'ai lu, beaucoup conseils de partir sur un projet que l'on utilise tous les jours, que l'on connaît déjà bien, et auquel on souhait participer.

@@ -65,7 +65,7 @@ Je ne l'ai pas retenu pour diverses raisons :
 Tout de même, Jenkins est écrit en Java, ce serait dommage de ne pas aller regarder de ce côté pour trouver un projet sympa auquel contribuer.
 
 Là encore j'ai été un peu perdu pour savoir par où commencer, même si la page de contribution de la documentation est très ben faite. 
-On se rends vite compte qu'il y a plusieurs mondes (infra, core, plugins, ...) et que chacun a ses règles.
+On se rend vite compte qu'il y a plusieurs mondes (infra, core, plugins, ...) et que chacun a ses propres règles.
 De mon côté ne me sentant pas assez légitime pour le core j'ai regardé du côté des plugins et j'ai trouvé un plugin que l'on utilise dans nos pipelines et qui me semblait assez simple pour aborder ce premier pas : [Ansicolor-plugin](https://github.com/jenkinsci/ansicolor-plugin){:target="_blank"}.
 
 > :point_up_2: Je tiens à préciser une chose : ce que je vais indiquer par la suite n'est pas une généralité du monde Open Source ou encore même une certitude de comment est organisé la communauté Jenkins.

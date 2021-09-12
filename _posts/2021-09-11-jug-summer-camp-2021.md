@@ -114,7 +114,7 @@ Je pense que je l'utilise moins intensivement que Philippe mais un peu plus comm
 Je pense regarder la partie on premise pour le professionnel afin d'aider le on-boarding des personnes et leur permettre de commencer plus rapidement en se laissant le temps de configurer sa machine.
 L'autre use case que je vois serait la maintenance de code legacy où ce n'est pas toujours évident de maintenir un environnement de développement.
 
-A titre personnel, je commence à l'utiliser, notamment dans la participation aux projets Open Source.
+A titre personnel, je commence à l'utiliser, notamment dans la [participation aux projets Open Source]({{ site.baseurl }}{% post_url 2021-08-04-oss-for-developer %}){:target="_blank"}.
 Cela me facilite le travail et me permet, par exemple lors de ma pose déjeuner, de développer sans pour autant devoir emmener mon poste perso.
 
 J'ai appris que l'on pouvait customiser l'image Docker utilisée, c'est un élément qui me manquait lors de mes tests, je pense que cela va me permettre d'améliorer ma prise en main.
@@ -133,6 +133,8 @@ Il a, en plus, su le faire de manière graduelle en commençant par une simple s
 Alors je ne suis pas devenu un expert et je ne vais pas me lancer dans une explication de oauth mais au moins j'ai compris les mécanismes et surtout pourquoi ils sont en place.
 
 Je vous conseille le replay avec des vrais morceaux de film dedans !
+
+Les [slides](https://slides.com/julientopcu/concepts-avances-authn-authz){:target="_blank"} de la conférence.
 
 ### Les opérateurs Kubernetes : opérer des services Cloud Native à grande échelle, par Horacio Gonzalez (LostInBrittany) 
 

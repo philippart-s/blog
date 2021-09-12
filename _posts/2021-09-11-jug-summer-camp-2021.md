@@ -42,7 +42,7 @@ Notamment en se posant la question suivante :
 >Avec l'application que je développe et les données stockées et utilisées : quelles sont les conséquences pour les personnes que ces données représentes ?
 
 C'est tout bête mais en se posant ce genre de question et en enlevant des oeillères, cela nous permettrait peut être d'éviter certaines dérives (même si on trouvera toujours quelqu'un pour faire le sale boulot :pensive:).
-Cette simple question permet de réfléchir si on fait bien de développer une application qui, au final, permettra de constituer des listes de fichages plus au moins discriminantes par exemple ou encore détruire des vies entières.
+Cette simple question permet de réfléchir si on fait bien de développer une application qui, au final, permettra de constituer des listes de fichages plus au moins discriminantes, par exemple, ou encore détruire des vies entières.
 
 
 ### 👨‍🎨 Il était une fois... les navigateurs ⛵️, par Pierre Tibulle et Noël Macé 

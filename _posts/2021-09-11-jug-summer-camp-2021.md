@@ -111,7 +111,7 @@ Et pas juste parce que j'ai eu la chance de les faire venir à TADx mais parce q
 Le sujet en lui-même m'intéressait au plus haut point car en bon geek des familles, au moment de la conférence, je testais justement GitPod.
 
 Je pense que je l'utilise moins intensivement que Philippe mais un peu plus comme Horacio : permettre une utilisation rapide d'un environnement de développement sans avoir à installer tout un écosystème pour faire une démo ou donner un cours.
-Je pense regarder la partie on premise pour le professionnel afin d'aider l'on boarding des personnes et leurs permettre de commencer plus rapidement en se laissant le temps de configurer sa machine.
+Je pense regarder la partie on premise pour le professionnel afin d'aider le on-boarding des personnes et leur permettre de commencer plus rapidement en se laissant le temps de configurer sa machine.
 L'autre use case que je vois serait la maintenance de code legacy où ce n'est pas toujours évident de maintenir un environnement de développement.
 
 A titre personnel je commence à l'utiliser, notamment dans la participation aux projets Open Source.

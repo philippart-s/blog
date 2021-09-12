@@ -151,4 +151,4 @@ Une mention spéciale aux organisateurs pour leur gentillesse et leur organisati
 Il ne faut pas oublier aussi que c'est une conférence gratuite (avec le repas) et que je la trouve au même niveau que les autres conférences payantes.
 
 Enfin un grand merci à toutes ces belles rencontres : Aurélie, Gaëlle, Fanny, Philippe, Horacio, Noël, Julien, Damien, Pierre, François, David, ... et tous les autres.
-Ne changez rien, continuez à nous inspirer et nous donner du bonheur dans vos conférences, nos lundis sont un peu moins durs lors du retour à la réalité :wink:.
+Ne changez rien, continuez à nous inspirer et nous donner du bonheur dans vos conférences : nos lundis sont un peu moins difficiles lors du retour à la réalité :wink:.

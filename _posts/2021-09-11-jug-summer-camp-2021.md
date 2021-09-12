@@ -71,7 +71,7 @@ Un quickie qui m'intéressait particulièrement car, et certains le savent, j'ad
 
 Tout d'abord une mention particulière au speaker : plus de micro ni de projection dès le début de sa prez !
 Eh bien ok on s'adapte : on retourne le PC et on y va quand même en décrivant le maximum de choses :clap:. 
-Bravo car c'est resté fluide et compréhensible, certes les démos passent moins bien mais on se concentre sur le message, ce n'est pas plus mal.
+Bravo ! car c'est resté fluide et compréhensible ! Certes les démos passent moins bien, mais on se concentre sur le message, ce n'est pas plus mal.
 
 Deux grandes idées à creuser et retenir : 
 - la couverture de code ne fait pas tout : un test sans assert peut provoquer une couverture de code de 100 % :sweat_smile:

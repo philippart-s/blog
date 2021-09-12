@@ -128,7 +128,7 @@ Et à chaque fois syndrome du poisson rouge: je pense avoir tout compris, je fai
 
 Le pari de Julien était donc assez élevé : arriver à ce que je n'oublie pas la moitié de ce qu'il allait expliquer !
 Et j'avoue que c'est plutôt réussi, notamment par la forme où il a repris l'ambiance du film _Grand Budapest Hotel_ pour expliquer les concepts de base de oauth.
-Il a, en plus, su le faire de manière graduelle en commençant par une simple sécurité et en améliorant tout le process pour arriver à une sécurité digne de ce nom et d'avoir balayé tous les concepts de oauth.
+Il a, en plus, su le faire de manière graduelle en commençant par une simple sécurité et en améliorant tout le process pour arriver à une sécurité digne de ce nom et en ayant balayé tous les concepts de oauth.
 
 Alors je ne suis pas devenu un expert et je ne vais pas me lancer dans une explication de oauth mais au moins j'ai compris les mécanismes et surtout pourquoi ils sont en place.
 

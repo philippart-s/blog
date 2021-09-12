@@ -147,7 +147,7 @@ A essayer dans les mois qui viennent !
 
 ## En conclusion
 Je n'ai pas pu tout voir et je n'ai pas tout raconté ici mais ce fut une journée riche en expériences et en découvertes.
-Une mention spéciale aux organisateurs pour leur gentillesses et leur organisation.
+Une mention spéciale aux organisateurs pour leur gentillesse et leur organisation.
 Il ne faut pas oublier aussi que c'est une conférence gratuite (avec le repas) et qu'elle est au niveau des autres conférences payantes.
 
 Enfin un grand merci à toutes ces belles rencontres : Aurélie, Gaëlle, Fanny, Philippe, Horacio, Noël, Julien, Damien, Pierre, François, David, ... et tous les autres.

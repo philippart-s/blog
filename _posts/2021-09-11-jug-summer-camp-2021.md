@@ -54,7 +54,7 @@ Pierre Tibulle a totalement _tué le game_ du sketch note avec cette présentati
 
 Tel un drama, on découvrira comment tour à tour les acteurs ont pensé être les rois de la navigation internet : mozaic, netscape, mozilla,  internet explorer, safari, chrome, ...
 La vie d'un navigateur internet n'est pas un long fleuve tranquille et les batailles commerciales (et d'égos) ont très souvent joué un rôle prépondérant.
-A chaque fois un roi sans partage a régné pendant un laps de temps plus ou moins long, le dernier en date étant Chrome mais jusqu'à quand ?
+A chaque fois, un roi sans partage a régné pendant un laps de temps plus ou moins long, le dernier en date étant Chrome mais jusqu'à quand ?
 
 Je ne ferai pas honneur aux talents de Pierre et Noël pour le sketch note et la narration en essayant de vous la résumer mais une fois le replay disponible jetez vous dessus !
 

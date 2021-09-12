@@ -37,7 +37,7 @@ Sachant que tout était filmé et sera disponible sur la [chaîne Youtube](https
 
 Une Keynote comme on les aime : éloignée mais au final pas tant que ça de notre métier de tous les jours.
 Très intéressant et mériterait certainement plus de temps (à tel point que l'intervenant a dépassé de 30 mins l'heure de fin ... une pensée pour les orgas :wink:).
-Pleins de sujets abordés, j'en retiendrai un qui m'a particulièrement interpellé : la responsabilité, en tant que développeur, PO, ..., sur les données et les conséquences de leur utilisation.
+Beaucoup de sujets abordés, j'en retiendrai un qui m'a particulièrement interpellé : la responsabilité, en tant que développeur, PO, ..., sur les données et les conséquences de leur utilisation.
 Notamment en se posant la question suivante :
 >Avec l'application que je développe et les données stockées et utilisées : quelles sont les conséquences pour les personnes que ces données représentes ?
 

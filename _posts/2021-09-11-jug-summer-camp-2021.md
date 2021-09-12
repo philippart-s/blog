@@ -20,7 +20,7 @@ Pour celles et ceux qui ne connaîtraient pas, le JUG Summer Camp est une confé
 C'est un peu la conférence de la rentrée mais avec encore un petit cadre de vacances grâce à la belle ville de La Rochelle.
 
 Comme je l'ai indiqué, c'est dans une période spéciale et après une autre période encore plus spéciale que j'arrivais à cette conférence.
-J'avoue que les différents intervenants auraient pus projeter leurs photos de vacances ça m'aurait plus de la même façon tellement j'étais heureux de pouvoir de nouveau  
+J'avoue que les différents intervenants auraient pu projeter leurs photos de vacances, ça m'aurait plu de la même façon tellement j'étais heureux de pouvoir de nouveau  
 participer à un tel évènement.
 
 ## Le programme :memo:

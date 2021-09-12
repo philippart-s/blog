@@ -30,7 +30,7 @@ J'ai vu peu de conférences sur du langage pur, parfois par choix, mais je remar
 Si cela peut aussi être le début d'une rationalisation des nouveautés ce ne serait pas plus mal.
 
 Allez, on se lance dans le résumé de ma journée et de mes coups de coeur.
-Je mettrai, pour certaines, les liens vers les présentations si ils ont été postés.
+Je mettrai, pour certaines, les liens vers les présentations si ils ont déjà été postés.
 Sachant que tout était filmé et sera disponible sur la [chaîne Youtube](https://www.youtube.com/channel/UCPu5I8miuaXw0YICfEDg_NA){:target="_blank"} du Jug Summer Camp.
 
 ### Keynote : Géopolitique de la donnée, par Benjamin Bayart

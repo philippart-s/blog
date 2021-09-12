@@ -123,7 +123,7 @@ Mais j'avoue que, pour l'instant, je reste attaché à mon installation d'Intell
 
 ### Les concepts avancés d'authentification et d'autorisation expliqués simplement (même si tu n'es pas dev) !, par Julien Topçu
 
-Ah l'authentification, je crois qu'on a dû m'expliquer tout ça un bon paquet de fois.
+Ah l'authentification! je crois qu'on a dû m'expliquer tout ça un bon paquet de fois.
 Et à chaque fois syndrome du poisson rouge: je pense avoir tout compris, je fais un tour de bocal et j'ai tout oublié !
 
 Le pari de Julien était donc assez élevé : arriver à ce que je n'oublie pas la moitié de ce qu'il allait expliquer !

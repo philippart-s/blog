@@ -114,7 +114,7 @@ Je pense que je l'utilise moins intensivement que Philippe mais un peu plus comm
 Je pense regarder la partie on premise pour le professionnel afin d'aider le on-boarding des personnes et leur permettre de commencer plus rapidement en se laissant le temps de configurer sa machine.
 L'autre use case que je vois serait la maintenance de code legacy où ce n'est pas toujours évident de maintenir un environnement de développement.
 
-A titre personnel je commence à l'utiliser, notamment dans la participation aux projets Open Source.
+A titre personnel, je commence à l'utiliser, notamment dans la participation aux projets Open Source.
 Cela me facilite le travail et me permet, par exemple lors de ma pose déjeuner, de développer sans pour autant devoir emmener mon poste perso.
 
 J'ai appris que l'on pouvait customiser l'image Docker utilisée, c'est un élément qui me manquait lors de mes tests, je pense que cela va me permettre d'améliorer ma prise en main.

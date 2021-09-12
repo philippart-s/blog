@@ -138,7 +138,7 @@ Je vous conseille le replay avec des vrais morceaux de film dedans !
 
 Je l'ai déjà dit, j'apprécie Horacio pour ses connaissances et sa simplicité.
 Là encore il a fait mouche et sur un sujet d'actualité pour moi puisque cela parle d'operators sur Kubernetes.
-A titre professionnel je n'en n'ai pas encore développé mais cela va certainement venir, encore plus suite à cette présentation.
+A titre professionnel, je n'en n'ai pas encore développé mais cela va certainement venir, encore plus suite à cette présentation.
 
 D'une approche simple (avec toujours de chouettes sketch notes :wink:), cette présentation d'Horacio nous permet de bien comprendre comment sont architecturés les operators et comment il faut s'y prendre pour se lancer dans le développement de ceux-ci.
 

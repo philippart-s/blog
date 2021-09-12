@@ -26,7 +26,7 @@ participer à un tel évènement.
 ## Le programme :memo:
 
 Le [programme](https://www.jugsummercamp.org/edition/12/presentations){:target="_blank"} de cette année était très varié.
-J'ai vu peu de conférences sur du langage pure, parfois par choix mais je remarque aussi que les conférences font de plus en plus la part belle à ce qui se passe autour du développement et non pas juste les dernières nouveautés d'un langage. 
+J'ai vu peu de conférences sur du langage pur, parfois par choix, mais je remarque aussi que les conférences font de plus en plus la part belle à ce qui se passe autour du développement et non pas juste les dernières nouveautés d'un langage. 
 Si cela peut aussi être le début d'une rationalisation des nouveautés ce ne serait pas plus mal.
 
 Allez, on se lance dans le résumé de ma journée et de mes coups de coeur.

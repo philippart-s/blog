@@ -12,7 +12,7 @@ tags:
 
 Souvenez-vous, il y a bien longtemps dans une galaxie lointaine, de courageuses et courageux développeuses et développeurs se rassemblaient pour échanger autour de leur passion : le développement (mais pas que d'ailleurs :wink:).
 Et tout ça prit fin, brutalement, pour la plupart d'entre eux le [17 mars 2020](https://fr.wikipedia.org/wiki/Confinements_li%C3%A9s_%C3%A0_la_pand%C3%A9mie_de_Covid-19_en_France#Premier_confinement_national,_du_17_mars_au_11_mai_2020){:target="_blank"}.
-Je fais parti de ces personnes qui n'avaient pas remis les pieds dans une conférence depuis le premier confinement.
+Je fais partie de ces personnes qui n'avaient pas remis les pieds dans une conférence depuis le premier confinement.
 J'ai bien repris avec mon association ([TADx](https://www.tadx.fr/){:target="_blank"}) un meetup en présentiel (et mon dieu que cela fait du bien) mais, il faut le reconnaître, nous ne sommes pas (encore ?) au niveau des grosses conférences nationales.
 
 C'est donc avec envie, appréhension et excitation que je me suis rendu à la douzième édition du [Jug Summer Camp](https://www.jugsummercamp.org/edition/12){:target="_blank"} à La Rochelle.

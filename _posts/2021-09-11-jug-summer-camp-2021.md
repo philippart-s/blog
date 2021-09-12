@@ -52,7 +52,7 @@ Est-ce un vent nouveau ?
 Non, pour celle-ci, il y aura bien à la fin un support car il est construit au fur et à mesure de la présentation !
 Pierre Tibulle a totalement _tué le game_ du sketch note avec cette présentation où il les a realisés  pendant que Noël Macé nous comptait l'histoire merveilleuse des navigateurs Internet (et un peu l'histoire d'Internet).
 
-Tel un drama on découvrira comment tour à tour les acteurs ont pensé être les rois de la navigation internet : mozaic, netscape, mozilla,  internet explorer, safari, chrome, ...
+Tel un drama, on découvrira comment tour à tour les acteurs ont pensé être les rois de la navigation internet : mozaic, netscape, mozilla,  internet explorer, safari, chrome, ...
 La vie d'un navigateur internet n'est pas un long fleuve tranquille et les batailles commerciales (et d'égos) ont très souvent jouées un rôle prépondérant.
 A chaque fois un roi sans partage a régné pendant un laps de temps plus ou moins long, le dernier en date étant Chrome mais jusqu'à quand ?
 

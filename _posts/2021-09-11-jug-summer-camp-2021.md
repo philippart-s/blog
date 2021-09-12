@@ -108,7 +108,7 @@ Je suis peut être naïf mais j'espère que cela changera.
 
 Là encore deux de mes chouchous.
 Et pas juste parce que j'ai eu la chance de les faire venir à TADx mais parce que ce sont deux personnes qui pourraient très bien être beaucoup moins simples et abordables qu'ils ne le sont au vu de leurs connaissances !
-Le sujet en lui-même m'intéressait au plus haut point car en bon geek des familles au moment de la conférence je testais justement GitPod.
+Le sujet en lui-même m'intéressait au plus haut point car en bon geek des familles, au moment de la conférence, je testais justement GitPod.
 
 Je pense que je suis moins sur l'utilisation intensive que Philippe semble en avoir mais plus comme Horacio : permettre une utilisation rapide d'un environnement de développement sans avoir à installer tout un écosystème pour faire une démo ou donner un cours.
 Je pense regarder la partie on premise pour le professionnel afin d'aider l'on boarding des personnes et leurs permettre de commencer plus rapidement en se laissant le temps de configurer sa machine.

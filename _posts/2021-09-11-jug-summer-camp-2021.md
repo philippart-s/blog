@@ -35,7 +35,7 @@ Sachant que tout était filmé et sera disponible sur la [chaîne Youtube](https
 
 ### Keynote : Géopolitique de la donnée, par Benjamin Bayart
 
-Une Keynote comme on les aimes : éloignée mais au final pas tant que ça de notre métier de tous les jours.
+Une Keynote comme on les aime : éloignée mais au final pas tant que ça de notre métier de tous les jours.
 Très intéressant et mériterait certainement plus de temps (à tel point qu'il a dépassé de 30 mins l'heure de fin ... une pensée pour les orgas :wink:).
 Pleins de sujets abordés, j'en retiendrai un qui m'a particulièrement interpellé : la responsabilité, en tant que développeur, PO, ..., sur les données et les conséquences de leur utilisation.
 Notamment en se posant la question suivante :

@@ -87,7 +87,7 @@ J'ai une tendresse particulière pour Aurélie et Gaëlle que j'ai rencontré lo
 Je les connaissais donc déjà, mais c'est toujours aussi bien fait et donné avec tant de joie et de simplicité que c'est toujours un plaisir.
 Créer et distribuer un plugin pour le CLI _kubectl_ semble simple et surtout grâce à Aurélie et Gaëlle on a toutes les ressources pour ne pas se prendre les pieds dans le tapis.
 
-Si vous êtes impatients vous pouvez regarder la vidéo de la TADx mais sinon les slides sont aussi très bien faits pour comprendre facilement les étapes à suivre.
+Si vous êtes impatients, vous pouvez regarder la vidéo de la TADx mais sinon les slides sont aussi très bien faits pour comprendre facilement les étapes à suivre.
 Je vous conseille aussi de suivre Aurélie sur Youtube ou Dev.to elle y prodigue des tutos très clairs autour du monde Docker et Kubernetes.
 
 Les [slides](https://docs.google.com/presentation/d/12syIZkQcqMPFXMSqWZrC_KOVzbThf0L6jSs93nyw2_0/preview#slide=id.ga5dc656ac3_0_0){:target="_blank"} de la conférence.

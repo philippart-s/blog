@@ -104,7 +104,7 @@ Son talk a aussi fait résonance à une idée que j'ai depuis pas mal de temps m
 Si une action ne rapporte rien à la personne, elle a de moins en moins tendance à aider son prochain, voire même profiter des problèmes de l'autre pour essayer de progresser à ses dépends.
 Je suis peut être naïf mais j'espère que cela changera.
 
-### GitPod : IDE as a service, ou comment ne pas acheter un MacBook Pro à 6000 € et être heureux avec une petite machine, par Philippe Charrière Horacio Gonzalez (LostInBrittany) 
+### GitPod : IDE as a service, ou comment ne pas acheter un MacBook Pro à 6000 € et être heureux avec une petite machine, par Philippe Charrière et Horacio Gonzalez (LostInBrittany) 
 
 Là encore deux de mes chouchous.
 Et pas juste parce que j'ai eu la chance de les faire venir à TADx mais parce que ce sont deux personnes qui pourraient très bien être beaucoup moins simples et abordables qu'ils le sont au vu de leurs connaissances !

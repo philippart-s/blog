@@ -70,7 +70,7 @@ Et pour vous donner envie, quelques exemples de gribouillage comme dirait Pierre
 Un quickie qui m'intéressait particulièrement car, et certains le savent, j'adore les tests !
 
 Tout d'abord une mention particulière au speaker : plus de micro ni de projection dès le début de sa prez !
-Eh bien ok on s'adapte : on retourne le PC et on y va quand même en décrivant le maximum de chose :clap:. 
+Eh bien ok on s'adapte : on retourne le PC et on y va quand même en décrivant le maximum de choses :clap:. 
 Bravo car c'est resté fluide et compréhensible, certes les démos passent moins bien mais on se concentre sur le message, ce n'est pas plus mal.
 
 Deux grandes idées à creuser et retenir : 

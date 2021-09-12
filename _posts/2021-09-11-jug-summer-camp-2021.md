@@ -97,7 +97,7 @@ Les [slides](https://docs.google.com/presentation/d/12syIZkQcqMPFXMSqWZrC_KOVzbT
 Le genre de conférence qui fait à la fois du bien et du mal.
 Damien est le créateur de [We Love Devs](https://welovedevs.com/fr/){:target="_blank"}, un site de recrutement pas comme les autres qui place le recruté au centre des préoccupations pour lui trouver le meilleur des jobs.
 
-Ils ont lancé une grande enquête anonyme afin d'essayer d'avoir une image de ce monde du travail dans l'écosystème du développement (et aussi d'écrire un livre).
+Avec son équipe, ils ont lancé une grande enquête anonyme afin d'essayer d'avoir une image de ce monde du travail dans l'écosystème du développement (et aussi d'écrire un livre).
 Les sujets de préoccupations restent (malheureusement) les mêmes que ces dernières années : l'inclusion dans le monde professionnel, l'empathie et la bienveillance qui sont pas toujours présentes (contrairement à ce que disent la majorité des recruteurs des ESN :wink:) ... et bien sûr le salaire !
 
 Son talk a aussi fait résonance à une idée que j'ai depuis pas mal de temps maintenant, on trouve de moins en moins d'actes _gratuits_ en entreprise.

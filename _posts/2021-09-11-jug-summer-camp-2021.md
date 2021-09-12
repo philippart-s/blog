@@ -102,7 +102,7 @@ Les sujets de préoccupations restent (malheureusement) les mêmes que ces derni
 
 Son talk a aussi fait résonance à une idée que j'ai depuis pas mal de temps maintenant, on trouve de moins en moins d'actes _gratuits_ en entreprise.
 Si une action ne rapporte rien à la personne, elle a de moins en moins tendance à aider son prochain, voire même profiter des problèmes de l'autre pour essayer de progresser à ses dépends.
-Je suis peut être naif mais j'espère que cela changera.
+Je suis peut être naïf mais j'espère que cela changera.
 
 ### GitPod : IDE as a service, ou comment ne pas acheter un MacBook Pro à 6000 € et être heureux avec une petite machine, par Philippe Charrière Horacio Gonzalez (LostInBrittany) 
 

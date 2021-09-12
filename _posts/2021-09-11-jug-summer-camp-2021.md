@@ -19,7 +19,7 @@ C'est donc avec envie, appréhension et excitation que je me suis rendu à la do
 Pour celles et ceux qui ne connaîtraient pas, le JUG Summer Camp est une conférence annuelle à La Rochelle (:sunrise:)  autour du développement et de l'écosystème du monde informatique.
 C'est un peu la conférence de la rentrée mais avec encore un petit cadre de vacances grâce à la belle ville de La Rochelle.
 
-Comme je l'ai indiqué c'est dans une période spéciale et après une période spéciale que j'arrivais à cette conférence.
+Comme je l'ai indiqué, c'est dans une période spéciale et après une autre période encore plus spéciale que j'arrivais à cette conférence.
 J'avoue que les différents intervenants auraient pus projeter leurs photos de vacances ça m'aurait plus de la même façon tellement j'étais heureux de pouvoir de nouveau  
 participer à un tel évènement.
 

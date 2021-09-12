@@ -56,7 +56,7 @@ Tel un drama, on découvrira comment tour à tour les acteurs ont pensé être l
 La vie d'un navigateur internet n'est pas un long fleuve tranquille et les batailles commerciales (et d'égos) ont très souvent joué un rôle prépondérant.
 A chaque fois, un roi sans partage a régné pendant un laps de temps plus ou moins long, le dernier en date étant Chrome mais jusqu'à quand ?
 
-Je ne ferai pas honneur aux talents de Pierre et Noël pour le sketch note et la narration en essayant de vous la résumer mais une fois le replay disponible jetez vous dessus !
+Je ne ferai pas honneur aux talents de Pierre et Noël pour le sketch note et la narration en essayant de vous la résumer mais une fois le replay disponible: jetez vous dessus !
 
 Et pour vous donner envie, quelques exemples de gribouillage comme dirait Pierre : 
  - [https://pbs.twimg.com/media/E-6qbtJX0AI2GlR?format=jpg&name=large](https://pbs.twimg.com/media/E-6qbtJX0AI2GlR?format=jpg&name=large){:target="_blank"}

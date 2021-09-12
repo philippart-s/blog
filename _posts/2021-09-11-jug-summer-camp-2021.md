@@ -107,7 +107,7 @@ Je suis peut être naïf mais j'espère que cela changera.
 ### GitPod : IDE as a service, ou comment ne pas acheter un MacBook Pro à 6000 € et être heureux avec une petite machine, par Philippe Charrière et Horacio Gonzalez (LostInBrittany) 
 
 Là encore deux de mes chouchous.
-Et pas juste parce que j'ai eu la chance de les faire venir à TADx mais parce que ce sont deux personnes qui pourraient très bien être beaucoup moins simples et abordables qu'ils le sont au vu de leurs connaissances !
+Et pas juste parce que j'ai eu la chance de les faire venir à TADx mais parce que ce sont deux personnes qui pourraient très bien être beaucoup moins simples et abordables qu'ils ne le sont au vu de leurs connaissances !
 Le sujet en lui-même m'intéressait au plus haut point car en bon geek des familles au moment de la conférence je testais justement GitPod.
 
 Je pense que je suis moins sur l'utilisation intensive que Philippe semble en avoir mais plus comme Horacio : permettre une utilisation rapide d'un environnement de développement sans avoir à installer tout un écosystème pour faire une démo ou donner un cours.

@@ -82,7 +82,7 @@ Les [slides](https://t.co/fZ1v5Li4Aa?amp=1){:target="_blank"} de la conférence.
 ### Créer & distribuer un plugin pour Kubernetes en quelques minutes ? Easy ! 🙂, par Aurélie Vache et Gaëlle Acas
 
 Alors là je préviens je ne suis pas objectif !
-J'ai une tendresse particulière pour Aurélie et Gaëlle que j'ai rencontré lorsqu'elle sont venue donner cette [conférence à TADx](https://youtu.be/hH4Rkj4_HzE){:target="_blank"} en plein confinement :smile:.
+J'ai une tendresse particulière pour Aurélie et Gaëlle que j'ai rencontré lorsqu'elles sont venues donner cette [conférence à TADx](https://youtu.be/hH4Rkj4_HzE){:target="_blank"} en plein confinement :smile:.
 
 Je les connaissais donc déjà mais c'est toujours aussi bien fait et donné avec tant de joie et de simplicité que c'est toujours un plaisir.
 Créer et distribuer un plugin pour le CLI _kubectl_ semble simple et surtout grâce à Aurélie et Gaëlle on a toutes les ressources pour ne pas se prendre les pieds dans le tapis.

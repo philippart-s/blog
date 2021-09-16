@@ -44,6 +44,7 @@ Notamment en se posant la question suivante :
 C'est tout bête mais en se posant ce genre de question et en enlevant des oeillères, cela nous permettrait peut être d'éviter certaines dérives (même si on trouvera toujours quelqu'un pour faire le sale boulot :pensive:).
 Cette simple question permet de réfléchir si on fait bien de développer une application qui, au final, permettra de constituer des listes de fichages plus au moins discriminantes, par exemple, ou encore détruire des vies entières.
 
+La [vidéo](https://youtu.be/7VnJ_NiiHas){:target="_blank"}.
 
 ### 👨‍🎨 Il était une fois... les navigateurs ⛵️, par Pierre Tibulle et Noël Macé 
 
@@ -64,6 +65,8 @@ Et pour vous donner envie, quelques exemples de gribouillage comme dirait Pierre
  - [https://pbs.twimg.com/media/E-7KBA5XMAU3HEQ?format=jpg&name=large](https://pbs.twimg.com/media/E-7BK-wXMAcmK_H?format=jpg&name=large){:target="_blank"}
  - [https://pbs.twimg.com/media/E-7VYPbXEAcPfF0?format=jpg&name=large](https://pbs.twimg.com/media/E-7VYPbXEAcPfF0?format=jpg&name=large){:target="_blank"}
  - [https://pbs.twimg.com/media/E-78gtGXEAE-RTe?format=jpg&name=large](https://pbs.twimg.com/media/E-7VYPbXEAcPfF0?format=jpg&name=large){:target="_blank"}
+
+La [vidéo](https://youtu.be/g6erTxxy8vY){:target="_blank"}.
 
 ### Mutation testing : y a-t-il des trous dans votre couverture de test ?, par Benjamin Cavy
 
@@ -91,6 +94,8 @@ Si vous êtes impatients, vous pouvez regarder la vidéo de la TADx mais sinon l
 Je vous conseille aussi de suivre Aurélie sur Youtube ou Dev.to elle y prodigue des tutos très clairs autour du monde Docker et Kubernetes.
 
 Les [slides](https://docs.google.com/presentation/d/12syIZkQcqMPFXMSqWZrC_KOVzbThf0L6jSs93nyw2_0/preview#slide=id.ga5dc656ac3_0_0){:target="_blank"} de la conférence.
+
+La [vidéo](https://youtu.be/e9jtseIpLeQ){:target="_blank"}.
 
 ### Ce qui rend les développeurs heureux en 2021, par Damien Cavaillès
 
@@ -121,6 +126,10 @@ J'ai appris que l'on pouvait customiser l'image Docker utilisée, c'est un élé
 
 Mais j'avoue que, pour l'instant, je reste attaché à mon installation d'Intellij :wink:.
 
+La [vidéo](https://youtu.be/pDu_rTh_s-0){:target="_blank"}.
+
+Les [slides](https://t.co/F4IGdxe2jO?amp=1){:target="_blank"}.
+
 ### Les concepts avancés d'authentification et d'autorisation expliqués simplement (même si tu n'es pas dev) !, par Julien Topçu
 
 Ah l'authentification! je crois qu'on a dû m'expliquer tout ça un bon paquet de fois.
@@ -136,6 +145,8 @@ Je vous conseille le replay avec des vrais morceaux de film dedans !
 
 Les [slides](https://slides.com/julientopcu/concepts-avances-authn-authz){:target="_blank"} de la conférence.
 
+La [vidéo](https://youtu.be/oUz60SCrk9k){:target="_blank"}.
+
 ### Les opérateurs Kubernetes : opérer des services Cloud Native à grande échelle, par Horacio Gonzalez (LostInBrittany) 
 
 Je l'ai déjà dit, j'apprécie Horacio pour ses connaissances et sa simplicité.
@@ -146,6 +157,7 @@ D'une approche simple (avec toujours de chouettes sketch notes :wink:), cette pr
 
 A essayer dans les mois qui viennent !
 
+La [vidéo](https://youtu.be/K6SQXeLgo3Q){:target="_blank"}.
 
 ## En conclusion
 Je n'ai pas pu tout voir et je n'ai pas tout raconté ici mais ce fut une journée riche en expériences et en découvertes.

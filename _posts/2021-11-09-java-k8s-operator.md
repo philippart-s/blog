@@ -19,7 +19,7 @@ ou à ça :
 ![Matrix]({{ site.url }}{{ site.baseurl }}/assets/images/java-k8s-operator/matrix.jpg){: .align-center}
 
 
-Je ne vais pas me lancer sur l'explication de ce qu'est un opérateur Kubernetes mais en gros c'est un contrôleur permettant d'étendre les API de Kubernetes afin de gérer de manière plus efficace les applications déployées (installation, actions d'adminsitration, ...).
+Je ne vais pas me lancer sur l'explication de ce qu'est un opérateur Kubernetes mais en gros c'est un contrôleur permettant d'étendre les API de Kubernetes afin de gérer de manière plus efficace les applications déployées (installation, actions d'administration, ...).
 
 Pour définir un opérateur il faut définir une _custom resource definition_ puis créer une _resouce definition_ associée.
 
@@ -350,14 +350,14 @@ docker push localhost:5000/hw-operator:1.0
 
 ### Déploiement de l'opérateur 🤖
 
-Pour cela j'ai créé un YAML complet (à ne pas reproduire chez vous 😉). 
-<!-- TODO expliquer la partie RBAC / SA --> 
+Pour cela j'ai créé un YAML complet très simple (à ne pas reproduire chez vous 😉). 
 
 ```yaml
 apiVersion: v1
 kind: Namespace
 metadata:
   name: helloworld-operator
+
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -376,64 +376,10 @@ spec:
       labels:
         app: helloworld-operator
     spec:
-      serviceAccount: helloworld-operator 
       containers:
       - name: operator
         image: localhost:5000/hw-operator:1.0
         imagePullPolicy: Always
-
----
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: helloworld-operator
-  namespace: helloworld-operator
-
----
-apiVersion: rbac.authorization.k8s.io/v1beta1
-kind: ClusterRole
-metadata:
-  name: helloworld-operator
-rules:
-- apiGroups:
-  - fr.wilda.helloworldcustomresources
-  resources:
-  - schemas
-  verbs:
-  - "*"
-- apiGroups:
-  - fr.wilda.helloworldcustomresources
-  resources:
-  - schemas/status
-  verbs:
-  - "*"
-- apiGroups:
-  - apiextensions.k8s.io
-  resources:
-  - customresourcedefinitions
-  verbs:
-  - "get"
-  - "list"
-- apiGroups:
-  - ""
-  resources:
-  - secrets
-  verbs:
-  - "*"
-
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: helloworld-operator
-subjects:
-- kind: ServiceAccount
-  name: helloworld-operator
-  namespace: helloworld-operator
-roleRef:
-  kind: ClusterRole
-  name: helloworld-operator
-  apiGroup: ""
 ```
 
 Déploiement de l'opérateur : `kubectl apply -f ./src/k8s/operator.yml`

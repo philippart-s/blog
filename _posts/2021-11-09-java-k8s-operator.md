@@ -1,6 +1,7 @@
 ---
 title: "Créer un opérateur Kubernetes en Java ... C'est possible !"
 classes: wide
+excerpt: "Il n'y a pas que GO pour créer un opérateur Kubernetes, c'est aussi possible en Java !"
 categories:
   - Articles
   - Dev
@@ -21,11 +22,9 @@ ou à ça :
 
 Je ne vais pas me lancer sur l'explication de ce qu'est un opérateur Kubernetes mais en gros c'est un contrôleur permettant d'étendre les API de Kubernetes afin de gérer de manière plus efficace les applications déployées (installation, actions d'administration, ...).
 
-Pour définir un opérateur il faut définir une _custom resource definition_ puis créer une _resouce definition_ associée.
+Pour définir un opérateur il faut définir une _custom resource definition_ puis créer une _custom resouce_ associée. C'est cette création / modification qui va permette, notamment de déclencher des actions (utile pour automatiser des installations par exemple).
 
-Ensuite l'opérateur va scruter en permanence ce qu'il a à faire (selon ce que l'on aura codé) et est accessible via la CLI _kubectl_ puisque ce n'est qu'une extension de l'API de base.
-
-<!-- TODO image boucle de réconciliation -->
+Ensuite l'opérateur va scruter en permanence la ressource pour agir en cas de modification, et est accessible via la CLI _kubectl_ puisque ce n'est qu'une extension de l'API de base.
 
 En résumé : faisons faire par un programme des actions automatisables qui n'ont pas de plus value à être faites par des humains.
 En gros c'est que l'on appelle partout DevOps ... 
@@ -41,9 +40,7 @@ Et là il y a un truc qui me chagrine car c'est soit du Helm, soit du Ansible ..
 
 ## Sinon ça existe dans un vrai langage 🤡 ?
 
-Du coup, même si les quelques docs existantes ne le mentionnent pas (notamment celle de Kubernetes) j'ai recherché si il existait pas un projet qui se serait lancé dans l'aventure.
-
-<!-- TODO image pour "à ne pas confondre -->
+Du coup, même si les quelques docs existantes ne le mentionnent pas (notamment celle de Kubernetes) j'ai recherché si il existait  un projet qui se serait lancé dans l'aventure.
 
 J'en profite pour clarifier un point qui peut paraître évident pour les sachants mais qui ne l'était pas pour moi au début : on peut écrire un opérateur dans n'importe quel langage !
 
@@ -287,7 +284,7 @@ Hello stef 🎉🎉 !!
 Goodbye stef 😢
 ```
 
-<!-- Image Wait a minute !! -->
+![Wait a minute]({{ site.url }}{{ site.baseurl }}/assets/images/java-k8s-operator/wait-a-minute-393x295){: .align-center}
 
 A ce stade vous devez vous dire : 
 >ok il est gentil avec son exemple mais moi je veux un opérateur qui tourne dans mon Kubernetes et pas là en mode main sur un poste de dev !

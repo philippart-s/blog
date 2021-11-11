@@ -227,7 +227,7 @@ mvn exec:java -Dexec.mainClass=fr.wilda.HelloWorldRunner
 
 ⚠️ **Laisser tourner le main pour avoir les différents messages du contrôleur !** ⚠️
 
-Et il ne nous reste plus qu'à créer une CR pour vois si notre bel opérateur se déclenche !
+Et il ne nous reste plus qu'à créer une CR pour voir si notre bel opérateur se déclenche !
 
 Histoire d'être un peu propre on crée un namespace `kubectl create ns test-hw-crd`
 

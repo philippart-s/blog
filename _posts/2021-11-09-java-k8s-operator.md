@@ -1,7 +1,7 @@
 ---
 title: "Créer un opérateur Kubernetes en Java ... C'est possible !"
 classes: wide
-excerpt: "Il n'y a pas que GO pour créer un opérateur Kubernetes, c'est aussi possible en Java !"
+excerpt: "Il n'y a pas que GO pour créer un opérateur Kubernetes, c'est aussi possible en Java :coffee:!"
 categories:
   - Articles
   - Dev
@@ -10,7 +10,7 @@ tags:
   - Java
 
 ---
-## Mais c'est quoi un opérateur
+## Mais c'est quoi un opérateur ?
 
 Lorsque l'on me parle d'un opérateur Kubernetes moi je pense à ça :
 ![Jarvis]({{ site.url }}{{ site.baseurl }}/assets/images/java-k8s-operator/jarvis.jpg){: .align-center}
@@ -20,18 +20,19 @@ ou à ça :
 ![Matrix]({{ site.url }}{{ site.baseurl }}/assets/images/java-k8s-operator/matrix.jpg){: .align-center}
 
 
-Je ne vais pas me lancer sur l'explication de ce qu'est un opérateur Kubernetes mais en gros c'est un contrôleur permettant d'étendre les API de Kubernetes afin de gérer de manière plus efficace les applications déployées (installation, actions d'administration, ...).
+Je ne vais pas me lancer sur l'explication de ce qu'est un [opérateur Kubernetes](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/){:target="_blank"} mais en gros c'est un contrôleur permettant d'étendre les API de Kubernetes afin de gérer de manière plus efficace les applications déployées (installation, actions d'administration, ...).
 
-Pour définir un opérateur il faut définir une _custom resource definition_ puis créer une _custom resouce_ associée. C'est cette création / modification qui va permette, notamment de déclencher des actions (utile pour automatiser des installations par exemple).
+Pour définir un opérateur, il faut définir une _custom resource definition_ puis créer la _custom resouce_ associée. C'est cette création / modification qui va permette, notamment de déclencher des actions (utiles pour automatiser des installations par exemple).
 
-Ensuite l'opérateur va scruter en permanence la ressource pour agir en cas de modification, et est accessible via la CLI _kubectl_ puisque ce n'est qu'une extension de l'API de base.
+Ensuite, l'opérateur va scruter en permanence la ressource pour agir en cas de modification.
+Il est aussi possible d'accéder à ces _custom resources_ via la CLI _kubectl_ puisque ce n'est qu'une extension de l'API de base.
 
-En résumé : faisons faire par un programme des actions automatisables qui n'ont pas de plus value à être faites par des humains.
+En résumé : faisons faire par un programme des actions automatisables qui n'ont pas de plus-value à être faites par des humains.
 En gros c'est que l'on appelle partout DevOps ... 
 
 ## Ok, je suis expert opérateur maintenant 😅, comment on en développe un ?
 
-Alors déjà faisons le point sur les deux grands types d'opérateurs : ceux sui se chargent essentiellement de l'installation et la mise à jour des applications et ceux qui vont plus loin pour proposer des actions d'administration / ops automatisées sur les applications.
+Alors déjà faisons le point sur les deux grands types d'opérateurs : ceux qui se chargent essentiellement de l'installation et la mise à jour des applications et ceux qui vont plus loin pour proposer des actions d'administration / ops automatisées sur les applications.
 
 On trouve souvent cela sous la dénomination _modèle de maturité des opérateurs_, illustré par le schéma suivant :
 ![Operator Capability]({{ site.url }}{{ site.baseurl }}/assets/images/java-k8s-operator/operator-capability-model.png){: .align-center}
@@ -40,13 +41,13 @@ Et là il y a un truc qui me chagrine car c'est soit du Helm, soit du Ansible ..
 
 ## Sinon ça existe dans un vrai langage 🤡 ?
 
-Du coup, même si les quelques docs existantes ne le mentionnent pas (notamment celle de Kubernetes) j'ai recherché si il existait  un projet qui se serait lancé dans l'aventure.
+Du coup, même si les quelques docs existantes ne le mentionnent pas (notamment celle de Kubernetes), j'ai recherché si il existait un projet qui se serait lancé dans l'aventure.
 
 J'en profite pour clarifier un point qui peut paraître évident pour les sachants mais qui ne l'était pas pour moi au début : on peut écrire un opérateur dans n'importe quel langage !
 
-Ce sera juste plus ou moins simple pour le créer avec plus ou moins d'aide : le _scaffolding d'un projet_, l'aide dans la génération des différentes ressources ou _custom resources_, les appels des API Kubernetes, ...
+Ce sera juste plus ou moins simple pour le créer avec plus ou moins d'aide : le _scaffolding_ d'un projet, l'aide dans la génération des différentes ressources ou _custom resources_, les appels des API Kubernetes, ...
 
-Voilà une fois que ça c'est dit on peut continuer et partir à la recherche d'un langage me permettant de faire ce que je veux, je parle bien sûr de Java :xink:.
+Voilà, une fois que ça c'est dit, on peut continuer et partir à la recherche d'un langage me permettant de faire ce que je veux, je parle bien sûr de Java :wink:.
 
 ## java-operator-sdk 🛠️
 
@@ -54,9 +55,10 @@ J'ai trouvé mon bonheur avec le projet [java-operator](https://github.com/java-
 
 La documentation officielle : [https://javaoperatorsdk.io/](https://javaoperatorsdk.io/){:target="_blank"}.
 
-Ils se sont largement inspirés de celui écrit en Go ([https://github.com/operator-framework/operator-sdk](https://github.com/operator-framework/operator-sdk){:target="_blank"}) et ne s'en cachent pas. Il reste cependant pas mal de chemin avant d'arriver au niveau de celui-ci (pour moi la fonctionnalité la plus manquante étant le _scaffolding_) mais on verra un peu plus loin que ce qui est fournit aide grandement pour la création d'un opérateur.
+Ils se sont largement inspirés de celui écrit en Go ([https://github.com/operator-framework/operator-sdk](https://github.com/operator-framework/operator-sdk){:target="_blank"}) et ne s'en cachent pas. 
+Il reste cependant pas mal de chemin avant d'arriver au niveau de celui-ci (pour moi la fonctionnalité la plus manquante étant le _scaffolding_) mais on verra un peu plus loin que ce qui est fournit aide grandement pour la création d'un opérateur.
 
-Une chose importante à savoir est que le projet est basé sur le client Kubernetes [fabric8](https://github.com/fabric8io/kubernetes-client){:target="_blank"} qui facilite grandement la vie pour accéder aux API Kubernetes (et Openshift 😉).
+Une chose importante à savoir est que le projet est basé sur le client Kubernetes Java proposé par [fabric8](https://github.com/fabric8io/kubernetes-client){:target="_blank"} qui facilite grandement la vie pour accéder aux API Kubernetes (et Openshift 😉).
 
 ## Hello world ! 👋
 
@@ -87,11 +89,11 @@ Rien de plus simple on ajoute 2 dépendances :
 
 ### Le squelette du projet 🦴
 
-C'est assez simple et la [documentation](https://github.com/java-operator-sdk/java-operator-sdk#Usage){:target="_blank"} est plutôt bien faite (voir la section sample et particulièrement le projet [pure-java](https://github.com/java-operator-sdk/java-operator-sdk/tree/master/samples/pure-java){:target="_blank"}).
+C'est assez simple et la [documentation](https://github.com/java-operator-sdk/java-operator-sdk#Usage){:target="_blank"} est plutôt bien faite (voir la section samples et particulièrement le projet [pure-java](https://github.com/java-operator-sdk/java-operator-sdk/tree/master/samples/pure-java){:target="_blank"}).
 
-#### Définition de la custom resource definition 📝
+#### Définition de la _custom resource definition_ 📝
 
-Comme indiqué il est possible de définir la partie _spec_ de la _custom resource definition_ (CRD) sous forme de POJO  : 
+Il est possible de définir la partie _spec_ de la _custom resource definition_ (CRD) sous forme de POJO  : 
 
 ```java
 public class HelloWorldSpec {
@@ -118,7 +120,7 @@ public class HelloWorldCustomResource extends CustomResource<HelloWorldSpec, Voi
 }
 ```
 
-`mvn compile` génère dans le _target/classes/META-INF/fabric8 deux CRD : un version beta et un version normale (ils sont identiques au moment de la génération). 
+`mvn compile` génère dans le _target/classes/META-INF/fabric8_ deux CRD : un version beta et un version normale (ils sont identiques au moment de la génération). 
 
 Voici à quoi ressemble le fichier _helloworldcustomresources.fr.wilda-v1.yml_ généré : 
 ```yaml
@@ -158,7 +160,7 @@ Plutôt sympa 😉.
 ### Définition du contrôleur 🔄
 
 Là encore ce n'est pas très compliqué, on peut coder des actions sur pas mal d'évènements : création, suppression ou modification de la _custom resource_ (CR).
-Dans notre cas on veut juste loger _Hello world <valeur du champ name de la CR>_ :
+Dans notre cas on veut juste loger _Hello world \<valeur du champ name de la CR\>_ :
 ```java
 @Controller
 public class HelloWorldController implements ResourceController<HelloWorldCustomResource> {
@@ -184,7 +186,7 @@ public class HelloWorldController implements ResourceController<HelloWorldCustom
 }
 ```
 
-A ce stade il ne nous reste plus qu'à enregistrer notre controller au sein de Kubernetes.
+A ce stade il ne nous reste plus qu'à _enregistrer_ notre controller au sein de Kubernetes.
 
 ```java
 public class HelloWorldRunner {
@@ -200,7 +202,7 @@ public class HelloWorldRunner {
 
 ### Test de l'opérateur ⚗️
 
-A ce stade pour que notre opérateur fonctionne il va falloir créer la CRD.
+Pour que notre opérateur fonctionne il va falloir créer la CRD.
 
 Créer la CRD : `kubectl apply -f ./target/classes/META-INF/fabric8/helloworldcustomresources.fr.wilda-v1.yml`
 ```
@@ -223,9 +225,9 @@ mvn exec:java -Dexec.mainClass=fr.wilda.HelloWorldRunner
 🚀 Starting HelloWorld operator !!! 🚀
 ```
 
-⚠️ **Laisser tourner le main pour avoir les différents messages du contrôleur ! ⚠️
+⚠️ **Laisser tourner le main pour avoir les différents messages du contrôleur !** ⚠️
 
-Et il ne nous reste plus qu'à créer un CR pour vois si notre bel opérateur se déclenche !
+Et il ne nous reste plus qu'à créer une CR pour vois si notre bel opérateur se déclenche !
 
 Histoire d'être un peu propre on crée un namespace `kubectl create ns test-hw-crd`
 
@@ -267,7 +269,7 @@ Hello stef 🎉🎉 !!
 
 Et voilà 😎 !
 
-Si on supprime la CR : `kubectl delete hw hello-world -n test-hw-crd`
+On supprime la CR : `kubectl delete hw hello-world -n test-hw-crd`
 
 Et de nouveau sur la sortie standard de l'opérateur : 
 ```
@@ -284,7 +286,7 @@ Hello stef 🎉🎉 !!
 Goodbye stef 😢
 ```
 
-![Wait a minute]({{ site.url }}{{ site.baseurl }}/assets/images/java-k8s-operator/wait-a-minute-393x295){: .align-center}
+![Wait a minute]({{ site.url }}{{ site.baseurl }}/assets/images/java-k8s-operator/wait-a-minute-393x295.jpg){: .align-center}
 
 A ce stade vous devez vous dire : 
 >ok il est gentil avec son exemple mais moi je veux un opérateur qui tourne dans mon Kubernetes et pas là en mode main sur un poste de dev !
@@ -296,7 +298,8 @@ Et vous avez raison !
 En réalité un opérateur n'est rien d'autre qu'une image dans un POD !
 
 Il faut donc juste créer une image et la déployer dans notre cluster.
-Ce n'est pas forcément l'objectif de cet article, à noter que j'utilise l'image Docker [registry](https://hub.docker.com/_/registry){:target="_blank"} permettant la création d'une registry locale pour stocker les images.
+Ce n'est pas forcément l'objectif de cet article, du coup je ne vais pas m'étendre sur les différentes actions.
+A noter que j'utilise l'image Docker [registry](https://hub.docker.com/_/registry){:target="_blank"} permettant la création d'une registry locale pour stocker les images.
 
 #### Construction et push de l'image 🐳
 
@@ -405,10 +408,10 @@ Hello stef 🎉🎉 !!
 
 ## En conclusion 🧐
 
-On vient de voir comment simplement (enfin avec un peu de YAML quand même !) on peut créer un opérateur Kubernetes en Java.
+On vient de voir comment, simplement (enfin avec un peu de YAML quand même !), on peut créer un opérateur Kubernetes en Java.
 Le SDK actuel permet de faire déjà pas mal de choses, il demande à être enrichi mais cela permet de simplement créer de la logique métier dans l'opérateur et surtout le tester en local !
 
-La suite : un opérateur qui fait  un peu plus de choses, par exemple créer un service ou un POD, ... mais aussi le faire un Quarkus et SpringBoot. 
+La suite : un opérateur qui fait  un peu plus de choses, par exemple créer un service ou un POD, ... mais aussi le faire en Quarkus et SpringBoot. 
 
 L'ensemble des sources est disponible dans le projet GitHub [java-k8s-simple-operator](https://github.com/philippart-s/java-k8s-simple-operator){:target="_blank"}.
 

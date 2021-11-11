@@ -56,7 +56,7 @@ J'ai trouvé mon bonheur avec le projet [java-operator](https://github.com/java-
 La documentation officielle : [https://javaoperatorsdk.io/](https://javaoperatorsdk.io/){:target="_blank"}.
 
 Ils se sont largement inspirés de celui écrit en Go ([https://github.com/operator-framework/operator-sdk](https://github.com/operator-framework/operator-sdk){:target="_blank"}) et ne s'en cachent pas. 
-Il reste cependant pas mal de chemin avant d'arriver au niveau de celui-ci (pour moi la fonctionnalité la plus manquante étant le _scaffolding_) mais on verra un peu plus loin que ce qui est fournit aide grandement pour la création d'un opérateur.
+Il reste cependant pas mal de chemin avant d'arriver au niveau de celui-ci (pour moi la fonctionnalité la plus manquante étant le _scaffolding_) mais on verra un peu plus loin que ce qui est fourni aide grandement pour la création d'un opérateur.
 
 Une chose importante à savoir est que le projet est basé sur le client Kubernetes Java proposé par [fabric8](https://github.com/fabric8io/kubernetes-client){:target="_blank"} qui facilite grandement la vie pour accéder aux API Kubernetes (et Openshift 😉).
 

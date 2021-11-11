@@ -231,7 +231,7 @@ Et il ne nous reste plus qu'à créer une CR pour voir si notre bel opérateur s
 
 Histoire d'être un peu propre on crée un namespace `kubectl create ns test-hw-crd`
 
-Puis on va créé la CR suivante :
+Puis on va créer la CR suivante :
 
 ```yaml
 apiVersion: "fr.wilda/v1"

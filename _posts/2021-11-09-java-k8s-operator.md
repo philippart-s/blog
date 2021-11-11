@@ -253,7 +253,7 @@ NAME          AGE
 hello-world   2m12s
 ```
 
-Jetons un oeuil sur la sortie standard de l'opérateur lancé tout à l'heure : 
+Jetons un oeil sur la sortie standard de l'opérateur lancé tout à l'heure : 
 ```
 mvn exec:java -Dexec.mainClass=fr.wilda.HelloWorldRunner
 [INFO] Scanning for projects...

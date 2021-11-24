@@ -533,7 +533,7 @@ java.lang.IllegalStateException: No adapter available for type:class io.fabric8.
     at java.lang.Thread.run(Unknown Source) [?:?]
 ```
 
-Après quelques heures / jours de recherches j'ai mis en doute mon image elle-même (il m'en a fallu du temps me direz vous ! 😅), j'ai donc décidé d'utiliser la même technique que dans les exemple de l'opérateur, à savoir le plugin maven [jib](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin){:target="_blank"} pour fabriquer l'image.
+Après quelques heures / jours de recherches j'ai mis en doute mon image elle-même (il m'en a fallu du temps me direz vous ! 😅), j'ai donc décidé d'utiliser la même technique que dans les exemples de l'opérateur, à savoir le plugin maven [jib](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin){:target="_blank"} pour fabriquer l'image.
 
 ```xml
     <plugins>

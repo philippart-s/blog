@@ -218,7 +218,7 @@ Et enfin celui qui aura la charge de supprimer notre serveur HTTP :
 ```
 
 Simple non ?
-Comme indiqué, j'ai choisi de partir d'un YAML plutôt que de tout renseigner à la main mais il est possible de tout faire via l'API, on a un exemple avec le positionnent du replica `deployment.getSpec().setReplicas(resource.getSpec().getReplicas());`.
+Comme indiqué, j'ai choisi de partir d'un YAML plutôt que de tout renseigner à la main mais il est possible de tout faire via l'API, on a un exemple avec le positionnement du replica `deployment.getSpec().setReplicas(resource.getSpec().getReplicas());`.
 
 Passons au déploiement de notre opérateur et à son test.
 

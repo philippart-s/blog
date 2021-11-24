@@ -460,7 +460,7 @@ Enfin l'adaptation de notre contrôleur pour créer ces deux ressources :
     }
 
 ```
-Comme on peut le constater cela reprends exactement le même principe que pour le _deployment_ mais ici on crée notre service.
+Comme on peut le constater cela reprend exactement le même principe que pour le _deployment_ mais ici on crée notre service.
 
 Testons tout ça : 
 ![Hello world]({{ site.url }}{{ site.baseurl }}/assets/images/java-k8s-operator-nginx/nginx-welcome.png){: .align-center}

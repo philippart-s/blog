@@ -156,7 +156,7 @@ spec:
 ```
 
 Avant de développer la partie gérant le déploiement, et pour se simplifier la vie, nous allons utiliser un _deployment.yml_ pour le déploiement de Nginx.
-Il aurait été possible de tout faire en Java mais il y a peut d'intérêt ici.
+Il aurait été possible de tout faire en Java mais il y a peu d'intérêt ici.
 
 Le _deployment.yml_ pour notre Nginx :
 ```yaml

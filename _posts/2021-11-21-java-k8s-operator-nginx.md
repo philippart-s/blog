@@ -144,7 +144,7 @@ public class NginxInstallerController implements ResourceController<NginxInstall
 ```
 
 Pour mémoire, ce contrôleur réagit sur la création / modification / suppression d'une _custom resource_ (basée sur la CRD définie précédemment).
-A titre d'exemple voici ce que la donne pour la création d'une instance Nginx avec deux replicas dans le namespace _test-nginx-operator_:
+A titre d'exemple voici ce que cela donne pour la création d'une instance Nginx avec deux replicas dans le namespace _test-nginx-operator_:
 ```yaml
 apiVersion: "fr.wilda/v1"
 kind: NginxInstallerResource

@@ -89,7 +89,7 @@ Rien de plus simple on ajoute 2 dépendances :
 
 ### Le squelette du projet 🦴
 
-C'est assez simple et la [documentation](https://github.com/java-operator-sdk/java-operator-sdk#Usage){:target="_blank"} est plutôt bien faite (voir la section samples et particulièrement le projet [pure-java](https://github.com/java-operator-sdk/java-operator-sdk/tree/master/samples/pure-java){:target="_blank"}).
+C'est assez simple et la [documentation](https://github.com/java-operator-sdk/java-operator-sdk#Usage){:target="_blank"} est plutôt bien faite (voir la section samples et particulièrement le projet [pure-java](https://github.com/java-operator-sdk/java-operator-sdk/tree/main/smoke-test-samples/pure-java){:target="_blank"}).
 
 #### Définition de la _custom resource definition_ 📝
 

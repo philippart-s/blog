@@ -1,8 +1,9 @@
 tasks:
   - name: Configuring Wakatime
-    command: |
+    init: |
       echo "[settings]" >> /home/gitpod/.wakatime.cfg
       echo "api_key = $WAKATIME_API_KEY" >> /home/gitpod/.wakatime.cfg
+      bundle install
       
 vscode:
   extensions:
@@ -11,4 +12,3 @@ vscode:
     - streetsidesoftware.code-spell-checker
     - github.vscode-pull-request-github
     - eamodio.gitlens
-    - bierner.emojisense

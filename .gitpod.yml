@@ -1,14 +1,13 @@
 tasks:
   - name: Configuring Wakatime
-    init: |
+    before: |
       echo "[settings]" >> /home/gitpod/.wakatime.cfg
       echo "api_key = $WAKATIME_API_KEY" >> /home/gitpod/.wakatime.cfg
-      bundle install
+    command: bundle install
       
 vscode:
   extensions:
     - streetsidesoftware.code-spell-checker-french
-    - coenraads.bracket-pair-colorizer-2
     - streetsidesoftware.code-spell-checker
     - github.vscode-pull-request-github
     - eamodio.gitlens

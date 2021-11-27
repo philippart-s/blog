@@ -1,9 +1,9 @@
 tasks:
   - name: Configuring Wakatime
-    before: |
+    command: |
       echo "[settings]" >> /home/gitpod/.wakatime.cfg
       echo "api_key = $WAKATIME_API_KEY" >> /home/gitpod/.wakatime.cfg
-    command: bundle install
+      exit
       
 vscode:
   extensions:

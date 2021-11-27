@@ -1,6 +1,6 @@
 tasks:
   - name: Init
-    init: printf "\n[settings]\napi_key = $WAKA_TIME_API_KEY\n" > ~/.wakatime.cfg
+    init: printf "\n[settings]\napi_key = $WAKATIME_API_KEY\n" > ~/.wakatime.cfg
     command: bundle install
       
 vscode:

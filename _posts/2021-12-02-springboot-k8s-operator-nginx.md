@@ -12,7 +12,7 @@ tags:
 
 ---
 
-![Hello world]({{ site.url }}{{ site.baseurl }}/assets/images/springboot-k8s-operator-nginx/springboot-logo.png){: .align-center}
+![Springboot logo]({{ site.url }}{{ site.baseurl }}/assets/images/springboot-k8s-operator-nginx/springboot-logo.png){: .align-center}
 
 Troisième partie de la série d'articles consacrés à l'écriture d'un opérateur Kubernetes en java.
 Afin de ne pas faire trop de redites je vais passer sur certaines choses, je vous propose donc de lire les premiers articles pour commencer :
@@ -38,35 +38,34 @@ On repart aussi avec le [SDK Java](https://javaoperatorsdk.io/){:target="_blank"
  - est quasiment pas documentée
  - pas totalement fonctionnelle (pour les tests mais là ça peut venir de moi 😅)
 
-Cela peut s'expliquer qu'à contrario la partie [Quarkus](https://github.com/quarkiverse/quarkus-operator-sdk){:target="_blank"} semble plus active (on verra ça dans un prochain article 😉).
+Cela peut s'expliquer, qu'à contrario, la partie [Quarkus](https://github.com/quarkiverse/quarkus-operator-sdk){:target="_blank"} semble plus active (on verra ça dans un prochain article 😉).
 
 ### Un peu de configuration 🛠️
 
-Springboot a beau faire de la magie il faut tout de même déclarer que quelques dépendances :
+Springboot a beau faire de la magie il faut tout de même déclarer quelques dépendances :
 ```xml
-		<!-- Core Springboot dependencies -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
+<!-- Core Springboot dependencies -->
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter</artifactId>
+</dependency>
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-test</artifactId>
+	<scope>test</scope>
+</dependency>
 
-		<!-- Springboot starter for SDK -->
-		<dependency>
-			<groupId>io.javaoperatorsdk</groupId>
-			<artifactId>operator-framework-spring-boot-starter</artifactId>
-			<version>1.8.4</version>
-		</dependency>
-		<dependency>
-			<groupId>io.javaoperatorsdk</groupId>
-			<artifactId>operator-framework-spring-boot-starter-test</artifactId>
-			<version>1.8.4</version>
-		</dependency>
-
+<!-- Springboot starter for SDK -->
+<dependency>
+	<groupId>io.javaoperatorsdk</groupId>
+	<artifactId>operator-framework-spring-boot-starter</artifactId>
+	<version>1.8.4</version>
+</dependency>
+<dependency>
+	<groupId>io.javaoperatorsdk</groupId>
+	<artifactId>operator-framework-spring-boot-starter-test</artifactId>
+	<version>1.8.4</version>
+</dependency>
 ```
 
 Et c'est tout, le reste ne change pas !

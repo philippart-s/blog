@@ -35,7 +35,7 @@ On repart aussi avec le [SDK Java](https://javaoperatorsdk.io/){:target="_blank"
 
 > On voit clairement que la partie Springboot n'est pas une priorité de l'équipe projet : 
  - elle date de plusieurs mois
- - est quasiment pas documentée
+ - n'est quasiment pas documentée
  - pas totalement fonctionnelle (pour les tests mais là ça peut venir de moi 😅)
 
 Cela peut s'expliquer, qu'à contrario, la partie [Quarkus](https://github.com/quarkiverse/quarkus-operator-sdk){:target="_blank"} semble plus active (on verra ça dans un prochain article 😉).
@@ -70,6 +70,20 @@ Springboot a beau faire de la magie il faut tout de même déclarer quelques dé
 
 Et c'est tout, le reste ne change pas !
 
+Il est possible de configurer certains éléments avec un `application.yml`, par exemple le nombre de fois où le contrôleur essaie de d'effectuer ses actions en cas d'erreurs : 
+```ỳaml
+javaoperatorsdk:
+  controllers:
+    customservicecontroller:
+      retry:
+        maxAttempts: 3
+```
+Personnellement pour mon test je n'ai pas positionné de configuration particulière, d'autant qu'aucune documentation explique quel type de configuration on peut positionner.
+On peut positionner les _credentials_ pour le client Kubernetes par exemple, mais pour avoir le nom des clefs il faut directement aller voir dans le code ... 
+
+Quand je parlais de priorité : pas de documentation ni de commit depuis des mois.
+Du coup ça me donne une idée, je vais certainement leur proposer de rédiger un peu de doc.
+Je verrai bien si cela intéresse l'équipe de documenter la partie Springboot.
 ### Les adaptations à effectuer dans le code 📝
 
 #### Le point d'entrée principal
@@ -137,7 +151,15 @@ Je ne m'étendrai pas sur la partie création de l'image et déploiement dans Ku
 
 ## Conclusion 🧐
 
-Voilà cet article est beaucoup plus court mais c'était aussi beaucoup plus simple (merci à la magie de l'auto configuration Springboot).
+Cet article est beaucoup plus court, mais c'était aussi beaucoup plus simple (merci à la magie de l'auto configuration Springboot).
+
+Je reste mitigé sur l'apport de Springboot pour un tel projet.
+Le projet ne semble pas très actif (mais a t on besoin de plus ?) et je ne sais pas trop ce que cela va devenir.
+L'autre problématique est que je n'ai pas fait fonctionner la partie tests avec, notamment, l'utilisation de _fabric8_ mais je pense que dans ce cas c'est certainement qu'il faut que je mocke cette partie, j'essaierai de faire ça un peu plus tard.
+
+En résumé, je conseillerai aux fans de Spring de l'utiliser afin de retrouver leur framework préféré.
+Quand aux autre du pur Java ou du Quarkus devrait les combler.
+
 L'ensemble des sources est disponible dans le projet GitHub [springboot-k8s-nginx-operator](https://github.com/philippart-s/springboot-k8s-nginx-operator){:target="_blank"}.
 
 Merci de m'avoir lu et si vous avez vu des coquilles n'hésitez pas à me l'indiquer sur le repository des [sources](https://github.com/philippart-s/springboot-k8s-nginx-operator){:target="_blank"} ou de l'[article](https://github.com/philippart-s/blog){:target="_blank"}.

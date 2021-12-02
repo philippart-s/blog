@@ -15,7 +15,7 @@ tags:
 ![Springboot logo]({{ site.url }}{{ site.baseurl }}/assets/images/springboot-k8s-operator-nginx/springboot-logo.png){: .align-center}
 
 Troisième partie de la série d'articles consacrés à l'écriture d'un opérateur Kubernetes en java.
-Afin de ne pas faire trop de redites je vais passer sur certaines choses, je vous propose donc de lire les premiers articles pour commencer :
+Afin de ne pas faire trop de redites je vais passer sur certaines choses, je vous propose donc, de lire les premiers articles pour commencer :
  - [Créer un opérateur _Hello World_ Kubernetes en pur Java]({{ site.baseurl }}{% post_url 2021-11-09-java-k8s-operator %}) 
  - [Créer un opérateur _Nginx_ Kubernetes en pur Java]({{ site.baseurl }}{% post_url 2021-11-21-java-k8s-operator-nginx %}) 
 
@@ -155,10 +155,11 @@ Cet article est beaucoup plus court, mais c'était aussi beaucoup plus simple (m
 
 Je reste mitigé sur l'apport de Springboot pour un tel projet.
 Le projet ne semble pas très actif (mais a t on besoin de plus ?) et je ne sais pas trop ce que cela va devenir.
-L'autre problématique est que je n'ai pas fait fonctionner la partie tests avec, notamment, l'utilisation de _fabric8_ mais je pense que dans ce cas c'est certainement qu'il faut que je mocke cette partie, j'essaierai de faire ça un peu plus tard.
+L'autre problématique est que je n'ai pas fait fonctionner la partie tests avec, notamment, l'utilisation de _fabric8_.
+Je pense que dans ce cas c'est certainement qu'il faut que je mocke cette partie, j'essaierai de faire ça un peu plus tard.
 
 En résumé, je conseillerai aux fans de Spring de l'utiliser afin de retrouver leur framework préféré.
-Quand aux autre du pur Java ou du Quarkus devrait les combler.
+Quand aux autre, du pur Java ou du Quarkus devrait les combler.
 
 L'ensemble des sources est disponible dans le projet GitHub [springboot-k8s-nginx-operator](https://github.com/philippart-s/springboot-k8s-nginx-operator){:target="_blank"}.
 

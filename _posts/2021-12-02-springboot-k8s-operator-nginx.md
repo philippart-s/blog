@@ -26,7 +26,7 @@ Le nombre de sous projets étant particulièrement important on a vite fait de s
 C'est là où [Springboot](https://spring.io/projects/spring-boot){:target="_blank"} nous aide dans l'utilisation de ces différents projets.
 Mon objectif n'est pas d'expliquer ce qu'est Springboot mais simplement de marier l'auto configuration Spring avec le développement d'un opérateur Kubernetes en Java.
 
-## On prends les mêmes 
+## On prend les mêmes 
 
 Je ne vais donc aborder que les changements entre le code source d'un opérateur pur Java et celui codé avec Springboot.
 Tout d'abord, le code source d'origine : [https://github.com/philippart-s/java-k8s-nginx-operator](https://github.com/philippart-s/java-k8s-nginx-operator){:target="_blank"} (voir l'[article]({{ site.baseurl }}{% post_url 2021-11-21-java-k8s-operator-nginx %}) en rapport pour son explication).
@@ -70,7 +70,7 @@ Springboot a beau faire de la magie il faut tout de même déclarer quelques dé
 
 Et c'est tout, le reste ne change pas !
 
-Il est possible de configurer certains éléments avec un `application.yml`, par exemple le nombre de fois où le contrôleur essaie de d'effectuer ses actions en cas d'erreurs : 
+Il est possible de configurer certains éléments avec un `application.yml`, par exemple le nombre de fois où le contrôleur essaie d'effectuer ses actions en cas d'erreurs : 
 ```ỳaml
 javaoperatorsdk:
   controllers:
@@ -101,7 +101,7 @@ public class NginxOperatorApplication {
 
 #### Le controller 🤖
 
-Là c'est encore plus simple, on prends exactement la même classe que l'on annote comme étant un composant (`@Component`) Springboot:
+Là c'est encore plus simple, on prend exactement la même classe que l'on annote comme étant un composant (`@Component`) Springboot:
 ```java
 @Controller
 @Component
@@ -159,7 +159,7 @@ L'autre problématique est que je n'ai pas fait fonctionner la partie tests avec
 Je pense que dans ce cas c'est certainement qu'il faut que je mocke cette partie, j'essaierai de faire ça un peu plus tard.
 
 En résumé, je conseillerai aux fans de Spring de l'utiliser afin de retrouver leur framework préféré.
-Quand aux autre, du pur Java ou du Quarkus devrait les combler.
+Quant aux autres, du pur Java ou du Quarkus devrait les combler.
 
 L'ensemble des sources est disponible dans le projet GitHub [springboot-k8s-nginx-operator](https://github.com/philippart-s/springboot-k8s-nginx-operator){:target="_blank"}.
 

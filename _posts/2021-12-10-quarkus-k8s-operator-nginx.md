@@ -46,9 +46,64 @@ A noter que toutes les manipulations Kubernetes se font via la lib fourni par  [
 
 ## Quarkus a t il tué le game ? 💀
 
+La simplicité avec laquelle l'extension Quarkus permet de créer et initialiser les classes nécessaires pour développer les opérateurs est presque indécente !
+
+### Initialisation du projet 🛠️
+
+Rien de plus simple, les équipes de Quarkus ont tout prévu: se connecter au site [https://code.quarkus.io](https://code.quarkus.io){:target="_blank"} puis choisir l'extension _quarkus-operator-sdk_.
+
+Avec ça on a un beau projet tout neuf avec les bonnes dépendances dans notre _pom.xml_ prêt à faire deu !
+
+Extrait du _pom.xml_ : 
+```xml
+<dependency>
+  <groupId>io.quarkiverse.operatorsdk</groupId>
+  <artifactId>quarkus-operator-sdk</artifactId>
+  <version>2.0.1</version>
+</dependency>
+ ```
+### Développement de l'opérateur 📝
+
+Eh bien c'est certainement là que Quarkus tue le game ... 
+On ne se concentre que sur les éléments de l'opérateur en lui même:
+
+ - le contrôleur
+ - la définition de la custom resource
+
+Et c'est tout, l'extension se débrouille pour enregistrer notre opérateur et l'injection de dépendances ([CDI](https://docs.jboss.org/cdi/spec/2.0/cdi-spec.html){:target="_blank"}) fait le reste.
+
+> Bien sûr il est possible d'ajouter des configurations propres à Quarkus ou les différents éléments utilisés pour générer les images par exemple.
+Pour cela c'est dans le fichier _application.properties_ que tout se passe.
+
+La custom resource ne change pas par rapport aux autre articles :
+```java
+@Group("fr.wilda")
+@Version("v1")
+@ShortNames("ngi")
+public class NginxInstallerResource extends CustomResource<NginxInstallerSpec, Void> implements Namespaced {
+    
+}
+```
+
+```java
+ublic class NginxInstallerSpec {
+
+    private Integer replicas;
+
+    public Integer getReplicas() {
+        return replicas;
+    }
+
+    public void setReplicas(Integer replicas) {
+        this.replicas = replicas;
+    }
+}
+```
+
 ## Conclusion 🧐
 
 L'ensemble des sources est disponible dans le projet GitHub [quarkus-k8s-nginx-operator](https://github.com/philippart-s/quarkus-k8s-nginx-operator){:target="_blank"}.
 
 Merci de m'avoir lu et si vous avez vu des coquilles n'hésitez pas à me l'indiquer sur le repository des [sources](https://github.com/philippart-s/quarkus-k8s-nginx-operator){:target="_blank"} ou de l'[article](https://github.com/philippart-s/blog){:target="_blank"}.
 
+ 

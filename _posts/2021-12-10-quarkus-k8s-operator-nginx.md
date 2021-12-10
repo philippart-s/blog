@@ -26,19 +26,19 @@ Les articles en question :
 
 > Notez bien : 
 > Je n'utilise pas (encore) Quarkus et ne je connais donc pas très bien son fonctionnement.
-> L'objectif, ici, est de faire le tour codes différentes options que permet le [SDK Java](https://javaoperatorsdk.io/){:target="_blank"} pour créer un opérateur Kubernetes.
+> L'objectif, ici, est de faire le tour des différentes options que permet le [SDK Java](https://javaoperatorsdk.io/){:target="_blank"} pour créer un opérateur Kubernetes.
 
 
 ## Rappel des épisodes précédents 💬
 
-Si vous avez bien lu les articles précédents vous avez pu vous rendre compte que l'on va vers de plus en plus de simplicité pour écrire nos opérateurs.
+Si vous avez bien lu les articles précédents, vous avez pu vous rendre compte que l'on va vers de plus en plus de simplicité pour écrire nos opérateurs.
 L'idée était de commencer avec du pur Java pour comprendre ce qui se tramait avant d'utiliser des aides comme Springboot ou Quarkus.
 
-Il n'empêche que quelque soit le mode utilisé c'est toujours la même histoire : 
+Il n'empêche que, quelque soit le mode utilisé, c'est toujours la même histoire : 
  - on définit la **C**ustom **R**esource **D**efinition (CRD) sous forme de POJOs 
- - puis on code notre contrôleur dans notre opérateur
+ - puis on code notre contrôleur de notre opérateur
  - on lance notre opérateur en CLI ou via une image (exécutée dans un POD)
- - on crée une **C**ustom **R**esource se basant sur notre CRD 
+ - on crée une **C**ustom **R**esource (CR) se basant sur notre CRD 
 
 ... et notre opérateur fait son boulot !
 
@@ -72,10 +72,10 @@ On ne se concentre que sur les éléments de l'opérateur en lui-même:
 
 Et c'est tout, l'extension se débrouille pour enregistrer notre opérateur et l'injection de dépendances ([CDI](https://docs.jboss.org/cdi/spec/2.0/cdi-spec.html){:target="_blank"}) fait le reste.
 
->Bien sûr il est possible d'ajouter des configurations propres à Quarkus ou les différents éléments utilisés pour générer les images par exemple.
+>Bien sûr, il est possible d'ajouter des configurations propres à Quarkus ou les différents éléments utilisés pour générer les images par exemple.
 >Pour cela c'est dans le fichier _application.properties_ que tout se passe.
 
-La custom resource ne change pas par rapport aux autre articles :
+La custom resource ne change pas par rapport aux autres articles :
 ```java
 @Group("fr.wilda")
 @Version("v1")
@@ -186,7 +186,7 @@ public class NginxInstallerController implements ResourceController<NginxInstall
     }
 }
 ```
-Comme je l'ai indiqué CDI se charge de nous créer l'instance de la classe fabric8 permettant la manipulation des ressources et commandes Kubernetes.
+Comme je l'ai indiqué, CDI se charge de nous créer l'instance de la classe fabric8 permettant la manipulation des ressources et commandes Kubernetes.
 La vie est bien faite quand même !
 
 ### Exécution de l'opérateur 🤖
@@ -222,7 +222,7 @@ __  ____  __  _____   ___  __ ____  ______
 2021-12-10 11:19:28,515 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
 2021-12-10 11:19:28,515 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, kubernetes, kubernetes-client, openshift-client, operator-sdk, smallrye-context-propagation, smallrye-health, vertx] 
 ```
-Et là on voit bien comment le SDK couplé à l'extension Quarkus nous mâche le travail pour enregistrer les différents éléments auprès de Kubernetes (ils m'indiquent aussi que j'ai fait des trucs pas très sécure 😅).
+Et là on voit bien comment le SDK, couplé à l'extension Quarkus, nous mâche le travail pour enregistrer les différents éléments auprès de Kubernetes (ils m'indiquent aussi que j'ai fait des trucs pas très sécure 😅).
 
 Puis on peut jouer avec nos créations / mises à jour ou suppressions de _custom resource_ : `kubectl apply -f ./src/test/resources/test_nginx.yml -n test-nginx-operator` et `kubectl delete ngi/nginx-installer  -n test-nginx-operator`.
 
@@ -236,7 +236,7 @@ Puis on peut jouer avec nos créations / mises à jour ou suppressions de _custo
 
 #### Dans Kubernetes 🐳
 
-Là encore merci Quarkus puisque la fabrication de mon image se résume par la commande : `mvn clean package -Dquarkus.container-image.build=true`.
+Là encore, merci Quarkus puisque la fabrication de mon image se résume par la commande : `mvn clean package -Dquarkus.container-image.build=true`.
 Ensuite il suffit d'appliquer simplement le _deployment.yml_ pour déployer notre opérateur : 
 ```yaml
 apiVersion: v1
@@ -278,7 +278,7 @@ Clairement on sent que l'extension Quarkus est plus suivie et a plus d'activité
 Je n'ai pas été dans les méandres de toutes les configurations qu'offrent Quarkus et l'extension.
 Elles sont nombreuses et permettent vraiment d'aller plus loin sur ce qui est fait en automatique par le SDK (par exemple au niveau des CRD ou encore de l'image en elle-même) et je vous laisse aller voir les documentations qui sont plutôt complètes !
 
-Pour ma part cela m'a vraiment donné envi d'aller plus loin et de suivre les évolutions de ce projet avec une v2 qui s'annonce très prometteuse !
+Pour ma part, cela m'a vraiment donné envie d'aller plus loin et de suivre les évolutions de ce projet avec une v2 qui s'annonce très prometteuse !
 
 Ma série d'articles sur comment écrire un opérateur en Java est terminée.
 Merci d'avoir pris le temps de me lire et peut être que de nouveaux articles verront le jour avec la v2 du SDK ... qui sait !

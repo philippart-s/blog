@@ -1,0 +1,74 @@
+---
+title: "Créer des cheat sheets avec GitLab (ou GitHub)"
+classes: wide
+excerpt: "Ou comment utiliser les issues pour faire autre chose que des bugs ..."
+categories:
+  - Articles
+  - Documentation
+  
+tags:
+  - GitLab
+  - GitHub
+
+---
+
+A force de trainer avec des gens inspirants on finit par faire des trucs que l'on n'aurait pas forcément imaginé.
+C'est mon cas avec [Philippe Charrière](https://k33g_org.gitlab.io/){:target="_blank"}, à force de le voir utiliser GitLab de pleins de façon autre qu'un portail Git ça a déteins sur moi et je me suis mis dans la tête de gérer des cheat sheets avec GitLab ou GitHub (je reviendrai plus tard sur le pourquoi j'ai choisi plus l'un que l'autre).
+
+## Mais c'est quoi cette histoire de cheat sheet ? :nerd_face:
+En dehors du fait que c'est imprononçable (en bon français antisèche) le besoin est assez simple.
+De part mon métier et mon grand âge je suis en quelque sorte un _full stack_ mais un peu particulier puisque j'interviens aussi bien sur des problématiques de développement (angular, java, groovy, ...) mais aussi ops (kubernetes, docker, ...).
+Au final beaucoup de commandes, de petits trucs et astuces à mémoriser et connaître.
+En plus, comme je suis un fashion victime geek, je ne peux pas m'empêcher d'utiliser des CLI voir de me rajouter des petits outils à droite à gauche (oh my zsh par exemple).
+
+De plus, entre le pro et le perso noter tout ça ou le bookmarker fait que j'ai plusieurs référentiels (one note, evernote, bookmark de navigateur, pocket, ...) et que cela devient compliqué de s'y retrouver 😅.
+Sans parler que certains de ces outils sont loin de m'avoir convaincus sur leur facilité ou rapidité d'utilisation.
+
+Ma première idée a été de faire des cheat sheets au format [Markdown](https://fr.wikipedia.org/wiki/Markdown){:target="_blank"} ou [Asciidoctor](https://asciidoctor.org/){:target="_blank"}.
+Ca marche mais je ne trouvais pas assez pratique pour la recherche, le classement, l'accès ...
+
+## Et les issues alors ? :bulb:
+
+Et c'est là que le fait de côtoyer Philippe m'a influencé :laughing:.
+Dernièrement il a eu l'idée de gérer une liste de recettes (culinaires) sous forme d'issues dans GitLab et du coup je me suis dit mais au final c'est ce que je veux !
+
+ 1. Un titre où on peut mettre des emojis (primordial !)
+ 2. Une saisie markdown ou asciidoctor pour sa simplicité de saisie et le faite de pouvoir insérer facilement du code
+ 3. Une classification aisée avec une notion de tags (en fait des labels dans les issues)
+ 4. Une recherche full text
+ 5. Une discussion où je peux rajouter des éléments périphériques
+ 6. Accessible rapidement de n'importe où
+ 7. Potentiellement partageables à plusieurs en lecture ou lecture / écriture
+
+Par la suite on verra que le choix entre GitLab et GitHub m'a permis de rajouter une ou deux fonctionnalités fort pratique !
+
+## Implémentation :memo:
+
+Passons à la mise en place, au final assez simple.
+J'ai deux regroupements possibles : 
+ - par labels pour les regroupements par technos : Docker, Maven, Kubernetes, ...
+ - un emoji pour le type : commande terminal (:computer: ), packagers (:package:), ...
+
+Voici ce que cela donne pour la vue liste : 
+
+Voici un exemple d'un tip d'une commande linux utilisée dans un conteneur :
+
+## Mais pourquoi GitLab au final ?
+
+Honnêtement, à l'origine, je suis parti sur GitHub.
+Par habitude car je ne suis pas un utilisateur GitLab mais l'utilisation récente des issues GitLab (souvenez-vous les recettes) m'a fait me souvenir qu'une fonctionnalité que j'ai découverte sur les issues serait très pratique dans mon cas pour éviter les doublons : la suggestion des issues déjà existantes lorsque l'on saisi une nouvelle issue.
+
+image
+
+Du coup c'est ce qui m'a fait choisir GitLab plutôt que GitHub, en dehors du fait aussi de vouloir un peu découvrir ce que l'on peut faire sur cette petite partie du produit :wink:.
+
+En utilisant GitLab j'ai pu, du coup découvrir aussi que je pouvait trier mes issues par titre, ce qui avec le fait qu'elles commencent par une liste finie d'emojis me donne un regroupement par types en plus de celui par catégories :wink:.
+
+## Conclusion 🧐
+
+Je verrai si à l'utilisation mon idée et viable et pratique.
+Il me reste encore quelques idées comme : partager le repository avec d'autres, utiliser les templates, utiliser les boards pour avoir un autre regroupement, pourquoi pas un peu d'automatisation sur la création, ...
+
+Merci de m'avoir lu et si vous avez vu des coquilles n'hésitez pas à me l'indiquer sur le repository des [sources](https://github.com/philippart-s/quarkus-k8s-nginx-operator){:target="_blank"} ou de l'[article](https://github.com/philippart-s/blog){:target="_blank"}.
+
+ 

@@ -44,7 +44,7 @@ Il n'empêche que, quelque soit le mode utilisé, c'est toujours la même histoi
 
 A noter que toutes les manipulations Kubernetes se font via la lib fournie par  [fabric8](https://github.com/fabric8io/kubernetes-client/){:target="_blank"} 
 
-## Quarkus a t il tué le game ? 💀
+## Quarkus a-t-il tué le game ? 💀
 
 La simplicité avec laquelle l'extension Quarkus permet de créer et initialiser les classes nécessaires pour développer les opérateurs est presque indécente !
 

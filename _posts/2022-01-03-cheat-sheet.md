@@ -22,7 +22,7 @@ De part mon métier et mon grand âge je suis en quelque sorte un _full stack_ m
 Au final beaucoup de commandes, de petits trucs et astuces à mémoriser et connaître.
 En plus, comme je suis un fashion victime geek, je ne peux pas m'empêcher d'utiliser des CLI, voir de me rajouter des petits outils à droite à gauche ([oh my zsh](https://ohmyz.sh/){:target="_blank"} par exemple).
 
-De plus, entre le pro et le perso noter tout ça ou le bookmarker fait que j'ai plusieurs référentiels (one note, evernote, bookmark de navigateur, pocket, ...) et que cela devient compliqué de s'y retrouver :sweat_smile:.
+De plus, entre le pro et le perso, noter tout ça ou le bookmarker fait que j'ai plusieurs référentiels (one note, evernote, bookmark de navigateur, pocket, ...) et que cela devient compliqué de s'y retrouver :sweat_smile:.
 Sans parler que certains de ces outils sont loin de m'avoir convaincu sur leur facilité ou rapidité d'utilisation.
 
 Ma première idée a été de faire des cheat sheets au format [Markdown](https://fr.wikipedia.org/wiki/Markdown){:target="_blank"} ou [Asciidoctor](https://asciidoctor.org/){:target="_blank"}.

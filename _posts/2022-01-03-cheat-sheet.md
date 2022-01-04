@@ -74,7 +74,7 @@ Comme les titres commencent par une liste finie d'emojis cela me donne un regrou
 >
 >A noter que lors de la rédaction de l'article je me suis rendu compte qu'il y a un bug / fonctionnalité en cours car au final les emojis au format markdown (`:wink:` par exemple) sont rendus dans l'issue mais pas dans la liste d'issues.
 Du coup pour que le tri fonctionne il faut accepter que la vue liste affiche les emojis au format texte : 
-![list emojis]({{ site.url }}{{ site.baseurl }}/assets/images/cheat-sheet/lit-emojis.png){: .align-center}
+![list emojis]({{ site.url }}{{ site.baseurl }}/assets/images/cheat-sheet/list-emojis.png){: .align-center}
 >
 >Comme cela ne plaît pas j'ai choisi de me passer du tri par emojis en attendant la correction / implémentation de l'issue et d'utiliser pour le titre de mes issues directement l'image de l'emoji (par exemple en provenance de [emojipedia](https://emojipedia.org/){:target="_blank"}).
 >

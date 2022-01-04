@@ -12,7 +12,7 @@ tags:
 
 ---
 
-A force de trainer avec des gens inspirants on finit par faire des trucs que l'on n'aurait pas forcément imaginé.
+A force de trainer avec des gens inspirants, on finit par faire des trucs que l'on n'aurait pas forcément imaginés.
 C'est mon cas avec [Philippe Charrière](https://k33g_org.gitlab.io/){:target="_blank"}, à force de le voir utiliser GitLab autrement qu'un portail Git ça a déteint sur moi ! 
 Je me suis mis dans la tête de gérer des _cheat sheets_ avec GitLab ou GitHub (je reviendrai plus tard sur le pourquoi j'ai choisi plus l'un que l'autre).
 
@@ -22,7 +22,7 @@ De part mon métier et mon grand âge je suis en quelque sorte un _full stack_ m
 Au final beaucoup de commandes, de petits trucs et astuces à mémoriser et connaître.
 En plus, comme je suis un fashion victime geek, je ne peux pas m'empêcher d'utiliser des CLI, voir de me rajouter des petits outils à droite à gauche ([oh my zsh](https://ohmyz.sh/){:target="_blank"} par exemple).
 
-De plus, entre le pro et le perso noter tout ça ou le bookmarker fait que j'ai plusieurs référentiels (one note, evernote, bookmark de navigateur, pocket, ...) et que cela devient compliqué de s'y retrouver :sweat_smile:.
+De plus, entre le pro et le perso, noter tout ça ou le bookmarker fait que j'ai plusieurs référentiels (one note, evernote, bookmark de navigateur, pocket, ...) et que cela devient compliqué de s'y retrouver :sweat_smile:.
 Sans parler que certains de ces outils sont loin de m'avoir convaincu sur leur facilité ou rapidité d'utilisation.
 
 Ma première idée a été de faire des cheat sheets au format [Markdown](https://fr.wikipedia.org/wiki/Markdown){:target="_blank"} ou [Asciidoctor](https://asciidoctor.org/){:target="_blank"}.
@@ -31,7 +31,7 @@ Ca marche mais je trouvais que ce n'était pas assez pratique pour la recherche,
 ## Et les issues alors ? :bulb:
 
 Et c'est là que le fait de côtoyer Philippe m'a influencé :laughing:.
-Dernièrement il a eu l'idée de gérer une liste de recettes (culinaires) sous forme d'issues dans GitLab et du coup je me suis dit mais au final c'est ce que je veux !
+Dernièrement il a eu l'idée de gérer une liste de recettes (culinaires) sous forme d'issues dans GitLab et du coup je me suis dit : mais au final c'est ce que je veux !
 
  1. Un titre où on peut mettre des emojis (primordial !)
  2. Une saisie markdown ou asciidoctor pour sa simplicité de saisie et le fait de pouvoir insérer facilement du code
@@ -61,7 +61,7 @@ Voici un exemple d'un tip d'une commande linux utilisée dans un conteneur :
 ## Mais pourquoi GitLab au final ? :mag_right:
 
 Honnêtement, à l'origine, je suis parti sur GitHub.
-Par habitude, car je ne suis pas un utilisateur GitLab mais l'utilisation récente des issues GitLab (souvenez-vous les recettes) m'a fait me souvenir qu'une fonctionnalité que j'ai découverte sur les issues serait très pratique dans mon cas pour éviter les doublons : la suggestion des issues déjà existantes lorsque l'on saisi une nouvelle issue.
+Par habitude, car je ne suis pas un utilisateur GitLab mais l'utilisation récente des issues GitLab (souvenez-vous les recettes) m'a fait me souvenir qu'une fonctionnalité que j'ai découverte sur les issues serait très pratique dans mon cas pour éviter les doublons : la suggestion des issues déjà existantes lorsque l'on saisit une nouvelle issue.
 
 ![new issue]({{ site.url }}{{ site.baseurl }}/assets/images/cheat-sheet/new-issue.png){: .align-center}
 
@@ -72,7 +72,7 @@ Comme les titres commencent par une liste finie d'emojis cela me donne un regrou
 
 ## Conclusion 🧐
 
-Je verrai si à l'utilisation mon idée et viable et pratique.
+Je verrai si à l'utilisation mon idée est viable et pratique.
 Il me reste encore quelques idées comme : partager le repository avec d'autres, utiliser les templates, utiliser les boards pour avoir un autre regroupement, pourquoi pas un peu d'automatisation sur la création, ...
 
 Merci de m'avoir lu et si vous avez vu des coquilles n'hésitez pas à me l'indiquer sur l'[article](https://github.com/philippart-s/blog){:target="_blank"}. 

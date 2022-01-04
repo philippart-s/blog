@@ -22,7 +22,7 @@ J'y abirde dans le détails des éléments que je n'expliquerai pas danscelui-ci
 Les articles en question :
  - [Créer un opérateur _Hello World_ Kubernetes en pur Java]({{ site.baseurl }}{% post_url 2021-11-09-java-k8s-operator %}) 
  - [Créer un opérateur _Nginx_ Kubernetes en pur Java]({{ site.baseurl }}{% post_url 2021-11-21-java-k8s-operator-nginx %}) 
- - [Créer un opérateur _Nginx_ Kubernetes avec Springboot]({{ site.baseurl }}{% post_url 2021-12-10-springboot-k8s-operator-nginx %}) 
+ - [Créer un opérateur _Nginx_ Kubernetes avec Springboot]({{ site.baseurl }}{% post_url 2021-12-02-springboot-k8s-operator-nginx %}) 
 
 > Notez bien : 
 > Je n'utilise pas (encore) Quarkus et ne connais donc pas très bien son fonctionnement.

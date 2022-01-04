@@ -12,7 +12,7 @@ tags:
 
 ---
 
-A force de trainer avec des gens inspirants on finit par faire des trucs que l'on n'aurait pas forcément imaginé.
+A force de trainer avec des gens inspirants, on finit par faire des trucs que l'on n'aurait pas forcément imaginés.
 C'est mon cas avec [Philippe Charrière](https://k33g_org.gitlab.io/){:target="_blank"}, à force de le voir utiliser GitLab autrement qu'un portail Git ça a déteint sur moi ! 
 Je me suis mis dans la tête de gérer des _cheat sheets_ avec GitLab ou GitHub (je reviendrai plus tard sur le pourquoi j'ai choisi plus l'un que l'autre).
 

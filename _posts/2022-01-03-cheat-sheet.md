@@ -72,7 +72,7 @@ Comme les titres commencent par une liste finie d'emojis cela me donne un regrou
 
 ## Conclusion 🧐
 
-Je verrai si à l'utilisation mon idée et viable et pratique.
+Je verrai si à l'utilisation mon idée est viable et pratique.
 Il me reste encore quelques idées comme : partager le repository avec d'autres, utiliser les templates, utiliser les boards pour avoir un autre regroupement, pourquoi pas un peu d'automatisation sur la création, ...
 
 Merci de m'avoir lu et si vous avez vu des coquilles n'hésitez pas à me l'indiquer sur l'[article](https://github.com/philippart-s/blog){:target="_blank"}. 

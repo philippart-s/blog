@@ -61,7 +61,7 @@ Voici un exemple d'un tip d'une commande linux utilisée dans un conteneur :
 ## Mais pourquoi GitLab au final ? :mag_right:
 
 Honnêtement, à l'origine, je suis parti sur GitHub.
-Par habitude, car je ne suis pas un utilisateur GitLab mais l'utilisation récente des issues GitLab (souvenez-vous les recettes) m'a fait me souvenir qu'une fonctionnalité que j'ai découverte sur les issues serait très pratique dans mon cas pour éviter les doublons : la suggestion des issues déjà existantes lorsque l'on saisi une nouvelle issue.
+Par habitude, car je ne suis pas un utilisateur GitLab mais l'utilisation récente des issues GitLab (souvenez-vous les recettes) m'a fait me souvenir qu'une fonctionnalité que j'ai découverte sur les issues serait très pratique dans mon cas pour éviter les doublons : la suggestion des issues déjà existantes lorsque l'on saisit une nouvelle issue.
 
 ![new issue]({{ site.url }}{{ site.baseurl }}/assets/images/cheat-sheet/new-issue.png){: .align-center}
 

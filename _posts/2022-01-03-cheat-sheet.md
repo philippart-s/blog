@@ -31,7 +31,7 @@ Ca marche mais je trouvais que ce n'était pas assez pratique pour la recherche,
 ## Et les issues alors ? :bulb:
 
 Et c'est là que le fait de côtoyer Philippe m'a influencé :laughing:.
-Dernièrement il a eu l'idée de gérer une liste de recettes (culinaires) sous forme d'issues dans GitLab et du coup je me suis dit mais au final c'est ce que je veux !
+Dernièrement il a eu l'idée de gérer une liste de recettes (culinaires) sous forme d'issues dans GitLab et du coup je me suis dit : mais au final c'est ce que je veux !
 
  1. Un titre où on peut mettre des emojis (primordial !)
  2. Une saisie markdown ou asciidoctor pour sa simplicité de saisie et le fait de pouvoir insérer facilement du code

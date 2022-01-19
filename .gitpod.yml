@@ -1,11 +1,1 @@
-tasks:
-  - name: Init
-    before: printf "\n[settings]\napi_key = $WAKATIME_API_KEY\n" > ~/.wakatime.cfg
-    init: bundle install
-      
-vscode:
-  extensions:
-    - streetsidesoftware.code-spell-checker-french
-    - streetsidesoftware.code-spell-checker
-    - github.vscode-pull-request-github
-    - eamodio.gitlens
+image: wilda/gitpod 

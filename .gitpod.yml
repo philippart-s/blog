@@ -1,1 +1,6 @@
 image: wilda/gitpod-jekyll
+vscode:
+  extensions:
+    - streetsidesoftware.code-spell-checker
+    - streetsidesoftware.code-spell-checker-french
+    - eamodio.gitlens

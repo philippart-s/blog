@@ -1,4 +1,9 @@
 image: wilda/gitpod-jekyll
+
+tasks:
+  - name: Init
+    init: bundle install
+
 vscode:
   extensions:
     - streetsidesoftware.code-spell-checker

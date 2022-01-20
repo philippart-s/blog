@@ -10,6 +10,8 @@ tags:
   - Java
 
 ---
+> 💡 Mise à jour du 20 janvier : suite à la release 2.x du SDJ j'ai mis à jour l'article et le code 😉 
+
 ## Mais c'est quoi un opérateur ?
 
 Lorsque l'on me parle d'un opérateur Kubernetes moi je pense à ça :
@@ -75,7 +77,7 @@ Rien de plus simple on ajoute 2 dépendances :
 <dependency>
   <groupId>io.javaoperatorsdk</groupId>
   <artifactId>operator-framework</artifactId>
-  <version>1.9.11</version>
+  <version>2.0.2</version>
 </dependency>
 
 <!-- Dépendance pour générer les CRD 😎 -->

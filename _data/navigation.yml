@@ -1,7 +1,9 @@
 main:
   - title: "Posts"
     url: /posts/
-  - title: "Categories"
+  - title: "Conférences"
+    url: https://noti.st/philippart-s
+  - title: "Catégories"
     url: /categories/
   - title: "Tags"
     url: /tags/

@@ -10,7 +10,7 @@ tags:
   - Java
 
 ---
-> 💡 Mise à jour du 20 janvier : suite à la release 2.x du SDJ j'ai mis à jour l'article et le code 😉 
+> 💡 Mise à jour : suite à la release 2.x du SDK j'ai mis à jour l'article et le code 😉 
 
 ## Mais c'est quoi un opérateur ?
 
@@ -24,7 +24,7 @@ ou à ça :
 
 Je ne vais pas me lancer sur l'explication de ce qu'est un [opérateur Kubernetes](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/){:target="_blank"} mais en gros c'est un contrôleur permettant d'étendre les API de Kubernetes afin de gérer de manière plus efficace les applications déployées (installation, actions d'administration, ...).
 
-Pour définir un opérateur, il faut définir une _custom resource definition_ puis créer la _custom resouce_ associée. C'est cette création / modification qui va permettre, notamment, de déclencher des actions (utiles pour automatiser des installations par exemple).
+Pour définir un opérateur, il faut définir une _custom resource definition_ puis créer la _custom resource_ associée. C'est cette création / modification qui va permettre, notamment, de déclencher des actions (utiles pour automatiser des installations par exemple).
 
 Ensuite, l'opérateur va scruter en permanence la ressource pour agir en cas de modification.
 Il est aussi possible d'accéder à ces _custom resources_ via la CLI _kubectl_ puisque ce n'est qu'une extension de l'API de base.

@@ -84,14 +84,14 @@ Rien de plus simple on ajoute 2 dépendances :
 <dependency>
   <groupId>io.fabric8</groupId>
   <artifactId>crd-generator-apt</artifactId>
-  <version>5.9.0</version>
+  <version>5.11.2</version>
   <scope>provided</scope>
 </dependency>
 ```
 
 ### Le squelette du projet 🦴
 
-C'est assez simple et la [documentation](https://github.com/java-operator-sdk/java-operator-sdk#Usage){:target="_blank"} est plutôt bien faite (voir la section samples et particulièrement le projet [pure-java](https://github.com/java-operator-sdk/java-operator-sdk/tree/main/smoke-test-samples/pure-java){:target="_blank"}).
+C'est assez simple et la [documentation](https://javaoperatorsdk.io/docs/getting-started){:target="_blank"} est plutôt bien faite (voir la section _How to use samples_ et particulièrement le projet [pure-java](https://github.com/java-operator-sdk/java-operator-sdk/tree/main/smoke-test-samples/pure-java){:target="_blank"}).
 
 #### Définition de la _custom resource definition_ 📝
 
@@ -159,45 +159,45 @@ spec:
 
 Plutôt sympa 😉.
 
-### Définition du contrôleur 🔄
+### Définition du reconciler 🔄
 
 Là encore ce n'est pas très compliqué, on peut coder des actions sur pas mal d'évènements : création, suppression ou modification de la _custom resource_ (CR).
 Dans notre cas on veut juste loger _Hello world \<valeur du champ name de la CR\>_ :
 ```java
-@Controller
-public class HelloWorldController implements ResourceController<HelloWorldCustomResource> {
+@ControllerConfiguration
+public class HelloWorldReconciler implements Reconciler<HelloWorldCustomResource> {
 
   public static final String KIND = "HelloWorldCustomResource";
 
-  public HelloWorldController() {
+  public HelloWorldReconciler() {
   }
 
   @Override
-  public DeleteControl deleteResource(HelloWorldCustomResource resource, Context<HelloWorldCustomResource> context) {
+  public DeleteControl cleanup(HelloWorldCustomResource resource, Context context) {
     System.out.println(String.format("Goodbye %s 😢", resource.getSpec().getName()));
-    return DeleteControl.DEFAULT_DELETE;
+    return DeleteControl.defaultDelete();
   }
 
   @Override
-  public UpdateControl<HelloWorldCustomResource> createOrUpdateResource(
-    HelloWorldCustomResource resource, Context<HelloWorldCustomResource> context) {
+  public UpdateControl<HelloWorldCustomResource> reconcile(
+    HelloWorldCustomResource resource, Context context) {
     System.out.println(String.format("Hello %s 🎉🎉 !!", resource.getSpec().getName()));
 
-    return UpdateControl.updateCustomResource(resource);
+    return UpdateControl.updateResource(resource);
   }
 }
 ```
 
-A ce stade il ne nous reste plus qu'à _enregistrer_ notre controller au sein de Kubernetes.
+A ce stade il ne nous reste plus qu'à _enregistrer_ notre reconciler au sein de Kubernetes.
 
 ```java
 public class HelloWorldRunner {
     public static void main(String[] args) {
       Operator operator = new Operator(DefaultConfigurationService.instance());
-      operator.register(new HelloWorldController());
+      operator.register(new HelloWorldReconciler());
 
       System.out.println("🚀 Starting HelloWorld operator !!! 🚀");
-      operator.start();      
+      operator.start();
     }
   }
 ```
@@ -227,7 +227,7 @@ mvn exec:java -Dexec.mainClass=fr.wilda.HelloWorldRunner
 🚀 Starting HelloWorld operator !!! 🚀
 ```
 
-⚠️ **Laisser tourner le main pour avoir les différents messages du contrôleur !** ⚠️
+⚠️ **Laisser tourner le main pour avoir les différents messages du reconciler !** ⚠️
 
 Et il ne nous reste plus qu'à créer une CR pour voir si notre bel opérateur se déclenche !
 

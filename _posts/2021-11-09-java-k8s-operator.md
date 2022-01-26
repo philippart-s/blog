@@ -10,6 +10,8 @@ tags:
   - Java
 
 ---
+> 💡 Mise à jour : suite à la release 2.x du SDK j'ai mis à jour l'article et le code 😉 
+
 ## Mais c'est quoi un opérateur ?
 
 Lorsque l'on me parle d'un opérateur Kubernetes moi je pense à ça :
@@ -22,7 +24,7 @@ ou à ça :
 
 Je ne vais pas me lancer sur l'explication de ce qu'est un [opérateur Kubernetes](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/){:target="_blank"} mais en gros c'est un contrôleur permettant d'étendre les API de Kubernetes afin de gérer de manière plus efficace les applications déployées (installation, actions d'administration, ...).
 
-Pour définir un opérateur, il faut définir une _custom resource definition_ puis créer la _custom resouce_ associée. C'est cette création / modification qui va permettre, notamment, de déclencher des actions (utiles pour automatiser des installations par exemple).
+Pour définir un opérateur, il faut définir une _custom resource definition_ puis créer la _custom resource_ associée. C'est cette création / modification qui va permettre, notamment, de déclencher des actions (utiles pour automatiser des installations par exemple).
 
 Ensuite, l'opérateur va scruter en permanence la ressource pour agir en cas de modification.
 Il est aussi possible d'accéder à ces _custom resources_ via la CLI _kubectl_ puisque ce n'est qu'une extension de l'API de base.
@@ -75,21 +77,21 @@ Rien de plus simple on ajoute 2 dépendances :
 <dependency>
   <groupId>io.javaoperatorsdk</groupId>
   <artifactId>operator-framework</artifactId>
-  <version>1.9.11</version>
+  <version>2.0.2</version>
 </dependency>
 
 <!-- Dépendance pour générer les CRD 😎 -->
 <dependency>
   <groupId>io.fabric8</groupId>
   <artifactId>crd-generator-apt</artifactId>
-  <version>5.9.0</version>
+  <version>5.11.2</version>
   <scope>provided</scope>
 </dependency>
 ```
 
 ### Le squelette du projet 🦴
 
-C'est assez simple et la [documentation](https://github.com/java-operator-sdk/java-operator-sdk#Usage){:target="_blank"} est plutôt bien faite (voir la section samples et particulièrement le projet [pure-java](https://github.com/java-operator-sdk/java-operator-sdk/tree/main/smoke-test-samples/pure-java){:target="_blank"}).
+C'est assez simple et la [documentation](https://javaoperatorsdk.io/docs/getting-started){:target="_blank"} est plutôt bien faite (voir la section _How to use samples_ et particulièrement le projet [pure-java](https://github.com/java-operator-sdk/java-operator-sdk/tree/main/smoke-test-samples/pure-java){:target="_blank"}).
 
 #### Définition de la _custom resource definition_ 📝
 
@@ -157,45 +159,45 @@ spec:
 
 Plutôt sympa 😉.
 
-### Définition du contrôleur 🔄
+### Définition du reconciler 🔄
 
 Là encore ce n'est pas très compliqué, on peut coder des actions sur pas mal d'évènements : création, suppression ou modification de la _custom resource_ (CR).
 Dans notre cas on veut juste loger _Hello world \<valeur du champ name de la CR\>_ :
 ```java
-@Controller
-public class HelloWorldController implements ResourceController<HelloWorldCustomResource> {
+@ControllerConfiguration
+public class HelloWorldReconciler implements Reconciler<HelloWorldCustomResource> {
 
   public static final String KIND = "HelloWorldCustomResource";
 
-  public HelloWorldController() {
+  public HelloWorldReconciler() {
   }
 
   @Override
-  public DeleteControl deleteResource(HelloWorldCustomResource resource, Context<HelloWorldCustomResource> context) {
+  public DeleteControl cleanup(HelloWorldCustomResource resource, Context context) {
     System.out.println(String.format("Goodbye %s 😢", resource.getSpec().getName()));
-    return DeleteControl.DEFAULT_DELETE;
+    return DeleteControl.defaultDelete();
   }
 
   @Override
-  public UpdateControl<HelloWorldCustomResource> createOrUpdateResource(
-    HelloWorldCustomResource resource, Context<HelloWorldCustomResource> context) {
+  public UpdateControl<HelloWorldCustomResource> reconcile(
+    HelloWorldCustomResource resource, Context context) {
     System.out.println(String.format("Hello %s 🎉🎉 !!", resource.getSpec().getName()));
 
-    return UpdateControl.updateCustomResource(resource);
+    return UpdateControl.updateResource(resource);
   }
 }
 ```
 
-A ce stade il ne nous reste plus qu'à _enregistrer_ notre controller au sein de Kubernetes.
+A ce stade il ne nous reste plus qu'à _enregistrer_ notre reconciler au sein de Kubernetes.
 
 ```java
 public class HelloWorldRunner {
     public static void main(String[] args) {
       Operator operator = new Operator(DefaultConfigurationService.instance());
-      operator.register(new HelloWorldController());
+      operator.register(new HelloWorldReconciler());
 
       System.out.println("🚀 Starting HelloWorld operator !!! 🚀");
-      operator.start();      
+      operator.start();
     }
   }
 ```
@@ -225,7 +227,7 @@ mvn exec:java -Dexec.mainClass=fr.wilda.HelloWorldRunner
 🚀 Starting HelloWorld operator !!! 🚀
 ```
 
-⚠️ **Laisser tourner le main pour avoir les différents messages du contrôleur !** ⚠️
+⚠️ **Laisser tourner le main pour avoir les différents messages du reconciler !** ⚠️
 
 Et il ne nous reste plus qu'à créer une CR pour voir si notre bel opérateur se déclenche !
 

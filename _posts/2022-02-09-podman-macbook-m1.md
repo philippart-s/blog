@@ -10,6 +10,7 @@ categories:
 tags:
   - Macbook
   - Podman
+  - Docker
 
 ---
 ![Logo Podman]({{ site.url }}{{ site.baseurl }}/assets/images/podman-macbook-m1/podman-logo-source.svg){: .align-center}
@@ -18,7 +19,11 @@ Récemment, j'ai eu la chance (?) d'avoir un Macbook M1 comme machine d'entrepri
 Très belle machine, véloce, silencieuse mais qui ne permet pas de faire du Docker nativement.  
 Jusqu'à présent on pouvait utiliser [Docker Desktop](https://www.docker.com/products/docker-desktop){:target="_blank"} fournit par la société [Docker](https://www.docker.com/){:target="_blank"} mais depuis le changement du mode de licence il n'est plus possible de l'utiliser dans beaucoup d'entreprises (dont la mienne).  
 C'est tout à fait normal car il faut bien vivre :wink: mais il faut bien que j'arrive à utiliser  mes images !
-Du coup, il me restait la solution VM, mais pas mieux car [VirtualBox](https://www.virtualbox.org/){:target="_blank"} n'est pas compatible M1 et [Parallels Desktop](https://www.parallels.com){:target="_blank"} n'est pas gratuit.
+
+Du coup, il me restait la solution VM, mais là encore ça se complique un petit peu pour plusieurs raisons : 
+ - je ne me voyais pas faire une VM où je me connecte pour faire du Docker mais plus quelque chose comme [Boot2Docker](https://github.com/boot2docker/boot2docker){:target="_blank"} et [docker machine](https://github.com/docker/machine){:target="_blank"} permettant de "dialoguer" avec la VM depuis mon Mac en utilisant une CLI (et pas tout faire dans la VM),
+ - justement Boot2Docker et docker machine sont dépréciés et donc plus mis à jour par Docker (au profit de Docker Desktop),
+ - [VirtualBox](https://www.virtualbox.org/){:target="_blank"} n'est pas compatible M1 et [Parallels Desktop](https://www.parallels.com){:target="_blank"} n'est pas gratuit.
 
 Et cerise sur le gâteau je n'ai pas accès au sudo ...
 
@@ -37,11 +42,12 @@ Ce package manager a le gros avantage d'être rootless :smile:.
 Je ne m'étendrai pas sur son architecture mais sa principale différence avec Docker est qu'il est daemonless.
 
 Il faut comprendre que l'on ne va pas installer Podman nativement mais des CLI qui vont permettent de dialoguer et piloter une machine virtuelle (grâce à [QEMU](https://www.qemu.org/){:target="_blank"}) avec une installation de Podman dans une Fedora.
-En gros c'est l'équivalent de ce que l'on connaissait avec [Boot2Docker](https://github.com/boot2docker/boot2docker){:target="_blank"}.
+En gros c'est l'équivalent de ce que l'on connaissait avec Boot2Docker.
 Celui qui nous intéresse pour créer tout ce qu'il faut est [podman machine](https://docs.podman.io/en/latest/markdown/podman-machine.1.html){:target="_blank"}.
 
 Pour utiliser Podman sur un Macbook M1 il faut passer pas mal de [commandes](https://github.com/containers/podman/blob/main/docs/tutorials/mac_experimental.md){:target="_blank"} plus ou moins obscures ...  
 Mais voilà si on regarde bien on voit quelques _sudo_ trainer ... :cry:.
+C'est notamment dû au fait que la QEMU n'est pas encore totalement compatible avec le M1 et qu'il faut le patcher à la main.
 
 ## Une petite formule à la rescousse ? :beers:
 Je vous ai dit que j'aimais l'open source et surtout la magie que cela peu apporter dans certains cas ?

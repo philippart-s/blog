@@ -13,6 +13,7 @@ tags:
   - Docker
 
 ---
+<meta content="{{ {{ site.url }}{{ site.baseurl }}/assets/images/podman-macbook-m1/podman-logo-source.svg" property="og:image">
 ![Logo Podman]({{ site.url }}{{ site.baseurl }}/assets/images/podman-macbook-m1/podman-logo-source.svg){: .align-center}
 
 Récemment, j'ai eu la chance (?) d'avoir un Macbook M1 comme machine d'entreprise.

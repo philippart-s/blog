@@ -45,21 +45,52 @@ Il faut comprendre que l'on ne va pas installer Podman nativement mais des CLI q
 En gros c'est l'équivalent de ce que l'on connaissait avec Boot2Docker.
 Celui qui nous intéresse pour créer tout ce qu'il faut est [podman machine](https://docs.podman.io/en/latest/markdown/podman-machine.1.html){:target="_blank"}.
 
-Pour utiliser Podman sur un Macbook M1 il faut passer pas mal de [commandes](https://github.com/containers/podman/blob/main/docs/tutorials/mac_experimental.md){:target="_blank"} plus ou moins obscures ...  
-Mais voilà si on regarde bien on voit quelques _sudo_ trainer ... :cry:.
-C'est notamment dû au fait que la QEMU n'est pas encore totalement compatible avec le M1 et qu'il faut le patcher à la main.
+A noter que la documentation Podman indique pas mal de [commandes](https://github.com/containers/podman/blob/main/docs/tutorials/mac_experimental.md){:target="_blank"} à passer en plus du simple `brew install podman` pour des problèmes avec QUEMU.
+Il apparaît que ce n'est plus nécessaire mais simplement la [documentation qui n'est pas à jour](https://github.com/containers/podman/issues/13010#issuecomment-1022347137){:target="_blank"}, heureusement car il y avait besoin de sudo ...  
+Ouf !
 
-## Une petite formule à la rescousse ? :beers:
-Je vous ai dit que j'aimais l'open source et surtout la magie que cela peu apporter dans certains cas ?
-Je suis tombé sur le travail d'un certain [Hyeon Kim](https://github.com/simnalamburt){:target="_blank"} qui a l'air de maîtriser les Macbook M1, Podman et Homebrew 😲.  
-Il propose un [fork de Podman](https://github.com/simnalamburt/podman){:target="_blank"} et une [formule Homebrew](https://github.com/simnalamburt/homebrew-x/blob/main/Formula/podman-apple-silicon.rb){:target="_blank"} basée dessus pour installer via Homebrew une version de Podman qui fonctionne avec le Macbook M1 et tout ça sans _sudo_ !
+Une fois l'installation de Podman effectuée il ne reste plus qu'à le tester:
 
-Alors ok, ce ne sont plus les repos officiels pour Podman, QEMU, ... mais au moins ça me permet d'avancer.
-Je continuerai à vérifier la doc de Podman ou la formule de Podman dans Homebrew pour vérifier si ils fixent les petits problèmes pour basculer sur les repos officiels.
+```bash
+➡️ podman machine init                                                                                                                                                                     ✔  17:19:20  
+Extracting compressed file
 
-En tout cas pour l'instant cela simplifie grandement celle-ci : `brew install simnalamburt/x/podman-apple-silicon`.
+➡️ podman machine start
+Error: unable to start host networking: "could not find \"gvproxy\" in one of [/usr/local/opt/podman/libexec /opt/homebrew/bin /opt/homebrew/opt/podman/libexec /usr/local/bin /opt/homebrew/Cellar/podman/3.4.4/libexec /usr/local/lib/podman /usr/libexec/podman /usr/lib/podman]"
+```
 
-Pour ma part j'ai eu des problèmes lors du lancement de la VM avec une erreur de la forme : 
+Ouch fausse joie.
+
+## Petit problème de hardcoding ✏️
+
+Si on regarde de plus près l'erreur, cela semble simplement un problème d'un fichier non présent ou non trouvé (_gvproxy_).
+En effet, dans mon cas, n'ayant pas _sudo_, j'ai installé Homebrew dans mon home et ce fameux fichier n'est donc pas présent là ou il faut, pour moi il est ici: `~/homebrew/Cellar/podman/3.4.4/libexec`
+En creusant un peu on se rends compte que c'est une [partie de ping pong](https://github.com/containers/podman/issues/12161){:target="_blank"} entre les équipes de Podman et Homebrew pour savoir qui doit rendre le chemin plus permissif ou intégrer des paths qui vont bien.
+
+## Le fichier containers.conf à la rescousse ⚙️
+
+Podman, comme d'autres, se base sur un fichier de configuration qui se nomme _containers.conf_ et se trouve dans `~/.config/containers`.
+Il permet, notamment, de positionner quelques paths.
+Il m'a suffit de simplement rajouter (grâce à cette [information](https://github.com/containers/podman/issues/11960#issuecomment-953672023){:target="_blank"} trouvée dans GitHub) le path vers mon installation de _gvproxy_:
+```conf
+[containers]
+  log_size_max = -1
+  pids_limit = 2048
+  userns_size = 65536
+
+[engine]
+  helper_binaries_dir=["/Users/myuser/homebrew/Cellar/podman/3.4.4/libexec"]
+  image_parallel_copies = 0
+  num_locks = 2048
+  active_service = "podman-machine-default"
+  # ... Reste du fichier  
+```
+
+## Le fichier podman-machine-default.json à la rescousse ⚙️
+
+J'en n'en avais pas fini avec les problème de chemins en durs ...
+Après la résolution de mon problème de _gvproxy_ me voilà encore avec un problème de chemin de fichier non trouvé:
+
 ```bash
 ➡️ podman machin start
 INFO[0000] waiting for clients...                       
@@ -72,13 +103,37 @@ ERRO[0003] cannot receive packets from , disconnecting: cannot read size from so
 ERRO[0003] cannot read size from socket: EOF   
 ```
 Ce qui m'a interpellé est le path: `/opt/homebrew/share/qemu/edk2-aarch64-code.fd`.
-En effet, comme je n'ai pas les droits root j'ai installé le préfixe homebrew dans mon home.
-En vérifiant dedans je retrouve bien le fichier souhaité.
+Souvenez-vous comme je n'ai pas les droits root j'ai installé le préfixe homebrew dans mon home.
+En vérifiant dedans (`~/homebrew/share/qemu/`) je retrouve bien le fichier souhaité.
 
 Cela venait du fait que j'avais un chemin erroné dans le fichier de configuration `~/.config/containers/podman/machine/qemu/podman-machine-default.json`.
-Il y avait en dur un chemin vers un prefix homebrew inexistant : `/opt/homebrew/share/` que j'ai remplacé par mon prefix à moi.
+Il y avait en dur un chemin vers un prefix homebrew inexistant : `/opt/homebrew/share/` que j'ai remplacé par mon prefix à moi (`/Users/myuser/homebrew/share`).
 
-Et maintenant tout fonctionne : 
+```conf
+ # ...
+  "-cpu",
+  "cortex-a57",
+  "-M",
+  "virt,highmem=off",
+  "-drive",
+  "file=/opt/homebrew/share/qemu/edk2-aarch64-code.fd,if=pflash,format=raw,readonly=on",
+  "-drive",
+# ...
+```
+Est devenu:
+```conf
+ # ...
+  "-cpu",
+  "cortex-a57",
+  "-M",
+  "virt,highmem=off",
+  "-drive",
+  "file=/Users/myuser/homebrew/share/qemu/edk2-aarch64-code.fd,if=pflash,format=raw,readonly=on",
+  "-drive",
+# ...
+```
+
+Et maintenant tout fonctionne 🎉 : 
 ```bash
 ➡️ podman machine init                                                                                                                                                                     ✔  17:19:20  
 Extracting compressed file

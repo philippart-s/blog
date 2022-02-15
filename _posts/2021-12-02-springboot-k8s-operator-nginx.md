@@ -11,6 +11,7 @@ tags:
   - Springboot
 
 ---
+> 💡 Mise à jour : suite à la release 2.x du SDK j'ai mis à jour l'article et le code 😉 
 
 ![Springboot logo]({{ site.url }}{{ site.baseurl }}/assets/images/springboot-k8s-operator-nginx/springboot-logo.png){: .align-center}
 
@@ -59,19 +60,19 @@ Springboot a beau faire de la magie il faut tout de même déclarer quelques dé
 <dependency>
 	<groupId>io.javaoperatorsdk</groupId>
 	<artifactId>operator-framework-spring-boot-starter</artifactId>
-	<version>1.8.4</version>
+	<version>2.0.1</version>
 </dependency>
 <dependency>
 	<groupId>io.javaoperatorsdk</groupId>
 	<artifactId>operator-framework-spring-boot-starter-test</artifactId>
-	<version>1.8.4</version>
+	<version>2.0.1</version>
 </dependency>
 ```
 
 Et c'est tout, le reste ne change pas !
 
 Il est possible de configurer certains éléments avec un `application.yml`, par exemple le nombre de fois où le contrôleur essaie d'effectuer ses actions en cas d'erreurs : 
-```ỳaml
+```yaml
 javaoperatorsdk:
   controllers:
     customservicecontroller:
@@ -103,9 +104,9 @@ public class NginxOperatorApplication {
 
 Là c'est encore plus simple, on prend exactement la même classe que l'on annote comme étant un composant (`@Component`) Springboot:
 ```java
-@Controller
+@ControllerConfiguration
 @Component
-public class NginxInstallerController implements ResourceController<NginxInstallerResource> {
+public class NginxInstallerReconciler implements Reconciler<NginxInstallerResource> {
   // Le reste du code ne change pas !
 }
 ```

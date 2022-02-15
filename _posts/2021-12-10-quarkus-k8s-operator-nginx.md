@@ -102,21 +102,20 @@ public class NginxInstallerSpec {
 
 Et le contrôleur non plus ... 😎
 ```java
-@Controller
-public class NginxInstallerController implements ResourceController<NginxInstallerResource> {
+@ControllerConfiguration
+public class NginxInstallerReconciler implements Reconciler<NginxInstallerResource> {
   
     // K8S API utility
     private KubernetesClient k8sClient;
     // Watcher to do some actions when events occurs
     private Watch watch = null;
     
-    public NginxInstallerController(KubernetesClient k8sClient) {
+    public NginxInstallerReconciler(KubernetesClient k8sClient) {
         this.k8sClient = k8sClient;
     }
 
     @Override
-    public UpdateControl<NginxInstallerResource> createOrUpdateResource(NginxInstallerResource resource,
-            Context<NginxInstallerResource> context) {
+    public UpdateControl<NginxInstallerResource> reconcile(NginxInstallerResource resource, Context context) {
         System.out.println("🛠️  Create / update Nginx resource operator ! 🛠️");
 
         String namespace = resource.getMetadata().getNamespace();
@@ -154,11 +153,11 @@ public class NginxInstallerController implements ResourceController<NginxInstall
         Service service = loadYaml(Service.class, "/k8s/nginx-service.yml");
         k8sClient.services().inNamespace(namespace).createOrReplace(service);
 
-        return UpdateControl.updateCustomResource(resource);
+        return UpdateControl.updateResource(resource);
     }
 
     @Override
-    public DeleteControl deleteResource(NginxInstallerResource resource, Context<NginxInstallerResource> context) {
+    public DeleteControl cleanup(NginxInstallerResource resource, Context context) {
         System.out.println("💀 Delete Nginx resource operator ! 💀");
 
         // Avoid the automatic recreation
@@ -168,7 +167,7 @@ public class NginxInstallerController implements ResourceController<NginxInstall
         // Delete the service
         k8sClient.services().inNamespace((resource.getMetadata().getNamespace())).delete();
 
-        return ResourceController.super.deleteResource(resource, context);
+        return DeleteControl.defaultDelete();
     }
 
     /**
@@ -184,6 +183,7 @@ public class NginxInstallerController implements ResourceController<NginxInstall
           throw new IllegalStateException("Cannot find yaml on classpath: " + yamlPath);
         }
     }
+
 }
 ```
 Comme je l'ai indiqué, CDI se charge de nous créer l'instance de la classe fabric8 permettant la manipulation des ressources et commandes Kubernetes.
@@ -244,7 +244,12 @@ kind: Namespace
 metadata:
   name: nginx-operator
 ---
-
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: nginx-operator
+  namespace: nginx-operator
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -262,10 +267,55 @@ spec:
       labels:
         app: nginx-operator
     spec:
+      serviceAccountName: nginx-operator
       containers:
       - name: operator
         image: localhost:5000/nginx-operator
         imagePullPolicy: Always
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: nginx-operator-admin
+subjects:
+- kind: ServiceAccount
+  name: nginx-operator
+  namespace: nginx-operator
+roleRef:
+  kind: ClusterRole
+  name: nginx-operator
+  apiGroup: ""
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: nginx-operator
+rules:
+- apiGroups:
+  - ""
+  - "extensions"
+  - "apps"
+  resources:
+  - deployments
+  - services
+  - pods
+  - pods/exec
+  verbs:
+  - '*'
+- apiGroups:
+  - "apiextensions.k8s.io"
+  resources:
+  - customresourcedefinitions
+  verbs:
+  - '*'
+- apiGroups:
+  - "fr.wilda"
+  resources:
+  - '*'
+  verbs:
+  - '*'
 ```
 
 Et c'est fini, l'opérateur est déployé et n'attends plus que vos _custom resources_ pour agir.

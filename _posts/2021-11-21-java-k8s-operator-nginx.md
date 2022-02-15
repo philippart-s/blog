@@ -10,6 +10,7 @@ tags:
   - Java
 
 ---
+> 💡 Mise à jour : suite à la release 2.x du SDK j'ai mis à jour l'article et le code 😉 
 
 ![Hello world]({{ site.url }}{{ site.baseurl }}/assets/images/java-k8s-operator-nginx/Strips-Hello-world-600-final.jpg){: .align-center}
 
@@ -109,35 +110,34 @@ Cela se passe dans la classe définissant le contrôleur.
 
 La structure du contrôleur reste simple :
 ```java
-@Controller
-public class NginxInstallerController implements ResourceController<NginxInstallerResource> {
+@ControllerConfiguration
+public class NginxInstallerReconciler implements Reconciler<NginxInstallerResource> {
   
     // K8S API utility
     private KubernetesClient k8sClient;
     // Watcher to do some actions when events occurs
     private Watch watch = null;
     
-    public NginxInstallerController(KubernetesClient k8sClient) {
+    public NginxInstallerReconciler(KubernetesClient k8sClient) {
         this.k8sClient = k8sClient;
     }
 
     @Override
-    public UpdateControl<NginxInstallerResource> createOrUpdateResource(NginxInstallerResource resource,
-            Context<NginxInstallerResource> context) {
+    public UpdateControl<NginxInstallerResource> reconcile(NginxInstallerResource resource, Context context) {
         System.out.println("🛠️  Create / update Nginx resource operator ! 🛠️");
 
         // ...
 
-        return UpdateControl.updateCustomResource(resource);
+        return UpdateControl.updateResource(resource);
     }
 
     @Override
-    public DeleteControl deleteResource(NginxInstallerResource resource, Context<NginxInstallerResource> context) {
+    public DeleteControl cleanup(NginxInstallerResource resource, Context context) {
         System.out.println("💀 Delete Nginx resource operator ! 💀");
 
         // ...
 
-        return ResourceController.super.deleteResource(resource, context);
+        return DeleteControl.defaultDelete();
     }
 
 }
@@ -186,8 +186,7 @@ spec:
 Passons au code qui va gérer _l'installation_ (en fait la création de la ressource de déploiement):
 ```java
     @Override
-    public UpdateControl<NginxInstallerResource> createOrUpdateResource(NginxInstallerResource resource,
-            Context<NginxInstallerResource> context) {
+    public UpdateControl<NginxInstallerResource> reconcile(NginxInstallerResource resource, Context context) {
         System.out.println("🛠️  Create / update Nginx resource operator ! 🛠️");
 
         String namespace = resource.getMetadata().getNamespace();
@@ -201,19 +200,19 @@ Passons au code qui va gérer _l'installation_ (en fait la création de la resso
         // Create or update the modifications
         k8sClient.apps().deployments().inNamespace(namespace).createOrReplace(deployment);
 
-        return UpdateControl.updateCustomResource(resource);
+        return UpdateControl.updateResource(resource);
     }
 ```
 Et enfin celui qui aura la charge de supprimer notre serveur HTTP :
 ```java
     @Override
-    public DeleteControl deleteResource(NginxInstallerResource resource, Context<NginxInstallerResource> context) {
+    public DeleteControl cleanup(NginxInstallerResource resource, Context context) {
         System.out.println("💀 Delete Nginx resource operator ! 💀");
 
         // Delete deployment and its PODs
         k8sClient.apps().deployments().inNamespace(resource.getMetadata().getNamespace()).delete();
 
-        return ResourceController.super.deleteResource(resource, context);
+        return DeleteControl.defaultDelete();
     }
 ```
 
@@ -290,8 +289,7 @@ Il suffit d'ajouter dans la méthode _createOrUpdateResource_ la gestion des év
 
 ```java
     @Override
-    public UpdateControl<NginxInstallerResource> createOrUpdateResource(NginxInstallerResource resource,
-            Context<NginxInstallerResource> context) {
+    public UpdateControl<NginxInstallerResource> reconcile(NginxInstallerResource resource, Context context) {
         System.out.println("🛠️  Create / update Nginx resource operator ! 🛠️");
 
         String namespace = resource.getMetadata().getNamespace();
@@ -325,7 +323,7 @@ Il suffit d'ajouter dans la méthode _createOrUpdateResource_ la gestion des év
                     }
                 });
 
-        return UpdateControl.updateCustomResource(resource);
+        return UpdateControl.updateResource(resource);
     }
 
 ```
@@ -378,7 +376,7 @@ En effet, notre ops est un peu trop zélé car même si on supprime la ressource
 Pour cela, il faut lui dire d'arrêter de surveiller notre _deployment_ en cas de suppression de la CR:
 ```java
     @Override
-    public DeleteControl deleteResource(NginxInstallerResource resource, Context<NginxInstallerResource> context) {
+    public DeleteControl cleanup(NginxInstallerResource resource, Context context) {
         System.out.println("💀 Delete Nginx resource operator ! 💀");
 
         // Avoid the automatic recreation
@@ -386,7 +384,7 @@ Pour cela, il faut lui dire d'arrêter de surveiller notre _deployment_ en cas d
         // Delete deployment and its PODs
         k8sClient.apps().deployments().inNamespace(resource.getMetadata().getNamespace()).delete();
 
-        return ResourceController.super.deleteResource(resource, context);
+        return DeleteControl.defaultDelete();
     }
 ```
 C'est _close_ sur le _watch_ qui nous permet de dire à notre ops de se rendormir tranquillement 😉.
@@ -417,9 +415,10 @@ spec:
 Enfin l'adaptation de notre contrôleur pour créer ces deux ressources :
 ```java
     @Override
-    public UpdateControl<NginxInstallerResource> createOrUpdateResource(NginxInstallerResource resource,
-            Context<NginxInstallerResource> context) {
+    public UpdateControl<NginxInstallerResource> reconcile(NginxInstallerResource resource, Context context) {
         System.out.println("🛠️  Create / update Nginx resource operator ! 🛠️");
+    
+        String namespace = resource.getMetadata().getNamespace();
 
         String namespace = resource.getMetadata().getNamespace();
 
@@ -456,7 +455,7 @@ Enfin l'adaptation de notre contrôleur pour créer ces deux ressources :
         Service service = loadYaml(Service.class, "/k8s/nginx-service.yml");
         k8sClient.services().inNamespace(namespace).createOrReplace(service);
 
-        return UpdateControl.updateCustomResource(resource);
+        return UpdateControl.updateResource(resource);
     }
 
 ```
@@ -540,7 +539,7 @@ Après quelques heures / jours de recherches j'ai mis en doute mon image elle-m�
       <plugin>
         <groupId>com.google.cloud.tools</groupId>
         <artifactId>jib-maven-plugin</artifactId>
-        <version>3.1.4</version>
+        <version>3.2.0</version>
         <configuration>
           <from>
             <image>adoptopenjdk:11-jre</image>

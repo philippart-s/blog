@@ -14,8 +14,8 @@ tags:
 ![Bear Unicorn]({{ site.url }}{{ site.baseurl }}/assets/images/dev-rel/bear-unicorn.png){: .align-center}
 
 Cela fait maintenant plus d'un mois que je suis dans ma nouvelle société en tant que DevRel et cela me semblait le bon moment pour essayer d'expliquer ce rôle.  
-Depuis toujours pour dire ce que je fais à la majorité des gens que je croise qui, pour la plupart, ne sont pas du métier, cela se résumait par "je suis informaticien", voir développeur si je sens que cela veut dire quelque chose pour la personne en face de moi.  
-Moyen simple de résumer ces dernières années en tant que développeur, tech lead, chef de projet technique, chef de projet, architect Java, architecte applicatif, architecte logiciel, architecte DevOps, product owner, ...  
+Depuis toujours pour dire ce que je fais à la majorité des gens que je croise qui, pour la plupart, ne sont pas du métier, cela se résumait par "je suis informaticien", voire développeur si je sens que cela veut dire quelque chose pour la personne en face de moi.  
+Moyen simple de résumer ces dernières années en tant que développeur, tech lead, chef de projet technique, chef de projet, architecte Java, architecte applicatif, architecte logiciel, architecte DevOps, product owner, ...  
 Autant de termes qui veulent dire tout et son contraire selon les sociétés où l'on se trouve, alors pour des personnes qui ne sont pas dans le métier de l'informatique je n'imagine même pas !
 
 Informaticien du coup ça a le mérite d'être simple et de permettre à chacun de comprendre à peu près que je dois passer pas mal de temps sur un ordinateur 😉.

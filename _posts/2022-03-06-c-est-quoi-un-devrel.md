@@ -60,33 +60,33 @@ Et je pense que c'est ce qu'ont en commun toutes les personnes que j'ai citées 
 
 Le partage, clef de voûte de tout ce que je fais et ce que font les autres DevRel ou personnes qui ont un rôle similaire.  
 Et là il n'y a pas de règle absolue, on peut être en licorne, lancer des paillettes, faire des gribouillis, faire des streams, des articles, des conférences, des bbl, être sérieux, être funs, être les deux, ...
-L'important, et ce qui me motive tout les matins dans le rôle de DevRel c'est le partage et le sentiment d'être utile.
+L'important, et ce qui me motive tout les matins dans le rôle de DevRel, c'est le partage et le sentiment d'être utile.
 
 On est là pour moi sur l'un des piliers du rôle de DevRel : **le partage**.
 
 ## Accepter voire entretenir son syndrome de l'imposteur 🥸
-Aurélie [parle](https://noti.st/aurelievache/fjHQOv/tips-pour-combattre-le-syndrome-de-limposteur){:target="_blank"} beaucoup mieux que moi du syndrome de l'imposteur mais je crois que le métier de DevRel est pour moi quelque chose qui me permet de travailler dessus voir de l'utiliser de manière positive.  
-Je m'explique, lors de mes postes précédents j'avais plutôt l'étiquette d'expert.
-Et en bon expert qui se respecte je mettais un point d'honneur à essayer de connaître la techno que j'utilisais le plus profondément possible. 
-Ce n'est pas antinomique avec le rôle de DevRel mais j'ai la chance de travailler, pour la première fois de ma vie, pour une entreprise technique (dont ses produits sont des produits IT) et il est clairement impossible que je devienne expert sur l'ensemble de ce qui est proposé.
+Aurélie [parle](https://noti.st/aurelievache/fjHQOv/tips-pour-combattre-le-syndrome-de-limposteur){:target="_blank"} beaucoup mieux que moi du syndrome de l'imposteur, mais je crois que le métier de DevRel est pour moi quelque chose qui me permet de travailler dessus, voire de l'utiliser de manière positive.  
+Je m'explique : lors de mes postes précédents j'avais plutôt l'étiquette d'expert.
+Et en bon expert qui se respecte, je mettais un point d'honneur à essayer de connaître la techno que j'utilisais le plus profondément possible. 
+Ce n'est pas antinomique avec le rôle de DevRel, mais j'ai la chance de travailler, pour la première fois de ma vie, pour une entreprise technique (dont les produits sont des produits IT) et il est clairement impossible que je devienne expert sur l'ensemble de ce qui est proposé.
 
 Alors comment faire ?
 
-Se flageller en se persuadant que l'on est un imposteur qui va être démasqué à la première question ou embrasser cet aspect en acceptant de ne pas tout savoir mais en essayant d'appendre et de se mettre dans le peau des utilisateurs de nos produits ?  
-Oui, bien sûr, j'ai choisi la deuxième solution, pas toujours facile car chasser le naturel et il revient au galop mais j'accepte de ne pas être expert sur tout ce que je présente.
-Et j'aime la posture des autres DevRel que je peux croiser en démo qui humblement indiquent qu'il vont demander en interne pour pouvoir partager la réponse à une question à laquelle ils n'ont pas sû répondre.
+Se flageller en se persuadant que l'on est un imposteur qui va être démasqué à la première question, ou embrasser cet aspect en acceptant de ne pas tout savoir, mais en essayant d'appendre et de se mettre dans le peau des utilisateurs de nos produits ?  
+Oui, bien sûr, j'ai choisi la deuxième solution. Pas toujours facile (car chassez le naturel et il revient au galop) mais j'accepte de ne pas être expert sur tout ce que je présente.
+Et j'aime la posture des autres DevRel que je peux croiser en démo, qui humblement indiquent qu'il vont demander en interne pour pouvoir partager la réponse à une question à laquelle ils n'ont pas sû répondre.
 
-Cela ne veut pas dire qu'un.e DevRel est superficiel.le et la ou le champion.ne du monde des _hello world_ mais simplement que l'on se place dans la peau de la grande majorité des personnes utilisant des librairies ou logiciels : des utilisat.rice.eur.s et pas toujours des expert.e.s.
+Cela ne veut pas dire qu'un.e DevRel est superficiel.le et la ou le champion.ne du monde des _hello world_, mais simplement que l'on se place dans la peau de la grande majorité des personnes utilisant des librairies ou logiciels : des utilisat.rice.eur.s et pas toujours des expert.e.s.
 
-Je vous rassure cela n'empêche pas d'avoir son expertise et les DevRel que je vous ai cités sont tout.e.s des expert.e.s dans un ou plusieurs domaines mais ils acceptent aussi de faire des choses qui les sortent de leurs zones de confiances quitte à les exposer comme des non experts mais toujours dans l'idée d'apprendre quelque chose.
+Je vous rassure, cela n'empêche pas d'avoir son expertise et les DevRel que je vous ai cités sont tout.e.s des expert.e.s dans un ou plusieurs domaines. Mais ils acceptent aussi de faire des choses qui les sortent de leurs zones de confiances, quitte à les exposer comme des non experts, mais toujours dans l'idée d'apprendre quelque chose.
 
-Et c'est là, pour moi, un autre pilier du rôle de DevRel, continuer à vouloir **apprendre** et être curieu.se.
+Et c'est là, pour moi, un autre pilier du rôle de DevRel : continuer de vouloir **apprendre** et d'être curieu.se.
 
 ## Rendre les développeu.se.r.s heureu.ses.x 🥳
-J'emprunte cette phrase à Sébastien Blanc et j'espère qu'il ne m'en voudra pas mais je trouve que cela résume parfaitement l'un des éléments qui me motive le plus avec ce rôle de DevRel et que je faisais déjà dans mes autres vies (tient alors que je n'étais pas officiellement DevRel mais j'en avais parfois le rôle 😉).
+J'emprunte cette phrase à Sébastien Blanc et j'espère qu'il ne m'en voudra pas, mais je trouve que cela résume parfaitement l'un des éléments qui me motive le plus avec ce rôle de DevRel et que je faisais déjà dans mes autres vies (alors que je n'étais pas officiellement DevRel, mais j'en avais parfois le rôle 😉).
 > Rendre les développeuses et développeurs heureuses et heureux
 
-J'ai longtemps (20 ans) été de l'autre côté de la barrière et je suis toujours revenu plein d'entrain, de motivation et d'idées après des conférences comme le Devoxx par exemple.
+J'ai longtemps (20 ans) été de l'autre côté de la barrière, et je suis toujours revenu plein d'entrain, de motivation et d'idées après des conférences comme le Devoxx par exemple.
 
 Durant ces conférences on a, selon moi, des DevRel partout.
 Certain.e.s le font à plein temps, d'autres le temps de la conférence mais avec le même objectif : partager et rendre les participant.e.s heureu.ses.x.
@@ -98,14 +98,14 @@ C'est pour moi un autre pilier du rôle de DevRel : faciliter la vie des dévelo
 Ma réponse sera toujours la même pour faire court : _informaticien et plus particulièrement développeur_.
 
 Et si j'ai un peu de temps pour expliquer à la personne en face de moi:
- - je partage mes connaissances par tous les moyens possibles aux autres métiers de l'informatique pour les aider dans leur vie professionnelle de tous les jours,
+ - je partage mes connaissances par tous les moyens possibles aux autres métiers de l'informatique, pour les aider dans leur vie professionnelle de tous les jours,
  - je suis constamment en apprentissage pour partager ces nouvelles connaissances aux autres,
- - j'essaie de rendre heureux les autres développeuses et développeurs dans leur métier
+ - j'essaie de rendre heureux les autres développeuses et développeurs dans leur métier.
 
 
 ## Conclusion 🧐
 
 Et voilà, fin de cet article.  
-J'espère qu'il aura éclairé certain.e.s d'entre vous sur cet étrange métier qui est en fait un rôle qui rassemble plusieurs métiers et qu'il vous aura peut être donné envie de l'envisager pour une évolution de votre propre carrière à temps plein ou de temps en temps dans votre vie professionnelle.
+J'espère qu'il aura éclairé certain.e.s d'entre vous sur cet étrange métier, qui est en fait un rôle qui rassemble plusieurs métiers, et qu'il vous aura peut être donné envie de l'envisager pour une évolution de votre propre carrière, à temps plein ou de temps en temps dans votre vie professionnelle.
 
-Merci de m'avoir lu et si vous avez vu des coquilles n'hésitez pas à me l'indiquer sur l'[article](https://github.com/philippart-s/blog){:target="_blank"}. 
+Merci de m'avoir lu, et si vous avez vu des coquilles n'hésitez pas à me l'indiquer sur l'[article](https://github.com/philippart-s/blog){:target="_blank"}. 

@@ -12,13 +12,11 @@ tags:
 ---
 <meta content="{{ {{ site.url }}{{ site.baseurl }}/assets/images/signed-git-commit/logo-git-secure.png" property="og:image">
 
-![devoxx 2022]({{ site.url }}{{ site.baseurl }}/assets/images/signed-git-commit/logo-git-secure.png){: .align-center}
+![logo git sécurisé]({{ site.url }}{{ site.baseurl }}/assets/images/signed-git-commit/logo-git-secure.png){: .align-center}
 [source](https://github.blog/2020-07-02-git-credential-manager-core-building-a-universal-authentication-experience/){:target="_blank"}
 {: style="color:gray; font-size: 60%; text-align: center;"}
 
-
-
-Pour beaucoup c'est peut être une évidence mais jusqu'à présent je ne signais pas mes commits Git.
+Pour beaucoup, c'est peut être une évidence, mais jusqu'à présent je ne signais pas mes commits Git.
 Je n'en n'avais pas forcément le besoin et la connaissance.
 
 Alors pourquoi le faire maintenant ?  
@@ -26,17 +24,17 @@ Tout simplement parce que je suis dans une société qui préconise de le faire 
 
 L'autre avantage est de _sécuriser_ mes commits pour ne pas avoir d'usurpation d’identité.
 C'est peut être pas grand chose mais je me dis qu'il serait dommage que cela m'arrive alors qu'il est possible de s'en prémunir _simplement_.
-Et avoir la double authentification (_2FA_ pour les intimes) c'est bien mais cela n'empêche pas les gens d'usurper votre identité et de mettre dans leur méta data vos noms et email, les commits signés oui.
+Et avoir la double authentification (_2FA_ pour les intimes) c'est bien, mais cela n'empêche pas les gens d'usurper votre identité et de mettre dans leur méta data vos noms et emails, les commits signés oui.
 
 ## Simplement, vraiment ? 🙄
 
-ALors ce n'est pas que c'est compliqué, c'est que, pour moi, cela utilise des notions que je connais pas forcément.  
+Alors, ce n'est pas que c'est compliqué, c'est que, pour moi, cela utilise des notions que je connais pas forcément.  
 Pour le faire je vous conseille fortement les tutoriels de [GitLab](https://docs.gitlab.com/ee/user/project/repository/gpg_signed_commits/){:target="_blank"} et [GitHub](https://docs.github.com/en/authentication/managing-commit-signature-verification){:target="_blank"}.  
-Ces deux tutoriels vous expliquent comment créer votre clef et la configuré dans Git et votre hébergeur Git.
+Ces deux tutoriels vous expliquent comment créer votre clef et la configurer dans Git et votre hébergeur Git.
 
 ## Les pré-requis ⚙️
 
-La première chose est d'avoir un client permettant la manipulation des clefs GPG, dans mon cas je l'installe avec [brew](https://brew.sh/){:target="_blank"}:
+La première chose est d'avoir un client permettant la manipulation des clefs GPG, dans mon cas, sur Mac Os, je l'installe avec [brew](https://brew.sh/){:target="_blank"}:
 ```bash
 $ brew install gnupg
 ```
@@ -61,7 +59,7 @@ You selected this USER-ID:
 Change (N)ame, (E)mail, or (O)kay/(Q)uit? 
 ```
 
-Une fois la clef créée il est possible d'avoir ses clefs publiques et privée:
+Une fois la clef créée, il est possible d'avoir ses clefs publiques et privée:
 ```bash
 $ gpg --list-secret-keys --keyid-format=long
 
@@ -105,8 +103,9 @@ You selected this USER-ID:
 Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit?
 ```
 
-Pour ne pas avoir à saisir sa passphrase à chaque signature de commit il faut installer `pinentry-mac` (ou pinentry pour les autres os) afin de faciliter l'enregistrement de cette passphrase dans le _Keychain_ de Mac Os.  
-Ensuite configurer gpg pour l'utiliser.
+Pour ne pas avoir à saisir sa passphrase à chaque signature de commit il faut installer `pinentry-mac` (ou pinentry pour les autres os).
+Cela permet de faciliter l'enregistrement de cette passphrase dans le _Keychain_ de Mac Os.  
+Ensuite, il suffit de configurer gpg pour l'utiliser.
 
 ```bash
 $ brew install pinentry-mac
@@ -133,7 +132,7 @@ Et voilà vos commits sont signés 😎.
 
 ## Où il est question de ceinture et de bretelles 🔐
 
-Vous signez vos commits, et c'est très bien mais comment savoir que ce qui est sur GitHub et GitLab vient bien de vous ?
+Vous signez vos commits, et c'est très bien mais comment savoir que, ce qui est sur GitHub et GitLab, vient bien de vous ?
 Rien de plus simple, les deux portails vous proposent de rentrer votre clef publique afin de pouvoir identifier vos commits.  
 Pour cela il faut exporter votre clef:
 
@@ -155,12 +154,51 @@ dGVyZHVtLiBQZWxsZW50ZXNxdWUgaW1wZXJkaWV0IGxvcmVtIG51bGxhbS4g
 -----END PGP PUBLIC KEY BLOCK-----
 ```
 
-Et vous copiez cette sortie dans votre configuration PGP [GitHub](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-new-gpg-key-to-your-github-account){:target="_blank"} ou [GitLab](https://docs.gitlab.com/ee/user/project/repository/gpg_signed_commits/#add-a-gpg-key-to-your-account){:target="_blank"} pour renseigner votre clef GPG.
+Et vous copiez cette sortie dans votre configuration GPG [GitHub](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-new-gpg-key-to-your-github-account){:target="_blank"} ou [GitLab](https://docs.gitlab.com/ee/user/project/repository/gpg_signed_commits/#add-a-gpg-key-to-your-account){:target="_blank"} pour renseigner votre clef GPG.
 
 Et du coup vos commits apparaissent comme _verified_
 
 ![Commit signé vérifié sur GitLAb]({{ site.url }}{{ site.baseurl }}/assets/images/signed-git-commit/gitlab-signed-commit.png){: .align-center}
 
+## Et avec plusieurs ordinateurs ? 💻
+
+Vous vous en doutez bien, si on a plusieurs ordinateurs on ne va pas générer des clefs différentes ...
+Pour cela il suffit d'exporter la clef du premier ordinateur.
+Puis de l'importer sur le deuxième.
+
+L'export se fait simplement avec deux commandes:
+
+```bash
+$ gpg --export-secret-keys -a ABCDEFGHIJKLMNOP > my_private_key.asc
+$ gpg --export -a ABCDEFGHIJKLMNOP > my_public_key.asc
+```
+
+Et du coup il ne reste plus qu'à importer les deux clefs sur le nouvel ordinateur:
+```bash
+$ gpg --import my_private_key.asc
+$ gpg --import my_public_key.asc
+```
+
+Comme vous venez d'importer une clef il vous faut indiquer le degrés de confiance que vous lui accordez (`trust`), dans votre cas comme c'est votre clef autant mettre le plus haut (`ultimate`).
+
+```bash
+
+$ gpg --edit-key ABCDEFGHIJKLMNOP
+
+gpg> trust
+
+Please decide how far you trust this user to correctly verify other users\' keys
+(by looking at passports, checking fingerprints from different sources, etc.)
+
+  1 = I don't know or won't say
+  2 = I do NOT trust
+  3 = I trust marginally
+  4 = I trust fully
+  5 = I trust ultimately
+  m = back to the main menu
+```
+
+`Go to paragraphe Signer ses commits 🔒` pour que les commits sur le nouvel ordinateur soit signés.
 
 ## Conclusion 🧐
 

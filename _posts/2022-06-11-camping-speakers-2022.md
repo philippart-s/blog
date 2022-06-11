@@ -120,7 +120,7 @@ Mais bon un talk ça vit et celui-ci va vivre pour que j'en sois pleinement sati
 ## A l'année prochaine ? ⛺️
 
 Ce fut pour moi deux jours intenses en émotions et physiquement.  
-Alors oui parfois on s'en agacés .. pour mieux se prendre dans les bras ensuite.  
+Alors oui parfois on s'est agacé .. pour mieux se prendre dans les bras ensuite.  
 Parfois on en avait marre de courir partout .. pour mieux savourer les sourires et discussions endiablées durant les conférences.  
 
 Laissons le temps aux orgas de se reposer et espérons que la deuxième saison verra le jour.

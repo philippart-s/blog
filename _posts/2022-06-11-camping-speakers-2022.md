@@ -58,7 +58,7 @@ En parallèle de mes activités et pendant que je m’occupais du lieu du talk d
 ### [Culture, innovation et cartes IGN](https://camping-speakers.fr/sessions/culture_innovation_et_cartes_ign/) - William Bartlett
 
 Format en extérieur sans slide.
-L'objectif de William, amener les participantes et participants à découvrir les différentes façon de gérer les idées et les projets en les faisant découvrir le camping par un jeu de piste bsé sur des cartes IGN.
+L'objectif de William, amener les participantes et participants à découvrir les différentes façon de gérer les idées et les projets en les faisant découvrir le camping par un jeu de piste basé sur des cartes IGN.
 J'ai volontairement laissé le groupe ensemble, je n'ai donc pas participé au jeu de piste (heureusement vu mon aptitude à me perdre 😅) mais tout le monde avait l'air enjoué à la fin.
 
 ### [GitHub Action - Automatisation de vos workflows](https://camping-speakers.fr/sessions/github_action_automatisation.md/) - Grégoire Pineau

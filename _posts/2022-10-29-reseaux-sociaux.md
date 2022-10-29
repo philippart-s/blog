@@ -66,7 +66,7 @@ Je pense pour deux raisons : l'habitude d'expliquer des choses en conférences o
 
 Le problème que j'ai constaté, est que, plus il est sensé avoir des expert.e.s, moins le message est clair et posé 😲.
 
-Je vais aussi aborder une autre sujet, là encore sans prétention, en ami 😘.
+Je vais aussi aborder un autre sujet, là encore sans prétention, en ami 😘.
 Le ou la chevalier blanc, le syndrome du l'héroïne ou du héros, de la où le pourfendeur de vérité, ... Je pense que vous avez compris l'idée 😉.
 Comme cela doit être épuisant pour vous qui combattez tout ce que vous trouvez sur ces réseaux avec autant d'énergie, parfois négative à force de vous perdre dans les combats et au risque de faire passer le message inverse.
 Je ne dis pas qu'il faut rien faire mais juste réfléchir et ne pas s'imposer autant de charge mentale.

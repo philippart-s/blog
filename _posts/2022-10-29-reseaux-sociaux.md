@@ -69,7 +69,7 @@ Le problème que j'ai constaté, est que, plus il est sensé avoir des expert.e.
 Je vais aussi aborder un autre sujet, là encore sans prétention, en ami 😘.
 Le ou la chevalier blanc, le syndrome de l'héroïne ou du héros, de la où le pourfendeur de vérité, ... Je pense que vous avez compris l'idée 😉.
 Comme cela doit être épuisant pour vous qui combattez tout ce que vous trouvez sur ces réseaux avec autant d'énergie, parfois négative à force de vous perdre dans les combats et au risque de faire passer le message inverse.
-Je ne dis pas qu'il faut rien faire mais juste réfléchir et ne pas s'imposer autant de charge mentale.
+Je ne dis pas qu'il ne faille rien faire mais juste réfléchir et ne pas s'imposer autant de charge mentale.
 Et, je le répète pour moi, rien ne remplace l'action dans la vie concrète que des débats souvent stériles et plein de bruits ...
 
 > On notera que nous n'en avons pas la primeur dans la tech, nos politiciennes et politiciens savent très bien le faire aussi 😉

@@ -91,7 +91,7 @@ Je n'ai aucune prétention de convaincre ou apprendre des choses mais peut être
 
 Les réseaux sociaux sont là, c'est un fait. Cependant si ils font partie de la vie ce ne sont pas la vie réelle (c'est beau ça non ? 😁).
 
-Voilà, je n'ai pas de solution miracle et comme les réseaux sociaux me sont utiles pour mon travail (comme indiqué en introduction) je continue de les utiliser avec le recule nécessaire pour ne pas être "trop" touché par des sujets qui me sont chers mais tellement mal abordés.
+Voilà, je n'ai pas de solution miracle et comme les réseaux sociaux me sont utiles pour mon travail (comme indiqué en introduction) je continue de les utiliser avec le recul nécessaire pour ne pas être "trop" touché par des sujets qui me sont chers mais tellement mal abordés.
 
 La solution (donnée par de grands sages et je me permets de la promouvoir à mon tour), qui n'est pas parfaite, est de ne plus suivre des personnes que je juge nocives dans cet exercice, avec le défaut de se passer de tout l'apport de connaissances techniques qu'elles m'apportaient. 
 L'effet de bord est que ma timeline est beaucoup plus zen et courte (donc moins de temps passé sur les réseaux 😁).

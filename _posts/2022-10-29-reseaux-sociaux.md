@@ -45,7 +45,7 @@ Je pense être une personne plutôt bienveillante et empathique, cela ne me coû
 Et j'ai envie de dire c'est ok si vous ne l'êtes pas naturellement, cela ne fait pas de vous un monstre.
 A mon sens, faire semblant, vous fera souffrir et fera souffrir les autres aussi.
 
-Il y a pleins d'autres traits de caractères positifs qui existent et je pense aussi, que dans certains, cas avoir des personnes capables de ne pas se noyer dans la bienveillance et l'empathie est un plus qui permet de sauver des situations mal embarquées.
+Il y a pleins d'autres traits de caractères positifs qui existent et je pense aussi, que dans certains cas, avoir des personnes capables de ne pas se noyer dans la bienveillance et l'empathie est un plus qui permet de sauver des situations mal embarquées.
 
 ## Tout est combat... Ou presque ⚔️
 

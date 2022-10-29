@@ -74,7 +74,7 @@ Et, je le répète pour moi, rien ne remplace l'action dans la vie concrète que
 
 > On notera que nous n'en avons pas la primeur dans la tech, nos politiciennes et politiciens savent très bien le faire aussi 😉
 
-Je vais encore taper sur les réseaux sociaux,  mais clairement je pense que la principale erreur est de vouloir régler ces débats en 280 caractères... Alors oui, certaines et certains d'entre vous qui sont de ma génération pourront me dire que des émissions connues des années 80-90 n'avaient pas besoin des réseaux sociaux pour s’étriper !
+Je vais encore taper sur les réseaux sociaux, mais clairement je pense que la principale erreur est de vouloir régler ces débats en 280 caractères... Alors oui, certaines et certains d'entre vous qui sont de ma génération pourront me dire que des émissions connues des années 80-90 n'avaient pas besoin des réseaux sociaux pour s’étriper !
 
 Et c'est là que j'aimerai donner, humblement, quelques conseils 
  - avant de sauter à pieds joints sur les autres, essayez d'argumenter calmement, c'est souvent mieux perçu

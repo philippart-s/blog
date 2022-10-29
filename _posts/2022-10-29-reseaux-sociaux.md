@@ -28,7 +28,7 @@ Et là vous me direz peut être :
 
 J'y viens !
 
-Au fil du temps j'ai, par mon nouveau métier, pu accéder à tout un écosystème que je suivais de l'extérieur et qui me semblait une belle famille unie basée sur la bienveillance, l'empathie et le partage.
+Au fil du temps j'ai pu, par mon nouveau métier, accéder à tout un écosystème que je suivais de l'extérieur et qui me semblait une belle famille unie basée sur la bienveillance, l'empathie et le partage.
 
 ![Bisounours]({{ site.url }}{{ site.baseurl }}/assets/images/reseaux-sociaux/bisounours.jpg){: .align-center}
 [Tom Larsen](https://unsplash.com/photos/0BHxmjy7FyA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink){:style="font-size: smaller"}{:target="_blank"}{: .align-right}

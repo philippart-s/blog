@@ -13,7 +13,7 @@ tags:
 <br>
 Cela fait quelques temps que je me tâte pour écrire un article autour de ces notions qui sont, selon moi, de plus en plus déformées dans une société qui se regarde à travers le prisme des réseaux sociaux.
 
-Je tiens à signaler tout de suite que cet article n'est que ma vision et un besoin de sortir tout ça de ma tête pour que cela ne tourne pas en boucle 🤪.  
+Je tiens à signaler tout de suite que cet article n'est que ma vision personnelle, écrit suite à un besoin de sortir tout ça de ma tête, afin que cela n'y tourne pas en boucle 🤪.  
 Après tout, c'est mon blog et je fais ce que je veux non ? 😉  
 Et je n'ai pas la prétention d'être un fin psychanalyste, mais simplement d'essayer de comprendre mes semblables depuis le fond de ma grotte 🐻.
 

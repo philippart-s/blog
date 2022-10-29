@@ -1,6 +1,6 @@
 ---
 title: "❤️ Empathie, bienveillance, partage et combats 🤯"
-excerpt: "Ou encore, Amour, gloire et beauté 🤨"
+excerpt: "Ou encore : Amour, gloire et beauté 🤨"
 classes: wide
 categories:
   - Articles

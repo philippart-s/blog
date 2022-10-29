@@ -55,7 +55,7 @@ C'est fort de ce constat que j'ai commencé à me poser des questions, notamment
 
 Encore une fois, l'élément déclencheur reste les réseaux sociaux avec leur loupe déformante.
 
-Comme pour le côté public ou privé, des tentatives, de débats idéologiques ou non fleurissent.
+Comme pour le côté public ou privé, des tentatives de débats idéologiques ou non fleurissent.
 
 Avec deux biais : 
   - la distance avec le côté protecteur du clavier (que ce soit avec pseudo ou pas) 

@@ -64,7 +64,7 @@ Avec deux biais :
 Un autre problème dans le monde de la tech : nous sommes très forts pour asséner des vérités.
 Je pense pour deux raisons : l'habitude d'expliquer des choses en conférences ou à des collègues en tant qu'expert.es  mais aussi cette habitude d'aller éplucher un sujet en se (sur?) documentant et, par conséquent, se persuadant que l'on détient la vérité.
 
-Le problème que j'ai constaté, est que, plus il est sensé avoir des expert.e.s moins le message est clair et posé 😲.
+Le problème que j'ai constaté, est que, plus il est sensé avoir des expert.e.s, moins le message est clair et posé 😲.
 
 Je vais aussi aborder une autre sujet, là encore sans prétention, en ami 😘.
 Le ou la chevalier blanc, le syndrome du l'héroïne ou du héros, de la où le pourfendeur de vérité, ... Je pense que vous avez compris l'idée 😉.

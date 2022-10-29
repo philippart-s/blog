@@ -37,7 +37,7 @@ Mais en fait, naïf que j'étais me direz vous, je me trompais 🧐.
 
 C'est là que j'ai commencé à me poser des questions : mais pourquoi avoir un personnage public basé sur la bienveillance, l'empathie et le partage alors qu'en réalité seuls comptent l'exposition, le nombre de followers, le (bad) buzz, ...
 C'est quelque chose qui m'a fortement marqué, d'autant qu'à mon niveau, n'étant pas parfait comme tout être humain, j'essaie de n'avoir qu'un seul moi que ce soit pour le côté publique ou le côté privé.
-Alors oui, mon personnage public (en tant que DevRel et non de fame, à ne pas confondre 😉) se restreint sur certaines choses, tout simplement car je représente aussi ma société et que je ne peux pas faire n'importe quoi.
+Alors oui, mon personnage publique (en tant que DevRel et non de fame, à ne pas confondre 😉) se restreint sur certaines choses, tout simplement car je représente aussi ma société et que je ne peux pas faire n'importe quoi.
 
 A titre personnel, je ne fais pas ça pour indiquer que je suis un sur-homme mais juste parceque mentalement je trouve ça beaucoup plus simple à gérer 🤯.
 

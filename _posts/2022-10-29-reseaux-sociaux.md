@@ -78,7 +78,7 @@ Je vais encore taper sur les réseaux sociaux,  mais clairement je pense que la 
 
 Et c'est là que j'aimerai donner, humblement, quelques conseils 
  - avant de sauter à pieds joints sur les autres, essayez d'argumenter calmement, c'est souvent mieux perçu
- - ce n'est pas parceque l'autre n'est pas d'accord avec vous qu'elle ou il a tord
+ - ce n'est pas parce que l'autre n'est pas d'accord avec vous qu'elle ou il a tord
  - les combats IRL (dans la vraie vie) sont plus durs mais, souvent, portent plus leurs fruits
  - si vraiment vous voulez passer par l'écrit, utilisez un blog : vous verrez que plus de 280 caractères c'est cool 
  - ⚠️ le plus important ⚠️ : les réseaux sociaux ne sont clairement pas le bon endroit pour ces débats 

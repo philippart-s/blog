@@ -87,7 +87,7 @@ Et c'est là que j'aimerai donner, humblement, quelques conseils
 ## En conclusion
 
 Eh bien déjà écrire cet article m'a fait du bien et c'est le principal 😊.
-Je n'ai aucune prétention de convaincre ou apprendre des choses mais peut être, à minima, vous faire réfléchir à vos derniers messages sur les réseaux sociaux : vous représentent-ils tel.le que vous êtes dans votre vie ? N'avez-vous pas été trop agressive ou agressif simplement pour imposer votre idée au lieu de juste la proposer ?
+Je n'ai aucune prétention de convaincre ou apprendre des choses mais peut être, a minima, vous faire réfléchir à vos derniers messages sur les réseaux sociaux : vous représentent-ils tel.le que vous êtes dans votre vie ? N'avez-vous pas été trop agressive ou agressif simplement pour imposer votre idée au lieu de juste la proposer ?
 
 Les réseaux sociaux sont là, c'est un fait. Cependant si ils font partie de la vie ce ne sont pas la vie réelle (c'est beau ça non ? 😁).
 

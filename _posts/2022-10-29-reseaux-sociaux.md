@@ -20,7 +20,7 @@ Et je n'ai pas la prétention d'être un fin psychanalyste, mais simplement d'es
 ## Le pourquoi 🤔
 
 Mais pourquoi j'en suis venu à écrire tout ça et surtout pourquoi tout ça traîne dans ma tête ces derniers temps ?  
-La première chose est que mon changement récent de métier (je suis devenu DevRel, voir l'article [🥑 Dis papa, c'est quoi un (baby) DevRel ? 🦄]({{ site.baseurl }}{% post_url 2022-03-06-c-est-quoi-un-devrel %})) m'a permis de voir ce que se cachait dans le terrier d'Alice (mais j'y reviendrai) 🐰.
+La première chose est que mon changement récent de métier (je suis devenu DevRel, voir l'article [🥑 Dis papa, c'est quoi un (baby) DevRel ? 🦄]({{ site.baseurl }}{% post_url 2022-03-06-c-est-quoi-un-devrel %})) m'a permis de voir ce qu'il se cachait dans le terrier d'Alice (mais j'y reviendrai) 🐰.
 La deuxième, est que j'utilise les réseaux sociaux de manière professionnelle. Non pas que je suis un professionnel de ceux-ci, mais ils font partie de mes outils de travail pour deux choses : la veille technologique mais aussi échanger avec les autres développeurs (clients ou non de ma société) 🗣️.
 
 Et là vous me direz peut être :

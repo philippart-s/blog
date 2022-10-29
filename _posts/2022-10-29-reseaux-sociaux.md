@@ -77,7 +77,7 @@ Et, je le répète pour moi, rien ne remplace l'action dans la vie concrète que
 Je vais encore taper sur les réseaux sociaux,  mais clairement je pense que la principale erreur est de vouloir régler ces débats en 280 caractères... Alors oui, certaines et certains d'entre vous qui sont de ma génération pourront me dire que des émissions connues des années 80-90 n'avaient pas besoin des réseaux sociaux pour s’étriper !
 
 Et c'est là que j'aimerai donner, humblement, quelques conseils 
- - avant de sauter à pieds joint sur les autres, essayez d'argumenter calmement, c'est souvent mieux perçu
+ - avant de sauter à pieds joints sur les autres, essayez d'argumenter calmement, c'est souvent mieux perçu
  - ce n'est pas parceque l'autre n'est pas d'accord avec vous qu'elle ou il a tord
  - les combats IRL (dans la vraie vie) sont plus durs mais, souvent, portent plus leurs fruits
  - si vraiment vous voulez passer par l'écrit, utilisez un blog : vous verrez que plus de 280 caractères c'est cool 

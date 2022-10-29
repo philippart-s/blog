@@ -49,7 +49,7 @@ Il y a pleins d'autres traits de caractères positifs qui existent et je pense a
 
 ## Tout est combat... Ou presque ⚔️
 
-On voit que l'on est clairement dans un article vidage de cerveau car l'enchaînement n'est pas des plus logique... Quoique 🧐
+On voit que l'on est clairement dans un article vidage de cerveau car l'enchaînement n'est pas des plus logiques... Quoique 🧐
 
 C'est fort de ce constat que j'ai commencé à me poser des questions, notamment en voyant que, même en étant vigilant, certains "débats" sur les réseaux sociaux me touchaient plus que je ne voulais me l'admettre.
 

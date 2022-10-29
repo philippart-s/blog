@@ -61,6 +61,10 @@ Avec deux biais :
   - la distance avec le côté protecteur du clavier (que ce soit avec pseudo ou pas) 
   - le côté représentativité réelle : souvent ce sont celles et ceux qui parlent le plus fort qui ont le plus de visibilité.
 
+Je me permets de faire un zoom sur ce dernier point (la représentativité). A vous qui lisez ces débats, pensez à vérifier les sources de ce qui est avancé (c'est la première chose que je conseille à mes propres enfants). Ce n'est pas parce que, une personne que vous suivez, qui vous plaît, qui parle bien (pour certaines et certains c'est leur métier ne l'oubliez pas) qu'elles ou ils ont raison 🙃.  
+Avant de vouloir rentrer dans l'arène (même si vous l'avez compris je vous le déconseille) : vérifiez encore et encore les sources, le contexte, ... Vous seriez surpris de constater qu'un grand nombre de sujets reposent sur des bases pas toujours très solides. Et parfois, par ces mêmes personnes que vous appréciez (ou idolâtrez au choix). Non pas (que) pour duper son auditoire, mais parfois par envie de vouloir se convaincre soi-même.
+En résumé, vérifiez les faits et rien que les faits 🧐. C'est plus long mais l’information n'en sera que meilleure 😉.
+
 Un autre problème dans le monde de la tech : nous sommes très forts pour asséner des vérités.
 Je pense pour deux raisons : l'habitude d'expliquer des choses en conférences ou à des collègues en tant qu'expert.es  mais aussi cette habitude d'aller éplucher un sujet en se (sur?) documentant et, par conséquent, se persuadant que l'on détient la vérité.
 

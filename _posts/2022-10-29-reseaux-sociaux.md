@@ -100,4 +100,4 @@ Si vous êtes arrivé jusque là merci de m'avoir lu et si il y a des coquilles 
 
 Et à disposition pour en parler IRL si vous ne voyez pas les choses de la même manière.... Mais sans prise de tête 😘
 
-Pour finir je citerai une maxime de [Pablo Mira](https://fr.wikipedia.org/wiki/Pablo_Mira){:target="_blank"} lorsqu'il passe au vitriol les réseaux sociaux, qui je trouve est tellement vrai lorsque l'on parle de débat sur les réseaux sociaux "Hainez vous les uns et le autres".
+Pour finir je citerai une maxime de [Pablo Mira](https://fr.wikipedia.org/wiki/Pablo_Mira){:target="_blank"} lorsqu'il passe au vitriol les réseaux sociaux, qui je trouve est tellement vraie lorsque l'on parle de débat sur les réseaux sociaux "Hainez vous les uns et le autres".

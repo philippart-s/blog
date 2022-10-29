@@ -41,7 +41,7 @@ Alors oui, mon personnage publique (en tant que DevRel et non de fame, à ne pas
 
 A titre personnel, je ne fais pas ça pour indiquer que je suis un sur-homme mais juste parceque mentalement je trouve ça beaucoup plus simple à gérer 🤯.
 
-Je pense être une personne plutôt bienveillante et empathique, cela ne me coûte donc pas de l'être d'un point de vue public ou privé.
+Je pense être une personne plutôt bienveillante et empathique, cela ne me coûte donc pas de l'être d'un point de vue publique ou privé.
 Et j'ai envie de dire c'est ok si vous ne l'êtes pas naturellement, cela ne fait pas de vous un monstre.
 A mon sens, faire semblant, vous fera souffrir et fera souffrir les autres aussi.
 

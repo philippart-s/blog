@@ -22,12 +22,12 @@ Du coup, je me suis dis, tient et si je vous partageais comment j'en suis arriv�
 C'est assez amusant car le titre de l'article est justement ce que je n'aime pas dans ce type de démarche : une notion de sachant et de non sachant.
 Mais j'aimai bien le parallèle avec cette citation 😉 (et avouons le, je sui un fan de star wars !).  
 C'est pourquoi, je n'aime pas parler de coaching, mentoring, senior et junior, ... 
-Dans mon subconscient, cela met l'autre dan une position inférieure, avant même de commencer.
+Dans mon subconscient, cela met l'autre dans une position inférieure, avant même de commencer.
 Et la plupart du temps, les personnes que j'ai eu la chance d'accompagner étaient beaucoup plus pertinentes et connaisseuses que moi du domaine qu'elles présentaient.
 
 Vous l'avez donc compris, je parle donc d'accompagnement plutôt que tous les autres termes 😊.
 
-C'est certainement un point de détail pour vous, mais pour moi cela me permet d'arriver à lier contact avec la personne que j'accompagne de manière beaucoup plus simple et de ne pas _imposer_ le fait que je suis un sachant (que je ne suis pas) 🤷‍♂️.  
+C'est certainement un point de détail pour vous, mais pour moi, cela me permet d'arriver à lier contact avec la personne que j'accompagne de manière beaucoup plus simple et de ne pas _imposer_ le fait que je suis un sachant (que je ne suis pas) 🤷‍♂️.  
 En effet, pour moi je ne suis pas dans la position du professeur avec ses étudiants, ou de l’artisan avec l'apprenti.
 Je ne suis pas là pour former la personne en lui distillant mon savoir mais plus pour l'aider à trouver sa voie dans ce nouveau défi qu'elle s'est lancé.
 Je me vois aussi comme le public zéro ou le commité de CFP zéro, la version draft en quelque sorte 😅.
@@ -37,12 +37,12 @@ Je me vois aussi comme le public zéro ou le commité de CFP zéro, la version d
 ![Fusée qui décolle]({{ site.url }}{{ site.baseurl }}/assets/images/accompagnement-speaker/start-nasa.jpg){: .align-center}
 [NASA](https://unsplash.com/fr/photos/n463SoeSiVY?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink){:style="font-size: smaller"}{:target="_blank"}{: .align-right}
 
-La démarche d'accompagner des personnes dans le désir d'être speaker n'a pas été une chose évidente e, cela remonte à, à peu près, deux ans avant l'écriture de cet article.
+La démarche d'accompagner des personnes dans le désir d'être speaker n'a pas été une chose évidente, cela remonte à, à peu près, deux ans avant l'écriture de cet article.
 Je n'étais (et je ne suis toujours pas) un spécialiste de la prise de parole en conférences.
 Mais le hasard fait, parfois, bien les choses 😉 : avec l'association que j'ai co-créé, [TADx](https://www.tadx.fr){:target="_blank"}, nous avons co-organisé un tremplin pour donner sa chance à tout un groupe de speakers de donner leur premier talk dans une conférence.  
 Le tremplin était co-organisé avec [Le Camping des Speakers](https://camping-speakers.fr/){:target="_blank"}, la conférence pour laquelle les participantes et participants pouvaient gagner une place, et [Crafts Records](https://craftsrecords.org/){:target="_blank"}, une association parisienne qui offre la possibilité d'accompagner des speakers pour les aider à donner leur premier talk.
 
-Avec TADx on a proposé d'héberger cet even qui se déroulait comme suit : 
+Avec TADx on a proposé d'héberger cet event qui se déroulait comme suit : 
  - une phase d'accompagnement des speakers dans la phase d'écriture du CFP,
  - une phase d'accompagnement des speakers dans la phase de création du talk,
  - des répétitions,
@@ -117,7 +117,7 @@ Vous avez deux heures ... 🤯
 Bien sûr, je ne pense pas m'être lancé dans cette aventure parceque cela m'apportait quelque chose d'évident.
 J'ai, simplement, découvert au fur et à mesure, que cet exercice m'apportait énormément de choses à titre personnel. 
 En effet, durant l'accompagnement vous devez vous remettre en question afin d'être sûr de promulguer les bons conseils.
-Cela comme effet immédiat de vous faire poser des questions sur vos propres talks, est-ce que j'applique vraiment tout ce que je suis en train de conseiller ?  
+Cela a comme effet immédiat de vous faire poser des questions sur vos propres talks, est-ce que j'applique vraiment tout ce que je suis en train de conseiller ?  
 Vous l'aurez compris rien de mieux que l'effet miroir pour se rendre compte qu'il est toujours plus facile de juger les autres que soit même 🧐.  
 Lors du passage de la personne accompagnée aussi quel stress !
 Les émotions sont fortes, quasi plus fortes que lors de mes propres talks 😳.
@@ -130,6 +130,6 @@ Et pas de la fierté du genre "_elle ou il a bien écouté ce que je lui ai dit_
 Vous l'aurez compris, l'accompagnement d'un.e futur.e speaker est une aventure émotionnelle forte mais qui apporte beaucoup 🤩.
 C'est une forme de partage comme on peut le retrouver dans l'open source par exemple mais basé plus sur l'humain.  
 Enfin j'aimerai indiquer qu'il existe de plus en plus de conférences qui réservent des créneaux pour les primos speakers (comme [Devoxx France](https://www.devoxx.fr/){:target="_blank"} par exemple) voir, vont même jusqu'à proposer un accompagnement aux primos speakers dans leur CFP (comme ça a été le cas avec [Touraine Tech](https://touraine.tech/){:target="_blank"}).  
-Et puis, comment ne pas citer les meetups, comme [TADx](https://www.tadx.fr/){:target="_blank"} par exemple, qui laissent très souvent leur chance aux primos speakers voir leurs proposent un accompagnement 🤗
+Et puis, comment ne pas citer les meetups, comme [TADx](https://www.tadx.fr/){:target="_blank"} par exemple, qui laissent très souvent leur chance aux primos speakers, voir leurs proposent un accompagnement 🤗
 
 Si vous êtes arrivé jusque là merci de m'avoir lu et si il y a des coquilles n'hésitez pas à me faire une [issue ou PR](https://github.com/philippart-s/blog){:target="_blank"} 😊.

@@ -132,4 +132,4 @@ C'est une forme de partage comme on peut le retrouver dans l'open source par exe
 Enfin j'aimerai indiquer qu'il existe de plus en plus de conférences qui réservent des créneaux pour les primos speakers (comme [Devoxx France](https://www.devoxx.fr/){:target="_blank"} par exemple) voir, vont même jusqu'à proposer un accompagnement aux primos speakers dans leur CFP (comme ça a été le cas avec [Touraine Tech](https://touraine.tech/){:target="_blank"}).  
 Et puis, comment ne pas citer les meetups, comme [TADx](https://www.tadx.fr/){:target="_blank"} par exemple, qui laissent très souvent leur chance aux primos speakers, voir leurs proposent un accompagnement 🤗
 
-Si vous êtes arrivé jusque là merci de m'avoir lu et si il y a des coquilles n'hésitez pas à me faire une [issue ou PR](https://github.com/philippart-s/blog){:target="_blank"} 😊.
+Si vous êtes arrivés jusque là merci de m'avoir lu et si il y a des coquilles n'hésitez pas à me faire une [issue ou PR](https://github.com/philippart-s/blog){:target="_blank"} 😊.

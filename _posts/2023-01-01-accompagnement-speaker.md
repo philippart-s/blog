@@ -65,7 +65,7 @@ Et c'était donc parti, je me suis retrouvé à accompagner une collègue qui av
 ![Graine qui pousse]({{ site.url }}{{ site.baseurl }}/assets/images/accompagnement-speaker/growth.jpg){: .align-center}
 [Jeremy Bishop](https://unsplash.com/fr/photos/vGjGvtSfys4?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink){:style="font-size: smaller"}{:target="_blank"}{: .align-right}
 
-Loins de moi l'idée de vous donner un cours sur comment accompagner de futur.e.s speakers mais plus sur comment, à titre personnel, je vois ça.  
+Loin de moi l'idée de vous donner un cours sur comment accompagner de futur.e.s speakers mais plus sur comment, à titre personnel, je vois ça.  
 Comme je l'ai déjà indiqué, pas question de faire un cours et surtout ne pas de m’approprier le talk, c'est pour moi le piège principal à éviter lorsque l'on accompagne une personne.  
 Exit donc les phrases du type : _à ta place ..._, _moi j'aurai plutôt ..._, _je connais cette techno ce n'est pas comme ça_, ...  
 

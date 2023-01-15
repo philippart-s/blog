@@ -56,7 +56,7 @@ Mais voilà, on ne se refait pas, je me suis laissé embarquer 🤪.
 C'est à partir de là que je ne me suis pas senti coach mais plus accompagnateur, oeil externe.
 J'avais tout de même un avantage : cela faisait plus d'une douzaine d'années que j'écumais les conférences tech en tant que spectateur.
 Et je pense, que rien que ça, cela aide à donner un feedback constructif.
-L'autre avantage est, qu'organiser (avec ma présidente) un meetup mensuel, me permet aussi d'avoir certains réflexes dans l'analyse d'un talk (est-ce qu'il va plaire, est-il assez large, ...).
+L'autre avantage est qu'organiser (avec ma présidente) un meetup mensuel, me permet aussi d'avoir certains réflexes dans l'analyse d'un talk (est-ce qu'il va plaire, est-il assez large, ...).
 
 Et c'était donc parti, je me suis retrouvé à accompagner une collègue qui avait soumis, pour la première fois, un talk !
 

@@ -101,7 +101,7 @@ En la ou le relevant quant elle / il trébuche, en l’encourageant, en la / le 
 
 Honnêtement dans la plupart des accompagnements que j'ai pu faire, la production de la personne est déjà à 90% terminée et de qualité et ne demande pas de changements.
 Je suis là pour les 10%, souvent dus à quelques trucs et astuces méconnus lorsque l'on se lance dans ce genre d'aventure 🤗.
-Encore une fois, lorsque l'on accompagne une personne pour un talk, notre rôle principal, selon moi, est de la guider, provoquer le déclique.
+Encore une fois, lorsque l'on accompagne une personne pour un talk, notre rôle principal, selon moi, est de la guider, provoquer le déclic.
 
 Et dernière chose, lorsque c'est possible, j'essaie d'être là lors du passage en conférence pour gérer l'avant et l'après avec la personne. 
 Ces deux moments sont importants et c'est toujours réconfortant d'avoir du monde à ses côtés.

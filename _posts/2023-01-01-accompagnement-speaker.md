@@ -49,7 +49,7 @@ Avec TADx on a proposé d'héberger cet event à Tours. Voici comment cela s'est
  - l'accompagnement du jour J,
 
 Lors de la réception de cet event on m'a proposé de faire partie de l'équipe d’accompagnants 😱.
-Mon premier réflexe a été de dire non, syndrome de l'imposteur ou juste connaissance de la réalité, je ne me sentais pas légitime à conseiller quelqu'un sur comment construire et donner un talk alors que moi même j'en avais donné 2 ou 3 de toute ma vie !
+Mon premier réflexe a été de dire non, syndrome de l'imposteur ou juste connaissance de la réalité, je ne me sentais pas légitime à conseiller quelqu'un sur comment construire et donner un talk alors que moi-même j'en avais donné 2 ou 3 de toute ma vie !
 
 Mais voilà, on ne se refait pas, je me suis laissé embarquer 🤪.
 

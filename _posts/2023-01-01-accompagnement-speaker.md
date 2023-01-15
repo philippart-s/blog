@@ -20,7 +20,7 @@ Du coup, je me suis dit, tiens ! et si je vous partageais comment j'en suis arri
 [Austrian National Library](https://unsplash.com/fr/photos/GxB6Pbi4Jzg?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink){:style="font-size: smaller"}{:target="_blank"}{: .align-right}
 
 C'est assez amusant car le titre de l'article est justement ce que je n'aime pas dans ce type de démarche : une notion de sachant et de non sachant.
-Mais j'aimai bien le parallèle avec cette citation 😉 (et avouons le, je sui un fan de star wars !).  
+Mais j'aimais bien le parallèle avec cette citation 😉 (et avouons-le, je suis un fan de Star Wars !).  
 C'est pourquoi, je n'aime pas parler de coaching, mentoring, senior et junior, ... 
 Dans mon subconscient, cela met l'autre dans une position inférieure, avant même de commencer.
 Et la plupart du temps, les personnes que j'ai eu la chance d'accompagner étaient beaucoup plus pertinentes et connaisseuses que moi du domaine qu'elles présentaient.

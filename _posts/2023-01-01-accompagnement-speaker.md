@@ -100,7 +100,7 @@ Tenir par la main, aider à progresser mais en faisant que la personne se constr
 En la ou le relevant quant elle / il trébuche, en l’encourageant, en la / le rassurant, ...
 
 Honnêtement dans la plupart des accompagnements que j'ai pu faire, la production de la personne est déjà à 90% terminée et de qualité et ne demande pas de changements.
-Je suis là pour les 10%, souvent dû à quelques trucs et astuces méconnus lorsque l'on se lance dans ce genre d'aventure 🤗.
+Je suis là pour les 10%, souvent dus à quelques trucs et astuces méconnus lorsque l'on se lance dans ce genre d'aventure 🤗.
 Encore une fois, lorsque l'on accompagne une personne pour un talk, notre rôle principal, selon moi, est de la guider, provoquer le déclique.
 
 Et dernière chose, lorsque c'est possible, j'essaie d'être là lors du passage en conférence pour gérer l'avant et l'après avec la personne. 

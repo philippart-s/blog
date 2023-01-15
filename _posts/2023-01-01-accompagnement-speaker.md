@@ -80,7 +80,7 @@ Mon objectif est de me mettre dans la peau d'un spectateur, comme en conférence
 Bref le client zéro lambda de base 😊.
 
 Une autre chose, qui paraît évidente : je laisse parler la personne le plus possible !
-Eh oui c'est sont talk, même si j'ai quelques idées je préfère toujours laisser la personne me présenter ses idées plutôt que l'orienter sur des terrains qu'elle n'aurait pas prévu d'aller.
+Eh oui c'est sont talk, même si j'ai quelques idées je préfère toujours laisser la personne me présenter ses idées plutôt que l'orienter sur des terrains où  elle n'aurait pas prévu d'aller.
 Je me répète mais c'est son talk pas le mien 😉.
 
 Ce que je me permets, principalement, c'est poser des questions lorsque j'ai un doute ou si j'ai besoin d'éclaircissements sur un point en particulier.

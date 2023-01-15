@@ -99,7 +99,7 @@ Et pour cela je vais prendre ma casquette de parent, eh oui, au final pour moi c
 Tenir par la main, aider à progresser mais en faisant que la personne se construise elle-même en tant que speaker, sans le faire à sa place.
 En la ou le relevant quant elle / il trébuche, en l’encourageant, en la / le rassurant, ...
 
-Honnêtement dans la plupart des accompagnements que j'ai pu faire, la production de la personne est déjà à 90% fini et de qualité et ne demande pas de changements.
+Honnêtement dans la plupart des accompagnements que j'ai pu faire, la production de la personne est déjà à 90% terminée et de qualité et ne demande pas de changements.
 Je suis là pour les 10%, souvent dû à quelques trucs et astuces méconnus lorsque l'on se lance dans ce genre d'aventure 🤗.
 Encore une fois, lorsque l'on accompagne une personne pour un talk, notre rôle principal, selon moi, est de la guider, provoquer le déclique.
 

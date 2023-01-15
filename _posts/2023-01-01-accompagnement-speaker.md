@@ -12,7 +12,7 @@ tags:
 [www.starwars.com](https://www.starwars.com/databank/yoda?image_id=5390fdbd0a172d315d000484){:style="font-size: smaller"}{:target="_blank"}{: .align-right}
 
 Depuis quelques temps, il m'arrive d'accompagner des personnes qui souhaitent se lancer dans l'aventure de devenir speaker dans les conférences techs.
-Du coup, je me suis dis, tient et si je vous partageais comment j'en suis arrivé là et ce que j'y ai gagné.
+Du coup, je me suis dit, tiens ! et si je vous partageais comment j'en suis arrivé là et ce que j'y ai gagné.
 
 ## Un peu de vocabulaire 🔠
 

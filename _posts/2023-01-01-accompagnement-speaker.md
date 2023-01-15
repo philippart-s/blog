@@ -114,7 +114,7 @@ Vous avez deux heures ... 🤯
 ![lettres qui affichent listen learn love]({{ site.url }}{{ site.baseurl }}/assets/images/accompagnement-speaker/listen-learn-love.jpg){: .align-center}
 [Brett Jordan](https://unsplash.com/@brett_jordan){:style="font-size: smaller"}{:target="_blank"}{: .align-right}
 
-Bien sûr, je ne pense pas m'être lancé dans cette aventure parceque cela m'apportait quelque chose d'évident.
+Bien sûr, je ne pense pas m'être lancé dans cette aventure parce que cela m'apportait quelque chose d'évident.
 J'ai, simplement, découvert au fur et à mesure, que cet exercice m'apportait énormément de choses à titre personnel. 
 En effet, durant l'accompagnement vous devez vous remettre en question afin d'être sûr de promulguer les bons conseils.
 Cela a comme effet immédiat de vous faire poser des questions sur vos propres talks, est-ce que j'applique vraiment tout ce que je suis en train de conseiller ?  

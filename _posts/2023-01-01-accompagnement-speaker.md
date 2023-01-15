@@ -118,7 +118,7 @@ Bien sûr, je ne pense pas m'être lancé dans cette aventure parce que cela m'a
 J'ai simplement découvert, au fur et à mesure, que cet exercice m'apportait énormément de choses à titre personnel. 
 En effet, durant l'accompagnement vous devez vous remettre en question afin d'être sûr de promulguer les bons conseils.
 Cela a comme effet immédiat de vous faire poser des questions sur vos propres talks, est-ce que j'applique vraiment tout ce que je suis en train de conseiller ?  
-Vous l'aurez compris rien de mieux que l'effet miroir pour se rendre compte qu'il est toujours plus facile de juger les autres que soit même 🧐.  
+Vous l'aurez compris rien de mieux que l'effet miroir pour se rendre compte qu'il est toujours plus facile de juger les autres que soi-même 🧐.  
 Lors du passage de la personne accompagnée aussi quel stress !
 Les émotions sont fortes, quasi plus fortes que lors de mes propres talks 😳.
 Mais alors quelle fierté, je peux vous l'assurer !

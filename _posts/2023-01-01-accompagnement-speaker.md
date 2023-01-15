@@ -2,7 +2,7 @@
 title: "Toujours par deux ils vont. Ni plus, ni moins. Le maître et son apprenti."
 excerpt: "De Yoda"
 classes: wide
-date: 2023-01-14
+date: 2023-01-15
 categories:
   - Articles
 tags:
@@ -133,3 +133,5 @@ Enfin j'aimerai indiquer qu'il existe de plus en plus de conférences qui réser
 Et puis, comment ne pas citer les meetups, comme [TADx](https://www.tadx.fr/){:target="_blank"} par exemple, qui laissent très souvent leur chance aux primos speakers, voir leurs proposent un accompagnement 🤗
 
 Si vous êtes arrivés jusque là merci de m'avoir lu et si il y a des coquilles n'hésitez pas à me faire une [issue ou PR](https://github.com/philippart-s/blog){:target="_blank"} 😊.
+
+Merci à ma relectrice, Fanny, qui vous permet de lire cet article sans avoir trop les yeux qui saignent 😘.

@@ -8,6 +8,8 @@ categories:
 tags:
   - Humeur
 ---
+<meta content="{{ {{ site.url }}{{ site.baseurl }}/assets/images/accompagnement-speaker/yoda-qui-gon.png" property="og:image">
+
 ![Yoda et QUI-GON]({{ site.url }}{{ site.baseurl }}/assets/images/accompagnement-speaker/yoda-qui-gon.png){: .align-center}
 [www.starwars.com](https://www.starwars.com/databank/yoda?image_id=5390fdbd0a172d315d000484){:style="font-size: smaller"}{:target="_blank"}{: .align-right}
 

@@ -42,7 +42,7 @@ Je n'étais (et je ne suis toujours pas) un spécialiste de la prise de parole e
 Mais le hasard fait, parfois, bien les choses 😉 : avec l'association que j'ai co-créée, [TADx](https://www.tadx.fr){:target="_blank"}, nous avons co-organisé un tremplin pour donner sa chance à tout un groupe de speakers de donner leur premier talk dans une conférence.  
 Le tremplin était co-organisé avec [Le Camping des Speakers](https://camping-speakers.fr/){:target="_blank"}, la conférence pour laquelle les participantes et participants pouvaient gagner une place, et [Crafts Records](https://craftsrecords.org/){:target="_blank"}, une association parisienne qui offre la possibilité d'accompagner des speakers pour les aider à donner leur premier talk.
 
-Avec TADx on a proposé d'héberger cet event qui se déroulait comme suit : 
+Avec TADx on a proposé d'héberger cet event à Tours. Voici comment cela s'est déroulé : 
  - une phase d'accompagnement des speakers dans la phase d'écriture du CFP,
  - une phase d'accompagnement des speakers dans la phase de création du talk,
  - des répétitions,

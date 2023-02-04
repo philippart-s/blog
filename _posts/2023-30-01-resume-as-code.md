@@ -34,156 +34,30 @@ Voyons ça ensemble ⬇️.
 
 ## Tout en liquide ... 💧
 
+![Resume example]({{ site.url }}{{ site.baseurl }}/assets/images/resume-as-code/liquid.jpg){: .align-center}
+[César Couto](https://unsplash.com/photos/eIDXdlfelVE?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink){:style="font-size: smaller"}{:target="_blank"}{: .align-right}
+
 Je vous l'ai dit, j'ai très vite exclus le fait de faire un CV statique en markdown.
 Après coup je me dis que cela aurait pu être aussi une bonne solution mais je voulais quelque chose avec les données à part comme on peut trouver dans [JSON Resume](https://jsonresume.org/){:target="_blank"}.
 
-Pour avoir déjà un peu _bidouillé_ Jekyll pour amener du dynamisme il est possible de faire des trucs sympa avec le moteur de templating [Liquid](https://github.com/Shopify/liquid/wiki){:target="_blank"}.
+Pour avoir déjà un peu _bidouillé_ Jekyll pour amener du dynamisme il est possible de faire des trucs sympa avec le moteur de templating [Liquid](https://github.com/Shopify/liquid/wiki){:target="_blank"}.  
+En quoi cela consiste ?
+Définir des templates en HTML pour y injecter du dynamisme avec des boucles par exemple ou de la donnée externe stockée dans un fichier.
+Pour les plus vielles et plus vieux d'entre vous ce que l'on faisait en [JSTL](https://www.oracle.com/java/technologies/java-server-tag-library.html){:target="_blank"} 🤪.
 
-Ca y est, enfin, [Touraine Tech](https://touraine.tech/){:target="_blank"} édition 2023 est là et moi je viens de vivre deux jours intenses en émotions 🤩.  
-C'est déjà la première chose différente par rapport aux années précédentes, les orgas ont eu la bonne idée de doubler le plaisir en ajoutant un jour de conférence !
+Un petit exemple que j'utilise sur ce blog:
+{% raw %}
+```html
+<div class="entries-{{ entries_layout }}">
+  {% for post in posts %}
+    {% include archive-single.html type=entries_layout %}
+  {% endfor %}
+</div>
+```
+{% endraw %}
 
-## L'organisation 💪
 
-![Orgas TNT 23]({{ site.url }}{{ site.baseurl }}/assets/images/tnt23/tnt-team.png){: .align-center}
-[https://touraine.tech/](https://touraine.tech/){:style="font-size: smaller"}{:target="_blank"}{: .align-right}
-
-Quelle équipe !
-Alors commençons par les remercier : merci Amandine, Elisa, Benjamin, Cédric, Christophe, Florian, François, Jordan et Valentin ❤️.  
-Vous avez réussi un truc de fous et toujours dans la bonne humeur en prenant soin de vos spectatrices, spectateurs, oratrices, orateurs et sponsors.  
-Une mention spéciale aussi à tous les étudiantes et étudiants qui vous ont aidé durant ces deux jours, ils ont été au top 👏.
-
-## La conférence 🗣
-
-![Photo Univers]({{ site.url }}{{ site.baseurl }}/assets/images/tnt23/universe.jpg){: .align-center}
-[Jeremy Thomas](https://unsplash.com/photos/4dpAqfTbvKA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink){:style="font-size: smaller"}{:target="_blank"}{: .align-right}
-
-Il m'arrive, en parlant de cette conférence, de ne pas être toujours objectif peut être 😉.  
-Touraine Tech c'est, maintenant, 2 jours de conférences autour de la tech et plus particulièrement du développement.
-Le programme réserve aussi de belles surprises autour de thèmes plus vastes comme la place de la femme / homme dans la tech, l'agilité, des retours d'expériences personnelles afin de nous aider à mieux apprendre ou s'organiser, ...
-
-Vous l'aurez compris, ne pas trouver chaussure à son pied durant ces deux jours est impossible.
-Durant ces deux jours il est possible de choisir parmi : 
- - 4 keynotes
- - 3 workshops
- - 35 conférences
- - 18 quickies
-
-Plus de détails sur le programme : [https://touraine.tech/#schedule](https://touraine.tech/#schedule){:target="_blank"}.
-
-C'est aussi l’occasion pour 400 personnes de venir non seulement assister à des conférences de qualité mais aussi de rencontrer de gentils sponsors sur les stands.
-Cette année ils étaient au nombre de 10 en physique et 3 en virtuel.
-
-Je me dois aussi de parler d'une chose qui fait la renommée de cette conférence : [les fouées](https://www.my-loire-valley.com/2022/07/fouees-tourangelles/){:target="_blank"}.
-Qu'elles soient garnies de rillettes (de Tours bien évidemment), de chèvre (de Touraine bien évidemment) ou tout autre chose, c'est délicieux 🤤. 
-
-# Ma conférence à moi 🔍
-
-![Chapeaux]({{ site.url }}{{ site.baseurl }}/assets/images/tnt23/chapeaux.jpg){: .align-center}
-[Joshua Colman](https://unsplash.com/photos/_yVRLC75Ma8?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink){:style="font-size: smaller"}{:target="_blank"}{: .align-right}
-
-Cette année, je cumulais pas mal de casquettes : 
- - sponsor avec ma société [OVHcloud](https://www.ovhcloud.com/fr/){:target="_blank"}, et donc tenue du stand,
- - speaker avec un [talk](https://touraine.tech/talk/SltiD9i2aW0hxWmNWWop){:target="_blank"} en compagnie d'[Elea Petton](https://twitter.com/EleaPetton){:target="_blank"},
- - accompagnateur pour soutenir Matthieu dans sa découverte du monde des conférences de l'autre côté de la barrière,
- - spectateur de quelques talks et bien sûr local de l'étape 😉
-
-# Sponsor à Touraine Tech 💬
-
-![Sponsors TNT 23]({{ site.url }}{{ site.baseurl }}/assets/images/tnt23/sponsors.png){: .align-center}
-[https://touraine.tech/](https://touraine.tech/){:style="font-size: smaller"}{:target="_blank"}{: .align-right}
-
-C'est un des aspects de mon métier de [DevRel]({{ site.baseurl }}{% post_url 2022-03-06-c-est-quoi-un-devrel %}) : participer à la vie du stand lors de la conférence.
-Là encore, l'équipe d'organisation de Touraine Tech fait bien les choses en organisant avant la conférence une soirée dédiée aux sponsors.
-L'occasion de s'organiser une dernière fois avec eux mais aussi de découvrir et discuter avec les autres sponsors présents lors de l'évènement.
-
-La tenue de ce stand était un peu particulière car, forcément, je connaissais beaucoup plus de monde que d'habitude.
-Donc, beaucoup de discussions, mais aussi de _"ah t'es chez OVHcloud maintenant mais du coup tu fais quoi ?"_.  
-En gros, mêler l'utile à l'agréable 😉.
-
-Comme toute conférence en tant que sponsor la journée commence tôt : 6h 😱 !
-Mais là aucun besoin de motivation pour démarrer la journée je n'attendais que ça.
-Place au montage du stand avant l'arrivée des participantes et participants.
-
-![Photo 1 stand]({{ site.url }}{{ site.baseurl }}/assets/images/tnt23/booth1.jpg){: .align-center}
-![Photo 2 stand]({{ site.url }}{{ site.baseurl }}/assets/images/tnt23/booth3.jpg){: .align-center}
-
-Ensuite, comme je l'ai dit, la journée classique de conférence derrière un stand avec des discussions passionnantes et essayer de présenter ce que fait ma société tout en restant dans une approche détendue entre devs ☺️.
-
-# Les conférences 🗣
-
-![Conférences]({{ site.url }}{{ site.baseurl }}/assets/images/tnt23/conferences.jpg){: .align-center}
-[Kane Reinholdtsen](https://unsplash.com/photos/LETdkk7wHQk?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink){:style="font-size: smaller"}{:target="_blank"}{: .align-right}
-
-Comme souvent, lorsque je suis sponsor, je ne peux pas participer à de nombreuses conférences, cela n'a pas dérogé à la règle cette année.
-Je me rattraperai sur les replays car cette année les trois salles étaient captées 🎥.
-
-## Edge AI : allez viens, on embarque notre intelligence artificielle ! - Eléa Petton
-
-Programme : [https://touraine.tech/talk/07vraokDo3cMoivHt8SD](https://touraine.tech/talk/07vraokDo3cMoivHt8SD){:target="_blank"}
-
-Comment ne pas aller à cette conférence !
-J'ai eu le privilège d'assister à la genèse de cette conférence, de ses doutes, de ses problèmes pour enfin qu'elle voit le jour.
-Et je peux vous dire que le résultat est totalement bluffant, allez voir le replay vous verrez que je ne mens pas 😉.
-Lors de ce talk vous apprendrez comment construire un modèle de reconnaissance d'objets dans une image ou en temps réel grâce à [YOLO](https://github.com/WongKinYiu/yolov7){:target="_blank"}.
-Mais comme Eléa trouvait ça trop simple, elle vous embarque avec elle pour vous expliquer comment mettre ça au plus proche de la machine l'utilisant, dans son cas un Raspberry Pi 4.  
-Et comme d'habitude avec Eléa, en restant pédagogue et simple.
-
-## Lego Flow Game : le Waterfall, le Scrum et le Kanban tu différencieras ! - Fanny Klauk
-
-Programme : [https://touraine.tech/talk/Y3UvX1gfVgRQtncTbfSa](https://touraine.tech/talk/Y3UvX1gfVgRQtncTbfSa){:target="_blank"}
-
-Cette année, Touraine Tech, a de nouveau positionné des workshops.
-Exercice périlleux si il en est et long puisqu'il dure 2h.
-Je n'ai pas eu la chance d'assister à ce workshop mais je suis allé donné un coup de main avant et après afin d'encourager ma chérie, même si je n'avais aucun doute sur sa capacité à mener à bien cet atelier 💪.  
-Pour avoir eu la chance de la voir le préparer, le bichonner jours après jours je vous assure que c'est un boulot titanesque de préparer tout ça et de le donner le jour J.
-
-Au vu de la réaction des nombreuses participantes et participants à la sortie j'en déduis que ce fut un franc succès.
-Oui Fanny, comme tout les speakers, vous dira que tout ne s'est pas déroulé comme prévu mais au final avec une capacité de résilience et d'adaptation tout s'est bien fini et tout le monde a beaucoup appris.
-
-Bravo à toi 💪 😘.
-
-## Keynote d'ouverture du vendredi - Stéphane Bortzmeyer
-
-Comme toujours lorsque cela touche des sujets d'éthique ou de neutralité on ne peut pas rester indifférent.
-L'exposé de Stéphane était passionnant et, même si il avait son parti pris, vous oblige à vous poser des questions sur votre propre consommation et production des applications et services numériques.
-Toujours avec le sourire sans avoir une posture de donneur de leçon, ce qui aide grandement à se poser les bonnes questions lorsque l'on écoute son talk.
-Bravo, un talk qui remue le cerveau 😉.
-
-## (Et si on apprenait à) Apprendre et partager autrement - Aurélie Vache
-
-Programme : [https://touraine.tech/talk/RSFB4Oq1k0AafqRJeZ4z](https://touraine.tech/talk/RSFB4Oq1k0AafqRJeZ4z){:target="_blank"}
-
-A travers un témoignage de ses propres expériences passées et actuelles, Aurélie nous livre sa vision de comment partager autrement.
-Au delà de donner des astuces ou des outils, ce témoignage nous permet aussi de se dire que partager fait du bien aux autres mais aussi à soi même.  
-Et chose importante, ne pas s'arrêter à un système qui, souvent, cherche à vous mettre dans des cases ou tout simplement vous exclut de toute forme d'expression.
-Non, ce ne sont pas les autres qui doivent décider comment vous allez vous exprimer et partager vos idées mais bien vous en osant faire le premier pas.  
-Si vous souhaitez voir ce talk il faudra attendre une autre conférence d'Aurélie car la captation a eu un petit problème (mais c'est ça aussi l'avantage de venir en vrai aux conférences 😉).
-
-## Web dans le cloud, piloter ses décisions par les coûts - Matthieu Werner
-
-Programme : [https://touraine.tech/talk/TvfUGgFtJJ5z8zp5KcLB](https://touraine.tech/talk/TvfUGgFtJJ5z8zp5KcLB){:target="_blank"}
-
-Ce talk était un peu particulier pour moi.
-Matthieu donnait son premier talk et il a accepté que je l'accompagne dans cette aventure de devenir speaker (voir mon [article]({{ site.baseurl }}{% post_url 2023-01-01-accompagnement-speaker %}){:target="_blank"} sur le sujet).  
-J'ai essayé au mieux de l'accompagner, de gommer ses doutes, de l'encourager lorsque le stress et le doute commençaient à prendre trop de place.
-Il n'y avait pas grand chose à améliorer juste l'aider à oser se lancer.  
-Le talk en lui-même était, vous vous en doutez, très intéressant.
-Il vous permet, à travers une étude de cas concret, de voir qu'il est possible de réduire ses coûts lorsque l'on conçoit une architecture dans le cloud.
-L'idée n'est pas de diminuer les performances ou la qualité de l'application finale mais de ne pas faire n'importe quoi pour, ensuite, avoir de désagréables surprises lorsque la facture arrive !
-
-## Si on aidait le capitaine Némo à classifier les monstres marins ? - Eléa Petton / Stéphane Philippart
-
-Programme : [https://touraine.tech/talk/SltiD9i2aW0hxWmNWWop/](https://touraine.tech/talk/SltiD9i2aW0hxWmNWWop/){:target="_blank"}
-
-Celle-là, j'étais un peu obligé d'être présent puisque j'étais co-speaker avec Eléa 😅.
-C'est la troisième fois que l'on donne ce talk et j'avoue que je prends toujours autant de plaisir à le donner.
-Là, le petit plaisir en plus était de le donner devant beaucoup de visages connus et dans l'amphi dans lequel moi-même, 24 ans plus tôt, je suivais des cours.
-
-## Keynote de cloture du vendredi - Olivier Beautier
-
-Quoi de mieux pour finir une conférence qu'une Keynote qui explique comment raconter une histoire !
-Olivier, à travers sa passion pour le théâtre d’improvisation nous raconte comment, de nombreuses histoires sont construites sur le même schéma.  
-A la fin de sa présentation vous allez vous rendre compte que Dirty Dancing et Star Wars ont de nombreux points communs !
+Car oui, la bonne nouvelle est que c'est nativement inclus dans [Jekyll](https://jekyllrb.com/){:target="_blank"}, le moteur de génération utilisé pour ce site 😎.
 
 ## En conclusion
 

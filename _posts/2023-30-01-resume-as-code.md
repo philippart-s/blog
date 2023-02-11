@@ -59,6 +59,11 @@ Un petit exemple que j'utilise sur ce blog:
 
 Car oui, la bonne nouvelle est que c'est nativement inclus dans [Jekyll](https://jekyllrb.com/){:target="_blank"}, le moteur de génération utilisé pour ce site 😎.
 
+## Mais alors comment ça marche ? ⚙️
+
+Au final c'est assez simple : un fichier date au format YAML qui va me permettre de ne pas mettre trop de chose en statique.
+Ensuite une page dédiée au CV qui ira piocher les données du CV dans le YAML.
+
 ## En conclusion
 
 Que dire comme conclusion ?  

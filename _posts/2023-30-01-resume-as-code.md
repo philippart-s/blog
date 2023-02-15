@@ -102,7 +102,7 @@ Dans le détail quelles sont les étapes pour arriver à mon CV final ?
 Rien de bien compliqué, dans ce cas Github est votre ami pour faire directement un fork 😉.
 Ensuite l'idée était de pouvoir continuer à participer au projet tout en créant mon CV sans envoyer mes données dans le thème d'origine 😅.
 Pour cela, j'ai simplement créé une branche _my-resume_ qui me sert de branche de production dans Github pour la configuration de Github pages.
-Cette branche contient le code _upstream_, le code des PR que j'ai proposée en attente de validation (ou pas) et le code propre à mon CV à moi.
+Cette branche contient le code _upstream_, le code des PR que j'ai proposées en attente de validation (ou pas) et le code propre à mon CV à moi.
 
 Tout ceci se trouve ici : [online-cv](https://github.com/philippart-s/online-cv){:target="_blank"}.
 

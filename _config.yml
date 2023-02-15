@@ -68,6 +68,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/philippart-s"
+    - label: "CV"
+      icon: "fas fa-fw fa-fw fa-link"
+      url: "https://philippart-s.github.io/online-cv/"
 
 footer:
   links:

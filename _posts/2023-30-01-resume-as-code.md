@@ -37,7 +37,7 @@ Voyons ça ensemble ⬇️.
 ![Resume example]({{ site.url }}{{ site.baseurl }}/assets/images/resume-as-code/liquid.jpg){: .align-center}
 [César Couto](https://unsplash.com/photos/eIDXdlfelVE?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink){:style="font-size: smaller"}{:target="_blank"}{: .align-right}
 
-Je vous l'ai dit, j'ai très vite exclus le fait de faire un CV statique en markdown.
+Je vous l'ai dit, j'ai très vite exclu le fait de faire un CV statique en markdown.
 Après coup, je me dis que cela aurait pu être aussi une bonne solution mais je voulais quelque chose avec les données à part comme on peut trouver dans [JSON Resume](https://jsonresume.org/){:target="_blank"}.
 
 Pour avoir déjà un peu _bidouillé_ Jekyll pour amener du dynamisme il est possible de faire des trucs sympas avec le moteur de templating [Liquid](https://github.com/Shopify/liquid/wiki){:target="_blank"}.  

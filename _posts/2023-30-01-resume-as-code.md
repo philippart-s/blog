@@ -80,7 +80,7 @@ Autant vous le dire tout suite : CSS / JS ne font pas bon ménage avec moi 😅,
 
 Dans mon cas, je savais que j'aurai des modifications structurelles à apporter au thème d'origine.
 J'ai donc choisi de faire un fork.
-J'en ai profité pour proposer des PR avec les modifications que j'apportai au fur et à mesure 🤝.
+J'en ai profité pour proposer des PR avec les modifications que j'apportais au fur et à mesure 🤝.
 
 Les modifications que j'ai apportées au thème d'origine : 
  - choix de la localisation de la _sidebar_ (droite ou gauche),

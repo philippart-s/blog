@@ -67,7 +67,7 @@ Car oui, la bonne nouvelle est que c'est nativement inclus dans [Jekyll](https:/
 
 Au final, il y a deux choses principales pour faire un site avec Jekyll : 
   - la partie design : de manière classique les compétences vont être axées sur le HTML, CSS et Javascript,
-  - la partie génération / dynamisme : là ce sont plus des compétence algorithmiques classiques et la connaissance de [Liquid](https://github.com/Shopify/liquid/wiki){:target="_blank"} qui vont être importantes.
+  - la partie génération / dynamisme : là ce sont plus des compétences algorithmiques classiques et la connaissance de [Liquid](https://github.com/Shopify/liquid/wiki){:target="_blank"} qui vont être importantes.
 
 Autant vous le dire tout suite : CSS / JS ne font pas bons ménage avec moi 😅, plutôt que de repartir de zéro et faire un truc moche, j'ai donc choisi de partir d'un [thème Jekyll](https://jekyllrb.com/docs/themes/#pick-up-a-theme){:target="_blank"} existant.
 

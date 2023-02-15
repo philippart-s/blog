@@ -108,7 +108,7 @@ Tout ceci se trouve ici : [online-cv](https://github.com/philippart-s/online-cv)
 
 ### Ajout de fonctionnalités ✨
 
-La première fonctionnalité que j'ai rajouté permet de mettre la bare latéral d'informations (nom, prénom, téléphone, ...) à gauche ou à droite.
+La première fonctionnalité que j'ai rajoutée permet de mettre la barre latérale d'informations (nom, prénom, téléphone, ...) à gauche ou à droite.
 Pour cela j'ai rajouté un champ de configuration dans le fichier _data.yml_ : 
 ```yaml
 sidebar:

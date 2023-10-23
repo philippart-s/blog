@@ -16,19 +16,19 @@ tags:
 ![DevFest Nantes 2023 logo]({{ site.url }}{{ site.baseurl }}/assets/images/devfest-nantes-2023/Logo-devfest-nantes-2023.jpg){: .align-center}
 [© DevFest Nantes](https://devfest.gdgnantes.com/){:style="font-size: smaller"}{:target="_blank"}{: .align-right}
 
-J'ai, de nouveau, eu la chance (et ce n'est pas un euphémisme quand on voit la vitesse à laquelle les places partent) au [DevFest Nantes 2023](https://devfest.gdgnantes.com/){:target="_blank"}.  
-Il se déroulait à la Citée des [Congrès de Nantes](https://lacite-nantes.fr/){:target="_blank"}.
-J'aime beaucoup ce lieu car je trouve que malgré le nombre de personnes qui passent durant les deux jours (+ 3500 il me semble) l'impression de foule reste supportable.
+J'ai, de nouveau, eu la chance (et ce n'est pas un euphémisme quand on voit la vitesse à laquelle les places partent) de participer au [DevFest Nantes 2023](https://devfest.gdgnantes.com/){:target="_blank"}.  
+Il se déroulait à la [Citée des Congrès de Nantes](https://lacite-nantes.fr/){:target="_blank"}.
+J'aime beaucoup ce lieu car je trouve que, malgré le nombre de personnes qui passent durant les deux jours (+ 3500 il me semble), l'impression de foule reste supportable.
 
-Pour celles et ceux qui ne connaissent pas le DevFest Nantes c'est une conférence tech orientée développement (mais pas que, on y reviendra 😉) plutôt francophone (quelques conférences sont en anglais) et se basant ... à Nantes (oui le nom aurait été bizarre sinon 😅).
-C'est clairement avec, [Devoxx France](https://www.devoxx.fr/) la conférence la plus importante de l'écosystème tech / numérique de France.
+Pour celles et ceux qui ne connaissent pas le DevFest Nantes : c'est une conférence tech orientée développement (mais pas que, on y reviendra 😉) plutôt francophone (quelques conférences sont en anglais) et se passant ... à Nantes (oui le nom aurait été bizarre sinon 😅).
+C'est clairement avec, [Devoxx France](https://www.devoxx.fr/), la conférence la plus importante de l'écosystème tech / numérique de France.
 
-C'est donc, vous l'imaginez avec joie et excitation que je suis parti (beaucoup trop tôt à mon goût 😅) le jeudi 19 octobre pour deux jours intensifs !
+C'est donc, vous l'imaginez, avec joie et excitation que je suis parti (beaucoup trop tôt à mon goût 😅) le jeudi 19 octobre pour deux jours intensifs !
 
 ## 💰 Sponsor à DevFest Nantes
 
 Être sponsor à DevFest Nantes, cela se mérite et cela commence par tenter de décrocher un précieux sésame !  
-Car oui si les places participant•es sont compliquées à avoir, les places sponsors je crois que c'est encore plus dur !
+Car oui, si les places participant•es sont compliquées à avoir, les places sponsors je crois que c'est encore plus dur !
 Mais nous avions réussi à décrocher le précieux sésame (à coup de F5 en masse le jour de la mise en vente 😉).
 
 Cette année, le thème de la conférence était le cinéma.
@@ -45,10 +45,10 @@ Et sur une conférence comme le DevFest Nantes c'est encore plus le cas 🤪.
 Heureusement on a la chance à OVHcloud d'avoir de supers collègues qui viennent de différents horizons et participent à la tenue du stand avec nous de main de maître 💪.
 
 D'ailleurs j'en profite pour vous donner un conseil ou plutôt vous demander quelque chose à vous qui passez nous voir sur les stands 😉.
-Je sais que la chasse au goodies est un sport mais ne faites pas vos sauterelles en prenant tout ce qui est possible sur le stand et en repartant aussi tôt.
+Je sais que la chasse au goodies est un sport, mais ne faites pas vos sauterelles en prenant tout ce qui est possible sur le stand et en repartant aussi tôt.
 Tout d'abord parce que si à la fin cela fini à la poubelle ce n'est pas très utile et très bon pour notre planète 🌍.  
 Mais aussi un _bonjour_ et _merci, au revoir_ cela fait toujours plaisir 🤗.
-Et truc de dingues, prenez le temps de discuter et vous intéresser à l'entreprise que vous venez voir, souvent on a mis de l'énergie et du temps pour préparer tout ça et, de plus, les conversations sont toujours très enrichissantes.
+Et truc de dingue, prenez le temps de discuter et vous intéresser à l'entreprise que vous venez voir, souvent on a mis de l'énergie et du temps pour préparer tout ça et, de plus, les conversations sont toujours très enrichissantes.
 
 ## 🎙️ Speaker à DevFest Nantes
 
@@ -57,7 +57,7 @@ Enfin, surtout j'ai eu la chance que [Fanny Klauk](https://twitter.com/klf37){:t
 Un atelier, lors de conférences comme le DevFest Nantes, permet aux participant•es de réellement manipuler et agir durant deux heures (ou trois dans certaines conférences).
 
 Durant cet atelier, l'objectif est de faire découvrir aux personnes les différences entre le Waterfall, le Scrum et le Kanban.
-Fanny a découvert le Lego Flow Game lrs de l'[agile tour Rennes](https://agiletour.agilerennes.org/){:target="_blank"} avec une conférence donnée par [Nicolas Arhan](https://www.linkedin.com/in/arhannicolas/){:target="_blank"} et se l'est approprié (avec sa bénédiction bien sûr 😉) pour un faire un super atelier !
+Fanny a découvert le Lego Flow Game lors de l'[agile tour Rennes](https://agiletour.agilerennes.org/){:target="_blank"} avec une conférence donnée par [Nicolas Arhan](https://www.linkedin.com/in/arhannicolas/){:target="_blank"} et se l'est appropriée (avec sa bénédiction bien sûr 😉) pour un faire un super atelier !
 Je ne vous en dit pas plus, il faut le vivre !
 Mais vu les retours et les échanges d'après atelier je ne vous conseillerai que vivement d'y participer si Fanny le propose à une conférence où vous vous trouvez.
 
@@ -71,7 +71,7 @@ Et si vous voulez en savoir plus sur l'atelier en lui-même et comment il est co
 ## 🗣️ Les conférences
 
 Vous l'aurez certainement compris.
-Entre le stand et l'atelier de deux heures aller voir des conférences n'a pas été évident 😅.
+Entre le stand et l'atelier de deux heures, aller voir des conférences n'a pas été évident 😅.
 Cependant il y avait des conférences que je ne voulais louper pour rien au monde et je vous propose de vous les faire découvrir.
 Je vous le dis tout suite : il faudra vous jeter sur les replays lorsqu'ils seront disponibles sur la [chaîne YouTube](https://www.youtube.com/playlist?list=PLuZ_sYdawLiUHU4E1i5RrFsRN_lQcgPwT){:target="_blank"} du DevFest Nantes.
 
@@ -81,7 +81,7 @@ Je vous le dis tout suite : il faudra vous jeter sur les replays lorsqu'ils sero
 
 Olivier, j'ai eu la chance de le voir à [Devoxx Maroc 2022](https://devoxx.ma/){:target="_blank"} et de le croiser sur d'autres conférences pour discuter avec lui.
 Que ce soit en conférence ou lorsque vous discutez avec Olivier vos zygomatiques sont soumis à rude épreuve 😃.
-Il faut aussi parti de ces personnes qui ont l'impression d'avoir toujours un bout de soleil avec elles et qui arrivent à vous transporter dans leur univers.  
+Il fait aussi parti de ces personnes qui ont l'impression d'avoir toujours un bout de soleil avec elles et qui arrivent à vous transporter dans leur univers.  
 L'univers d'Olivier, justement, est un univers où l'on ne peut s'acheter un composant électronique qu'une fois que l'on a réussi à le faire sois-même et de manière assez simple pour l'expliquer à des néophytes comme vous et moi.
 
 ![Conférence Olivier]({{ site.url }}{{ site.baseurl }}/assets/images/devfest-nantes-2023/conference-olivier.jpg){: .align-center}
@@ -89,20 +89,22 @@ L'univers d'Olivier, justement, est un univers où l'on ne peut s'acheter un com
 
 
 Après avoir brillamment réussi l'exploit de le faire avec un processeur il s'attaque à la carte graphique VGA (SVGA devrais-je dire 😉).
-Et une fois de plus il y arrive, on sourit, on rigole mais surtout on apprends !
+Et une fois de plus il y arrive, on sourit, on rigole mais surtout on apprends !  
 
-Bien sûr vous pouvez aller voir les replays une fois disponibles, mais essayer de voir Olivier en conférence c'est tellement mieux !
+Et comme cela serait trop simple de s’arrêter après ces deux exploits il nous prépare pleins d'autres choses, mais pour ça il faudra attendre les prochaines conférences 😉.
+
+Bien sûr vous pouvez aller voir les replays une fois disponibles, mais essayez de voir Olivier en conférence c'est tellement mieux !
 
 
 ### 🧠 Et si l'IA était la solution pour comprendre la langue des signes ?
 
-👩🏻 [Eléa Petton](https://twitter.com/EleaPetton){:target="_blank"}, OVHcloud
+👩🏻 [Eléa Petton](https://twitter.com/EleaPetton){:target="_blank"}, OVHcloud  
 🏞️ [les slides](https://noti.st/eleapttn/YBxNLQ/et-si-lia-etait-la-solution-pour-comprendre-la-langue-des-signes){:target="_blank"} de la conférence
 
 Oui j'ai de nouveau été voir Eléa en conférence.
-Et en plus sur u talk que j'ai déjà vu 😉.
+Et en plus sur un talk que j'ai déjà vu 😉.
 Pourquoi me direz-vous ?
-Tous simplement parce que, même en travaillant avec Eléa, en aillant de privilège de voir ses talks se construire je suis toujours bluffé une fois qu'elle monte sur scène.
+Tous simplement parce que, même en travaillant avec Eléa, en ayant le privilège de voir ses talks se construire je suis toujours bluffé une fois qu'elle monte sur scène.
 Et devinez quoi ? 
 Une fois de plus je n'ai pas été déçu.
 
@@ -115,18 +117,18 @@ Bref, rien à redire si ce n'est qu'elle me bluff toujours.
 ![Conférence Eléa]({{ site.url }}{{ site.baseurl }}/assets/images/devfest-nantes-2023/conference-elea.jpg){: .align-center}
 [© @wildagsx](https://twitter.com/wildagsx){:style="font-size: smaller"}{:target="_blank"}{: .align-right}
 
-Continues comme ça Eléa, je ne sais pas où tu va t’arrêter mais ce sera très loin ! 
+Continue comme ça Eléa, je ne sais pas où tu va t’arrêter mais ce sera très loin ! 
 
 Jetez-vous sur le replay dès qu'il est disponible.
 
 ### 🚀 L'AGC : retour sur l'ordinateur qui a amené l'humanité sur la Lune
 
-🙎‍♂️ [Olivier Poncet](https://twitter.com/ponceto91){:target="_blank"}, [Hawkswell](https://www.hawkswellstudios.com/){:target="_blank"}
+🙎‍♂️ [Olivier Poncet](https://twitter.com/ponceto91){:target="_blank"}, [Hawkswell](https://www.hawkswellstudios.com/){:target="_blank"}  
 🙎‍♂️ [Romain Berthon](https://twitter.com/RomainTrm){:target="_blank"}, Dotware Consulting
 
-Merci les orgas pour avoir déplacer l'heure de notre atelier avec Fanny, cela nous a permis de suivre cette conférence.
+Merci les orgas pour avoir déplacé l'heure de notre atelier avec Fanny, cela nous a permis de suivre cette conférence 😜.
 Nous étions tellement tristes de la louper !  
-Et nous n'avons pas été déçus en amoureux de l'espace et des histoires de conquêtes spatiales (mais aussi en grands fans d'Apollo 13 !).
+Et nous n'avons pas été déçus, en amoureux de l'espace et des histoires de conquêtes spatiales (mais aussi en grands fans d'Apollo 13 !).
 
 Olivier et Romain nous emmènent dans les méandre de l'AGC, en gros l'ordinateur qui a fait voler les missions Apollo 🤩.
 La force de leur talk : arriver à parler de choses très complexes en les rendant simples et compréhensibles.
@@ -135,21 +137,21 @@ Ils nous ont permis de se rendre compte à quelle point cette folle aventure de 
 ![Conférence Olivier et Romain]({{ site.url }}{{ site.baseurl }}/assets/images/devfest-nantes-2023/conference-olivier-romain.jpg){: .align-center}
 [© @wildagsx](https://twitter.com/wildagsx){:style="font-size: smaller"}{:target="_blank"}{: .align-right}
 
-Et pour ma part j'ai déguster ce talk du début à la fin avec des yeux d'enfant la tête dans les étoiles !
+Et pour ma part j'ai dégusté ce talk du début à la fin avec des yeux d'enfant la tête dans les étoiles !
 Je vais m'empresser de le montrer à mon fils une fois le replay disponible car lui aussi souvent il marche le visage tourné vers la voûte celeste 💫.
 
 Un grand merci messieurs pour ce merveilleux moment passé.
 
 ## 🎁 Scène(s) post-générique
 
-C'est la tradition, maintenant dans les films il y a une scène post-générique.
+C'est la tradition, maintenant dans les films il y a une ou des scènes post-générique.
 Pour moi cela a été la Keynote de clôture et la soirée de cloture au [melting potes](https://meltingpotesnantes.com/){:target="_blank"}.
 
 Commençons par la Keynote !
 Ma chérie a eu la chance de faire partie de cette Keynote 🥰.
-La Keynote en elle-même était un jeu créer de toute pièce se faisant affronter deux équipes sur le thème du cinéma.
-L'autre équipe avant comme speaker [Hubert Sablonnière](https://twitter.com/hsablonniere){:target="_blank"}.
-Une super idée, une super ambiance et des supers participantes et participants pour fermer de DevFest Nantes !
+La Keynote en elle-même était un jeu créé de toute pièce se faisant affronter deux équipes sur le thème du cinéma.
+L'autre équipe ayant comme speaker [Hubert Sablonnière](https://twitter.com/hsablonniere){:target="_blank"}.
+Une super idée, une super ambiance et des supers participantes et participants pour fermer le DevFest Nantes !
 Bravo l'équipe d'ogas vous vous êtes surpassés !
 
 ![Conférence Keynote]({{ site.url }}{{ site.baseurl }}/assets/images/devfest-nantes-2023/keynote.jpg){: .align-center}
@@ -175,7 +177,7 @@ Cette conférence est d'une top qualité !
 Un grand merci aussi aux bénévoles vous avez été tops et adorables.
 Et un énorme merci au personnel de la cité qui permettent que tout se passe pour le mieux et que l'on mange pendant les pauses 😉.
 
-J'ai hâte et k'espère vous revoir toutes et tous l'an prochain 👋.
+J'ai hâte et j'espère vous revoir toutes et tous l'an prochain 👋.
 
 Et encore bravo à ma chérie, tu es une super speaker !!
 

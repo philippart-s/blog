@@ -388,8 +388,64 @@ Fichier qui contient la feuille de style du plugin.
 }
 ```
 
-Au final, maintenant nos slides ont un beau footer !
+Au final, nos slides ont un beau footer !
 
 ![Exemple footer]({{ site.url }}{{ site.baseurl }}/assets/images/slidesk-discovery/footer-slide.png){: .align-center}
+
+## 👀 La speaker view
+
+Arrêtons-nous à la fonctionnalité qui va en intéresser plus d'un•es : la possibilité d'afficher les [notes speakers](https://slidesk.github.io/slidesk-doc/docs/syntax/Comments/speaker-notes){:target="_blank"}.
+A titre personnel, je ne l'utilise pas : mon cerveaux ne sait pas faire deux choses en même temps (parler et lire) 😅.
+La speaker view de SliDesk permet :
+ - d'afficher les note speakers
+ - d'afficher un timer pour savoir combien de temps on doit passer sur le slide ou à combien de temps on doit être sur la présentation
+
+Pour avoir comme speaker note rien de plus facile : tout commentaire dans les slides sera affiché dans les speaker notes, les commentaires doivent être au format `/* commentaire */` (bien sûr il peut être multi-lignes).
+
+Une feature que je trouve super intéressante avec les speaker notes : vous pouvez [les afficher sur un device autre](https://slidesk.github.io/slidesk-doc/docs/usage/options/notes){:target="_blank"}, par exemple un iPad, et c'est automatiquement synchronisé avec ce que vous projetez.
+Pratique en conférence qd il n'y a pas de déport speaker 😉.
+
+## 🏴󠁧󠁢󠁥󠁮󠁧󠁿 L'internationalisation
+
+Une des raisons qui me fait regarder du côte des slides as code est la réutilisation.
+Notamment lorsque l'on doit donner la même conférence dans une langue différente.
+Avec les outils classiques il faut dupliquer la prez et tout modifier et lorsqu'il y a des modifications les synchroniser.
+SliDesk me permet de gérer les libellé et autres éléments de phrase dans [un fichier JSON externe](https://slidesk.github.io/slidesk-doc/docs/internationalisation/intro){:target="_blank"} pour chaque langue, puis de choisir lequel utiliser.
+
+On a un fichier, `FR.lang.json` par défaut.
+```json
+{
+  "default": true,
+  "translations": {
+    "title": "Découverte de SliDesk"
+  }
+}
+```
+
+Puis autant de fichiers que de langues souhaitées, par exemple pour l'anglais : 
+```json
+{
+  "translations": {
+    "title": "SliDesk discovery"
+  }
+}
+```
+
+Et cela donne.
+<table>
+  <tr >
+    <td style="border-bottom: 0px">
+      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/slidesk-discovery/french-main-slide.png" alt="Main slide in French">
+    </td>
+    <td style="border-bottom: 0px">
+      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/slidesk-discovery/english-main-slide.png" alt="Main slide in English">
+    </td>
+  </tr>
+  <tr>
+    <td colspan=2 style="border-bottom: 0px; text-align: center">
+      <i>Activation de l'option multi-lingues</i>
+    </td>
+  </tr>
+</table>
 
 Si vous êtes arrivés jusque là merci de m'avoir lu et si il y a des coquilles n'hésitez pas à me faire une [issue ou PR](https://github.com/philippart-s/blog){:target="_blank"} 😊.

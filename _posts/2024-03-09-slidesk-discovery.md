@@ -293,6 +293,9 @@ Le CSS précédent avec le code ci-dessous nous donne maintenant un joli slide d
 
 ![Slide speaker]({{ site.url }}{{ site.baseurl }}/assets/images/slidesk-discovery/speaker-slide.png){: .align-center}
 
+SliDesk, si il permet de faire du pure HTML, CSS et JS, vient avec sa syntaxe pour vous faciliter la vie.
+Je vous laisse aller voir les différentes syntaxes possibles dans la [documentation](https://slidesk.github.io/slidesk-doc/docs/category/syntax){:target="_blank"}.
+
 ## 🧩 Les plugins
 
 SliDesk vient avec des [plugins](https://slidesk.github.io/slidesk-doc/docs/plugins/intro){:target="_blank"} pré-définis.
@@ -391,5 +394,116 @@ Fichier qui contient la feuille de style du plugin.
 Au final, maintenant nos slides ont un beau footer !
 
 ![Exemple footer]({{ site.url }}{{ site.baseurl }}/assets/images/slidesk-discovery/footer-slide.png){: .align-center}
+
+## ✨ Les autres fonctionnalités de SliDesk
+
+SliDesk propose de nombreuses fonctionnalités, je vous laisserai aller voir par vous même dans la [documentation](https://slidesk.github.io/slidesk-doc/docs/intro){:target="_blank"} mais pour finir cet article je vous en présente deux très utiles.
+
+### 📜 Les speaker notes
+
+Je ne me sert pas souvent des speakers notes mais je sais que c'est une fonctionnalité très utilisée par de nombreuses personnes.
+SliDesk permet d'avoir ses [speakers notes](https://slidesk.github.io/slidesk-doc/docs/usage/options/notes){:target="_blank"} comme pour les autres outils de création de slides.
+
+Pour avoir ces notes, rien de plus simple ajouter des commentaires avec le format `/* mes notes */` et lancer SliDesk avec l'option `-n`.
+
+Petite subtilité de SliDesk sur les notes speakers, il est possible d'ajouter des informations sur le temps :
+ - checkpoint : `//@ < 2:00`, ce slide doit être affiché avant 2 minutes sinon l'horloge ser affichée en rouge,
+ - duration : `//@ [] 01:00`, le temps à passer sur ce slide
+Pour que cela s'affiche il faudra lancer SliDesk avec l'option [timer](https://slidesk.github.io/slidesk-doc/docs/usage/options/timers){:target="_blank"}, `-t`.
+
+Au final pour lancer SliDesk avec les notes speakers et les informations de temps il faut donc activer les options `-n` et `-t`.
+
+```bash
+$ slidesk -nt                      
+ ____(•)<
+(SliDesk) v 2.4.3
+
+Take the control of your presentation direct from here. 
+ 
+Press Enter to go to the next slide. 
+Press P + Enter to go to the previous slide. 
+Press Q to quit the program. 
+
+Your speaker view is available on: http://localhost:1337/notes.html
+Your presentation is available on: http://localhost:1337
+```
+
+**TODO** snapshot speaker note
+
+Et ce n'est pas tout ! SliDesk vous permet aussi, avec l'option `-i` couplée avec `-d` d'avoir les speakers notes sur un device et les slides sur un autre.
+Quelques explications : 
+ - `-i` permet d'activer le mode [interactif](https://slidesk.github.io/slidesk-doc/docs/usage/options/interactive){:target="_blank"}, c'est à dire permettre d'afficher la présentation sur d'autres devices en plus de la vôtre (mais vous restez la / le seul•e maître pour passer les slides)
+ - `-d` permet d'activer le mode [domaine](https://slidesk.github.io/slidesk-doc/docs/usage/options/domain){:target="_blank"}, c'est à dire rendre la présentation (et les speaker notes) accessibles sur une IP bien particulière
+
+Donc si l'on cumule toutes ces options pour afficher le notes, le mode interactif et le domaine cela donne `slidesk -ni --domain 192.168.0.12`
+
+```bash
+$ slidesk -ni --domain 192.168.0.12
+ ____(•)<
+(SliDesk) v 2.4.3
+
+Take the control of your presentation direct from here. 
+ 
+Press Enter to go to the next slide. 
+Press P + Enter to go to the previous slide. 
+Press Q to quit the program. 
+
+Your speaker view is available on: http://192.168.0.12:1337/notes.html
+Your presentation is available on: http://192.168.0.12:1337
+```
+
+### 🏴󠁧󠁢󠁥󠁮󠁧󠁿 L'internationnalisation
+
+L'une des choses, entre autres, qui m’intéressait dans le fait de coder mes slides était la possibilité d'avoir du code générique et de ne pas tout réécrire entre deux conférences.
+SliDesk permet d'utiliser des variables dans des [configurations](https://slidesk.github.io/slidesk-doc/docs/usage/options/conf){:target="_blank"} pour, par exemple, changer le nom d'une conférence ou d'autres petits éléments de variation.
+
+Dans mon cas je voulais aussi pouvoir gérer le cas où j'avais exactement la même présentation mais dans des langues différentes, la notion de configuration aurait pû aller mais Sylvain a gentiment développer un [module multilingues](https://slidesk.github.io/slidesk-doc/docs/category/internationalisation){:target="_blank"} plus simple à utiliser.
+
+Pour l'activer rien de plus simple.
+Créer un fichier JSON par langue, par exemple `FR.lang.json` et `EN.lang.json`.
+
+**TODO** fin fonctionnalité + image
+
+## 🌐 Distribution des slides
+
+Pour mettre vos slides à disposition des participant•es, vous avez deux options : impression PDF ou accès via le web en HTTP.
+On va pa se mentir, l'option impression PDF n'est pas la plus satisfaisante, la faute au HTML / CSS qui ne réagi pas toujours comme on veut 😅.
+Si vous êtes ceinture noire de CSS je pense que le problème est surmontable ... mais ce n'est pas mon cas 😉.
+
+Pour l'accès via HTTP vous avez deux options : 
+ - créer un serveur avec slidesk qui tourne pour servir vos slides
+ - utiliser une version statique full HTML / JS exportée
+
+Pour des raisons de simplicité j'ai choisi la deuxième option, d'autant que SliDesk fait l'export prêt à l'emploi pour moi 😎.
+Pour cela il suffit de rajouter l'option `-s` permettant d'activer la [sauvegarde](https://slidesk.github.io/slidesk-doc/docs/usage/options/save){:target="_blank"} de vos slides en version statique.
+Une fois exécuté, vous avez dans votre répertoire (que vous positionner au moment d'activer la commande) l'ensemble des fichiers à déposer dans un serveur HTTP.
+```bash
+$ slidesk -s ./build
+ ____(•)-
+(SliDesk) v 2.4.3
+
+📃 ./build/LICENSE generated
+📃 ./build/plugins/footer/footer.html generated
+📃 ./build/plugins/footer/footer.css generated
+📃 ./build/assets/css/custom.css generated
+📃 ./build/assets/images/TADx_HD.jpg generated
+📃 ./build/assets/images/prez/whoami.png generated
+📃 ./build/assets/images/prez/tadx.png generated
+📃 ./build/assets/images/prez/ours.png generated
+📃 ./build/assets/images/OVHcloud_logo.png generated
+📃 ./build/index.html generated
+📃 ./build/slidesk.css generated
+📃 ./build/slidesk.js generated
+📃 ./build/favicon.svg generated
+```
+
+Dans mon cas, j'ai choisi d'utiliser [GitHub Pages](https://pages.github.com/){:target="_blank"} pour héberger et gérer la version distribuable de mes slides.
+Voici un exemple de ce que cela donne : https://philippart-s.github.io/talks-slides/jarvis/snowcamp-2024/# et le [repository](https://github.com/philippart-s/talks-slides/){:target="_blank"} permettant l'hébergement.
+
+
+## 🔎 En conclusion
+
+C'en est fini de la présentation de SliDesk, je pourrai continuer à vous détailler toutes les options mais l'article est bien trop long et je vous laisse aller vous faire une idée par vous même en parcourant la documentation et le repository de SliDesk.
+Encore merci, Sylvain, d'avoir fait un outil qui me permet de faire mes slides as code.
 
 Si vous êtes arrivés jusque là merci de m'avoir lu et si il y a des coquilles n'hésitez pas à me faire une [issue ou PR](https://github.com/philippart-s/blog){:target="_blank"} 😊.

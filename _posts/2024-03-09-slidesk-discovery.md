@@ -24,6 +24,7 @@ tags:
 > - 🔗 [https://slidesk.github.io/slidesk-doc/](https://slidesk.github.io/slidesk-doc/){:target="_blank"}
 > - 🔗 [https://github.com/slidesk/slidesk](https://github.com/slidesk/slidesk){:target="_blank"}
 > - 🔗 [https://slidesk.github.io/slidesk/](https://slidesk.github.io/slidesk/){:target="_blank"}
+> - 🔗 les [exemples](https://github.com/philippart-s/slidesk-discovery){:target="_blank"} de cet article
 
 --- 
 
@@ -428,8 +429,6 @@ Your speaker view is available on: http://localhost:1337/notes.html
 Your presentation is available on: http://localhost:1337
 ```
 
-**TODO** snapshot speaker note
-
 Et ce n'est pas tout ! SliDesk vous permet aussi, avec l'option `-i` couplée avec `-d` d'avoir les speakers notes sur un device et les slides sur un autre.
 Quelques explications : 
  - `-i` permet d'activer le mode [interactif](https://slidesk.github.io/slidesk-doc/docs/usage/options/interactive){:target="_blank"}, c'est à dire permettre d'afficher la présentation sur d'autres devices en plus de la vôtre (mais vous restez la / le seul•e maître pour passer les slides)
@@ -452,6 +451,38 @@ Your speaker view is available on: http://192.168.0.12:1337/notes.html
 Your presentation is available on: http://192.168.0.12:1337
 ```
 
+```html
+## Stéphane Philippart .[slide-text]
+
+!image(assets/images/prez/whoami.png,, 494, 155, float: right; margin-top: -16vh)
+
+- 🏷️ 🥑 DeveloperAdvocate@OVHCloud 🦄
+- 🏷️ Co-creator of TADx (Agile, Dev, DevOps meetups in Tours)
+- $$title$$
+
+!image(assets/images/prez/tadx.png, tadx, 304, 165, float: right; margin-top: -9vh)
+
+- ☕️ A Java developer in the cloud ☁️
+
+!image(assets/images/prez/ours.png, ours, 437, 414, float: right;)
+
+- 🐦 <span class="twitter">@wildagsx</span>
+- 🔗 https://philippart-s.github.io/blog
+- 🐙 https://github.com/philippart-s/
+- 💬 https://www.linkedin.com/in/philippartstephane/
+
+//@ < 2:00
+//@ [] 01:00
+
+/*
+
+Slide de présentation.
+
+*/
+```
+
+**TODO** snapshot speaker note
+
 ### 🏴󠁧󠁢󠁥󠁮󠁧󠁿 L'internationnalisation
 
 L'une des choses, entre autres, qui m’intéressait dans le fait de coder mes slides était la possibilité d'avoir du code générique et de ne pas tout réécrire entre deux conférences.
@@ -460,9 +491,37 @@ SliDesk permet d'utiliser des variables dans des [configurations](https://slides
 Dans mon cas je voulais aussi pouvoir gérer le cas où j'avais exactement la même présentation mais dans des langues différentes, la notion de configuration aurait pû aller mais Sylvain a gentiment développer un [module multilingues](https://slidesk.github.io/slidesk-doc/docs/category/internationalisation){:target="_blank"} plus simple à utiliser.
 
 Pour l'activer rien de plus simple.
-Créer un fichier JSON par langue, par exemple `FR.lang.json` et `EN.lang.json`.
+Créer un fichier JSON par langue, par exemple `fr.lang.json` et `en.lang.json`.
+```json
+{
+  "default": true,
+  "translations": {
+    "title": "Découverte de SliDesk"
+  }
+}
+```
+```json
+{
+  "default": false,
+  "translations": {
+    "title": "SliDesk discovery"
+  }
+}
+```
+Cela aura comme effet de faire apparaître une combo en haut à droite pour choisir le langue d'affichage.
+Le champ `default` permet de savoir quelle langue est utilisée par défaut et le variables (par exemple `title`) s'utilisent en les entourant de `$$`.
+Par exemple, avec `title` cela donne `$$title$$`.
+```html
+/::
+custom_css: assets/css/custom.css
+::/
 
-**TODO** fin fonctionnalité + image
+# $$title$$
+
+!include(slides/speaker.sdf)
+```
+
+**TODO** image
 
 ## 🌐 Distribution des slides
 

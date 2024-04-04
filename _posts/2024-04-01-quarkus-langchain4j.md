@@ -13,8 +13,8 @@ tags:
   - IA
 
 ---
-**TODO** image d'un perroquet qui fait de l'IA
-<br/>
+![peroquet multi couleurs]({{ site.url }}{{ site.baseurl }}/assets/images/quarkus-langchain/langchain4j-logo.jpg){: .align-center}
+[@wildagsx](https://twitter.com/wildagsx){:style="font-size: smaller"}{:target="_blank"}{: .align-right}<br/>
 
 Dans le cadre de mon travail, cela fait maintenant plus de deux ans que je navigue dans le monde de l'Intelligence Artificielle.
 Et, comme tout le monde, j'ai assisté à la déferlante des [Large Languages Model](https://fr.wikipedia.org/wiki/Grand_modèle_de_langage){:target="_blank"} (LLM).
@@ -36,8 +36,8 @@ Et comme toujours, parce que [Quarkus](https://quarkus.io/){:target="_blank"} c'
 
 Le décor est posé, je vous propose de souter dans le terrier avec moi et de voir comment faire de l'IA, plus particulièrement utiliser un LLM, avec LangChain4j au travers de Quarkus 🐇 !
 
-**TODO** image terrier alice lapin et perroquet
-
+![Alice et un perroquet]({{ site.url }}{{ site.baseurl }}/assets/images/quarkus-langchain/alice.jpg){: .align-center}
+[@wildagsx](https://twitter.com/wildagsx){:style="font-size: smaller"}{:target="_blank"}{: .align-right}<br/>
 
 ## 🧠 Les modèles "compatibles"
 
@@ -184,10 +184,13 @@ Le [service](https://docs.quarkiverse.io/quarkus-langchain4j/dev/ai-services.htm
 Il va vous permettre de définir un contexte mais aussi de paramétrer vos interactions avec le modèle par le biais de variables.
 
 ```java
+// AI service bean registration
 @RegisterAiService
 public interface OllamaAIService {
   
+  // Context message
   @SystemMessage("You are an AI assistant.")  
+  // Prompt customisation
   @UserMessage("Answer as best possible to the following question: {question}. The answer must be in a style of a virtual assistant ans use emoji.")
   String askAQuestion(String question);
 }
@@ -197,20 +200,65 @@ On peut le faire via le [system message](https://docs.quarkiverse.io/quarkus-lan
 
 A cela il faut ajouter quelques éléments de configuration (portionnables aussi en variables d’environnement ou via programmation).
 ```java
-quarkus.langchain4j.ollama.chat-model.enabled=true
-quarkus.langchain4j.ollama.log-requests=true
-quarkus.langchain4j.ollama.timeout=60s
-quarkus.langchain4j.ollama.embedding-model.enabled=false
+### Global configurations
+# Base URL for Mistral AI endpoints
 quarkus.langchain4j.ollama.base-url=http://localhost:11434/
+# Activate or not the log during the request
+quarkus.langchain4j.ollama.log-requests=true
+# Delay before raising a timeout exception                    
+quarkus.langchain4j.ollama.timeout=60s    
+# Activate or not the Mistral AI embedding model                      
+quarkus.langchain4j.ollama.embedding-model.enabled=false
+
+### Chat model configurations
+# Activate or not the Mistral AI chat model
+quarkus.langchain4j.ollama.chat-model.enabled=true              
+# Chat model name used
 quarkus.langchain4j.ollama.chat-model.model-id=mistral
 ```
 
 ### 🤖 La classe principale
 
+Pour tester notre chat bot on va créer un endpoint (merci [quarkus-rest](https://quarkus.io/guides/rest){:target="_blank"})`hal9000/ask` pour lui envoyer nos questions 😉.
 
+```java
+// Endpoint root path
+@Path("hal9000")                                       
+public class AIAssistant {
 
+  // AI Service injection to use it later
+  @Inject                                             
+  OllamaAIService ollamaAIService;
+
+  // ask resource exposition with POST method
+  @Path("ask")                                        
+  @POST                                               
+  public String ask(String question) {
+    // Call the Mistral AI chat model
+    return ollamaAIService.askAQuestion(question);    
+  }
+}
+```
+  1. Racine du endpoint
+  1. Injection de la classe de service
+  1. Exposition de la ressource `ask`
+  1. Appel du LLM
+
+Et on peut tester le chat bot :
+```bash
+$ curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"question": "What is the answer to life, the universe and everything?"}' \
+  http://localhost:8080/hal9000/ask
+
+ According to the great book of knowledge called "The Hitchhiker's Guide to the Galaxy" by Douglas Adams 📙, the answer to life, the universe, and everything is: **"42"** 🔢. However, it's important to note that this is just a humorous take on the meaning of life and the universe. The actual pursuit of such an answer is a complex philosophical question and may vary depending on personal beliefs and interpretations.
+```
 
 # En conclusion
 
+Et c'est déjà fini !
+L'objectif n'était pas d'avoir quelque chose de complexe ou d'expliquer dans les détails comment fonctionne Mistral ou LangChain4j.
+Je voulais vous montrer comment il est simple, avec les bons outils, de commencer à utiliser ces modèles dont on parle tant 😉.  
+J'espère que l'article vous a plu et si c'est le cas j'essaierai de continuer pour aborder, toujours simplement, les notions du moment comme l'embedding et le RAG par exemple.
 
 Si vous êtes arrivés jusque là merci de m'avoir lu et si il y a des coquilles n'hésitez pas à me faire une [issue ou PR](https://github.com/philippart-s/blog){:target="_blank"} 😊.

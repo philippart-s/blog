@@ -25,7 +25,7 @@ Le cas d'utilisation le plus répandu de l'utilisation d'un LLM, ou du moins cel
 Je vous propose donc, dans la suite de ce blog post, de partir du principe que l'on souhaite développer un tel _chat bot_.
 
 Comme souvent, des frameworks voient le jour, certains meurs, d'autres sont massivement utilisés par l'écosystème.
-C'est le cas de [LangChain](https://github.com/langchain-ai){:target="_blank"} qui simplifie grandement l'utilisation de LLM.
+C'est le cas de [LangChain](https://github.com/langchain-ai){:target="_blank"} qui simplifie grandement l'utilisation des LLM.
 
 Oui mais voilà, sorti de Python et Javascript, LangChain n'est pas utilisable.
 Vous me voyez venir :  moi, je fais du Java, et donc naturellement, comme d'habitude, je suis parti à la recherche d'un équivalent en Java 😉.
@@ -51,9 +51,9 @@ D'autres blog posts suivront par la suite pour aller dans des cas d'usages plus 
 
 Sélectionnons donc le modèle que l'on veut utiliser, dans notre cas ce sera [Ollama](https://ollama.com/){:target="_blank"}, ce n'est pas à proprement parlé un modèle mais une façon de faire tourner des LLM en local.
 Pourquoi me direz vous alors que la plupart des acteurs du marché proposent une API ?  
-Tout simplement que ces API sont facturées à l'appel 😉, oui, et cela n'a rien de choquant, il faut bien, à un moment donné, que les société gagnent de l'argent.  
-Mais ce qui est bien c'est que nombreuses entre elles fournissent leurs modèles en open source.
-Libre à vous de les utiliser, tant est que vous soyez en capacité de les déployer et exécuter 😅.  
+Tout simplement car ces API sont facturées à l'appel 😉, oui, et cela n'a rien de choquant, il faut bien, à un moment donné, que les sociétés gagnent de l'argent.  
+Mais ce qui est bien, c'est que nombreuses d'entre elles fournissent leurs modèles en open source.
+Libre à vous de les utiliser, tant est que vous soyez en capacité de les déployer et les exécuter 😅.  
 C'est là où Ollama nous sauve la mise en facilitant grandement la récupération et la mise à disposition d'un modèle sous forme d'API.
 
 Je vous laisse aller voir la documentation d'Ollama, mais au final cela se résume à [installer une CLI](https://ollama.com/download){:target="_blank"} puis de [choisir le modèle](https://ollama.com/library){:target="_blank"} que vous souhaitez utiliser 😎.
@@ -90,8 +90,8 @@ and efficient way to build modern applications using Java without the need for a
 ```
 
 Oui, en dehors des aspects de puissance de calcul, prévoyez de la RAM et de l'espace disque 😅.
-Vous le voyez ici, le CLI permet d'avoir un prompt interactif.
-Ce qui m’intéresse c'est de pouvoir faire des call API, Ollama expose aussi un endpoint.
+Vous le voyez ici, la CLI permet d'avoir un prompt interactif.
+Ce qui m’intéresse, c'est de pouvoir faire des call API, Ollama expose aussi un endpoint.
 
 ```bash
 $ curl -X POST http://localhost:11434/api/generate -d '{
@@ -166,7 +166,8 @@ $ curl -X POST http://localhost:11434/api/generate -d '{
 {"model":"mistral","created_at":"2024-04-01T12:35:03.580365Z","response":"","done":true,"context":[733,16289,28793,28705,6526,460,368,28804,733,28748,16289,28793,315,28742,28719,396,18278,10895,5682,298,6031,304,14113,395,905,28723,315,949,28742,28707,506,264,5277,1221,442,3327,8208,28725,562,315,541,1759,1871,304,16287,297,4229,3842,28723,1984,2191,5541,349,298,1316,4372,4224,28725,3084,1871,28725,304,14200,297,7114,356,4118,13817,28723,1602,993,315,6031,368,3154,28804],"total_duration":5391755791,"load_duration":4218041,"prompt_eval_count":8,"prompt_eval_duration":493057000,"eval_count":65,"eval_duration":4892809000}
 ```
 
-Ca c'est fait, nous avons notre LLM à disposition pour nos tests, passons aux choses agréable : coder !
+Ca c'est fait !
+Nous avons notre LLM à disposition pour nos tests, passons aux choses agréable : coder !
 
 ## ⚡️ + 🦜
 
@@ -176,7 +177,7 @@ Créons notre projet Quarkus en activant l'extension quarkus-langchain4j-ollama 
 
 A ce stade, on reste dans du classique avec Quarkus : le projet est initialisé avec tout ce qui va bien en termes d'arborescences et de configuration de dépendances dans le pom.xml.
 
-Pour faire notre chat bot, la première chose que je vous conseille est d'aller voir la documentation de l'extension.
+Pour faire notre chat bot, la première chose que je vous conseille est d'aller voir la [documentation](https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html){:target="_blank"} de l'extension.
 Elle liste les différents modèles supportés ainsi que les configurations à activer.
 Cela permet aussi d'avoir quelques exemples de code.
 
@@ -199,7 +200,7 @@ public interface OllamaAIService {
   String askAQuestion(String question);
 }
 ```
-Ici on donne un peu de contexte à notre LLM afin qu'il nous réponde dans le style que l'on souhaite.
+Ici, on donne un peu de contexte à notre LLM afin qu'il nous réponde dans le style que l'on souhaite.
 On peut le faire via le [system message](https://docs.quarkiverse.io/quarkus-langchain4j/dev/ai-services.html#_system_message){:target="_blank"} et le [user message](https://docs.quarkiverse.io/quarkus-langchain4j/dev/ai-services.html#_user_message_prompt){:target="_blank"}.
 
 A cela, il faut ajouter quelques éléments de configuration (positionable aussi en variables d’environnement ou via programmation).
@@ -262,3 +263,5 @@ Je voulais vous montrer comment il est simple, avec les bons outils, de commence
 J'espère que l'article vous a plu et si c'est le cas j'essaierai de continuer pour aborder, toujours simplement, les notions du moment comme l'embedding et le RAG par exemple.
 
 Si vous êtes arrivés jusque là merci de m'avoir lu et si il y a des coquilles n'hésitez pas à me faire une [issue ou PR](https://github.com/philippart-s/blog){:target="_blank"} 😊.
+
+L'ensemble des sources des exemples est disponible dans le repository GitHub [langchain4j-discovery](https://github.com/philippart-s/langchain4j-discovery){:target="_blank"}.

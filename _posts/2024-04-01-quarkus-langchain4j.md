@@ -13,46 +13,47 @@ tags:
   - IA
 
 ---
-![peroquet multi couleurs]({{ site.url }}{{ site.baseurl }}/assets/images/quarkus-langchain/langchain4j-logo.jpg){: .align-center}
+![perroquet multi couleurs]({{ site.url }}{{ site.baseurl }}/assets/images/quarkus-langchain/langchain4j-logo.jpg){: .align-center}
 [@wildagsx](https://twitter.com/wildagsx){:style="font-size: smaller"}{:target="_blank"}{: .align-right}<br/>
 
 Dans le cadre de mon travail, cela fait maintenant plus de deux ans que je navigue dans le monde de l'Intelligence Artificielle.
 Et, comme tout le monde, j'ai assisté à la déferlante des [Large Languages Model](https://fr.wikipedia.org/wiki/Grand_modèle_de_langage){:target="_blank"} (LLM).
-Depuis quelques mois, le monde de l'IA n'est plus réservé aux spécialistes mais accessibles aux développeuses et développeurs.
-Et comme à chaque fois qu'une nouvelle tendance entre dans notre monde, cela se fait avec beaucoup d’enthousiasme et de passion !
-Vous n'êtes, certainement, pas sans savoir que la communauté de développement s'est passionné pour un domaine en particulier : le [Retrieval Augmented Generation](https://huggingface.co/docs/transformers/model_doc/rag){:target="_blank"} (RAG).
-Pour faire simple : comment spécialiser un LLM avec vos données à vous.
+Depuis quelques mois, le monde de l'IA n'est plus réservé aux spécialistes mais accessibles aux développeuses et développeurs.  
+Et comme à chaque fois qu'une nouvelle tendance entre dans notre monde, cela se fait avec beaucoup d’enthousiasme et de passion !  
+
+Le cas d'utilisation le plus répandu de l'utilisation d'un LLM, ou du moins celui que l'on voit le plus en démo est un _chat bot_.
+Je vous propose donc, dans la suite de ce blog post, de partir du principe que l'on souhaite développer un tel _chat bot_.
 
 Comme souvent, des frameworks voient le jour, certains meurs, d'autres sont massivement utilisés par l'écosystème.
-C'est le cas de [LangChain](https://github.com/langchain-ai){:target="_blank"} qui simplifie grandement l'utilisation de LLM et plus particulièrement de la partie RAG.
+C'est le cas de [LangChain](https://github.com/langchain-ai){:target="_blank"} qui simplifie grandement l'utilisation de LLM.
 
-Oui mais voilà sorti de Python et Javascript, langchain n'est pas utilisable.
-Vous me voyez venir, moi je fais du Java, et donc naturellement, comme d'habitude, je suis parti à la recherche d'un équivalent en Java 😉.
+Oui mais voilà, sorti de Python et Javascript, LangChain n'est pas utilisable.
+Vous me voyez venir :  moi, je fais du Java, et donc naturellement, comme d'habitude, je suis parti à la recherche d'un équivalent en Java 😉.
 Je n'ai pas eu à chercher bien longtemps, très vite un framework a vu le jour, [LangChain4j](https://github.com/langchain4j/langchain4j/){:target="_blank"}.
 
 > ⚠️ le nom peut être trompeur, le projet ne fait pas partie de la galaxy LangChain. C'est un projet à part, avec sa propre communauté et son propre cycle de vie. ⚠️
 
-Et comme toujours, parce que [Quarkus](https://quarkus.io/){:target="_blank"} c'est cool, j'ai là aussi eu le plaisir de voir qu'une extension a vite vue le jour : [quarkus-langchain4j](https://github.com/quarkiverse/quarkus-langchain4j){:target="_blank"} 🤩.
+Et comme toujours, parce que [Quarkus](https://quarkus.io/){:target="_blank"} c'est cool, j'ai, là aussi, eu le plaisir de voir qu'une extension a vite vue le jour : [quarkus-langchain4j](https://github.com/quarkiverse/quarkus-langchain4j){:target="_blank"} 🤩.
 
-Le décor est posé, je vous propose de souter dans le terrier avec moi et de voir comment faire de l'IA, plus particulièrement utiliser un LLM, avec LangChain4j au travers de Quarkus 🐇 !
+Le décor est posé, je vous propose de sauter dans le terrier avec moi et de voir comment faire de l'IA, plus particulièrement utiliser un LLM, avec LangChain4j au travers de Quarkus 🐇 !
 
 ![Alice et un perroquet]({{ site.url }}{{ site.baseurl }}/assets/images/quarkus-langchain/alice.jpg){: .align-center}
 [@wildagsx](https://twitter.com/wildagsx){:style="font-size: smaller"}{:target="_blank"}{: .align-right}<br/>
 
 ## 🧠 Les modèles "compatibles"
 
-La plus part des modèles possèdent des API, ce qui les rends _compatibles_ puisqu'il suffit de [coder un client REST](https://quarkus.io/guides/rest-client){:target="_blank"} pour les utiliser.
-Cependant, les ressources JSON, les endpoints et tous le reste peut être vite rébarbatif.
-Et je ne parle pas de la partie RAG, c'est là où les frameworks vont vous faciliter la vie.
+La plus part des modèles possèdent des API, ce qui les rend _compatibles_ puisqu'il suffit de [coder un client REST](https://quarkus.io/guides/rest-client){:target="_blank"} pour les utiliser.
+Cependant, les ressources JSON, les endpoints et tout le reste peut être vite rébarbatif.
+Ainsi que toutes les variantes d'utilisation d'un modèle (le [Retrieval Augmented Generation](https://huggingface.co/docs/transformers/model_doc/rag){:target="_blank"}, [embedding](https://huggingface.co/blog/getting-started-with-embeddings){:target="_blank"}, .. )
 
-Pour notre première fois avec LangChain4j je vous propose de commencer simple : développer un chat bot intelligent.
+Pour notre première fois avec LangChain4j, nous allons donc commencer simple : développer un chat bot intelligent.
 D'autres blog posts suivront par la suite pour aller dans des cas d'usages plus complexes.
 
 Sélectionnons donc le modèle que l'on veut utiliser, dans notre cas ce sera [Ollama](https://ollama.com/){:target="_blank"}, ce n'est pas à proprement parlé un modèle mais une façon de faire tourner des LLM en local.
-Pourquoi me direz vous alors que la plupart des acteurs du marché proposent une API ?
-Tout simplement que ces API sont facturées à l'appel 😉, oui, et cela n'a rien de choquant, il faut bien, à un moment donnée, que les société gagnent de l'argent.
+Pourquoi me direz vous alors que la plupart des acteurs du marché proposent une API ?  
+Tout simplement que ces API sont facturées à l'appel 😉, oui, et cela n'a rien de choquant, il faut bien, à un moment donné, que les société gagnent de l'argent.  
 Mais ce qui est bien c'est que nombreuses entre elles fournissent leurs modèles en open source.
-Libre à vous de les utiliser tant est que vous soyez en capacité de les déployer et exécuter.
+Libre à vous de les utiliser, tant est que vous soyez en capacité de les déployer et exécuter 😅.  
 C'est là où Ollama nous sauve la mise en facilitant grandement la récupération et la mise à disposition d'un modèle sous forme d'API.
 
 Je vous laisse aller voir la documentation d'Ollama, mais au final cela se résume à [installer une CLI](https://ollama.com/download){:target="_blank"} puis de [choisir le modèle](https://ollama.com/library){:target="_blank"} que vous souhaitez utiliser 😎.
@@ -169,7 +170,10 @@ Ca c'est fait, nous avons notre LLM à disposition pour nos tests, passons aux c
 
 ## ⚡️ + 🦜
 
-Créons notre projet Quarkus en activant l'extension quarkus-langchain4j-ollama : `quarkus create app fr.wilda.quarkus:discover-langchain4j --extension='quarkus-langchain4j-ollama'`.
+Créons notre projet Quarkus en activant l'extension quarkus-langchain4j-ollama : 
+
+`quarkus create app fr.wilda.quarkus:discover-langchain4j --extension='quarkus-langchain4j-ollama'`.
+
 A ce stade, on reste dans du classique avec Quarkus : le projet est initialisé avec tout ce qui va bien en termes d'arborescences et de configuration de dépendances dans le pom.xml.
 
 Pour faire notre chat bot, la première chose que je vous conseille est d'aller voir la documentation de l'extension.
@@ -198,7 +202,7 @@ public interface OllamaAIService {
 Ici on donne un peu de contexte à notre LLM afin qu'il nous réponde dans le style que l'on souhaite.
 On peut le faire via le [system message](https://docs.quarkiverse.io/quarkus-langchain4j/dev/ai-services.html#_system_message){:target="_blank"} et le [user message](https://docs.quarkiverse.io/quarkus-langchain4j/dev/ai-services.html#_user_message_prompt){:target="_blank"}.
 
-A cela il faut ajouter quelques éléments de configuration (portionnables aussi en variables d’environnement ou via programmation).
+A cela, il faut ajouter quelques éléments de configuration (positionable aussi en variables d’environnement ou via programmation).
 ```java
 ### Global configurations
 # Base URL for Mistral AI endpoints
@@ -219,7 +223,7 @@ quarkus.langchain4j.ollama.chat-model.model-id=mistral
 
 ### 🤖 La classe principale
 
-Pour tester notre chat bot on va créer un endpoint (merci [quarkus-rest](https://quarkus.io/guides/rest){:target="_blank"})`hal9000/ask` pour lui envoyer nos questions 😉.
+Pour tester notre chat bot on va créer un endpoint (merci [quarkus-rest](https://quarkus.io/guides/rest){:target="_blank"}) : `hal9000/ask` pour lui envoyer nos questions 😉.
 
 ```java
 // Endpoint root path
@@ -239,10 +243,6 @@ public class AIAssistant {
   }
 }
 ```
-  1. Racine du endpoint
-  1. Injection de la classe de service
-  1. Exposition de la ressource `ask`
-  1. Appel du LLM
 
 Et on peut tester le chat bot :
 ```bash
@@ -256,7 +256,7 @@ $ curl --header "Content-Type: application/json" \
 
 # En conclusion
 
-Et c'est déjà fini !
+Et c'est déjà fini !  
 L'objectif n'était pas d'avoir quelque chose de complexe ou d'expliquer dans les détails comment fonctionne Mistral ou LangChain4j.
 Je voulais vous montrer comment il est simple, avec les bons outils, de commencer à utiliser ces modèles dont on parle tant 😉.  
 J'espère que l'article vous a plu et si c'est le cas j'essaierai de continuer pour aborder, toujours simplement, les notions du moment comme l'embedding et le RAG par exemple.

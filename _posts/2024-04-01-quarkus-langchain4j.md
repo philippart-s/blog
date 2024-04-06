@@ -52,7 +52,7 @@ D'autres blog posts suivront par la suite pour aller dans des cas d'usage plus c
 Sélectionnons donc le modèle que l'on veut utiliser, dans notre cas ce sera [Ollama](https://ollama.com/){:target="_blank"}, ce n'est pas à proprement parlé un modèle mais une façon de faire tourner des LLM en local.
 Pourquoi me direz-vous alors que la plupart des acteurs du marché proposent une API ?  
 Tout simplement car ces API sont facturées à l'appel 😉, oui, et cela n'a rien de choquant, il faut bien, à un moment donné, que les sociétés gagnent de l'argent.  
-Mais ce qui est bien, c'est que nombreuses d'entre elles fournissent leurs modèles en open source.
+Mais ce qui est bien, c'est qu'elles sont nombreuses à finir leurs modèles en open source.
 Libre à vous de les utiliser, tant est que vous soyez en capacité de les déployer et les exécuter 😅.  
 C'est là où Ollama nous sauve la mise en facilitant grandement la récupération et la mise à disposition d'un modèle sous forme d'API.
 

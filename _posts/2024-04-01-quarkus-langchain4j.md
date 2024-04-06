@@ -24,7 +24,7 @@ Et comme à chaque fois qu'une nouvelle tendance entre dans notre monde, cela se
 Le cas d'utilisation le plus répandu de l'utilisation d'un LLM, ou du moins celui que l'on voit le plus en démo est un _chat bot_.
 Je vous propose donc, dans la suite de ce blog post, de partir du principe que l'on souhaite développer un tel _chat bot_.
 
-Comme souvent, des frameworks voient le jour, certains meurs, d'autres sont massivement utilisés par l'écosystème.
+Comme souvent, des frameworks voient le jour, certains meurent, d'autres sont massivement utilisés par l'écosystème.
 C'est le cas de [LangChain](https://github.com/langchain-ai){:target="_blank"} qui simplifie grandement l'utilisation des LLM.
 
 Oui mais voilà, sorti de Python et Javascript, LangChain n'est pas utilisable.

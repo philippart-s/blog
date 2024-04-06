@@ -18,7 +18,7 @@ tags:
 
 Dans le cadre de mon travail, cela fait maintenant plus de deux ans que je navigue dans le monde de l'Intelligence Artificielle.
 Et, comme tout le monde, j'ai assisté à la déferlante des [Large Languages Model](https://fr.wikipedia.org/wiki/Grand_modèle_de_langage){:target="_blank"} (LLM).
-Depuis quelques mois, le monde de l'IA n'est plus réservé aux spécialistes mais accessibles aux développeuses et développeurs.  
+Depuis quelques mois, le monde de l'IA n'est plus réservé aux spécialistes mais accessible aux développeuses et développeurs.  
 Et comme à chaque fois qu'une nouvelle tendance entre dans notre monde, cela se fait avec beaucoup d’enthousiasme et de passion !  
 
 Le cas d'utilisation le plus répandu de l'utilisation d'un LLM, ou du moins celui que l'on voit le plus en démo est un _chat bot_.

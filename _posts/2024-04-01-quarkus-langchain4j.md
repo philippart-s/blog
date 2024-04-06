@@ -31,7 +31,7 @@ Oui mais voilà, sorti de Python et Javascript, LangChain n'est pas utilisable.
 Vous me voyez venir :  moi, je fais du Java, et donc naturellement, comme d'habitude, je suis parti à la recherche d'un équivalent en Java 😉.
 Je n'ai pas eu à chercher bien longtemps, très vite un framework a vu le jour, [LangChain4j](https://github.com/langchain4j/langchain4j/){:target="_blank"}.
 
-> ⚠️ le nom peut être trompeur, le projet ne fait pas partie de la galaxy LangChain. C'est un projet à part, avec sa propre communauté et son propre cycle de vie. ⚠️
+> ⚠️ le nom peut être trompeur, le projet ne fait pas partie de la galaxie LangChain. C'est un projet à part, avec sa propre communauté et son propre cycle de vie. ⚠️
 
 Et comme toujours, parce que [Quarkus](https://quarkus.io/){:target="_blank"} c'est cool, j'ai, là aussi, eu le plaisir de voir qu'une extension a vite vue le jour : [quarkus-langchain4j](https://github.com/quarkiverse/quarkus-langchain4j){:target="_blank"} 🤩.
 

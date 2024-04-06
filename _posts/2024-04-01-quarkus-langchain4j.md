@@ -47,7 +47,7 @@ Cependant, les ressources JSON, les endpoints et tout le reste : cela peut être
 ainsi que toutes les variantes d'utilisation d'un modèle (le [Retrieval Augmented Generation](https://huggingface.co/docs/transformers/model_doc/rag){:target="_blank"}, [embedding](https://huggingface.co/blog/getting-started-with-embeddings){:target="_blank"}, .. )
 
 Pour notre première fois avec LangChain4j, nous allons donc commencer simple : développer un chat bot intelligent.
-D'autres blog posts suivront par la suite pour aller dans des cas d'usages plus complexes.
+D'autres blog posts suivront par la suite pour aller dans des cas d'usage plus complexes.
 
 Sélectionnons donc le modèle que l'on veut utiliser, dans notre cas ce sera [Ollama](https://ollama.com/){:target="_blank"}, ce n'est pas à proprement parlé un modèle mais une façon de faire tourner des LLM en local.
 Pourquoi me direz vous alors que la plupart des acteurs du marché proposent une API ?  

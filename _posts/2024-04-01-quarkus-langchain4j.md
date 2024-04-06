@@ -20,13 +20,13 @@ Dans le cadre de mon travail, cela fait maintenant plus de deux ans que je navig
 Et, comme tout le monde, j'ai assisté à la déferlante des [Large Languages Model](https://fr.wikipedia.org/wiki/Grand_modèle_de_langage){:target="_blank"} (LLM).
 Depuis quelques mois, le monde de l'IA n'est plus réservé aux spécialistes mais accessibles aux développeuses et développeurs.
 Et comme à chaque fois qu'une nouvelle tendance entre dans notre monde, cela se fait avec beaucoup d’enthousiasme et de passion !
-Vous n'êtes, certainement, pas sans savoir que la communauté de développement s'est passionné pour un domaine en particulier : le [Retrieval Augmented Generation](https://huggingface.co/docs/transformers/model_doc/rag){:target="_blank"} (RAG).
+Vous n'êtes, certainement, pas sans savoir que la communauté de développement s'est passionnée pour un domaine en particulier : le [Retrieval Augmented Generation](https://huggingface.co/docs/transformers/model_doc/rag){:target="_blank"} (RAG).
 Pour faire simple : comment spécialiser un LLM avec vos données à vous.
 
 Comme souvent, des frameworks voient le jour, certains meurs, d'autres sont massivement utilisés par l'écosystème.
 C'est le cas de [LangChain](https://github.com/langchain-ai){:target="_blank"} qui simplifie grandement l'utilisation de LLM et plus particulièrement de la partie RAG.
 
-Oui mais voilà sorti de Python et Javascript, langchain n'est pas utilisable.
+Oui mais voilà, sorti de Python et Javascript, langchain n'est pas utilisable.
 Vous me voyez venir, moi je fais du Java, et donc naturellement, comme d'habitude, je suis parti à la recherche d'un équivalent en Java 😉.
 Je n'ai pas eu à chercher bien longtemps, très vite un framework a vu le jour, [LangChain4j](https://github.com/langchain4j/langchain4j/){:target="_blank"}.
 
@@ -34,14 +34,14 @@ Je n'ai pas eu à chercher bien longtemps, très vite un framework a vu le jour,
 
 Et comme toujours, parce que [Quarkus](https://quarkus.io/){:target="_blank"} c'est cool, j'ai là aussi eu le plaisir de voir qu'une extension a vite vue le jour : [quarkus-langchain4j](https://github.com/quarkiverse/quarkus-langchain4j){:target="_blank"} 🤩.
 
-Le décor est posé, je vous propose de souter dans le terrier avec moi et de voir comment faire de l'IA, plus particulièrement utiliser un LLM, avec LangChain4j au travers de Quarkus 🐇 !
+Le décor est posé, je vous propose de sa  uter dans le terrier avec moi et de voir comment faire de l'IA, plus particulièrement utiliser un LLM, avec LangChain4j au travers de Quarkus 🐇 !
 
 ![Alice et un perroquet]({{ site.url }}{{ site.baseurl }}/assets/images/quarkus-langchain/alice.jpg){: .align-center}
 [@wildagsx](https://twitter.com/wildagsx){:style="font-size: smaller"}{:target="_blank"}{: .align-right}<br/>
 
-## 🧠 Les modèles "compatibles"
+## 🧠 Les modèles "utilisables"
 
-La plus part des modèles possèdent des API, ce qui les rends _compatibles_ puisqu'il suffit de [coder un client REST](https://quarkus.io/guides/rest-client){:target="_blank"} pour les utiliser.
+La plupart des modèles possèdent des API, ce qui les rends _utilisables_ puisqu'il suffit de [coder un client REST](https://quarkus.io/guides/rest-client){:target="_blank"} pour les utiliser.
 Cependant, les ressources JSON, les endpoints et tous le reste peut être vite rébarbatif.
 Et je ne parle pas de la partie RAG, c'est là où les frameworks vont vous faciliter la vie.
 

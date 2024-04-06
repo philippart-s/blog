@@ -181,7 +181,7 @@ Pour faire notre chat bot, la première chose que je vous conseille est d'aller 
 Elle liste les différents modèles supportés ainsi que les configurations à activer.
 Cela permet aussi d'avoir quelques exemples de code.
 
-> ⚠️ Il se peut que le code pour utiliser un modèle soit présent et pas le documentation. C'était le cas au moment où j'écris cet article pour Mistral par exemple. N'hésitez pas à jeter un oeil directement au code pour vous en assurer 😉.
+> ⚠️ Il se peut que le code pour utiliser un modèle soit présent sans documentation associée. C'était le cas au moment où j'écris cet article pour Mistral par exemple. N'hésitez pas à jeter un oeil directement au code pour vous en assurer 😉.
 
 ### 🤖 Le service 
 

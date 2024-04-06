@@ -167,7 +167,7 @@ $ curl -X POST http://localhost:11434/api/generate -d '{
 ```
 
 Ca c'est fait !
-Nous avons notre LLM à disposition pour nos tests, passons aux choses agréable : coder !
+Nous avons notre LLM à disposition pour nos tests, passons aux choses agréables : coder !
 
 ## ⚡️ + 🦜
 

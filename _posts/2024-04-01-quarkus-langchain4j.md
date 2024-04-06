@@ -44,7 +44,7 @@ Le décor est posé, je vous propose de sauter dans le terrier avec moi et de vo
 
 La plupart des modèles possèdent des API, ce qui les rend _compatibles_ puisqu'il suffit de [coder un client REST](https://quarkus.io/guides/rest-client){:target="_blank"} pour les utiliser.
 Cependant, les ressources JSON, les endpoints et tout le reste : cela peut être vite rébarbatif.
-Ainsi que toutes les variantes d'utilisation d'un modèle (le [Retrieval Augmented Generation](https://huggingface.co/docs/transformers/model_doc/rag){:target="_blank"}, [embedding](https://huggingface.co/blog/getting-started-with-embeddings){:target="_blank"}, .. )
+ainsi que toutes les variantes d'utilisation d'un modèle (le [Retrieval Augmented Generation](https://huggingface.co/docs/transformers/model_doc/rag){:target="_blank"}, [embedding](https://huggingface.co/blog/getting-started-with-embeddings){:target="_blank"}, .. )
 
 Pour notre première fois avec LangChain4j, nous allons donc commencer simple : développer un chat bot intelligent.
 D'autres blog posts suivront par la suite pour aller dans des cas d'usages plus complexes.

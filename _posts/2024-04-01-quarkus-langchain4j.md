@@ -53,7 +53,7 @@ Sélectionnons donc le modèle que l'on veut utiliser, dans notre cas ce sera [O
 Pourquoi me direz-vous alors que la plupart des acteurs du marché proposent une API ?  
 Tout simplement car ces API sont facturées à l'appel 😉, oui, et cela n'a rien de choquant, il faut bien, à un moment donné, que les sociétés gagnent de l'argent.  
 Mais ce qui est bien, c'est qu'elles sont nombreuses à finir leurs modèles en open source.
-Libre à vous de les utiliser, tant est que vous soyez en capacité de les déployer et les exécuter 😅.  
+Libre à vous de les utiliser, tant que vous êtes en capacité de les déployer et de les exécuter 😅.  
 C'est là où Ollama nous sauve la mise en facilitant grandement la récupération et la mise à disposition d'un modèle sous forme d'API.
 
 Je vous laisse aller voir la documentation d'Ollama, mais au final cela se résume à [installer une CLI](https://ollama.com/download){:target="_blank"} puis de [choisir le modèle](https://ollama.com/library){:target="_blank"} que vous souhaitez utiliser 😎.

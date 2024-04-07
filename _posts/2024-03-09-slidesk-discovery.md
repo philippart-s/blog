@@ -31,10 +31,10 @@ tags:
 Il y a quelques temps, je me suis [déjà essayé]({{ site.baseurl }}{% post_url 2020-05-11-Revealjs %}{:target="_blank"}), avec peu de succès, à coder mes slides.
 A cette époque, j'ai testé [Reveal.js](https://revealjs.com/){:target="_blank"} et je n'ai pas réussi à aller au bout de mon test pour plusieurs raisons.
 Les principales : un niveau trop faible en CSS, la complexité de Reveal.js, un niveau trop faible en CSS 😅.  
-Mais, alors, pourquoi réessayer ?  
+Mais alors, pourquoi réessayer ?  
 Tout simplement parce que, depuis, l'envie de coder mes slides plutôt que de les _dessiner_ ne m'a pas quitté.
 Voyez-y de la geekerie (que j'assume) mais aussi pour les raisons suivantes : 
- - je ne peux pas forcément utiliser facilement les outils classiques que sont Office ou Google Slides,
+ - je ne peux pas forcément utiliser les outils classiques que sont Office ou Google Slides,
  - je trouve le suivi de version de ces outils pas assez abouti,
  - le travail collaboratif par PR me semble plus approprié lorsque l'on travaille à plusieurs,
  - la gestion multilingues où il faut tout refaire ne me convient pas,
@@ -50,7 +50,7 @@ Dans ce cas, avec [Sylvain](https://twitter.com/GouZ){:target="_blank"}, l'auteu
 Je lui indiquais, que je galérais avec Reveal.js et qu'en plus, nativement, le multilingues n'était pas super bien géré (et toujours le côté monolithe qui ne me plaisait pas).
 
 De fil en aiguille, Sylvain, qui bossait sur le sujet SliDesk me propose d'intégrer cette fonctionnalité dans ses devs 🤩.
-L'idée, aussi, de l'aider dans la mise au point de son projet, avec mes retours de débutant de CSS et JS étaient aussi l'occasion de participer avec lui à son aventure.
+L'idée, aussi, de l'aider dans la mise au point de son projet, avec mes retours de débutant de CSS et JS étaient l'occasion de participer avec lui à son aventure.
 
 Enfin, Sylvain, me l'avait indiqué, son objectif était de faire un slide as code simple et personnalisable !
 
@@ -59,7 +59,7 @@ Enfin, Sylvain, me l'avait indiqué, son objectif était de faire un slide as co
 
 # 🏁 Démarrer avec SliDesk
 
-Les premières choses à faire : aller faire un tour du côté du [repository](https://github.com/slidesk/slidesk){:target="_blank"} GitHub, de la [documentation](https://slidesk.github.io/slidesk-doc/){:target="_blank"} et de l'[exemple]([https://slidesk.github.io/slidesk/){:target="_blank"}.
+Les premières choses à faire : aller faire voir du côté du [repository](https://github.com/slidesk/slidesk){:target="_blank"} GitHub, de la [documentation](https://slidesk.github.io/slidesk-doc/){:target="_blank"} et de l'[exemple]([https://slidesk.github.io/slidesk/){:target="_blank"}.
 
 Ensuite, vient le temps _d'installer_ SliDesk.
 Ou plus précisément, la [CLI](https://slidesk.github.io/slidesk-doc/docs/usage/intro){:target="_blank"} de SliDesk qui va être votre compagnon pour tirer pleinement partie de SliDesk.
@@ -178,7 +178,7 @@ Les ressources dans un répertoire _assets_ avec ses sous répertoires selon les
 Et enfin, un répertoire _slides_ avec les différents fichiers _sdf_.
 > A noter qu'il est possible de créer d'autres sous répertoires afin de classer comme bon vous semble les différents fichiers.
 
-Mais comment cela fonctionne au final l'assemblage ?
+Mais, comment cela fonctionne au final l'assemblage ?
 Grâce à la directive `include`.
 Le fichier _main.sdf_ devient donc : 
 ```markdown
@@ -204,10 +204,10 @@ Il est possible de tout faire en HTML, oui j'ai essayé tellement je n'aime pas 
 Force est de constaté, qu'il est plus simple et plus dans l'esprit de SliDesk de le faire en CSS.
 Je ne suis pas devenu un pro de CSS mais avec un peu d'habitude, beaucoup d'inspecteur de code et encore plus de demande d'aide de Sylvain (merci à toi) on y arrive !
 
-Dans mon cas c'est assez simple car mon template favori pour faire des slides : un fond blanc, une police noire et des listes à puces.
+Dans mon cas c'est assez simple, car mon template favori pour faire des slides : un fond blanc, une police noire et des listes à puces.
 Quelques images et emojis et on a fait le tour !  
 Là où j'ai le plus eu de difficultés c'est avec les images pour les positionner comme il faut.
-De plus, SliDesk est responsive, l'idée est donc que les images suivent aussi lorsque la résolution ou la place changent 😉.
+SliDesk est responsive, l'idée est donc que les images suivent aussi lorsque la résolution ou la place changent 😉.
 
 SliDesk vient à notre secours avec une directive `image` mais il possible que vous ayez besoin de gérer une ou deux images pour des besoins spécifiques.
 Mais revenons à nos moutons et voyons un peu ce que donne la personnalisation.
@@ -286,7 +286,7 @@ Il est, maintenant, grand temps de coder son premier slide.
 ```
 
 Ici on voit plusieurs choses.
-Commençons par la syntaxe markdown : on retrouve les titres de sections `##` et les listes à puce `-`.
+Commençons par la syntaxe _markdown_ : on retrouve les titres de sections `##` et les listes à puce `-`.
 On peut appliquer un style CSS à l'ensemble de la slide `.[slide-text]`.
 On découvre aussi la directive [image](https://slidesk.github.io/slidesk-doc/docs/syntax/Image/){:target="_blank"} en action.
 
@@ -300,7 +300,7 @@ Je vous laisse aller voir les différentes syntaxes possibles dans la [documenta
 ## 🧩 Les plugins
 
 SliDesk vient avec des [plugins](https://slidesk.github.io/slidesk-doc/docs/plugins/intro){:target="_blank"} pré-définis.
-Vous en avez déjà pas mal et plutôt cool comme : piloter sa prez avec un gamepad, avoir des listes à puces animées, une bare de progression, ...
+Vous en avez déjà pas mal et plutôt cools comme : piloter sa prez avec un gamepad, avoir des listes à puces animées, une bare de progression, ...
 Je vous laisse allez voir la vingtaine de plugins disponibles.
 
 Et si vous ne trouvez pas votre bonheur vous pouvez en créer vous même.
@@ -539,7 +539,7 @@ Pour l'accès via HTTP vous avez deux options :
 
 Pour des raisons de simplicité j'ai choisi la deuxième option, d'autant que SliDesk fait l'export prêt à l'emploi pour moi 😎.
 Pour cela il suffit de rajouter l'option `-s` permettant d'activer la [sauvegarde](https://slidesk.github.io/slidesk-doc/docs/usage/options/save){:target="_blank"} de vos slides en version statique.
-Une fois exécuté, vous avez dans votre répertoire (que vous positionnez au moment d'activer la commande) l'ensemble des fichiers à déposer dans un serveur HTTP.
+Une fois exécutée, vous avez dans votre répertoire (que vous positionnez au moment d'activer la commande) l'ensemble des fichiers à déposer dans un serveur HTTP.
 ```bash
 $ slidesk -s ./build
  ____(•)-
@@ -566,7 +566,7 @@ Voici un exemple de ce que cela donne : [https://philippart-s.github.io/talks-sl
 
 ## 🔎 En conclusion
 
-C'en est fini de la présentation de SliDesk, je pourrai continuer à vous détailler toutes les options mais l'article est bien trop long et je vous laisse aller vous faire une idée par vous même en parcourant la documentation et le repository de SliDesk.
+C'en est fini de la présentation de SliDesk, je pourrai continuer à vous détailler toutes les options mais l'article est déjà bien trop long et je vous laisse aller vous faire une idée par vous même en parcourant la documentation et le repository de SliDesk.
 Encore merci, Sylvain, d'avoir fait un outil qui me permet de faire mes slides as code.
 
 Si vous êtes arrivés jusque là merci de m'avoir lu et si il y a des coquilles n'hésitez pas à me faire une [issue ou PR](https://github.com/philippart-s/blog){:target="_blank"} 😊.

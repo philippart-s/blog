@@ -392,7 +392,7 @@ Fichier qui contient la feuille de style du plugin.
 }
 ```
 
-Au final, maintenant nos slides ont un beau footer !
+Au final, nos slides ont un beau footer !
 
 ![Exemple footer]({{ site.url }}{{ site.baseurl }}/assets/images/slidesk-discovery/footer-slide.png){: .align-center}
 

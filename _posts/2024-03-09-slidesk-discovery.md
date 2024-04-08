@@ -33,7 +33,7 @@ A cette époque, j'ai testé [Reveal.js](https://revealjs.com/){:target="_blank"
 Les principales : un niveau trop faible en CSS, la complexité de Reveal.js, un niveau trop faible en CSS 😅.  
 Mais alors, pourquoi réessayer ?  
 Tout simplement parce que, depuis, l'envie de coder mes slides plutôt que de les _dessiner_ ne m'a pas quitté.
-Voyez-y de la geekerie (que j'assume) mais aussi pour les raisons suivantes : 
+Voyez-y de la geekerie (que j'assume) mais aussi ces autres raisons : 
  - je ne peux pas forcément utiliser les outils classiques que sont Office ou Google Slides,
  - je trouve le suivi de version de ces outils pas assez abouti,
  - le travail collaboratif par PR me semble plus approprié lorsque l'on travaille à plusieurs,

@@ -303,7 +303,7 @@ SliDesk vient avec des [plugins](https://slidesk.github.io/slidesk-doc/docs/plug
 Vous en avez déjà pas mal et plutôt cools comme : piloter sa présentation avec un gamepad, avoir des listes à puces animées, une barre de progression, ...
 Je vous laisse allez voir la vingtaine de plugins disponibles.
 
-Et si vous ne trouvez pas votre bonheur vous pouvez en créer vous même.
+Et si vous ne trouvez pas votre bonheur vous pouvez en créer vous-mêmes.
 C'est, avec mon petit niveau front, ce que j'ai fait.
 J'avais besoin de rajouter un footer avec logo et autres informations, du coup j'ai créé un plugin.
 Pour cela il faut créer un répertoire `plugins` à la racine de votre projet puis un sous répertoire contenant votre plugin.

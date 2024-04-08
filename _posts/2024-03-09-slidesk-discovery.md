@@ -567,7 +567,7 @@ Voici un exemple de ce que cela donne : [https://philippart-s.github.io/talks-sl
 ## 🔎 En conclusion
 
 C'en est fini de la présentation de SliDesk, je pourrai continuer à vous détailler toutes les options mais l'article est déjà bien trop long et je vous laisse aller vous faire une idée par vous-mêmes en parcourant la documentation et le repository de SliDesk.
-Encore merci, Sylvain, d'avoir fait un outil qui me permet de faire mes slides as code.
+Encore merci Sylvain, d'avoir fait un outil qui me permet de faire mes slides as code !
 
 Si vous êtes arrivés jusque là merci de m'avoir lu et si il y a des coquilles n'hésitez pas à me faire une [issue ou PR](https://github.com/philippart-s/blog){:target="_blank"} 😊.
 

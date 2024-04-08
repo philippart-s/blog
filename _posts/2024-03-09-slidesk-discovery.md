@@ -50,7 +50,7 @@ Dans ce cas, avec [Sylvain](https://twitter.com/GouZ){:target="_blank"}, l'auteu
 Je lui indiquais, que je galérais avec Reveal.js et qu'en plus, nativement, le multilingues n'était pas super bien géré (et toujours le côté monolithe qui ne me plaisait pas).
 
 De fil en aiguille, Sylvain, qui bossait sur le sujet SliDesk me propose d'intégrer cette fonctionnalité dans ses devs 🤩.
-L'idée, aussi, de l'aider dans la mise au point de son projet, avec mes retours de débutant de CSS et JS étaient l'occasion de participer avec lui à son aventure.
+L'idée devient alors une motivation supplémentaire : l'aider dans la mise au point de son projet, avec mes retours de débutant de CSS et JS. C'était l'occasion de participer avec lui à son aventure !
 
 Enfin, Sylvain, me l'avait indiqué, son objectif était de faire un slide as code simple et personnalisable !
 

@@ -523,7 +523,7 @@ custom_css: assets/css/custom.css
 !include(slides/speaker.sdf)
 ```
 
-Ensuite, si vous ne spécifiez pas de langue au démarrage cela utilise la langue par défaut sinon vous pouvez spécifier la langue voulue au démarrage : `slidesk -l fr`.
+Ensuite, si vous ne spécifiez pas de langue au démarrage, cela utilise la langue par défaut. Sinon vous pouvez spécifier la langue voulue au démarrage : `slidesk -l fr`.
 
 ![Exemple multi lingues]({{ site.url }}{{ site.baseurl }}/assets/images/slidesk-discovery/multi-lingues.png){: .align-center}
 

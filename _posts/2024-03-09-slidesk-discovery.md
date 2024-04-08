@@ -59,7 +59,7 @@ Enfin, Sylvain me l'avait indiqué : son objectif était de faire un slide as co
 
 # 🏁 Démarrer avec SliDesk
 
-Les premières choses à faire : aller faire voir du côté du [repository](https://github.com/slidesk/slidesk){:target="_blank"} GitHub, de la [documentation](https://slidesk.github.io/slidesk-doc/){:target="_blank"} et de l'[exemple]([https://slidesk.github.io/slidesk/){:target="_blank"}.
+Les premières choses à faire : aller voir du côté du [repository](https://github.com/slidesk/slidesk){:target="_blank"} GitHub, de la [documentation](https://slidesk.github.io/slidesk-doc/){:target="_blank"} et de l'[exemple]([https://slidesk.github.io/slidesk/){:target="_blank"}.
 
 Ensuite, vient le temps _d'installer_ SliDesk.
 Ou plus précisément, la [CLI](https://slidesk.github.io/slidesk-doc/docs/usage/intro){:target="_blank"} de SliDesk qui va être votre compagnon pour tirer pleinement partie de SliDesk.

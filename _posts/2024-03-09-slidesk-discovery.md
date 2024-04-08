@@ -490,7 +490,7 @@ L'affichage des speakers notes est disponible sur une autre route terminant par 
 L'une des choses, entre autres, qui m’intéressait dans le fait de coder mes slides était la possibilité d'avoir du code générique et de ne pas tout réécrire entre deux conférences.
 SliDesk permet d'utiliser des variables dans des [configurations](https://slidesk.github.io/slidesk-doc/docs/usage/options/conf){:target="_blank"} pour, par exemple, changer le nom d'une conférence ou d'autres petits éléments de variation.
 
-Dans mon cas, je voulais aussi pouvoir gérer le cas où j'avais exactement la même présentation mais dans des langues différentes, la notion de configuration aurait pû aller mais Sylvain a gentiment développé un [module multilingues](https://slidesk.github.io/slidesk-doc/docs/category/internationalisation){:target="_blank"} plus simple à utiliser.
+Dans mon cas, je voulais aussi pouvoir gérer le cas où j'avais exactement la même présentation mais dans des langues différentes. La notion de configuration aurait pu convenir mais Sylvain a gentiment développé un [module multilingues](https://slidesk.github.io/slidesk-doc/docs/category/internationalisation){:target="_blank"} encore plus simple à utiliser.
 
 Pour l'activer rien de plus simple.
 Créer un fichier JSON par langue, par exemple `fr.lang.json` et `en.lang.json`.

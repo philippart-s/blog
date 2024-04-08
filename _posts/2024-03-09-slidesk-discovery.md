@@ -294,7 +294,7 @@ Le CSS précédent avec le code ci-dessous nous donne maintenant un joli slide d
 
 ![Slide speaker]({{ site.url }}{{ site.baseurl }}/assets/images/slidesk-discovery/speaker-slide.png){: .align-center}
 
-SliDesk, si il permet de faire du pure HTML, CSS et JS, vient avec sa syntaxe pour vous faciliter la vie.
+S'il permet de faire du pure HTML, CSS et JS, SliDesk vient avec sa syntaxe pour vous faciliter la vie.
 Je vous laisse aller voir les différentes syntaxes possibles dans la [documentation](https://slidesk.github.io/slidesk-doc/docs/category/syntax){:target="_blank"}.
 
 ## 🧩 Les plugins

@@ -530,7 +530,7 @@ Ensuite, si vous ne spécifiez pas de langue au démarrage cela utilise la langu
 ## 🌐 Distribution des slides
 
 Pour mettre vos slides à disposition des participant•es, vous avez deux options : impression PDF ou accès via le web en HTTP.
-On va pa se mentir, l'option impression PDF peut être récalcitrante (même si Sylvain fournit une feuille de style qui fait déjà bien le boulot), la faute au HTML / CSS qui ne réagi pas toujours comme on veut 😅.
+On ne va pa se mentir, l'option impression PDF peut être récalcitrante (même si Sylvain fournit une feuille de style qui fait déjà bien le boulot), la faute au HTML / CSS qui ne réagit pas toujours comme on veut 😅.
 Si vous êtes ceinture noire de CSS je pense que le problème est surmontable ... mais ce n'est pas mon cas 😉.
 
 Pour l'accès via HTTP vous avez deux options : 

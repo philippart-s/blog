@@ -209,7 +209,7 @@ Quelques images et emojis et on a fait le tour !
 Là où j'ai le plus eu de difficultés c'est avec les images pour les positionner comme il faut.
 SliDesk est responsive, l'idée est donc que les images suivent aussi lorsque la résolution ou la place changent 😉.
 
-SliDesk vient à notre secours avec une directive `image` mais il possible que vous ayez besoin de gérer une ou deux images pour des besoins spécifiques.
+SliDesk vient à notre secours avec une directive `image` mais vous pourrez avoir besoin de gérer une ou deux images pour des besoins spécifiques.
 Mais revenons à nos moutons et voyons un peu ce que donne la personnalisation.
 ```css
 :root {

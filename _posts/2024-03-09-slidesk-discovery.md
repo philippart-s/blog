@@ -286,7 +286,7 @@ Il est maintenant grand temps de coder son premier slide.
 ```
 
 Ici on voit plusieurs choses.
-Commençons par la syntaxe _markdown_ : on retrouve les titres de sections `##` et les listes à puce `-`.
+Commençons par la syntaxe _markdown_ : on retrouve les titres de sections `##` et les listes à puces `-`.
 On peut appliquer un style CSS à l'ensemble de la slide `.[slide-text]`.
 On découvre aussi la directive [image](https://slidesk.github.io/slidesk-doc/docs/syntax/Image/){:target="_blank"} en action.
 

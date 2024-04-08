@@ -196,7 +196,7 @@ public interface OllamaAIService {
   // Context message
   @SystemMessage("You are an AI assistant.")  
   // Prompt customisation
-  @UserMessage("Answer as best possible to the following question: {question}. The answer must be in a style of a virtual assistant ans use emoji.")
+  @UserMessage("Answer as best possible to the following question: {question}. The answer must be in a style of a virtual assistant and use emoji.")
   String askAQuestion(String question);
 }
 ```

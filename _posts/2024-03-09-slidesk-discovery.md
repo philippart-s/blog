@@ -264,7 +264,7 @@ Je reviendrai sur la _speaker view_ présente dans le CSS plus tard 😉
 
 ## 🖼️ Coder ses slides
 
-Il est, maintenant, grand temps de coder son premier slide.
+Il est maintenant grand temps de coder son premier slide.
 ```markdown
 ## Stéphane Philippart .[slide-text]
 

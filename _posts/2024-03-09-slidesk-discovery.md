@@ -45,17 +45,17 @@ Autre élément qui m'a aussi ennuyé, le côté monolithe du dev alors que mon 
 
 # 🤔 Pourquoi SliDesk ?
 
+> Je ne suis pas aussi calé qu'Hubert Sablonnière qui code carrément tout un site pour les slides des ses talks 🤩.
+> Allez jeter un coup d'oeil à son [site](https://www.hsablonniere.com/talks/){:target="_blank"}.
+
 Comme souvent, tout part d'une discussion 😉.
 Dans ce cas, avec [Sylvain](https://twitter.com/GouZ){:target="_blank"}, l'auteur de SliDesk.
-Je lui indiquais, que je galérais avec Reveal.js et qu'en plus, nativement, le multilingues n'était pas super bien géré (et toujours le côté monolithe qui ne me plaisait pas).
+Je lui indiquais, que je galérais avec Reveal.js et qu'en plus, nativement, le multilingue n'était pas super bien géré (et toujours le côté monolithe qui ne me plaisait pas).
 
 De fil en aiguille, Sylvain, qui bossait sur le sujet SliDesk me propose d'intégrer cette fonctionnalité dans ses devs 🤩.
 L'idée devient alors une motivation supplémentaire : l'aider dans la mise au point de son projet, avec mes retours de débutant de CSS et JS. C'était l'occasion de participer avec lui à son aventure !
 
 Enfin, Sylvain me l'avait indiqué : son objectif était de faire un slide as code simple et personnalisable !
-
-> Je ne suis pas aussi calé qu'Hubert Sablonnière qui code carrément tout un site pour les slides des ses talks 🤩.
-> Allez jeter un coup d'oeil à son [site](https://www.hsablonniere.com/talks/){:target="_blank"}.
 
 # 🏁 Démarrer avec SliDesk
 
@@ -287,7 +287,7 @@ Il est maintenant grand temps de coder son premier slide.
 
 Ici on voit plusieurs choses.
 Commençons par la syntaxe _markdown_ : on retrouve les titres de sections `##` et les listes à puces `-`.
-On peut appliquer un style CSS à l'ensemble de la slide `.[slide-text]`.
+On peut appliquer un style CSS à l'ensemble du slide `.[slide-text]`.
 On découvre aussi la directive [image](https://slidesk.github.io/slidesk-doc/docs/syntax/Image/){:target="_blank"} en action.
 
 Le CSS précédent avec le code ci-dessous nous donne maintenant un joli slide de présentation de speaker.
@@ -407,12 +407,12 @@ SliDesk permet d'avoir ses [speakers notes](https://slidesk.github.io/slidesk-do
 
 Pour avoir ces notes, rien de plus simple : ajouter des commentaires avec le format `/* mes notes */` et lancer SliDesk avec l'option `-n`.
 
-Petite subtilité de SliDesk sur les notes speakers, il est possible d'ajouter des informations sur le temps :
+Petite subtilité de SliDesk sur les speakers notes, il est possible d'ajouter des informations sur le temps :
  - checkpoint : `//@ < 2:00`, ce slide doit être affiché avant 2 minutes sinon l'horloge sera affichée en rouge,
  - duration : `//@ [] 01:00`, le temps à passer sur ce slide
 Pour que cela s'affiche il faudra lancer SliDesk avec l'option [timer](https://slidesk.github.io/slidesk-doc/docs/usage/options/timers){:target="_blank"}, `-t`.
 
-Au final pour lancer SliDesk avec les notes speakers et les informations de temps il faut donc activer les options `-n` et `-t`.
+Au final pour lancer SliDesk avec les speakers notes et les informations de temps il faut donc activer les options `-n` et `-t`.
 
 ```bash
 $ slidesk -nt                      
@@ -490,8 +490,7 @@ L'affichage des speakers notes est disponible sur une autre route terminant par 
 L'une des choses, entre autres, qui m’intéressait dans le fait de coder mes slides était la possibilité d'avoir du code générique et de ne pas tout réécrire entre deux conférences.
 SliDesk permet d'utiliser des variables dans des [configurations](https://slidesk.github.io/slidesk-doc/docs/usage/options/conf){:target="_blank"} pour, par exemple, changer le nom d'une conférence ou d'autres petits éléments de variation.
 
-Dans mon cas, je voulais aussi pouvoir gérer le cas où j'avais exactement la même présentation mais dans des langues différentes. La notion de configuration aurait pu convenir mais Sylvain a gentiment développé un [module multilingues](https://slidesk.github.io/slidesk-doc/docs/category/internationalisation){:target="_blank"} encore plus simple à utiliser.
-
+Dans mon cas, je voulais aussi pouvoir gérer le cas où j'avais exactement la même présentation mais dans des langues différentes. La notion de configuration aurait pu convenir mais Sylvain a gentiment développé un [module multilingue](https://slidesk.github.io/slidesk-doc/docs/category/internationalisation){:target="_blank"} encore plus simple à utiliser.  
 Pour l'activer rien de plus simple : 
 Créer un fichier JSON par langue, par exemple `fr.lang.json` et `en.lang.json`.
 ```json

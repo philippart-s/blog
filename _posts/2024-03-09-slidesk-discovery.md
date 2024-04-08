@@ -66,7 +66,7 @@ Ou plus précisément, la [CLI](https://slidesk.github.io/slidesk-doc/docs/usage
 
 J'en parlerai plus tard, mais la CLI vous permettra aussi de _servir_ vos pages pour afficher vos slides.
 
-Avant d'aller plus loin, il vous faut donc installer SliDesk : pour cela suivez la [documentation](https://slidesk.github.io/slidesk-doc/docs/category/installation){:target="_blank"} qui explique les différentes façons de procéder.  
+Pour installer SliDesk, suivez la [documentation](https://slidesk.github.io/slidesk-doc/docs/category/installation){:target="_blank"} qui explique les différentes façons de procéder.  
 Pour ma part j'ai utilisé brew : `brew install gouz/tools/slidesk`.
 
 ## ✨ Initialisation d'un projet

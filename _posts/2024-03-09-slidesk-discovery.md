@@ -408,7 +408,7 @@ SliDesk permet d'avoir ses [speakers notes](https://slidesk.github.io/slidesk-do
 Pour avoir ces notes, rien de plus simple : ajouter des commentaires avec le format `/* mes notes */` et lancer SliDesk avec l'option `-n`.
 
 Petite subtilité de SliDesk sur les notes speakers, il est possible d'ajouter des informations sur le temps :
- - checkpoint : `//@ < 2:00`, ce slide doit être affiché avant 2 minutes sinon l'horloge ser affichée en rouge,
+ - checkpoint : `//@ < 2:00`, ce slide doit être affiché avant 2 minutes sinon l'horloge sera affichée en rouge,
  - duration : `//@ [] 01:00`, le temps à passer sur ce slide
 Pour que cela s'affiche il faudra lancer SliDesk avec l'option [timer](https://slidesk.github.io/slidesk-doc/docs/usage/options/timers){:target="_blank"}, `-t`.
 

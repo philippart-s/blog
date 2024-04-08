@@ -193,7 +193,7 @@ custom_css: assets/css/custom.css
 
 On voit ici l'inclusion du slide _speaker.sdf_ mais aussi de la feuille de style _custom.css_ qui se trouvent tous les deux dans des sous-arborescences.
 
-C'est cette liberté dans l'organisation et dans la syntaxe (on le verra plus tard) que j'aime dans SliDesk.
+C'est cette liberté dans l'organisation et dans la syntaxe (on le verra plus tard) que j'aime dans SliDesk 😇.
 
 ## 🎨 Un peu de personnalisation
 

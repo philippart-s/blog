@@ -434,7 +434,7 @@ Quelques explications :
  - `-i` permet d'activer le mode [interactif](https://slidesk.github.io/slidesk-doc/docs/usage/options/interactive){:target="_blank"}, c'est-à-dire qu'il permet d'afficher la présentation sur d'autres devices en plus du vôtre (mais vous restez la / le seul•e maître pour passer les slides)
  - `-d` permet d'activer le mode [domaine](https://slidesk.github.io/slidesk-doc/docs/usage/options/domain){:target="_blank"}, c'est-à-dire qu'il rend la présentation et les speaker notes accessibles sur une IP bien particulière
 
-Donc si l'on cumule toutes ces options pour afficher le notes, le mode interactif et le domaine cela donne `slidesk -nit --domain 192.168.0.12`
+Donc si l'on cumule toutes ces options pour afficher les speakers notes, le mode interactif et le domaine cela donne `slidesk -nit --domain 192.168.0.12`
 
 ```bash
 $ slidesk -nit --domain 192.168.0.12

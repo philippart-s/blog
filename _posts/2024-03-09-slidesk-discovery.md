@@ -398,7 +398,7 @@ Au final, nos slides ont un beau footer !
 
 ## ✨ Les autres fonctionnalités de SliDesk
 
-SliDesk propose de nombreuses fonctionnalités, je vous laisserai aller voir par vous même dans la [documentation](https://slidesk.github.io/slidesk-doc/docs/intro){:target="_blank"} mais pour finir cet article je vous en présente deux très utiles.
+SliDesk propose de nombreuses fonctionnalités, je vous laisserai aller voir par vous-mêmes dans la [documentation](https://slidesk.github.io/slidesk-doc/docs/intro){:target="_blank"} mais pour finir cet article je vous en présente deux très utiles.
 
 ### 📜 Les speaker notes
 

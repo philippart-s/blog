@@ -198,7 +198,7 @@ C'est cette liberté dans l'organisation et dans la syntaxe (on le verra plus ta
 ## 🎨 Un peu de personnalisation
 
 Comme je vous l'ai déjà indiqué, il est possible de personnaliser SliDesk avec sa propre feuille de style.
-En effet, SliDesk se veut simple et vient avec un style épuré et simple.
+En effet, SliDesk se veut simple et vient avec un style épuré.
 Nul doute, que quelque soit votre niveau de CSS (et croyez moi, je sais de quoi je parle 😅) vous aurez besoin de personnaliser le rendu de vos slides.
 Il est possible de tout faire en HTML, oui j'ai essayé tellement je n'aime pas le CSS 😂.
 Force est de constaté, qu'il est plus simple et plus dans l'esprit de SliDesk de le faire en CSS.

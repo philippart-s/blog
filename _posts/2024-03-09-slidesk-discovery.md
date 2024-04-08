@@ -402,7 +402,7 @@ SliDesk propose de nombreuses fonctionnalités, je vous laisserai aller voir par
 
 ### 📜 Les speaker notes
 
-Je ne me sert pas souvent des speakers notes mais je sais que c'est une fonctionnalité très utilisée par de nombreuses personnes.
+Je ne me sers pas souvent des speakers notes mais je sais que c'est une fonctionnalité très utilisée par de nombreuses personnes.
 SliDesk permet d'avoir ses [speakers notes](https://slidesk.github.io/slidesk-doc/docs/usage/options/notes){:target="_blank"} comme pour les autres outils de création de slides.
 
 Pour avoir ces notes, rien de plus simple : ajouter des commentaires avec le format `/* mes notes */` et lancer SliDesk avec l'option `-n`.

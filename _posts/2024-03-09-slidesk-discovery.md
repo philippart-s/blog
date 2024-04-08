@@ -37,7 +37,7 @@ Voyez-y de la geekerie (que j'assume) mais aussi ces autres raisons :
  - je ne peux pas forcément utiliser les outils classiques que sont Office ou Google Slides,
  - je trouve le suivi de version de ces outils pas assez abouti,
  - le travail collaboratif par PR me semble plus approprié lorsque l'on travaille à plusieurs,
- - la gestion multilingues où il faut tout refaire ne me convient pas,
+ - la gestion multilingue où il faut tout refaire ne me convient pas,
  - j'aime coder 😉
 
 Il n'empêche que lorsque j'ai, de nouveau, franchi le pas en début d'année dernière, je me suis confronté aux mêmes problèmes que la dernière fois en réessayant Reveal.js et consorts.

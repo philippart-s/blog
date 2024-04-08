@@ -492,7 +492,7 @@ SliDesk permet d'utiliser des variables dans des [configurations](https://slides
 
 Dans mon cas, je voulais aussi pouvoir gérer le cas où j'avais exactement la même présentation mais dans des langues différentes. La notion de configuration aurait pu convenir mais Sylvain a gentiment développé un [module multilingues](https://slidesk.github.io/slidesk-doc/docs/category/internationalisation){:target="_blank"} encore plus simple à utiliser.
 
-Pour l'activer rien de plus simple.
+Pour l'activer rien de plus simple : 
 Créer un fichier JSON par langue, par exemple `fr.lang.json` et `en.lang.json`.
 ```json
 {

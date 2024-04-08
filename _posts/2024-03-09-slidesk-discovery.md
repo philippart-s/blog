@@ -210,7 +210,7 @@ Là où j'ai le plus eu de difficultés c'est avec les images pour les positionn
 SliDesk est responsive, l'idée est donc que les images suivent aussi lorsque la résolution ou la place changent 😉.
 
 SliDesk vient à notre secours avec une directive `image` mais vous pourrez avoir besoin de gérer une ou deux images pour des besoins spécifiques.
-Mais revenons à nos moutons et voyons un peu ce que donne la personnalisation.
+Revenons à nos moutons et voyons un peu ce que donne la personnalisation.
 ```css
 :root {
   --sd-heading1-size: 8.5vw;

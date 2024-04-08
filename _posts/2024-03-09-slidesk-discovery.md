@@ -300,7 +300,7 @@ Je vous laisse aller voir les différentes syntaxes possibles dans la [documenta
 ## 🧩 Les plugins
 
 SliDesk vient avec des [plugins](https://slidesk.github.io/slidesk-doc/docs/plugins/intro){:target="_blank"} pré-définis.
-Vous en avez déjà pas mal et plutôt cools comme : piloter sa prez avec un gamepad, avoir des listes à puces animées, une bare de progression, ...
+Vous en avez déjà pas mal et plutôt cools comme : piloter sa présentation avec un gamepad, avoir des listes à puces animées, une barre de progression, ...
 Je vous laisse allez voir la vingtaine de plugins disponibles.
 
 Et si vous ne trouvez pas votre bonheur vous pouvez en créer vous même.

@@ -52,7 +52,7 @@ Je lui indiquais, que je galérais avec Reveal.js et qu'en plus, nativement, le 
 De fil en aiguille, Sylvain, qui bossait sur le sujet SliDesk me propose d'intégrer cette fonctionnalité dans ses devs 🤩.
 L'idée devient alors une motivation supplémentaire : l'aider dans la mise au point de son projet, avec mes retours de débutant de CSS et JS. C'était l'occasion de participer avec lui à son aventure !
 
-Enfin, Sylvain, me l'avait indiqué, son objectif était de faire un slide as code simple et personnalisable !
+Enfin, Sylvain me l'avait indiqué : son objectif était de faire un slide as code simple et personnalisable !
 
 > Je ne suis pas aussi calé qu'Hubert Sablonnière qui code carrément tout un site pour les slides des ses talks 🤩.
 > Allez jeter un coup d'oeil à son [site](https://www.hsablonniere.com/talks/){:target="_blank"}.

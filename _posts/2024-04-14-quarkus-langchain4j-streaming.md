@@ -1,7 +1,7 @@
 ---
-title: "🤖 Apprends à parler à ton IA avec LangChain4j 🦜"
+title: "🤖 Augmente les capacités de ton IA avec LangChain4j 🦜"
 classes: wide
-excerpt: "Deuxième partie de la découverte de Langchain4j au travers de Quarkus. Mode streaming, on"
+excerpt: "Deuxième partie de la découverte de Langchain4j au travers de Quarkus. Ajout de fonctionnalités."
 categories:
   - Code
   - Java
@@ -16,18 +16,89 @@ tags:
 ![perroquet multi couleurs ave un robot]({{ site.url }}{{ site.baseurl }}/assets/images/quarkus-langchain-streaming/robot-ia.jpg){: .align-center}
 [@wildagsx](https://twitter.com/wildagsx){:style="font-size: smaller"}{:target="_blank"}{: .align-right}<br/>
 
-Suite de l'[article précédent]({{ site.baseurl }}{% post_url 2024-45-01-quarkus-langchain4j %}){:target="_blank"} nous ayant permis la découverte de [LangChain4j](https://docs.langchain4j.dev/intro/){:target="_blank"} au travers de [Quarkus](https://quarkus.io/){:target="_blank"}.
+Suite de l'[article précédent]({{ site.baseurl }}{% post_url 2024-04-01-quarkus-langchain4j %}){:target="_blank"} nous ayant permis la découverte de [LangChain4j](https://docs.langchain4j.dev/intro/){:target="_blank"} au travers de [Quarkus](https://quarkus.io/){:target="_blank"}.
 > ℹ️ Je vous laisse donc y jeter un oeil pour toute la phase d'installation, de prérequis nécessaires à la bonne compréhension de cet article.
 
 Lors de ce premier article, nous avons vu ensemble comme développer notre premier chat bot.
 Celui-ci était très simple, et il fallait attendre que le LLM distant _fabrique_ l'ensemble de la réponse avant de l'avoir en retour.
 Pas très pratique et conviviale.
 
-Lors de cet article, je vous propose de voir comment ajouter la notion de streaming à notre développement précédent.
+Lors de cet article, je vous propose d'ajouter quelques fonctionnalités, rendant notre _chat bot_, plus "intelligent".
 >ℹ️ L'ensemble du code source se trouve dans le repository GitHub [discover-langchain4j](https://github.com/philippart-s/discover-langchain4j){:target="_blank"}
 
-## Activation du mode streaming
+## 🖥️ Ajout du mode CLI
 
+Afin d'avoir une interaction plus fluide, je vous propose d'accéder aux fonctionnalités de notre assistant via une CLI.
+Pour cela ,je vais utiliser [Picocli](https://picocli.info/){:target="_blank"}.
+Pour plus de détails sur [Picocli](https://picocli.info/){:target="_blank"} et son extension [Quarkus](https://quarkus.io/){:target="_blank"}, je vous laisse aller voir l'article que j'ai écrit à ce sujet : [A la découverte de Picocli 🖥️]({{ site.baseurl }}{% post_url 2023-08-03-discover-picocli %}){:target="_blank"}
+
+Transformer notre assistant en CLI est assez simple : il suffit d'ajouter une classe et d'utiliser les annotations [Picocli](https://picocli.info/){:target="_blank"}.
+
+### La commande principale
+
+L'idée est d'avoir un point d'entrée unique, comme pour la [conférence](https://philippart-s.github.io/talks-slides/jarvis/devoxx-fr-2024/#){:target="_blank"} que je donne sur [Picocli](https://picocli.info/){:target="_blank"}, je vais l'appeler Jarvis 😉.
+
+```java
+```
+
+## 🌊 Activation du mode streaming
+
+C'est la première fonctionnalité que nous allons rajouter, cela permet de rendre le bot plus convivial et de ne pas avoir à attendre sans trop savoir quand il va nous répondre 😅.  
+Pour activer cette fonctionnalité, c'est assez simple : nous allons utiliser [Mutiny](https://quarkus.io/guides/mutiny-primer){:target="_blank"}.
+Mais c'est quoi me direz-vous 🤨 ?  
+En deux mots : cela vous permet d'ajouter une notion d'asynchronisme dans votre développement et de basculer dans ce que l'on appelle la programmation reactive.  
+L'objectif ?
+
+Permettre à notre IA d'envoyer son début de réponse avant même d'avoir envoyer l'ensemble de la réponse.
+
+### 🔀 Ajout de l'asynchronisme
+
+[Quarkus](https://quarkus.io/){:target="_blank"} et son extension [quarkus-langchain4j](https://github.com/quarkiverse/quarkus-langchain4j/){:target="_blank"} vont encore grandement nous aider.
+
+> ℹ️ Nous repartons du code de l'[article précédent]({{ site.baseurl }}{% post_url 2024-45-01-quarkus-langchain4j %}){:target="_blank"}, si vous souhaitez plus de détails n'hésitez pas à vous reporter à l'article pour plus de détails 😉
+
+Nous allons donc modifier notre service _OllamaService.java_ pour qu'il supporte le mode streaming : 
+
+```java
+package fr.wilda.quarkus;
+
+import dev.langchain4j.service.SystemMessage;
+import dev.langchain4j.service.UserMessage;
+import io.quarkiverse.langchain4j.RegisterAiService;
+import io.smallrye.mutiny.Multi;
+
+// AI service bean registration
+@RegisterAiService
+public interface OllamaAIService {
+  
+  // Context message
+  @SystemMessage("You are an AI assistant.")  
+  // Prompt customisation
+  @UserMessage("Answer as best possible to the following question: {question}. The answer must be in a style of a virtual assistant and use emoji.")
+  String askAQuestion(String question);
+
+  // Context message
+  @SystemMessage("You are an AI assistant.")  
+  // Prompt customisation
+  @UserMessage("Answer as best possible to the following question: {question}. The answer must be in a style of a virtual assistant and use emoji.")
+  // Multi use is enough to activate streaming mode
+  Multi<String> askAQuestionSteramingMode(String question);
+}
+```
+
+⚠️ Notez-bien ici l'utilisation de l'interface `io.smallrye.mutiny.Multi` qui permet "d'activer" le mode streaming.
+L'extension se chargeant de l'activer lors de ses requêtes au modèle 😉.  
+A noter que seul le type `String` est pour l'instant supporter pour le mode streaming mais des études d'évolutions sont en cours ⚠️
+
+Maintenant nous allons faire évoluer notre partie CLI pour qu'elle puisse profiter de cette arrivée d'informations au fil de l'eau.
+
+### 🖥️ Modification de la CLI
+
+Par rapport à sa version précédente, l'objectif de la CLI va être de streamer la réponse du modèle.
+Pour cela, on va _consommer_ en _s'abonnant_ aux évènements de retours de notre appel grâce à Mutiny.
+
+
+ 
 
 Dans le cadre de mon travail, cela fait maintenant plus de deux ans que je navigue dans le monde de l'Intelligence Artificielle.
 Et, comme tout le monde, j'ai assisté à la déferlante des [Large Languages Model](https://fr.wikipedia.org/wiki/Grand_modèle_de_langage){:target="_blank"} (LLM).

@@ -9,6 +9,7 @@ tags:
   - Devoxx
   - Humeur
   - Conférence
+date: 2024-05-04
 ---
 <meta content="{{ {{ site.url }}{{ site.baseurl }}/assets/images/signed-git-commit/logo-git-secure.png" property="og:image">
 
@@ -199,6 +200,38 @@ Please decide how far you trust this user to correctly verify other users\' keys
 ```
 
 `Go to paragraphe Signer ses commits 🔒` pour que les commits sur le nouvel ordinateur soit signés.
+
+## 🗓️ Mise à jour de la date d'expiration
+
+Petite mise à jour de cet article en ce 4 mai 2024 ... car cela ne fonctionne plus 😅.
+Avec un message qui n'est pas plus explicite que ça:
+```bash
+error: gpg failed to sign the data
+fatal: failed to write commit object
+```
+
+En regardant de plus près avec la commande `gpg --list-keys`, je me rends compte que mes clefs ne sont plus valides (`expired`).
+Si cela vous arrive il est possible d'étendre la date d'expiration de votre clef.
+
+```bash
+$ gpg --edit-key ABCDEFGHIJKLMNOP
+
+gpg> expire
+Changing expiration time for the primary key.
+gpg: WARNING: no user ID has been marked as primary.  This command may
+              cause a different user ID to become the assumed primary.
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0)
+```
+
+Choisissez la durée à partir de laquelle la clef ne sera plus valide puis quittez le mode édition avec `save`.
+
+Et voilà, votre clef est de nouveau valide 😉.
 
 ## Conclusion 🧐
 

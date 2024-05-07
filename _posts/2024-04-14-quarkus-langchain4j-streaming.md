@@ -19,7 +19,7 @@ tags:
 Je vous propose la suite de l'[article précédent]({{ site.baseurl }}{% post_url 2024-04-01-quarkus-langchain4j %}){:target="_blank"} nous ayant permis la découverte de [LangChain4j](https://docs.langchain4j.dev/intro/){:target="_blank"} au travers de [Quarkus](https://quarkus.io/){:target="_blank"}.
 > ℹ️ Je vous laisse donc y jeter un oeil pour toute la phase d'installation, de prérequis nécessaires à la bonne compréhension de cet article.
 
-Lors de ce premier article, nous avons vu, ensemble, comment développer notre premier chat bot.
+Lors de ce premier article, nous avons vu ensemble comment développer notre premier chat bot.
 Celui-ci était très simple et il fallait attendre que le modèle distant _fabrique_ l'ensemble de la réponse avant de l'avoir en retour.
 Pas très pratique et convivial.
 

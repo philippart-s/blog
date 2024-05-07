@@ -77,7 +77,7 @@ public interface OllamaAIService {
 ```
 
 ⚠️ Notez-bien ici l'utilisation de l'interface `io.smallrye.mutiny.Multi` qui permet "d'activer" le mode streaming.
-L'extension se chargeant de l'activer lors de ses requêtes au modèle 😉.  
+L'extension se charge de l'activer lors de ses requêtes au modèle 😉.  
 A noter que seul le type `String` est, pour l'instant, supporté pour le mode streaming mais des études d'évolutions sont en cours ⚠️
 
 Maintenant, nous allons faire évoluer notre partie API pour qu'elle puisse profiter de cette arrivée d'informations au fil de l'eau.

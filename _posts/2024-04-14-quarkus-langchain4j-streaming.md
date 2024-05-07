@@ -84,7 +84,7 @@ Maintenant, nous allons faire évoluer notre partie API pour qu'elle puisse prof
 
 ### 🧩 Modification de l'API Rest
 
-L'idée est de propose une ressource qui va être _streamée_ au fur et à mesure.
+L'idée est de proposer une ressource qui va être _streamée_ au fur et à mesure.
 On met donc à jour la  classe `AIAssistant` qui expose le endpoint `hal9000`.
 
 ```java

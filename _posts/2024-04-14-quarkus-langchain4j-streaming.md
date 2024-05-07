@@ -203,7 +203,7 @@ Au chargement de l'application on voit que le mode RAG est activé avec les bonn
 2024-05-05 20:12:23,987 INFO  [io.qua.lan.eas.run.EasyRagRecorder] (Quarkus Main Thread) Ingesting documents from path: ./src/main/resources/rag/, path matcher = glob:**, recursive = true
 ```
 
-Réessayons de demander au modèle si il connaît des choses sur _Stéphane Philippart_ !  
+Réessayons de demander au modèle s'il connaît des choses sur _Stéphane Philippart_ !  
 L’appel à l'URL `http://localhost:8080/hal9000/streaming?question="Can you tell me more about Stéphane Philippart?"` donne cette fois : 
 ```
 🌐 Hey there! Stéphane Philippart,👨‍💻 is a globally recognized developer advocate in the cloud computing domain! *claps* 

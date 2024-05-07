@@ -23,7 +23,7 @@ Lors de ce premier article, nous avons vu ensemble comment développer notre pre
 Celui-ci était très simple et il fallait attendre que le modèle distant _fabrique_ l'ensemble de la réponse avant de l'avoir en retour.
 Pas très pratique et convivial.
 
-Lors de cet article, je vous propose d'ajouter quelques fonctionnalités rendant notre _chat bot_ plus "intelligent".  
+Cette fois-ci, je vous propose d'ajouter quelques fonctionnalités rendant notre _chat bot_ plus "intelligent".  
 On va donc le faire se comporter comme un _chat bot_ normal : streamer sa réponse.
 On va aussi lui ajouter un peu de contexte afin qu'il connaisse plus de choses essentielles 😉 !
 

@@ -123,7 +123,7 @@ public class AIAssistant {
 }
 ```
 
-On a rajouté un une ressource `streaming` qui retourne `Multi<String>`, Quarkus fera le reste.  
+On a rajouté une ressource `streaming` qui retourne `Multi<String>`, Quarkus fera le reste.  
 Ensuite il suffit d'aller sur l'URL `http://localhost:8080/hal9000/streaming?question="What is the answer to the Ultimate Question of Life,the Universe, and Everything?"`
 
 {% include video id="T0LbsThvaRY" provider="youtube" %}

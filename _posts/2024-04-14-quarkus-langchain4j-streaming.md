@@ -148,7 +148,7 @@ Flatteur mais très loin de la réalité non 🤨 ?
 
 Rien d'étonnant dans cette réponse :
  - je ne suis pas très connu et donc pas étonnant de pas avoir beaucoup de données sur moi
- - mon prénom, assez commun, fait que l'allucination avec d'autres _Stéphane_ n'est pas étonnante
+ - mon prénom, assez commun, fait que l'hallucination avec d'autres _Stéphane_ n'est pas étonnante
  - la plus part des éléments publiques datent de 2-3 ans et souvent les modèles ont été entraînés sur des données plus anciennes
 
 En quoi le RAG va nous aider ?  

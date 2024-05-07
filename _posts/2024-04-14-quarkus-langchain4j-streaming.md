@@ -158,7 +158,7 @@ Pour ajouter ce contexte on va prendre une source de données, par exemple des f
 Une fois ce contenu ajouté, lors de requêtes envoyées au modèle, celui-ci va pouvoir se baser sur ces données supplémentaires pour contextualiser sa réponse.
 
 > Le RAG se différencie d'une autre technique, le transfert learning, par le fait que l'on utilise le modèle tel quel en lui ajoutant des données / du contexte.  
-> Le transfert learning va consister à ré-entrainer un modèle pour un use case différent de celui d’origine, cela demande donc plus de calculs et une phases d’entraînement là où le RAG se fait au runtime.
+> Le transfert learning va consister à ré-entrainer un modèle pour un use case différent de celui d’origine, cela demande donc plus de calculs et une phase d’entraînement là où le RAG se fait au runtime.
 
 ### 📃 Les données à rajouter
 

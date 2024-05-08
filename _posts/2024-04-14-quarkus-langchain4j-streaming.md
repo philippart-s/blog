@@ -183,7 +183,7 @@ Là encore, vous vous en doutez, Quarkus et LangChain4j vont nous être d'un gra
 <dependency>
     <groupId>io.quarkiverse.langchain4j</groupId>
     <artifactId>quarkus-langchain4j-easy-rag</artifactId>
-    <version>999-SNAPSHOT</version>
+    <version>0.13.0</version>
 </dependency>  
 
 <!-- Inner process embedding model -->

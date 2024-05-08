@@ -13,7 +13,7 @@ tags:
   - IA
 
 ---
-![perroquet multi couleurs ave un robot]({{ site.url }}{{ site.baseurl }}/assets/images/quarkus-langchain4j-streaming/robot-ia.jpg){: .align-center}
+![perroquet multi couleurs avec un robot]({{ site.url }}{{ site.baseurl }}/assets/images/quarkus-langchain4j-streaming/robot-ia.jpg){: .align-center}
 [@wildagsx](https://twitter.com/wildagsx){:style="font-size: smaller"}{:target="_blank"}{: .align-right}<br/>
 
 Je vous propose la suite de l'[article précédent]({{ site.baseurl }}{% post_url 2024-04-01-quarkus-langchain4j %}){:target="_blank"} nous ayant permis la découverte de [LangChain4j](https://docs.langchain4j.dev/intro/){:target="_blank"} au travers de [Quarkus](https://quarkus.io/){:target="_blank"}.

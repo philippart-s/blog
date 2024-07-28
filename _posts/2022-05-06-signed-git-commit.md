@@ -127,6 +127,7 @@ Mais bon, on va le configurer pour le faire à chaque commit.
 $ git config --global commit.gpgsign true
 $ git config --global gpg.program gpg
 $ git config --global user.signingkey ABCDEFGHIJKLMNOP
+$ killall gpg-agent
 ```
 
 Et voilà vos commits sont signés 😎.

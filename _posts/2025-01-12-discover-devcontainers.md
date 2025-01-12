@@ -147,11 +147,18 @@ Configuration file: /workspaces/blog/_config.yml
 Et là une chose très intéressante avec les _Dev Containers_ et l'extension de VSCode : le _forward_ de ports est automatiquement géré !
 Pas de configuration compliquée pour accéder à ce qui est exposé par mon container, comme on le voit mon blog est disponible sur l'URL locale `http://127.0.0.1:4000` 😍.
 
-> Notez une autre chose très pratique : tout ce que vous faîtes dans vos fichiers n'est pas sur une copie de vos fichiers dans votre container mais bien sur vos fichiers directement de votre machine, pas de synchro à prévoir et pas de lock sur l'environnement _Dev Container_.
-> Vous pouvez toujours éditer localement vos fichiers.
-> C'est une grose différence avec le mode SSH et un vscode server remote.
+## L'avantage du mode local
 
+Tout ce que vous faîtes dans vos fichiers n'est pas sur une copie de vos fichiers dans votre container mais bien sur vos fichiers directement de votre machine, pas de synchro à prévoir et pas de lock sur l'environnement _Dev Container_.
+Vous pouvez toujours éditer localement vos fichiers.
+C'est une grose différence avec le mode SSH et un vscode server remote.
 
+Autre chose très apreciable : c'est votre machine, votre VSCode mais aussi votre configuration Git qui est utilisée, pas de synchro à faire là non plus.
+Les commandes git et aussi les push utilisent vos configurations locales, dans mon cas par exemple la signature des commits et les credentials de mon compte GitHub 😎.
+
+## La customisation
+
+TODO : action post run / maj de version / features
 
 
 # En conclusion

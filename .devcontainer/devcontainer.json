@@ -1,27 +1,10 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/jekyll
 {
 	"name": "Jekyll",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/jekyll:2-bullseye",
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	"features": {
-		"ghcr.io/philippart-s/feature-slidesk/slidesk:1.0.0": {}
-	},
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-	// Uncomment the next line to run commands after the container is created.
+	"features": {},
 	"postCreateCommand": {
-		"bundle": "bundle install",
-		/*"db": [
-			"sudo",
-			"wget",
-			"-O",
-			"/usr/bin/slidesk",
-			"https://github.com/slidesk/slidesk/releases/download/2.11.1/slidesk_linux-arm" 
-	]*/
+		"bundle": "bundle install"
 	},
-	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
 			"settings": {
@@ -34,6 +17,4 @@
 			]
 		}
 	}
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
 }

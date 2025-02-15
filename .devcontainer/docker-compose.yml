@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  devcontainer:
+    image: wilda/jekyll:1.0.0
+    volumes:
+      - ../..:/workspaces:cached
+    command: sleep infinity
+    network_mode: service:db
+  db:
+    image: postgres:latest
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres

@@ -14,15 +14,15 @@ tags:
 
 ## 🪪 C'est quoi Devoxx France ? 
 
-Je pense que bon nombre d'entre vous connaissent [Devoox France](https://www.devoxx.fr/){:target="_blank"}, mais pour celles et ceux qui ne connaissent pas, je vais prendre quelques minutes pour présenter cette conférence.
+Je pense que bon nombre d'entre vous connaissent [Devoxx France](https://www.devoxx.fr/){:target="_blank"}, mais pour celles et ceux qui ne connaissent pas, je vais prendre quelques minutes pour présenter cette conférence.
 
 Devoxx France est une des plus grosse conférence d'Europe centrée sur le monde du développement. 
 Elle dure 3 jours, accueille plus de 4500 participantes et participants avec plus de 280 conférences.
 Elle fait partie de la galaxie Devoxx qui regroupe des conférences dans différents pays: la Belgique, la France, l'Angleterre, l'Ukraine, la Pologne et la Grèce.
 
-Si son ADN est très centrée développement, il est possible d'y suivre des conférences moins techniques ou sur d'autres domaines techniques comme les métiers de la production par exemple.
+Si son ADN est très centré développement, il est possible d'y suivre des conférences moins techniques ou sur d'autres domaines techniques comme les métiers de la production par exemple.
 
-Mon lien avec Devoxx France est simple : je les ai tous faits depuis la première dans un hôtel célèbre avec une moquette non moins célèbre 😂.
+Mon lien avec Devoxx France est simple : je les ai toutes faites depuis la première dans un hôtel célèbre avec une moquette non moins célèbre 😂.
 
 En tant qu'orateur j'ai eu la chance de donner mes premières conférences l'an dernier : un tools in action (format 30 mins avec des démos), un atelier de 3h avec un de mes collègues d'OVHcloud et un BOF de 45 minutes avec ma chérie 🥰.
 
@@ -67,7 +67,7 @@ Jusqu'au moment de l'ouverture du CFP ... et là un vieil ami est revenu me voir
 
 ### 🚀 Il faut bien se lancer à un moment donné 
 
-Là, vous ête un peu seul•e : à un moment, seul•e vous allez pouvoir passer le cap entre l'envie de soumettre au non à un CFP et le faire, quelque soit la taille de la conférence.
+Là, vous ête un peu seul•e : à un moment, seul•e vous allez pouvoir passer le cap entre l'envie de soumettre ou non à un CFP et le faire, quelque soit la taille de la conférence.
 
 Dans mon cas, au vu du sujet, du format et de la conférence, je me suis réfugié dans le côté scolaire de l'exercice : faire un CFP le plus lisible possible pour un sujet de cette taille et le plus rassurant possible pour l'équipe d'organisation.
 
@@ -82,10 +82,10 @@ Une petite remarque sur le fait que j'ai soumis ce format de conférence tout se
 Très souvent, les conférences avec des formats de 3h, n'aiment pas trop qu'il y ait qu'une seule oratrice ou un seul orateur.
 Risque d'annulation si la seule personne qui donne la conférence est malade, risque de ne pas tenir le rythme pendant 3h, etc.  
 
-Vous vous demandez peut être pourquoi j'ai fait le choix d'être seul pour ce format ?  
+Vous vous demandez peut-être pourquoi j'ai fait le choix d'être seul pour ce format ?  
 
 Tout simplement parce que cela faisait trop longtemps que j'avais cette conférence en tête et embarquer une ou deux personnes supplémentaires m'aurait obligé à renoncer à certaines idées qui me tenaient à cœur.
-Je trouve que, l'exercice de préparer une conférence, quelque soit son format, à plusieurs, est un exercice compliqué ou alors peut être que je ne suis pas fait pour ce genre de chose.
+Je trouve que, l'exercice de préparer une conférence, quelque soit son format, à plusieurs, est un exercice compliqué ou alors peut-être que je ne suis pas fait pour ce genre de chose.
 Cela implique d'être raccords sur le sujet bien évidement mais surtout d'avoir le même mode de préparation.
 Bref, vous l'avez compris je n'étais pas prêt pour préparer cette conférence comme ça 😉.
 
@@ -105,7 +105,7 @@ Je me fait aussi une carte mentale pour commencer à bien délimiter les sujets 
 Car très vite je me rends compte d'une chose : le sujet choisi fait que je pourrais faire 5h et non 3h !
 
 Mon objectif premier : me rassurer en résolvant les dernières inconnues ou problèmes que j'ai sur certains éléments techniques que j'ai prévu.  
-Et comme tout bon geek que je suis, je profite de cette période pour me rajouter un éléments supplémentaire : l'utilisation des [Dev Containers](https://containers.dev/){:target="_blank"}.
+Et comme tout bon geek que je suis, je profite de cette période pour me rajouter un élément supplémentaire : l'utilisation des [Dev Containers](https://containers.dev/){:target="_blank"}.
 Depuis longtemps je veux les utiliser et, un changement de machine, me permets de décider de ne plus rien installer directement sur ma machine mais de passer uniquement par les dev containers.  
 
 En suit deux articles de blog, témoins de ma découverte des dev containers : [🧑‍💻 A la découverte des Dev Containers 🐳]({{ site.baseurl }}{% post_url 2025-01-12-discover-devcontainers %}){:target="_blank"} et [🧑‍💻 Aller plus loin avec les Dev Containers 🐳]({{ site.baseurl }}{% post_url 2025-01-28-devcontainers-advanced %}){:target="_blank"}.  
@@ -128,7 +128,7 @@ Mon premier réflexe (mon cerveau est très étrange parfois) : est-ce que je su
 Je vais répondre qu'en fait je ne peux pas ... 
 
 Mais non, j'ai trop longtemps voulu donner ce genre de conférence (j'en ai fait mon métier après tout) sur ce genre de sujet pour abandonner maintenant.
-Je ne m'imaginai pas dans quoi j'allais tomber.
+Je ne m'imaginais pas dans quoi j'allais tomber.
 
 **J-72** je vais bien.
 
@@ -146,7 +146,7 @@ Lors de mes conférences, habituellement, pas de notes speaker dans les slides n
 Mais là on parle de 3h et je me rends compte que mon cerveau ne sera pas en capacité, en plus des autres choses professionnelles, d'absorber une telle masse d'informations pour les retenir et les restituer.
 Une fois n'est pas coutume, je passe donc par la phase notes dans les slides.
 
-> Spoiler ... au final je ne les aurais quasiment pas utilisées alors qu'elles m'auront causées quelques soucis 😉
+> Spoiler ... au final je ne les aurai quasiment pas utilisées alors qu'elles m'auront causées quelques soucis 😉
 
 ### 🖼️ Organisation de mes slides
 
@@ -179,13 +179,13 @@ Les 5 projets de mes démos sont initialisés, mes slides finis en version alfa.
 
 ### 💥 Les imprévus ... et la gestion du stress
 
-La vie n'est pas un long fleuve tranquille et à compter du 24 février je rentre dans une période professionnelle chargée avec une conférence de l'autre côté de l'atlantique, une journée de tech labs en Angleterre (pour ma première à devoir parler en anglais durant une journée sur un atelier) ... et la loi de Murphy étant ce qu'elle, est une tonne de choses non prévues à gérer.
+La vie n'est pas un long fleuve tranquille et à compter du 24 février je rentre dans une période professionnelle chargée avec une conférence de l'autre côté de l'atlantique, une journée de tech labs en Angleterre (pour ma première à devoir parler en anglais durant une journée sur un atelier) ... et la loi de Murphy étant ce qu'elle est, une tonne de choses non prévues à gérer.
 
 De plus, certaines démos techniques ne se passent pas forcément bien, le fait de bosser avec les dev containers non plus (je continue car cela me permet de switcher facilement de machine pro / perso ... et parce que je suis têtu 😉).
 
 Et je commence à voir ma dead line imaginative (je dis imaginative car c'est moi qui ai décidé arbitrairement cette date) du 16 mars de plus en plus compliquée à tenir.
 
-Le stress monte d'un cran (peut-être de trois ou quatre ...), tout le temps non passé à finaliser mes slides, mes démos me semble du temps de perdu.
+Le stress monte d'un cran (peut-être de trois ou quatre ...), tout le temps non passé à finaliser mes slides, mes démos, me semble du temps de perdu.
 Le sommeille fait parti de ce _"temps perdu"_ que je supporte le moins, d'autant que cela devient compliqué de dormir sans penser pendant de longues minutes (heures ?) à ces sujets.
 
 Je fais donc un choix drastique, à mon retour du Canada, j'ai 16 jours pour avoir une version finale ... exécutable en mode dry run.
@@ -196,12 +196,12 @@ Je m'astreins à ne pas me coucher après 1h ou 2h du matin, il faut que je rest
 ### 🧑‍🧑‍🧒‍🧒 Et la vie personnelle dans tout ça ?
 
 Je profite de cette période de ma préparation pour faire une parenthèse sur les implications que peut avoir la préparation d'une telle conférence.
-Nous sommes nombreuses et nombreux à avoir des familles, ce qui implique forcément aussi de passer du temps avec elles mais aussi selon les âges, des enfants et du temps à passer à s'occuper des différentes tâches familiales.
+Nous sommes nombreuses et nombreux à avoir des familles, ce qui implique forcément aussi de passer du temps avec elles mais aussi selon les âges des enfants, et du temps à passer à s'occuper des différentes tâches familiales.
 
 Il faut le prendre en compte, j'ai la chance d'avoir une amoureuse très compréhensive, dans l'IT et connaissant le monde des conférences du côté oratrice et organisatrice.
-Je pense avoir tenu durant cette période grâce à elle, sinon j'aurai peut être abandonné à un moment ou un autre.
+Je pense avoir tenu durant cette période grâce à elle, sinon j'aurais peut-être abandonné à un moment ou un autre.
 
-Et je sais que cela n'a pas été facile à ce moment là pour elle non plus, je m'en excuse de tout mon coeur et je ne la remercierai jamais assez d'avoir cru en mois et fait que j'y ai cru jusqu’au bout 🥰.
+Et je sais que cela n'a pas été facile à ce moment là pour elle non plus, je m'en excuse de tout mon coeur et je ne la remercierai jamais assez d'avoir cru en moi et fait que j'y ai cru jusqu’au bout 🥰.
 
 **J-24** je suis au fond du trou, c'est le moment de donner un coup de pied pour remonter
 
@@ -209,14 +209,14 @@ Et je sais que cela n'a pas été facile à ce moment là pour elle non plus, je
 
 J'ai un truc, pas complètement stable, je le sais, mais on a dépassé ma dead line, et j'ai besoin de commencer à faire que la conférence devienne concrète en répétant des parties de celle-ci.
 
-J'en profite pour faire une n-ième parenthèse : répéter ou ne pas répéter une conférences ?  
+J'en profite pour faire une n-ième parenthèse : répéter ou ne pas répéter une conférence ?  
 Certaines oratrices ou certains orateurs indiquent ne pas avoir besoin de répéter, j'ai, au contraire, besoin de répéter.
-D'abord pour me rassurer, ensuite pour essayer de donner la meilleure expérience possible aux personnes assistants à ma conférence.
+D'abord pour me rassurer, ensuite pour essayer de donner la meilleure expérience possible aux personnes assistant à ma conférence.
 Je suis tellement fan lorsque je vois une personne donner une conférence qui est réglée comme du papier à musique que j'essaie, à mon humble niveau, de faire de même.
 
 Pour autant, je suis dans un cas un peu particulier d'une conférence de 3h, tout comme un marathon, il est rare que l'on court 10 marathons pendant les séances d'entraînement.
 
-Je commence donc par jouer des parties de la conférence, parfois cela me rassure, parfois je me mets un coup de stress car je tombe sur des bugs que je n'avais pas forcément prévu.
+Je commence donc par jouer des parties de la conférence, parfois cela me rassure, parfois je me mets un coup de stress car je tombe sur des bugs que je n'avais pas forcément prévus.
 
 Très vite j'ai tout de même besoin de faire de "vrais" dry run.
 
@@ -250,7 +250,7 @@ Et je me crée 4 ou 5 environnements de backup au cas ou (l'ensemble de mes dém
 
 Je m'offre un WE sans toucher à mes slides et mon code, un peu comme pour un marathon je décide de faire un peu de "jus" en m'aérant la tête avec la famille (j'arrive presque à ne pas culpabiliser de ne pas travailler 😉).
 
-2 jours avant le jour J, ultime répétition, plus pour me rassurer techniquement que pour pour réellement réviser.
+2 jours avant le jour J, ultime répétition, plus pour me rassurer techniquement que pour réellement réviser.
 Impeccable, tout se passe bien.
 Une dernière frayeur par rapport à un changement d'API que j'utilise mais avec une belle réactivité des équipes d'OVHcloud, cela revient à la normale.
 
@@ -262,7 +262,7 @@ On est la veille, jour de départ pour Devoxx France !
 
 ### 🤕 Tout se paye un jour
 
-N'oubliez jamais ça, quelque soit votre énergie, votre force, vos convictions si vous tirez trop sur la corde votre corps vous le rappellera.  
+N'oubliez jamais ça, quelque soit votre énergie, votre force, vos convictions, si vous tirez trop sur la corde votre corps vous le rappellera.  
 Et souvent jamais au bon moment.
 
 Pour moi c'est le matin (la veille de ma conférence) au moment de partir, dos bloqué à ne presque pas pouvoir s'habiller.
@@ -284,7 +284,7 @@ Tout le monde me souhaite bonne chance, ça aide les copines et les copains dans
 Comme à mon habitude, je m'isole avant la conférence pour un peu me concentrer et vérifier 2-3 points.
 Dernière frayeur : les notes de mes slides ne s'affichent pas sur mon iPad.
 Grâce à SliDesk on peut, via web socket, afficher les notes des slides sur un autre terminal, c'est très pratique quand vous partagez votre écran pour les démos 😉.
-C'était sans compter sur le Wifi du Palais des congrès qui ne permet d'avoir une connexion web socket.
+C'était sans compter sur le Wifi du Palais des congrès qui ne permet pas d'avoir une connexion web socket.
 Je suis tellement préparé et avec des plans B que, si cela m'ennuie, cela ne me mets pas en panique.
 J'en touche deux mots à Sylvain, le créateur de SliDesk, pour savoir si c'est moi qui fait mal quelque chose.
 Il me confirme que c'est bien le Wifi qui est chelou mais me fait un fix maison pour que cela fonctionne et va jusqu'à me déployer mes slides sur une instance distante 🫶.
@@ -314,14 +314,14 @@ C'est une bonne question.
 La semaine qui a suivi Devoxx France, je me disais "plus jamais".
 Au jour où j'écris cet article, je me dis en fait "pourquoi pas" 😌.
 Certainement que les semaines à venir cela se transformera en "mais carrément".
-Cependant ce sera avec le recule de ce que j'ai vécu, il y a des erreurs que je ne referai plus.
-Et peut être même que je me lancerai dans l'aventure de le faire à plusieurs.
+Cependant ce sera avec le recul de ce que j'ai vécu, il y a des erreurs que je ne referai plus.
+Et peut-être même que je me lancerai dans l'aventure de le faire à plusieurs.
 
 Si il y a un conseil que je peux donner à celles et ceux qui veulent se lancer dans cette aventure c'est que oui c'est énormément de travail mais la récompense des feedbacks des participantes et participants en vaut la peine.
 
 Le sentiment d'avoir été utile.
 
-Et, mais cela n'engage que moi, pour le vivre de la meilleure des manière : le préparer, le répéter et encore le répéter pour ne pas le subir le jour J (cette remarque peut être valable pour n'importe quelle conférence).
+Et, mais cela n'engage que moi, pour le vivre de la meilleure des manières : le préparer, le répéter et encore le répéter pour ne pas le subir le jour J (cette remarque peut être valable pour n'importe quelle conférence).
 
 Alors on se dit : à l'année prochaine 👋 ?
 

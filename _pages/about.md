@@ -2,8 +2,9 @@
 permalink: /about/
 title: "About"
 ---
-Développeur Java (JEE / Spring), Groovy (pipelines Groovy) et un peu Typescript (Angular ... on m'y a forcé :wink:).
+Developer Advocate chez OVHcloud.
+Développeur Java depuis ... trop longtemps 😅.
 
-Architecte logiciel, agiliste convaincu et à la recherche du Graal DevOps.
+Baigne dans le cloud et l'Intelligence Artificielle.
 
-On boarding k8s et Docker.
+Speaker à de nombreuses conférences.

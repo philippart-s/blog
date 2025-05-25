@@ -21,8 +21,8 @@ kramdown:
     block:
       line_numbers: true
 
-#remote_theme: mmistakes/minimal-mistakes
-theme: minimal-mistakes-jekyll
+remote_theme: mmistakes/minimal-mistakes
+#theme: minimal-mistakes-jekyll
 
 # Outputting
 permalink: /:categories/:title/

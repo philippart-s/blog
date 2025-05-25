@@ -15,7 +15,7 @@ tags:
 
 Ici vous trouverez l'ensemble des sujets de conférences que j'ai donné.
 
-Vous pouvez aussi lister les retrouver dans [la liste des conférences](/conferences) que j'ai données.
+Vous pouvez aussi lister les retrouver dans [la liste des conférences]({{ site.baseurl }}/conferences) que j'ai données.
 
 ## ☕️ Full stack Java, du dev à la prod en passant par l’infra 🏗️
 - [Devoxx France 2025]({{ site.baseurl }}{% post_url 2025-04-16-devoxx-fr-2025-talks %}/#%EF%B8%8F-full-stack-java-du-dev-à-la-prod-en-passant-par-linfra-%EF%B8%8F)

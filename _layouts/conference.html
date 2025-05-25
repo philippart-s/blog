@@ -1,0 +1,29 @@
+---
+layout: archive
+classes: wide
+categories:
+- Conférences
+tags:
+- Slides
+- Replays
+---
+
+{{ content }}
+
+{% for talk in site.data.conferences[page.conference-name].talks %}
+
+<h2> {{talk.title}} </h2>
+
+📍{{talk.location}} / 🗣️ {{talk.language}} / 🗓️ {{talk.date}} / ⏰ {{talk.time}} / 🕒 {{talk.duration}}
+
+{% capture notice-2 %}
+{{talk.abstract}}
+{% endcapture %}
+
+<div class="notice">{{ notice-2 | markdownify }}</div>
+
+{% if talk.source %}📚 <a href="{{talk.source}}">Code source</a> / {% endif %} {% if talk.slides %}🌠
+<a href="talk.slides">Slides</a> {%
+endif %} {% if talk.replay %}/ 🎥 <a href="{{talk.replay}}">Replay</a>{% endif %}
+
+{% endfor %}

@@ -1,0 +1,157 @@
+devoxx-fr-2025:
+  name: Devoxx France
+  post-date: 2025-04-16
+  date: 16 au 18 avril 2025 
+  talks-url:  devoxx-france-2025
+  excerpt: "Liste des talks donnés lors de Devoxx France 2025"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: ☕️ Full stack Java, du dev à la prod en passant par l’infra 🏗️
+      location: Paris (🇫🇷)
+      language: Français
+      date: Mercredi 16 avril 2025
+      time: 13h30 - 16h30
+      duration: 3 heures
+      abstract: |
+        Depuis quelques années, le terme full stack est employé pour décrire différentes notions : que ce soit dans différents langages ou avec le même, il désigne la maîtrise de toutes les couches nécessaires à la création de nos applications.
+
+        Que diriez-vous d'explorer le concept full stack encore plus loin ?
+
+        Nous n'allons pas nous contenter d'être full stack pour le front ou le back end mais pour l'ensemble de notre écosystème technique ! On parlera ici de développement bien sûr (back, front, cli, ...), de cloud natif (Kubernetes, serverless, ...), de livraison et déploiements continus, bien sûr d'intelligence artificielle (comment faire autrement en 2025 😉) mais aussi d'infrastructure !
+
+        Et avec quel langage peut-on se permettre de faire tout ça me direz-vous ?
+
+        Mais Java bien sûr 🥳.
+
+        Je souhaite vous montrer que Java n'est pas le langage si obsolète et qu'il a bien suivi les différentes évolutions de notre écosystème pour être présent dans bien des étapes de la chaîne de conception d'une application, et pas que pour le développement 😉.
+
+        A la sortie de ce talk, vous aussi serez un•e vrai•e Java full stack ! 💪 
+      source: https://github.com/philippart-s/java-full-stack
+      slides: https://philippart-s.github.io/talks-slides/java-full-stack/devoxx-fr-2025/
+      replay: https://youtu.be/34BxbPEtPkA?si=yNx_WZheyafzhToI
+      do-not-display-replay: true
+
+    - title: JBang, un fichier Java pour les gouverner tous ?
+      location: Paris (🇫🇷)
+      language: Français
+      date: Jeudi 17 avril 2025
+      time: 12h35 - 12h50
+      duration: 15 minutes
+      abstract: |
+        Dans le monde Java, nous sommes habitués à initialiser un projet avec de nombreux fichiers et répertoires. A tel point que des CLI ont vu le jour pour nous aider à créer les projets SpringBoot ou Quarkus par exemple. Vient ensuite le choix du "package manager" : Maven ou Gradle ? Et c'est seulement à partir de là que l'on peut commencer à développer puis exécuter son code 😅.
+
+        Toutes ces étapes fastidieuses expliquent pourquoi, lorsque que l'on a besoin de faire un développement rapide de quelques lignes pour automatiser une action, on préfère d'autres langages à Java : Python par exemple.
+
+        Et si je vous disais, qu'avec JBang, vous allez pouvoir rester avec votre langage préféré, Java, et développer une classe toute simple (avec des dépendances externes) en quelques secondes !
+
+        C'est le pari (spoiler : réussi) de JBang que je vous propose de découvrir durant une session de live coding.
+
+        A vous les joies du scripting en Java !  
+      source: https://github.com/philippart-s/jbang
+      slides: https://philippart-s.github.io/talks-slides/java-full-stack/devoxx-fr-2025/
+      replay: https://youtu.be/eHTDiYFtuI8?si=NtZIz4hqVDnhAfUe
+
+    - title: Continuer les meetups ? mais quelle drôle d'idée !
+      location: Paris (🇫🇷)
+      language: Français
+      date: Jeudi 17 avril 2025
+      time: 19h00 - 20h00
+      duration: 1 heure
+      abstract: |
+        Le meetup TADx est de retour cette année au BOF à Devoxx pour continuer nos échanges entre meetups de tous horizons !
+        Si l'année dernière, nous avons pu aborder les thèmes des débuts d'une aventure en meetup (sa création, son intégration, son financement, ses premiers aléas...) nous vous proposons cette année d'aller un peu plus loin dans les discussions, en abordant notamment la pérennisation d'une communauté tech au sens large :
+
+          - Quand, pourquoi et comment se renouveler ?
+          - Comment trouver des speakers inspirants et des sujets pertinents ?
+          - Comment fidéliser les participant·es ?
+          - Comment élargir l'impact d'un meetup local en lien avec d'autres communautés tech ?
+          - Comment optimiser la qualité des évènements dans un contexte financièrement restreint ?
+          - Quelles sont les expériences speaker et participant·es idéales ?
+
+        Ce sera l'occasion pour vous, organisateurs ou organisatrices de meetup, de conférences, participant·es régulier·es ou juste curieux·ses, de revenir sur l'année 2024 et d'échanger sur vos réussites, vos écueils et vos questions dans ce BOF garanti plein d'anecdotes et d'idées à tester pour faire continuer de battre le cœur des communautés tech !
+      slides:
+      source:
+      replay: 
+
+
+confoo-2025:
+ name: Confoo
+ post-date: 2025-02-26
+ date: 26 au 28 février 2025 
+ talks-url: confoo-2025
+ excerpt: "Liste des talks donnés lors de Confoo 2025"
+ categories: Conférences
+ tags:
+   - Slides
+   - Replays 
+ talks:
+  - title: Picocli, mets du Java dans ton terminal !
+    location: Montréal (🇨🇦)
+    language: Français
+    date: Vendredi 28 février 2025
+    time: 9h00 - 9h45
+    duration: 45 mins
+    abstract: |
+      Les CLI (Command Line Interface), tout le monde les utilise et elles existent depuis la nuit des temps.
+
+      Je vous propose d'utiliser un langage qui ne paraît pas, au premier abord, le plus intuitif pour faire une CLI : Java !
+
+      Venez m'accompagner lors d'une session de live coding permettant de mettre en lumière comment créer une CLI en Java avec Picocli et Quarkus en partant de zéro ! 
+    source: https://github.com/philippart-s/jarvis
+    slides: https://philippart-s.github.io/talks-slides/jarvis/confoo-2025/
+    replay: 
+
+  - title: Utiliser un LLM aussi simplement qu'une librairie
+    location: Montréal (🇨🇦)
+    language: Français
+    date: Mercredi 26 avril 2025
+    time: 9h00 - 9h45
+    duration: 45 mins
+    abstract: |
+      Et si nous pouvions utiliser les LLM aussi simplement que n'importe quelle librairie de notre stack de développement préférée ?
+
+      Je vous propose de découvrir qu'il est désormais possible, simplement, d'intégrer les LLM au sein de vos applications.
+
+      Nous passerons par toutes les étapes afin que vous puissiez comprendre quelle approche vous convient le mieux.
+      Customiser un prompt, rajouter vos données, mettre des filtres, ...  
+    source: https://github.com/philippart-s/ai-as-lib
+    slides: https://philippart-s.github.io/talks-slides/ai-as-lib/confoo-2025/
+    replay: 
+
+snowcamp-2025:
+ name: Snowcamp
+ post-date: 2025-01-22
+ date: 22 au 25 janvier 2025 
+ talks-url: snowcamp-2025
+ excerpt: "Liste des talks donnés lors de Devoxx France 2025"
+ categories: Conférences
+ tags:
+   - Slides
+   - Replays
+ talks:
+  - title: "Développer avec l’IA : et si c’était aussi simple qu’ajouter une librairie ?"
+    location: Grenoble (🇫🇷)
+    language: Français
+    date: Mercredi 22 janvier 2025
+    time: 14h00 - 17h00
+    duration: 3h mins
+    abstract: |
+      L’intelligence artificielle et les LLM commencent à faire partie de nos vies personnelles mais aussi professionnelles.
+
+      Si on est habitué•es à les utiliser régulièrement, il en est autrement pour ce qui concerne nos développements.
+
+      Les intégrer peut nous paraître plus complexe que de les utiliser dans notre quotidien.
+
+      Dois-je apprendre un nouveau langage ou une nouvelle stack ?
+
+      Durant ce workshop nous vous proposons de vous donner tous les éléments pour débuter votre voyage au sein de l’IA sans quitter votre langage de prédilection : Java, JavaScript, Python ou Go (et qui sait peut être d’autres surprises (wink)).
+
+      Vous apprendrez comment utiliser les Frameworks du moment (LangChain, LangChain4j, …) mais aussi les outils vous facilitant la vie (Ollama, …) pour que dès le retour à votre application préférée, intégrer de l’IA au sein de celle-ci ne soit plus une peur mais une action aussi simple que de rajouter une librairie tierce.
+
+      Et, toujours pour vous simplifier la vie, venez juste avec votre ordinateur et un navigateur Internet, on se charge du reste pour vous construire un environnement de développement aux petits oignons grâce aux CDE.
+    source: https://github.com/devrel-workshop/ai-as-lib-workshop
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vRgA5HVbBViro5I0kfW0bbqbhfAFj-jXpKqYp-DXTwPnalyB3YtrHEshCZDBE-is64J_H4qrWkLaz-L/pub
+    replay: 

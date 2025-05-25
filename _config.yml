@@ -11,7 +11,7 @@ repository               : "philippart-s/blog"
 url : "https://philippart-s.github.io"
 #baseurl : "/blog"
 
-
+safe: false
 
 # Build settings
 markdown: kramdown
@@ -20,8 +20,9 @@ kramdown:
   syntax_highlighter_opts:
     block:
       line_numbers: true
-remote_theme: mmistakes/minimal-mistakes
-#theme: minimal-mistakes-jekyll
+
+#remote_theme: mmistakes/minimal-mistakes
+theme: minimal-mistakes-jekyll
 
 # Outputting
 permalink: /:categories/:title/

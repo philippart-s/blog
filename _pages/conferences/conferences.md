@@ -14,7 +14,7 @@ tags:
 # nav: conferences-nav
 ---
 
-Ici vous trouverez l'ensemble des conférences auxquelles j'ai participé et que j'ai présentées.
+Ici vous trouverez l'ensemble des conférences auxquelles j'ai participé et que j'ai présentées. 
 
 Vous pouvez aussi retrouver la [liste des sujets]({{ site.baseurl }}/talks) que j'ai donnés en conférence.
 

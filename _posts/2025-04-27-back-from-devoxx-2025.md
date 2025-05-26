@@ -8,7 +8,7 @@ categories:
 tags:
   - Devoxx
 ---
-
+ 
 ![Badge Devoxx France 2025]({{ site.url }}{{ site.baseurl }}/assets/images/devoxx-2025/badge.jpg){: .align-center}
 [@wildagsx](https://twitter.com/wildagsx){:style="font-size: smaller"}{:target="_blank"}{: .align-right}<br/>
 

@@ -17,7 +17,7 @@ devoxx-fr-2025:
       duration: 3 heures
       abstract: |
         Depuis quelques années, le terme full stack est employé pour décrire différentes notions : que ce soit dans différents langages ou avec le même, il désigne la maîtrise de toutes les couches nécessaires à la création de nos applications.
-
+ 
         Que diriez-vous d'explorer le concept full stack encore plus loin ?
 
         Nous n'allons pas nous contenter d'être full stack pour le front ou le back end mais pour l'ensemble de notre écosystème technique ! On parlera ici de développement bien sûr (back, front, cli, ...), de cloud natif (Kubernetes, serverless, ...), de livraison et déploiements continus, bien sûr d'intelligence artificielle (comment faire autrement en 2025 😉) mais aussi d'infrastructure !

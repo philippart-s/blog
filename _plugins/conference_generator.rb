@@ -7,12 +7,20 @@ module Jekyll
 
     def generate(site)
       puts "---------- ConferenceGenerator started ----------"
+       if (!defined?@render_count)
+          @render_count = 1
+       end
+
+       if @render_count < 1
+         Jekyll.logger.info('already fetched data')
+         return
+       end
 
       conferences = site.data['conferences']
 
       if conferences
         conferences.each do |conference_id, details|
-          post_path = File.join('_posts', "#{details['post-date']}-#{conference_id}-talks.md")
+          post_path = File.join('_posts', "#{details['post-date']}-#{conference_id}-talks.markdown")
 
           post_data = {
             'layout' => 'conference',
@@ -38,7 +46,8 @@ module Jekyll
       else
         puts "No conferences data found in site.data"
       end
-
+      Jekyll.logger.info('Data fetched successfully.')
+      @render_count = @render_count - 1
       puts "---------- ConferenceGenerator finished ----------"
     end
   end

@@ -10,7 +10,14 @@ tags:
 
 {{ content }}
 
-{% for talk in site.data.conferences[page.conference-name].talks %}
+{% for conferences in site.data.conferences %}
+{% assign conferenceFile = conferences[0] %}
+<!--Name: {{conferenceFile}} </br>-->
+{% assign conference = site.data.conferences[conferenceFile] %}
+<!--Event: {{conference}} </br>-->
+
+{% if conference[page.conference-name] %}
+{% for talk in conference[page.conference-name].talks %}
 
 <h2> {{talk.title}} </h2>
 
@@ -25,5 +32,9 @@ tags:
 {% if talk.source %}📚 <a href="{{talk.source}}">Code source</a> / {% endif %} {% if talk.slides %}🌠
 <a href="talk.slides">Slides</a> {%
 endif %} {% if talk.replay %}/ 🎥 <a href="{{talk.replay}}">Replay</a>{% endif %}
+
+{% endfor %}
+
+{% endif %}
 
 {% endfor %}

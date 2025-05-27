@@ -3,6 +3,8 @@ main:
     url: /posts/
   - title: "Conférences"
     url: /conferences/
+  - title: "Talks"
+    url: /talks/
   - title: "Catégories"
     url: /categories/
   - title: "Tags"

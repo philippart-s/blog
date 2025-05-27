@@ -20,7 +20,65 @@
 #     slides: https://docs.google.com/presentation/d/e/2PACX-1vRgA5HVbBViro5I0kfW0bbqbhfAFj-jXpKqYp-DXTwPnalyB3YtrHEshCZDBE-is64J_H4qrWkLaz-L/pub
 #     replay: 
 
+lava-jug-2025:
+  name: Lava JUG
+  post-date: 2025-05-22
+  date: 22 mai 2025 
+  talks-url:  lava-jug-2025
+  excerpt: "Liste des talks donnés lors de Lava JUG 2025"
+  categories: Meetups
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "Crée ton assistant personnel avec Picocli et LangChain4J"
+      location: Clermont-Ferrand  (🇫🇷)
+      language: Français
+      date: Jeudi 22 mai 2025
+      time: 19h00 - 20h00
+      duration: 1h
+      abstract: |
+        Les CLI (Command Line Interface), tout le monde les utilise et elles existent depuis la nuit des temps. 
+        Souvent synonymes de gain de productivité, leur création est parfois obscure et peut sembler complexe. 
+        
+        C’était le cas il y a quelques décennies, mais depuis quelques années, des langages et Frameworks permettent d’en écrire simplement dans votre langage préféré. 
+        Je vous propose d’utiliser un langage qui ne paraît pas, au premier abord, le plus intuitif pour faire une CLI : Java ! 
+        
+        Mais il sera bien accompagné dans cette tâche : grâce à Picocli et Quarkus, notre CLI aura tout d’une grande, tout en étant simple à développer ! 
+        Et cerise sur le gâteau : nous créerons un “vrai” exécutable grâce à Graal VM. Venez m’accompagner lors d’une session de live coding permettant de mettre en lumière comment créer une CLI en Java avec Picocli et Quarkus en partant de zéro ! 
+        
+        Et qui sait, avec un peu de magie et de LangChain4j on aura, au final, un vrai assistant intelligent dans notre et terminal .
+      source: https://github.com/philippart-s/jarvis
+      slides: https://philippart-s.github.io/talks-slides/jarvis/lavajug-2025/
 
+devoxx-uk-2025:
+  name: Devoxx UK
+  post-date: 2025-05-07
+  date: 7 au 9 mai 2025 
+  talks-url:  devoxx-uk-2025
+  excerpt: "Liste des talks donnés lors de Devoxx UK 2025"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "Picocli: put some Java in your terminal 💻!"
+      location: Londres (🏴󠁧󠁢󠁥󠁮󠁧󠁿)
+      language: Anglais
+      date: Mercredi 7 mai 2025
+      time: 13h30 - 14h00
+      duration: 30 minutes
+      abstract: |
+        Everyone uses CLIs (Command Line Interfaces), and they’ve been around since the dawn of time. Often synonymous with productivity gains, their creation is sometimes obscure and can seem complex.
+
+        This was the case a few decades ago, but in recent years, languages and frameworks have made it possible to write them simply in your favorite language. I propose to use a language which, at first glance, may not seem the most intuitive for creating a CLI: Java!
+
+        Thanks to Picocli and Quarkus, your CLI will have all the bells and whistles of a great CLI, yet be simple to develop! And the icing on the cake: we’ll create a “real” executable thanks to Graal VM.
+
+        Come and join me for a live coding session that will show you how to create a Java CLI with Picocli and Quarkus from scratch!
+      source: https://github.com/philippart-s/jarvis
+      slides: https://philippart-s.github.io/talks-slides/jarvis/devoxx-uk-2025/
+      replay: https://youtu.be/L9XIBQ2XOBE
 
 devoxx-fr-2025:
   name: Devoxx France
@@ -56,7 +114,6 @@ devoxx-fr-2025:
       source: https://github.com/philippart-s/java-full-stack
       slides: https://philippart-s.github.io/talks-slides/java-full-stack/devoxx-fr-2025/
       replay: https://youtu.be/34BxbPEtPkA?si=yNx_WZheyafzhToI
-      do-not-display-replay: true
 
     - title: JBang, un fichier Java pour les gouverner tous ?
       location: Paris (🇫🇷)

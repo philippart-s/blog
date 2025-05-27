@@ -113,3 +113,52 @@ volcamp-2024:
     source: https://github.com/philippart-s/jarvis
     slides: https://philippart-s.github.io/talks-slides/jarvis/volcamp-2024
     replay: https://youtu.be/VsFhJuumQMo
+
+riviera-dev-2024:
+ name: Riviera Dev
+ post-date: 2024-07-08
+ date: 8 au 10 juillet 2024
+ talks-url: riviera-dev-2024
+ excerpt: "Liste des talks donnés lors de Riviera Dev 2024"
+ categories: Conférences
+ tags:
+   - Slides
+   - Replays
+ talks:
+  - title: "Picocli, mets du Java dans ton terminal !"
+    location: Sophia Antipolis (🇫🇷)
+    language: Français
+    date: mardi 9 juillet 2024
+    time: 17h45 - 18h10
+    duration: 25 minutes
+    abstract: |
+      Les CLI (Command Line Interface), tout le monde les utilise et elles existent depuis la nuit des temps. 
+      Souvent synonyme de gain de productivité, leur création est parfois obscure et peut sembler complexe. 
+      
+      C’était le cas il y a quelques décennies, mais depuis quelques années, des langages et Frameworks permettent d’en écrire simplement dans votre langage préféré. 
+      Je vous propose d’utiliser un langage qui ne paraît pas, au premier abord, le plus intuitif pour faire une CLI : Java ! 
+      
+      Mais il sera bien accompagné dans cette tâche : grâce à Picocli et Quarkus, notre CLI aura tout d’une grande, tout en étant simple à développer ! 
+      Et cerise sur le gâteau : nous créerons un « vrai » exécutable grâce à Graal VM. Venez m’accompagner lors d’une session de live coding permettant de mettre en lumière comment créer une CLI en Java avec Picocli et Quarkus en partant de zéro !   
+    source: https://github.com/philippart-s/jarvis
+    slides: https://philippart-s.github.io/talks-slides/jarvis/riviera-dev-2024/
+
+  - title: "Viens dompter ta première IA en Python"
+    location: Sophia Antipolis (🇫🇷)
+    language: Français
+    date: lundi 8 juillet 2024
+    time: 14h00 - 17h00
+    duration: 3 heures
+    abstract: |
+      L'IA est partout, du moins tout le monde revendique d'avoir de l'IA dans ses applications, ses objets connectés, …
+      En parler c'est bien, la développer c'est encore mieux.
+
+      Après une introduction aux concepts qui gravitent autour de l'IA mais aussi à l'écosystème Python nous vous proposons de customiser le modèle YOLO afin d'optimiser sa détection d'objets dans des images.
+      Pas besoin d'être experte ou expert Python, ni Data Scientist ou Machine Learning engineer, l'objectif ici est de découvrir tranquillement toutes ces notions.
+
+      Et cerise sur le gâteau, venez juste avec votre navigateur, on se charge du reste grâce à GitPod.
+      Vous découvrirez la magie d'un IDE dans le cloud.
+
+      Arrivés en débutantes, débutants ou justes curieuses et curieux, vous repartirez en sachant customiser de A à Z un modèle d'IA et créer son application l'utilisant.
+    source: https://github.com/devrel-workshop/101-AI-and-py
+    slides: https://docs.google.com/presentation/d/1WEci3-E0R9WI0pKocBnKyDRuyVnCSImkRSt0x-dh0VQ/

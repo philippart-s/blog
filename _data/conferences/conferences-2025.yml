@@ -1,3 +1,27 @@
+# conf-2025:
+#  name: conf
+#  post-date: 2025-01-22
+#  date: 22 au 25 janvier 2025 
+#  talks-url: conf-2025
+#  excerpt: "Liste des talks donnés lors de Conf 2025"
+#  categories: Conférences
+#  tags:
+#    - Slides
+#    - Replays
+#  talks:
+#   - title: "Développer avec l’IA : et si c’était aussi simple qu’ajouter une librairie ?"
+#     location: Grenoble (🇫🇷)
+#     language: Français
+#     date: Mercredi 22 janvier 2025
+#     time: 14h00 - 17h00
+#     duration: 3h mins
+#     abstract: |
+#     source: https://github.com/devrel-workshop/ai-as-lib-workshop
+#     slides: https://docs.google.com/presentation/d/e/2PACX-1vRgA5HVbBViro5I0kfW0bbqbhfAFj-jXpKqYp-DXTwPnalyB3YtrHEshCZDBE-is64J_H4qrWkLaz-L/pub
+#     replay: 
+
+
+
 devoxx-fr-2025:
   name: Devoxx France
   post-date: 2025-04-16

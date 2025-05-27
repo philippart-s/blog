@@ -39,13 +39,16 @@ Vous pouvez aussi retrouver la [liste des sujets]({{ site.baseurl }}/talks) que 
 </style>
 
 <table>
+  {% for conferences in site.data.conferences reversed %}
+    {% assign conferenceFile = conferences[0] %}
+
   <tr>
     <th colspan="3">
-      <h1>2025</h1>
+      <h1>  {{ conferenceFile | split: "-" | last }} </h1>
     </th>
   </tr>
 
-  {% for conference in site.data.conferences %}
+  {% for conference in site.data.conferences[conferenceFile] %}
   <tr>
     <td style="width: 35%; text-align: left;">
       {{ conference[1].name}}
@@ -59,5 +62,6 @@ Vous pouvez aussi retrouver la [liste des sujets]({{ site.baseurl }}/talks) que 
       </a> 🎤
     </td>
   </tr>
+  {% endfor %}
   {% endfor %}
 </table>

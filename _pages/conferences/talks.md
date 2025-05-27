@@ -18,3 +18,4 @@ Vous pouvez aussi lister les retrouver dans [la liste des conférences]({{ site.
 
 ## Picocli, mets du Java dans ton terminal !
 - [Confoo 2025]({{ site.baseurl }}{% post_url 2025-02-26-confoo-2025-talks %})
+- [Bordeaux JUG 2025]({{ site.baseurl }}{% post_url 2024-12-12-Bordeaux-JUG-2024-talks %})

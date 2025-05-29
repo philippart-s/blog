@@ -30,7 +30,7 @@ module Jekyll
                 'layout' => 'conference',
                 'title' => "Talks donnés à #{details['name']}",
                 'date' => details['post-date'],
-                'permalink' => "/talks/#{details['talks-url']}",
+                'permalink' => "/talks/#{conference_id}",
                 'excerpt' => details['excerpt'],
                 'categories' => "#{details['categories']}",
                 'tags' => "\n - #{details['tags']}",

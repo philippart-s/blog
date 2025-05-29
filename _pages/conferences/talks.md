@@ -26,6 +26,11 @@ Vous pouvez aussi lister les retrouver dans [la liste des conférences]({{ site.
 - [Bordeaux JUG 2024]({{ site.baseurl }}{% post_url 2024-12-12-Bordeaux-JUG-2024-talks %})
 - [Volcamp 2024]({{ site.baseurl }}{% post_url 2024-10-10-volcamp-2024-talks %})
 - [Riviera Dev 2024]({{ site.baseurl }}{% post_url 2024-07-08-riviera-dev-2024-talks %})
+- [Voxxed Days Lux 2024]({{ site.baseurl }}{% post_url 2024-06-20-voxxed-days-lux-2024-talks %})
+- [Devoxx France 2024]({{ site.baseurl }}{% post_url 2024-04-16-devoxx-fr-2024-talks %})
+- [Snowcamp 2024]({{ site.baseurl }}{% post_url 2024-01-31-snowcamp-2024-talks %})
+
+
 
 ##  Développer avec l’IA : et si c’était aussi simple qu’ajouter une librairie ? 
 - [Snowcamp 2025]({{ site.baseurl }}{% post_url 2025-01-22-snowcamp-2025-talks %})
@@ -33,10 +38,18 @@ Vous pouvez aussi lister les retrouver dans [la liste des conférences]({{ site.
 ##  ‍💻 Utiliser l’IA aussi simplement qu’une librairie 🤖 
 - [Apside Camp 2024]({{ site.baseurl }}{% post_url 2024-11-12-apside-camp-2024-talks %})
 
+## L’intelligence artificielle expliquée en 30 minutes !
+- [CNCF Lorient 2024]({{ site.baseurl }}{% post_url 2024-05-20-cncf-lorient-2024-talks %})
+
 ## Continuer les meetups ? mais quelle drôle d'idée ! 
 - [Devoxx France 2025]({{ site.baseurl }}{% post_url 2025-04-16-devoxx-fr-2025-talks %})
 
 ## Viens dompter ta première IA en Python
 - [Riviera Dev 2024]({{ site.baseurl }}{% post_url 2024-07-08-riviera-dev-2024-talks %})
+- [Voxxed Days Lux 2024]({{ site.baseurl }}{% post_url 2024-06-20-voxxed-days-lux-2024-talks %})
+- [Devoxx France 2024]({{ site.baseurl }}{% post_url 2024-04-16-devoxx-fr-2024-talks %})
+- [Snowcamp 2024]({{ site.baseurl }}{% post_url 2024-01-31-snowcamp-2024-talks %})
+
+
 
 

@@ -30,7 +30,7 @@ tags:
 <div class="notice">{{ notice-2 | markdownify }}</div>
 
 {% if talk.source %}📚 <a href="{{talk.source}}">Code source</a> / {% endif %} {% if talk.slides %}🌠
-<a href="talk.slides">Slides</a> {%
+<a href="{{talk.slides}}">Slides</a> {%
 endif %} {% if talk.replay %}/ 🎥 <a href="{{talk.replay}}">Replay</a>{% endif %}
 
 {% endfor %}

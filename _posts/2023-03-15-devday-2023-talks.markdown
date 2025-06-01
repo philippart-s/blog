@@ -1,0 +1,11 @@
+---
+layout: conference
+title: Talks donnés à DevDay
+date: 2023-03-15
+permalink: /talks/devday-2023
+excerpt: Talks donnés lors de DevDay 2023
+categories: Conférences
+tags: 
+ - ["Slides", "Replays"]
+conference-name: devday-2023
+---

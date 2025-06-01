@@ -29,17 +29,22 @@ Vous pouvez aussi lister les retrouver dans [la liste des conférences]({{ site.
 - [Voxxed Days Lux 2024]({{ site.baseurl }}{% post_url 2024-06-20-voxxed-days-lux-2024-talks %})
 - [Devoxx France 2024]({{ site.baseurl }}{% post_url 2024-04-16-devoxx-fr-2024-talks %})
 - [Snowcamp 2024]({{ site.baseurl }}{% post_url 2024-01-31-snowcamp-2024-talks %})
+- [Open Source Experience 2023]({{ site.baseurl }}{% post_url 2023-12-15-oss-exp-2023-talks %})
 
-
-
-##  Développer avec l’IA : et si c’était aussi simple qu’ajouter une librairie ? 
+## Développer avec l’IA : et si c’était aussi simple qu’ajouter une librairie ? 
 - [Snowcamp 2025]({{ site.baseurl }}{% post_url 2025-01-22-snowcamp-2025-talks %})
 
 ##  ‍💻 Utiliser l’IA aussi simplement qu’une librairie 🤖 
 - [Apside Camp 2024]({{ site.baseurl }}{% post_url 2024-11-12-apside-camp-2024-talks %})
 
-## L’intelligence artificielle expliquée en 30 minutes !
+## L’intelligence artificielle expliquée en XX minutes !
 - [CNCF Lorient 2024]({{ site.baseurl }}{% post_url 2024-05-20-cncf-lorient-2024-talks %})
+- [Cloud Nord 2023]({{ site.baseurl }}{% post_url 2023-10-15-cloud-nord-2023-talks %})
+- [Devoxx Morocco 2023]({{ site.baseurl }}{% post_url 2023-10-15-devoxx-morocco-2023-talks %})
+- [Cloud Alpes 2023]({{ site.baseurl }}{% post_url 2023-09-15-cloud-alpes-2023-talks %})
+- [Riviera Dev 2023]({{ site.baseurl }}{% post_url 2023-07-15-riviera-dev-2023-talks %})
+- [Voxxed Days Lux 2023]({{ site.baseurl }}{% post_url 2023-06-15-voxxed-days-lux-2023-talks %})
+- [Camping des speakers 2023]({{ site.baseurl }}{% post_url 2023-06-15-camping-des-speakers-2023-talks %})
 
 ## Continuer les meetups ? mais quelle drôle d'idée ! 
 - [Devoxx France 2025]({{ site.baseurl }}{% post_url 2025-04-16-devoxx-fr-2025-talks %})
@@ -49,6 +54,35 @@ Vous pouvez aussi lister les retrouver dans [la liste des conférences]({{ site.
 - [Voxxed Days Lux 2024]({{ site.baseurl }}{% post_url 2024-06-20-voxxed-days-lux-2024-talks %})
 - [Devoxx France 2024]({{ site.baseurl }}{% post_url 2024-04-16-devoxx-fr-2024-talks %})
 - [Snowcamp 2024]({{ site.baseurl }}{% post_url 2024-01-31-snowcamp-2024-talks %})
+- [Codeurs en Seine 2023]({{ site.baseurl }}{% post_url 2023-10-15-codeurs-en-seine-2023-talks %})
+
+## Développer un opérateur Kubernetes en Java, challenge accepted !
+- [Riviera Dev 2023]({{ site.baseurl }}{% post_url 2023-07-15-riviera-dev-2023-talks %})
+- [Paris JUG 2023]({{ site.baseurl }}{% post_url 2023-05-15-paris-jug-2023-talks %})
+- [Programmez 2023]({{ site.baseurl }}{% post_url 2023-03-15-programmez-2023-talks %})
+- [DevDay 2023]({{ site.baseurl }}{% post_url 2023-03-15-devday-2023-talks %})
+- [Snowcamp 2023]({{ site.baseurl }}{% post_url 2023-01-15-snowcamp-2023-talks %})
+
+## Développer un opérateur Kubernetes, pourquoi et comment ?
+- [Cloud Est 2023]({{ site.baseurl }}{% post_url 2023-06-15-cloud-est-2023-talks %})
+- [KCD Paris 2023]({{ site.baseurl }}{% post_url 2023-03-15-kcd-2023-talks %})
+
+
+## CaaS, Serverless, scale to zero.
+- [Voxxed Days Lux 2023]({{ site.baseurl }}{% post_url 2023-06-15-voxxed-days-lux-2023-talks %})
+- [Cloud Est 2023]({{ site.baseurl }}{% post_url 2023-06-15-cloud-est-2023-talks %})
+- [Web2Day 2023]({{ site.baseurl }}{% post_url 2023-05-15-web2day-2023-talks %})
+- [VTT 2023]({{ site.baseurl }}{% post_url 2023-02-15-vtt-2023-talks %})
+
+## Si on aidait le capitaine Némo à classifier les monstres marins ?
+- [Snowcamp 2023]({{ site.baseurl }}{% post_url 2023-01-15-snowcamp-2023-talks %})
+- [Touraine Tech 2023]({{ site.baseurl }}{% post_url 2023-01-15-tnt-2023-talks %})
+
+
+
+
+
+
 
 
 

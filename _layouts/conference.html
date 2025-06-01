@@ -12,9 +12,7 @@ tags:
 
 {% for conferences in site.data.conferences %}
 {% assign conferenceFile = conferences[0] %}
-<!--Name: {{conferenceFile}} </br>-->
 {% assign conference = site.data.conferences[conferenceFile] %}
-<!--Event: {{conference}} </br>-->
 
 {% if conference[page.conference-name] %}
 {% for talk in conference[page.conference-name].talks %}

@@ -1,0 +1,11 @@
+---
+layout: conference
+title: Talks donnés à Touraine Tech
+date: 2023-01-15
+permalink: /talks/tnt-2023
+excerpt: Talks donnés lors de Touraine Tech 2023
+categories: Conférences
+tags: 
+ - ["Slides", "Replays"]
+conference-name: tnt-2023
+---

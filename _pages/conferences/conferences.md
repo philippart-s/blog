@@ -57,7 +57,7 @@ Vous pouvez aussi retrouver la [liste des sujets]({{ site.baseurl }}/talks) que 
       🗓️ {{ conference[1].date }} 🗓️
     </td>
     <td style="width: 30%;">
-      🎤 <a href="{{ site.baseurl }}/talks/{{ conference[1].talks-url }}">
+      🎤 <a href="{{ site.baseurl }}/talks/{{ conference[0] }}">
         Liste des talks
       </a> 🎤
     </td>

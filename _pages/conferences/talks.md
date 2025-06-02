@@ -62,11 +62,19 @@ Vous pouvez aussi lister les retrouver dans [la liste des conférences]({{ site.
 - [Programmez 2023]({{ site.baseurl }}{% post_url 2023-03-15-programmez-2023-talks %})
 - [DevDay 2023]({{ site.baseurl }}{% post_url 2023-03-15-devday-2023-talks %})
 - [Snowcamp 2023]({{ site.baseurl }}{% post_url 2023-01-15-snowcamp-2023-talks %})
+- [DevOps D-Day 2022]({{ site.baseurl }}{% post_url 2022-12-15-devops-s-day-talks %})
+- [Devoxx Morocco 2022]({{ site.baseurl }}{% post_url 2022-10-15-devoxx-morocco-2022-talks %})
+- [Breizh Camp 2022]({{ site.baseurl }}{% post_url 2022-06-15-breizh-camp-2022-talks %})
+- [Le Camping des Speakers 2022]({{ site.baseurl }}{% post_url 2022-06-15-camping-des-speakers-2022-talks %})
+- [Cloud Sud 2022]({{ site.baseurl }}{% post_url 2022-03-15-cloud-sud-2022-talks %})
+
 
 ## Développer un opérateur Kubernetes, pourquoi et comment ?
 - [Cloud Est 2023]({{ site.baseurl }}{% post_url 2023-06-15-cloud-est-2023-talks %})
 - [KCD Paris 2023]({{ site.baseurl }}{% post_url 2023-03-15-kcd-2023-talks %})
-
+- [Cloud Nord 2022]({{ site.baseurl }}{% post_url 2022-09-15-cloud-nord-2022-talks %})
+- [Breizh Camp 2022]({{ site.baseurl }}{% post_url 2022-06-15-breizh-camp-2022-talks %})
+- [Voxxed Days Luxembourg 2022]({{ site.baseurl }}{% post_url 2022-06-15-voxxed-days-lux-2022-talks %})
 
 ## CaaS, Serverless, scale to zero.
 - [Voxxed Days Lux 2023]({{ site.baseurl }}{% post_url 2023-06-15-voxxed-days-lux-2023-talks %})
@@ -77,9 +85,15 @@ Vous pouvez aussi lister les retrouver dans [la liste des conférences]({{ site.
 ## Si on aidait le capitaine Némo à classifier les monstres marins ?
 - [Snowcamp 2023]({{ site.baseurl }}{% post_url 2023-01-15-snowcamp-2023-talks %})
 - [Touraine Tech 2023]({{ site.baseurl }}{% post_url 2023-01-15-tnt-2023-talks %})
+- [Volcamp 2022]({{ site.baseurl }}{% post_url 2022-10-15-volcamp-2022-talks %})
+- [JUG Summer Camp 2022]({{ site.baseurl }}{% post_url 2022-09-15-jug-summer-camp-2022-talks %})
 
 
+## Au secours je suis speaker 😱 ! Comment bien se préparer ?
+- [Codeurs en Seine 2022]({{ site.baseurl }}{% post_url 2022-11-15-codeurs-en-seine-2022-talks %})
 
+## L’open source à la portée de toutes et tous !
+- [JUG Summer Camp 2022]({{ site.baseurl }}{% post_url 2022-09-15-jug-summer-camp-2022-talks %})
 
 
 

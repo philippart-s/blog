@@ -18,6 +18,8 @@ Vous pouvez aussi lister les retrouver dans [la liste des conférences]({{ site.
 
 ##  JBang, un fichier Java pour les gouverner tous ? 
 - [Devoxx France 2025]({{ site.baseurl }}{% post_url 2025-04-16-devoxx-fr-2025-talks %})
+- [DevQuest 2025]({{ site.baseurl }}{% post_url 2025-06-09-devquest-2025-talks %})
+
 
 ## Picocli, mets du Java dans ton terminal !
 - [Lava JUG 2025]({{ site.baseurl }}{% post_url 2025-05-22-lava-jug-2025-talks %})

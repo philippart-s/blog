@@ -1,7 +1,7 @@
 ---
 title: "🧪 Remplacer Noti.st par du \"as code\" avec Jekyll 💎"
 classes: wide
-excerpt: "Originalement géré dans noti.st, j'ai décidé de géré la liste des confs que j'ai données moi-même avec Jekyll. Mais pourquoi 🤨 et comment ?" 
+excerpt: "Originalement géré dans noti.st, j'ai décidé de géré la liste des confs que j'ai données avec Jekyll. Mais pourquoi 🤨 et comment ?" 
 categories:
   - Blog
   - Dev

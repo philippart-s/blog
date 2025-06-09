@@ -1,7 +1,7 @@
 ---
-title: "🧪 Remplacer Noti.st par du as code avec Jekyll 💎"
+title: "🧪 Remplacer Noti.st par du \"as code\" avec Jekyll 💎"
 classes: wide
-excerpt: "Originalement géré dans noti.st, j'ai décidé de géré la liste des confs que j'ai données moi-même avec Jekyll. Mais pourquoi 🤨"
+excerpt: "Originalement géré dans noti.st, j'ai décidé de géré la liste des confs que j'ai données moi-même avec Jekyll. Mais pourquoi 🤨 et comment ?" 
 categories:
   - Blog
   - Dev
@@ -38,7 +38,7 @@ Oui même pour moi qui suit très loin d'être un développeur front (c'est pour
 ## 📚 Bon on y va ? C'est quoi les specs ?
 
 Mon but : faire le moins d'actions possibles lorsque je dois rajouter un talk.
-J'aurai donc un fichier de données global où je retrouverai mes informations de base pour un talk : nom de conférence, date, talk, slides, replay, source, ...
+J'aurai donc un fichier de données global où je retrouverai mes informations de base pour un talk : nom de la conférence, date, talk, slides, replay, source, ...
 Des templates pour générer un maximum de choses, idéalement je ne veux pas à avoir à créer un blog post après chaque conférence mais juste une nouvelle entrée dans mon fichier de données.
 Ce dernier point va être important dans certains choix par la suite.
 
@@ -49,8 +49,6 @@ Bonus attendus :
  - une gestion du cycle de vie dans Git
  - une modification simple car via des templates
  - la découverte d'une utilisation avancée de Jekyll
-
-> 
 
 ## 💿 Les données 
 
@@ -87,10 +85,10 @@ conf-2025:
 
 ## 🏞️ Le layout, éviter de réinventer la roue
 
-Une fois ces données créer, il faut maintenant les afficher, pour cela rien de plus simple avec Jekyll et le moteur de templating Liquid il est très simple d'ajouter du dynamisme et de la généricité dans les blog posts.
+Une fois ces données créées, il faut maintenant les afficher, pour cela rien de plus simple avec Jekyll et le moteur de templating [Liquid](https://jekyllrb.com/docs/liquid/){:target="_blank"}, il est très simple d'ajouter du dynamisme et de la généricité dans les blog posts.
 
 Et cerise sur le gateau, Jekyll vient avec un mécanisme de [layouts](https://jekyllrb.com/docs/layouts/){:target="_blank"} pour faciliter la mise en page de vos articles.
-Et il est aussi possible d'utiliser Liquid dans un layout 😉.
+Et il est aussi possible d'utiliser [Liquid](https://jekyllrb.com/docs/liquid/){:target="_blank"} dans un layout 😉.
 
 Du coup, pour créer un nouveau layout, il suffit de créer mon fichier [conference.html](https://github.com/philippart-s/blog/blob/master/_layouts/conference.html){:target="_blank"} dans le répertoire [_layouts](https://github.com/philippart-s/blog/tree/master/_layouts){:target="_blank"} de mon blog:
 
@@ -244,9 +242,9 @@ Rien de bien compliqué ici :
  - l10 -> l17 : c'est juste un garde fou (pas très élégant) pour éviter à Jekyll de boucler indéfiniment en mode watch. Le mode watch régénère l'ensemble du site et appelle les plugins à chaque modification de fichier et comme le plugin à chaque exécution génère des fichiers c'est un cercle sans fin 😉. Il faudra que je trouve une manière plus élégante de le gérer.
  - l19 : j'utilise uniquement les fichier YAML qui ont des données sur les conférences (ces fichiers commencent par `conferences`)
  - l20 -> l42: j'itère pour chaque conférence et je fabrique l'en-tête
- - l45 -> l46: création physique du fichier avec les données préparées (pour me repérer les articles générés ont l'extension `markdown` et ceux écrits à la main `md`)
+ - l45 -> l46: création physique du fichier avec les données préparées (pour me repérer, les articles générés ont l'extension `markdown` et ceux écrits à la main `md`)
 
-Et voilà avec ce script à chaque modification dans un fichier YAML de données de conférences les articles correspondants sont créés 😎.
+Et voilà avec ce script à chaque modification dans un fichier YAML de données de conférences, les articles correspondants sont créés 😎.
 
 ## 🍰 Cerise sur le gâteau, une page pour lister les talks
 
@@ -340,7 +338,7 @@ Maintenant que c'est fait, rajouter un talk c'est ajouter une entrée dans le fi
 
 Pour voir ce que cela donne :
   - la [page](https://philippart-s.github.io/blog/conferences/){:target="_blank"} qui liste les conférences avec un lien vers chaque article qui indique les talks avec leurs détails
-  - la [page](https://philippart-s.github.io/blog/conferences/){:target="_blank"} qui liste les talks avec la liste des conférences où il ont été donnés (avec un lien vers l'article de la dite conférence)
+  - la [page](https://philippart-s.github.io/blog/conferences/){:target="_blank"} qui liste les talks avec la liste des conférences où ils ont été donnés (avec un lien vers l'article de la dite conférence)
   - un [exemple](https://philippart-s.github.io/blog/talks/devoxx-fr-2025){:target="_blank"} d'article généré
 
 La suite ?

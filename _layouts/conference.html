@@ -17,9 +17,12 @@ tags:
 {% if conference[page.conference-name] %}
 {% for talk in conference[page.conference-name].talks %}
 
-<h2> {{talk.title}} </h2>
-
-📍{{talk.location}} / 🗣️ {{talk.language}} / 🗓️ {{talk.date}} / ⏰ {{talk.time}} / 🕒 {{talk.duration}}
+<h2> <a id="{{talk.title}}">{{talk.title}}</a>
+  <a class="header-link" href="#{{talk.title}}" title="Permalink"><span class="sr-only">Permalink</span>
+    <i class="fas fa-link"></i></a>
+</h2>
+📍{{talk.location}} / 🗣️ {{talk.language}} / 🗓️ {{talk.date}} / ⏰ {{talk.time}} /
+🕒 {{talk.duration}}
 
 {% capture notice-2 %}
 {{talk.abstract}}

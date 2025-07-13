@@ -34,6 +34,7 @@ Vous pouvez aussi lister les retrouver dans [la liste des conférences]({{ site.
 - [Open Source Experience 2023]({{ site.baseurl }}{% post_url 2023-12-15-oss-exp-2023-talks %})
 
 ## Développer avec l’IA : et si c’était aussi simple qu’ajouter une librairie ? 
+- [Sunny Tech 2025]({{ site.baseurl }}{% post_url 2025-07-13-sunnytech-2025-talks %})
 - [Snowcamp 2025]({{ site.baseurl }}{% post_url 2025-01-22-snowcamp-2025-talks %})
 
 ##  ‍💻 Utiliser l’IA aussi simplement qu’une librairie 🤖 

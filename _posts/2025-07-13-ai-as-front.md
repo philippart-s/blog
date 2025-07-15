@@ -13,6 +13,9 @@ tags:
   - LLM
 ---
 
+![]({{ site.url }}{{ site.baseurl }}/assets/images/ai-as-front/cover.webp){: .align-center}
+[@wildagsx](https://twitter.com/wildagsx){:style="font-size: smaller"}{:target="_blank"}{: .align-right}<br/>
+
 L'intelligence artificielle va-t-elle remplacer toute une partie de métiers que l'on connaît actuellement ?
 C'est une des théories que l'on entends le plus souvent ces derniers temps.
 Et plus particulièrement dans notre microcosme, celui du développement, n'est-on pas en train de scier la branche sur laquelle on est assis ?

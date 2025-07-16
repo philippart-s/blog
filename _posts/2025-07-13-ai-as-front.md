@@ -13,7 +13,7 @@ tags:
   - LLM
 ---
 
-![]({{ site.url }}{{ site.baseurl }}/assets/images/ai-as-front/cover.webp){: .align-center}
+![]({{ site.url }}{{ site.baseurl }}/assets/images/ai-as-front/cover.jpg){: .align-center}
 [@wildagsx](https://twitter.com/wildagsx){:style="font-size: smaller"}{:target="_blank"}{: .align-right}<br/>
 
 L'intelligence artificielle va-t-elle remplacer toute une partie de métiers que l'on connaît actuellement ?

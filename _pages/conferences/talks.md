@@ -20,8 +20,8 @@ Vous pouvez aussi lister les retrouver dans [la liste des conférences]({{ site.
 - [Devoxx France 2025]({{ site.baseurl }}{% post_url 2025-04-16-devoxx-fr-2025-talks %}#JBang, un fichier Java pour les gouverner tous ?)
 - [DevQuest 2025]({{ site.baseurl }}{% post_url 2025-06-09-devquest-2025-talks %})
 
-
 ## Picocli, mets du Java dans ton terminal !
+- [JUG Summer Camp 2025]({{ site.baseurl }}{% post_url 2025-09-16-jug-summercamp-2025-talks %})
 - [Lava JUG 2025]({{ site.baseurl }}{% post_url 2025-05-22-lava-jug-2025-talks %})
 - [Devoxx UK 2025]({{ site.baseurl }}{% post_url 2025-05-07-devoxx-uk-2025-talks %})
 - [Confoo 2025]({{ site.baseurl }}{% post_url 2025-02-26-confoo-2025-talks %}#Picocli, mets du Java dans ton terminal !)

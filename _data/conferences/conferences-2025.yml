@@ -49,6 +49,36 @@ devfestnantes-2025:
       slides: https://docs.google.com/presentation/d/e/2PACX-1vRF50mgvW6KzZf6lspATsmJRfTU79-CdlyDO8JP23f6ZldfvSGCkxe7wRwy9WaQMfD3EVqza0q5ukkB/pub
       replay: 
 
+devoxx-belgium-2025:
+  name: Devoxx Belgium
+  post-date: 2025-10-10
+  date: 6 au 9 octobre 2025 
+  talks-url:  devoxx-belgium-2025
+  excerpt: "Talk donné lors de Devoxx Belgium 2025"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "Picocli: put some Java in your terminal 💻!"
+      location: Anvers (🇧🇪)
+      language: Anglais
+      date: lundi 6 octobre 2025
+      time: 18h10 - 18h40
+      duration: 30 minutes
+      abstract: |
+        Everyone uses CLIs (Command Line Interfaces), and they’ve been around since the dawn of time. Often synonymous with productivity gains, their creation is sometimes obscure and can seem complex.
+
+        This was the case a few decades ago, but in recent years, languages and frameworks have made it possible to write them simply in your favorite language. I propose to use a language which, at first glance, may not seem the most intuitive for creating a CLI: Java!
+
+        Thanks to Picocli and Quarkus, your CLI will have all the bells and whistles of a great CLI, yet be simple to develop! And the icing on the cake: we’ll create a “real” executable thanks to Graal VM.
+
+        Come and join me for a live coding session that will show you how to create a Java CLI with Picocli and Quarkus from scratch!
+      source: https://github.com/philippart-s/jarvis
+      slides: https://philippart-s.github.io/talks-slides/jarvis/devoxx-2025/
+      replay: https://youtu.be/usTiNoSNdlw
+
+
 jug-summercamp-2025:
   name: JUG Summer Camp
   post-date: 2025-09-16

@@ -17,6 +17,7 @@ Vous pouvez aussi lister les retrouver dans [la liste des conférences]({{ site.
 - [Devoxx France 2025]({{ site.baseurl }}{% post_url 2025-04-16-devoxx-fr-2025-talks %}#☕️ Full stack Java, du dev à la prod en passant par l’infra 🏗️)
 
 ## JBang, un fichier Java pour les gouverner tous ? 
+- [DevFest Nantes 2025]({{ site.baseurl }}{% post_url 2025-10-18-devfestnantes-2025-talks %}#JBang, un fichier Java pour les gouverner tous ?)
 - [Devoxx France 2025]({{ site.baseurl }}{% post_url 2025-04-16-devoxx-fr-2025-talks %}#JBang, un fichier Java pour les gouverner tous ?)
 - [DevQuest 2025]({{ site.baseurl }}{% post_url 2025-06-09-devquest-2025-talks %})
 

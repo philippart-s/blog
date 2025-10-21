@@ -74,7 +74,7 @@ Comme toute personne passionnée, je suis capable de passer beaucoup de temps à
 Au point de perdre un peu la notion du temps, quitte à passer un temps non négligeable à optimiser une portion de code ... ou à la rendre "plus jolie". Oui je suis ce genre de dev qui peut passer une journée à essayer de rendre du code plus esthétique alors que tout fonctionnait très bien et qu'après l'embellissement plus rien ne fonctionne 🤣.
 
 J'ai souvent comparé le développement à un métier d'art ou d'artisan.
-Non pas que je m'imagine créer des chefs d'oeuvres mais parce que j'y mets de l'affecte et que je crée quelque chose à partir de rien, juste avec ce que j'ai en tête.
+Non pas que je m'imagine créer des chefs d'oeuvres mais parce que j'y mets de l'affect et que je crée quelque chose à partir de rien, juste avec ce que j'ai en tête.
 Cela explique pourquoi, parfois, on a des débats enflammés entre développeuses et développeurs car c'est une petite partie de nous, le bout de code 😉.
 
 > A ce sujet : je ne partage pas le "tu n'es pas ton code", bien sûr que l'on est son code, c'est même une partie de nous. (on verra qu'avec l'IA cela change peut-être ...)

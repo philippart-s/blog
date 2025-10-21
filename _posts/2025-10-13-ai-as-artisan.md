@@ -88,7 +88,7 @@ Ici, on va parler de rentabilité, de plannings (et de rétro plannings), de tes
 
 Bref on commence à un peu s'éloigner de la notion de plaisir.
 
-Et c'est là que l'outillage entre en jeu : comment, pour les entreprises (mais ne nous le cachons pas pour nous aussi) gagner plus d'argent en en dépensant moins ?
+Et c'est là que l'outillage entre en jeu : comment, pour les entreprises (mais ne nous le cachons pas : pour nous aussi) gagner plus d'argent en en dépensant moins ?
 Récemment, j'ai vu une intervention de Jean-Marc Jancovici qui disait :
 
 > l'être humain est fondamentalement feignant et va tout faire pour avoir le plus de ressources possibles en travaillant le moins possible

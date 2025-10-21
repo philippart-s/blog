@@ -111,7 +111,7 @@ Oui cette question est biaisée et vous me voyez venir certainement 😇.
 On trouvera certainement de parfaits contre-exemples, mais je pense que le principal problème vient certainement de là : le profit 🤑.  
 Alors ne faites pas dire ce que je n'ai pas dit, comme tout le monde, j'aime bien mon petit confort et faire un métier qui a une part de passion est un vrai luxe, je le sais.
 
-Je me dis juste, que, si je devais donner un conseil à mon moi de 15 ans qui hésitait entre l'informatique et la cuisine (mes deux passions de l'époque) de prendre le temps et de se dire laquelle des deux tu auras envie de faire sans contraintes extérieurs 😊.
+Je me dis juste, que, si je devais donner un conseil à mon moi de 15 ans qui hésitait entre l'informatique et la cuisine (mes deux passions de l'époque) de prendre le temps et de se dire laquelle des deux tu auras envie de faire sans contraintes extérieures 😊.
 
 ### 🤖 L'automatisation au secours du gain
 

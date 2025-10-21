@@ -64,7 +64,7 @@ C'est à cette époque que, comme beaucoup, j'ai développé mon premier jeu : P
 
 Cette passion ne m'a jamais quitté, presque 40 ans plus tard j'aime toujours autant transformer une idée en lignes de code.
 Que ce soit ensuite dans mes études supérieures ou dans toutes les entreprises parmi lesquelles je suis passé, j'ai toujours développé.
-Plus ou moins selon les postes, mais jamais j'ai complètement abandonné cette passion.
+Plus ou moins selon les postes, mais jamais je n'ai complètement abandonné cette passion.
 Au point, comme certaines et certains de le faire aussi sur mon temps perso en tant que loisir.
 
 Alors oui j'ai la chance, dans mon métier, d'avoir une partie qui est en fait une passion d'enfance.

@@ -35,7 +35,7 @@ Au final, on retrouve un peu les mêmes marqueurs aujourd'hui : on a juste tenda
 Alors je vous propose, durant le temps de lire ce blog post, de faire un pas de côté et de prendre le temps de voir la place de l'IA dans nos vies de développeuses et développeurs.
 
 Depuis quelque temps maintenant, l'IA bouscule donc les habitudes, fait bouger les lignes.
-Il n'est pas rare d'entendre des "vérités" assenées avec grande conviction par des "sachant" 🙃.
+Il n'est pas rare d'entendre des "vérités" assenées avec grande conviction par des "sachants" 🙃.
 
 _L'IA va remplacer les devs_.  
 _Les entreprises se séparent de personnes au profit de l''IA_.  

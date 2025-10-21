@@ -95,7 +95,7 @@ Récemment, j'ai vu une intervention de Jean-Marc Jancovici qui disait :
 
 En dehors de la forme, qui peut parfois être piquante, je trouve la réflexion assez juste dans beaucoup de métiers et particulièrement dans le nôtre.
 En effet, nous passons beaucoup de temps à automatiser des actions via le développement d'applications.
-Voir à remplacer des métiers complets via des applications (existe-t-il encore beaucoup de services courriers dans les entreprises à l'heure des mails et autres messageries instantanées ?).
+Voire à remplacer des métiers complets via des applications (existe-t-il encore beaucoup de services courriers dans les entreprises à l'heure des mails et autres messageries instantanées ?).
 Ce n'est pas propre à notre métier, de nombreux métiers ont été changés par les différentes révolutions industrielles ou avancées technologie (on prends souvent l'exemple de l'agriculture mais c'est un exemple parmi tant d'autres).
 
 On en est là donc : est-ce que la passion et le monde du travail sont compatibles ?

@@ -105,7 +105,7 @@ Pourquoi ?
 Tout simplement par le bon vielle adage : "le temps c'est de l'argent".
 Et oui, de nouveau je vais prendre l'exemple de l'artisanat : si je prends l'exemple d'un•e ébéniste qui est venu•e à ce métier par l'amour du bois, de manipuler, de créer à partir de rien (tient ça me rappelle quelque chose 😉).
 Pensez-vous, que si on retire l'aspect financier, un·e ébéniste préfère automatiser 100% de la création d'une pièce en bois sans intervenir autrement qu'en décrivant ce qu'iel souhaite ?
-Ou prendre le temps de partir d'un morceau de bois brute et le façonner doucement, tranquillement jusqu'à obtenir son résultat parfait (ce ne sera peut être pas parfait pour les autres mais ça l'est pour iel) ?
+Ou prendre le temps de partir d'un morceau de bois brut et le façonner doucement, tranquillement jusqu'à obtenir son résultat parfait (ce ne sera peut être pas parfait pour les autres mais ça l'est pour iel) ?
 
 Oui cette question est biaisée et vous me voyez venir certainement 😇.  
 On trouvera certainement de parfaits contre-exemples, mais je pense que le principal problème vient certainement de là : le profit 🤑.  

@@ -44,7 +44,7 @@ _L'IA est bête et ne fait que retranscrire les informations d'Internet_.
 
 Qu'en est-il réellement ?
 A-t-on le recul nécessaire pour répondre à ces questions ?
-Est-on en train, en tant que devs, de scier la branche sur laquelle on est assi·es ?
+Est-on en train, en tant que devs, de scier la branche sur laquelle on est assis·es ?
 Et une petite question bonus : pourquoi recherche-t-on tant la performance dans le développement grâce à l'IA ?
 
 Je n'aurai pas la prétention d'avoir la réponse à toutes ces questions existentielles, mais, je vais au moins prendre le temps d'y réfléchir et de vous partager mes réflexions 😉.

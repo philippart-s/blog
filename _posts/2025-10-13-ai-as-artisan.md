@@ -191,7 +191,7 @@ Oui peut-être, comme on regarde affectueusement nos anciens travailler le bois 
 
 Vous l'aurez compris, ce blog post est aussi l'occasion de regarder un peu derrière et d'avoir la nostalgie de ce qui m'a fait aller vers ce métier de développeur et pourquoi, avec nostalgie, je me dis que ses jours tels que je les ai connus, sont peut-être comptés.
 
-Si vous êtes arrivé·es là, merci car ce fut long et j'espère que vous avez apprécié ma modeste prose ... sortie de mon cerveau sans aucune aide extérieures 😉.
+Si vous êtes arrivé·es là, merci car ce fut long et j'espère que vous avez apprécié ma modeste prose ... sortie de mon cerveau sans aucune aide extérieure 😉.
 
 ![Un amstrad CPC 6128]({{ site.url }}{{ site.baseurl }}/assets/images/ai-artisan/amstrad.jpg){: .align-center}
 [© Centre for Computing History](https://www.computinghistory.org.uk/){:style="font-size: smaller"}{:target="_blank"}{: .align-right}<br/>

@@ -34,7 +34,7 @@ Au final, on retrouve un peu les mêmes marqueurs aujourd'hui : on a juste tenda
 Alors je vous propose, durant le temps de lire ce blog post, de faire un pas de côté et de prendre le temps de voir la place de l'IA dans nos vies de développeuses et développeurs.
 
 Depuis quelque temps maintenant, l'IA bouscule donc les habitudes, fait bouger les lignes.
-Il n'est pas rare d'entendre des "vérités" assenées avec grande conviction par des "sachant" 🙃.
+Il n'est pas rare d'entendre des "vérités" assenées avec grande conviction par des "sachants" 🙃.
 
 _L'IA va remplacer les devs_.  
 _Les entreprises se séparent de personnes au profit de l''IA_.  
@@ -43,7 +43,7 @@ _L'IA est bête et ne fait que retranscrire les informations d'Internet_.
 
 Qu'en est-il réellement ?
 A-t-on le recul nécessaire pour répondre à ces questions ?
-Est-on en train, en tant que devs, de scier la branche sur laquelle on est assi·es ?
+Est-on en train, en tant que devs, de scier la branche sur laquelle on est assis·es ?
 Et une petite question bonus : pourquoi recherche-t-on tant la performance dans le développement grâce à l'IA ?
 
 Je n'aurai pas la prétention d'avoir la réponse à toutes ces questions existentielles, mais, je vais au moins prendre le temps d'y réfléchir et de vous partager mes réflexions 😉.
@@ -63,7 +63,7 @@ C'est à cette époque que, comme beaucoup, j'ai développé mon premier jeu : P
 
 Cette passion ne m'a jamais quitté, presque 40 ans plus tard j'aime toujours autant transformer une idée en lignes de code.
 Que ce soit ensuite dans mes études supérieures ou dans toutes les entreprises parmi lesquelles je suis passé, j'ai toujours développé.
-Plus ou moins selon les postes, mais jamais j'ai complètement abandonné cette passion.
+Plus ou moins selon les postes, mais jamais je n'ai complètement abandonné cette passion.
 Au point, comme certaines et certains de le faire aussi sur mon temps perso en tant que loisir.
 
 Alors oui j'ai la chance, dans mon métier, d'avoir une partie qui est en fait une passion d'enfance.
@@ -73,7 +73,7 @@ Comme toute personne passionnée, je suis capable de passer beaucoup de temps à
 Au point de perdre un peu la notion du temps, quitte à passer un temps non négligeable à optimiser une portion de code ... ou à la rendre "plus jolie". Oui je suis ce genre de dev qui peut passer une journée à essayer de rendre du code plus esthétique alors que tout fonctionnait très bien et qu'après l'embellissement plus rien ne fonctionne 🤣.
 
 J'ai souvent comparé le développement à un métier d'art ou d'artisan.
-Non pas que je m'imagine créer des chefs d'oeuvres mais parce que j'y mets de l'affecte et que je crée quelque chose à partir de rien, juste avec ce que j'ai en tête.
+Non pas que je m'imagine créer des chefs d'oeuvres mais parce que j'y mets de l'affect et que je crée quelque chose à partir de rien, juste avec ce que j'ai en tête.
 Cela explique pourquoi, parfois, on a des débats enflammés entre développeuses et développeurs car c'est une petite partie de nous, le bout de code 😉.
 
 > A ce sujet : je ne partage pas le "tu n'es pas ton code", bien sûr que l'on est son code, c'est même une partie de nous. (on verra qu'avec l'IA cela change peut-être ...)
@@ -90,30 +90,30 @@ Ici, on va parler de rentabilité, de plannings (et de rétro plannings), de tes
 
 Bref on commence à un peu s'éloigner de la notion de plaisir.
 
-Et c'est là que l'outillage entre en jeu : comment, pour les entreprises (mais ne nous le cachons pas pour nous aussi) gagner plus d'argent en en dépensant moins ?
+Et c'est là que l'outillage entre en jeu : comment, pour les entreprises (mais ne nous le cachons pas : pour nous aussi) gagner plus d'argent en en dépensant moins ?
 Récemment, j'ai vu une intervention de Jean-Marc Jancovici qui disait :
 
 > l'être humain est fondamentalement feignant et va tout faire pour avoir le plus de ressources possibles en travaillant le moins possible
 
-En dehors de la forme, qui peut parfois être piquante, je trouve la réflexion assez juste dans beaucoup de métiers et particulièrement dans le notre.
+En dehors de la forme, qui peut parfois être piquante, je trouve la réflexion assez juste dans beaucoup de métiers et particulièrement dans le nôtre.
 En effet, nous passons beaucoup de temps à automatiser des actions via le développement d'applications.
-Voir à remplacer des métiers complets via des applications (existe-t-il encore beaucoup de services courriers dans les entreprises à l'heure des mails et autres messageries instantanées ?).
-Ce n'est pas propre à notre métier, de nombreux métiers ont été changés par les différentes révolutions industrielles ou avancées technologie (on prends souvent l'exemple de l'agriculture mais c'est un exemple parmi tant d'autres).
+Voire à remplacer des métiers complets via des applications (existe-t-il encore beaucoup de services courriers dans les entreprises à l'heure des mails et autres messageries instantanées ?).
+Ce n'est pas propre à notre métier, de nombreux métiers ont été changés par les différentes révolutions industrielles ou avancées technologiques (on prend souvent l'exemple de l'agriculture mais c'est un exemple parmi tant d'autres).
 
 On en est là donc : est-ce que la passion et le monde du travail sont compatibles ?
 
 Peut-être, dans certains cas, mais j'ai envie de dire, souvent non.
 Pourquoi ?  
 Tout simplement par le bon vielle adage : "le temps c'est de l'argent".
-Et oui, de nouveau je vais prendre l'exemple de l'artisanat : si je prends l'exemple d'un•e ébéniste qui est venu•e à ce métier par l'amour du bois, de manipuler, de créer à partir de rien (tient ça me rappel quelque chose 😉).
+Et oui, de nouveau je vais prendre l'exemple de l'artisanat : si je prends l'exemple d'un•e ébéniste qui est venu•e à ce métier par l'amour du bois, de manipuler, de créer à partir de rien (tient ça me rappelle quelque chose 😉).
 Pensez-vous, que si on retire l'aspect financier, un·e ébéniste préfère automatiser 100% de la création d'une pièce en bois sans intervenir autrement qu'en décrivant ce qu'iel souhaite ?
-Ou prendre le temps de partir d'un morceau de bois brute et le façonner doucement, tranquillement jusqu'à obtenir son résultat parfait (ce ne sera peut être pas parfait pour les autres mais ça l'est pour iel) ?
+Ou prendre le temps de partir d'un morceau de bois brut et le façonner doucement, tranquillement jusqu'à obtenir son résultat parfait (ce ne sera peut être pas parfait pour les autres mais ça l'est pour iel) ?
 
 Oui cette question est biaisée et vous me voyez venir certainement 😇.  
 On trouvera certainement de parfaits contre-exemples, mais je pense que le principal problème vient certainement de là : le profit 🤑.  
 Alors ne faites pas dire ce que je n'ai pas dit, comme tout le monde, j'aime bien mon petit confort et faire un métier qui a une part de passion est un vrai luxe, je le sais.
 
-Je me dis juste, que, si je devais donner un conseil à mon moi de 15 ans qui hésitait entre l'informatique et la cuisine (mes deux passions de l'époque) de prendre le temps et de se dire laquelle des deux tu auras envie de faire sans contraintes extérieurs 😊.
+Je me dis juste, que, si je devais donner un conseil à mon moi de 15 ans qui hésitait entre l'informatique et la cuisine (mes deux passions de l'époque) de prendre le temps et de se dire laquelle des deux tu auras envie de faire sans contraintes extérieures 😊.
 
 ### 🤖 L'automatisation au secours du gain
 
@@ -194,7 +194,7 @@ Oui peut-être, comme on regarde affectueusement nos anciens travailler le bois 
 Vous l'aurez compris, ce blog post est aussi l'occasion de regarder un peu derrière avec nostalgie sur ce qui m'a fait choisir ce métier de développeur.
 Et avec un peu de tristesse, je me dis que, peut-être, ses jours tels que je les ai connus, sont peut-être comptés.
 
-Si vous êtes arrivé·es là, merci car ce fut long et j'espère que vous avez apprécié ma modeste prose ... sortie de mon cerveau sans aucune aide extérieures 😉.
+Si vous êtes arrivé·es là, merci car ce fut long et j'espère que vous avez apprécié ma modeste prose ... sortie de mon cerveau sans aucune aide extérieure 😉.
 
 ![Un amstrad CPC 6128]({{ site.url }}{{ site.baseurl }}/assets/images/ai-artisan/amstrad.jpg){: .align-center}
 [© Centre for Computing History](https://www.computinghistory.org.uk/){:style="font-size: smaller"}{:target="_blank"}{: .align-right}<br/>

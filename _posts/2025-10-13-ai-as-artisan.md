@@ -14,7 +14,6 @@ tags:
 ![un ébéniste travaillant une pièce de bois]({{ site.url }}{{ site.baseurl }}/assets/images/ai-artisan/artisan.jpg){: .align-center}
 [© Vatsal Tyagi](https://unsplash.com/@vatsaltyagi01){:style="font-size: smaller"}{:target="_blank"}{: .align-right}<br/>
 
-
 > ℹ️ Ne vous méprenez pas sur ce qui suit.
 > Je travaille dans le monde de l'IA. Ce n'est donc pas un texte à charge contre celle-ci mais plus une réflexion personnelle. ℹ️
 
@@ -40,7 +39,7 @@ Il n'est pas rare d'entendre des "vérités" assenées avec grande conviction pa
 _L'IA va remplacer les devs_.  
 _Les entreprises se séparent de personnes au profit de l''IA_.  
 _L'IA n'est qu'un outil et ne remplacera jamais l'Homme_.  
-_L'IA est bête et ne fait que retranscrire les informations d'Internet_.  
+_L'IA est bête et ne fait que retranscrire les informations d'Internet_.
 
 Qu'en est-il réellement ?
 A-t-on le recul nécessaire pour répondre à ces questions ?
@@ -78,6 +77,9 @@ Non pas que je m'imagine créer des chefs d'oeuvres mais parce que j'y mets de l
 Cela explique pourquoi, parfois, on a des débats enflammés entre développeuses et développeurs car c'est une petite partie de nous, le bout de code 😉.
 
 > A ce sujet : je ne partage pas le "tu n'es pas ton code", bien sûr que l'on est son code, c'est même une partie de nous. (on verra qu'avec l'IA cela change peut-être ...)
+> Je pense que l'on expose cet argument (tu n'es pas ton code) pour pouvoir dédramatiser et critiquer plus ouvertement ce qu'un•e dev a produit.
+> Essayez d'expliquer à un•e ébéniste que son meuble est moche et ne sert à rien, on verra si iel sépare l'objet de la personne 😉
+> Ce que je veux dire c'est que l'on met de l'affect dans notre code, la critique est toujours bonne, mais comme toujours de manière constructive et non destructive.
 
 On en est donc là, le métier de dev confronté au monde professionnel.
 
@@ -133,19 +135,19 @@ Non ? Moi non plus je ne m'y risquerai pas 😉.
 
 Alors, c'est quoi la bonne solution ?
 
-Honnêtement, je ne sais pas. 
-Je sais qu'il restera toujours des passionné·es qui aimeront produire et créer de leurs mains. 
+Honnêtement, je ne sais pas.  
+Je sais qu'il restera toujours des passionné·es qui aimeront produire et créer de leurs mains.  
 Certes en utilisant les technologies du présent, tout en conservant la mainmise sur ce qu'iels produisent.
 Et de l'autre côté, la société et la mondialisation étant ce qu'elles sont, il apparaît peu probable que l'on essaie d'être raisonnables sur l'utilisation d'un outil, qui paraît être de prime abord, la silver bullet pour gagner encore plus.
 
-> Je ne parle pas de l'aspect environnemental dans ce blog post 🌎. 
-> Mais c'est aussi un des enjeux d'utiliser l'IA de manière raisonnable et raisonnée. 
+> Je ne parle pas de l'aspect environnemental dans ce blog post 🌎.
+> Mais c'est aussi un des enjeux d'utiliser l'IA de manière raisonnable et raisonnée.
 > A-t-on besoin d'avoir une réponse en 5 mins là où un peu de recherche et de réflexion donnent le même résultat en quelques heures ?
 
 ### 🤔 Alors au final, l'IA en tant que dev, c'est bien ?
 
 J'espère que vous l'aurez compris, la réponse n'est pas binaire 😉.
-Il me semble que, lutter contre et être dans le camps de celles et ceux qui ne l'utiliseront jamais n'est pas un bon choix. 
+Il me semble que, lutter contre et être dans le camps de celles et ceux qui ne l'utiliseront jamais n'est pas un bon choix.
 Même si il est tout à fait entendable, comme certains choix ont été, par le passé, contre le courant massif d'adoption de nouveautés.
 
 Et pour nous, les "artisans" du logiciel ?  
@@ -153,8 +155,8 @@ Pour les personnes qui considèrent que le développement n'est qu'un outil parm
 
 Et pour la catégorie des personnes qui aiment avant tout développer, comme moi, est-ce une nécessité, une aide, une hérésie, ... ?
 
-A titre personnel, je vais reprendre la comparaison des IDE. 
-Aujourd'hui il ne me viendrait plus à l'idée de développer avec mon bon vieux Notepad++. 
+A titre personnel, je vais reprendre la comparaison des IDE.
+Aujourd'hui il ne me viendrait plus à l'idée de développer avec mon bon vieux Notepad++.
 De la même façon, la complétion intelligente boostée à l'IA est très séduisante et pratique.
 Le chatbot qui permet de très vite générer une portion de code à récupérer est lui aussi très séduisant.
 Même si souvent, au final, on ne "gagne" que le temps de rechercher la même portion de code sur Stack Overflow (mais ce dernier va-t-il encore exister dans les années à venir ?) par exemple.
@@ -189,7 +191,8 @@ Là où les plus jeunes, incrédules, se diront : "mais avec l'IA on fait ça en
 
 Oui peut-être, comme on regarde affectueusement nos anciens travailler le bois avec des outils d’antan.
 
-Vous l'aurez compris, ce blog post est aussi l'occasion de regarder un peu derrière et d'avoir la nostalgie de ce qui m'a fait aller vers ce métier de développeur et pourquoi, avec nostalgie, je me dis que ses jours tels que je les ai connus, sont peut-être comptés.
+Vous l'aurez compris, ce blog post est aussi l'occasion de regarder un peu derrière avec nostalgie sur ce qui m'a fait choisir ce métier de développeur.
+Et avec un peu de tristesse, je me dis que, peut-être, ses jours tels que je les ai connus, sont peut-être comptés.
 
 Si vous êtes arrivé·es là, merci car ce fut long et j'espère que vous avez apprécié ma modeste prose ... sortie de mon cerveau sans aucune aide extérieures 😉.
 

@@ -18,6 +18,68 @@
 #     source: https://github.com/devrel-workshop/ai-as-lib-workshop
 #     slides: https://docs.google.com/presentation/d/e/2PACX-1vRgA5HVbBViro5I0kfW0bbqbhfAFj-jXpKqYp-DXTwPnalyB3YtrHEshCZDBE-is64J_H4qrWkLaz-L/pub
 #     replay: 
+devoxx-maroc-2025:
+  name: Devoxx Maroc
+  post-date: 2025-11-13
+  date: 13 novembre 2025
+  talks-url:  devoxx-maroc-2025
+  excerpt: "Talk donné lors de Devoxx Maroc 2025"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "JBang, un fichier Java pour les gouverner tous ?"
+      location: Devoxx Maroc (🇲🇦)
+      language: Français
+      date: Vendredi 13 novembre 2025
+      time: 11h30 - 11h55
+      duration: 25 mins
+      abstract: |
+        Dans le monde Java, nous sommes habitués à initialiser un projet avec de nombreux fichiers et répertoires. 
+        A tel point que des CLI ont vu le jour pour nous aider à créer les projets SpringBoot ou Quarkus par exemple. 
+        Vient ensuite le choix du "package manager" : Maven ou Gradle ? 
+        Et c'est seulement à partir de là que l'on peut commencer à développer puis exécuter son code 😅. 
+        Toutes ces étapes fastidieuses expliquent pourquoi, lorsque que l'on a besoin de faire un développement rapide de quelques lignes pour automatiser une action, on préfère d'autres langages à Java : Python par exemple. 
+        Et si je vous disais, qu'avec JBang, vous allez pouvoir rester avec votre langage préféré, Java, et développer une classe toute simple (avec des dépendances externes) en quelques secondes ! 
+        C'est le pari (spoiler : réussi) de JBang que je vous propose de découvrir durant une session de live coding. 
+        
+        A vous les joies du scripting en Java !
+      source: https://github.com/philippart-s/jbang
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vTSU5lEVEOLfk6Cw9IpNNt5CeStttfNX2OtQda_y0tRz9OSGRJcxmKW4j3YVk5wi4EJQ2qJSQqD-CyA/pub
+      replay:
+
+bdx-io-2025:
+  name: BDX I/O
+  post-date: 2025-11-7
+  date: 7 novembre 2025
+  talks-url:  bdx-io-2025
+  excerpt: "Talk donné lors de BDX I/O 2025"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "JBang, un fichier Java pour les gouverner tous ?"
+      location: BDX I/O (🇫🇷)
+      language: Français
+      date: Vendredi 7 novembre 2025
+      time: 15h15 - 15h30
+      duration: 15 mins
+      abstract: |
+        Dans le monde Java, nous sommes habitués à initialiser un projet avec de nombreux fichiers et répertoires. 
+        A tel point que des CLI ont vu le jour pour nous aider à créer les projets SpringBoot ou Quarkus par exemple. 
+        Vient ensuite le choix du "package manager" : Maven ou Gradle ? 
+        Et c'est seulement à partir de là que l'on peut commencer à développer puis exécuter son code 😅. 
+        Toutes ces étapes fastidieuses expliquent pourquoi, lorsque que l'on a besoin de faire un développement rapide de quelques lignes pour automatiser une action, on préfère d'autres langages à Java : Python par exemple. 
+        Et si je vous disais, qu'avec JBang, vous allez pouvoir rester avec votre langage préféré, Java, et développer une classe toute simple (avec des dépendances externes) en quelques secondes ! 
+        C'est le pari (spoiler : réussi) de JBang que je vous propose de découvrir durant une session de live coding. 
+        
+        A vous les joies du scripting en Java !
+      source: https://github.com/philippart-s/jbang
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vTwSjNyHmLXn_nigB-lc0wKL_nVm3cjFcKQKVevkyhb1k9S1hvZiYe4g0_jqGqxgd2XAGVHUaPi4XCo/pub
+      replay:
+
 devfestnantes-2025:
   name: DevFest Nantes
   post-date: 2025-10-18

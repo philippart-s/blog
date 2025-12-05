@@ -18,6 +18,39 @@
 #     source: https://github.com/devrel-workshop/ai-as-lib-workshop
 #     slides: https://docs.google.com/presentation/d/e/2PACX-1vRgA5HVbBViro5I0kfW0bbqbhfAFj-jXpKqYp-DXTwPnalyB3YtrHEshCZDBE-is64J_H4qrWkLaz-L/pub
 #     replay: 
+devfest-paris-2025:
+  name: DevFest Paris 2025
+  post-date: 2025-11-21
+  date: 21 novembre 2025 
+  talks-url: devfest-paris-2025
+  excerpt: "Talk donné lors du DevFest Paris 2025"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "☕️ Picocli : mets du Java dans ton terminal ! 🖥️"
+      location: Paris (🇫🇷)
+      language: Français
+      date: Vendredi 21 novembre 2025
+      time: 11h10 - 12h00
+      duration: 50 mins
+      abstract: |
+        Les CLI (Command Line Interface), tout le monde les utilise et elles existent depuis la nuit des temps.
+        Souvent synonymes de gain de productivité, leur création est parfois obscure et peut sembler complexe.
+        C'était le cas il y a quelques décennies, mais depuis quelques années, des langages et Frameworks permettent d'en écrire simplement dans votre langage préféré.
+        Je vous propose d'utiliser un langage qui ne paraît pas, au premier abord, le plus intuitif pour faire une CLI : Java !
+
+        Mais il sera bien accompagné dans cette tâche : grâce à Picocli et Quarkus, notre CLI aura tout d'une grande, tout en étant simple à développer !
+        Et cerise sur le gâteau : nous créerons un "vrai" exécutable grâce à Graal VM.
+
+        Venez m'accompagner lors d'une session de live coding permettant de mettre en lumière comment créer une CLI en Java avec Picocli et Quarkus en partant de zéro !
+
+        Et qui sait, avec un peu de magie on aura, au final, un vrai assistant intelligent dans notre et terminal 🤖.
+      source: https://github.com/philippart-s/jarvis
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vR4egHoUB69-J--bNnNoslVR9c1zCTff8X0ZiuVbFPYF5d1SL0tGLRIuZKBWvfrNOJRE7yEz1VzOm1L/pub
+      replay: https://youtu.be/Htf7sdGq-3c?si=rGW1wHApoc6Z-8Nb
+
 devoxx-maroc-2025:
   name: Devoxx Maroc
   post-date: 2025-11-13
@@ -78,7 +111,7 @@ bdx-io-2025:
         A vous les joies du scripting en Java !
       source: https://github.com/philippart-s/jbang
       slides: https://docs.google.com/presentation/d/e/2PACX-1vTwSjNyHmLXn_nigB-lc0wKL_nVm3cjFcKQKVevkyhb1k9S1hvZiYe4g0_jqGqxgd2XAGVHUaPi4XCo/pub
-      replay:
+      replay: https://www.youtube.com/watch?v=fOQwaujDwSM
 
 devfestnantes-2025:
   name: DevFest Nantes

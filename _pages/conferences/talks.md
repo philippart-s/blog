@@ -1,5 +1,6 @@
 ---
 title: "Talks"
+permalink: /talks/
 classes: wide
 excerpt: "Liste des sujets donnés en conférences"
 categories:

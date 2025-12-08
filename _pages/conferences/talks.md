@@ -65,6 +65,7 @@ Vous pouvez aussi lister les retrouver dans [la liste des conférences]({{ site.
 - [Codeurs en Seine 2023]({{ site.baseurl }}{% post_url 2023-10-15-codeurs-en-seine-2023-talks %})
 
 ## Développer un opérateur Kubernetes en Java, challenge accepted !
+- [DevFest Lyon]({{ site.baseurl }}{% post_url 2025-11-28-devfest-lyon-2025-talks %}#Développer un opérateur Kubernetes en Java, challenge accepted !)
 - [Riviera Dev 2023]({{ site.baseurl }}{% post_url 2023-07-15-riviera-dev-2023-talks %}#Développer un opérateur Kubernetes en Java, challenge accepted !)
 - [Paris JUG 2023]({{ site.baseurl }}{% post_url 2023-05-15-paris-jug-2023-talks %})
 - [Programmez 2023]({{ site.baseurl }}{% post_url 2023-03-15-programmez-2023-talks %})

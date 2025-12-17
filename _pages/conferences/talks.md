@@ -24,7 +24,7 @@ Vous pouvez aussi lister les retrouver dans [la liste des conférences]({{ site.
 - [DevQuest 2025]({{ site.baseurl }}{% post_url 2025-06-09-devquest-2025-talks %})
 
 ## Picocli, mets du Java dans ton terminal !
-- [DevFest Paris 2025]({{ site.baseurl }}{% post_url 2025-11-21-devfest-paris-2025-talks %}]
+- [DevFest Paris 2025]({{ site.baseurl }}{% post_url 2025-11-21-devfest-paris-2025-talks %})
 - [Devoxx Belgium 2025]({{ site.baseurl }}{% post_url 2025-10-10-devoxx-belgium-2025-talks %})
 - [JUG Summer Camp 2025]({{ site.baseurl }}{% post_url 2025-09-16-jug-summercamp-2025-talks %})
 - [Lava JUG 2025]({{ site.baseurl }}{% post_url 2025-05-22-lava-jug-2025-talks %})

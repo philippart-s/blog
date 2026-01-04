@@ -1,20 +1,7 @@
 {
-	"name": "Jekyll",
-	"image": "mcr.microsoft.com/devcontainers/jekyll:2-bullseye",
-	"features": {},
-	"postCreateCommand": {
-		"bundle": "bundle install"
-	},
-	"customizations": {
-		"vscode": {
-			"settings": {
-				"editor.formatOnSave": true
-			},
-			"extensions": [
-				"streetsidesoftware.code-spell-checker",
-				"streetsidesoftware.code-spell-checker-french",
-				"continue.continue"
-			]
-		}
+	"name": "Dev Containers configuration",
+	"image": "wilda/java-devcontainer:25.0.3",
+	containerEnv: {
+		"LANG": "en_US.UTF-8"
 	}
 }

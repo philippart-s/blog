@@ -1,0 +1,15 @@
+items:
+  - title: "Blog"
+    path: "/"
+    icon: "fa-regular fa-newspaper"
+  - title: "Conferences"
+    path: "/conferences"
+    icon: "fa-solid fa-clipboard-user"
+  - title: "Talks"
+    path: "/talks"
+    icon: "fa-brands fa-kakao-talk"
+    #
+#    target: "_blank"
+  - title: "About"
+    path: "/about"
+    icon: "fa fa-thumbs-up"

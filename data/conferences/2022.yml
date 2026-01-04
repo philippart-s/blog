@@ -1,0 +1,369 @@
+- name: DevOps D-Day
+  postDate: 2022-12-15
+  talksUrl: devops-d-day-2022
+  date: décembre 2022
+  excerpt: "Liste des talks donnés lors de DevOps D-Day 2022"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "Développer un opérateur Kubernetes en Java, challenge accepted !"
+      id: "java-operator"
+      location: Marseille (🇫🇷)
+      language: Français
+      date: décembre 2022
+      duration: 50 minutes
+      time:
+      pitch: |
+        Il n’est plus, je pense, nécessaire de présenter Kubernetes tellement il fait parti du paysage informatique. Avec sa généralisation, de nouveaux types de développements et de patterns sont apparus. Lors de ce talk j’aborderai l’un d’eux : les opérateurs.
+        
+        Merveilleux assistants, aptes à faire énormément de choses. Mais voilà, les nombreuses documentations que l’on trouve tournent principalement autour d’un langage : Go. Ce n’est pas que cela ne me plaise pas, mais l’idée est de pouvoir aussi le faire avec un autre langage que je connais et utilisé par de nombreuses équipes de développement : Java.
+        
+        Lors de ce talk, je vous présenterai, de manière simple, la notion des opérateurs au sein de Kubernetes : à quoi ils servent et comment ils évoluent dans l’éco-système Kubernetes. Nous verrons qu’ils peuvent être de simples aides à l’installation ou à la mise à jour d’une application au sein de Kubernetes mais aussi aller beaucoup plus loin en devenant de vrais Ops pour gérer vos applications pour vous !
+        
+        Puis, nous développerons un opérateur ensemble et en Java : un bon Hello World nous permettant de prendre en main le SDK Java mais aussi les différents éléments présentés au début du talk.
+        
+        Enfin, nous essaierons de nous projeter vers un opérateur faisant un peu plus que Hello World afin de voir si vraiment il sait faire de l’Ops !
+        
+        A la fin de ce talk, vous aurez les différents éléments pour savoir si vous avez besoin de développer un opérateur, comment le développer, et choisir entre le faire en Java ou dans un autre langage !
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vRjfuc3LgN10i2ZzGQVQXpxodGb3DCDmXdV3IIR5vxO2VpRo74h-s-BnrbFo1BIMGjD8ubOYdsl5aeM/pub
+      source: https://github.com/philippart-s/java-operator-samples
+      replay: https://youtu.be/c3TfZ6pV_ME
+
+- name: Codeurs en Seine
+  postDate: 2022-11-15
+  talksUrl: codeurs-en-seine-2022
+  date: novembre 2022
+  excerpt: "Liste des talks donnés lors de Codeurs en Seine 2022"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "Au secours je suis speaker 😱 ! Comment bien se préparer ?"
+      id: "speaker-workshop"
+      location: Rouen (🇫🇷)
+      language: Français
+      date: novembre 2022
+      duration: 3 heures
+      time:
+      pitch: |
+        On aime toutes et tous aller aux conférences et on a toutes et tous nos chouchous en tant que speakers. Et on se dit même parfois que l’on aimerait bien aussi partager des choses, car oui on a toutes et tous quelque chose à partager.
+
+        Mais voilà, passer de l’autre côté de la barrière peut être impressionnant. De l’idéation, en passant par la rédaction d’un CFP (Call For Paper / Appel à proposition), de ses slides, d’éventuellement ses démos jusqu’au fameux jour J. Sans oublier la gestion de l’après. Autant de sujets qui peuvent impressionner pour quelqu’un qui ne connaît pas les codes ou tout simplement se sent perdu et un peu effrayé.
+
+        Durant ce talk / workshop nous vous livrerons, avec humilité, nos tips que nous avons collecté au fil des années avec nos erreurs et nos succès mais aussi les astuces que les autres speakers partagent volontiers.
+
+        Ce sera, pour vous, l’occasion de piocher les tips qui vous permettront de vous améliorer ou de sauter le pas vers la grande aventure de donner un talk.
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vTHPf-f62oZ4F7BNAJL4DvlhoNXBERxbGXkYdjTZ_7I0aBO3HDW-4E7J2IiNsE8YxLLrI731YBS-cnE/pub
+      replay:
+      source:
+
+- name: Volcamp
+  postDate: 2022-10-15
+  talksUrl: volcamp-2022
+  date: octobre 2022
+  excerpt: "Talk donné lors de Volcamp 2022"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "Si on aidait le capitaine Némo à classifier les monstres marins ?"
+      id: "nemo"
+      location: Clermont-Ferrand (🇫🇷)
+      language: Français
+      date: octobre 2022
+      duration: 50 minutes
+      time:
+      pitch: |
+        Intelligence Artificielle, Machine Learning, Deep Learning, … Ces termes on les entend tous les jours mais Iau final que représentent-ils et surtout comment développe-t-on des applications basées sur ces notions ?
+        
+        Durant ce talk nous vous ferons découvrir le monde de la data et comment il est, avec les bons outils, facile de se lancer dans l’aventure de l’analyse de données et de la classification.
+        
+        Ce talk permettra aux développeuses et développeurs de découvrir comment développer des applications apprenantes et montrera qu’il n’est pas nécessaire d’être un As du développement pour développer son propre algorithme de Machine Learning ou de Deep Learning. Nous vous montrerons comment créer votre premier Notebook avec JupyterLab afin de vous accompagner dans vos premiers pas. Ce sera l’occasion pour vous de plonger dans la découverte du monde sous-marin en développant un modèle permettant d’identifier et classifier les sons de mammifères marins.
+        
+        Pour finir, nous verrons ensemble, avec Streamlit, comment développer une application utilisant ce modèle.    slides: https://docs.google.com/presentation/d/e/2PACX-1vSAbycTHbdO-BgVV9dzBn0eAHM2q4lsn72D3sK16vupJYYz5C2ks47BpDg1clYdKsSSn5AMXROpQl6U/pub
+      source: https://github.com/eleapttn/nemo-notebook
+      replay:
+      slides:
+
+- name: Devoxx Morocco 2022
+  postDate: 2022-10-15
+  talksUrl: devoxx-maroc-2022
+  date: octobre 2022
+  excerpt: "Liste des talks donnés lors de Devoxx Morocco 2022"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "Toi aussi apprends à développer un opérateur Kubernetes en Java avec Quarkus."
+      id: "java-operator-workshop"
+      location: Agadir (🇲🇦)
+      language: Français
+      date: octobre 2023
+      duration: 2 heures
+      time:
+      pitch: |
+        Les opérateurs Kubernetes prennent de plus en plus de place de place dans l’éco-système Kubernetes.
+
+        Un Opérateur simplifie le packaging et le déploiement des applications au sein de Kubernetes mais il permet aussi d’automatiser la partie opérationnelle telle que les mises à jour, les migrations etc …
+
+        Après une rapide présentation sur les concepts clefs des opérateur ce workshop sera l’occasion de plonger concrètement dans les profondeurs du développement d’un opérateur.
+
+        Développer d’accord, mais avec quel langage ?
+
+        Pour nous, vieux développeurs, le choix était évident : Java ! Et comme on adore Quarkus, autant mêler l’util à l’agréable, c’est avec Quarkus et le Java Operator SDK que nous allons accompagner les participantes et participants de ce Workshop.
+
+        Nous allons développer une petite application Quarkus puis la packager et la déployer grâce au développement de l’opérateur. Pour terminer, nous automatiserons la partie opérationnelle pour que cette application fonctionne à la perfection et de manière robuste. Tout ceci sans quitter Java et Quarkus !
+
+        Nul besoin d’être un expert en Quarkus ou Kubernetes pour suivre le lab, aimer coder et connaître les bases de Java suffit largement. Vous n’aurez pas non plus besoin d’installer quoi ce ce soit sur la machine, un simple navigateur et le tour est joué grâce à la puissance de GitPod.
+
+        A la sortie de ce workshop non seulement le monde des opérateurs n’aura plus de secret pour toi, mais en plus tu en auras développé un !
+      source: https://github.com/k8s-operator-workshop
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vSXGRIs4KA10FF4hDF8SwkqLyJshUZ9mrpPZEHNGJM7RIQxMScg4iZ997NIZl8hSfDi3RRWMZ826KCl/pub
+      replay:
+
+- name: Cloud Nord
+  postDate: 2022-09-15
+  talksUrl: cloud-nord-2022
+  date: septembre 2022
+  excerpt: "Talks donnés lors de Cloud Nord 2022"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "Les opérateurs Kubernetes à la portée de n’importe quel développeur."
+      id: 'kube-operator'
+      location: Lille (🇫🇷)
+      language: Français
+      date: juillet 2023
+      duration: 3h
+      time:
+      pitch: |
+        Développer un opérateur peu, de prime abord, être plutôt impressionnant. Heureusement différents Frameworks ont vu le jour, dont le plus connu, Operator SDK, permettant de développer en Go, Helm ou Ansible un opérateur.
+        
+        Avant de se lancer dans la grande aventure de développer un opérateur nous verrons ensemble ce qui se cache derrière la notion des opérateurs au sein de Kubernetes : à quoi ils servent et comment ils évoluent dans l’éco-système Kubernetes.
+        
+        Une fois ces bases acquises, nous développerons ensemble un opérateur permettant la gestion d’un serveur Nginx.
+        
+        Oui mais voilà quel Framework / langage choisir ? Go ? Helm ? Et pourquoi pas Java ?
+        
+        J’ai envie de vous proposer les trois ! Nous développerons ensemble le même opérateur de trois façons différentes : avec Helm, Golang et même en Java avec Quarkus !
+        
+        A la fin de ce talk, vous aurez les différents éléments pour savoir si vous avez besoin de développer un opérateur, comment le développer, et choisir quel langage utiliser selon vos connaissances !
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vRvSKN4nQ9mUNGZGaIQTvtvq5IzeeQ0agScQ_6hU1Aib0mT-a3PxY7odl5JCcmoDwirb6JhPWADeE9e/pub
+      source: https://github.com/philippart-s/java-operator-samples
+      replay:
+
+- name: JUG Summer Camp
+  postDate: 2022-09-15
+  talksUrl: jug-summer-camp-2022
+  date: septembre 2022
+  excerpt: "Talks donnés lors du JUG Summer Camp 2022"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "Si on aidait le capitaine Némo à classifier les monstres marins ?"
+      id: "nemo"
+      location: La Rochelle (🇫🇷)
+      language: Français
+      date: septembre 2022
+      duration: 50 minutes
+      time:
+      pitch: |
+        Intelligence Artificielle, Machine Learning, Deep Learning, … Ces termes on les entend tous les jours mais Iau final que représentent-ils et surtout comment développe-t-on des applications basées sur ces notions ?
+        
+        Durant ce talk nous vous ferons découvrir le monde de la data et comment il est, avec les bons outils, facile de se lancer dans l’aventure de l’analyse de données et de la classification.
+        
+        Ce talk permettra aux développeuses et développeurs de découvrir comment développer des applications apprenantes et montrera qu’il n’est pas nécessaire d’être un As du développement pour développer son propre algorithme de Machine Learning ou de Deep Learning. Nous vous montrerons comment créer votre premier Notebook avec JupyterLab afin de vous accompagner dans vos premiers pas. Ce sera l’occasion pour vous de plonger dans la découverte du monde sous-marin en développant un modèle permettant d’identifier et classifier les sons de mammifères marins.
+        
+        Pour finir, nous verrons ensemble, avec Streamlit, comment développer une application utilisant ce modèle.    slides: https://docs.google.com/presentation/d/e/2PACX-1vSAbycTHbdO-BgVV9dzBn0eAHM2q4lsn72D3sK16vupJYYz5C2ks47BpDg1clYdKsSSn5AMXROpQl6U/pub
+      source: https://github.com/eleapttn/nemo-notebook
+      replay: https://youtu.be/4bUdZYa8eKQ
+      slides:
+    - title: "L’open source à la portée de toutes et tous !"
+      id: "oss"
+      location: La  Rochelle (🇫🇷)
+      language: Français
+      date: septembre 2022
+      duration: 30 minutes
+      time:
+      pitch: |
+        Opensource, ce mot parle à toutes les développeuses et tous les développeurs. On utilise toutes et tous ces projets tous les jours mais au final ne devrions-nous pas les aider un peu ?
+        
+        Durant ce talk nous verrons comment participer aux projets open source en tant que développeuses et développeurs mais pas que. En effet, l’open source, ce n’est pas seulement du code : il a besoin d’aide à bien des niveaux.
+        
+        Nous verrons donc ensemble, comment aider au mieux ces projets. Pour cela, je vous expliquerai comment et pourquoi j’ai franchi le pas pour oser contribuer à un projet opensource mais aussi les difficultés que j’ai rencontrées. Ce sera aussi pour moi l’occasion de partager des astuces découvertes au fil du temps et les erreurs à ne pas commettre afin de vous faciliter la vie lorsque vous allez vous lancer.
+        
+        Si à la fin, j’ai pu vous donner envie de vous lancer ou d’oser vous poser la question, alors le pari est gagné !
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vQFg1YF-l29LfBDXCCx83My9I7AD9USta863ZvJ-KLQnZBNW4OYr8JOEvqtXR4AI9-kn4uQZSc4MsVM/pub
+      replay: https://youtu.be/l-_FXpXr9gk
+      source:
+
+- name: Cloud Ouest
+  postDate: 2022-06-15
+  talksUrl: cloud-ouest-2022
+  date: juin 2022
+  excerpt: "Talks donnés lors de Cloud Ouest 2022"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "Développer un opérateur Kubernetes en Java, challenge accepted !"
+      id: "java-operator"
+      location: Remote (🇫🇷)
+      language: Français
+      date: juin 2022
+      duration: 50 minutes
+      time:
+      pitch: |
+        Il n’est plus, je pense, nécessaire de présenter Kubernetes tellement il fait parti du paysage informatique. Avec sa généralisation, de nouveaux types de développements et de patterns sont apparus. Lors de ce talk j’aborderai l’un d’eux : les opérateurs.
+        
+        Merveilleux assistants, aptes à faire énormément de choses. Mais voilà, les nombreuses documentations que l’on trouve tournent principalement autour d’un langage : Go. Ce n’est pas que cela ne me plaise pas, mais l’idée est de pouvoir aussi le faire avec un autre langage que je connais et utilisé par de nombreuses équipes de développement : Java.
+        
+        Lors de ce talk, je vous présenterai, de manière simple, la notion des opérateurs au sein de Kubernetes : à quoi ils servent et comment ils évoluent dans l’éco-système Kubernetes. Nous verrons qu’ils peuvent être de simples aides à l’installation ou à la mise à jour d’une application au sein de Kubernetes mais aussi aller beaucoup plus loin en devenant de vrais Ops pour gérer vos applications pour vous !
+        
+        Puis, nous développerons un opérateur ensemble et en Java : un bon Hello World nous permettant de prendre en main le SDK Java mais aussi les différents éléments présentés au début du talk.
+        
+        Enfin, nous essaierons de nous projeter vers un opérateur faisant un peu plus que Hello World afin de voir si vraiment il sait faire de l’Ops !
+        
+        A la fin de ce talk, vous aurez les différents éléments pour savoir si vous avez besoin de développer un opérateur, comment le développer, et choisir entre le faire en Java ou dans un autre langage !
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vRwBAUbwyK2kK0jYJnjFwVKlEwLhcQZmRMqqYGP7YrsQzlTSv9WvLz9lZDgDNvjqZJqLqQp8LA03cMw/pub
+      source: https://github.com/philippart-s/java-operator-samples
+      replay: https://youtu.be/MEtnBsL4EGs
+
+- name: Breizh Camp
+  postDate: 2022-06-15
+  talksUrl: breizh-camp-2022
+  date: juin 2022
+  excerpt: "Talks donnés lors de Breizh Camp 2022"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "Les opérateurs Kubernetes à la portée de n’importe quel développeur."
+      id: "kube-operator"
+      location: Rennes (🇫🇷)
+      language: Français
+      date: juin 2022
+      duration: 2h
+      time:
+      pitch: |
+        Développer un opérateur peu, de prime abord, être plutôt impressionnant. Heureusement différents Frameworks ont vu le jour, dont le plus connu, Operator SDK, permettant de développer en Go, Helm ou Ansible un opérateur.
+        
+        Avant de se lancer dans la grande aventure de développer un opérateur nous verrons ensemble ce qui se cache derrière la notion des opérateurs au sein de Kubernetes : à quoi ils servent et comment ils évoluent dans l’éco-système Kubernetes.
+        
+        Une fois ces bases acquises, nous développerons ensemble un opérateur permettant la gestion d’un serveur Nginx.
+        
+        Oui mais voilà quel Framework / langage choisir ? Go ? Helm ? Et pourquoi pas Java ?
+        
+        J’ai envie de vous proposer les trois ! Nous développerons ensemble le même opérateur de trois façons différentes : avec Helm, Golang et même en Java avec Quarkus !
+        
+        A la fin de ce talk, vous aurez les différents éléments pour savoir si vous avez besoin de développer un opérateur, comment le développer, et choisir quel langage utiliser selon vos connaissances !
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vQvRDNpD7Xdp7ZWMTqp-Fw46bQrZ8IaROiDtG4Kb_Xac1En_XrKb5gCdrDW55_cgs4FxURP_q_jDcka/pub
+      source: https://github.com/philippart-s/breizh-camp-java-operator
+      replay: https://youtu.be/-I91DSU8glA?list=PLv7xGPH0RMUS0sDzj_45G9F-iVWWck5kz
+
+
+- name: Voxxed Days Luxembourg
+  postDate: 2022-06-15
+  talksUrl: voxeed-days-lux-2022
+  date: juin 2022
+  excerpt: "Talks donnés lors de Voxxed Days Luxembourg 2022"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "Les opérateurs Kubernetes à la portée de n’importe quel développeur."
+      id: "kube-operator"
+      location: Luxembourg (🇱🇺)
+      language: Français
+      date: juin 2022
+      duration: 2h
+      time:
+      pitch: |
+        … Ou comment en tant que dev faire de l’IA sans être Data Scientist ? L’IA est partout, du moins tout le monde revendique d’avoir de l’IA dans ses applications, ses objets connectés, …
+        
+        Oui mais voilà, au final c’est quoi l’Intelligence Artificielle et qu’y a-t-il de caché derrière ce terme ? Comment expliquer simplement les notions techniques impliquées ? La grande IA va-t-elle gouverner le monde ?
+        
+        Durant ce talk je vous propose de découvrir simplement, mais de manière la plus exhaustive possible, avec ma vision de développeur, ce qu’est l’intelligence artificielle et quelles technologies sont utilisées dans ce milieu.
+        
+        Et tout ça en 15 minutes !
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vTJJ7qAnq_eNvNuQTNneVoIsRX-98wTvcFC8RQIqmZsmpfifP5UWMRAy-LC4RlALxDa8ZtnvKkLy4u5/pub
+      replay: https://youtu.be/r22_RebwL-s
+      source:
+
+- name: Le Camping des Speakers
+  postDate: 2022-06-15
+  talksUrl: camping-speakers-2022
+  date: juin 2022
+  excerpt: "Talks donnés lors du Camping des Speakers 2023"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "Développer un opérateur Kubernetes en Java, c’est possible !"
+      id: "java-operator"
+      location: Baden (🇫🇷)
+      language: Français
+      date: juin 2022
+      duration: 50 minutes
+      time:
+      pitch: |
+        Il n’est plus, je pense, nécessaire de présenter Kubernetes tellement il fait parti du paysage informatique. Avec sa généralisation, de nouveaux types de développements et de patterns sont apparus. Lors de ce talk j’aborderai l’un d’eux : les opérateurs.
+        
+        Merveilleux assistants, aptes à faire énormément de choses. Mais voilà, les nombreuses documentations que l’on trouve tournent principalement autour d’un langage : Go. Ce n’est pas que cela ne me plaise pas, mais l’idée est de pouvoir aussi le faire avec un autre langage que je connais et utilisé par de nombreuses équipes de développement : Java.
+        
+        Lors de ce talk, je vous présenterai, de manière simple, la notion des opérateurs au sein de Kubernetes : à quoi ils servent et comment ils évoluent dans l’éco-système Kubernetes. Nous verrons qu’ils peuvent être de simples aides à l’installation ou à la mise à jour d’une application au sein de Kubernetes mais aussi aller beaucoup plus loin en devenant de vrais Ops pour gérer vos applications pour vous !
+        
+        Puis, nous développerons un opérateur ensemble et en Java : un bon Hello World nous permettant de prendre en main le SDK Java mais aussi les différents éléments présentés au début du talk.
+        
+        Enfin, nous essaierons de nous projeter vers un opérateur faisant un peu plus que Hello World afin de voir si vraiment il sait faire de l’Ops !
+        
+        A la fin de ce talk, vous aurez les différents éléments pour savoir si vous avez besoin développer un opérateur, comment le développer, et choisir entre le faire en Java ou dans un autre langage !
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vT1fqLfKU37J5-N30A6KRvJhK3fvcULX2t_iyL_GJh-Rpx5V_swre3jtNn0UWwr1wvBgz5-LrD54-Wt/pub
+      source:
+      replay:
+
+- name: Cloud Sud
+  postDate: 2022-03-15
+  talksUrl: cloud-sud-2022
+  date: mars 2022
+  excerpt: "Talks donnés lors de Cloud Sud 2022"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "Développer un opérateur Kubernetes en Java, c’est possible !"
+      id: "java-operator"
+      location: Remote
+      language: Français
+      date: juin 2022
+      duration: 50 minutes
+      time:
+      pitch: |
+        Il n’est plus, je pense, nécessaire de présenter Kubernetes tellement il fait parti du paysage informatique. Avec sa généralisation, de nouveaux types de développements et de patterns sont apparus. Lors de ce talk j’aborderai l’un d’eux : les opérateurs.
+        
+        Merveilleux assistants, aptes à faire énormément de choses. Mais voilà, les nombreuses documentations que l’on trouve tournent principalement autour d’un langage : Go. Ce n’est pas que cela ne me plaise pas, mais l’idée est de pouvoir aussi le faire avec un autre langage que je connais et utilisé par de nombreuses équipes de développement : Java.
+        
+        Lors de ce talk, je vous présenterai, de manière simple, la notion des opérateurs au sein de Kubernetes : à quoi ils servent et comment ils évoluent dans l’éco-système Kubernetes. Nous verrons qu’ils peuvent être de simples aides à l’installation ou à la mise à jour d’une application au sein de Kubernetes mais aussi aller beaucoup plus loin en devenant de vrais Ops pour gérer vos applications pour vous !
+        
+        Puis, nous développerons un opérateur ensemble et en Java : un bon Hello World nous permettant de prendre en main le SDK Java mais aussi les différents éléments présentés au début du talk.
+        
+        Enfin, nous essaierons de nous projeter vers un opérateur faisant un peu plus que Hello World afin de voir si vraiment il sait faire de l’Ops !
+        
+        A la fin de ce talk, vous aurez les différents éléments pour savoir si vous avez besoin développer un opérateur, comment le développer, et choisir entre le faire en Java ou dans un autre langage !
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vQ7xusdUkaEnGFyVuXSQ_bFqX1Bb6RQwmKO0TbbqfHBn1tm5sQDJ2Nl0odh7nPHLJxIyDCEeTwaVvCZ/pub
+      replay: https://youtu.be/LNdXL9OwiFY
+      source:

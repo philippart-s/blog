@@ -2,7 +2,7 @@ name: Roq Site Deploy
 
 on:
   push:
-    branches: [ main ]   # Switch to the branch which should be deployed to GitHub Pages
+    branches: [ master ]   # Switch to the branch which should be deployed to GitHub Pages
   workflow_dispatch:
 
 jobs:

@@ -10,7 +10,7 @@ tags:
 
 Ici, vous trouverez l'ensemble des sujets de conférences que j'ai donnés.
 
-Vous pouvez aussi lister les retrouver dans [la liste des conférences](/conferences) que j'ai données.
+Vous pouvez aussi lister les retrouver dans [la liste des conférences]({site.url}/conferences) que j'ai données.
 
 ## ☕️ Full stack Java, du dev à la prod en passant par l’infra 🏗️
 ---

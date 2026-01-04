@@ -8,7 +8,7 @@ tags:
 ---
 Ici, vous trouverez l'ensemble des conférences auxquelles j'ai participé et que j'ai présentées.
 
-Vous pouvez aussi retrouver la [liste des sujets]({site.url}/talks/talks) que j'ai donné en conférence.
+Vous pouvez aussi retrouver la [liste des sujets]({site.url}/talks/) que j'ai donné en conférence.
 
 <style>
   table {

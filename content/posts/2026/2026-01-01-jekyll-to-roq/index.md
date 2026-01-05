@@ -136,7 +136,7 @@ Comme je vous l'ai dit les données sont au format YAML et chargées en format J
 > Il est possible d'avoir un mapping fort en créant un record qui map la structure du YAML et qui, du coup, est beaucoup plus simple à utiliser ensuite dans les templates avec Qute.
 > Mais cette partie s'est révélée trop complexe dans la PR que j'ai faite et pour l'instant dans le cas d'un répertoire avec une liste de YAML il n'y a pas le support du mapping objet 🫤
 
-Ceci étant dit, pour me simplifier la vie, j'ai créé un petit helper pour manipuler les objets mappés ([ConferencesProcessor](https://github.com/philippart-s/blog/blob/main/src/main/java/fr/wilda/blog/processor/ConferencesProcessor.java)) : 
+Ceci étant dit, pour me simplifier la vie, j'ai créé un petit helper pour manipuler les objets mappés ([ConferencesProcessor](https://github.com/philippart-s/blog/blob/master/src/main/java/fr/wilda/blog/processor/ConferencesProcessor.java)) : 
 ```java
 package fr.wilda.blog.processor;
 
@@ -206,13 +206,13 @@ public class ConferencesProcessor {
 Comme vous le constatez, c'est dans cette classe que l'on va retrouver la création du bean CDI `myConfs`.
 Ensuite, ce sont deux méthodes utilitaires pour manipuler les objets JSONObject : 
  - 🪪 `getByIds` : qui permet d'avoir la liste des talks d'un certain type (par exemple `picocli`), cette méthode me sera utile pour la page qui liste pour chaque type de conférence à quel endroit elles ont été données,
- - 🔗 `getByUrl` : qui permet d'avoir la liste des talks d'une conférence (par son URL qui est unique dans les data), c'est cette méthode qui est utilisée dans le template [conference.html](https://github.com/philippart-s/blog/blob/main/templates/layouts/conference.html).
+ - 🔗 `getByUrl` : qui permet d'avoir la liste des talks d'une conférence (par son URL qui est unique dans les data), c'est cette méthode qui est utilisée dans le template [conference.html](https://github.com/philippart-s/blog/blob/master/templates/layouts/conference.html).
 
 ## 📝 Qute et Java pour la génération automatique de posts
 
 Une fois le template créé, passons à la création des posts correspondants.
 Plutôt que de tout créer à la main, j'ai repris le principe de créer les posts en dev comme je l'avais fait pour la version Jekyll.
-C'est la classe [ConferenceGenerator](https://github.com/philippart-s/blog/blob/main/src/main/java/fr/wilda/blog/generator/ConferenceGenerator.java) qui s'en charge : 
+C'est la classe [ConferenceGenerator](https://github.com/philippart-s/blog/blob/master/src/main/java/fr/wilda/blog/generator/ConferenceGenerator.java) qui s'en charge : 
 ```java
 package fr.wilda.blog.generator;
 
@@ -294,8 +294,8 @@ J'aurai certainement pû optimiser cela pour éviter que cela se fasse à chaque
 À défaut, je ne génère pas de blog post s'il existe déjà, c'est déjà ça de gagné 😉.
 
 J'ai ensuite créé deux posts spéciaux : 
- - 👥 [conferences.md](https://github.com/philippart-s/blog/blob/main/content/conferences.md) qui liste toutes les conférences auxquelles j'ai participé triées par années. Pour chaque conférence un lien vers le blog post généré correspondant,
- - 🎤 [talks.md](https://github.com/philippart-s/blog/blob/main/content/talks.md) qui liste l'ensemble des talks que j'ai donnés. Pour chaque talk, il y a la liste des conférences où je l'ai donné avec un lien vers le blog post correspondant.
+ - 👥 [conferences.md](https://github.com/philippart-s/blog/blob/master/content/conferences.md) qui liste toutes les conférences auxquelles j'ai participé triées par années. Pour chaque conférence un lien vers le blog post généré correspondant,
+ - 🎤 [talks.md](https://github.com/philippart-s/blog/blob/master/content/talks.md) qui liste l'ensemble des talks que j'ai donnés. Pour chaque talk, il y a la liste des conférences où je l'ai donné avec un lien vers le blog post correspondant.
 
 Les deux posts utilisent Qute et les données des fichiers YAML pour m'éviter de les modifier à chaque nouvelle conférence.
 
@@ -320,7 +320,7 @@ La liste de migration pour mon site revient donc à :
 Bien entendu, je n'allais pas faire tout ça à la main, cela représente tout de même plus de 50 posts à migrer 😅.
 Pour cela, j'ai dégainé mon arme secrète : [JBang](https://www.jbang.dev/).
 
-Tout se passe dans le script [JekyllToRoq](https://github.com/philippart-s/blog/blob/main/scripts/JekyllToRoq.java).
+Tout se passe dans le script [JekyllToRoq](https://github.com/philippart-s/blog/blob/master/scripts/JekyllToRoq.java).
 
 La base est l'utilisation massive de regexp pour faire du search and replace depuis le fichier Jekyll vers le fichier ROQ.
 Étant donné que c'est du one-shot le code n'est clairement pas joli et optimisé 🫣.

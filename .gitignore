@@ -6,3 +6,6 @@ Gemfile.lock
 .bundle/
 vendor/
 .DS_Store
+
+node_modules/
+target/

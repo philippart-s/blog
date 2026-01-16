@@ -1,0 +1,30 @@
+- name: Snowcamp
+  postDate: 2026-01-16
+  talksUrl: snowcamp-2026
+  date: 16 janvier 2026
+  excerpt: "Talks donnés lors de Snowcamp 2026"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "🧰 Les dev containers, la boîte à outils ultime pour les devs ?"
+      id: "dev-containers"
+      location: Grenoble (🇫🇷)
+      language: Français
+      date: 16 janvier 2026
+      time: 12h10
+      duration: 20 minutes
+      pitch: |
+        On a toutes et tous été confronté•es, un jour, à devoir (ré)installer tout notre environnement de développement lors d'un changement de machine. Que ce soit par choix ou juste en mode "on-boarding" lors d'un changement de société, de mission, ... On a aussi, parfois, passé de longues heures pour comprendre quels outils installer pour proposer une PR ou MR dans un projet Open Source.
+
+        Dans encore beaucoup d'autres cas, nous sommes vite confrontés à l'enfer de la configuration des outils et autres frameworks pour faire ce que l'on aime : développer. Et je ne vous parle pas des montées de versions et inter-dépendances 😅...
+
+        Heureusement, il existe une solution à tous ces problèmes : les dev containers.
+
+        Lors de ce talk, je vous propose de partir à leur découverte. La seule chose que je m'autorise à installer sur ma machine : Docker ! Le reste sera de la gestion de configuration pour que les outils, les frameworks et la gestion des versions et dépendances soit un non-évènement dans votre process de développement.
+  
+        Vous repartirez en sachant utiliser les dev containers mais aussi en sachant construire as-code votre stack de développement 🧑‍💻.
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vRcub1txwymcsURlkgwE-XPSG7jK9Ux4xwOoaA6IhLFGYxQPLFFaZacfuuFjm2KqLtu8t-OxWC45vpo/pub#slide=id.p
+      source: https://github.com/philippart-s/dev-containers-talk
+      replay:

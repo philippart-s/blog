@@ -30,6 +30,12 @@ Vous pouvez aussi lister les retrouver dans [la liste des conférences]({site.ur
 - [{talk.name} - {talk.date}]({site.url}/talks/{talk.talksUrl}/#{talk.id})
 {/for}
 
+## 🧰 Les dev containers, la boîte à outils ultime pour les devs ?
+---
+{#for talk in cdi:myConfs.getByIds("dev-containers")}
+- [{talk.name} - {talk.date}]({site.url}/talks/{talk.talksUrl}/#{talk.id})
+  {/for}
+
 ## Développer avec l’IA : et si c’était aussi simple qu’ajouter une librairie ?
 ---
 {#for talk in cdi:myConfs.getByIds("ai-lib-workshop")}

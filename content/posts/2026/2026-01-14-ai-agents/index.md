@@ -31,7 +31,7 @@ Et bien sûr, plein d'autres ressources comme les [replays de Devoxx France](htt
 # 🧑‍🏫 Oui mais toi Stéphane, c'est quoi ta définition d'un agent ?
 
 Ah mais nous y voilà !
-En toute honneteté, j'ai mis pas mal de temps à comprendre ce qu'était un agent, et surtout en quoi c'était différent d'un simple appel à un LLM.
+En toute honnêteté, j'ai mis pas mal de temps à comprendre ce qu'était un agent, et surtout en quoi c'était différent d'un simple appel à un LLM.
 Ce qui n'aide pas non plus, comme souvent avec l'IA, c'est que chaque framework / librairie a sa propre définition d'un agent.
 Et comme je n'aime pas ne pas comprendre un truc, je me suis documenté, testé, pris des murs, et j'ai fini par me faire ma propre définition.
 C'est donc celle-ci que je vous propose, en toute humidité (comme dirait Perceval ⚔️).
@@ -39,8 +39,8 @@ C'est donc celle-ci que je vous propose, en toute humidité (comme dirait Percev
 > ⚠️ On est bien d'accord que c'est une définition personnelle, et que je ne prétends pas qu'elle soit universelle.
 > A ce titre, n'hésitez pas à me faire des retours si vous n'êtes pas d'accord. ⚠️
 
-Si j'étais taquin, je dirais qu'une fois de plus nos amis dans l'écosystème de l'IA ont réinventé une chose vielle comme le monde dans le développement logiciel 😈.
-En effet, tout le monde s'émeut autour du fait que l'on a maintenant la capacité de faire de petits modules autonomes appelable, potentiellement, par des applications 🤪.
+Si j'étais taquin, je dirais qu'une fois de plus nos amis dans l'écosystème de l'IA ont réinventé une chose vieille comme le monde dans le développement logiciel 😈.
+En effet, tout le monde s'émeut autour du fait que l'on a maintenant la capacité de faire de petits modules autonomes appelables, potentiellement, par des applications 🤪.
 J'en conviens, je suis moqueur, mais après avoir réinventé les services distants (MCP), l'appel de fonctions utilitaires (function calling) maintenant, on réinvente l'approche modulaire avec des agents 🙃.
 
 ## ☝️️ Ma définition d'un agent
@@ -50,7 +50,7 @@ Un agent va vous permettre de spécialiser l'utilisation d'un LLM pour une tâch
 
 Par exemple, si vous avez une application qui a besoin d'un LLM spécialisé dans la médecine et un autre dans le chinois.
 Tout faire avec un seul modèle va vous forcer à utiliser un très gros modèle (donc cher).
-Le modèle ne sera peut-être pas optimal dans les deux besoins (le fameux dilemne du combi DVD-magnétoscope 📼).
+Le modèle ne sera peut-être pas optimal dans les deux besoins (le fameux dilemme du combi DVD-magnétoscope 📼).
 
 C'est là où l'approche agentique va vous permettre de créer des agents spécialisés.
 Imaginez, que, chaque agent est une mini application (appelez ça un microservice si vous voulez 😆) qui va encapsuler un LLM avec des prompts, des outils, des mémoires, etc. pour répondre à un besoin précis.
@@ -92,7 +92,7 @@ Si on zoom sur notre agent et son LLM, le pattern ReAct peut se résumer comme s
 - L'agent (🤖) envoie la liste des outils (🛠️) et documents potentiellement utilisables par le LLM (📜), en plus de la demande (prompt)  
 - Le LLM commence à élaborer son analyse (💭) pour répondre au mieux au prompt
 - Si besoin, le LLM déclenche une nouvelle boucle (🔁) d'échange avec l'agent pour affiner son analyse (demande d'exécutions d'outils ou de donnée supplémentaires)  
-- Le LLM _estime_ avoir trouvé la réponse (✅), elle est renvoyé à l'utilisatrice / utilisateur (🥳)  
+- Le LLM _estime_ avoir trouvé la réponse (✅), elle est renvoyée à l'utilisatrice / utilisateur (🥳)  
 - alternative : Le LLM ne parvient pas à aller au bout de son raisonnement (nombre d'itérations max atteints ou erreur), une erreur est renvoyée (❌)  
 
 ## ⚠️ L'importance du prompt dans l'approche agentique
@@ -148,20 +148,20 @@ Ce prompt est très schématique et certaines actions (comme par exemple la list
 
 Une fois vos agents créés, vous allez certainement avoir besoin de les orchestrer.
 Là, vous avez deux approches principales :
-1. Faire un workflow classique : boucles, conditions, sequences, exécutions paralléles...
+1. Faire un workflow classique : boucles, conditions, séquences, exécutions parallèles...
 2. Déléguer tout ça à un agent de supervision
 
 Si la première approche n'est pas très compliquée à comprendre (après tout on fait ça depuis des années dans nos applications).
-Je pense qu'un petit eclaircisssement de la deuxième n'est pas superflux.
-Le but de l'agent supervisor ne va pas être de traiter le prompt mais d'orchestrer au mieux les appels d'agents pour traiter ce prompt.
+Je pense qu'un petit éclaircissement de la deuxième n'est pas superflu.
+Le but de l'agent superviseur ne va pas être de traiter le prompt mais d'orchestrer au mieux les appels d'agents pour traiter ce prompt.
 
 ![](./supervisor-agent.png)
 
 - l'agent superviseur (👮) commence par appeler l'agent de classification (🚦)
-- grâce à lui il sait quel agent de transport (🚄/✈️/🛳️) appelé
-- il finit par appeler l'agent de paiment (💰)
+- grâce à lui il sait quel agent de transport (🚄/✈️/🛳️) appeler
+- il finit par appeler l'agent de paiement (💰)
 
-Bien sûr dans cet exemple vous auriez pû le développer via un workflow classique mais cela vous permet de voir à quoi sert un superviseur.
+Bien sûr dans cet exemple vous auriez pu le développer via un workflow classique mais cela vous permet de voir à quoi sert un superviseur.
 
 Bon, on est déjà bien avancé dans ce post et toujours pas de code 🫣.
 
@@ -301,7 +301,7 @@ quarkus.langchain4j.mcp.ovhcloud.log-responses=false
 
 Si vous ne voyez pas ce qu'est un serveur MCP (pour Model Context Protocol), voyez ça comme un service distant que votre LLM peut demander à être appelé comme il le fait avec des outils.
 Dans le cas d'un appel d'un outil externe dont vous ne maitrisez pas le code, je vous conseille fortement de demander une validation humaine avant l'exécution de cet outil.
-Dans mon cas je n'ai pas envie de supprimer tout mon compte public cloud sur une simple erreur de compréhénsion du LLM 😅.
+Dans mon cas je n'ai pas envie de supprimer tout mon compte public cloud sur une simple erreur de compréhension du LLM 😅.
 
 Voici un exemple de comment implémenter cette validation humaine :
 ```java
@@ -587,6 +587,10 @@ On peut caper le nombre d'appels grâce à `maxAgentsInvocations`.
 L'appel au final se résume donc à `agentService.ask(question)`.
 
 >ℹ️ C'est grâce au champ `description` présente dans tous les agents que l'agent de supervision va décider quel agent appeler. ℹ️
+ 
+**⚠️ Attention à la consommation ⚠️**  
+En effet, avec les autres types de workflows vous maitrisez vos appels et vos consommations de tokens donc.
+Avec ce mode, c'est le superviseur qui va décider le nombre d'appels à faire à vos agents... attention à la mauvaise surprise 😦.
 
 # 🤗 En conclusion
 
@@ -595,7 +599,7 @@ Si vous voulez le code dans son ensemble, c'est ici que ça se passe : [Jarvis](
 
 Tout ça est très jeune et très mouvant, notamment du côté des Frameworks.
 C'est pour cela que, dans mes exemples, il y a des lourdeurs afin de contourner certaines limitations.
-Il n'est pas à en douté que ce code va évoluer avec le temps grâce aux améliorations constantes de ces Frameworks.
+Il n'est pas à en douter que ce code va évoluer avec le temps grâce aux améliorations constantes de ces Frameworks.
 
 La dernière étape sera d'ajouter un agent utilisant le pattern ReAct donc on a parlé dans cet article.
 LangChain4J permet de déclarer un agent de type `@loop`.

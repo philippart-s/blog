@@ -12,7 +12,7 @@ author: wildagsx
 
 ## 📖 TL;DR
 > 🤖 Les agents sont une des dernières nouveautés dans le domaine de l'IA générative.  
-> 🔀 Il existe plusieurs moyens de les orchestrer / chainer  
+> 🔀 Il existe plusieurs moyens de les orchestrer / chaîner  
 > 🧑‍💻 Le code pour illustrer les concepts est en Java (Quarkus / LangChain4j)  
 > 🐙 Le [code source](https://github.com/philippart-s/jarvis) de Jarvis   
 
@@ -37,7 +37,7 @@ Et comme je n'aime pas ne pas comprendre un truc, je me suis documenté, testé,
 C'est donc celle-ci que je vous propose, en toute humidité (comme dirait Perceval ⚔️).
 
 > ⚠️ On est bien d'accord que c'est une définition personnelle, et que je ne prétends pas qu'elle soit universelle.
-> A ce titre, n'hésitez pas à me faire des retours si vous n'êtes pas d'accord. ⚠️
+> À ce titre, n'hésitez pas à me faire des retours si vous n'êtes pas d'accord. ⚠️
 
 Si j'étais taquin, je dirais, qu'une fois de plus, nos amis dans l'écosystème de l'IA ont réinventé une chose vieille comme le monde dans le développement logiciel 😈.
 En effet, tout le monde s'émeut autour du fait que l'on a maintenant la capacité de faire de petits modules autonomes appelables, potentiellement, par des applications 🤪.
@@ -55,7 +55,7 @@ Le modèle ne sera peut-être pas optimal dans les deux besoins (le fameux dilem
 C'est là où l'approche agentique va vous permettre de créer des agents spécialisés.
 Imaginez, que, chaque agent est une mini application (appelez ça un microservice si vous voulez 😆) qui va encapsuler un LLM avec des prompts, des outils, de la mémoire, etc. pour répondre à un besoin précis.
 
-> ⚠️ Mon analogie avec les microservices peut-être trompeuse, car la plupart des agents ne sont pas déployés en tant que services distants, mais exécutés localement dans votre application.
+> ⚠️ Mon analogie avec les microservices peut être trompeuse, car la plupart des agents ne sont pas déployés en tant que services distants, mais exécutés localement dans votre application.
 > Pour vraiment avoir le même paradigme, il faut utiliser [A2A](https://github.com/a2aproject/A2A) de Google. 
 > N'ayant pas joué avec A2A, je n'aborderai pas ce sujet dans cet article. ⚠️
 
@@ -75,15 +75,15 @@ Comment interpréter ce merveilleux schéma :
 
 Je vous l'ai dit, plutôt simple.
 Les agents ne sont qu'un module applicatif de plus de votre application.
-La seule différence (et non des moindres 😉) c'est qu'ils se basent sur des LLM
+La seule différence (et non des moindres 😉), c'est qu'ils se basent sur des LLM.
 
-Ce serait beaucoup trop simple et pas assez whaou dans le monde de l'IA 😅.
+Ce serait beaucoup trop simple et pas assez waouh dans le monde de l'IA 😅.
 Si vous lisez 2-3 autres blogs, vous tomberez certainement sur le pattern ReAct pour les agents.
 ReAct pour Reasoning and Acting.
 L'objectif va être d'introduire une boucle de feedback dans la relation entre votre agent et son LLM.
 Ici on va vouloir maximiser la qualité de la réponse demandée par l'agent.
 
-Si on zoom sur notre agent et son LLM, le pattern ReAct peut se résumer comme suit : 
+Si on zoome sur notre agent et son LLM, le pattern ReAct peut se résumer comme suit : 
 
 ![](./react-agents.png)
 
@@ -97,9 +97,9 @@ Si on zoom sur notre agent et son LLM, le pattern ReAct peut se résumer comme s
 
 ## ⚠️ L'importance du prompt dans l'approche agentique
 
-Quelque soit le type d'agent que vous allez créer, le prompt utilisé sera essentiel.
+Quel que soit le type d'agent que vous allez créer, le prompt utilisé sera essentiel.
 N'oubliez pas que vous n'êtes pas dans de l'algorithmique traditionnelle mais que vous déléguez à un LLM qui doit savoir quoi faire et pourquoi.
-Pour le pattern ReAct c'est même une des composantes primordiale.
+Pour le pattern ReAct c'est même une des composantes primordiales.
 Voici un prompt simple pour un agent utilisant le pattern ReAct :
 ```text
 Tu es un agent autonome suivant le pattern ReAct (Reason + Act).
@@ -158,7 +158,7 @@ Le but de l'agent superviseur ne va pas être de traiter le prompt mais d'orches
 ![](./supervisor-agent.png)
 
 - l'agent superviseur (👮) décide en fonction du prompt quel agent il doit appeler et dans quel ordre
-- si tout se passe bien, il commencera par utiliser le bon agent de transport (🚄/✈️/🛳️) appeler
+- si tout se passe bien, il commencera par utiliser le bon agent de transport (🚄/✈️/🛳️) à appeler
 - puis appeler l'agent de paiement (💰)
 
 Bien sûr, dans cet exemple, vous auriez pu le développer via un workflow classique.
@@ -175,12 +175,12 @@ Bien entendu, on va partir avec du Java, [LangChain4J](https://docs.langchain4j.
 Le projet sera celui que j'utilise en conférence pour présenter [Picocli](https://picocli.info/) : [Jarvis](https://github.com/philippart-s/jarvis).
 
 >Si vous voulez plus d'informations sur Picocli je vous laisse aller voir :
-> - l'article que j'ai écrit : [A la découverte de Picocli]({site.url}2023-08-03-discover-picocli)
+> - l'article que j'ai écrit : [À la découverte de Picocli]({site.url}2023-08-03-discover-picocli)
 > - les différents [replays]({site.url}/talks) de ma conférence sur Picocli 
  
 ## 🤖 Création des agents
 
-> ℹ️ A ce stade de mon avancée avec les agents je n'ai pas encore développé un agent suivant le pattern ReAct.
+> ℹ️ À ce stade de mon avancée avec les agents je n'ai pas encore développé un agent suivant le pattern ReAct.
 > Vous n'en trouverez donc pas dans le code qui vient. ℹ️
 
 La première chose à faire va être de créer nos différents agents.
@@ -222,7 +222,7 @@ L'annotation `@Agent` permet de déclarer un agent et non pas juste un chatbot.
 En réalité, c'est très similaire, c'est juste le mode d'appel qui va être différent.
 Notre agent peut utiliser un outil, `RagTool`, via l'annotation `@ToolBox` 
 
-Ce n'est donc pas cet agent qui répond avec les données augmentées par le RAG mais se charge d'aller charger les données et les mettre à dispositions pour les autres agents.
+Ce n'est donc pas cet agent qui répond avec les données augmentées par le RAG mais se charge d'aller charger les données et les mettre à disposition pour les autres agents.
 Comme vous le constatez, grâce à LangChain4J et Quarkus (via l'extension [quarkus-langchain4j](https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html#)), nous sommes en mode déclaratif via une interface.
 Le principal intérêt de cet agent : déterminer par rapport au prompt où aller chercher les documents nécessaires.
 
@@ -301,7 +301,7 @@ quarkus.langchain4j.mcp.ovhcloud.log-responses=false
 ```
 
 Si vous ne voyez pas ce qu'est un serveur MCP (pour Model Context Protocol), voyez ça comme un service distant que votre LLM peut demander à être appelé comme il le fait avec des outils.
-Dans le cas d'un appel d'un outil externe dont vous ne maitrisez pas le code, je vous conseille fortement de demander une validation humaine avant l'exécution de cet outil.
+Dans le cas d'un appel d'un outil externe dont vous ne maîtrisez pas le code, je vous conseille fortement de demander une validation humaine avant l'exécution de cet outil.
 Dans mon cas je n'ai pas envie de supprimer tout mon compte public cloud sur une simple erreur de compréhension du LLM 😅.
 
 Voici un exemple de comment implémenter cette validation humaine :
@@ -354,7 +354,7 @@ public class ApprovalMcpToolProvider implements ToolProvider {
   }
 }
 ```
-C'est une implémentation très naive, mais qui permet tout de même de se prémunir de fausses manipulations.
+C'est une implémentation très naïve, mais qui permet tout de même de se prémunir de fausses manipulations.
 
 ### 💬 JarvisAgent
 
@@ -429,7 +429,7 @@ public interface ClassifierAgent {
 ```
 |}
 Cet agent doit juste permettre ensuite à mon workflow de savoir, en fonction du prompt, quel agent va répondre au mieux à la demande.
-Comme vous le constatez, avec LangChain5J, il est possible de typer le retour des LLM.
+Comme vous le constatez, avec LangChain4J, il est possible de typer le retour des LLM.
 
 ## 🔀 Orchestration des agents
 
@@ -462,13 +462,13 @@ La manière la plus simple, donc, d'orchestrer tout ça, est de la faire à la m
     jarvisAgent.askAQuestion(input, agentResponse);
     //...
 ```
-Cette façon a le mérite d'être simple et clair à comprendre.
+Cette façon a le mérite d'être simple et claire à comprendre.
 Cela laisse assez peu de moyen de faire évoluer vos agents sans casser ce code.
 
 ### 🤖 Workflow géré par un agent
 
 Je vous propose d'utiliser un agent pour gérer le workflow.
-Comme vous allez le constater, cela reste un workflow prédéfinit mais je vais déléguer la partie `switch` à un agent.
+Comme vous allez le constater, cela reste un workflow prédéfini mais je vais déléguer la partie `switch` à un agent.
 
 ```java
 import dev.langchain4j.agentic.declarative.ActivationCondition;
@@ -520,13 +520,13 @@ public interface AvailableAgents {
 }
 ```
 
-C'est donc cet agent qui par le biais de l'annotation `@ConditionnalAgent` et les méthodes d'activation `activateXXX` va permettre de choisir le bon agent à appeler. 
+C'est donc cet agent qui par le biais de l'annotation `@ConditionalAgent` et les méthodes d'activation `activateXXX` va permettre de choisir le bon agent à appeler. 
 Ensuite, la gestion de l'appel des agents est déléguée à un autre agent.
 
 >⚠️ En parlant d'agent, je fais, certainement, un abus de langage car cet agent n'utilise pas de LLM pour activer les agents.
 > Il se contente de récupérer le résultat de l'agent classifier pour ensuite activer ou non un agent ⚠️
 
-Ensuite, il vous reste à créer votre workflow en chainant les appels des agents.
+Ensuite, il vous reste à créer votre workflow en chaînant les appels des agents.
 
 ```java
 package fr.wilda.picocli.sdk.ai.agent.workflow;
@@ -589,14 +589,14 @@ public interface AutonomousAgent {
 ```
 |}
 Le rôle de cet agent est de décider, tout seul quel agent appeler en fonction du prompt et du résultat d'autres agents.
-On peut caper le nombre d'appels grâce à `maxAgentsInvocations`.
+On peut limiter le nombre d'appels grâce à `maxAgentsInvocations`.
 
 L'appel au final se résume donc à `agentService.ask(question)`.
 
->ℹ️ C'est grâce au champ `description` présente dans tous les agents que l'agent de supervision va décider quel agent appeler. ℹ️
+>ℹ️ C'est grâce au champ `description` présent dans tous les agents que l'agent de supervision va décider quel agent appeler. ℹ️
  
 **⚠️ Attention à la consommation ⚠️**  
-En effet, avec les autres types de workflows vous maitrisez vos appels et vos consommations de tokens donc.
+En effet, avec les autres types de workflows vous maîtrisez vos appels et vos consommations de tokens.
 Avec ce mode, c'est le superviseur qui va décider le nombre d'appels à faire à vos agents... attention à la mauvaise surprise 😦.
 
 # 🤗 En conclusion
@@ -604,11 +604,11 @@ Avec ce mode, c'est le superviseur qui va décider le nombre d'appels à faire �
 J'ai surtout mis des extraits de code pour que l'article reste digeste.
 Si vous voulez le code dans son ensemble, c'est ici que ça se passe : [Jarvis](https://github.com/philippart-s/jarvis).
 
-Tout ça est très jeune et très mouvant, notamment du côté des Frameworks.
+Tout ça est très jeune et très mouvant, notamment du côté des frameworks.
 C'est pour cela que, dans mes exemples, il y a des lourdeurs afin de contourner certaines limitations.
-Il n'est pas à en douter que ce code va évoluer avec le temps grâce aux améliorations constantes de ces Frameworks.
+Il n'est pas à en douter que ce code va évoluer avec le temps grâce aux améliorations constantes de ces frameworks.
 
-La dernière étape sera d'ajouter un agent utilisant le pattern ReAct donc on a parlé dans cet article.
+La dernière étape sera d'ajouter un agent utilisant le pattern ReAct dont on a parlé dans cet article.
 LangChain4J permet de déclarer un agent de type `@loop`.
 Je n'ai pas encore essayé mais cela semble une bonne base de départ pour implémenter le pattern ReAct.
 Je m'y attellerai certainement dans un prochain article, celui-ci est déjà bien trop long 😅. 

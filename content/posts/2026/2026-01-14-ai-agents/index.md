@@ -39,9 +39,9 @@ C'est donc celle-ci que je vous propose, en toute humidité (comme dirait Percev
 > ⚠️ On est bien d'accord que c'est une définition personnelle, et que je ne prétends pas qu'elle soit universelle.
 > A ce titre, n'hésitez pas à me faire des retours si vous n'êtes pas d'accord. ⚠️
 
-Si j'étais taquin, je dirais qu'une fois de plus nos amis dans l'écosystème de l'IA ont réinventé une chose vieille comme le monde dans le développement logiciel 😈.
+Si j'étais taquin, je dirais, qu'une fois de plus, nos amis dans l'écosystème de l'IA ont réinventé une chose vieille comme le monde dans le développement logiciel 😈.
 En effet, tout le monde s'émeut autour du fait que l'on a maintenant la capacité de faire de petits modules autonomes appelables, potentiellement, par des applications 🤪.
-J'en conviens, je suis moqueur, mais après avoir réinventé les services distants (MCP), l'appel de fonctions utilitaires (function calling) maintenant, on réinvente l'approche modulaire avec des agents 🙃.
+J'en conviens, je suis moqueur, mais après avoir réinventé les services distants (MCP), l'appel de fonctions utilitaires (function calling), on réinvente l'approche modulaire avec des agents 🙃.
 
 ## ☝️️ Ma définition d'un agent
 
@@ -53,14 +53,14 @@ Tout faire avec un seul modèle va vous forcer à utiliser un très gros modèle
 Le modèle ne sera peut-être pas optimal dans les deux besoins (le fameux dilemme du combi DVD-magnétoscope 📼).
 
 C'est là où l'approche agentique va vous permettre de créer des agents spécialisés.
-Imaginez, que, chaque agent est une mini application (appelez ça un microservice si vous voulez 😆) qui va encapsuler un LLM avec des prompts, des outils, des mémoires, etc. pour répondre à un besoin précis.
+Imaginez, que, chaque agent est une mini application (appelez ça un microservice si vous voulez 😆) qui va encapsuler un LLM avec des prompts, des outils, de la mémoire, etc. pour répondre à un besoin précis.
 
 > ⚠️ Mon analogie avec les microservices peut-être trompeuse, car la plupart des agents ne sont pas déployés en tant que services distants, mais exécutés localement dans votre application.
 > Pour vraiment avoir le même paradigme, il faut utiliser [A2A](https://github.com/a2aproject/A2A) de Google. 
 > N'ayant pas joué avec A2A, je n'aborderai pas ce sujet dans cet article. ⚠️
 
 Vous le voyez, la grosse différence avec un simple appel à un LLM, c'est que l'agent va encapsuler toute la logique nécessaire pour répondre à un besoin précis.
-Au besoin, il pourra s'aider d'outils locaux ou distants pour apporter plus de données dans le traitement de la demande utilisatrice ou utilisateur.
+Si nécessaire, il pourra s'aider d'outils locaux ou distants pour apporter plus de données dans le traitement de la demande utilisatrice ou utilisateur.
 
 On peut donc, dans un premier temps, résumer l'agent comme ceci : 
 
@@ -157,11 +157,12 @@ Le but de l'agent superviseur ne va pas être de traiter le prompt mais d'orches
 
 ![](./supervisor-agent.png)
 
-- l'agent superviseur (👮) commence par appeler l'agent de classification (🚦)
-- grâce à lui il sait quel agent de transport (🚄/✈️/🛳️) appeler
-- il finit par appeler l'agent de paiement (💰)
+- l'agent superviseur (👮) décide en fonction du prompt quel agent il doit appeler et dans quel ordre
+- si tout se passe bien, il commencera par utiliser le bon agent de transport (🚄/✈️/🛳️) appeler
+- puis appeler l'agent de paiement (💰)
 
-Bien sûr dans cet exemple vous auriez pu le développer via un workflow classique mais cela vous permet de voir à quoi sert un superviseur.
+Bien sûr, dans cet exemple, vous auriez pu le développer via un workflow classique.
+Mais cela vous permet de voir à quoi sert un superviseur.
 
 Bon, on est déjà bien avancé dans ce post et toujours pas de code 🫣.
 
@@ -169,7 +170,7 @@ Bon, on est déjà bien avancé dans ce post et toujours pas de code 🫣.
 
 Allez, c'est parti pour l'implémentation de tout ça.
 Pour l'implémentation je vais utiliser Python, non je blague 🙃.
-Bien entendu on va partir avec du Java, [LangChain4J](https://docs.langchain4j.dev/intro/) et [Quarkus](https://quarkus.io/).
+Bien entendu, on va partir avec du Java, [LangChain4J](https://docs.langchain4j.dev/intro/) et [Quarkus](https://quarkus.io/).
 
 Le projet sera celui que j'utilise en conférence pour présenter [Picocli](https://picocli.info/) : [Jarvis](https://github.com/philippart-s/jarvis).
 
@@ -255,7 +256,7 @@ public class RagTool {
 ```
 |}
 
-Rien de spécial, si ce n'est que pour rendre une méthode éligible à être un outil il suffit de lui ajouter `@Tool` et de bien veiller à décrire ce que doit faire l'outil et les paramètres qu'il a en entrée. 
+Rien de spécial, si ce n'est que pour rendre une méthode éligible à être un outil, il suffit de lui ajouter `@Tool` et de bien veiller à décrire ce que doit faire l'outil et les paramètres qu'il a en entrée. 
 
 >Si vous voulez en savoir plus sur le RAG, je vous laisse aller voir mon blog post [🤖 Augmente les capacités de ton IA avec LangChain4j 🦜]({site.url}/2024-04-14-quarkus-langchain4j-streaming) où j'explique comment le mettre en place.
 
@@ -353,7 +354,7 @@ public class ApprovalMcpToolProvider implements ToolProvider {
   }
 }
 ```
-C'est une implémentation très naive mais qui permet tout de même de se prémunir de fausses manipulations.
+C'est une implémentation très naive, mais qui permet tout de même de se prémunir de fausses manipulations.
 
 ### 💬 JarvisAgent
 
@@ -428,6 +429,7 @@ public interface ClassifierAgent {
 ```
 |}
 Cet agent doit juste permettre ensuite à mon workflow de savoir, en fonction du prompt, quel agent va répondre au mieux à la demande.
+Comme vous le constatez, avec LangChain5J, il est possible de typer le retour des LLM.
 
 ## 🔀 Orchestration des agents
 
@@ -436,7 +438,7 @@ De la plus manuelle à la plus automatique.
 
 ### 👩 Workflow humain
 
-La manière la plus simple, donc, d'orchestrer tout ça est de la faire à la main avec un bon vieux _si ... alors ... sinon_ 😇.
+La manière la plus simple, donc, d'orchestrer tout ça, est de la faire à la main avec un bon vieux _si ... alors ... sinon_ 😇.
 
 ```java
     //...
@@ -521,6 +523,11 @@ public interface AvailableAgents {
 C'est donc cet agent qui par le biais de l'annotation `@ConditionnalAgent` et les méthodes d'activation `activateXXX` va permettre de choisir le bon agent à appeler. 
 Ensuite, la gestion de l'appel des agents est déléguée à un autre agent.
 
+>⚠️ En parlant d'agent, je fais, certainement, un abus de langage car cet agent n'utilise pas de LLM pour activer les agents.
+> Il se contente de récupérer le résultat de l'agent classifier pour ensuite activer ou non un agent ⚠️
+
+Ensuite, il vous reste à créer votre workflow en chainant les appels des agents.
+
 ```java
 package fr.wilda.picocli.sdk.ai.agent.workflow;
 
@@ -549,9 +556,9 @@ Dans ce cas le workflow est le suivant :
 
 Au final l'exécution de tout ce workflow se résume par l'appel de ce dernier agent : `jarvisWorkflow.executeJarvisWorkflow(prompt)`
 
->ℹ️ Vous avez peut-être noté que depuis le début dans les définitions des agents vous avez l'attribut `outputKey`.
->Cet attribut est utilisé pour le mode workflow agentique (et le suivant) pour stocker la réponse d'un agent avant d'appeler un autre agent qui aurait besoin de récupérer ces informations.
->On appelle ça le contexte agentique. ℹ️
+ℹ️ Vous avez peut-être noté que depuis le début dans les définitions des agents vous avez l'attribut `outputKey`.
+Cet attribut est utilisé pour le mode workflow agentique (et le suivant) pour stocker la réponse d'un agent avant d'appeler un autre agent qui aurait besoin de récupérer ces informations.
+On appelle ça le contexte agentique. ℹ️
 
 ### 🤖 Mode superviseur
 

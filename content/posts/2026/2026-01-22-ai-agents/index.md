@@ -1,7 +1,7 @@
 ---
 title: "🤖L'IA et ses agents, comment ça marche ? 🔀"
 description: Mr. Anderson, welcome back. We missed you. © Agent Smith
-link: /2026-01-14-ai-agents
+link: /2026-01-22-ai-agents
 image: agent-smith-with-agents-in-the-matrix.jpg
 figCaption: © Warner Bros. Pictures
 tags: 

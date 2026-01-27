@@ -1,3 +1,53 @@
+- name: Cloud Native Aix Marseille
+  postDate: 2026-01-22
+  talksUrl: cnd-aix-2026
+  date: 22 janvier 2026
+  excerpt: "Talks donnés lors de Cloud Native Aix Marseille 2026"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "⚙️ Développer un opérateur Kubernetes en Java : challenge accepted !"
+      id: "java-operator"
+      location: Marseille (🇫🇷)
+      language: Français
+      date: 22 janvier 2026
+      time: 19h00
+      duration: 50 minutes
+      pitch: |
+        retour d'expérience concret sur la conception, les choix d'architecture et les bonnes pratiques pour créer un opérateur robuste, maintenable et cloud-native.
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vStsPU06T9Js1AWK-UUpyyLx4gjQZZNMW8nDuCVvxOlnWMz_m9blHkl9_g-dd5HzyFBVp74fws_VA41/pub
+      source: https://github.com/philippart-s/java-operator
+      replay:
+
+- name: MarsJUG
+  postDate: 2026-01-21
+  talksUrl: marjusg-2026
+  date: 21 janvier 2026
+  excerpt: "Talks donnés lors de MarsJUG 2026"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "Picocli, mets du Java dans ton terminal ! "
+      id: "picocli"
+      location: Marseille (🇫🇷)
+      language: Français
+      date: 21 janvier 2026
+      time: 19h00
+      duration: 50 minutes
+      pitch: |
+        Les CLI (Command Line Interface), tout le monde les utilise et elles existent depuis la nuit des temps.
+
+        Je vous propose d'utiliser un langage qui ne paraît pas, au premier abord, le plus intuitif pour faire une CLI : Java !
+
+        Venez m'accompagner lors d'une session de live coding permettant de mettre en lumière comment créer une CLI en Java avec Picocli et Quarkus en partant de zéro !
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vScp5CN4C3jMvYAFw0qUePVu9O_jEPB4W5DlKTXnd2eUdzGPBNxSwobu4ac_W1OmWCFrge8VlU1jL2C/pub
+      source: https://github.com/philippart-s/jarvis
+      replay:
+
 - name: Snowcamp
   postDate: 2026-01-16
   talksUrl: snowcamp-2026

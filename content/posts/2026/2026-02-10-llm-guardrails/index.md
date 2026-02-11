@@ -10,6 +10,9 @@ tags:
 author: wildagsx
 ---
 
+🏴󠁧󠁢󠁥󠁮󠁧󠁿 You can find the English version of this article [here]({site.url}2026-02-10-llm-guardrails-en). 🏴󠁧󠁢󠁥󠁮󠁧󠁿
+
+
 ## 📖 TL;DR
 > 🛡️ Les guardrails (garde-fous) permettent de protéger les entrées et sorties de vos LLM  
 > 🚧 Les _input guardrails_ filtrent les prompts dangereux **avant** qu'ils n'atteignent le LLM  
@@ -108,11 +111,8 @@ Bien entendu, on va partir avec du Java et [LangChain4J](https://docs.langchain4
 > Pas de Quarkus cette fois, juste du Java pur avec LangChain4J. ℹ️
 
 L'idée est d'avoir **deux AI Services** :
-
-| Interface | Rôle | Modèle |
-|-----------|------|--------|
-| `ChatBot` | Le chatbot conversationnel | LLM de chat (ex: DeepSeek, Llama) |
-| `GuardClassifier` | La classification de sécurité | Qwen Guard |
+ - `ChatBot` : Le chatbot conversationnel (ex: OSS-GPT, Llama, ...) 
+ - `GuardClassifier` : La classification de sécurité (Qwen Guard)
 
 ## 🛡️ Le classificateur de sécurité
 
@@ -250,6 +250,13 @@ while (true) {
 
 Le point clé ici : quand un guardrail bloque un message, LangChain4J lève une exception spécifique (`InputGuardrailException` ou `OutputGuardrailException`).
 Il suffit de les attraper pour informer l'utilisatrice ou l'utilisateur que son message (ou la réponse) a été bloqué.
+
+# 📽️ Voyons ça en action !
+
+<div class="video-wrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yt9l7XbizAk?si=cAxLTuOVuwJmxenf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 
 # 🤗 En conclusion
 

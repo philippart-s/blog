@@ -1,3 +1,58 @@
+- name: Touraine Tech
+  postDate: 2026-02-14
+  talksUrl: tnt-26
+  date: 14 février 2026
+  excerpt: "Talks donnés lors de Touraine Tech 2026"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "☕️ Toi aussi crée ta CLI boostée à l'IA avec Picocli 🖥️ 🤖"
+      id: "picocli"
+      location: Tours (🇫🇷)
+      language: Français
+      date: 12 février 2026
+      time: 16h45
+      duration: 50 minutes
+      pitch: |
+        Les CLI (Command Line Interface), tout le monde les utilise et elles existent depuis la nuit des temps.
+        Dernièrement, elles reviennent sur le devant de scène avec les CLI boostées à l'IA devenant des vrais collègues de pair programming.
+        
+        Souvent synonymes de gain de productivité, leur création est parfois obscure et peut sembler complexe.
+        C'était le cas il y a quelques décennies, mais depuis quelques années, des langages et Frameworks permettent d'en écrire simplement dans votre langage préféré.
+        Je vous propose d'utiliser un langage qui ne paraît pas, au premier abord, le plus intuitif pour faire une CLI : Java !
+      
+        Mais il sera bien accompagné dans cette tâche : grâce à Picocli et Quarkus, notre CLI aura tout d'une grande, tout en étant simple à développer !
+        Et cerise sur le gâteau : nous créerons un "vrai" exécutable grâce à Graal VM.
+        
+        Venez m'accompagner lors d'une session de live coding permettant de mettre en lumière comment créer une CLI en Java avec Picocli et Quarkus en partant de zéro !
+        
+        Et qui sait, avec un peu de magie on aura, au final, un vrai assistant intelligent dans notre et terminal 🤖.
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vQixWywnbSqhZwLnud-08cTzIkGVQc_qUKsAbPNGO8VBvRsulpUHryntDyDxkJcXaFvdWjwnbWYcrN2/pub
+      source: https://github.com/philippart-s/jarvis
+      replay:
+    - title: "JBang, un fichier Java pour les gouverner tous ? 💍"
+      id: "jbang"
+      location: Touraine Tech(🇫🇷)
+      language: Français
+      date: Vendredi 13 février 2026
+      time: 12h35 - 12h50
+      duration: 15 mins
+      pitch: |
+        Dans le monde Java, nous sommes habitués à initialiser un projet avec de nombreux fichiers et répertoires. A tel point que des CLI ont vu le jour pour nous aider à créer les projets SpringBoot ou Quarkus par exemple. Vient ensuite le choix du "package manager" : Maven ou Gradle ? Et c'est seulement à partir de là que l'on peut commencer à développer puis exécuter son code 😅.
+
+        Toutes ces étapes fastidieuses expliquent pourquoi, lorsque que l'on a besoin de faire un développement rapide de quelques lignes pour automatiser une action, on préfère d'autres langages à Java : Python par exemple.
+        
+        Et si je vous disais, qu'avec JBang, vous allez pouvoir rester avec votre langage préféré, Java, et développer une classe toute simple (avec des dépendances externes) en quelques secondes !
+
+        C'est le pari (spoiler : réussi) de JBang que je vous propose de découvrir durant une session de live coding.
+        
+        A vous les joies du scripting en Java !
+      source: https://github.com/philippart-s/jbang
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vQL-YXqscp3pAooHoflDmvgxIndvR7XBbIUrzJomKElfKqS0U6PwN89_zN11vsc8p3I6m6MTkSUk0np/pub
+      replay: ""
+
 - name: Cloud Native Aix Marseille
   postDate: 2026-01-22
   talksUrl: cnd-aix-2026

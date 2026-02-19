@@ -17,7 +17,7 @@ author: wildagsx
 - 🧠 Les skills d'Anthropic sont des super system prompt qui permettent de guider le modèle de manière plus précise et efficace.
 - 📚 https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf
 - 📺 La chaîne YouTube de Stéphane Trebel, aka le [permacodeur](https://www.youtube.com/@permacodeur).
-- 📖 Le [skill](https://codeberg.org/ai-skills/methodical-dev) de Philippe Charrière
+- 📖 La [skill](https://codeberg.org/ai-skills/methodical-dev) de Philippe Charrière
 - 🐙 Mon repository GitHub avec ma [skill Java](https://github.com/philippart-s/ai-skills/tree/main/java-dev).
 
 <br/>
@@ -37,13 +37,13 @@ Je le dois à deux personnes :
 Et un peu moi qui me suis mis un coup de pied aux fesses pour arrêter de faire ma tête de mule vis-à-vis de l'IA et du dev 😅.
 
 En effet, j'étais parti du principe que l'IA n'était qu'un (mauvais) outil pour les devs 😡.
-Que coder était quelque chose qui ne s'inventait pas, je pense qu'inconsciemment, j'utilisais l'IA avec quasiment tous les antipatterns.
+Que coder était quelque chose qui ne s'inventait pas et je pense qu'inconsciemment, j'utilisais l'IA avec quasiment tous les antipatterns.
 Pourtant, à mon petit niveau, je sais comment cela fonctionne 😅.
 
 Mais voilà, je me contentais d'un prompt vague et je tentais de lancer le résultat obtenu...
 Avec comme constat "ben oui ça ne marche pas, forcément !".
 
-Mauvaise fois, peut-être 😆.
+Mauvaise foi, peut-être 😆.
 
 Alors qu'est-ce qui m'a fait changer d'avis ?
 D'abord parce que je suis têtu et que j'aime comprendre ce que je ne comprends pas.
@@ -54,7 +54,7 @@ Alors qu'on se le dise tout de suite, non, je ne change pas d'avis : il y a beau
 On s'imagine trop que l'IA est la silver bullet qui va résoudre tous les problèmes de dev et par la même remplacer cette coûteuse charge que sont les devs 🤑.
 Bref, je ne vais pas participer au bruit ambiant des pros / contre, ce n'est pas le but de cet article.
 
-Revenons à, pourquoi j'ai changé d'avis, ou plutôt, pourquoi maintenant, j'ai moins de frustration à utiliser l'IA dans mon quotidien de dev 🧑‍💻.
+Revenons à pourquoi j'ai changé d'avis, ou plutôt pourquoi maintenant j'ai moins de frustration à utiliser l'IA dans mon quotidien de dev 🧑‍💻.
 
 # 🎬 Le déclic : Stéphane Trebel, le faux naïf
 
@@ -66,7 +66,7 @@ En effet, Stéphane a décidé il y a quelques semaines de se lancer dans la gé
 > Il a trop été galvaudé par des personnes ne sachant pas de quoi elles parlent 🤡.
 
 Et en mode faux naïf : il part de zéro et commence à installer des outils comme [Claude code](https://claude.com/product/claude-code) ou encore [Opencode](https://opencode.ai/).
-Puis, essaye des approches comme [BMad](https://docs.bmad-method.org/) par exemple.
+Puis essaie des approches comme [BMad](https://docs.bmad-method.org/) par exemple.
 
 > Pourquoi faux naïf ? Car Stéphane sait ce qu'il fait et c'est là que c'est très efficace quand on suit son stream.
 
@@ -78,7 +78,7 @@ Et c'était mon cas : je voulais tester, mais je ne donnais pas sa chance au pro
 ## 👥 Le pair programming comme mode d'utilisation
 
 En regardant les streams de Stéphane, j'ai compris que non seulement on peut prendre ces outils comme de simples outils, mais surtout, il faut que ce soit un dialogue.
-Et plus que le mode canard comme on peut le voir parfois, ou comme si on parlait à un junior.
+Et plus que le mode canard ou comme si on parlait à un junior comme on peut le lire parfois.
 
 > Je profite de cette dernière phrase "comme si on parlait à un junior" : arrêtez avec cette analogie, c'est réducteur et dégradant pour les personnes débutantes et complètement faux.
 > Je ne compte plus le nombre de choses où des jeunes développeuses ou développeurs m'ont appris quelque chose à moi le vieux développeur que je suis.
@@ -115,16 +115,16 @@ Et c'est là que le deuxième game changer est arrivé : [Philippe Charrière](h
 Philippe est très présent sur l'IA générative et je ne peux que vous conseiller de suivre ses productions (articles, code, conférences, stream, ...).
 
 Celle dont je parle part d'un [message anodin](https://bsky.app/profile/k33gorg.bsky.social/post/3me6zw6klkk2d) sur le fait qu'il mettait à disposition une Skill pour [Claude code](https://claude.com/product/claude-code).
-Tiens, j'en avais entendu parler, mais je n'avais pas encore fait l'effort de m'y intéresser (souvenez-vous la gen de code et moi ça faisait 2) 🧐.
-Mais là, c'est Philippe donc je vais qd même regarder.
+Tiens, j'en avais entendu parler, mais je n'avais pas encore fait l'effort de m'y intéresser (souvenez-vous la génération de code et moi ça faisait 2) 🧐.
+Mais là, c'est Philippe donc je vais quand même regarder.
 
-Je vous laisserai aller voir dans le détail ce que sont les skills mais en résumé ce sont des super prompts systèmes pour donner une vraie direction à votre modèle.
+Je vous laisserai aller voir dans le détail ce que sont les skills, mais en résumé, ce sont des super system prompts pour donner une vraie direction à votre modèle.
 
 Et justement Philippe a créé une super skill pour transformer le modèle en compagnon de développement : [methodological-dev](https://codeberg.org/ai-skills/methodical-dev).
 
 Et bonne nouvelle, c'est compatible [Opencode](https://opencode.ai/) 🥳.
 
-Pour installer une skill, avec [Opencode](https://opencode.ai/), vous n'avez qu'à créer un répertoire `skills` dans le répertoire `.opencode` puis créer un répertoire avec le nom de votre skill ⚙️.
+Pour installer une skill, avec [Opencode](https://opencode.ai/), vous n'avez qu'à créer un répertoire `skills` dans le répertoire `.opencode` puis créer un répertoire avec le nom de votre skill ⚙️.  
 Par exemple pour la skill de Philippe : `.opencode/skills/methodical-dev/SKILL.md` et voilà votre skill est prête à être utilisée.
 
 ## ☕️ Ma skill Java
@@ -141,7 +141,7 @@ Afin de respecter les bonnes pratiques ma skill a des références, voyez ça co
 
 Car, parlons-en maintenant, l'utilisation des skills va vous faire énormément gonfler le contexte de votre prompt 💥.
 Donc attention à avoir le bon modèle avec le bon abonnement 💸.
-Pour ma part, j'ai la chance de pouvoir utiliser [Opencode](https://opencode.ai/) avec [AI Endpoints d'OVHcloud](https://www.ovhcloud.com/en/public-cloud/ai-endpoints/) et [Qwen3-Coder-30B-A3B-Instruct](www.ovhcloud.com/en/public-cloud/ai-endpoints/catalog/qwen-3-coder-30b-a3b-instruct/) sans contraintes de limites 😇. 
+Pour ma part, j'ai la chance de pouvoir utiliser [Opencode](https://opencode.ai/) avec [AI Endpoints d'OVHcloud](https://www.ovhcloud.com/en/public-cloud/ai-endpoints/) et [Qwen3-Coder-30B-A3B-Instruct](www.ovhcloud.com/en/public-cloud/ai-endpoints/catalog/qwen-3-coder-30b-a3b-instruct/) sans contraintes de limites 😇.
 
 Pour voir le détail de ma skill, c'est ici que ça se passe : https://github.com/philippart-s/ai-skills/tree/main/java-dev
 Chaque référence permet de détailler une partie de la skill, par exemple pour Java, j'ai les grandes lignes directrices dans la skill puis une référence qui détaille vraiment les bonnes pratiques.
@@ -152,15 +152,15 @@ Cette référence sera chargée ensuite par [Opencode](https://opencode.ai/) si 
 Avec ce combo skill + pair programming, je me retrouve avec une expérience, qui, je trouve, me permet de mieux vivre la génération de code.
 
 Mais alors pourquoi ne pas le faire avec un vrai humain ?
-C'est une très bonne question, et la réponse est simple : je n'ai jamais eu la chance de travailler dans une entreprise qui pratique et croît dans le pair programming.
+C'est une très bonne question, et la réponse est simple : je n'ai jamais eu la chance de travailler dans une entreprise qui pratique et croit dans le pair programming.
 Et maintenant que je ne suis plus sur des projets, c'est encore plus compliqué.
 Je ne dis pas qu'il faut remplacer tous les binômes de pair programming.
-Dans les cas où ce n'est pas possible de faire du pair programming je trouve que c'est une bonne alternative.
+Dans les cas où ce n'est pas possible de faire du pair programming, je trouve que c'est une bonne alternative.
 Et dans les cas où vous faites déjà du pair programming, pourquoi pas se donner la possibilité de transformer les binômes de pair en mob programming en rajoutant de l'IA générative 🤖.
 
 # 🎓 Et l'apprentissage dans tout ça ?
 
-Alors au final l'IA générative va nous remplacer ou nous augmenter 🧐?
+Alors au final l'IA générative va nous remplacer ou nous augmenter 🧐 ?
 Je n'en sais rien, ce que je sais, c'est que j'ai arrêté de vouloir aller contre et un coup me faire peur que cela allait mettre fin à un métier que j'aime ou de l'autre côté me dire que c'est essentiel et que je loupe quelque chose d'énorme.
 
 J'en profite pour justement parler de cet aspect : l'apprentissage.

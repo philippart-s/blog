@@ -109,7 +109,7 @@ Cet agent est un peu particulier car ce n'est **pas un agent basé sur un LLM**.
 Il utilise tout de même un modèle de génération d'images (Stable Diffusion XL).
 
 > Je n'utilise pas LangChain4j car StableDiffusion n'est pas intégré dans la liste des modèles supportés.
-> Bien que j'aurai pû utiliser la compatibilité OpenAI, il me manquerait la partie "negative prompt" qui est essentielle pour la qualité de l'image générée.
+> Bien que j'aurais pu utiliser la compatibilité OpenAI, il me manquerait la partie "negative prompt" qui est essentielle pour la qualité de l'image générée.
 
 
 {|
@@ -141,7 +141,7 @@ public class ImageGenerator {
 |}
 
 Vous l'avez vu, c'est une **classe** et non pas une interface.
-L'annotation `@Agent` est posée directement sur la méthode, et LangChain4j comprend qu'il s'agit d'un agent "programmatique" (sans LLM).
+L'annotation `@Agent` est posée directement sur la méthode, et LangChain4j comprend qu'il s'agit d'un agent "programmatique".
 Il récupère le `SdxlPrompts` du contexte agentique (via `@V("sdxlPrompts")`), appelle l'API Stable Diffusion XL, sauvegarde l'image localement, et renvoie le résultat en base64 via un objet `ImageContent`.
 
 ## 🧑‍⚖️ VisionCritic : le critique d'art
@@ -256,7 +256,7 @@ UntypedAgent agent = AgenticServices.loopBuilder()
 ```
 |}
 
-Voyons de plus prêt ce qui se passe :
+Voyons de plus près ce qui se passe :
 
 - **🔄 `maxIterations(3)`** : on limite à 3 itérations maximum. C'est une sécurité pour ne pas boucler indéfiniment (et ne pas exploser votre consommation de tokens 💸)
 - **👮 `subAgents(promptRefiner, new ImageGenerator(), visionCritic)`** : l'ordre est important ! À chaque itération, les agents sont appelés dans cet ordre : refiner ➡️ generator ➡️ critic
@@ -279,10 +279,10 @@ On initialise le contexte avec la demande utilisateur, un feedback vide pour la 
 # 🤗 En conclusion
 
 Et voilà pour la partie ReAct de votre développement agentique.
-A vous de voir si vous préférez le mode suppervisor comme dévris dans l'article précédent ou cette approche.
+À vous de voir si vous préférez le mode supervisor comme décrit dans l'article précédent ou cette approche.
 Dans les deux cas, vous allez donner de l'autonomie à votre agent pour itérer sur son travail et maximiser la qualité de ses réponses.
 Attention donc à la consommation de vos tokens 😉.
 
 Le code complet est disponible sous forme de gist [ici](https://gist.github.com/philippart-s/fdfbddbfb20bd795563dadad66315f05).
 
-Si vous êtes arrivé.es jusque-là merci de m'avoir lu et s'il y a des coquilles n'hésitez pas à me faire une [issue ou PR](https://github.com/philippart-s/blog) 😊.
+Si vous êtes arrivé.es jusque-là, merci de m'avoir lu et s'il y a des coquilles n'hésitez pas à me faire une [issue ou PR](https://github.com/philippart-s/blog) 😊.

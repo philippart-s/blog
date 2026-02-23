@@ -141,7 +141,7 @@ public class ImageGenerator {
 |}
 
 As you can see, it's a **class** and not an interface.
-The `@Agent` annotation is placed directly on the method, and LangChain4j understands that it's a "programmatic" agent (without LLM).
+The `@Agent` annotation is placed directly on the method, and LangChain4j understands that it's a "programmatic" agent.
 It retrieves the `SdxlPrompts` from the agentic context (via `@V("sdxlPrompts")`), calls the Stable Diffusion XL API, saves the image locally, and returns the result in base64 through an `ImageContent` object.
 
 ## 🧑‍⚖️ VisionCritic: the art critic

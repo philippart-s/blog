@@ -10,6 +10,8 @@ tags:
 author: wildagsx
 ---
 
+🏴󠁧󠁢󠁥󠁮󠁧󠁿 You can find the English version of this article [here]({site.url}2026-02-22-react-agent-en) 🏴󠁧󠁢󠁥󠁮󠁧󠁿. 
+
 ## TL;DR
 > 🔄 Implémentation du pattern ReAct (Reasoning and Acting) avec LangChain4j  
 > 🏞️ Cas d'usage : génération d'images avec Stable Diffusion XL  

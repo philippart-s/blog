@@ -15,7 +15,7 @@ author: wildagsx
 - 📚 https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf
 - 📺 Stéphane Trebel's YouTube channel, aka [permacodeur](https://www.youtube.com/@permacodeur).
 - 📖 Philippe Charrière's [skill](https://codeberg.org/ai-skills/methodical-dev)
-- 🐙 My GitHub repository with my [Java skill](https://github.com/philippart-s/ai-skills/tree/main/java-dev).
+- 🐙 My GitHub repository with my [Java skill](https://github.com/philippart-s/skill-for-blog-post).
 
 <br/>
 
@@ -140,7 +140,7 @@ Because, let's talk about it now, using skills will significantly increase the c
 So be careful to have the right model with the right subscription 💸.
 For my part, I'm lucky enough to use [Opencode](https://opencode.ai/) with [AI Endpoints from OVHcloud](https://www.ovhcloud.com/en/public-cloud/ai-endpoints/) and [Qwen3-Coder-30B-A3B-Instruct](https://www.ovhcloud.com/en/public-cloud/ai-endpoints/catalog/qwen-3-coder-30b-a3b-instruct/) without any limits 😇.
 
-To see the details of my skill, it's here: https://github.com/philippart-s/ai-skills/tree/main/java-dev
+To see the details of my skill, it's here: https://github.com/philippart-s/skill-for-blog-post
 Each reference allows to detail a part of the skill, for example for Java, I have the main guidelines in the skill then a reference that really details the best practices.
 This reference will then be loaded by [Opencode](https://opencode.ai/) when needed.
 

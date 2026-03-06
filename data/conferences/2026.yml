@@ -31,7 +31,7 @@
         Et qui sait, avec un peu de magie on aura, au final, un vrai assistant intelligent dans notre et terminal 🤖.
       slides: https://docs.google.com/presentation/d/e/2PACX-1vQixWywnbSqhZwLnud-08cTzIkGVQc_qUKsAbPNGO8VBvRsulpUHryntDyDxkJcXaFvdWjwnbWYcrN2/pub
       source: https://github.com/philippart-s/jarvis
-      replay:
+      replay: https://youtu.be/URs8BZZTPIU?si=8tljq7n0NcKvV4Rr
     - title: "JBang, un fichier Java pour les gouverner tous ? 💍"
       id: "jbang"
       location: Touraine Tech(🇫🇷)
@@ -51,7 +51,7 @@
         A vous les joies du scripting en Java !
       source: https://github.com/philippart-s/jbang
       slides: https://docs.google.com/presentation/d/e/2PACX-1vQL-YXqscp3pAooHoflDmvgxIndvR7XBbIUrzJomKElfKqS0U6PwN89_zN11vsc8p3I6m6MTkSUk0np/pub
-      replay: ""
+      replay: https://youtu.be/q1cJinNB4LU?si=W-PeU_f9F_yv-5qq
 
 - name: Cloud Native Aix Marseille
   postDate: 2026-01-22

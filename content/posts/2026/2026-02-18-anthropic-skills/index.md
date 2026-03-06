@@ -18,7 +18,7 @@ author: wildagsx
 - 📚 https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf
 - 📺 La chaîne YouTube de Stéphane Trebel, aka le [permacodeur](https://www.youtube.com/@permacodeur).
 - 📖 La [skill](https://codeberg.org/ai-skills/methodical-dev) de Philippe Charrière
-- 🐙 Mon repository GitHub avec ma [skill Java](https://github.com/philippart-s/ai-skills/tree/main/java-dev).
+- 🐙 Mon repository GitHub avec ma [skill Java](https://github.com/philippart-s/skill-for-blog-post).
 
 <br/>
 
@@ -143,7 +143,7 @@ Car, parlons-en maintenant, l'utilisation des skills va vous faire énormément 
 Donc attention à avoir le bon modèle avec le bon abonnement 💸.
 Pour ma part, j'ai la chance de pouvoir utiliser [Opencode](https://opencode.ai/) avec [AI Endpoints d'OVHcloud](https://www.ovhcloud.com/en/public-cloud/ai-endpoints/) et [Qwen3-Coder-30B-A3B-Instruct](www.ovhcloud.com/en/public-cloud/ai-endpoints/catalog/qwen-3-coder-30b-a3b-instruct/) sans contraintes de limites 😇.
 
-Pour voir le détail de ma skill, c'est ici que ça se passe : https://github.com/philippart-s/ai-skills/tree/main/java-dev
+Pour voir le détail de ma skill, c'est ici que ça se passe : https://github.com/philippart-s/skill-for-blog-post
 Chaque référence permet de détailler une partie de la skill, par exemple pour Java, j'ai les grandes lignes directrices dans la skill puis une référence qui détaille vraiment les bonnes pratiques.
 Cette référence sera chargée ensuite par [Opencode](https://opencode.ai/) si besoin.
 

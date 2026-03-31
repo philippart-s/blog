@@ -1,3 +1,37 @@
+- name: Voxxed Days Zurich
+  postDate: 2026-03-31
+  talksUrl: voxxed-days-zurich-2026
+  date: 25 mars 2026
+  excerpt: "Talk donné lors de Voxxed Days Zurich 2026"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "JBang, a Java file to rule them all? 💍"
+      id: "jbang"
+      location: Voxxed Days Zurich (🇨🇭)
+      language: Anglais
+      date: Jeudi 25 mars 2026
+      time: 12h00 - 12h20
+      duration: 20 mins
+      pitch: |
+        In the Java world, we're used to initializing a project with numerous files and directories.
+        To the point that CLI tools have emerged to help us create SpringBoot or Quarkus projects, for example.
+        Then comes the choice of the "package manager": Maven or Gradle?
+        And it's only from there that we can start developing and running our code 😅.
+  
+        All these tedious steps explain why, when we need to automate a quick action with a few lines of code, we prefer other languages to Java, such as Python.
+  
+        And if I told you that, with JBang, you'll be able to stay with your favorite language, Java, and develop a simple class (with external dependencies) in just a few seconds!
+
+        That's the bet (spoiler: it works) that I propose to discover during a live coding session.
+  
+        So, get ready for the joys of scripting in Java!
+      source: https://github.com/philippart-s/jbang
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vQwqkCEtCq9423LQVToBolKPfXXlPpo-d4uLOhqQV8SnW6zwXPAjyxppK70UriKtkgCNC5z7HYCaVbk/pub
+      replay:
+
 - name: Touraine Tech
   postDate: 2026-02-14
   talksUrl: tnt-26

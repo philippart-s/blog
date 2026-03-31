@@ -32,7 +32,7 @@ image: %s
 layout: conference
 author: wilda
 conference-name: %s
-link: %s
+link: /talks/%s
 ---""";
 
     /// Called once the QUarkus application is ready

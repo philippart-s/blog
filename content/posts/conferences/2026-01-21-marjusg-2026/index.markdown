@@ -5,5 +5,5 @@ image: conferences/mars-jug.png
 layout: conference
 author: wilda
 conference-name: marjusg-2026
-link: marjusg-2026
+link: /talks/marjusg-2026
 ---

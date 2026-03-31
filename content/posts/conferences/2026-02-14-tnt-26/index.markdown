@@ -5,5 +5,5 @@ image: conferences/tnt-26.svg
 layout: conference
 author: wilda
 conference-name: tnt-26
-link: tnt-26
+link: /talks/tnt-26
 ---

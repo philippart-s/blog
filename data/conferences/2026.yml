@@ -1,3 +1,54 @@
+- name: Devoxx France
+  postDate: 2026-04-25
+  talksUrl: devoxx-fr-2026
+  date: 23 avril 2026
+  excerpt: "Talks donnés lors de Devoxx France 2026"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "🤖 Apprendre à notre IA à ... apprendre 🧠"
+      id: "learn-ai"
+      location: Devoxx France (🇫🇷)
+      language: France
+      date: Mercredi 22 avril 2026
+      time: 10h30 - 12h30
+      duration: 2h
+      pitch: |
+        RAG, MCP, tooling, function calling, agents, fine tuning, training, ...
+        Que de termes barbares mais qui ont tous le même objectif : faire en sorte que le modèle d'intelligence artificielle que vous utilisez réponde correctement à vos questions et attentes 😅.
+        Et pour ça il va falloir ajouter de la connaissance, des données (privée ou publiques, ...).
+        
+        Durant ce talk je vous propose d'y voir un peu plus clair dans cette jungle des acronymes puis, fort de connaître les différences, vous proposer comment l'implémenter en tant que développeuses et développeurs.
+        
+        Chaque approche a ses spécificités, ses avantages et ses inconvénients.
+        A la fin de ce talk, non seulement vous saurez choisir la bonne approche, mais aussi ajouter dans vos développements quotidiens la dose d'IA utile.
+      source: https://github.com/philippart-s/ai-learn
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vR7dcVssSAExsibl5E-Fpiw_tBCfG3SBNBU5o9I4rd24GReUbwdQkiQ61eJgrhnDZz54LX61Mi1HPqW/pub
+      replay:
+    - title: "Développer avec l'IA : et si c'était aussi simple qu'ajouter une librairie ?"
+      id: "ai-lib-workshop"
+      location: Devoxx France (🇫🇷)
+      language: France
+      date: Mercredi 22 avril 2026
+      time: 13h30 - 16h30
+      duration: 3h
+      pitch: |
+        Intégrer de l'intelligence artificielle (IA) dans nos développements peut nous paraître plus complexe que de les utiliser dans notre quotidien.
+        
+        Dois-je apprendre un nouveau langage ou une nouvelle stack ?
+        Durant ce workshop nous vous proposons de vous donner tous les éléments pour intégrer l'IA sans quitter votre langage de prédilection : Java 😍. Ce sera l'occasion de découvrir les Frameworks du moments : LangChain4j, Quarkus, ...
+      
+        Nous vous invitons à découvrir toutes les facettes d'un chatbot avec l'IA générative (customiser un prompt, rajouter vos données (RAG), appeler des outils locaux ou distants (MCP) et créer des agents) mais aussi parce que l’IA ne se limite pas aux chatbots : faire de la transcription, créer de l'audio ou même faire un traducteur.
+        
+        À la suite de ce talk vous repartirez avec une boîte à outils vous permettant d'intégrer simplement la puissance des modèles d'IA au sein de vos développements de tous les jours.
+        Et, toujours pour vous simplifier la vie, venez juste avec votre ordinateur et un navigateur Internet, on se charge du reste pour vous construire un environnement de développement aux petits oignons grâce aux CDE.
+      source: https://github.com/devrel-workshop/ai-as-lib-workshop
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vTe-mIXLiA4JN2zeEopcq15GY6FhtjVKuNz5BGqR-w_79QoCHc5U-wg9V8XqfTTzvYhmSkEIAZHAb9E/pub
+      replay:
+
+
 - name: Voxxed Days Zurich
   postDate: 2026-03-31
   talksUrl: voxxed-days-zurich-2026

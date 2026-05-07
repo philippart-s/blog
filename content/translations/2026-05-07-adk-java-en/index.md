@@ -1,7 +1,7 @@
 ---
 title: "🤖 Discovering Google's ADK Java"
 description: "There is no spoon. ©The Oracle"
-link: /2026-05-07-adk-java-loop-agent-en
+link: /2026-05-07-adk-java-en
 image: cover.jpg
 figCaption: © Warner Bros. Pictures
 tags:

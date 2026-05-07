@@ -10,7 +10,7 @@ tags:
 author: wildagsx
 ---
 
-🏴󠁧󠁢󠁥󠁮󠁧󠁿 You can find the English version of this article [here]({site.url}2026-05-07-adk-java-loop-agent-en) 🏴󠁧󠁢󠁥󠁮󠁧󠁿.
+🏴󠁧󠁢󠁥󠁮󠁧󠁿 You can find the English version of this article [here]({site.url}2026-05-07-adk-java-en) 🏴󠁧󠁢󠁥󠁮󠁧󠁿.
 
 ## TL;DR
 > 🤖 Découverte d'**[ADK Java](https://github.com/google/adk-java)**, l'Agent Development Kit de Google, en Java  

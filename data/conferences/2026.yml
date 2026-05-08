@@ -1,3 +1,39 @@
+- name: Devoxx UK
+  postDate: 2026-05-08
+  talksUrl: devoxx-uk-2026
+  date: 06 mai 2026
+  excerpt: "Talk donné lors de Devoxx UK 2026"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "🧰 Dev Containers: the ultimate toolbox for developers?"
+      id: "dev-containers"
+      location: Devoxx UK (🇬🇧)
+      language: English
+      date: Jeudi 6 mai 2026
+      time: 18h - 18h30
+      duration: 30mins
+      pitch: |
+        At some point, we’ve all had to (re)install our entire development environment after switching machines.
+        Whether by choice or simply during on-boarding at a new company, a new mission,...
+        We’ve also all spent far to many hours figuring out which tools to install just to submit a PR or MR to an open source project.
+
+        And in many other situations, we quickly find ourselves facing the nightmare of configuring tools and frameworks when all we really want to do is what we love: coding.
+        And let’s not even get started on version updates and inter-dependencies 😅...
+
+        Fortunately, there is a solution to all these problems: dev containers.
+  
+        During this tools-in-action session, I invite you to explore them with me.
+        The only thing I allow myself to install on my machine: Docker!
+        Everything else will be handled through configuration so that tools, frameworks, version management, and dependencies become a non-event in your development workflow.
+
+        You’ll leave knowing how to use dev containers—and how to build your entire development stack as code.
+      source: https://github.com/philippart-s/dev-containers-talk
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vQCZLxTPpC2cVsxoVdF7Fcxuo0-IIhWMd3HYae2ymkhaWAHtCAEKbrXsI_rNRjISMhjBdjFECqLjQMl/pub
+      replay:
+
 - name: Devoxx France
   postDate: 2026-04-25
   talksUrl: devoxx-fr-2026

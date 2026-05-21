@@ -2,12 +2,15 @@
 title: "🖥️ Construire une TUI en Java avec TamboUI"
 description: "Tout le monde peut cuisiner ! ©Gusteau"
 link: /2026-05-21-tamboui-tui
+image: cover.svg
 tags:
   - Java
   - TUI
   - Code
 author: wildagsx
 ---
+
+🏴󠁧󠁢󠁥󠁮󠁧󠁿 You can find the English version of this article [here]({site.url}2026-05-21-tamboui-tui-en) 🏴󠁧󠁢󠁥󠁮󠁧󠁿.
 
 ## TL;DR
 > 🖥️ Découverte de **[TamboUI](https://tamboui.dev/)**, une lib Java pour construire des **T**erminal **U**ser **I**nterface (TUI)  

@@ -1,3 +1,34 @@
+- name: DevOpsdays Genève
+  postDate: 2026-05-22
+  talksUrl: devoxx-geneva-2026
+  date: 21 mai 2026
+  excerpt: "Workshop donné lors de DevOpsdays Genève 2026"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "🧩 Développer avec l'IA : et si c'était aussi simple qu'ajouter une librairie ? 🤘"
+      id: "ai-lib-workshop"
+      location: DevOpsdays Geneva (🇨🇭)
+      language: Français
+      date: Mercredi 21 mai 2026
+      time: 14h55 - 16h25
+      duration: 1h30
+      pitch: |
+        Intégrer de l'intelligence artificielle (IA) dans nos développements peut nous paraître plus complexe que de les utiliser dans notre quotidien.
+        
+        Dois-je apprendre un nouveau langage ou une nouvelle stack ?
+        Durant ce workshop nous vous proposons de vous donner tous les éléments pour intégrer l'IA sans quitter votre langage de prédilection : Java 😍. Ce sera l'occasion de découvrir les Frameworks du moments : LangChain4j, Quarkus, ...
+        
+        Nous vous invitons à découvrir toutes les facettes d'un chatbot avec l'IA générative (customiser un prompt, rajouter vos données (RAG), appeler des outils locaux ou distants (MCP) et créer des agents) mais aussi parce que l’IA ne se limite pas aux chatbots : faire de la transcription, créer de l'audio ou même faire un traducteur.
+        
+        À la suite de ce talk vous repartirez avec une boîte à outils vous permettant d'intégrer simplement la puissance des modèles d'IA au sein de vos développements de tous les jours.
+        Et, toujours pour vous simplifier la vie, venez juste avec votre ordinateur et un navigateur Internet, on se charge du reste pour vous construire un environnement de développement aux petits oignons grâce aux CDE.
+      source: https://github.com/devrel-workshop/ai-as-lib-workshop
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vSjTspv3TfMlXvlDuY-AulXOkc1PPGB9yyTHkiLST8vIAzEd5FHnmXD9hDuvqr5goxxqRGdcrC6Pswo/pub
+      replay:
+
 - name: Devoxx UK
   postDate: 2026-05-08
   talksUrl: devoxx-uk-2026
@@ -62,7 +93,8 @@
         A la fin de ce talk, non seulement vous saurez choisir la bonne approche, mais aussi ajouter dans vos développements quotidiens la dose d'IA utile.
       source: https://github.com/philippart-s/ai-learn
       slides: https://docs.google.com/presentation/d/e/2PACX-1vR7dcVssSAExsibl5E-Fpiw_tBCfG3SBNBU5o9I4rd24GReUbwdQkiQ61eJgrhnDZz54LX61Mi1HPqW/pub
-      replay:
+      replay: https://youtu.be/N3NzgO6M-Ss?si=ZQo9PDCqq8ycJlFT
+
     - title: "Développer avec l'IA : et si c'était aussi simple qu'ajouter une librairie ?"
       id: "ai-lib-workshop"
       location: Devoxx France (🇫🇷)

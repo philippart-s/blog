@@ -1,3 +1,38 @@
+- name: Paris JUG
+  postDate: 2026-06-17
+  talksUrl: paris-jug-2026
+  date: 2 juin 2026
+  excerpt: "Conférence donnée lors de Paris JUG 2026"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "☕️ Toi aussi crée ta CLI boostée à l'IA avec Picocli 🖥️ 🤖"
+      id: "picocli"
+      location: Paris (🇫🇷)
+      language: Français
+      date: 2 juin 2026
+      time: 21h00
+      duration: 50 minutes
+      pitch: |
+        Les CLI (Command Line Interface), tout le monde les utilise et elles existent depuis la nuit des temps.
+        Dernièrement, elles reviennent sur le devant de scène avec les CLI boostées à l'IA devenant des vrais collègues de pair programming.
+        
+        Souvent synonymes de gain de productivité, leur création est parfois obscure et peut sembler complexe.
+        C'était le cas il y a quelques décennies, mais depuis quelques années, des langages et Frameworks permettent d'en écrire simplement dans votre langage préféré.
+        Je vous propose d'utiliser un langage qui ne paraît pas, au premier abord, le plus intuitif pour faire une CLI : Java !
+        
+        Mais il sera bien accompagné dans cette tâche : grâce à Picocli et Quarkus, notre CLI aura tout d'une grande, tout en étant simple à développer !
+        Et cerise sur le gâteau : nous créerons un "vrai" exécutable grâce à Graal VM.
+        
+        Venez m'accompagner lors d'une session de live coding permettant de mettre en lumière comment créer une CLI en Java avec Picocli et Quarkus en partant de zéro !
+        
+        Et qui sait, avec un peu de magie on aura, au final, un vrai assistant intelligent dans notre et terminal 🤖.
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vQL4VmxdFuHSM-8Rj6yOKac0vMjXi883QV1S3YI2Wj7W82cu1bpVjvxc8Ri6GQfgUdQPtE-fdQMniWf/pub
+      source: https://github.com/philippart-s/jarvis
+      replay:
+
 - name: DevOpsdays Genève
   postDate: 2026-05-22
   talksUrl: devoxx-geneva-2026

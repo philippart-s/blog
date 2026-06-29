@@ -1,3 +1,57 @@
+- name: BreizhCamp
+  postDate: 2026-06-29
+  talksUrl: breizhcamp-2026
+  date: 25 juin 2026
+  excerpt: "Conférences données lors de BreizhCamp 2026"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "JBang, un fichier Java pour les gouverner tous ? 💍"
+      id: "jbang"
+      location: Rennes (🇫🇷)
+      language: Français
+      date: 25 juin 2026
+      time: 17h00
+      duration: 25 minutes
+      pitch: |
+        Dans le monde Java, nous sommes habitués à initialiser un projet avec de nombreux fichiers et répertoires.
+        A tel point que des CLI ont vu le jour pour nous aider à créer les projets SpringBoot ou Quarkus par exemple.
+        Vient ensuite le choix du "package manager" : Maven ou Gradle ?
+        Et c'est seulement à partir de là que l'on peut commencer à développer puis exécuter son code 😅.
+
+        Toutes ces étapes fastidieuses expliquent pourquoi, lorsque que l'on a besoin de faire un développement rapide de quelques lignes pour automatiser une action, on préfère d'autres langages à Java : Python par exemple.
+  
+        Et si je vous disais, qu'avec JBang, vous allez pouvoir rester avec votre langage préféré, Java, et développer une classe toute simple (avec des dépendances externes) en quelques secondes !
+
+        C'est le pari (spoiler : réussi) de JBang que je vous propose de découvrir durant une session de live coding.
+  
+        A vous les joies du scripting en Java !
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vTgTX2QlPi_fmV9f6BcrUq22lz8aE8Q7QioOphQhre_QR5I1KV62inYD3VrmozMYVsKspyO8lGu7dVg/pub
+      source: https://github.com/philippart-s/jbang
+      replay:
+    - title: "🧰 Les dev containers, la boîte à outils ultime pour les devs ?"
+      id: "dev-containers"
+      location: Rennes (🇫🇷)
+      language: Français
+      date: 26 juin 2026
+      time: 16h
+      duration: 25mins
+      pitch: |
+        On a toutes et tous été confronté•es, un jour, à devoir (ré)installer tout notre environnement de développement lors d'un changement de machine. Que ce soit par choix ou juste en mode "on-boarding" lors d'un changement de société, de mission, ... On a aussi, parfois, passé de longues heures pour comprendre quels outils installer pour proposer une PR ou MR dans un projet Open Source.
+
+        Dans encore beaucoup d'autres cas, nous sommes vite confrontés à l'enfer de la configuration des outils et autres frameworks pour faire ce que l'on aime : développer. Et je ne vous parle pas des montées de versions et inter-dépendances 😅...
+        
+        Heureusement, il existe une solution à tous ces problèmes : les dev containers.
+        
+        Lors de ce tools-in-action, je vous propose de partir à leur découverte. La seule chose que je m'autorise à installer sur ma machine : Docker ! Le reste sera de la gestion de configuration pour que les outils, les frameworks et la gestion des versions et dépendances soit un non-évènement dans votre process de développement.
+  
+        Vous repartirez en sachant utiliser les dev containers mais aussi en sachant construire as-code votre stack de développement.
+      source: https://github.com/philippart-s/dev-containers-talk
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vRRYh9lPgZ9OXdSOzDDv85cbPWAM4jx7mKHLGPHcozlP7SGN4SwweRqLkUq9FmLdqa-A9FYuxAM9u6i/pub
+      replay:
+
 - name: Paris JUG
   postDate: 2026-06-17
   talksUrl: paris-jug-2026

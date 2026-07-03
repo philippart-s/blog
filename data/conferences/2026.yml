@@ -1,3 +1,34 @@
+- name: SunnyTech
+  postDate: 2026-07-03
+  talksUrl: sunytech-2026
+  date: 2 juillet 2026
+  excerpt: "Conférences données lors de SunnyTech 2026"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "🧰 Les dev containers, la boîte à outils ultime pour les devs ?"
+      id: "dev-containers"
+      location: Montpellier (🇫🇷)
+      language: Français
+      date: 2 juillet 2026
+      time: 18
+      duration: 20 mins
+      pitch: |
+        On a toutes et tous été confronté•es, un jour, à devoir (ré)installer tout notre environnement de développement lors d'un changement de machine. Que ce soit par choix ou juste en mode "on-boarding" lors d'un changement de société, de mission, ... On a aussi, parfois, passé de longues heures pour comprendre quels outils installer pour proposer une PR ou MR dans un projet Open Source.
+
+        Dans encore beaucoup d'autres cas, nous sommes vite confrontés à l'enfer de la configuration des outils et autres frameworks pour faire ce que l'on aime : développer. Et je ne vous parle pas des montées de versions et inter-dépendances 😅...
+        
+        Heureusement, il existe une solution à tous ces problèmes : les dev containers.
+        
+        Lors de ce tools-in-action, je vous propose de partir à leur découverte. La seule chose que je m'autorise à installer sur ma machine : Docker ! Le reste sera de la gestion de configuration pour que les outils, les frameworks et la gestion des versions et dépendances soit un non-évènement dans votre process de développement.
+        
+        Vous repartirez en sachant utiliser les dev containers mais aussi en sachant construire as-code votre stack de développement.
+      source: https://github.com/philippart-s/dev-containers-talk
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vTCOzJrm5i-VWLcuGb3KWtWeiVN-CFg5_3q8BiHL1kI5Rsr5IZ64DUjAOajznifBL8OkFtOiBczFXrR/pub
+      replay:
+
 - name: BreizhCamp
   postDate: 2026-06-29
   talksUrl: breizhcamp-2026

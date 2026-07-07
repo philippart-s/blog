@@ -1,3 +1,61 @@
+- name: Riviera Dev
+  postDate: 2026-07-07
+  talksUrl: riviera-2026
+  date: 5 juillet 2026
+  excerpt: "Conférences données lors de Riviera Dev 2026"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "JBang, un fichier Java pour les gouverner tous ? 💍"
+      id: "jbang"
+      location: Sophia Antipolis (🇫🇷)
+      language: Français
+      date: 7 juillet 2026
+      time: 11h40
+      duration: 30 minutes
+      pitch: |
+        Dans le monde Java, nous sommes habitués à initialiser un projet avec de nombreux fichiers et répertoires.
+        A tel point que des CLI ont vu le jour pour nous aider à créer les projets SpringBoot ou Quarkus par exemple.
+        Vient ensuite le choix du "package manager" : Maven ou Gradle ?
+        Et c'est seulement à partir de là que l'on peut commencer à développer puis exécuter son code 😅.
+
+        Toutes ces étapes fastidieuses expliquent pourquoi, lorsque que l'on a besoin de faire un développement rapide de quelques lignes pour automatiser une action, on préfère d'autres langages à Java : Python par exemple.
+        
+        Et si je vous disais, qu'avec JBang, vous allez pouvoir rester avec votre langage préféré, Java, et développer une classe toute simple (avec des dépendances externes) en quelques secondes !
+
+        C'est le pari (spoiler : réussi) de JBang que je vous propose de découvrir durant une session de live coding.
+        
+        A vous les joies du scripting en Java !
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vSELPj3ngLAi4Tdx3z-Gqeldxnil2koMCtLzxeFAsBRN0aDzvcGW2ErCRHlViz42n7WRVQCbysfJEGv/pub
+      source: https://github.com/philippart-s/jbang
+      replay:
+    - title: "☕️ Toi aussi crée ta CLI boostée à l'IA avec Picocli 🖥️ 🤖"
+      id: "picocli"
+      location: Sophia Antipolis (🇫🇷)
+      language: Français
+      date: 7 juillet 2026
+      time: 14h00
+      duration: 50 minutes
+      pitch: |
+        Les CLI (Command Line Interface), tout le monde les utilise et elles existent depuis la nuit des temps.
+        Dernièrement, elles reviennent sur le devant de scène avec les CLI boostées à l'IA devenant des vrais collègues de pair programming.
+        
+        Souvent synonymes de gain de productivité, leur création est parfois obscure et peut sembler complexe.
+        C'était le cas il y a quelques décennies, mais depuis quelques années, des langages et Frameworks permettent d'en écrire simplement dans votre langage préféré.
+        Je vous propose d'utiliser un langage qui ne paraît pas, au premier abord, le plus intuitif pour faire une CLI : Java !
+        
+        Mais il sera bien accompagné dans cette tâche : grâce à Picocli et Quarkus, notre CLI aura tout d'une grande, tout en étant simple à développer !
+        Et cerise sur le gâteau : nous créerons un "vrai" exécutable grâce à Graal VM.
+        
+        Venez m'accompagner lors d'une session de live coding permettant de mettre en lumière comment créer une CLI en Java avec Picocli et Quarkus en partant de zéro !
+        
+        Et qui sait, avec un peu de magie on aura, au final, un vrai assistant intelligent dans notre et terminal 🤖.
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vRmBGJcf3r15UZJyxwAsQy05AQZqYUbJV8mNIrimK0ZkvgsjPu9BWJvVvZC_v0N8VycAem6Fyedjf3G/pub#slide=id.g3b53703ef16_0_59
+      source: https://github.com/philippart-s/jarvis
+      replay:
+
 - name: SunnyTech
   postDate: 2026-07-03
   talksUrl: sunytech-2026
@@ -27,7 +85,7 @@
         Vous repartirez en sachant utiliser les dev containers mais aussi en sachant construire as-code votre stack de développement.
       source: https://github.com/philippart-s/dev-containers-talk
       slides: https://docs.google.com/presentation/d/e/2PACX-1vTCOzJrm5i-VWLcuGb3KWtWeiVN-CFg5_3q8BiHL1kI5Rsr5IZ64DUjAOajznifBL8OkFtOiBczFXrR/pub
-      replay:
+      replay: https://youtu.be/iw7EkOISmrc?si=ooEtkZIe1gpSovIG
 
 - name: BreizhCamp
   postDate: 2026-06-29

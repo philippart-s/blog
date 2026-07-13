@@ -18,6 +18,36 @@
 #     source: https://github.com/devrel-workshop/ai-as-lib-workshop
 #     slides: https://docs.google.com/presentation/d/e/2PACX-1vRgA5HVbBViro5I0kfW0bbqbhfAFj-jXpKqYp-DXTwPnalyB3YtrHEshCZDBE-is64J_H4qrWkLaz-L/pub
 #     replay: 
+- name: Open Source Experience
+  postDate: 2025-12-12
+  talksUrl: ossx-2025
+  date: 10 décembre 2025
+  excerpt: "Talks donnés lors de l'Open Source Summit Experience 2025"
+  categories: Conférences
+  tags:
+    - Slides
+    - Replays
+  talks:
+    - title: "CaaS, Serverless, scale to zero. Késako et comment s’y mettre avec Knative ?"
+      id: "knative"
+      location: Paris (🇫🇷)
+      language: Français
+      date: 10 décembre 2025
+      time:
+      duration: 25 minutes
+      pitch: |
+        Kubernetes est, depuis quelques temps, de plus en plus la normalité en entreprise. Avec cette nouvelle façon de concevoir son Système d’Information, de déployer et opérer les applications, de nouveaux besoins se sont faits sentir.
+        
+        Lors de ce talk nous verrons ensemble une typologie de ces besoins qui tournent tous autour d’une notion : comment simplifier et optimiser le déploiement et l’exécution de nos containers ? En effet, sans paramétrage particulier, que vos applications soient utilisées ou non, un cluster Kubernetes leur allouera des ressources … et donc vous coûte de l’argent !
+        
+        L’autre aspect est de simplifier le cycle de déploiement / configuration d’une application, toutes les développeuses ou développeurs n’ont pas envie de devenir ceinture noire de YAML ou de Kubernetes pour tester leur application en développement sur un cluster 😅.
+        
+        C’est là que rentre en jeu les notions de Container as a Service, de Serverless et autre fonctionnalité de “scale to zero”. Différents moyens sont à notre disposition pour arriver à couvrir ces cas d’utilisations. Knative va nous permettre de couvrir une grande partie de ces besoins. Nous verrons ensemble comment le déployer sur un cluster Kubernetes managé et comment l’utiliser afin de nous simplifier la vie.
+        
+        Vous repartirez de ce talk, j’espère, en ayant compris les différentes solutions pour répondre à ces problèmes en ayant pris conscience qu’il est possible de s’affranchir de solutions propriétaires pour y arriver 😉.
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vTuSqVhHPHP0xVAnYKAJ-VTRCYm7QKQueP-dUOD-2f7FDejYUQV9p7f5ygFEoQYQF2E4CmDA_x9a0mI/pub
+      source: https://github.com/philippart-s/kn-serving-samples
+      replay: https://youtu.be/Qxn9KYRTQPg?si=SUv3UqaJLJo4NceX
 
 - name: DevFest Lyon
   postDate: 2025-11-28

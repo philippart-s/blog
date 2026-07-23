@@ -1,8 +1,8 @@
 ---
-title: "☕️ Java à l'ère de l'IA 🤖 - partie 1 : les bases"
+title: "☕️ Java in the AI Era 🤖 - part 1: the basics"
 description: "I’m sorry, Dave. I’m afraid I can’t do that. ©HAL 9000"
-link: /2026-07-21-java-and-ai-part1
-#image: cover.svg
+link: /2026-07-21-java-and-ai-part1-en
+image: cover.png
 tags:
   - Java
   - AI
@@ -10,148 +10,148 @@ tags:
 author: wildagsx
 ---
 
-🏴󠁧󠁢󠁥󠁮󠁧󠁿 You can find the English version of this article [here]({site.url}2026-07-21-java-and-ai-part1-en) 🏴󠁧󠁢󠁥󠁮󠁧󠁿.
+🇫🇷 Vous trouverez la version française de cet article [ici]({site.url}2026-07-21-java-and-ai-part1) 🇫🇷.
 
 ## TL;DR
-> 🚀 Premier article d'une série pour apprendre à **ajouter de l'IA générative (LLM) dans vos applications Java**.  
-> 🧠 On (re)pose d'abord les notions de base : `token`, fenêtre de contexte, paramètres/poids, `température` et API.  
-> 💬 On construit un chat bot simple (avec `prompt système` et streaming) que l'on fera évoluer tout au long de la série.  
-> ☕️ Le même use case est implémenté du plus bas niveau au plus haut : CURL, Java pur, le SDK OpenAI, LangChain4j, Quarkus et Spring AI.  
-> 🔌 Tous les exemples utilisent [AI Endpoints](https://www.ovhcloud.com/en/public-cloud/ai-endpoints/) d'OVHcloud et le modèle open weight `gpt-oss-120b`.  
-> 🐙 Code et démo disponibles [ici](https://github.com/pigumax/Java-and-AI-Part1).
+> 🚀 First article of a series to learn how to **add generative AI (LLM) to your Java applications**.  
+> 🧠 We first (re)lay the groundwork: `token`, context window, parameters/weights, `temperature` and API.  
+> 💬 We build a simple chatbot (with a `system prompt` and streaming) that we'll grow throughout the series.  
+> ☕️ The same use case is implemented from the lowest level to the highest: CURL, plain Java, the OpenAI SDK, LangChain4j, Quarkus and Spring AI.  
+> 🔌 All the examples use OVHcloud's [AI Endpoints](https://www.ovhcloud.com/en/public-cloud/ai-endpoints/) and the open weight model `gpt-oss-120b`.  
+> 🐙 Code and demo available [here](https://github.com/pigumax/Java-and-AI-Part1).
 
 <br/>
 
 # 📜 Introduction
-Ah l'été, ses plages, ses apéros... et ses bonnes résolutions 🤣 !  
-La mienne sera de commencer une série d'articles autour de l'Intelligence Artificielle (IA) et de Java ! 🤖 ☕️
-Pourquoi faire de tels articles en 2026, me direz-vous ?
-Tout simplement parce qu'au fil des talks et ateliers que je donne, je me rends compte que l'IA reste une zone un peu floue pour bon nombre de développeuses et développeurs lorsqu'il s'agit de l'ajouter dans les applications plutôt que de l'utiliser.
+Ah, summer: its beaches, its drinks... and its good resolutions 🤣 !  
+Mine will be to start a series of articles around Artificial Intelligence (AI) and Java! 🤖 ☕️
+Why write such articles in 2026, you'll ask me?
+Quite simply because, over the talks and workshops I give, I realize that AI remains a slightly blurry area for many developers when it comes to adding it into applications rather than just using it.
 
-Je vous propose donc de faire le tour du propriétaire, calmement.
-On ne verra peut-être pas tout, mais je vais essayer de vous donner le plus d'éléments possibles pour commencer votre voyage au sein de l'IA en Java.
+So I'm inviting you to take the grand tour, calmly.
+We probably won't cover everything, but I'll try to give you as many elements as possible to start your journey into AI in Java.
 
-Alors, on va parler essentiellement d'IA générative et plus particulièrement de Large Language Model (LLM).
+So, we're going to talk mostly about generative AI and more specifically about Large Language Models (LLM).
 
-> Je vais prendre le temps d'écrire cette série à la main, pas de slop 😆 ! 
-> Non pas que je n'aime pas l'IA, mais je vais en profiter aussi pour approfondir certains concepts et donc prendre le temps d'apprendre 😉.
-> Ne vous étonnez donc pas du temps entre les articles ⏳.
+> I'm going to take the time to write this series by hand, no slop 😆 ! 
+> Not that I don't like AI, but I'll also take the opportunity to dig deeper into some concepts and therefore take the time to learn 😉.
+> So don't be surprised by the time between articles ⏳.
 
-# 🤖 Quelques notions de base sur les LLM et leurs utilisations
+# 🤖 A few basics about LLMs and how to use them
 
-Pour bien commencer, on va prendre quelques minutes pour revoir ensemble quelques éléments essentiels pour comprendre le code à venir dans cet article et les suivants.
+To get started, we'll take a few minutes to review together some essential elements needed to understand the code coming up in this article and the next ones.
 
-## 🧩 Un token
+## 🧩 A token
 
-Commençons par une notion clé dans le monde des LLM : le `token`.
-Un `token` c'est un peu l'équivalent d'un mot dans une phrase.
-C'est une manière de découper le texte pour qu'il puisse être compréhensible et analysable par le modèle.
-Sauf qu'ici un mot tel qu'on le connait ne correspond pas forcément à un `token`.
-Par exemple, pour le français, il faut très souvent en moyenne 4 `tokens` pour 3 mots (même si ce n'est pas une règle absolue et que cela peut varier selon les modèles).
+Let's start with a key notion in the world of LLMs: the `token`.
+A `token` is a bit like the equivalent of a word in a sentence.
+It's a way of splitting text so that it can be understood and analyzed by the model.
+Except that here a word as we know it doesn't necessarily map to a single `token`.
+For example, for French, it very often takes on average 4 `tokens` for 3 words (even if it's not an absolute rule and it can vary depending on the model).
 
-> ℹ️ En réalité dans le modèle ce n'est pas un token sous forme de lettres qui est manipulé, mais un vecteur de nombres.
+> ℹ️ In reality, inside the model it isn't a token in the form of letters that is manipulated, but a vector of numbers.
 
-Et pourquoi est-ce important 🤔 ?
+And why does it matter 🤔 ?
 
-Tout simplement parce que c'est ce qui va vous être facturé 💸 ! 
+Quite simply because that's what you'll be billed for 💸 ! 
 
-Attention donc à votre consommation, d'autant que la plupart du temps la facturation est différente entre l'input et l'output.
+So watch your consumption, especially since most of the time the billing differs between input and output.
 
-## 🪟 La fenêtre de contexte
+## 🪟 The context window
 
-C'est un concept qui est lié à celui des tokens.
-À savoir que c'est le nombre de tokens maximum que le modèle peut traiter lors d'une requête que ce soit en input ou en output.
+It's a concept tied to that of tokens.
+Namely, it's the maximum number of tokens the model can process during a request, whether in input or output.
 
-Et selon les modèles, vous allez avoir une taille plus ou moins grande, qui va vous permettre d'envoyer plus ou moins de données (mais aussi d'en recevoir).
+And depending on the model, you'll have a larger or smaller size, which will let you send more or less data (but also receive more or less).
 
-## 🎛️ Les paramètres (ou poids)
+## 🎛️ The parameters (or weights)
 
-On parle de manière assez similaire de poids et de paramètres pour les modèles (même si ce n'est pas tout à fait la même chose, cela n'a pas d'importance pour nous).
+We talk fairly interchangeably about weights and parameters for models (even if it's not exactly the same thing, it doesn't matter to us).
 
-Le nombre de paramètres d'un modèle est très souvent le nombre dans le nom qui précède un B.
-Le B étant pour milliards, cela représente donc le nombre de paramètres du modèle en milliards.
-Par exemple mon-LLM-2B est un modèle qui a 2 milliards de paramètres.
+The number of parameters of a model is very often the number in the name preceding a B.
+The B standing for billions, it therefore represents the number of parameters of the model in billions.
+For example my-LLM-2B is a model that has 2 billion parameters.
 
-Mais au final, c'est bien d'avoir beaucoup de paramètres 🧐 ?
+But in the end, is it good to have a lot of parameters 🧐 ?
 
-Le nombre de paramètres va représenter la capacité du modèle à apprendre des choses plus ou moins différentes et profondes.
-Bien entendu, cela dépendra au final des données d'apprentissage 😉.
+The number of parameters represents the model's capacity to learn more or less diverse and deep things.
+Of course, in the end it will depend on the training data 😉.
 
-Donc oui, avoir beaucoup de paramètres c'est bien, mais pour certaines tâches ce n'est pas nécessaire.
-Et surtout, attention à la puissance matérielle exigée par les gros modèles (aka avec beaucoup de paramètres).
+So yes, having a lot of parameters is good, but for some tasks it isn't necessary.
+And above all, beware of the hardware power required by big models (aka with lots of parameters).
 
-Une formule simple pour calculer la mémoire nécessaire pour un modèle : _2 octets x Nombre de paramètres_.
-Puis, on ajoute 20% pour les activations.
+A simple formula to compute the memory needed for a model: _2 bytes x Number of parameters_.
+Then, add 20% for the activations.
 
-Par exemple pour un petit modèle de 2 milliards de paramètres, on est donc à 4 Go de RAM pour faire tourner le modèle 😱 !  
-Prenons un exemple de modèle moyen avec 35 milliards de paramètres, il nous faudra donc 84 Go de RAM 💥.  
-Et pour un gros modèle, avec 200 milliards de paramètres, il nous faudra 480 Go de RAM 😱 !  
+For example, for a small model of 2 billion parameters, we're therefore at 4 GB of RAM to run the model 😱 !  
+Take an example of a medium model with 35 billion parameters, we'll then need 84 GB of RAM 💥.  
+And for a big model, with 200 billion parameters, we'll need 480 GB of RAM 😱 !  
 
-Il va donc falloir trouver un compromis entre la capacité d'apprentissage et l'infrastructure nécessaire pour votre modèle.
+So you'll have to find a compromise between learning capacity and the infrastructure needed for your model.
 
-Rien ne vous empêche de tester ce que je vais vous présenter sur de plus petits modèles en self hosting.
-Pour tout ce qui touche ce domaine, je ne saurais trop vous conseiller tout le travail effectué par [Philippe Charrière](https://k33g.org/) sur le sujet 🤩.
+Nothing stops you from testing what I'm going to show you on smaller models in self hosting.
+For everything related to this domain, I can't recommend enough all the work done by [Philippe Charrière](https://k33g.org/) on the subject 🤩.
 
-> Dans cette série d'articles, je vais utiliser les modèles d'OVHcloud à travers le produit [AI Endpoints](https://www.ovhcloud.com/en/public-cloud/ai-endpoints/).
-> J'ai la chance de travailler pour OVHcloud et d'avoir accès à ces modèles 😆.
+> In this series of articles, I'm going to use OVHcloud's models through the [AI Endpoints](https://www.ovhcloud.com/en/public-cloud/ai-endpoints/) product.
+> I'm lucky enough to work for OVHcloud and to have access to these models 😆.
  
-Pour les différents exemples, je vais utiliser le modèle open weight [oss-gpt-120B](https://www.ovhcloud.com/en/public-cloud/ai-endpoints/catalog/gpt-oss-120b/) d'OVHcloud.
-C'est un modèle qui a de bonnes performances et permet de couvrir tous nos use cases avec une taille "raisonnable".
+For the various examples, I'm going to use OVHcloud's open weight model [oss-gpt-120B](https://www.ovhcloud.com/en/public-cloud/ai-endpoints/catalog/gpt-oss-120b/).
+It's a model that has good performance and lets us cover all our use cases with a "reasonable" size.
 
-## 🌡️ La température
+## 🌡️ The temperature
 
-Dans les différents exemples de code que l'on va découvrir ensemble, on positionnera un paramètre nommé `temperature`. 
-En deux mots la `température` va vous permettre de rendre votre modèle plus ou moins créatif et déterministe.
-Plus vous allez augmenter la `température` (généralement entre 0 et 1.0 ou 2.0 selon le fournisseur), plus le modèle sera créatif, et inversement, plus vous la baissez vers 0, plus il sera déterministe.
+In the various code examples we're going to discover together, we'll set a parameter called `temperature`. 
+In a nutshell, the `temperature` lets you make your model more or less creative and deterministic.
+The more you increase the `temperature` (generally between 0 and 1.0 or 2.0 depending on the provider), the more creative the model will be, and conversely, the more you lower it towards 0, the more deterministic it will be.
 
 ## 🌐 API
 
-Dernière notion que je veux présenter : comment accéder à vos modèles (locaux ou distants).
-Là, à peu près tout le monde fait la même chose : exposer une API qui consomme / produit un payload JSON.
+Last notion I want to introduce: how to access your models (local or remote).
+Here, pretty much everyone does the same thing: expose an API that consumes / produces a JSON payload.
 
-> Chez OVHcloud, on a fait le choix de prendre comme standard de fait l'API d'OpenAI.
-> C'est pourquoi la majorité des exemples de code que vous verrez par la suite utiliseront des librairies compatibles.
+> At OVHcloud, we made the choice to adopt OpenAI's API as the de facto standard.
+> That's why most of the code examples you'll see afterwards will use compatible libraries.
 
 # 💬 Use case
 
-Je ne vais pas être original pour le use case des exemples, ce sera un chat bot.
-Ce use case est certes très connu, mais il me permettra d'introduire au fil du temps les différentes notions dont vous aurez besoin pour intégrer de l'IA dans vos développements.
-Cela me permet aussi de tester simplement différentes approches selon les Frameworks choisis.
+I won't be original for the use case of the examples, it'll be a chatbot.
+This use case is admittedly very well known, but it will let me introduce over time the various notions you'll need to integrate AI into your developments.
+It also lets me easily test different approaches depending on the chosen Frameworks.
 
-On fera donc un chat simple avec ou sans streaming.
-Avec ou sans mémoire, RAG, function calling, MCP, agentic, skills,...
+So we'll build a simple chat with or without streaming.
+With or without memory, RAG, function calling, MCP, agentic, skills,...
 
-On reviendra sur ce que sont tous ces termes barbares à chaque partie qui couvrira comment les implémenter dans vos applications Java.
+We'll come back to what all these barbaric terms mean in each part, which will cover how to implement them in your Java applications.
 
-> J'essaierai de modifier cet article au fur et à mesure pour avoir les liens vers chaque sous article qui portera sur une de ces notions.
+> I'll try to update this article as we go to have the links to each sub-article covering one of these notions.
 
-Commençons donc par la base : un chat bot simple avec un prompt utilisatrice ou utilisateur et la possibilité de faire une réponse en streaming ou non.
-Ce sera le seul exemple où l'on utilisera toutes les technos / frameworks.
-En effet, parfois, il sera beaucoup trop complexe de ne pas utiliser des frameworks.
-Cela ne veut pas dire que ce n'est pas possible, mais mon objectif n'est pas de réécrire un SDK complet 🙃.
+So let's start with the basics: a simple chatbot with a user prompt and the option to answer with streaming or not.
+This will be the only example where we use all the technologies / frameworks.
+Indeed, sometimes it will be far too complex not to use frameworks.
+That doesn't mean it's not possible, but my goal isn't to rewrite a full SDK 🙃.
 
-Le découpage de ce use case est donc le suivant :
- 1. envoi d'un prompt et affichage de la réponse une fois celle-ci générée par le modèle
- 2. utilisation d'un `prompt système`
- 3. activation du mode streaming pour voir la réponse arriver au fil de l'eau
+The breakdown of this use case is therefore as follows:
+ 1. send a prompt and display the answer once it has been generated by the model
+ 2. use a `system prompt`
+ 3. enable streaming mode to see the answer arrive on the fly
 
-Mais c'est quoi un `prompt système` 🤔 ?
+But what is a `system prompt` 🤔 ?
 
-Voyez ça comme une _orientation du comportement_ du modèle : on va lui indiquer une certaine direction à suivre dans ses réponses.  
-Par exemple, si vous demandez à un modèle : "à quoi sert une assiette ?".
-Il y a de grandes chances qu'il vous réponde "à manger".
-Si vous positionnez un `prompt système` (on verra comment) : "Tu es un spécialiste en aéronautique".
-Il y a de grandes chances qu'il réponde : "À stabiliser un avion."
+Think of it as a _steering of the model's behavior_: we're going to point it in a certain direction to follow in its answers.  
+For example, if you ask a model: "what is a plate for?".
+There's a good chance it'll answer "for eating".
+If you set a `system prompt` (we'll see how): "You are an aeronautics specialist".
+There's a good chance it'll answer: "To stabilize a plane."
 
-> Au-delà de "donner une orientation", le prompt système sert souvent à définir un ton, des contraintes, un format de réponse, des règles de comportement, un persona, etc.
+> Beyond "giving a direction", the system prompt is often used to define a tone, constraints, a response format, behavior rules, a persona, etc.
 
-# 🖥️ La base : CURL
+# 🖥️ The basics: CURL
 
-Avant de se lancer en Java, voyons quelques requêtes simples dans un bash avec CURL.
-L'idée n'est pas de faire tous les exemples de cette manière, ce serait beaucoup trop complexe 😅.
-Mais notre premier use case est réalisable avec cette approche, donc autant en profiter.
+Before diving into Java, let's look at a few simple requests in bash with CURL.
+The idea isn't to do all the examples this way, it would be far too complex 😅.
+But our first use case is doable with this approach, so let's make the most of it.
 
-## 💬 Envoi d'un prompt et affichage de la réponse
+## 💬 Send a prompt and display the answer
 
 {|
 ```bash
@@ -201,12 +201,12 @@ echo "$RESPONSE" | jq -r '.choices[0].message.content'
 ```
 |}
 
-Voyons un peu dans le détail ce que l'on fait dans ce code.
+Let's look in a bit more detail at what we do in this code.
 
-L'étape 1️⃣ positionne notamment l'API key pour AI Endpoints afin de ne pas avoir de rate limite.
-> À noter que sans cette clef, l'exemple fonctionne, mais vous êtes limité à 2 requêtes par IP par minute.
+Step 1️⃣ sets, among other things, the API key for AI Endpoints so as not to have a rate limit.
+> Note that without this key, the example works, but you're limited to 2 requests per IP per minute.
 
-L'étape 2️⃣ construit le payload que l'on envoie, avec un prompt du type "Why is the sky blue? (provide a concise answer)":
+Step 2️⃣ builds the payload we send, with a prompt like "Why is the sky blue? (provide a concise answer)":
 ```json
 {
   "model": "gpt-oss-120b",  (2.1)
@@ -218,15 +218,15 @@ L'étape 2️⃣ construit le payload que l'on envoie, avec un prompt du type "W
   ]
 }
 ```
-On a ici une structure minimaliste pour envoyer une requête à notre modèle :
- - `2.1` : le modèle que l'on veut utiliser, ici `gpt-oss-120b`. En effet, plusieurs modèles sont disponibles.
- - `2.2` : un tableau avec une liste de messages à envoyer. Pour notre premier exemple, il n'y en a qu'un seul.
- - `2.3` : le rôle du persona qui envoie le message, ici c'est vous (on verra que ça va changer) avec le rôle de type `user`
- - `2.4` : le prompt qui va être utilisé.
+Here we have a minimalist structure to send a request to our model:
+ - `2.1` : the model we want to use, here `gpt-oss-120b`. Indeed, several models are available.
+ - `2.2` : an array with a list of messages to send. For our first example, there's only one.
+ - `2.3` : the role of the persona sending the message, here it's you (we'll see that this will change) with the role of type `user`
+ - `2.4` : the prompt that will be used.
 
-L'étape 3️⃣ consiste à appeler le endpoint en ajoutant au payload le token dans le header.
+Step 3️⃣ consists of calling the endpoint by adding the token to the payload in the header.
 
-L'étape 4️⃣ est la réponse brute :
+Step 4️⃣ is the raw response:
 ```json
 {
   "id": "chatcmpl-affdf154315ba79c",
@@ -235,7 +235,7 @@ L'étape 4️⃣ est la réponse brute :
       "index": 0,
       "message": {                    (4.2)
         "role": "assistant",          (4.3)
-(4.4)   "content": "The sky looks blue because molecules and tiny particles in Earth’s atmosphere scatter sunlight. Short‑wavelength (blue) light is scattered about 10 times more efficiently than red light (Rayleigh scattering), so when sunlight passes through the atmosphere, the blue component is redirected in all directions and reaches our eyes from every part of the sky. At sunrise or sunset the light travels through a longer atmospheric path, scattering away the blue and letting the red hues dominate.",
+(4.4)   "content": "The sky looks blue because molecules and tiny particles in Earth’s atmosphere scatter sunlight. Short‑wavelength (blue) light is scattered about 10 times more efficiently than red light (Rayleigh scattering), so when sunlight passes through the atmosphere, the blue component is redirected in all directions and reaches our eyes from every part of the sky. At sunrise or sunset the light travels through a longer atmospheric path, scattering away the blue and letting the red hues dominate.",
 (4.5)   "reasoning": "User asks: \"Why is the sky blue? (provide a concise answer)\". Need concise answer. Probably 2-3 sentences. Provide explanation: scattering of short-wavelength (blue) light by atmosphere (Rayleigh scattering). Mention sun's white light, scattering more efficient for shorter wavelengths, gives blue appearance. Also mention sunrise/sunset reddening due to longer path. Provide concise answer.",   
         "tool_calls": []
       },
@@ -253,31 +253,31 @@ L'étape 4️⃣ est la réponse brute :
 }
 ```
 
-Voyons ce que l'on a dans cette réponse (je passerai de manière volontaire sur certains champs que l'on verra dans les prochains articles) :
- - `(4.1)` la réponse est dans un tableau, dans notre cas avec un seul élément, mais ça va vite changer 😉
- - `(4.2)` comme pour l'envoi, on a une structure `messages` qui contient la réponse
- - `(4.3)` cette fois le `role` est `assistant`, cela représente le modèle
- - `(4.4)` la réponse du modèle (les tokens générés)
- - `(4.5)` le raisonnement utilisé par le modèle. En effet, le modèle que l'on utilise est un modèle dit avec "raisonnement". En deux mots : le prompt va être découpé en sous-étapes pour avoir ce que l'on appelle la chaîne de pensée. C'est plus efficace, mais plus lent et consomme plus de tokens. 
- - `(4.6)` on retrouve la consommation en nombre de tokens pour ce simple prompt : 
-   - le nombre de tokens envoyés (votre prompt) : 79
-   - le nombre de tokens générés (réponse du modèle) : 183 (⚠️ y compris le raisonnement ⚠️)
-   - donc au total 262 tokens
+Let's look at what we have in this response (I'll deliberately skip some fields that we'll see in future articles):
+ - `(4.1)` the response is in an array, in our case with a single element, but that will change quickly 😉
+ - `(4.2)` as for sending, we have a `messages` structure that contains the response
+ - `(4.3)` this time the `role` is `assistant`, it represents the model
+ - `(4.4)` the model's answer (the generated tokens)
+ - `(4.5)` the reasoning used by the model. Indeed, the model we use is a so-called "reasoning" model. In a nutshell: the prompt is split into sub-steps to get what we call the chain of thought. It's more effective, but slower and consumes more tokens. 
+ - `(4.6)` we find the consumption in number of tokens for this simple prompt: 
+   - the number of tokens sent (your prompt): 79
+   - the number of tokens generated (the model's answer): 183 (⚠️ including the reasoning ⚠️)
+   - so 262 tokens in total
 
-L'étape 5️⃣ est tout simplement l'extraction de la réponse pour que ce soit plus lisible.
+Step 5️⃣ is quite simply the extraction of the answer to make it more readable.
 
-### 📽️ Voyons ça en action !
+### 📽️ Let's see it in action!
 <video width="100%"  controls>
   <source src="Bash-SimpleChatbot.mov" type="video/quicktime">
 </video>
 
 
-## 📏 Activation du prompt système
+## 📏 Enabling the system prompt
 
-Maintenant que l'on a la base de notre chatbot, ajoutons la notion de prompt système.
-On va s'en servir pour ne plus avoir à répéter "(provide a concise answer)" à chaque demande, tout en gardant cette consigne systématiquement appliquée.
+Now that we have the basics of our chatbot, let's add the notion of a system prompt.
+We'll use it so we no longer have to repeat "(provide a concise answer)" on every request, while keeping this instruction systematically applied.
 
-Pour cela, il faut modifier l'étape 2️⃣ en rajoutant le prompt système comme suit :
+To do this, you need to modify step 2️⃣ by adding the system prompt as follows:
 ```bash
 # Build the JSON request body.
 # jq safely encodes the user input into valid JSON.
@@ -290,7 +290,7 @@ BODY=$(jq -n --arg model "$MODEL" --arg content "$USER_PROMPT" '{
 }')
 ```
 
-Ce qui donne :
+Which gives:
 ```json
 {
   "model": "gpt-oss-120b",
@@ -306,21 +306,21 @@ Ce qui donne :
   ]
 }
 ```
-On voit ici un nouveau rôle qui permet d'ajouter le prompt système : `system`.
+Here we see a new role that lets us add the system prompt: `system`.
 
-### 📽️ Voyons ça en action !
+### 📽️ Let's see it in action!
 <video width="100%"  controls>
   <source src="Bash-SimpleChatbot-SystemPrompt.mov" type="video/quicktime">
 </video>
 
-## 📏 Activation du streaming
+## 📏 Enabling streaming
 
-Le mode streaming va nous permettre d'afficher les tokens les uns après les autres dès que le LLM les a générés sans attendre qu'il ait fini de générer la réponse complètement.
-Cela améliore grandement l'expérience utilisatrice et utilisateur 🤗.
+Streaming mode will let us display the tokens one after another as soon as the LLM has generated them, without waiting for it to finish generating the full answer.
+This greatly improves the user experience 🤗.
 
-Pour activer le streaming, c'est assez simple, il suffit d'ajouter `"stream": true` dans le payload.
-La modification la plus complexe concerne l'affichage du résultat.
-En effet, chaque token va arriver au fil de l'eau via SSE, il va donc falloir modifier le code pour les afficher au fur et à mesure.
+To enable streaming, it's quite simple, you just add `"stream": true` to the payload.
+The most complex change concerns displaying the result.
+Indeed, each token arrives on the fly via SSE, so we'll have to modify the code to display them as they come.
 
 {|
 ```bash
@@ -383,7 +383,7 @@ echo
 ```
 |}
 
-L'étape 1️⃣ ne change pas, et la seule modification que l'on a faite dans l'étape 2️⃣ est l'activation du mode streaming.
+Step 1️⃣ doesn't change, and the only modification we made in step 2️⃣ is enabling streaming mode.
 
 ```json
 {
@@ -401,9 +401,9 @@ L'étape 1️⃣ ne change pas, et la seule modification que l'on a faite dans l
   ]
 }
 ```
- - `(2.1)` activation du mode streaming (false par défaut)
+ - `(2.1)` enabling streaming mode (false by default)
 
-L'étape 3️⃣ change un petit peu du fait de la réception de chaque token.
+Step 3️⃣ changes a little bit due to the reception of each token.
 
 ```json
 data: {
@@ -434,24 +434,24 @@ data: {"id":"chatcmpl-bb5885faaeb2adf7","choices":[{"index":0,"delta":{"role":"a
 
 data: {"id":"chatcmpl-bb5885faaeb2adf7","choices":[{"index":0,"delta":{"role":"assistant","reasoning":" is","name":"assistant"}}],"created":1784709442,"model":"gpt-oss-120b","object":"chat.completion.chunk"}
 ```
-Ce n'est qu'un extrait de toutes les lignes générées (ici le début de la partie raisonnement).
- - `(3.1)` le token généré
- - `(3.2)` indique que ce n'est qu'une partie du texte généré
+This is only an extract of all the generated lines (here the beginning of the reasoning part).
+ - `(3.1)` the generated token
+ - `(3.2)` indicates that this is only a part of the generated text
 
-### 📽️ Voyons ça en action !
+### 📽️ Let's see it in action!
 <video width="100%"  controls>
   <source src="Bash-SimpleChatbot-SystemPromptStreaming.mov" type="video/quicktime">
 </video>
 
 # ☕️ Java
 
-Maintenant que l'on a une bonne idée de comment cela fonctionne sans aide extérieure, passons à quelque chose de plus intéressant : Java 🤩.
+Now that we have a good idea of how it works without any outside help, let's move on to something more interesting: Java 🤩.
 
 ## ✍️ Pure Java
 
-Commençons par transposer simplement le code bash sans aide extérieure.
+Let's start by simply porting the bash code without any outside help.
 
-### 💬 Envoi d'un prompt et affichage de la réponse
+### 💬 Send a prompt and display the answer
 
 {|
 ```java
@@ -518,8 +518,8 @@ void main() throws Exception {
 ```
 |}
 
-L'étape 1️⃣ nous permet d'utiliser [JBang](https://www.jbang.dev/), la bonne nouvelle est que l'on va être très proche de ce que l'on fait avec un script bash.
-L'étape 2️⃣, à la syntaxe Java près, est la même chose que l'étape 2️⃣ en Bash, cela prépare le payload à envoyer au endpoint.
+Step 1️⃣ lets us use [JBang](https://www.jbang.dev/); the good news is that we're going to stay very close to what we do with a bash script.
+Step 2️⃣, Java syntax aside, is the same thing as step 2️⃣ in Bash, it prepares the payload to send to the endpoint.
 ```json
 {
   "model" : "gpt-oss-120b",
@@ -530,8 +530,8 @@ L'étape 2️⃣, à la syntaxe Java près, est la même chose que l'étape 2️
 }
 ```
 
-L'étape 3️⃣ est la même que pour l'étape 3️⃣ en Bash, appeler l'API avec le payload.
-Et enfin l'étape 4️⃣ récupère la réponse et n'affiche que la partie `content` du body.
+Step 3️⃣ is the same as step 3️⃣ in Bash, calling the API with the payload.
+And finally step 4️⃣ retrieves the response and only prints the `content` part of the body.
 ```json
 {
   "id" : "chatcmpl-92a3f9eb6921559e",
@@ -555,17 +555,17 @@ Et enfin l'étape 4️⃣ récupère la réponse et n'affiche que la partie `con
   }
 }
 ```
-Je ne détaille pas la réponse, elle est exactement la même qu'en bash.
+I won't detail the response, it's exactly the same as in bash.
 
-#### 📽️ Voyons ça en action !
+#### 📽️ Let's see it in action!
 <video width="100%"  controls>
   <source src="Java-SimpleChatbot.mov" type="video/quicktime">
 </video>
 
-### 📏 Activation du prompt système
+### 📏 Enabling the system prompt
 
-Vous l'aurez deviné, l'activation du prompt système va être comme en bash.
-Ajouter le prompt système au payload à l'étape 2️⃣.
+You'll have guessed it, enabling the system prompt is going to be just like in bash.
+Add the system prompt to the payload in step 2️⃣.
 ```java
   // 2️⃣ Build the JSON request body with Jackson.
   ObjectNode body = mapper.createObjectNode();
@@ -578,15 +578,15 @@ Ajouter le prompt système au payload à l'étape 2️⃣.
   // ...
 ```
 
-#### 📽️ Voyons ça en action !
+#### 📽️ Let's see it in action!
 <video width="100%"  controls>
   <source src="Java-SimpleChatbot-SystemPrompt.mov" type="video/quicktime">
 </video>
 
-## 📏 Activation du streaming
+## 📏 Enabling streaming
 
-Je pense que vous l'avez compris maintenant : là encore, pour le streaming, la seule chose qui change c'est que le code est écrit en Java et non en Bash.
-La logique est la même (ajout de `"stream": true` au payload dans l'étape 2️⃣), et les payloads et body aussi.
+I think you've got it by now: here again, for streaming, the only thing that changes is that the code is written in Java and not in Bash.
+The logic is the same (adding `"stream": true` to the payload in step 2️⃣), and the payloads and body too.
 
 {|
 ```java
@@ -668,18 +668,18 @@ void main() throws Exception {
 ```
 |}
 
-L'étape 4️⃣ affiche les tokens les uns après les autres, le body reçu est le même qu'en Bash.
+Step 4️⃣ prints the tokens one after another, the received body is the same as in Bash.
 
-#### 📽️ Voyons ça en action !
+#### 📽️ Let's see it in action!
 <video width="100%"  controls>
   <source src="Java-SimpleChatbot-SystemPromptStreaming.mov" type="video/quicktime">
 </video>
 
-## 🛠️ Avec le SDK OpenAI
+## 🛠️ With the OpenAI SDK
 
-Dans cette partie on va voir ce que cela donne avec l'utilisation d'un SDK.
-Afin de ne pas être trop répétitif je vous propose de créer directement le chat bot final (streaming + prompt système).
-J'utilise le [SDK officiel](https://github.com/openai/openai-java) d'OpenAI comme les endpoints d'OVHcloud sont compatibles avec les API OpenAI.
+In this part we're going to see what it looks like using an SDK.
+So as not to be too repetitive, I suggest we directly build the final chatbot (streaming + system prompt).
+I use OpenAI's [official SDK](https://github.com/openai/openai-java) since OVHcloud's endpoints are compatible with the OpenAI APIs.
 
 ```java
 ///usr/bin/env jbang "$0" "$@" ; exit $?
@@ -731,9 +731,9 @@ void main() {
 }
 ```
 
-L'étape 1️⃣ nous permet d'initialiser le client en choisissant le modèle que l'on souhaite utiliser et en positionnant certains paramètres de haut niveau (comme les logs par exemple).
-L'étape 2️⃣  nous permet de passer les différents prompts et potentiellement d'autres options que l'on verra plus tard.
-En parlant des logs, si on active le `debug` on peut voir ce qui est envoyé :
+Step 1️⃣ lets us initialize the client by choosing the model we want to use and setting some high-level parameters (like logs for example).
+Step 2️⃣  lets us pass the various prompts and potentially other options we'll see later.
+Speaking of logs, if we enable `debug` we can see what is sent:
 ```json
 {"messages":[
   {"content":"provide a concise answer","role":"system"},     (1.1)
@@ -743,27 +743,27 @@ En parlant des logs, si on active le `debug` on peut voir ce qui est envoyé :
 }
 ```
 
-On retrouve ce que l'on a déjà vu :
- - `(1.1)` le prompt système
- - `(1.2)` le prompt utilisatrice ou utilisateur
- - `(1.3)` le modèle à utiliser
- - `(1.4)` l'activation du streaming
+We find what we've already seen:
+ - `(1.1)` the system prompt
+ - `(1.2)` the user prompt
+ - `(1.3)` the model to use
+ - `(1.4)` enabling streaming
 
-À ce stade vous vous demandez peut-être comment le streaming a pu être activé ?
-C'est à l'étape 3️⃣ que cela passe, lorsque l'on utilise le client pour appeler la méthode `createStreaming` le flag de streaming est implicitement activé à `true`.
+At this point you may be wondering how streaming got enabled?
+It happens at step 3️⃣: when we use the client to call the `createStreaming` method, the streaming flag is implicitly set to `true`.
 
-#### 📽️ Voyons ça en action !
+#### 📽️ Let's see it in action!
 <video width="100%"  controls>
   <source src="Java-SDK-SimpleChatbot-SystemPromptStreaming.mov" type="video/quicktime">
 </video>
 
-## 🦜 Avec LangChain4j
+## 🦜 With LangChain4j
 
-On avance dans notre simplification d'écriture de code, cette fois on va utiliser un Framework de plus haut niveau avec [LangChain4j](https://docs.langchain4j.dev/).
-C'est mon Framework préféré en Java pour l'ajout d'IA dans une application.
-On va le voir, cela simplifie grandement le code.
-Comme pour le SDK, je vais faire l'exemple le plus complet dès le début de cette sous-partie.
-Je vais utiliser le mode [AI Services](https://docs.langchain4j.dev/tutorials/ai-services) qui permet une plus grande abstraction.
+We move forward in simplifying our code writing; this time we're going to use a higher-level Framework with [LangChain4j](https://docs.langchain4j.dev/).
+It's my favorite Framework in Java for adding AI to an application.
+As we'll see, it greatly simplifies the code.
+As with the SDK, I'll build the most complete example right from the start of this sub-part.
+I'm going to use the [AI Services](https://docs.langchain4j.dev/tutorials/ai-services) mode, which allows for a greater abstraction.
 
 {|
 ```java
@@ -831,19 +831,19 @@ void main() {
 ```
 |}
 
-Ce qui est bien avec LangChain4j est que l'on va passer en mode déclaratif / builder.
-Bien entendu, vous pouvez ne pas utiliser les AI Services et avoir un code un peu plus verbeux, mais que vous pouvez customiser plus précisément.
+What's nice with LangChain4j is that we switch to a declarative / builder mode.
+Of course, you can choose not to use the AI Services and have slightly more verbose code, but that you can customize more precisely.
 
-L'étape 1️⃣ nous permet d'indiquer comment on souhaite dialoguer avec le modèle.
-Si je traduis en français ce que fait cette interface :
- - on souhaite créer un assistant (`interface Assistant`)
- - avec comme moyen d'accéder au modèle une méthode `chat` qui prend une chaîne de caractères en entrée (`String userMessage`) représentant le prompt utilisatrice ou utilisateur, et qui renvoie la réponse en streaming (`TokenStream`)
- - et on positionne le prompt système grâce à l'annotation `@SystemMessage("provide a concise answer")`
+Step 1️⃣ lets us specify how we want to talk to the model.
+If I translate into plain English what this interface does:
+ - we want to create an assistant (`interface Assistant`)
+ - with, as a way to access the model, a `chat` method that takes a string as input (`String userMessage`) representing the user prompt, and that returns the answer as a stream (`TokenStream`)
+ - and we set the system prompt thanks to the `@SystemMessage("provide a concise answer")` annotation
 
-Ensuite l'étape 2️⃣ nous permet de configurer le modèle que l'on souhaite utiliser.
-Comme nous souhaitons activer le mode streaming, on utilise un `StreamingChatModel` puis le builder `OpenAiStreamingChatModel`.
-Il ne nous reste plus qu'à positionner l'URL, la clé d'API et le nom du modèle à utiliser.
-Si vous activez les logs, vous voyez le détail de ce qui est envoyé :
+Then step 2️⃣ lets us configure the model we want to use.
+Since we want to enable streaming mode, we use a `StreamingChatModel` then the `OpenAiStreamingChatModel` builder.
+All that's left is to set the URL, the API key and the name of the model to use.
+If you enable the logs, you see the detail of what is sent:
 ```json
 {
   "model" : "gpt-oss-120b",
@@ -861,20 +861,20 @@ Si vous activez les logs, vous voyez le détail de ce qui est envoyé :
 }
 ```
 
-L'étape 3️⃣  permet d'assembler la définition du modèle et de ce que l'on veut en faire en créant un assistant grâce aux AI Services.
+Step 3️⃣  assembles the definition of the model and of what we want to do with it by creating an assistant thanks to the AI Services.
 
-Enfin, l'étape 4️⃣  permet de faire l'appel au modèle en streaming et d'afficher la réponse token par token. Pour cela on utilise un `CompletableFuture` qui va permettre de gérer la fin du stream.
+Finally, step 4️⃣  makes the call to the model in streaming mode and prints the answer token by token. For this we use a `CompletableFuture` that will let us handle the end of the stream.
 
-#### 📽️ Voyons ça en action !
+#### 📽️ Let's see it in action!
 <video width="100%"  controls>
-  <source src="Java-Quarkus-SimpleChatbot-SystemPromptStreaming.mov" type="video/quicktime">
+  <source src="Java-LangChain4j-SimpleChatbot-SystemPromptStreaming.mov" type="video/quicktime">
 </video>
 
 
-## ⚡️ Avec Quarkus
+## ⚡️ With Quarkus
 
-On remonte encore d'un cran pour aller vers des Frameworks que l'on peut qualifier d'entreprise.
-Le premier sera [Quarkus](https://quarkus.io/) avec l'extension [quarkus-langchain4j](https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html).
+We go up one more notch to reach Frameworks we can call enterprise-grade.
+The first will be [Quarkus](https://quarkus.io/) with the [quarkus-langchain4j](https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html) extension.
 
 {|
 ```java
@@ -932,10 +932,10 @@ public class _04_02_StreamingChatbot implements QuarkusApplication {
 }
 ```
 |}
-On commence à avoir un code plus que concis, et pourtant cela fait toujours la même chose.
+We're starting to have more-than-concise code, and yet it still does the same thing.
 
-L'étape 1️⃣ charge le fichier `application.properties` dans le classpath.
-Ce fichier contient la configuration du modèle utilisé, on ne le fait plus dans le code.
+Step 1️⃣ loads the `application.properties` file into the classpath.
+This file contains the configuration of the model used, we no longer do it in the code.
 {|
 ```properties
 # Keep the console output clean for a CLI chatbot.
@@ -953,28 +953,28 @@ quarkus.langchain4j.openai.api-key=${OVH_AI_ENDPOINTS_ACCESS_TOKEN}             
 ```
 |}
 
- - `(1.1)` dénote l'URL à laquelle se connecter
- - `(1.2)` précise le modèle à utiliser
- - `(1.3)` récupère le token d'API via une variable d'environnement
+ - `(1.1)` denotes the URL to connect to
+ - `(1.2)` specifies the model to use
+ - `(1.3)` retrieves the API token via an environment variable
 
-L'étape 2️⃣  configure comment on va interagir avec le modèle via l'utilisation des `AI Services`.
-L'activation se fait par le biais de l'utilisation de l'annotation `@RegisterAiService`.
-Le streaming est activé en indiquant comme type de retour `Multi<String>`
+Step 2️⃣  configures how we're going to interact with the model through the use of the `AI Services`.
+Enabling it is done by using the `@RegisterAiService` annotation.
+Streaming is enabled by specifying `Multi<String>` as the return type.
 
-L'étape 3️⃣ nous permet d'utiliser Quarkus en mode main simple (sans lancer de serveur).
-L'étape 4️⃣ injecte le service défini en 2️⃣  pour pouvoir l'utiliser dans le main.
+Step 3️⃣ lets us use Quarkus in simple main mode (without launching a server).
+Step 4️⃣ injects the service defined in 2️⃣  so we can use it in the main.
 
-Enfin l'étape 5️⃣ permet d'afficher le résultat de l'appel.
+Finally step 5️⃣ prints the result of the call.
 
-#### 📽️ Voyons ça en action !
+#### 📽️ Let's see it in action!
 <video width="100%"  controls>
   <source src="Java-Quarkus-SimpleChatbot-SystemPromptStreaming.mov" type="video/quicktime">
 </video>
 
-## ☘️ Avec Spring AI
+## ☘️ With Spring AI
 
-Dernière implémentation, pour ne pas faire de jaloux, [Spring AI](https://spring.io/projects/spring-ai).
-La logique ressemble beaucoup à ce que l'on a vu avec Quarkus et LangChain4j, je ne vais donc pas trop m'attarder.
+Last implementation, so as not to make anyone jealous, [Spring AI](https://spring.io/projects/spring-ai).
+The logic looks a lot like what we saw with Quarkus and LangChain4j, so I won't dwell on it too much.
 ```java
 ///usr/bin/env jbang "$0" "$@" ; exit $?
 //JAVA 26+
@@ -1029,7 +1029,7 @@ public class _05_02_StreamingChatbot {
 }
 ```
 
-L'étape 1️⃣ permet toujours de configurer le modèle dans un fichier `application.properties`.
+Step 1️⃣ still lets us configure the model in an `application.properties` file.
 {|
 ```properties
 # Command-line app: no web server, no banner, quiet logs.
@@ -1045,24 +1045,24 @@ spring.ai.openai.chat.options.model=gpt-oss-120b
 spring.ai.openai.api-key=${OVH_AI_ENDPOINTS_ACCESS_TOKEN}
 ```
 |}
-Et enfin l'étape 2️⃣ permet de configurer l'appel en activant le mode streaming (`stream()`).
+And finally step 2️⃣ lets us configure the call by enabling streaming mode (`stream()`).
 
-#### 📽️ Voyons ça en action !
+#### 📽️ Let's see it in action!
 <video width="100%"  controls>
   <source src="Java-SpringAI-SimpleChatbot-SystemPromptStreaming.mov" type="video/quicktime">
 </video>
 
 # 🏁 Conclusion
 
-Et voilà !
-Ce premier article est beaucoup trop long 😅.
-Mais je me devais de poser les bases, et il me semblait bon d'illustrer tout de suite cela par un exemple simple de chat bot.
+And there we go!
+This first article is far too long 😅.
+But I had to lay the groundwork, and it also felt right to illustrate it straight away with a simple chatbot example.
 
-Pour la suite, on continuera à essayer d'ajouter des fonctionnalités dans notre chat bot.
-On verra si on sera capable de conserver toutes les approches illustrées ici.
+For the future, we'll keep trying to add features to our chatbot.
+We'll see if we manage to keep all the approaches shown here.
 
-La prochaine étape va consister à rajouter un peu de mémoire à notre chat bot 🧠.
+The next step will be to add a bit of memory to our chatbot 🧠.
 
-Vous pouvez retrouver l'ensemble du code source dans le [repo GitHub](https://github.com/philippart-s/java-ai-area-blog) de l'article.
+You can find the full source code in the article's [GitHub repo](https://github.com/philippart-s/java-ai-area-blog).
 
-Si vous êtes arrivés jusque-là merci de m'avoir lu et si il y a des coquilles n'hésitez pas à me faire une [issue ou PR](https://github.com/philippart-s/blog) 😊.
+If you made it this far, thanks for reading! If you spot any typos, feel free to open an [issue or PR](https://github.com/philippart-s/blog) 😊.

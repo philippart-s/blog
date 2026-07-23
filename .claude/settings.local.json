@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p content/translations/2026-07-21-java-and-ai-part1-en)",
+      "Bash(cp content/posts/2026/2026-07-21-java-and-ai-part1/*.mov content/translations/2026-07-21-java-and-ai-part1-en/)",
+      "Bash(rmdir content/translations/2026-07-21-java-and-ai-part1)"
+    ]
+  }
+}

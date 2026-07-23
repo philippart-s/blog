@@ -21,15 +21,15 @@ author: wildagsx
 Ah l'été, ses plages, ses apéros... et ses bonnes résolutions 🤣 !
 La mienne sera de commencer une série d'articles autour de l'Intelligence Artificielle (IA) et de Java ! 🤖 ☕️
 Pourquoi me direz-vous faire de tels articles en 2026 ?
-Tout simplement parce que je me rends compte en avec les talks et ateliers que je donne que l'IA reste une zone un peu floue pour bon nombre de développeuses et développeurs lorsqu'il s'agit de l'ajouter dans les applications plutpot que de l'utiliser.
+Tout simplement parce que je me rends compte avec les talks et ateliers que je donne, que l'IA reste une zone un peu floue pour bon nombre de développeuses et développeurs lorsqu'il s'agit de l'ajouter dans les applications plutôt que de l'utiliser.
 
 Je vous propose donc de faire le tour du propriétaire, calmement.
-On ne verra peut-être pas tout mais je vais essayerde vous donner le plus d'éléments possibles pour commencer votre voyage au sein de l'IA en Java.
+On ne verra peut-être pas tout, mais je vais essayer de vous donner le plus d'éléments possibles pour commencer votre voyage au sein de l'IA en Java.
 
 Alors, on va parler essentiellement d'IA générative et plus particulièrement de Large Language Model (LLM).
 
-> Je vais prendre d'écrire cette série à la main, pas de slop 😆 ! 
-> Non pas que je nl'aime pas l'IA, mais je vais en profiter aussi pour approfondir certains concepts et donc prendre le temps d'apprendre 😉.
+> Je vais prendre le temps d'écrire cette série à la main, pas de slop 😆 ! 
+> Non pas que je n'aime pas l'IA, mais je vais en profiter aussi pour approfondir certains concepts et donc prendre le temps d'apprendre 😉.
 > Ne vous étonnez donc pas du temps entre les articles ⏳.
 
 # 🤖 Quelques notions de base sur les LLM et leurs utilisations
@@ -41,23 +41,23 @@ Pour bien commencer, on va prendre quelques minutes pour revoir ensemble quelque
 Commençons par une notion clé dans le monde des LLM : le `token`.
 Un `token` c'est un peu l'équivalent d'un mot dans une phrase.
 C'est une manière de découper le texte pour qu'il puisse être compréhensible et analysable par le modèle.
-Sauf qu'ici un mot tel qu'on le connait ne correspond pas forcément un `token`.
-Par exemple pour le français très souvent il faut en moyenne 4 `tokens` pour 3 mots (même si ce n'est pas une règle absolue qui peut varier selon les modèles).
+Sauf qu'ici un mot tel qu'on le connait ne correspond pas forcément à un `token`.
+Par exemple pour le français très souvent, il faut en moyenne 4 `tokens` pour 3 mots (même si ce n'est pas une règle absolue qui peut varier selon les modèles).
 
-> ℹ️ En réalité dans le modèle ce n'est pas un token sous forme de lettres qui manipulé mais un vecteur de nombres.
+> ℹ️ En réalité dans le modèle ce n'est pas un token sous forme de lettres qui est manipulé, mais un vecteur de nombres.
 
-Et pourquoi c'est important 🤔 ?
+Et pourquoi est-ce important 🤔 ?
 
 Tout simplement parce que c'est ce qui va vous être facturé 💸 ! 
 
-Attention donc à votre consommation, d'autant que la plupart du temps la facturation est différentes entre l'input et l'output.
+Attention donc à votre consommation, d'autant que la plupart du temps la facturation est différente entre l'input et l'output.
 
 ## 🪟 La fenêtre de contexte
 
 C'est un concept qui est lié à celui des tokens.
 À savoir que c'est le nombre de tokens maximum que le modèle peut traiter lors d'une requête que ce soit en input ou en output.
 
-Et selon les modèles, vous allez avoir une taille plus au moins grande, qui va vous permettre d'envoyer plus ou moins de données (mais aussi d'en recevoir).
+Et selon les modèles, vous allez avoir une taille plus ou moins grande, qui va vous permettre d'envoyer plus ou moins de données (mais aussi d'en recevoir).
 
 ## 🎛️ Les paramètres (ou poids)
 
@@ -67,29 +67,29 @@ Le nombre de paramètres d'un modèle est très souvent le nombre dans le nom qu
 Le B étant pour milliards, cela représente donc le nombre de paramètres du modèle en milliards.
 Par exemple mon-LLM-2B est un modèle qui a 2 milliards de paramètres.
 
-Mais au final, c'est bien d'en avoir beaucoup de paramètres ?
+Mais au final, c'est bien d'avoir beaucoup de paramètres 🧐 ?
 
 Le nombre de paramètres va représenter la capacité du modèle à apprendre des choses plus ou moins différentes et profondes.
 Bien entendu, cela dépendra au final des données d'apprentissage 😉.
 
 Donc oui avec beaucoup de paramètres, c'est bien, mais pour certaines tâches ce n'est pas nécessaire et surtout attention à la puissance matérielle nécessaire pour des gros modèles (aka avec beaucoup de paramètres).
 
-Une formule simple pour calculer la mémoire nécessaire pour un modèle : 2 octets x Nombre de paramètres.
+Une formule simple pour calculer la mémoire nécessaire pour un modèle : _2 octets x Nombre de paramètres_.
 Puis, on ajoute 20% pour les activations.
 
-Par exemple pour un petit modèle de 2 milliards de paramètres, on est donc à 4GO de RAM pour faire tourner le modèle 😱 !
-Prenons un exemple de modèle moyen avec 35 milliards de paramètres, il nous faudra donc 84GO de RAM 💥.
-Et pour un gros modèle, avec 200 milliards de paramètres, il nous faudra 480GO de RAM 😱 !
+Par exemple pour un petit modèle de 2 milliards de paramètres, on est donc à 4 Go de RAM pour faire tourner le modèle 😱 !
+Prenons un exemple de modèle moyen avec 35 milliards de paramètres, il nous faudra donc 84 Go de RAM 💥.
+Et pour un gros modèle, avec 200 milliards de paramètres, il nous faudra 480 Go de RAM 😱 !
 
-Il va donc falloir trouver un compromis entre capacité d'apprentissage et l'infrastructure nécessaire pour votre modèle.
+Il va donc falloir trouver un compromis entre la capacité d'apprentissage et l'infrastructure nécessaire pour votre modèle.
 
 Rien ne vous empêche de tester ce que je vais vous présenter sur des plus petits modèles en self hosting.
-Pour tout ce qui touche ce domaine, je ne saurai que trop vous conseiller tout le travail efectuée par [Philippe Charrière](https://k33g.org/) sur le sujet 🤩.
+Pour tout ce qui touche ce domaine, je ne saurais trop vous conseiller tout le travail effectué par [Philippe Charrière](https://k33g.org/) sur le sujet 🤩.
 
 > Dans cette série d'articles, je vais utiliser les modèles d'OVHcloud à travers le produit [AI Endpoints](https://www.ovhcloud.com/en/public-cloud/ai-endpoints/).
 > J'ai la chance de travailler pour OVHcloud et d'avoir accès à ces modèles 😆.
  
-Pour les différents exemples je vais utiliser le modèle open weight [oss-gpt-120B](https://www.ovhcloud.com/en/public-cloud/ai-endpoints/catalog/gpt-oss-120b/) d'OVHcloud.
+Pour les différents exemples, je vais utiliser le modèle open weight [oss-gpt-120B](https://www.ovhcloud.com/en/public-cloud/ai-endpoints/catalog/gpt-oss-120b/) d'OVHcloud.
 C'est un modèle qui a de bonnes performances et permet de couvrir tous nos use cases avec une taille "raisonnable".
 
 ## 🌡️ La température
@@ -108,33 +108,33 @@ Là, à peu près tout le monde fait la même chose : exposer une API qui consom
 
 # 💬 Use case
 
-Je ne vais pas être original pour le use case des exemples, ce sear un chat bot.
+Je ne vais pas être original pour le use case des exemples, ce sera un chat bot.
 Si ce use case est très connu, cela me permettra de rajouter au fil du temps les différentes notions dont vous aurez besoin lors de vos ajouts d'IA dans vos développements.
 Cela me permet aussi de tester simplement différentes approches selon les Frameworks choisis.
 
-On fera donc un chat simple simple avec ou sans streaming.
+On fera donc un chat simple avec ou sans streaming.
 Avec ou sans mémoire, RAG, function calling, MCP, agentic, skills,...
 
 On reviendra sur ce que sont tous ces termes barbares à chaque partie qui couvrira comment les implémenter dans vos applications Java.
 
-> J'essaierai de modifier cet article au fur et mesure pour avoir les liens vers chaque sous article qui portera sur une des ces notions.
+> J'essaierai de modifier cet article au fur et à mesure pour avoir les liens vers chaque sous article qui portera sur une de ces notions.
 
 Commençons donc par la base : un chat bot simple avec un prompt utilisatrice ou utilisateur et la possibilité de faire une réponse en streaming ou non.
 Ce sera le seul exemple où l'on utilisera toutes les technos / frameworks.
-En effet, parfois, il sera beaucoup trop complexe de ne pas utiliser des frmeworks.
-Cela ne veut pas dire que ce n'est pas possible mais mon objectif n'est pas de réécrire un SDK complet 🙃.
+En effet, parfois, il sera beaucoup trop complexe de ne pas utiliser des frameworks.
+Cela ne veut pas dire que ce n'est pas possible, mais mon objectif n'est pas de réécrire un SDK complet 🙃.
 
 Le découpage de ce use case est donc le suivant :
- 1. envoie d'un prompt et affichage de la réponse une fois celle-ci générée par le modèle
+ 1. envoi d'un prompt et affichage de la réponse une fois celle-ci générée par le modèle
  2. utilisation d'un `prompt système`
  3. activation du mode streaming pour voir la réponse arriver au fil de l'eau
 
 Mais c'est quoi un `prompt système` 🤔 ?
 Voyez ça comme une _orientation du comportement_ du modèle : on va lui indiquer une certaine direction à suivre dans ses réponses.
-Par exemple, si vous demandez à modèle : "à quoi sert une assiette ?".
+Par exemple, si vous demandez à un modèle : "à quoi sert une assiette ?".
 Il y a de grandes chances qu'il vous réponde "à manger".
-Si vous positionnez un `prompt système` (on verra comment) : "Tu es un spécialiste an aéronautique".
-Il y a de grandes chances qu'il réponde : "A stabiliser un avion."
+Si vous positionnez un `prompt système` (on verra comment) : "Tu es un spécialiste en aéronautique".
+Il y a de grandes chances qu'il réponde : "À stabiliser un avion."
 
 > Au-delà de "donner une orientation", le prompt système sert souvent à définir un ton, des contraintes, un format de réponse, des règles de comportement, un persona, etc.
 
@@ -144,7 +144,7 @@ Avant de se lancer en Java, voyons quelques requêtes simples dans un bash avec 
 L'idée n'est pas de faire tous les exemples avec cette manière, ce serait beaucoup trop complexe 😅.
 Mais notre premier use case est réalisable avec cette approche donc autant en profiter.
 
-## 💬 Envoie d'un prompt et affichage de la réponse
+## 💬 Envoi d'un prompt et affichage de la réponse
 
 {|
 ```bash
@@ -196,8 +196,8 @@ echo "$RESPONSE" | jq -r '.choices[0].message.content'
 
 Voyons un peu dans le détail ce que l'on fait dans ce code.
 
-L'étape 1️⃣ positionne, notamment l'API key pour AI Endpoints afin de ne pas avoir de rate limite.
-> À noter que sans cette clef, l'exemple fonctionne mais vous êtes limité à 2 requêtes par IP par minute.
+L'étape 1️⃣ positionne notamment l'API key pour AI Endpoints afin de ne pas avoir de rate limite.
+> À noter que sans cette clef, l'exemple fonctionne, mais vous êtes limité à 2 requêtes par IP par minute.
 
 L'étape 2️⃣ construit le payload que l'on envoie, avec un prompt du type "Why is the sky blue? (provide a concise answer)":
 ```json
@@ -212,14 +212,14 @@ L'étape 2️⃣ construit le payload que l'on envoie, avec un prompt du type "W
 }
 ```
 On a ici une structure minimaliste pour envoyer une requête à notre modèle :
- - `2.1` : le modèle que l'on veut utiliser, ici `gpt-oss-120b`. En effet, plusieurs moèles sont disponibles.
- - `2.2` : un tableau avec une liste de messages à envoyer. Pour notre premier exemple il y en a qu'un seul.
- - `2.3` : le rôle du persona qui envoie le message, ici c'est vous (on verra que ça va changer) avec le role de type `user`
+ - `2.1` : le modèle que l'on veut utiliser, ici `gpt-oss-120b`. En effet, plusieurs modèles sont disponibles.
+ - `2.2` : un tableau avec une liste de messages à envoyer. Pour notre premier exemple, il n'y en a qu'un seul.
+ - `2.3` : le rôle du persona qui envoie le message, ici, c'est vous (on verra que ça va changer) avec le role de type `user`
  - `2.4` : le prompt qui va être utilisé.
 
 L'étape 3️⃣ consiste à appeler le endpoint en ajoutant au payload le token dans le header.
 
-L'étape 4️⃣ est la réponse brute:
+L'étape 4️⃣ est la réponse brute :
 ```json
 {
   "id": "chatcmpl-affdf154315ba79c",
@@ -247,17 +247,17 @@ L'étape 4️⃣ est la réponse brute:
 ```
 
 Voyons ce que l'on a dans cette réponse (je passerai de manière volontaire sur certains champs que l'on verra dans les prochains articles) :
- - `(4.1)` la réponse est dans un tableau, dans notre car avec un seul éléments mais ça va vite changer 😉
- - `(4.2)` comme pour l'envoie on a une structure `messages` qui contient la réponse est
+ - `(4.1)` la réponse est dans un tableau, dans notre cas avec un seul élément, mais ça va vite changer 😉
+ - `(4.2)` comme pour l'envoi, on a une structure `messages` qui contient la réponse
  - `(4.3)` cette fois le `role` est `assistant`, cela représente le modèle
  - `(4.4)` la réponse du modèle (les tokens générés)
- - `(4.5)` le raisonnement utilisé parle modèle. En effet, le modèle que l'on utilise est un modèle dit avec "raisonnement". En deux mots : le prompt va être découpé en sous étapes pour avoir ce que l'on appelle chaîne de pensée. C'est plus efficace mais plus lent et consomme plus de tokens. 
+ - `(4.5)` le raisonnement utilisé par le modèle. En effet, le modèle que l'on utilise est un modèle dit avec "raisonnement". En deux mots : le prompt va être découpé en sous-étapes pour avoir ce que l'on appelle la chaîne de pensée. C'est plus efficace, mais plus lent et consomme plus de tokens. 
  - `(4.6)` on retrouve la consommation en nombre de tokens pour ce simple prompt : 
    - le nombre de tokens envoyés (votre prompt) : 79
    - le nombre de tokens générés (réponse du modèle) : 183 (⚠️ y compris le raisonnement ⚠️)
    - donc au total 262 tokens
 
-L'étape 5️⃣ est tout simplement l'extraction de la réponse pour que soit plus lisible.
+L'étape 5️⃣ est tout simplement l'extraction de la réponse pour que ce soit plus lisible.
 
 ### 📽️ Voyons ça en action !
 <video width="100%"  controls>
@@ -270,7 +270,7 @@ L'étape 5️⃣ est tout simplement l'extraction de la réponse pour que soit p
 Maintenant que l'on a la base de notre chatbot ajoutons la notion de prompt système.
 On va se servir du prompt système pour éviter de devoir rajouter la notion "(provide a concise answer)" et qu'à chaque demande elle soit tout de même appliquée.
 
-Pour cela il faut modifier l'étape 2️⃣ en rajoutant le prompt système comme suit :
+Pour cela, il faut modifier l'étape 2️⃣ en rajoutant le prompt système comme suit :
 ```bash
 # Build the JSON request body.
 # jq safely encodes the user input into valid JSON.
@@ -308,10 +308,10 @@ On voit ici un nouveau rôle qui permet d'ajouter le prompt système : `system`.
 
 ## 📏 Activation du streaming
 
-Le mode streaming va nous permettre d'afficher les tokens les uns après les autres dès que le LLM les a généré sans attendre qu'il ait fini de générer la réponse complètement.
+Le mode streaming va nous permettre d'afficher les tokens les uns après les autres dès que le LLM les a générés sans attendre qu'il ait fini de générer la réponse complètement.
 Cela améliore grandement l'expérience utilisatrice et utilisateur 🤗.
 
-Pour activer le streaming c'est assez simple, il suffit d'ajouter dans le payload `"stream": true`.
+Pour activer le streaming, c'est assez simple, il suffit d'ajouter dans le payload `"stream": true`.
 La modification la plus complexe concerne l'affichage du résultat.
 En effet, chaque token va arriver au fil de l'eau via SSE, il va donc falloir modifier le code pour afficher ces tokens au fil de l'eau.
 
@@ -442,9 +442,9 @@ Maintenant que l'on a une bonne idée de comment cela fonctionne sans aide exté
 
 ## ✍️ Pure Java
 
-Commençons par transposer simplement le code bash sans aide extérieur.
+Commençons par transposer simplement le code bash sans aide extérieure.
 
-### 💬 Envoie d'un prompt et affichage de la réponse
+### 💬 Envoi d'un prompt et affichage de la réponse
 
 {|
 ```java
@@ -512,7 +512,7 @@ void main() throws Exception {
 |}
 
 L'étape 1️⃣ nous permet d'utiliser [JBang](https://www.jbang.dev/), la bonne nouvelle est que l'on va être très proche de ce que l'on fait avec un script bash.
-L'étape 2️⃣, à la syntax Java près, est la même chose que l'étape 2️⃣ en Bash, cela prépare le payload à envoyer au endpoint.
+L'étape 2️⃣, à la syntaxe Java près, est la même chose que l'étape 2️⃣ en Bash, cela prépare le payload à envoyer au endpoint.
 ```json
 {
   "model" : "gpt-oss-120b",
@@ -523,7 +523,7 @@ L'étape 2️⃣, à la syntax Java près, est la même chose que l'étape 2️�
 }
 ```
 
-L'étape 3️⃣ est la même que pour l'étape 3️⃣ en BAsh, eppeler l'API avec le payload.
+L'étape 3️⃣ est la même que pour l'étape 3️⃣ en Bash, appeler l'API avec le payload.
 Et enfin l'étape 4️⃣ récupère la réponse et n'affiche que la partie `content` du body.
 ```json
 {
@@ -557,7 +557,7 @@ Je ne détaille pas la réponse qui est exactement la même qu'en bash.
 
 ### 📏 Activation du prompt système
 
-Vous l'aurez deviné, l'activation du système prompt va être comme en bash.
+Vous l'aurez deviné, l'activation du prompt système va être comme en bash.
 Ajouter le prompt système au payload à l'étape 2️⃣.
 ```java
   // 2️⃣ Build the JSON request body with Jackson.
@@ -742,7 +742,7 @@ On retrouve ce que l'on a déjà vu :
  - `(1.3)` le modèle à utiliser
  - `(1.4)` l'activation du streaming
 
-A ce stade vous vous demandez peut-être comment le streaming a pu être activé ?
+À ce stade vous vous demandez peut-être comment le streaming a pu être activé ?
 C'est à l'étape 3️⃣ que cela passe, lorsque l'on utilise le client pour appeler la méthode `createStreaming` le flag de streaming est implicitement activé à `true`.
 
 #### 📽️ Voyons ça en action !
@@ -753,9 +753,9 @@ C'est à l'étape 3️⃣ que cela passe, lorsque l'on utilise le client pour ap
 ## 🦜 Avec LangChain4j
 
 On avance dans notre simplification d'écriture de code, cette fois on va utiliser un Framework de plus haut niveau avec [LangChain4j](https://docs.langchain4j.dev/).
-C'est mon Framework préféré en Java pour l'inclusion d'IA dans une application.
+C'est mon Framework préféré en Java pour l'ajout d'IA dans une application.
 On va le voir cela simplifie grandement le code.
-Comme pour le SDK je vais faire l'exemple le plus complet dès le début de cette sous-partie.
+Comme pour le SDK, je vais faire l'exemple le plus complet dès le début de cette sous-partie.
 Je vais utiliser le mode [AI Services](https://docs.langchain4j.dev/tutorials/ai-services) qui permet une plus grande abstraction.
 
 {|
@@ -827,14 +827,14 @@ void main() {
 Ce qui est bien avec LangChain4j est que l'on va passer en mode déclaratif / builder.
 Bien entendu, vous pouvez ne pas utiliser les AI Services et avoir un code un peu plus verbeux mais que vous pouvez customiser plus précisément.
 
-L'étape 1️⃣ nous permet d'indiquer avec comment on souhaite dialoguer avec le modèle.
+L'étape 1️⃣ nous permet d'indiquer comment on souhaite dialoguer avec le modèle.
 Si je traduis en français ce que fait cette interface :
  - on souhaite créer un assistant (`interface Assistant`)
  - avec comme moyen d'accéder au modèle une méthode `chat` qui prend une chaîne de caractères en entrée (`String userMessage`) qui représente le prompt utilisatrice ou utilisateur. Et qui renvoie la réponse en streaming (`TokenStream`)
  - et on positionne le prompt système grâce à l'annotation `@SystemMessage("provide a concise answer")`
 
 Ensuite l'étape 2️⃣ nous permet de configurer le modèle que l'on souhaite utiliser.
-Comme nous souhaitons activer le mode streaming on utilise un  `StreamingChatModel` puis le builder `OpenAiStreamingChatModel`.
+Comme nous souhaitons activer le mode streaming, on utilise un  `StreamingChatModel` puis le builder `OpenAiStreamingChatModel`.
 Il ne nous reste plus qu'à positionner l'URL, la clé d'API et le nom du modèle à utiliser.
 Si vous activez les logs, vous voyez le détail de ce qui est envoyé :
 ```json
@@ -854,7 +854,7 @@ Si vous activez les logs, vous voyez le détail de ce qui est envoyé :
 }
 ```
 
-L'étape 3️⃣  permet d'assembler la définition du modèle et de ce que l'on veut en faire en créant un assistant grâce auw AI Services.
+L'étape 3️⃣  permet d'assembler la définition du modèle et de ce que l'on veut en faire en créant un assistant grâce aux AI Services.
 
 Enfin, l'étape 4️⃣  permet de faire l'appel au modèle en streaming et d'afficher la réponse token par token. Pour cela on utilise un `CompletableFuture` qui va permettre de gérer la fin du stream.
 
@@ -866,7 +866,7 @@ Enfin, l'étape 4️⃣  permet de faire l'appel au modèle en streaming et d'af
 
 ## ⚡️ Avec Quarkus
 
-On remonte encore d'un cran pour aller vers des Framework que l'on peut qualifier d'entreprise.
+On remonte encore d'un cran pour aller vers des Frameworks que l'on peut qualifier d'entreprise.
 Le premier sera [Quarkus](https://quarkus.io/) avec l'extension [quarkus-langchain4j](https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html).
 
 {|
@@ -925,7 +925,7 @@ public class _04_02_StreamingChatbot implements QuarkusApplication {
 }
 ```
 |}
-On commence à avoir un code plus que consit et pourtant cela fait toujours la même chose.
+On commence à avoir un code plus que concis et pourtant cela fait toujours la même chose.
 
 L'étape 1️⃣ charge le fichier `application.properties` dans le classpath.
 Ce fichier contient la configuration du modèle utilisé, on ne le fait plus dans le code.
@@ -950,12 +950,12 @@ quarkus.langchain4j.openai.api-key=${OVH_AI_ENDPOINTS_ACCESS_TOKEN}             
  - `(1.2)` précise le modèle à utiliser
  - `(1.3)` récupère le token d'API via une variable d'environnement
 
-L'étape 2️⃣  configure comment on va interragir avec le modèle via l'utilisation des `AI Services`.
+L'étape 2️⃣  configure comment on va interagir avec le modèle via l'utilisation des `AI Services`.
 L'activation se fait par le biais de l'utilisation de l'annotation `@RegisterAiService`.
-Le streaming est activée en indiquant comme type de retour `Multi<String>`
+Le streaming est activé en indiquant comme type de retour `Multi<String>`
 
 L'étape 3️⃣ nous permet d'utiliser Quarkus en mode main simple (sans lancer de serveur).
-L'étape 4️⃣ injecte le service définit en 2️⃣  pour pouvoir l'utiliser dans le main.
+L'étape 4️⃣ injecte le service défini en 2️⃣  pour pouvoir l'utiliser dans le main.
 
 Enfin l'étape 5️⃣ permet d'afficher le résultat de l'appel.
 
@@ -966,7 +966,7 @@ Enfin l'étape 5️⃣ permet d'afficher le résultat de l'appel.
 
 ## ☘️ Avec Spring AI
 
-Dernière implémtation, pour ne pas faire de jaloux, [Spring AI](https://spring.io/projects/spring-ai).
+Dernière implémentation, pour ne pas faire de jaloux, [Spring AI](https://spring.io/projects/spring-ai).
 La logique ressemble beaucoup à ce que l'on a vu avec Quarkus et LangChain4j, je ne vais donc pas trop m'attarder.
 ```java
 ///usr/bin/env jbang "$0" "$@" ; exit $?
@@ -1049,11 +1049,13 @@ Et enfin l'étape 2️⃣ permet de configurer l'appel en activant le mode strea
 
 Et voilà !
 Ce premier article est beaucoup trop long 😅.
-Mais je me devais de poser les bases et il me semblait bien aussi de tout de suite illustrer cela par un exemple simple de chat bot.
+Mais je me devais de poser les bases et il me semblait bon aussi de tout de suite illustrer cela par un exemple simple de chat bot.
 
 Pour la suite on continuera à essayer d'ajouter des fonctionnalités dans notre chat bot.
 On verra si on sera capable de conserver toutes les approches illustrées ici.
 
 La prochaine étape va consister à rajouter un peu de mémoire à notre chat bot 🧠.
+
+Vous pouvez retrouver l'ensemble du code source dans le [repo GitHub](https://github.com/philippart-s/java-ai-area-blog) de l'article.
 
 Si vous êtes arrivés jusque-là merci de m'avoir lu et si il y a des coquilles n'hésitez pas à me faire une [issue ou PR](https://github.com/philippart-s/blog) 😊.

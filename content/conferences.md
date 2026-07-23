@@ -1,6 +1,6 @@
 ---
 title: Conferences
-layout: :theme/page
+layout: page
 tags:
   - Conférences
   - Slides

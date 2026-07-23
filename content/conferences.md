@@ -1,6 +1,6 @@
 ---
 title: Conferences
-layout: :theme/page
+layout: page
 tags:
   - Conférences
   - Slides
@@ -32,20 +32,19 @@ Vous pouvez aussi retrouver la [liste des sujets]({site.url}/talks/) que j'ai do
 
 
 <table>
-{#let conferences=cdi:conferences}
-{#for year in conferences.fieldNames.stream().sorted().toList().reversed()}
+{#for year in cdi:myConfs.years}
   <tr>
     <th colspan="3">
       <h1> {year} </h1>
     </th>
   </tr>
-{#for conf in conferences.get(year)}
+{#for conf in cdi:myConfs.getByYear(year)}
   <tr>
     <td style="width: 35%; text-align: left;">
       {conf.name}
     </td>
     <td style="width: 35%;">
-      🗓️ {conf.date} 🗓️
+      🗓️ {conf.displayDate} 🗓️
     </td>
     <td style="width: 30%;">
       🎤 <a href="{site.url}/talks/{conf.talksUrl}">

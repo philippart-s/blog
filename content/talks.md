@@ -1,6 +1,6 @@
 ---
 title: Talks
-layout: :theme/page
+layout: page
 tags:
   - talks
   - Conférences

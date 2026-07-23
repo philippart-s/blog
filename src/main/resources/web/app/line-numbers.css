@@ -1,0 +1,42 @@
+/* Personnalisation des numéros de ligne (highlightjs-line-numbers.js) */
+
+/* Taille de police des blocs de code, un peu plus petite que le texte courant */
+pre code.hljs {
+    font-size: .875em;
+    line-height: 1.5;
+}
+
+/* Neutralise le style de tableau générique du thème appliqué au <table> injecté
+   par le plugin (rayures « pyjama », bordures, padding de cellules, hauteur de ligne). */
+table.hljs-ln,
+table.hljs-ln tr,
+table.hljs-ln td {
+    border: 0 !important;
+    background: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: inherit !important;
+    vertical-align: top;
+}
+
+table.hljs-ln tr:nth-child(even),
+table.hljs-ln tr:nth-child(odd) {
+    background: none !important;
+}
+
+/* Colonne des numéros — sélecteur assez spécifique pour battre le reset ci-dessus */
+table.hljs-ln td.hljs-ln-numbers {
+    text-align: right;
+    color: #6b7280;
+    border-right: 1px solid #374151 !important;
+    padding-right: .8em !important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+}
+
+/* Colonne du code */
+table.hljs-ln td.hljs-ln-code {
+    padding-left: 1.2em !important;
+}

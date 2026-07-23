@@ -10,4 +10,9 @@ vendor/
 node_modules/
 target/
 
+# 🧑‍💻IDE config
 .idea/
+
+# 🤖AI config
+/.opencode/
+.claude/

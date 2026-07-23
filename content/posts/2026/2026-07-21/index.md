@@ -13,7 +13,12 @@ author: wildagsx
 🏴󠁧󠁢󠁥󠁮󠁧󠁿 You can find the English version of this article [here]({site.url}2026-07-21-java-and-ai-part1-en) 🏴󠁧󠁢󠁥󠁮󠁧󠁿.
 
 ## TL;DR
-> 
+> 🚀 Premier article d'une série pour apprendre à **ajouter de l'IA générative (LLM) dans vos applications Java**.
+> 🧠 On (re)pose d'abord les notions de base : `token`, fenêtre de contexte, paramètres/poids, `température` et API.
+> 💬 On construit un chat bot simple (avec `prompt système` et streaming) que l'on fera évoluer tout au long de la série.
+> ☕️ Le même use case est implémenté du plus bas niveau au plus haut : CURL, Java pur, le SDK OpenAI, LangChain4j, Quarkus et Spring AI.
+> 🔌 Tous les exemples utilisent [AI Endpoints](https://www.ovhcloud.com/en/public-cloud/ai-endpoints/) d'OVHcloud et le modèle open weight `gpt-oss-120b`.
+> 🐙 Code et démo disponibles [ici](https://github.com/pigumax/Java-and-AI-Part1).
 
 <br/>
 

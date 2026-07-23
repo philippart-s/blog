@@ -1,8 +1,13 @@
 import hljs from 'highlight.js';
-import installLineNumbers from 'highlightjs-line-numbers.js';
 import 'highlight.js/styles/agate.css';
+import './line-numbers.css';
 
-//installLineNumbers(hljs, window, document);
+// Le plugin highlightjs-line-numbers.js est une IIFE qui s'installe sur window.hljs.
+// Il faut donc exposer hljs sur window AVANT de charger le plugin, puis l'importer
+// dynamiquement (les imports statiques sont hoistés et s'exécuteraient trop tôt).
+window.hljs = hljs;
 
-hljs.highlightAll();
-hljs.initLineNumbersOnLoad();
+import('highlightjs-line-numbers.js').then(() => {
+    hljs.highlightAll();
+    hljs.initLineNumbersOnLoad();
+});

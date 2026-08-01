@@ -1,12 +1,11 @@
 ---
-layout: :theme/post
+layout: post
 tags:
     - Conférences
     - Slides
     - Replay
 ---
-{#for conference in cdi:myConfs.getByUrl(page.data.conference-name)}
-{#for talk in conference.talks}
+{#for talk in page.data.talks}
 <h2> <a href="#{talk.id}" id="{talk.title}">{talk.title}</a> </h2>
 📍{talk.location} / 🗣️ {talk.language} / 🗓️ {talk.date} / ⏰ {talk.time} /
 🕒 {talk.duration}
@@ -20,5 +19,4 @@ tags:
 {#if talk.source}📚 <a href="{talk.source}">Code source</a> / {/if} {#if talk.slides}🌠
 <a href="{talk.slides}">Slides</a> {/if} {#if talk.replay}/ 🎥 <a href="{talk.replay}">Replay</a>{/if}
 
-{/for}
 {/for}

@@ -1,6 +1,6 @@
 ---
 title: About
-layout: :theme/page
+layout: page
 ---
 
 # About Me

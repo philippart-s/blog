@@ -1,0 +1,2396 @@
+- title: 🎤 Talks donnés à Riviera Dev 🎤
+  link: /talks/riviera-2026/
+  description: Liste de talks donnés lors de la conférence Riviera Dev
+  image: conferences/Riviera-Dev-2026.png
+  author: wilda
+  year: '2026'
+  date: '2026-07-07'
+  name: Riviera Dev
+  postDate: 2026-07-07
+  talksUrl: riviera-2026
+  displayDate: 5 juillet 2026
+  excerpt: Conférences données lors de Riviera Dev 2026
+  categories: Conférences
+  talks:
+  - title: JBang, un fichier Java pour les gouverner tous ? 💍
+    id: jbang
+    location: Sophia Antipolis (🇫🇷)
+    language: Français
+    date: 7 juillet 2026
+    time: 11h40
+    duration: 30 minutes
+    pitch: |
+      Dans le monde Java, nous sommes habitués à initialiser un projet avec de nombreux fichiers et répertoires.
+      A tel point que des CLI ont vu le jour pour nous aider à créer les projets SpringBoot ou Quarkus par exemple.
+      Vient ensuite le choix du "package manager" : Maven ou Gradle ?
+      Et c'est seulement à partir de là que l'on peut commencer à développer puis exécuter son code 😅.
+
+      Toutes ces étapes fastidieuses expliquent pourquoi, lorsque que l'on a besoin de faire un développement rapide de quelques lignes pour automatiser une action, on préfère d'autres langages à Java : Python par exemple.
+
+      Et si je vous disais, qu'avec JBang, vous allez pouvoir rester avec votre langage préféré, Java, et développer une classe toute simple (avec des dépendances externes) en quelques secondes !
+
+      C'est le pari (spoiler : réussi) de JBang que je vous propose de découvrir durant une session de live coding.
+
+      A vous les joies du scripting en Java !
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vSELPj3ngLAi4Tdx3z-Gqeldxnil2koMCtLzxeFAsBRN0aDzvcGW2ErCRHlViz42n7WRVQCbysfJEGv/pub
+    source: https://github.com/philippart-s/jbang
+    replay: null
+  - title: ☕️ Toi aussi crée ta CLI boostée à l'IA avec Picocli 🖥️ 🤖
+    id: picocli
+    location: Sophia Antipolis (🇫🇷)
+    language: Français
+    date: 7 juillet 2026
+    time: 14h00
+    duration: 50 minutes
+    pitch: |
+      Les CLI (Command Line Interface), tout le monde les utilise et elles existent depuis la nuit des temps.
+      Dernièrement, elles reviennent sur le devant de scène avec les CLI boostées à l'IA devenant des vrais collègues de pair programming.
+
+      Souvent synonymes de gain de productivité, leur création est parfois obscure et peut sembler complexe.
+      C'était le cas il y a quelques décennies, mais depuis quelques années, des langages et Frameworks permettent d'en écrire simplement dans votre langage préféré.
+      Je vous propose d'utiliser un langage qui ne paraît pas, au premier abord, le plus intuitif pour faire une CLI : Java !
+
+      Mais il sera bien accompagné dans cette tâche : grâce à Picocli et Quarkus, notre CLI aura tout d'une grande, tout en étant simple à développer !
+      Et cerise sur le gâteau : nous créerons un "vrai" exécutable grâce à Graal VM.
+
+      Venez m'accompagner lors d'une session de live coding permettant de mettre en lumière comment créer une CLI en Java avec Picocli et Quarkus en partant de zéro !
+
+      Et qui sait, avec un peu de magie on aura, au final, un vrai assistant intelligent dans notre et terminal 🤖.
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vRmBGJcf3r15UZJyxwAsQy05AQZqYUbJV8mNIrimK0ZkvgsjPu9BWJvVvZC_v0N8VycAem6Fyedjf3G/pub#slide=id.g3b53703ef16_0_59
+    source: https://github.com/philippart-s/jarvis
+    replay: null
+- title: 🎤 Talks donnés à SunnyTech 🎤
+  link: /talks/sunytech-2026/
+  description: Liste de talks donnés lors de la conférence SunnyTech
+  image: conferences/sunny-tech-2026-logo.png
+  author: wilda
+  year: '2026'
+  date: '2026-07-03'
+  name: SunnyTech
+  postDate: 2026-07-03
+  talksUrl: sunytech-2026
+  displayDate: 2 juillet 2026
+  excerpt: Conférences données lors de SunnyTech 2026
+  categories: Conférences
+  talks:
+  - title: 🧰 Les dev containers, la boîte à outils ultime pour les devs ?
+    id: dev-containers
+    location: Montpellier (🇫🇷)
+    language: Français
+    date: 2 juillet 2026
+    time: 18
+    duration: 20 mins
+    pitch: |
+      On a toutes et tous été confronté•es, un jour, à devoir (ré)installer tout notre environnement de développement lors d'un changement de machine. Que ce soit par choix ou juste en mode "on-boarding" lors d'un changement de société, de mission, ... On a aussi, parfois, passé de longues heures pour comprendre quels outils installer pour proposer une PR ou MR dans un projet Open Source.
+
+      Dans encore beaucoup d'autres cas, nous sommes vite confrontés à l'enfer de la configuration des outils et autres frameworks pour faire ce que l'on aime : développer. Et je ne vous parle pas des montées de versions et inter-dépendances 😅...
+
+      Heureusement, il existe une solution à tous ces problèmes : les dev containers.
+
+      Lors de ce tools-in-action, je vous propose de partir à leur découverte. La seule chose que je m'autorise à installer sur ma machine : Docker ! Le reste sera de la gestion de configuration pour que les outils, les frameworks et la gestion des versions et dépendances soit un non-évènement dans votre process de développement.
+
+      Vous repartirez en sachant utiliser les dev containers mais aussi en sachant construire as-code votre stack de développement.
+    source: https://github.com/philippart-s/dev-containers-talk
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vTCOzJrm5i-VWLcuGb3KWtWeiVN-CFg5_3q8BiHL1kI5Rsr5IZ64DUjAOajznifBL8OkFtOiBczFXrR/pub
+    replay: https://youtu.be/iw7EkOISmrc?si=ooEtkZIe1gpSovIG
+- title: 🎤 Talks donnés à BreizhCamp 🎤
+  link: /talks/breizhcamp-2026/
+  description: Liste de talks donnés lors de la conférence BreizhCamp
+  image: conferences/breizhcamp-logo-2024.svg
+  author: wilda
+  year: '2026'
+  date: '2026-06-29'
+  name: BreizhCamp
+  postDate: 2026-06-29
+  talksUrl: breizhcamp-2026
+  displayDate: 25 juin 2026
+  excerpt: Conférences données lors de BreizhCamp 2026
+  categories: Conférences
+  talks:
+  - title: JBang, un fichier Java pour les gouverner tous ? 💍
+    id: jbang
+    location: Rennes (🇫🇷)
+    language: Français
+    date: 25 juin 2026
+    time: 17h00
+    duration: 25 minutes
+    pitch: |
+      Dans le monde Java, nous sommes habitués à initialiser un projet avec de nombreux fichiers et répertoires.
+      A tel point que des CLI ont vu le jour pour nous aider à créer les projets SpringBoot ou Quarkus par exemple.
+      Vient ensuite le choix du "package manager" : Maven ou Gradle ?
+      Et c'est seulement à partir de là que l'on peut commencer à développer puis exécuter son code 😅.
+
+      Toutes ces étapes fastidieuses expliquent pourquoi, lorsque que l'on a besoin de faire un développement rapide de quelques lignes pour automatiser une action, on préfère d'autres langages à Java : Python par exemple.
+
+      Et si je vous disais, qu'avec JBang, vous allez pouvoir rester avec votre langage préféré, Java, et développer une classe toute simple (avec des dépendances externes) en quelques secondes !
+
+      C'est le pari (spoiler : réussi) de JBang que je vous propose de découvrir durant une session de live coding.
+
+      A vous les joies du scripting en Java !
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vTgTX2QlPi_fmV9f6BcrUq22lz8aE8Q7QioOphQhre_QR5I1KV62inYD3VrmozMYVsKspyO8lGu7dVg/pub
+    source: https://github.com/philippart-s/jbang
+    replay: null
+  - title: 🧰 Les dev containers, la boîte à outils ultime pour les devs ?
+    id: dev-containers
+    location: Rennes (🇫🇷)
+    language: Français
+    date: 26 juin 2026
+    time: 16h
+    duration: 25mins
+    pitch: |
+      On a toutes et tous été confronté•es, un jour, à devoir (ré)installer tout notre environnement de développement lors d'un changement de machine. Que ce soit par choix ou juste en mode "on-boarding" lors d'un changement de société, de mission, ... On a aussi, parfois, passé de longues heures pour comprendre quels outils installer pour proposer une PR ou MR dans un projet Open Source.
+
+      Dans encore beaucoup d'autres cas, nous sommes vite confrontés à l'enfer de la configuration des outils et autres frameworks pour faire ce que l'on aime : développer. Et je ne vous parle pas des montées de versions et inter-dépendances 😅...
+
+      Heureusement, il existe une solution à tous ces problèmes : les dev containers.
+
+      Lors de ce tools-in-action, je vous propose de partir à leur découverte. La seule chose que je m'autorise à installer sur ma machine : Docker ! Le reste sera de la gestion de configuration pour que les outils, les frameworks et la gestion des versions et dépendances soit un non-évènement dans votre process de développement.
+
+      Vous repartirez en sachant utiliser les dev containers mais aussi en sachant construire as-code votre stack de développement.
+    source: https://github.com/philippart-s/dev-containers-talk
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vRRYh9lPgZ9OXdSOzDDv85cbPWAM4jx7mKHLGPHcozlP7SGN4SwweRqLkUq9FmLdqa-A9FYuxAM9u6i/pub
+    replay: null
+- title: 🎤 Talks donnés à Paris JUG 🎤
+  link: /talks/paris-jug-2026/
+  description: Liste de talks donnés lors de la conférence Paris JUG
+  image: conferences/paris-jug-logo.png
+  author: wilda
+  year: '2026'
+  date: '2026-06-17'
+  name: Paris JUG
+  postDate: 2026-06-17
+  talksUrl: paris-jug-2026
+  displayDate: 2 juin 2026
+  excerpt: Conférence donnée lors de Paris JUG 2026
+  categories: Conférences
+  talks:
+  - title: ☕️ Toi aussi crée ta CLI boostée à l'IA avec Picocli 🖥️ 🤖
+    id: picocli
+    location: Paris (🇫🇷)
+    language: Français
+    date: 2 juin 2026
+    time: 21h00
+    duration: 50 minutes
+    pitch: |
+      Les CLI (Command Line Interface), tout le monde les utilise et elles existent depuis la nuit des temps.
+      Dernièrement, elles reviennent sur le devant de scène avec les CLI boostées à l'IA devenant des vrais collègues de pair programming.
+
+      Souvent synonymes de gain de productivité, leur création est parfois obscure et peut sembler complexe.
+      C'était le cas il y a quelques décennies, mais depuis quelques années, des langages et Frameworks permettent d'en écrire simplement dans votre langage préféré.
+      Je vous propose d'utiliser un langage qui ne paraît pas, au premier abord, le plus intuitif pour faire une CLI : Java !
+
+      Mais il sera bien accompagné dans cette tâche : grâce à Picocli et Quarkus, notre CLI aura tout d'une grande, tout en étant simple à développer !
+      Et cerise sur le gâteau : nous créerons un "vrai" exécutable grâce à Graal VM.
+
+      Venez m'accompagner lors d'une session de live coding permettant de mettre en lumière comment créer une CLI en Java avec Picocli et Quarkus en partant de zéro !
+
+      Et qui sait, avec un peu de magie on aura, au final, un vrai assistant intelligent dans notre et terminal 🤖.
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vQL4VmxdFuHSM-8Rj6yOKac0vMjXi883QV1S3YI2Wj7W82cu1bpVjvxc8Ri6GQfgUdQPtE-fdQMniWf/pub
+    source: https://github.com/philippart-s/jarvis
+    replay: null
+- title: 🎤 Talks donnés à DevOpsdays Genève 🎤
+  link: /talks/devoxx-geneva-2026/
+  description: Liste de talks donnés lors de la conférence DevOpsdays Genève
+  image: conferences/devopsdays-geneve-2026.webp
+  author: wilda
+  year: '2026'
+  date: '2026-05-22'
+  name: DevOpsdays Genève
+  postDate: 2026-05-22
+  talksUrl: devoxx-geneva-2026
+  displayDate: 21 mai 2026
+  excerpt: Workshop donné lors de DevOpsdays Genève 2026
+  categories: Conférences
+  talks:
+  - title: '🧩 Développer avec l''IA : et si c''était aussi simple qu''ajouter une librairie ? 🤘'
+    id: ai-lib-workshop
+    location: DevOpsdays Geneva (🇨🇭)
+    language: Français
+    date: Mercredi 21 mai 2026
+    time: 14h55 - 16h25
+    duration: 1h30
+    pitch: |
+      Intégrer de l'intelligence artificielle (IA) dans nos développements peut nous paraître plus complexe que de les utiliser dans notre quotidien.
+
+      Dois-je apprendre un nouveau langage ou une nouvelle stack ?
+      Durant ce workshop nous vous proposons de vous donner tous les éléments pour intégrer l'IA sans quitter votre langage de prédilection : Java 😍. Ce sera l'occasion de découvrir les Frameworks du moments : LangChain4j, Quarkus, ...
+
+      Nous vous invitons à découvrir toutes les facettes d'un chatbot avec l'IA générative (customiser un prompt, rajouter vos données (RAG), appeler des outils locaux ou distants (MCP) et créer des agents) mais aussi parce que l’IA ne se limite pas aux chatbots : faire de la transcription, créer de l'audio ou même faire un traducteur.
+
+      À la suite de ce talk vous repartirez avec une boîte à outils vous permettant d'intégrer simplement la puissance des modèles d'IA au sein de vos développements de tous les jours.
+      Et, toujours pour vous simplifier la vie, venez juste avec votre ordinateur et un navigateur Internet, on se charge du reste pour vous construire un environnement de développement aux petits oignons grâce aux CDE.
+    source: https://github.com/devrel-workshop/ai-as-lib-workshop
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vSjTspv3TfMlXvlDuY-AulXOkc1PPGB9yyTHkiLST8vIAzEd5FHnmXD9hDuvqr5goxxqRGdcrC6Pswo/pub
+    replay: null
+- title: 🎤 Talks donnés à Devoxx UK 🎤
+  link: /talks/devoxx-uk-2026/
+  description: Liste de talks donnés lors de la conférence Devoxx UK
+  image: conferences/devoxx-uk-2026.png
+  author: wilda
+  year: '2026'
+  date: '2026-05-08'
+  name: Devoxx UK
+  postDate: 2026-05-08
+  talksUrl: devoxx-uk-2026
+  displayDate: 06 mai 2026
+  excerpt: Talk donné lors de Devoxx UK 2026
+  categories: Conférences
+  talks:
+  - title: '🧰 Dev Containers: the ultimate toolbox for developers?'
+    id: dev-containers
+    location: Devoxx UK (🇬🇧)
+    language: English
+    date: Jeudi 6 mai 2026
+    time: 18h - 18h30
+    duration: 30mins
+    pitch: |
+      At some point, we’ve all had to (re)install our entire development environment after switching machines.
+      Whether by choice or simply during on-boarding at a new company, a new mission,...
+      We’ve also all spent far to many hours figuring out which tools to install just to submit a PR or MR to an open source project.
+
+      And in many other situations, we quickly find ourselves facing the nightmare of configuring tools and frameworks when all we really want to do is what we love: coding.
+      And let’s not even get started on version updates and inter-dependencies 😅...
+
+      Fortunately, there is a solution to all these problems: dev containers.
+
+      During this tools-in-action session, I invite you to explore them with me.
+      The only thing I allow myself to install on my machine: Docker!
+      Everything else will be handled through configuration so that tools, frameworks, version management, and dependencies become a non-event in your development workflow.
+
+      You’ll leave knowing how to use dev containers—and how to build your entire development stack as code.
+    source: https://github.com/philippart-s/dev-containers-talk
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vQCZLxTPpC2cVsxoVdF7Fcxuo0-IIhWMd3HYae2ymkhaWAHtCAEKbrXsI_rNRjISMhjBdjFECqLjQMl/pub
+    replay: null
+- title: 🎤 Talks donnés à Devoxx France 🎤
+  link: /talks/devoxx-fr-2026/
+  description: Liste de talks donnés lors de la conférence Devoxx France
+  image: conferences/devoxx-fr-2026.webp
+  author: wilda
+  year: '2026'
+  date: '2026-04-25'
+  name: Devoxx France
+  postDate: 2026-04-25
+  talksUrl: devoxx-fr-2026
+  displayDate: 23 avril 2026
+  excerpt: Talks donnés lors de Devoxx France 2026
+  categories: Conférences
+  talks:
+  - title: 🤖 Apprendre à notre IA à ... apprendre 🧠
+    id: learn-ai
+    location: Devoxx France (🇫🇷)
+    language: France
+    date: Mercredi 22 avril 2026
+    time: 10h30 - 12h30
+    duration: 2h
+    pitch: |
+      RAG, MCP, tooling, function calling, agents, fine tuning, training, ...
+      Que de termes barbares mais qui ont tous le même objectif : faire en sorte que le modèle d'intelligence artificielle que vous utilisez réponde correctement à vos questions et attentes 😅.
+      Et pour ça il va falloir ajouter de la connaissance, des données (privée ou publiques, ...).
+
+      Durant ce talk je vous propose d'y voir un peu plus clair dans cette jungle des acronymes puis, fort de connaître les différences, vous proposer comment l'implémenter en tant que développeuses et développeurs.
+
+      Chaque approche a ses spécificités, ses avantages et ses inconvénients.
+      A la fin de ce talk, non seulement vous saurez choisir la bonne approche, mais aussi ajouter dans vos développements quotidiens la dose d'IA utile.
+    source: https://github.com/philippart-s/ai-learn
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vR7dcVssSAExsibl5E-Fpiw_tBCfG3SBNBU5o9I4rd24GReUbwdQkiQ61eJgrhnDZz54LX61Mi1HPqW/pub
+    replay: https://youtu.be/N3NzgO6M-Ss?si=ZQo9PDCqq8ycJlFT
+  - title: 'Développer avec l''IA : et si c''était aussi simple qu''ajouter une librairie ?'
+    id: ai-lib-workshop
+    location: Devoxx France (🇫🇷)
+    language: France
+    date: Mercredi 22 avril 2026
+    time: 13h30 - 16h30
+    duration: 3h
+    pitch: |
+      Intégrer de l'intelligence artificielle (IA) dans nos développements peut nous paraître plus complexe que de les utiliser dans notre quotidien.
+
+      Dois-je apprendre un nouveau langage ou une nouvelle stack ?
+      Durant ce workshop nous vous proposons de vous donner tous les éléments pour intégrer l'IA sans quitter votre langage de prédilection : Java 😍. Ce sera l'occasion de découvrir les Frameworks du moments : LangChain4j, Quarkus, ...
+
+      Nous vous invitons à découvrir toutes les facettes d'un chatbot avec l'IA générative (customiser un prompt, rajouter vos données (RAG), appeler des outils locaux ou distants (MCP) et créer des agents) mais aussi parce que l’IA ne se limite pas aux chatbots : faire de la transcription, créer de l'audio ou même faire un traducteur.
+
+      À la suite de ce talk vous repartirez avec une boîte à outils vous permettant d'intégrer simplement la puissance des modèles d'IA au sein de vos développements de tous les jours.
+      Et, toujours pour vous simplifier la vie, venez juste avec votre ordinateur et un navigateur Internet, on se charge du reste pour vous construire un environnement de développement aux petits oignons grâce aux CDE.
+    source: https://github.com/devrel-workshop/ai-as-lib-workshop
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vTe-mIXLiA4JN2zeEopcq15GY6FhtjVKuNz5BGqR-w_79QoCHc5U-wg9V8XqfTTzvYhmSkEIAZHAb9E/pub
+    replay: null
+- title: 🎤 Talks donnés à Voxxed Days Zurich 🎤
+  link: /talks/voxxed-days-zurich-2026/
+  description: Liste de talks donnés lors de la conférence Voxxed Days Zurich
+  image: conferences/voxxed-days-zurich-2026.png
+  author: wilda
+  year: '2026'
+  date: '2026-03-31'
+  name: Voxxed Days Zurich
+  postDate: 2026-03-31
+  talksUrl: voxxed-days-zurich-2026
+  displayDate: 25 mars 2026
+  excerpt: Talk donné lors de Voxxed Days Zurich 2026
+  categories: Conférences
+  talks:
+  - title: JBang, a Java file to rule them all? 💍
+    id: jbang
+    location: Voxxed Days Zurich (🇨🇭)
+    language: Anglais
+    date: Jeudi 25 mars 2026
+    time: 12h00 - 12h20
+    duration: 20 mins
+    pitch: |
+      In the Java world, we're used to initializing a project with numerous files and directories.
+      To the point that CLI tools have emerged to help us create SpringBoot or Quarkus projects, for example.
+      Then comes the choice of the "package manager": Maven or Gradle?
+      And it's only from there that we can start developing and running our code 😅.
+
+      All these tedious steps explain why, when we need to automate a quick action with a few lines of code, we prefer other languages to Java, such as Python.
+
+      And if I told you that, with JBang, you'll be able to stay with your favorite language, Java, and develop a simple class (with external dependencies) in just a few seconds!
+
+      That's the bet (spoiler: it works) that I propose to discover during a live coding session.
+
+      So, get ready for the joys of scripting in Java!
+    source: https://github.com/philippart-s/jbang
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vQwqkCEtCq9423LQVToBolKPfXXlPpo-d4uLOhqQV8SnW6zwXPAjyxppK70UriKtkgCNC5z7HYCaVbk/pub
+    replay: https://youtu.be/ud2cUozbiL8?si=WVVJuxeBSGU__Fhg
+- title: 🎤 Talks donnés à Touraine Tech 🎤
+  link: /talks/tnt-26/
+  description: Liste de talks donnés lors de la conférence Touraine Tech
+  image: conferences/tnt-26.svg
+  author: wilda
+  year: '2026'
+  date: '2026-02-14'
+  name: Touraine Tech
+  postDate: 2026-02-14
+  talksUrl: tnt-26
+  displayDate: 14 février 2026
+  excerpt: Talks donnés lors de Touraine Tech 2026
+  categories: Conférences
+  talks:
+  - title: ☕️ Toi aussi crée ta CLI boostée à l'IA avec Picocli 🖥️ 🤖
+    id: picocli
+    location: Tours (🇫🇷)
+    language: Français
+    date: 12 février 2026
+    time: 16h45
+    duration: 50 minutes
+    pitch: |
+      Les CLI (Command Line Interface), tout le monde les utilise et elles existent depuis la nuit des temps.
+      Dernièrement, elles reviennent sur le devant de scène avec les CLI boostées à l'IA devenant des vrais collègues de pair programming.
+
+      Souvent synonymes de gain de productivité, leur création est parfois obscure et peut sembler complexe.
+      C'était le cas il y a quelques décennies, mais depuis quelques années, des langages et Frameworks permettent d'en écrire simplement dans votre langage préféré.
+      Je vous propose d'utiliser un langage qui ne paraît pas, au premier abord, le plus intuitif pour faire une CLI : Java !
+
+      Mais il sera bien accompagné dans cette tâche : grâce à Picocli et Quarkus, notre CLI aura tout d'une grande, tout en étant simple à développer !
+      Et cerise sur le gâteau : nous créerons un "vrai" exécutable grâce à Graal VM.
+
+      Venez m'accompagner lors d'une session de live coding permettant de mettre en lumière comment créer une CLI en Java avec Picocli et Quarkus en partant de zéro !
+
+      Et qui sait, avec un peu de magie on aura, au final, un vrai assistant intelligent dans notre et terminal 🤖.
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vQixWywnbSqhZwLnud-08cTzIkGVQc_qUKsAbPNGO8VBvRsulpUHryntDyDxkJcXaFvdWjwnbWYcrN2/pub
+    source: https://github.com/philippart-s/jarvis
+    replay: https://youtu.be/URs8BZZTPIU?si=8tljq7n0NcKvV4Rr
+  - title: JBang, un fichier Java pour les gouverner tous ? 💍
+    id: jbang
+    location: Touraine Tech(🇫🇷)
+    language: Français
+    date: Vendredi 13 février 2026
+    time: 12h35 - 12h50
+    duration: 15 mins
+    pitch: |
+      Dans le monde Java, nous sommes habitués à initialiser un projet avec de nombreux fichiers et répertoires. A tel point que des CLI ont vu le jour pour nous aider à créer les projets SpringBoot ou Quarkus par exemple. Vient ensuite le choix du "package manager" : Maven ou Gradle ? Et c'est seulement à partir de là que l'on peut commencer à développer puis exécuter son code 😅.
+
+      Toutes ces étapes fastidieuses expliquent pourquoi, lorsque que l'on a besoin de faire un développement rapide de quelques lignes pour automatiser une action, on préfère d'autres langages à Java : Python par exemple.
+
+      Et si je vous disais, qu'avec JBang, vous allez pouvoir rester avec votre langage préféré, Java, et développer une classe toute simple (avec des dépendances externes) en quelques secondes !
+
+      C'est le pari (spoiler : réussi) de JBang que je vous propose de découvrir durant une session de live coding.
+
+      A vous les joies du scripting en Java !
+    source: https://github.com/philippart-s/jbang
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vQL-YXqscp3pAooHoflDmvgxIndvR7XBbIUrzJomKElfKqS0U6PwN89_zN11vsc8p3I6m6MTkSUk0np/pub
+    replay: https://youtu.be/q1cJinNB4LU?si=W-PeU_f9F_yv-5qq
+- title: 🎤 Talks donnés à Cloud Native Aix Marseille 🎤
+  link: /talks/cnd-aix-2026/
+  description: Liste de talks donnés lors de la conférence Cloud Native Aix Marseille
+  image: conferences/cnd-aix.png
+  author: wilda
+  year: '2026'
+  date: '2026-01-22'
+  name: Cloud Native Aix Marseille
+  postDate: 2026-01-22
+  talksUrl: cnd-aix-2026
+  displayDate: 22 janvier 2026
+  excerpt: Talks donnés lors de Cloud Native Aix Marseille 2026
+  categories: Conférences
+  talks:
+  - title: '⚙️ Développer un opérateur Kubernetes en Java : challenge accepted !'
+    id: java-operator
+    location: Marseille (🇫🇷)
+    language: Français
+    date: 22 janvier 2026
+    time: 19h00
+    duration: 50 minutes
+    pitch: |
+      retour d'expérience concret sur la conception, les choix d'architecture et les bonnes pratiques pour créer un opérateur robuste, maintenable et cloud-native.
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vStsPU06T9Js1AWK-UUpyyLx4gjQZZNMW8nDuCVvxOlnWMz_m9blHkl9_g-dd5HzyFBVp74fws_VA41/pub
+    source: https://github.com/philippart-s/java-operator
+    replay: null
+- title: 🎤 Talks donnés à MarsJUG 🎤
+  link: /talks/marjusg-2026/
+  description: Liste de talks donnés lors de la conférence MarsJUG
+  image: conferences/mars-jug.png
+  author: wilda
+  year: '2026'
+  date: '2026-01-21'
+  name: MarsJUG
+  postDate: 2026-01-21
+  talksUrl: marjusg-2026
+  displayDate: 21 janvier 2026
+  excerpt: Talks donnés lors de MarsJUG 2026
+  categories: Conférences
+  talks:
+  - title: 'Picocli, mets du Java dans ton terminal ! '
+    id: picocli
+    location: Marseille (🇫🇷)
+    language: Français
+    date: 21 janvier 2026
+    time: 19h00
+    duration: 50 minutes
+    pitch: |
+      Les CLI (Command Line Interface), tout le monde les utilise et elles existent depuis la nuit des temps.
+
+      Je vous propose d'utiliser un langage qui ne paraît pas, au premier abord, le plus intuitif pour faire une CLI : Java !
+
+      Venez m'accompagner lors d'une session de live coding permettant de mettre en lumière comment créer une CLI en Java avec Picocli et Quarkus en partant de zéro !
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vScp5CN4C3jMvYAFw0qUePVu9O_jEPB4W5DlKTXnd2eUdzGPBNxSwobu4ac_W1OmWCFrge8VlU1jL2C/pub
+    source: https://github.com/philippart-s/jarvis
+    replay: null
+- title: 🎤 Talks donnés à Snowcamp 🎤
+  link: /talks/snowcamp-2026/
+  description: Liste de talks donnés lors de la conférence Snowcamp
+  image: conferences/snowcamp.jpg
+  author: wilda
+  year: '2026'
+  date: '2026-01-16'
+  name: Snowcamp
+  postDate: 2026-01-16
+  talksUrl: snowcamp-2026
+  displayDate: 16 janvier 2026
+  excerpt: Talks donnés lors de Snowcamp 2026
+  categories: Conférences
+  talks:
+  - title: 🧰 Les dev containers, la boîte à outils ultime pour les devs ?
+    id: dev-containers
+    location: Grenoble (🇫🇷)
+    language: Français
+    date: 16 janvier 2026
+    time: 12h10
+    duration: 20 minutes
+    pitch: |
+      On a toutes et tous été confronté•es, un jour, à devoir (ré)installer tout notre environnement de développement lors d'un changement de machine. Que ce soit par choix ou juste en mode "on-boarding" lors d'un changement de société, de mission, ... On a aussi, parfois, passé de longues heures pour comprendre quels outils installer pour proposer une PR ou MR dans un projet Open Source.
+
+      Dans encore beaucoup d'autres cas, nous sommes vite confrontés à l'enfer de la configuration des outils et autres frameworks pour faire ce que l'on aime : développer. Et je ne vous parle pas des montées de versions et inter-dépendances 😅...
+
+      Heureusement, il existe une solution à tous ces problèmes : les dev containers.
+
+      Lors de ce talk, je vous propose de partir à leur découverte. La seule chose que je m'autorise à installer sur ma machine : Docker ! Le reste sera de la gestion de configuration pour que les outils, les frameworks et la gestion des versions et dépendances soit un non-évènement dans votre process de développement.
+
+      Vous repartirez en sachant utiliser les dev containers mais aussi en sachant construire as-code votre stack de développement 🧑‍💻.
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vRcub1txwymcsURlkgwE-XPSG7jK9Ux4xwOoaA6IhLFGYxQPLFFaZacfuuFjm2KqLtu8t-OxWC45vpo/pub#slide=id.p
+    source: https://github.com/philippart-s/dev-containers-talk
+    replay: null
+- title: 🎤 Talks donnés à Open Source Experience 🎤
+  link: /talks/ossx-2025/
+  description: Liste de talks donnés lors de la conférence Open Source Experience
+  image: conferences/conference.jpg
+  author: wilda
+  year: '2025'
+  date: '2025-12-12'
+  name: Open Source Experience
+  postDate: 2025-12-12
+  talksUrl: ossx-2025
+  displayDate: 10 décembre 2025
+  excerpt: Talks donnés lors de l'Open Source Summit Experience 2025
+  categories: Conférences
+  talks:
+  - title: CaaS, Serverless, scale to zero. Késako et comment s’y mettre avec Knative ?
+    id: knative
+    location: Paris (🇫🇷)
+    language: Français
+    date: 10 décembre 2025
+    time: null
+    duration: 25 minutes
+    pitch: |
+      Kubernetes est, depuis quelques temps, de plus en plus la normalité en entreprise. Avec cette nouvelle façon de concevoir son Système d’Information, de déployer et opérer les applications, de nouveaux besoins se sont faits sentir.
+
+      Lors de ce talk nous verrons ensemble une typologie de ces besoins qui tournent tous autour d’une notion : comment simplifier et optimiser le déploiement et l’exécution de nos containers ? En effet, sans paramétrage particulier, que vos applications soient utilisées ou non, un cluster Kubernetes leur allouera des ressources … et donc vous coûte de l’argent !
+
+      L’autre aspect est de simplifier le cycle de déploiement / configuration d’une application, toutes les développeuses ou développeurs n’ont pas envie de devenir ceinture noire de YAML ou de Kubernetes pour tester leur application en développement sur un cluster 😅.
+
+      C’est là que rentre en jeu les notions de Container as a Service, de Serverless et autre fonctionnalité de “scale to zero”. Différents moyens sont à notre disposition pour arriver à couvrir ces cas d’utilisations. Knative va nous permettre de couvrir une grande partie de ces besoins. Nous verrons ensemble comment le déployer sur un cluster Kubernetes managé et comment l’utiliser afin de nous simplifier la vie.
+
+      Vous repartirez de ce talk, j’espère, en ayant compris les différentes solutions pour répondre à ces problèmes en ayant pris conscience qu’il est possible de s’affranchir de solutions propriétaires pour y arriver 😉.
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vTuSqVhHPHP0xVAnYKAJ-VTRCYm7QKQueP-dUOD-2f7FDejYUQV9p7f5ygFEoQYQF2E4CmDA_x9a0mI/pub
+    source: https://github.com/philippart-s/kn-serving-samples
+    replay: https://youtu.be/Qxn9KYRTQPg?si=SUv3UqaJLJo4NceX
+- title: 🎤 Talks donnés à DevFest Lyon 🎤
+  link: /talks/devfest-lyon-2025/
+  description: Liste de talks donnés lors de la conférence DevFest Lyon
+  image: conferences/devfest-lyon-2025.png
+  author: wilda
+  year: '2025'
+  date: '2025-11-28'
+  name: DevFest Lyon
+  postDate: 2025-11-28
+  talksUrl: devfest-lyon-2025
+  displayDate: 28 novembre 2025
+  excerpt: Talks donnés lors de DevFest Lyon 2025
+  categories: Conférences
+  talks:
+  - title: Développer un opérateur Kubernetes en Java, challenge accepted !
+    id: java-operator
+    location: Lyon (🇫🇷)
+    language: Français
+    date: 28 novembre 2025
+    time: null
+    duration: 50 minutes
+    pitch: |
+      Il n’est plus, je pense, nécessaire de présenter Kubernetes tellement il fait parti du paysage informatique. Avec sa généralisation, de nouveaux types de développements et de patterns sont apparus. Lors de ce talk j’aborderai l’un d’eux : les opérateurs.
+
+      Merveilleux assistants, aptes à faire énormément de choses. Mais voilà, les nombreuses documentations que l’on trouve tournent principalement autour d’un langage : Go. Ce n’est pas que cela ne me plaise pas, mais l’idée est de pouvoir aussi le faire avec un autre langage que je connais et utilisé par de nombreuses équipes de développement : Java.
+
+      Lors de ce talk, je vous présenterai, de manière simple, la notion des opérateurs au sein de Kubernetes : à quoi ils servent et comment ils évoluent dans l’éco-système Kubernetes. Nous verrons qu’ils peuvent être de simples aides à l’installation ou à la mise à jour d’une application au sein de Kubernetes mais aussi aller beaucoup plus loin en devenant de vrais Ops pour gérer vos applications pour vous !
+
+      Puis, nous développerons un opérateur ensemble et en Java : un bon Hello World nous permettant de prendre en main le SDK Java mais aussi les différents éléments présentés au début du talk.
+
+      Enfin, nous essaierons de nous projeter vers un opérateur faisant un peu plus que Hello World afin de voir si vraiment il sait faire de l’Ops !
+
+      A la fin de ce talk, vous aurez les différents éléments pour savoir si vous avez besoin de développer un opérateur, comment le développer, et choisir entre le faire en Java ou dans un autre langage !
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vSGSmBZRv0jsh5W240Mqf6EJ6iBU9T0_MMQDxUJ7luOchSYA6qMb5ebAHPxE9vwvpsJuNZgMh5m1zha/pub
+    source: https://github.com/philippart-s/java-operator-samples
+    replay: null
+- title: 🎤 Talks donnés à DevFest Paris 2025 🎤
+  link: /talks/devfest-paris-2025/
+  description: Liste de talks donnés lors de la conférence DevFest Paris 2025
+  image: conferences/devfest-paris-2025.png
+  author: wilda
+  year: '2025'
+  date: '2025-11-21'
+  name: DevFest Paris 2025
+  postDate: 2025-11-21
+  displayDate: 21 novembre 2025
+  talksUrl: devfest-paris-2025
+  excerpt: Talk donné lors du DevFest Paris 2025
+  categories: Conférences
+  talks:
+  - title: '☕️ Picocli : mets du Java dans ton terminal ! 🖥️'
+    id: picocli
+    location: Paris (🇫🇷)
+    language: Français
+    date: vendredi 21 novembre 2025
+    time: 11h10 - 12h00
+    duration: 50 mins
+    pitch: |
+      Les CLI (Command Line Interface), tout le monde les utilise et elles existent depuis la nuit des temps.
+      Souvent synonymes de gain de productivité, leur création est parfois obscure et peut sembler complexe.
+      C'était le cas il y a quelques décennies, mais depuis quelques années, des langages et Frameworks permettent d'en écrire simplement dans votre langage préféré.
+      Je vous propose d'utiliser un langage qui ne paraît pas, au premier abord, le plus intuitif pour faire une CLI : Java !
+
+      Mais il sera bien accompagné dans cette tâche : grâce à Picocli et Quarkus, notre CLI aura tout d'une grande, tout en étant simple à développer !
+      Et cerise sur le gâteau : nous créerons un "vrai" exécutable grâce à Graal VM.
+
+      Venez m'accompagner lors d'une session de live coding permettant de mettre en lumière comment créer une CLI en Java avec Picocli et Quarkus en partant de zéro !
+
+      Et qui sait, avec un peu de magie on aura, au final, un vrai assistant intelligent dans notre et terminal 🤖.
+    source: https://github.com/philippart-s/jarvis
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vR4egHoUB69-J--bNnNoslVR9c1zCTff8X0ZiuVbFPYF5d1SL0tGLRIuZKBWvfrNOJRE7yEz1VzOm1L/pub
+    replay: https://youtu.be/Htf7sdGq-3c?si=rGW1wHApoc6Z-8Nb
+- title: 🎤 Talks donnés à Devoxx Maroc 🎤
+  link: /talks/devoxx-maroc-2025/
+  description: Liste de talks donnés lors de la conférence Devoxx Maroc
+  image: conferences/devoxx-maroc-2025.png
+  author: wilda
+  year: '2025'
+  date: '2025-11-13'
+  name: Devoxx Maroc
+  postDate: 2025-11-13
+  displayDate: 13 novembre 2025
+  talksUrl: devoxx-maroc-2025
+  excerpt: Talk donné lors de Devoxx Maroc 2025
+  categories: Conférences
+  talks:
+  - title: JBang, un fichier Java pour les gouverner tous ?
+    id: jbang
+    location: Devoxx Maroc (🇲🇦)
+    language: Français
+    date: Vendredi 13 novembre 2025
+    time: 11h30 - 11h55
+    duration: 25 mins
+    pitch: "Dans le monde Java, nous sommes habitués à initialiser un projet avec de nombreux fichiers et répertoires. \nA tel point que des CLI ont vu le jour pour nous aider à créer les projets SpringBoot ou Quarkus par exemple. \nVient ensuite le choix du \"package manager\" : Maven ou Gradle ? \nEt c'est seulement à partir de là que l'on peut commencer à développer puis exécuter son code \U0001F605. \nToutes ces étapes fastidieuses expliquent pourquoi, lorsque que l'on a besoin de faire un développement rapide de quelques lignes pour automatiser une action, on préfère d'autres langages à Java : Python par exemple. \nEt si je vous disais, qu'avec JBang, vous allez pouvoir rester avec votre langage préféré, Java, et développer une classe toute simple (avec des dépendances externes) en quelques secondes ! \nC'est le pari (spoiler : réussi) de JBang que je vous propose de découvrir durant une session de live coding. \n\nA vous les joies du scripting en Java !\n"
+    source: https://github.com/philippart-s/jbang
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vTSU5lEVEOLfk6Cw9IpNNt5CeStttfNX2OtQda_y0tRz9OSGRJcxmKW4j3YVk5wi4EJQ2qJSQqD-CyA/pub
+    replay: ''
+- title: 🎤 Talks donnés à BDX I/O 🎤
+  link: /talks/bdx-io-2025/
+  description: Liste de talks donnés lors de la conférence BDX I/O
+  image: conferences/bdx-io-2025.png
+  author: wilda
+  year: '2025'
+  date: '2025-11-07'
+  name: BDX I/O
+  postDate: 2025-11-07
+  displayDate: 7 novembre 2025
+  talksUrl: bdx-io-2025
+  excerpt: Talk donné lors de BDX I/O 2025
+  categories: Conférences
+  talks:
+  - title: JBang, un fichier Java pour les gouverner tous ?
+    id: jbang
+    location: BDX I/O (🇫🇷)
+    language: Français
+    date: Vendredi 7 novembre 2025
+    time: 15h15 - 15h30
+    duration: 15 mins
+    pitch: "Dans le monde Java, nous sommes habitués à initialiser un projet avec de nombreux fichiers et répertoires. \nA tel point que des CLI ont vu le jour pour nous aider à créer les projets SpringBoot ou Quarkus par exemple. \nVient ensuite le choix du \"package manager\" : Maven ou Gradle ? \nEt c'est seulement à partir de là que l'on peut commencer à développer puis exécuter son code \U0001F605. \nToutes ces étapes fastidieuses expliquent pourquoi, lorsque que l'on a besoin de faire un développement rapide de quelques lignes pour automatiser une action, on préfère d'autres langages à Java : Python par exemple. \nEt si je vous disais, qu'avec JBang, vous allez pouvoir rester avec votre langage préféré, Java, et développer une classe toute simple (avec des dépendances externes) en quelques secondes ! \nC'est le pari (spoiler : réussi) de JBang que je vous propose de découvrir durant une session de live coding. \n\nA vous les joies du scripting en Java !\n"
+    source: https://github.com/philippart-s/jbang
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vTwSjNyHmLXn_nigB-lc0wKL_nVm3cjFcKQKVevkyhb1k9S1hvZiYe4g0_jqGqxgd2XAGVHUaPi4XCo/pub
+    replay: null
+- title: 🎤 Talks donnés à DevFest Nantes 🎤
+  link: /talks/devfestnantes-2025/
+  description: Liste de talks donnés lors de la conférence DevFest Nantes
+  image: conferences/devfestnantes-2025.png
+  author: wilda
+  year: '2025'
+  date: '2025-10-18'
+  name: DevFest Nantes
+  postDate: 2025-10-18
+  displayDate: 16 octobre 2025
+  talksUrl: devfestnantes-2025
+  excerpt: Talk donné lors de DevFest Nantes 2025
+  categories: Conférences
+  talks:
+  - title: JBang, un fichier Java pour les gouverner tous ?
+    id: jbang
+    location: Nantes (🇫🇷)
+    language: Français
+    date: Vendredi 18 octobre 2025
+    time: 16h20 - 16h40
+    duration: 20mins
+    pitch: "Dans le monde Java, nous sommes habitués à initialiser un projet avec de nombreux fichiers et répertoires. \nA tel point que des CLI ont vu le jour pour nous aider à créer les projets SpringBoot ou Quarkus par exemple. \nVient ensuite le choix du \"package manager\" : Maven ou Gradle ? \nEt c'est seulement à partir de là que l'on peut commencer à développer puis exécuter son code \U0001F605. \nToutes ces étapes fastidieuses expliquent pourquoi, lorsque que l'on a besoin de faire un développement rapide de quelques lignes pour automatiser une action, on préfère d'autres langages à Java : Python par exemple. \nEt si je vous disais, qu'avec JBang, vous allez pouvoir rester avec votre langage préféré, Java, et développer une classe toute simple (avec des dépendances externes) en quelques secondes ! \nC'est le pari (spoiler : réussi) de JBang que je vous propose de découvrir durant une session de live coding. \n\nA vous les joies du scripting en Java !\n"
+    source: https://github.com/philippart-s/jbang
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vRF50mgvW6KzZf6lspATsmJRfTU79-CdlyDO8JP23f6ZldfvSGCkxe7wRwy9WaQMfD3EVqza0q5ukkB/pub
+    replay: https://youtu.be/Aj8Bfq6X0tM?si=ebUR2CzDbzC6267N
+- title: 🎤 Talks donnés à Devoxx Belgium 🎤
+  link: /talks/devoxx-belgium-2025/
+  description: Liste de talks donnés lors de la conférence Devoxx Belgium
+  image: conferences/devoxx-belgium-2025.png
+  author: wilda
+  year: '2025'
+  date: '2025-10-10'
+  name: Devoxx Belgium
+  postDate: 2025-10-10
+  displayDate: 6 au 9 octobre 2025
+  talksUrl: devoxx-belgium-2025
+  excerpt: Talk donné lors de Devoxx Belgium 2025
+  categories: Conférences
+  talks:
+  - title: 'Picocli: put some Java in your terminal 💻!'
+    id: picocli
+    location: Anvers (🇧🇪)
+    language: Anglais
+    date: lundi 6 octobre 2025
+    time: 18h10 - 18h40
+    duration: 30 minutes
+    pitch: |
+      Everyone uses CLIs (Command Line Interfaces), and they’ve been around since the dawn of time. Often synonymous with productivity gains, their creation is sometimes obscure and can seem complex.
+
+      This was the case a few decades ago, but in recent years, languages and frameworks have made it possible to write them simply in your favorite language. I propose to use a language which, at first glance, may not seem the most intuitive for creating a CLI: Java!
+
+      Thanks to Picocli and Quarkus, your CLI will have all the bells and whistles of a great CLI, yet be simple to develop! And the icing on the cake: we’ll create a “real” executable thanks to Graal VM.
+
+      Come and join me for a live coding session that will show you how to create a Java CLI with Picocli and Quarkus from scratch!
+    source: https://github.com/philippart-s/jarvis
+    slides: https://philippart-s.github.io/talks-slides/jarvis/devoxx-2025/
+    replay: https://youtu.be/usTiNoSNdlw
+- title: 🎤 Talks donnés à JUG Summer Camp 🎤
+  link: /talks/jug-summercamp-2025/
+  description: Liste de talks donnés lors de la conférence JUG Summer Camp
+  image: conferences/jug-summercamp-2025.png
+  author: wilda
+  year: '2025'
+  date: '2025-09-16'
+  name: JUG Summer Camp
+  postDate: 2025-09-16
+  displayDate: 5 septembre 2025
+  talksUrl: jug-summercamp-2025
+  excerpt: Talk donné lors du JUG Summer Camp 2025
+  categories: Conférences
+  talks:
+  - title: '☕️ Picocli : mets du Java dans ton terminal ! 🖥️'
+    id: picocli
+    location: La Rochelle (🇫🇷)
+    language: Français
+    date: Vendredi 5 septembre 2025
+    time: 17h50 - 18h20
+    duration: 30 mins
+    pitch: |
+      Les CLI (Command Line Interface), tout le monde les utilise et elles existent depuis la nuit des temps.
+      Souvent synonymes de gain de productivité, leur création est parfois obscure et peut sembler complexe.
+      C'était le cas il y a quelques décennies, mais depuis quelques années, des langages et Frameworks permettent d'en écrire simplement dans votre langage préféré.
+      Je vous propose d'utiliser un langage qui ne paraît pas, au premier abord, le plus intuitif pour faire une CLI : Java !
+
+      Mais il sera bien accompagné dans cette tâche : grâce à Picocli et Quarkus, notre CLI aura tout d'une grande, tout en étant simple à développer !
+      Et cerise sur le gâteau : nous créerons un "vrai" exécutable grâce à Graal VM.
+
+      Venez m'accompagner lors d'une session de live coding permettant de mettre en lumière comment créer une CLI en Java avec Picocli et Quarkus en partant de zéro !
+
+      Et qui sait, avec un peu de magie on aura, au final, un vrai assistant intelligent dans notre et terminal 🤖.
+    source: https://github.com/philippart-s/jarvis
+    slides: https://philippart-s.github.io/talks-slides/jarvis/jsc-2025/
+    replay: null
+- title: 🎤 Talks donnés à Sunny Tech 🎤
+  link: /talks/sunnytech-2025/
+  description: Liste de talks donnés lors de la conférence Sunny Tech
+  image: conferences/sunnytech-2025.png
+  author: wilda
+  year: '2025'
+  date: '2025-07-13'
+  name: Sunny Tech
+  postDate: 2025-07-13
+  displayDate: 26 juin 2025
+  talksUrl: sunnytech-2025
+  excerpt: Talk donné lors de Sunny Tech 2025
+  categories: Conférences
+  talks:
+  - title: 'Développer avec l''IA : et si c''était aussi simple qu''ajouter une librairie ?'
+    id: ai-lib-workshop
+    location: Montpellier (🇫🇷)
+    language: Français
+    date: Jeudi 26 juin 2025
+    time: 16h20 - 18h10
+    duration: 1h50
+    pitch: |
+      L’intelligence artificielle et les LLM commencent à faire partie de nos vies personnelles mais aussi professionnelles.
+
+      Si on est habitué•es à les utiliser régulièrement, il en est autrement pour ce qui concerne nos développements.
+
+      Les intégrer peut nous paraître plus complexe que de les utiliser dans notre quotidien.
+
+      Dois-je apprendre un nouveau langage ou une nouvelle stack ?
+
+      Durant ce workshop nous vous proposons de vous donner tous les éléments pour débuter votre voyage au sein de l’IA sans quitter votre langage de prédilection : Java, JavaScript, Python ou Go (et qui sait peut être d’autres surprises (wink)).
+
+      Vous apprendrez comment utiliser les Frameworks du moment (LangChain, LangChain4j, …) mais aussi les outils vous facilitant la vie pour que dès le retour à votre application préférée, intégrer de l’IA au sein de celle-ci ne soit plus une peur mais une action aussi simple que de rajouter une librairie tierce.
+
+      Et, toujours pour vous simplifier la vie, venez juste avec votre ordinateur et un navigateur Internet, je me charge du reste pour vous construire un environnement de développement aux petits oignons grâce aux CDE.
+    source: https://github.com/devrel-workshop/ai-as-lib-workshop
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vTDc9BsSWwo2T8NgVw17_U8LwH6dc5Caa1AUwlzEF7FkK2BjlQr8BZW-oPHCmko48kMCQw0Ebary5KJ/pub
+    replay: null
+- title: 🎤 Talks donnés à DevQuest 🎤
+  link: /talks/devquest-2025/
+  description: Liste de talks donnés lors de la conférence DevQuest
+  image: conferences/devquest-2025.png
+  author: wilda
+  year: '2025'
+  date: '2025-06-09'
+  name: DevQuest
+  postDate: 2025-06-09
+  displayDate: 5 juin 2025
+  talksUrl: devquest-2025
+  excerpt: Talk donné lors de DevQuest 2025
+  categories: Conférences
+  talks:
+  - title: JBang, un fichier Java pour les gouverner tous ?
+    id: jbang
+    location: Niort (🇫🇷)
+    language: Français
+    date: Vendredi 6 juin 2025
+    time: 13h30 - 13h50
+    duration: 20mins
+    pitch: "Dans le monde Java, nous sommes habitués à initialiser un projet avec de nombreux fichiers et répertoires. \nA tel point que des CLI ont vu le jour pour nous aider à créer les projets SpringBoot ou Quarkus par exemple. \nVient ensuite le choix du \"package manager\" : Maven ou Gradle ? \nEt c'est seulement à partir de là que l'on peut commencer à développer puis exécuter son code \U0001F605. \nToutes ces étapes fastidieuses expliquent pourquoi, lorsque que l'on a besoin de faire un développement rapide de quelques lignes pour automatiser une action, on préfère d'autres langages à Java : Python par exemple. \nEt si je vous disais, qu'avec JBang, vous allez pouvoir rester avec votre langage préféré, Java, et développer une classe toute simple (avec des dépendances externes) en quelques secondes ! \nC'est le pari (spoiler : réussi) de JBang que je vous propose de découvrir durant une session de live coding. \n\nA vous les joies du scripting en Java !\n"
+    source: https://github.com/philippart-s/jbang
+    slides: https://philippart-s.github.io/talks-slides/jbang/devquest-niort-2025/
+    replay: https://youtu.be/AsyxQGMZI6A?si=-XMKkDKInZdBqtzb
+- title: 🎤 Talks donnés à Lava JUG 🎤
+  link: /talks/lava-jug-2025/
+  description: Liste de talks donnés lors de la conférence Lava JUG
+  image: conferences/lava-jug-2025.png
+  author: wilda
+  year: '2025'
+  date: '2025-05-22'
+  name: Lava JUG
+  postDate: 2025-05-22
+  displayDate: 22 mai 2025
+  talksUrl: lava-jug-2025
+  excerpt: Liste des talks donnés lors de Lava JUG 2025
+  categories: Meetups
+  talks:
+  - title: Crée ton assistant personnel avec Picocli et LangChain4J
+    id: picocli
+    location: Clermont-Ferrand  (🇫🇷)
+    language: Français
+    date: Jeudi 22 mai 2025
+    time: 19h00 - 20h00
+    duration: 1h
+    pitch: "Les CLI (Command Line Interface), tout le monde les utilise et elles existent depuis la nuit des temps. \nSouvent synonymes de gain de productivité, leur création est parfois obscure et peut sembler complexe. \n\nC’était le cas il y a quelques décennies, mais depuis quelques années, des langages et Frameworks permettent d’en écrire simplement dans votre langage préféré. \nJe vous propose d’utiliser un langage qui ne paraît pas, au premier abord, le plus intuitif pour faire une CLI : Java ! \n\nMais il sera bien accompagné dans cette tâche : grâce à Picocli et Quarkus, notre CLI aura tout d’une grande, tout en étant simple à développer ! \nEt cerise sur le gâteau : nous créerons un “vrai” exécutable grâce à Graal VM. Venez m’accompagner lors d’une session de live coding permettant de mettre en lumière comment créer une CLI en Java avec Picocli et Quarkus en partant de zéro ! \n\nEt qui sait, avec un peu de magie et de LangChain4j on aura, au final, un vrai assistant intelligent dans notre et terminal .\n"
+    source: https://github.com/philippart-s/jarvis
+    slides: https://philippart-s.github.io/talks-slides/jarvis/lavajug-2025/
+    replay: null
+- title: 🎤 Talks donnés à Devoxx UK 🎤
+  link: /talks/devoxx-uk-2025/
+  description: Liste de talks donnés lors de la conférence Devoxx UK
+  image: conferences/devoxx-uk-2025.png
+  author: wilda
+  year: '2025'
+  date: '2025-05-07'
+  name: Devoxx UK
+  postDate: 2025-05-07
+  displayDate: 7 au 9 mai 2025
+  talksUrl: devoxx-uk-2025
+  excerpt: Liste des talks donnés lors de Devoxx UK 2025
+  categories: Conférences
+  talks:
+  - title: 'Picocli: put some Java in your terminal 💻!'
+    id: picocli
+    location: Londres (🏴󠁧󠁢󠁥󠁮󠁧󠁿)
+    language: Anglais
+    date: Mercredi 7 mai 2025
+    time: 13h30 - 14h00
+    duration: 30 minutes
+    pitch: |
+      Everyone uses CLIs (Command Line Interfaces), and they’ve been around since the dawn of time. Often synonymous with productivity gains, their creation is sometimes obscure and can seem complex.
+
+      This was the case a few decades ago, but in recent years, languages and frameworks have made it possible to write them simply in your favorite language. I propose to use a language which, at first glance, may not seem the most intuitive for creating a CLI: Java!
+
+      Thanks to Picocli and Quarkus, your CLI will have all the bells and whistles of a great CLI, yet be simple to develop! And the icing on the cake: we’ll create a “real” executable thanks to Graal VM.
+
+      Come and join me for a live coding session that will show you how to create a Java CLI with Picocli and Quarkus from scratch!
+    source: https://github.com/philippart-s/jarvis
+    slides: https://philippart-s.github.io/talks-slides/jarvis/devoxx-uk-2025/
+    replay: https://youtu.be/L9XIBQ2XOBE
+- title: 🎤 Talks donnés à Devoxx France 🎤
+  link: /talks/devoxx-france-2025/
+  description: Liste de talks donnés lors de la conférence Devoxx France
+  image: conferences/devoxx-france-2025.png
+  author: wilda
+  year: '2025'
+  date: '2025-04-16'
+  name: Devoxx France
+  postDate: 2025-04-16
+  displayDate: 16 au 18 avril 2025
+  talksUrl: devoxx-france-2025
+  excerpt: Liste des talks donnés lors de Devoxx France 2025
+  categories: Conférences
+  talks:
+  - title: ☕️ Full stack Java, du dev à la prod en passant par l’infra 🏗️
+    id: full-stack-java
+    location: Paris (🇫🇷)
+    language: Français
+    date: Mercredi 16 avril 2025
+    time: 13h30 - 16h30
+    duration: 3 heures
+    pitch: |
+      Depuis quelques années, le terme full stack est employé pour décrire différentes notions : que ce soit dans différents langages ou avec le même, il désigne la maîtrise de toutes les couches nécessaires à la création de nos applications.
+
+      Que diriez-vous d'explorer le concept full stack encore plus loin ?
+
+      Nous n'allons pas nous contenter d'être full stack pour le front ou le back end mais pour l'ensemble de notre écosystème technique ! On parlera ici de développement bien sûr (back, front, cli, ...), de cloud natif (Kubernetes, serverless, ...), de livraison et déploiements continus, bien sûr d'intelligence artificielle (comment faire autrement en 2025 😉) mais aussi d'infrastructure !
+
+      Et avec quel langage peut-on se permettre de faire tout ça me direz-vous ?
+
+      Mais Java bien sûr 🥳.
+
+      Je souhaite vous montrer que Java n'est pas le langage si obsolète et qu'il a bien suivi les différentes évolutions de notre écosystème pour être présent dans bien des étapes de la chaîne de conception d'une application, et pas que pour le développement 😉.
+
+      A la sortie de ce talk, vous aussi serez un•e vrai•e Java full stack ! 💪
+    source: https://github.com/philippart-s/java-full-stack
+    slides: https://philippart-s.github.io/talks-slides/java-full-stack/devoxx-fr-2025/
+    replay: https://youtu.be/34BxbPEtPkA?si=yNx_WZheyafzhToI
+  - title: JBang, un fichier Java pour les gouverner tous ?
+    id: jbang
+    location: Paris (🇫🇷)
+    language: Français
+    date: Jeudi 17 avril 2025
+    time: 12h35 - 12h50
+    duration: 15 minutes
+    pitch: |
+      Dans le monde Java, nous sommes habitués à initialiser un projet avec de nombreux fichiers et répertoires. A tel point que des CLI ont vu le jour pour nous aider à créer les projets SpringBoot ou Quarkus par exemple. Vient ensuite le choix du "package manager" : Maven ou Gradle ? Et c'est seulement à partir de là que l'on peut commencer à développer puis exécuter son code 😅.
+
+      Toutes ces étapes fastidieuses expliquent pourquoi, lorsque que l'on a besoin de faire un développement rapide de quelques lignes pour automatiser une action, on préfère d'autres langages à Java : Python par exemple.
+
+      Et si je vous disais, qu'avec JBang, vous allez pouvoir rester avec votre langage préféré, Java, et développer une classe toute simple (avec des dépendances externes) en quelques secondes !
+
+      C'est le pari (spoiler : réussi) de JBang que je vous propose de découvrir durant une session de live coding.
+
+      A vous les joies du scripting en Java !
+    source: https://github.com/philippart-s/jbang
+    slides: https://philippart-s.github.io/talks-slides/java-full-stack/devoxx-fr-2025/
+    replay: https://youtu.be/eHTDiYFtuI8?si=NtZIz4hqVDnhAfUe
+  - title: Continuer les meetups ? mais quelle drôle d'idée !
+    id: meetup
+    location: Paris (🇫🇷)
+    language: Français
+    date: Jeudi 17 avril 2025
+    time: 19h00 - 20h00
+    duration: 1 heure
+    pitch: |
+      Le meetup TADx est de retour cette année au BOF à Devoxx pour continuer nos échanges entre meetups de tous horizons !
+      Si l'année dernière, nous avons pu aborder les thèmes des débuts d'une aventure en meetup (sa création, son intégration, son financement, ses premiers aléas...) nous vous proposons cette année d'aller un peu plus loin dans les discussions, en abordant notamment la pérennisation d'une communauté tech au sens large :
+
+        - Quand, pourquoi et comment se renouveler ?
+        - Comment trouver des speakers inspirants et des sujets pertinents ?
+        - Comment fidéliser les participant·es ?
+        - Comment élargir l'impact d'un meetup local en lien avec d'autres communautés tech ?
+        - Comment optimiser la qualité des évènements dans un contexte financièrement restreint ?
+        - Quelles sont les expériences speaker et participant·es idéales ?
+
+      Ce sera l'occasion pour vous, organisateurs ou organisatrices de meetup, de conférences, participant·es régulier·es ou juste curieux·ses, de revenir sur l'année 2024 et d'échanger sur vos réussites, vos écueils et vos questions dans ce BOF garanti plein d'anecdotes et d'idées à tester pour faire continuer de battre le cœur des communautés tech !
+    slides: null
+    source: null
+    replay: null
+- title: 🎤 Talks donnés à Confoo 🎤
+  link: /talks/confoo-2025/
+  description: Liste de talks donnés lors de la conférence Confoo
+  image: conferences/confoo-2025.png
+  author: wilda
+  year: '2025'
+  date: '2025-02-26'
+  name: Confoo
+  postDate: 2025-02-26
+  displayDate: 26 au 28 février 2025
+  talksUrl: confoo-2025
+  excerpt: Liste des talks donnés lors de Confoo 2025
+  categories: Conférences
+  talks:
+  - title: Picocli, mets du Java dans ton terminal !
+    id: picocli
+    location: Montréal (🇨🇦)
+    language: Français
+    date: Vendredi 28 février 2025
+    time: 9h00 - 9h45
+    duration: 45 mins
+    pitch: |
+      Les CLI (Command Line Interface), tout le monde les utilise et elles existent depuis la nuit des temps.
+
+      Je vous propose d'utiliser un langage qui ne paraît pas, au premier abord, le plus intuitif pour faire une CLI : Java !
+
+      Venez m'accompagner lors d'une session de live coding permettant de mettre en lumière comment créer une CLI en Java avec Picocli et Quarkus en partant de zéro !
+    source: https://github.com/philippart-s/jarvis
+    slides: https://philippart-s.github.io/talks-slides/jarvis/confoo-2025/
+    replay: null
+  - title: Utiliser un LLM aussi simplement qu'une librairie
+    id: ai-lib
+    location: Montréal (🇨🇦)
+    language: Français
+    date: Mercredi 26 avril 2025
+    time: 9h00 - 9h45
+    duration: 45 mins
+    pitch: |
+      Et si nous pouvions utiliser les LLM aussi simplement que n'importe quelle librairie de notre stack de développement préférée ?
+
+      Je vous propose de découvrir qu'il est désormais possible, simplement, d'intégrer les LLM au sein de vos applications.
+
+      Nous passerons par toutes les étapes afin que vous puissiez comprendre quelle approche vous convient le mieux.
+      Customiser un prompt, rajouter vos données, mettre des filtres, ...
+    source: https://github.com/philippart-s/ai-as-lib
+    slides: https://philippart-s.github.io/talks-slides/ai-as-lib/confoo-2025/
+    replay: null
+- title: 🎤 Talks donnés à Snowcamp 🎤
+  link: /talks/snowcamp-2025/
+  description: Liste de talks donnés lors de la conférence Snowcamp
+  image: conferences/snowcamp-2025.png
+  author: wilda
+  year: '2025'
+  date: '2025-01-22'
+  name: Snowcamp
+  postDate: 2025-01-22
+  displayDate: 22 au 25 janvier 2025
+  talksUrl: snowcamp-2025
+  excerpt: Liste des talks donnés lors de Snowcamp 2025
+  categories: Conférences
+  talks:
+  - title: 'Développer avec l’IA : et si c’était aussi simple qu’ajouter une librairie ?'
+    id: ai-lib-workshop
+    location: Grenoble (🇫🇷)
+    language: Français
+    date: Mercredi 22 janvier 2025
+    time: 14h00 - 17h00
+    duration: 3h mins
+    pitch: |
+      L’intelligence artificielle et les LLM commencent à faire partie de nos vies personnelles mais aussi professionnelles.
+
+      Si on est habitué•es à les utiliser régulièrement, il en est autrement pour ce qui concerne nos développements.
+
+      Les intégrer peut nous paraître plus complexe que de les utiliser dans notre quotidien.
+
+      Dois-je apprendre un nouveau langage ou une nouvelle stack ?
+
+      Durant ce workshop nous vous proposons de vous donner tous les éléments pour débuter votre voyage au sein de l’IA sans quitter votre langage de prédilection : Java, JavaScript, Python ou Go (et qui sait peut être d’autres surprises (wink)).
+
+      Vous apprendrez comment utiliser les Frameworks du moment (LangChain, LangChain4j, …) mais aussi les outils vous facilitant la vie (Ollama, …) pour que dès le retour à votre application préférée, intégrer de l’IA au sein de celle-ci ne soit plus une peur mais une action aussi simple que de rajouter une librairie tierce.
+
+      Et, toujours pour vous simplifier la vie, venez juste avec votre ordinateur et un navigateur Internet, on se charge du reste pour vous construire un environnement de développement aux petits oignons grâce aux CDE.
+    source: https://github.com/devrel-workshop/ai-as-lib-workshop
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vRgA5HVbBViro5I0kfW0bbqbhfAFj-jXpKqYp-DXTwPnalyB3YtrHEshCZDBE-is64J_H4qrWkLaz-L/pub
+    replay: null
+- title: 🎤 Talks donnés à Bordeaux JUG 🎤
+  link: /talks/bordeaux-jug-2024/
+  description: Liste de talks donnés lors de la conférence Bordeaux JUG
+  image: conferences/bordeaux-jug-2024.png
+  author: wilda
+  year: '2024'
+  date: '2024-12-12'
+  name: Bordeaux JUG
+  postDate: 2024-12-12
+  displayDate: 12 décembre 2024
+  talksUrl: bordeaux-jug-2024
+  excerpt: Liste des talks donnés lors de Bordeaux JUG 2024
+  categories: Conférences
+  talks:
+  - title: Picocli, mets du Java dans ton terminal !
+    id: picocli
+    location: Bordeaux (🇫🇷)
+    language: Français
+    date: Jeudi 12 décembre 2024
+    time: 19h00 - 20h00
+    duration: 1h
+    pitch: "Les CLI (Command Line Interface), tout le monde les utilise et elles existent depuis la nuit des temps. \nSouvent synonyme de gain de productivité, leur création est parfois obscure et peut sembler complexe. \nC’était le cas il y a quelques décennies, mais depuis quelques années, des langages et Frameworks permettent d’en écrire simplement dans votre langage préféré. \n\nJe vous propose d’utiliser un langage qui ne paraît pas, au premier abord, le plus intuitif pour faire une CLI : Java ! \nMais il sera bien accompagné dans cette tâche : grâce à Picocli et Quarkus, notre CLI aura tout d’une grande, tout en étant simple à développer ! \n\nEt cerise sur le gâteau : nous créerons un « vrai » exécutable grâce à Graal VM. \nVenez m’accompagner lors d’une session de live coding permettant de mettre en lumière comment créer une CLI en Java avec Picocli et Quarkus en partant de zéro !\n"
+    source: https://github.com/philippart-s/jarvis/releases/tag/v2.2.0
+    slides: https://philippart-s.github.io/talks-slides/jarvis/bordeaux-jug-2024/
+    replay: null
+- title: 🎤 Talks donnés à Apside Camp 🎤
+  link: /talks/apside-camp-2024/
+  description: Liste de talks donnés lors de la conférence Apside Camp
+  image: conferences/apside-camp-2024.png
+  author: wilda
+  year: '2024'
+  date: '2024-11-12'
+  name: Apside Camp
+  postDate: 2024-11-12
+  displayDate: 12 novembre 2024
+  talksUrl: apside-camp-2024
+  excerpt: Liste des talks donnés lors de l'Apside Camp 2024
+  categories: Conférences
+  talks:
+  - title: ‍💻 Utiliser l’IA aussi simplement qu’une librairie 🤖
+    id: ai-lib
+    location: Saint-Pierre des Corps (🇫🇷)
+    language: Français
+    date: Mercredi 12 novembre 2024
+    time: 12h30 - 13h30
+    duration: 1h
+    pitch: |
+      L’intelligence artificielle commence à faire partie de nos vies personnelles mais aussi professionnelles. Si on commence à être habitué•es à les utiliser régulièrement il en est autrement pour ce qui concerne nos développements. Les intégrer peut nous paraître plus complexe que de les utiliser dans notre quotidien.
+
+      Pourtant, les Larges Languages Models (LLM) ont apporté beaucoup de nouvelles possibilités et méritent qu’on s’y attarde.
+
+      Et si nous pouvions les utiliser simplement comme n’importe quelle librairie de notre stack de développement préférée ?
+
+      Je vous propose de découvrir qu’il est désormais possible, simplement, d’intégrer les LLM au sein de vos applications. Nous passerons par toutes les étapes afin que vous puissiez comprendre quelle approche vous convient le mieux. Customiser un prompt, rajouter vos données, mettre des filtres, …
+
+      Ce sera aussi l’occasion pour vous de découvrir les projets Open Source du moment qui comptent avec LangChain et LangChain4j.
+
+      A la suite de ce talk vous repartirez avec une boîte à outils vous permettant d’intégrer simplement la puissance des LLM au seins de vos développements de tous les jours.
+    source: https://github.com/philippart-s/ai-as-lib
+    slides: https://philippart-s.github.io/talks-slides/ai-as-lib/apside-camp-2024/
+    replay: https://youtu.be/B5Q1kL5ti20
+- title: 🎤 Talks donnés à Volcamp 🎤
+  link: /talks/volcamp-2024/
+  description: Liste de talks donnés lors de la conférence Volcamp
+  image: conferences/volcamp-2024.png
+  author: wilda
+  year: '2024'
+  date: '2024-10-10'
+  name: Volcamp
+  postDate: 2024-10-10
+  displayDate: 10 octobre 2024
+  talksUrl: volcamp-2024
+  excerpt: Liste des talks donnés lors de Volcamp 2024
+  categories: Conférences
+  talks:
+  - title: Picocli, mets du Java dans ton terminal !
+    id: picocli
+    location: Clermont-Ferrand  (🇫🇷)
+    language: Français
+    date: Jeudi 10 octobre 2024
+    time: 11h30 - 12h15
+    duration: 45 minutes
+    pitch: "Les CLI (Command Line Interface), tout le monde les utilise et elles existent depuis la nuit des temps. \nSouvent synonyme de gain de productivité, leur création est parfois obscure et peut sembler complexe. \n\nC’était le cas il y a quelques décennies, mais depuis quelques années, des langages et Frameworks permettent d’en écrire simplement dans votre langage préféré. \nJe vous propose d’utiliser un langage qui ne paraît pas, au premier abord, le plus intuitif pour faire une CLI : Java ! \n\nMais il sera bien accompagné dans cette tâche : grâce à Picocli et Quarkus, notre CLI aura tout d’une grande, tout en étant simple à développer ! \nEt cerise sur le gâteau : nous créerons un « vrai » exécutable grâce à Graal VM. Venez m’accompagner lors d’une session de live coding permettant de mettre en lumière comment créer une CLI en Java avec Picocli et Quarkus en partant de zéro !\n"
+    source: https://github.com/philippart-s/jarvis
+    slides: https://philippart-s.github.io/talks-slides/jarvis/volcamp-2024
+    replay: https://youtu.be/VsFhJuumQMo
+- title: 🎤 Talks donnés à Riviera Dev 🎤
+  link: /talks/riviera-dev-2024/
+  description: Liste de talks donnés lors de la conférence Riviera Dev
+  image: conferences/riviera-dev-2024.png
+  author: wilda
+  year: '2024'
+  date: '2024-07-08'
+  name: Riviera Dev
+  postDate: 2024-07-08
+  displayDate: 8 au 10 juillet 2024
+  talksUrl: riviera-dev-2024
+  excerpt: Liste des talks donnés lors de Riviera Dev 2024
+  categories: Conférences
+  talks:
+  - title: Picocli, mets du Java dans ton terminal !
+    id: picocli
+    location: Sophia Antipolis (🇫🇷)
+    language: Français
+    date: mardi 9 juillet 2024
+    time: 17h45 - 18h10
+    duration: 25 minutes
+    pitch: "Les CLI (Command Line Interface), tout le monde les utilise et elles existent depuis la nuit des temps. \nSouvent synonyme de gain de productivité, leur création est parfois obscure et peut sembler complexe. \n\nC’était le cas il y a quelques décennies, mais depuis quelques années, des langages et Frameworks permettent d’en écrire simplement dans votre langage préféré. \nJe vous propose d’utiliser un langage qui ne paraît pas, au premier abord, le plus intuitif pour faire une CLI : Java ! \n\nMais il sera bien accompagné dans cette tâche : grâce à Picocli et Quarkus, notre CLI aura tout d’une grande, tout en étant simple à développer ! \nEt cerise sur le gâteau : nous créerons un « vrai » exécutable grâce à Graal VM. Venez m’accompagner lors d’une session de live coding permettant de mettre en lumière comment créer une CLI en Java avec Picocli et Quarkus en partant de zéro !\n"
+    source: https://github.com/philippart-s/jarvis
+    slides: https://philippart-s.github.io/talks-slides/jarvis/riviera-dev-2024/
+    replay: null
+  - title: Viens dompter ta première IA en Python
+    id: ai-101-workshop
+    location: Sophia Antipolis (🇫🇷)
+    language: Français
+    date: lundi 8 juillet 2024
+    time: 14h00 - 17h00
+    duration: 3 heures
+    pitch: |
+      L'IA est partout, du moins tout le monde revendique d'avoir de l'IA dans ses applications, ses objets connectés, …
+      En parler c'est bien, la développer c'est encore mieux.
+
+      Après une introduction aux concepts qui gravitent autour de l'IA mais aussi à l'écosystème Python nous vous proposons de customiser le modèle YOLO afin d'optimiser sa détection d'objets dans des images.
+      Pas besoin d'être experte ou expert Python, ni Data Scientist ou Machine Learning engineer, l'objectif ici est de découvrir tranquillement toutes ces notions.
+
+      Et cerise sur le gâteau, venez juste avec votre navigateur, on se charge du reste grâce à GitPod.
+      Vous découvrirez la magie d'un IDE dans le cloud.
+
+      Arrivés en débutantes, débutants ou justes curieuses et curieux, vous repartirez en sachant customiser de A à Z un modèle d'IA et créer son application l'utilisant.
+    source: https://github.com/devrel-workshop/101-AI-and-py
+    slides: https://docs.google.com/presentation/d/1WEci3-E0R9WI0pKocBnKyDRuyVnCSImkRSt0x-dh0VQ/
+    replay: null
+- title: 🎤 Talks donnés à Voxxed Days Luxembourg 🎤
+  link: /talks/voxxed-days-lux-2024/
+  description: Liste de talks donnés lors de la conférence Voxxed Days Luxembourg
+  image: conferences/voxxed-days-lux-2024.png
+  author: wilda
+  year: '2024'
+  date: '2024-06-20'
+  name: Voxxed Days Luxembourg
+  postDate: 2024-06-20
+  displayDate: 20 & 21 juin 2024
+  talksUrl: voxxed-days-lux-2024
+  excerpt: Liste des talks donnés lors de Voxxed Days Lux 2024
+  categories: Conférences
+  talks:
+  - title: Picocli, mets du Java dans ton terminal !
+    id: picocli
+    location: Luxembourg (🇱🇺)
+    language: Français
+    date: mardi 20 juin 2024
+    time: null
+    duration: 25 minutes
+    pitch: "Les CLI (Command Line Interface), tout le monde les utilise et elles existent depuis la nuit des temps. \nSouvent synonyme de gain de productivité, leur création est parfois obscure et peut sembler complexe. \n\nC’était le cas il y a quelques décennies, mais depuis quelques années, des langages et Frameworks permettent d’en écrire simplement dans votre langage préféré. \nJe vous propose d’utiliser un langage qui ne paraît pas, au premier abord, le plus intuitif pour faire une CLI : Java ! \n\nMais il sera bien accompagné dans cette tâche : grâce à Picocli et Quarkus, notre CLI aura tout d’une grande, tout en étant simple à développer ! \nEt cerise sur le gâteau : nous créerons un « vrai » exécutable grâce à Graal VM. Venez m’accompagner lors d’une session de live coding permettant de mettre en lumière comment créer une CLI en Java avec Picocli et Quarkus en partant de zéro !\n"
+    source: https://github.com/philippart-s/jarvis
+    slides: https://philippart-s.github.io/talks-slides/jarvis/voxxed-days-lux-2024/
+    replay: https://youtu.be/bLJ0QujwNZw
+  - title: Viens dompter ta première IA en Python
+    id: ai-101-workshop
+    location: Luxembourg (🇱🇺)
+    language: Français
+    date: mercredi 21 juin 2024
+    time: null
+    duration: 2 heures
+    pitch: |
+      L'IA est partout, du moins tout le monde revendique d'avoir de l'IA dans ses applications, ses objets connectés, …
+      En parler c'est bien, la développer c'est encore mieux.
+
+      Après une introduction aux concepts qui gravitent autour de l'IA mais aussi à l'écosystème Python nous vous proposons de customiser le modèle YOLO afin d'optimiser sa détection d'objets dans des images.
+      Pas besoin d'être experte ou expert Python, ni Data Scientist ou Machine Learning engineer, l'objectif ici est de découvrir tranquillement toutes ces notions.
+
+      Et cerise sur le gâteau, venez juste avec votre navigateur, on se charge du reste grâce à GitPod.
+      Vous découvrirez la magie d'un IDE dans le cloud.
+
+      Arrivés en débutantes, débutants ou justes curieuses et curieux, vous repartirez en sachant customiser de A à Z un modèle d'IA et créer son application l'utilisant.
+    source: https://github.com/devrel-workshop/101-AI-and-py
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vRxuy1RjdVH3LHeS3alNHmS0EN4rBa1WBEMXCuv3XxWXgkrlHH6HBLsELgTq8SKQnu821FiNNx_A3OM/pub
+    replay: https://youtu.be/D4bWMjX7zCk
+- title: 🎤 Talks donnés à CNCF Lorient 🎤
+  link: /talks/cncf-lorient-2024/
+  description: Liste de talks donnés lors de la conférence CNCF Lorient
+  image: conferences/cncf-lorient-2024.png
+  author: wilda
+  year: '2024'
+  date: '2024-05-20'
+  name: CNCF Lorient
+  postDate: 2024-05-20
+  displayDate: 20 mai 2024
+  talksUrl: cncf-lorient-2024
+  excerpt: Talk donné lors du CNCF Lorient 2024
+  categories: Meetup
+  talks:
+  - title: L’intelligence artificielle expliquée en 30 minutes !
+    id: ai-explain
+    location: Lorient (🇫🇷)
+    language: Français
+    date: mardi 20 mai 2024
+    time: null
+    duration: 30 minutes
+    pitch: |
+      … Ou comment en tant que dev faire de l’IA sans être Data Scientist ? L’IA est partout, du moins tout le monde revendique d’avoir de l’IA dans ses applications, ses objets connectés, …
+
+      Oui mais voilà, au final c’est quoi l’Intelligence Artificielle et qu’y a-t-il de caché derrière ce terme ? Comment expliquer simplement les notions techniques impliquées ? La grande IA va-t-elle gouverner le monde ?
+
+      Durant ce talk je vous propose de découvrir simplement, mais de manière la plus exhaustive possible, avec ma vision de développeur, ce qu’est l’intelligence artificielle et quelles technologies sont utilisées dans ce milieu.
+
+      Et tout ça en 30 minutes !
+    slides: https://philippart-s.github.io/talks-slides/ai-in-few-minutes/cncf-lorient-2024/
+    replay: null
+    source: null
+- title: 🎤 Talks donnés à Devoxx France 🎤
+  link: /talks/devoxx-fr-2024/
+  description: Liste de talks donnés lors de la conférence Devoxx France
+  image: conferences/devoxx-fr-2024.png
+  author: wilda
+  year: '2024'
+  date: '2024-04-16'
+  name: Devoxx France
+  postDate: 2024-04-16
+  displayDate: 16 au 18 avril 2024
+  talksUrl: devoxx-fr-2024
+  excerpt: Liste des talks donnés lors de Devoxx France 2024
+  categories: Conférences
+  talks:
+  - title: Picocli, mets du Java dans ton terminal !
+    id: picocli
+    location: Paris (🇫🇷)
+    language: Français
+    date: Mercredi 16 avril 2024
+    time: null
+    duration: 30 mins
+    pitch: "Les CLI (Command Line Interface), tout le monde les utilise et elles existent depuis la nuit des temps. \nSouvent synonyme de gain de productivité, leur création est parfois obscure et peut sembler complexe. \n\nC’était le cas il y a quelques décennies, mais depuis quelques années, des langages et Frameworks permettent d’en écrire simplement dans votre langage préféré. \nJe vous propose d’utiliser un langage qui ne paraît pas, au premier abord, le plus intuitif pour faire une CLI : Java ! \n\nMais il sera bien accompagné dans cette tâche : grâce à Picocli et Quarkus, notre CLI aura tout d’une grande, tout en étant simple à développer ! \nEt cerise sur le gâteau : nous créerons un « vrai » exécutable grâce à Graal VM. Venez m’accompagner lors d’une session de live coding permettant de mettre en lumière comment créer une CLI en Java avec Picocli et Quarkus en partant de zéro !\n"
+    source: https://github.com/philippart-s/jarvis
+    slides: https://philippart-s.github.io/talks-slides/jarvis/devoxx-fr-2024/
+    replay: https://youtu.be/UkogP588w7M
+  - title: Viens dompter ta première IA en Python
+    id: ai-101-workshop
+    location: Paris (🇫🇷)
+    language: Français
+    date: Mercredi 16 avril 2024
+    time: null
+    duration: 3 heures
+    pitch: |
+      L'IA est partout, du moins tout le monde revendique d'avoir de l'IA dans ses applications, ses objets connectés, …
+      En parler c'est bien, la développer c'est encore mieux.
+
+      Après une introduction aux concepts qui gravitent autour de l'IA mais aussi à l'écosystème Python nous vous proposons de customiser le modèle YOLO afin d'optimiser sa détection d'objets dans des images.
+      Pas besoin d'être experte ou expert Python, ni Data Scientist ou Machine Learning engineer, l'objectif ici est de découvrir tranquillement toutes ces notions.
+
+      Et cerise sur le gâteau, venez juste avec votre navigateur, on se charge du reste grâce à GitPod.
+      Vous découvrirez la magie d'un IDE dans le cloud.
+
+      Arrivés en débutantes, débutants ou justes curieuses et curieux, vous repartirez en sachant customiser de A à Z un modèle d'IA et créer son application l'utilisant.
+    source: https://github.com/devrel-workshop/101-AI-and-py
+    slides: https://www.canva.com/design/DAF9cbnB8Ec/tCaGhO-xiDkGGsIhS16xzg/
+    replay: null
+- title: 🎤 Talks donnés à Snowcamp 🎤
+  link: /talks/snowcamp-2024/
+  description: Liste de talks donnés lors de la conférence Snowcamp
+  image: conferences/snowcamp-2024.png
+  author: wilda
+  year: '2024'
+  date: '2024-01-31'
+  name: Snowcamp
+  postDate: 2024-01-31
+  displayDate: 31 janvier au 2 février 2024
+  talksUrl: snowcamp-2024
+  excerpt: Liste des talks donnés lors de Snowcamp 2024
+  categories: Conférences
+  talks:
+  - title: Picocli, mets du Java dans ton terminal !
+    id: picocli
+    location: Grenoble (🇫🇷)
+    language: Français
+    date: Jeudi 1 février 2024
+    time: null
+    duration: 30 mins
+    pitch: "Les CLI (Command Line Interface), tout le monde les utilise et elles existent depuis la nuit des temps. \nSouvent synonyme de gain de productivité, leur création est parfois obscure et peut sembler complexe. \n\nC’était le cas il y a quelques décennies, mais depuis quelques années, des langages et Frameworks permettent d’en écrire simplement dans votre langage préféré. \nJe vous propose d’utiliser un langage qui ne paraît pas, au premier abord, le plus intuitif pour faire une CLI : Java ! \n\nMais il sera bien accompagné dans cette tâche : grâce à Picocli et Quarkus, notre CLI aura tout d’une grande, tout en étant simple à développer ! \nEt cerise sur le gâteau : nous créerons un « vrai » exécutable grâce à Graal VM. Venez m’accompagner lors d’une session de live coding permettant de mettre en lumière comment créer une CLI en Java avec Picocli et Quarkus en partant de zéro !\n"
+    source: https://github.com/philippart-s/jarvis
+    slides: https://philippart-s.github.io/talks-slides/jarvis/snowcamp-2024/
+    replay: null
+  - title: Viens dompter ta première IA en Python
+    id: ai-101-workshop
+    location: Grenoble (🇫🇷)
+    language: Français
+    date: Mercredi 31 janvier 2024
+    time: null
+    duration: 3 heures
+    pitch: |
+      L'IA est partout, du moins tout le monde revendique d'avoir de l'IA dans ses applications, ses objets connectés, …
+      En parler c'est bien, la développer c'est encore mieux.
+
+      Après une introduction aux concepts qui gravitent autour de l'IA mais aussi à l'écosystème Python nous vous proposons de customiser le modèle YOLO afin d'optimiser sa détection d'objets dans des images.
+      Pas besoin d'être experte ou expert Python, ni Data Scientist ou Machine Learning engineer, l'objectif ici est de découvrir tranquillement toutes ces notions.
+
+      Et cerise sur le gâteau, venez juste avec votre navigateur, on se charge du reste grâce à GitPod.
+      Vous découvrirez la magie d'un IDE dans le cloud.
+
+      Arrivés en débutantes, débutants ou justes curieuses et curieux, vous repartirez en sachant customiser de A à Z un modèle d'IA et créer son application l'utilisant.
+    source: https://github.com/devrel-workshop/101-AI-and-py
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vQw8ak85UY_U6uLaHC1R16UkxKybawQDMsQosVBlBLoK3ZsCf07t6zozCskjyc1GCxRyZRbtgwBWmJF/pub
+    replay: null
+- title: 🎤 Talks donnés à Open Source Experience 🎤
+  link: /talks/ossx-2023/
+  description: Liste de talks donnés lors de la conférence Open Source Experience
+  image: conferences/ossx-2023.png
+  author: wilda
+  year: '2023'
+  date: '2023-12-15'
+  name: Open Source Experience
+  postDate: 2023-12-15
+  displayDate: décembre 2023
+  talksUrl: ossx-2023
+  excerpt: Liste des talks donnés lors de Open Source Experience 2023
+  categories: Conférences
+  talks:
+  - title: Picocli, mets du Java dans ton terminal !
+    id: picocli
+    location: Paris (🇫🇷)
+    language: Français
+    date: décembre 2023
+    duration: 30 mins
+    time: null
+    pitch: "Les CLI (Command Line Interface), tout le monde les utilise et elles existent depuis la nuit des temps. \nSouvent synonyme de gain de productivité, leur création est parfois obscure et peut sembler complexe. \n\nC’était le cas il y a quelques décennies, mais depuis quelques années, des langages et Frameworks permettent d’en écrire simplement dans votre langage préféré. \nJe vous propose d’utiliser un langage qui ne paraît pas, au premier abord, le plus intuitif pour faire une CLI : Java ! \n\nMais il sera bien accompagné dans cette tâche : grâce à Picocli et Quarkus, notre CLI aura tout d’une grande, tout en étant simple à développer ! \nEt cerise sur le gâteau : nous créerons un « vrai » exécutable grâce à Graal VM. Venez m’accompagner lors d’une session de live coding permettant de mettre en lumière comment créer une CLI en Java avec Picocli et Quarkus en partant de zéro !\n"
+    source: https://github.com/philippart-s/jarvis
+    slides: https://philippart-s.github.io/talks-slides/jarvis/osxp-2023/
+    replay: null
+- title: 🎤 Talks donnés à Codeurs en Seine 🎤
+  link: /talks/codeurs-seine-2023/
+  description: Liste de talks donnés lors de la conférence Codeurs en Seine
+  image: conferences/codeurs-seine-2023.png
+  author: wilda
+  year: '2023'
+  date: '2023-10-15'
+  name: Codeurs en Seine
+  postDate: 2023-10-15
+  displayDate: octobre 2023
+  talksUrl: codeurs-seine-2023
+  excerpt: Liste des talks donnés lors de Codeurs en Seine 2023
+  categories: Conférences
+  talks:
+  - title: Viens dompter ta première IA en Python
+    id: ai-101-workshop
+    location: Rouen (🇫🇷)
+    language: Français
+    date: octobre 2023
+    duration: 3 heures
+    time: null
+    pitch: |
+      L'IA est partout, du moins tout le monde revendique d'avoir de l'IA dans ses applications, ses objets connectés, …
+      En parler c'est bien, la développer c'est encore mieux.
+
+      Après une introduction aux concepts qui gravitent autour de l'IA mais aussi à l'écosystème Python nous vous proposons de customiser le modèle YOLO afin d'optimiser sa détection d'objets dans des images.
+      Pas besoin d'être experte ou expert Python, ni Data Scientist ou Machine Learning engineer, l'objectif ici est de découvrir tranquillement toutes ces notions.
+
+      Et cerise sur le gâteau, venez juste avec votre navigateur, on se charge du reste grâce à GitPod.
+      Vous découvrirez la magie d'un IDE dans le cloud.
+
+      Arrivés en débutantes, débutants ou justes curieuses et curieux, vous repartirez en sachant customiser de A à Z un modèle d'IA et créer son application l'utilisant.
+    source: https://github.com/devrel-workshop/101-AI-and-py
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vQ20OkhymfvaampdTQ-JC9viZk9SOnZcQyORETqOE3shALLnkC_GGYY_VqrTO1iC5nKzLNJRmlSJDBr/pub
+    replay: null
+- title: 🎤 Talks donnés à Cloud Nord 🎤
+  link: /talks/cloud-nord-2023/
+  description: Liste de talks donnés lors de la conférence Cloud Nord
+  image: conferences/cloud-nord-2023.png
+  author: wilda
+  year: '2023'
+  date: '2023-10-15'
+  name: Cloud Nord
+  postDate: 2023-10-15
+  displayDate: octobre 2023
+  talksUrl: cloud-nord-2023
+  excerpt: Talk donné lors de Cloud Nord 2023
+  categories: Conférences
+  talks:
+  - title: L’intelligence artificielle expliquée en 20 minutes !
+    id: ai-explain
+    location: Lille (🇫🇷)
+    language: Français
+    date: octobre 2023
+    duration: 20 minutes
+    time: null
+    pitch: |
+      … Ou comment en tant que dev faire de l’IA sans être Data Scientist ? L’IA est partout, du moins tout le monde revendique d’avoir de l’IA dans ses applications, ses objets connectés, …
+
+      Oui mais voilà, au final c’est quoi l’Intelligence Artificielle et qu’y a-t-il de caché derrière ce terme ? Comment expliquer simplement les notions techniques impliquées ? La grande IA va-t-elle gouverner le monde ?
+
+      Durant ce talk je vous propose de découvrir simplement, mais de manière la plus exhaustive possible, avec ma vision de développeur, ce qu’est l’intelligence artificielle et quelles technologies sont utilisées dans ce milieu.
+
+      Et tout ça en 20 minutes !
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vTTZM-DJUuUkNRv1VHgPvOUdtiIqDCOtSSeGVrmqcSTo5pF5yfvO2DSaDTH94EBXLd51dmfxEgtFQ5U/pub
+    replay: https://youtu.be/g_wR-x5U_wc
+    source: null
+- title: 🎤 Talks donnés à Devoxx Morocco 2023 🎤
+  link: /talks/devoxx-maroc-2023/
+  description: Liste de talks donnés lors de la conférence Devoxx Morocco 2023
+  image: conferences/devoxx-maroc-2023.png
+  author: wilda
+  year: '2023'
+  date: '2023-10-15'
+  name: Devoxx Morocco 2023
+  postDate: 2023-10-15
+  displayDate: octobre 2023
+  talksUrl: devoxx-maroc-2023
+  excerpt: Liste des talks donnés lors de Devoxx Morocco 2023
+  categories: Conférences
+  talks:
+  - title: Viens dompter ta première IA en Python
+    id: ai-101-woekshop
+    location: Agadir (🇲🇦)
+    language: Français
+    date: octobre 2023
+    duration: 2 heures
+    time: null
+    pitch: |
+      L'IA est partout, du moins tout le monde revendique d'avoir de l'IA dans ses applications, ses objets connectés, …
+      En parler c'est bien, la développer c'est encore mieux.
+
+      Après une introduction aux concepts qui gravitent autour de l'IA mais aussi à l'écosystème Python nous vous proposons de customiser le modèle YOLO afin d'optimiser sa détection d'objets dans des images.
+      Pas besoin d'être experte ou expert Python, ni Data Scientist ou Machine Learning engineer, l'objectif ici est de découvrir tranquillement toutes ces notions.
+
+      Et cerise sur le gâteau, venez juste avec votre navigateur, on se charge du reste grâce à GitPod.
+      Vous découvrirez la magie d'un IDE dans le cloud.
+
+      Arrivés en débutantes, débutants ou justes curieuses et curieux, vous repartirez en sachant customiser de A à Z un modèle d'IA et créer son application l'utilisant.
+    source: https://github.com/devrel-workshop/101-AI-and-py
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vQ7tGL9pHuvysWD2z_2V6NqULpCDElotZ6X84W1mjsuckLZJIr0TNQuB8M1AWtlZbpoce0EMKpH2QvZ/pub
+    replay: https://youtu.be/wdTbxs5Yw-Y
+- title: 🎤 Talks donnés à Cloud Alpes 🎤
+  link: /talks/cloud-alpes-2023/
+  description: Liste de talks donnés lors de la conférence Cloud Alpes
+  image: conferences/cloud-alpes-2023.png
+  author: wilda
+  year: '2023'
+  date: '2023-09-15'
+  name: Cloud Alpes
+  postDate: 2023-09-15
+  talksUrl: cloud-alpes-2023
+  displayDate: septembre 2023
+  excerpt: Talk donné lors de Cloud Alpes 2023
+  categories: Conférences
+  talks:
+  - title: L’intelligence artificielle expliquée en 20 minutes !
+    id: ai-explain
+    location: Lyon (🇫🇷)
+    language: Français
+    date: septembre 2023
+    duration: 20 minutes
+    time: null
+    pitch: |
+      … Ou comment en tant que dev faire de l’IA sans être Data Scientist ? L’IA est partout, du moins tout le monde revendique d’avoir de l’IA dans ses applications, ses objets connectés, …
+
+      Oui mais voilà, au final c’est quoi l’Intelligence Artificielle et qu’y a-t-il de caché derrière ce terme ? Comment expliquer simplement les notions techniques impliquées ? La grande IA va-t-elle gouverner le monde ?
+
+      Durant ce talk je vous propose de découvrir simplement, mais de manière la plus exhaustive possible, avec ma vision de développeur, ce qu’est l’intelligence artificielle et quelles technologies sont utilisées dans ce milieu.
+
+      Et tout ça en 20 minutes !
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vTEHXvYHjpZzEa7gn1fIeI_37lBwzza9OXTZQ_um4GomKyV3VtyKpbyYovI0svvulQap2olgimdOf9q/pub
+    replay: https://youtu.be/g_wR-x5U_wc
+    source: null
+- title: 🎤 Talks donnés à Riviera Dev 🎤
+  link: /talks/riviera-dev-2023/
+  description: Liste de talks donnés lors de la conférence Riviera Dev
+  image: conferences/riviera-dev-2023.png
+  author: wilda
+  year: '2023'
+  date: '2023-07-15'
+  name: Riviera Dev
+  postDate: 2023-07-15
+  talksUrl: riviera-dev-2023
+  displayDate: juillet 2023
+  excerpt: Talks donnés lors de Riviera Dev 2023
+  categories: Conférences
+  talks:
+  - title: L’intelligence artificielle expliquée en 20 minutes !
+    id: ai-explain
+    location: Sophia Antipolis (🇫🇷)
+    language: Français
+    date: juillet 2023
+    duration: 25 minutes
+    time: null
+    pitch: |
+      … Ou comment en tant que dev faire de l’IA sans être Data Scientist ? L’IA est partout, du moins tout le monde revendique d’avoir de l’IA dans ses applications, ses objets connectés, …
+
+      Oui mais voilà, au final c’est quoi l’Intelligence Artificielle et qu’y a-t-il de caché derrière ce terme ? Comment expliquer simplement les notions techniques impliquées ? La grande IA va-t-elle gouverner le monde ?
+
+      Durant ce talk je vous propose de découvrir simplement, mais de manière la plus exhaustive possible, avec ma vision de développeur, ce qu’est l’intelligence artificielle et quelles technologies sont utilisées dans ce milieu.
+
+      Et tout ça en 25 minutes !
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vTcaWng5_J7AYYhHhJB_9HHsLXfyIDxW0pjk2aYeC-Yjkw5_1YHZvzBd3DwftplogKuTxVgYNS5s_Ha/pub
+    replay: https://youtu.be/e5Lb0B6j0VM
+    source: null
+  - title: Développer un opérateur Kubernetes en Java, challenge accepted !
+    id: java-operator
+    location: Sophia Antipolis (🇫🇷)
+    language: Français
+    date: juillet 2023
+    duration: 50 minutes
+    time: null
+    pitch: |
+      Il n’est plus, je pense, nécessaire de présenter Kubernetes tellement il fait parti du paysage informatique. Avec sa généralisation, de nouveaux types de développements et de patterns sont apparus. Lors de ce talk j’aborderai l’un d’eux : les opérateurs.
+
+      Merveilleux assistants, aptes à faire énormément de choses. Mais voilà, les nombreuses documentations que l’on trouve tournent principalement autour d’un langage : Go. Ce n’est pas que cela ne me plaise pas, mais l’idée est de pouvoir aussi le faire avec un autre langage que je connais et utilisé par de nombreuses équipes de développement : Java.
+
+      Lors de ce talk, je vous présenterai, de manière simple, la notion des opérateurs au sein de Kubernetes : à quoi ils servent et comment ils évoluent dans l’éco-système Kubernetes. Nous verrons qu’ils peuvent être de simples aides à l’installation ou à la mise à jour d’une application au sein de Kubernetes mais aussi aller beaucoup plus loin en devenant de vrais Ops pour gérer vos applications pour vous !
+
+      Puis, nous développerons un opérateur ensemble et en Java : un bon Hello World nous permettant de prendre en main le SDK Java mais aussi les différents éléments présentés au début du talk.
+
+      Enfin, nous essaierons de nous projeter vers un opérateur faisant un peu plus que Hello World afin de voir si vraiment il sait faire de l’Ops !
+
+      A la fin de ce talk, vous aurez les différents éléments pour savoir si vous avez besoin de développer un opérateur, comment le développer, et choisir entre le faire en Java ou dans un autre langage !
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vQ9zLjbOoH6kiiJaay3KtflvYgRc_oNs__k9ZY3_bYPGhEdBwW02VL-N_cGqPUPpCHyALhHHuCKo9Vj/pub
+    source: https://github.com/philippart-s/java-operator-samples
+    replay: null
+- title: 🎤 Talks donnés à Voxxed Days Luxembourg 🎤
+  link: /talks/voxxed-days-lux-2023/
+  description: Liste de talks donnés lors de la conférence Voxxed Days Luxembourg
+  image: conferences/voxxed-days-lux-2023.png
+  author: wilda
+  year: '2023'
+  date: '2023-06-15'
+  name: Voxxed Days Luxembourg
+  postDate: 2023-06-15
+  talksUrl: voxxed-days-lux-2023
+  displayDate: juin 2023
+  excerpt: Talks donnés lors de Voxxed Days 2023
+  categories: Conférences
+  talks:
+  - title: L’intelligence artificielle expliquée en 15 minutes !
+    id: ai-explain
+    location: Luxembourg (🇱🇺)
+    language: Français
+    date: juin 2023
+    duration: 15 minutes
+    time: null
+    pitch: |
+      … Ou comment en tant que dev faire de l’IA sans être Data Scientist ? L’IA est partout, du moins tout le monde revendique d’avoir de l’IA dans ses applications, ses objets connectés, …
+
+      Oui mais voilà, au final c’est quoi l’Intelligence Artificielle et qu’y a-t-il de caché derrière ce terme ? Comment expliquer simplement les notions techniques impliquées ? La grande IA va-t-elle gouverner le monde ?
+
+      Durant ce talk je vous propose de découvrir simplement, mais de manière la plus exhaustive possible, avec ma vision de développeur, ce qu’est l’intelligence artificielle et quelles technologies sont utilisées dans ce milieu.
+
+      Et tout ça en 15 minutes !
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vSSO1iqYY6WVMR-Ef8JNXaHv81nBKsZXyr7y9Lh5fPF_-yH7HT-mNnpMzXVaTRyhjf9SMui5BzjAUW0/pub
+    replay: https://youtu.be/yQUPIQiDeU4
+    source: null
+  - title: CaaS, Serverless, scale to zero.
+    id: knative
+    location: Luxembourg (🇱🇺)
+    language: Français
+    date: juin 2023
+    duration: 45 minutes
+    time: null
+    pitch: |
+      Kubernetes est, depuis quelques temps, de plus en plus la normalité en entreprise. Avec cette nouvelle façon de concevoir son Système d’Information, de déployer et opérer les applications, de nouveaux besoins se sont faits sentir.
+
+      Lors de ce talk nous verrons ensemble une typologie de ces besoins qui tournent tous autour d’une notion : comment simplifier et optimiser le déploiement et l’exécution de nos containers ? En effet, sans paramétrage particulier, que vos applications soient utilisées ou non, un cluster Kubernetes leur allouera des ressources … et donc vous coûte de l’argent !
+
+      L’autre aspect est de simplifier le cycle de déploiement / configuration d’une application, toutes les développeuses ou développeurs n’ont pas envie de devenir ceinture noire de YAML ou de Kubernetes pour tester leur application en développement sur un cluster 😅.
+
+      C’est là que rentre en jeu les notions de Container as a Service, de Serverless et autre fonctionnalité de “scale to zero”. Différents moyens sont à notre disposition pour arriver à couvrir ces cas d’utilisations. Knative va nous permettre de couvrir une grande partie de ces besoins. Nous verrons ensemble comment le déployer sur un cluster Kubernetes managé et comment l’utiliser afin de nous simplifier la vie.
+
+      Vous repartirez de ce talk, j’espère, en ayant compris les différentes solutions pour répondre à ces problèmes en ayant pris conscience qu’il est possible de s’affranchir de solutions propriétaires pour y arriver 😉.
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vSSO1iqYY6WVMR-Ef8JNXaHv81nBKsZXyr7y9Lh5fPF_-yH7HT-mNnpMzXVaTRyhjf9SMui5BzjAUW0/pub
+    replay: https://youtu.be/f_ammzn-y2Y
+    source: https://github.com/philippart-s/kn-serving-samples
+- title: 🎤 Talks donnés à Cloud Est 🎤
+  link: /talks/cloud-est-2023/
+  description: Liste de talks donnés lors de la conférence Cloud Est
+  image: conferences/cloud-est-2023.png
+  author: wilda
+  year: '2023'
+  date: '2023-06-15'
+  name: Cloud Est
+  postDate: 2023-06-15
+  talksUrl: cloud-est-2023
+  displayDate: juin 2023
+  excerpt: Talks donnés lors de CLoud Est 2023
+  categories: Conférences
+  talks:
+  - title: Développer un opérateur Kubernetes, pourquoi et comment ?
+    id: kube-operator
+    location: Lyon (🇫🇷)
+    language: Français
+    date: juin 2023
+    duration: 45 minutes
+    time: null
+    pitch: |
+      Développer un opérateur peu, de prime abord, être plutôt impressionnant. Heureusement différents Frameworks ont vu le jour, dont le plus connu, Operator SDK (https://sdk.operatorframework.io/), permettant de développer en Go, Helm ou Ansible un opérateur.
+
+      Avant de se lancer dans la grande aventure de développer un opérateur nous verrons ensemble ce qui se cache derrière la notion des opérateurs au sein de Kubernetes : à quoi ils servent et comment ils évoluent dans l’éco-système Kubernetes.
+
+      Une fois ces bases acquises, il ne reste plus qu’à développer son opérateur !
+
+      Oui mais comment et avec quel langage ? Go ? Helm ? Et pourquoi pas Java ?
+
+      J’ai envie de vous proposer les trois !
+
+      Nous verrons ensemble trois façons possible de développer un opérateur, ce que chaque Framework apporte (ou pas) : Helm, Golang et même en Java avec Quarkus !
+
+      A la fin de ce talk, vous aurez les différents éléments pour savoir si vous avez besoin de développer un opérateur, comment le développer, et choisir quel langage utiliser selon vos connaissances !
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vSSO1iqYY6WVMR-Ef8JNXaHv81nBKsZXyr7y9Lh5fPF_-yH7HT-mNnpMzXVaTRyhjf9SMui5BzjAUW0/pub
+    replay: https://youtu.be/ZhKPyCRAh54
+    source: null
+  - title: CaaS, Serverless, scale to zero.
+    id: knative
+    location: Lyon (🇫🇷)
+    language: Français
+    date: juin 2023
+    duration: 45 minutes
+    time: null
+    pitch: |
+      Kubernetes est, depuis quelques temps, de plus en plus la normalité en entreprise. Avec cette nouvelle façon de concevoir son Système d’Information, de déployer et opérer les applications, de nouveaux besoins se sont faits sentir.
+
+      Lors de ce talk nous verrons ensemble une typologie de ces besoins qui tournent tous autour d’une notion : comment simplifier et optimiser le déploiement et l’exécution de nos containers ? En effet, sans paramétrage particulier, que vos applications soient utilisées ou non, un cluster Kubernetes leur allouera des ressources … et donc vous coûte de l’argent !
+
+      L’autre aspect est de simplifier le cycle de déploiement / configuration d’une application, toutes les développeuses ou développeurs n’ont pas envie de devenir ceinture noire de YAML ou de Kubernetes pour tester leur application en développement sur un cluster 😅.
+
+      C’est là que rentre en jeu les notions de Container as a Service, de Serverless et autre fonctionnalité de “scale to zero”. Différents moyens sont à notre disposition pour arriver à couvrir ces cas d’utilisations. Knative va nous permettre de couvrir une grande partie de ces besoins. Nous verrons ensemble comment le déployer sur un cluster Kubernetes managé et comment l’utiliser afin de nous simplifier la vie.
+
+      Vous repartirez de ce talk, j’espère, en ayant compris les différentes solutions pour répondre à ces problèmes en ayant pris conscience qu’il est possible de s’affranchir de solutions propriétaires pour y arriver 😉.
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vSeN0-H16tsp9Xn6R4b2xX6wuYSiEu6Y2G6wNS2D1BGo9h6eTgOtVZ6vPqGtAhHA2kXFQrsatW6s9og/pub
+    source: https://github.com/philippart-s/kn-serving-samples
+    replay: null
+- title: 🎤 Talks donnés à Le Camping des Speakers 🎤
+  link: /talks/camping-speakers-2023/
+  description: Liste de talks donnés lors de la conférence Le Camping des Speakers
+  image: conferences/camping-speakers-2023.png
+  author: wilda
+  year: '2023'
+  date: '2023-06-15'
+  name: Le Camping des Speakers
+  postDate: 2023-06-15
+  talksUrl: camping-speakers-2023
+  displayDate: juin 2023
+  excerpt: Talks donnés lors du Camping des Speakers 2023
+  categories: Conférences
+  talks:
+  - title: L’intelligence artificielle expliquée en 20 minutes !
+    id: ai-explain
+    location: Baden (🇫🇷)
+    language: Français
+    date: juin 2023
+    duration: 20 minutes
+    time: null
+    pitch: |
+      … Ou comment en tant que dev faire de l’IA sans être Data Scientist ? L’IA est partout, du moins tout le monde revendique d’avoir de l’IA dans ses applications, ses objets connectés, …
+
+      Oui mais voilà, au final c’est quoi l’Intelligence Artificielle et qu’y a-t-il de caché derrière ce terme ? Comment expliquer simplement les notions techniques impliquées ? La grande IA va-t-elle gouverner le monde ?
+
+      Durant ce talk je vous propose de découvrir simplement, mais de manière la plus exhaustive possible, avec ma vision de développeur, ce qu’est l’intelligence artificielle et quelles technologies sont utilisées dans ce milieu.
+
+      Et tout ça en 20 minutes !
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vQVg_V9yYEUBGdT-JIJC4H4oDCur7odVBagTi5lPn6JCNMtR7avfdtXbOVytMvQjrG7RWXCh4GqxYRO/pub
+    source: null
+    replay: null
+- title: 🎤 Talks donnés à Web2day 🎤
+  link: /talks/web2day-2023/
+  description: Liste de talks donnés lors de la conférence Web2day
+  image: conferences/web2day-2023.png
+  author: wilda
+  year: '2023'
+  date: '2023-05-15'
+  name: Web2day
+  postDate: 2023-05-15
+  talksUrl: web2day-2023
+  displayDate: mai 2023
+  excerpt: Talks donnés lors de Web2day 2023
+  categories: Conférences
+  talks:
+  - title: CaaS, Serverless, scale to zero.
+    id: knative
+    location: Nantes (🇫🇷)
+    language: Français
+    date: mai 2023
+    duration: 30 minutes
+    time: null
+    pitch: |
+      Kubernetes est, depuis quelques temps, de plus en plus la normalité en entreprise. Avec cette nouvelle façon de concevoir son Système d’Information, de déployer et opérer les applications, de nouveaux besoins se sont faits sentir.
+
+      Lors de ce talk nous verrons ensemble une typologie de ces besoins qui tournent tous autour d’une notion : comment simplifier et optimiser le déploiement et l’exécution de nos containers ? En effet, sans paramétrage particulier, que vos applications soient utilisées ou non, un cluster Kubernetes leur allouera des ressources … et donc vous coûte de l’argent !
+
+      L’autre aspect est de simplifier le cycle de déploiement / configuration d’une application, toutes les développeuses ou développeurs n’ont pas envie de devenir ceinture noire de YAML ou de Kubernetes pour tester leur application en développement sur un cluster 😅.
+
+      C’est là que rentre en jeu les notions de Container as a Service, de Serverless et autre fonctionnalité de “scale to zero”. Différents moyens sont à notre disposition pour arriver à couvrir ces cas d’utilisations. Knative va nous permettre de couvrir une grande partie de ces besoins. Nous verrons ensemble comment le déployer sur un cluster Kubernetes managé et comment l’utiliser afin de nous simplifier la vie.
+
+      Vous repartirez de ce talk, j’espère, en ayant compris les différentes solutions pour répondre à ces problèmes en ayant pris conscience qu’il est possible de s’affranchir de solutions propriétaires pour y arriver 😉.
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vR9SainA4p4YLdLvQRQ-FA0wwgXmyzgJXVPKfWX7kmgOj4uL06Dwz8ohfhbYZBaBhSEwy-jn0A6D3iC/pub
+    source: https://github.com/philippart-s/kn-serving-samples
+    replay: null
+- title: 🎤 Talks donnés à Paris JUG 🎤
+  link: /talks/paris-jug-2023/
+  description: Liste de talks donnés lors de la conférence Paris JUG
+  image: conferences/paris-jug-2023.png
+  author: wilda
+  year: '2023'
+  date: '2023-05-15'
+  name: Paris JUG
+  postDate: 2023-05-15
+  talksUrl: paris-jug-2023
+  displayDate: mai 2023
+  excerpt: Talks donnés lors du Paris JUG 2023
+  categories: Meetup
+  talks:
+  - title: Développer un opérateur Kubernetes en Java, challenge accepted !
+    id: java-operator
+    location: Paris (🇫🇷)
+    language: Français
+    date: mai 2023
+    duration: 50 minutes
+    time: null
+    pitch: |
+      Il n’est plus, je pense, nécessaire de présenter Kubernetes tellement il fait parti du paysage informatique. Avec sa généralisation, de nouveaux types de développements et de patterns sont apparus. Lors de ce talk j’aborderai l’un d’eux : les opérateurs.
+
+      Merveilleux assistants, aptes à faire énormément de choses. Mais voilà, les nombreuses documentations que l’on trouve tournent principalement autour d’un langage : Go. Ce n’est pas que cela ne me plaise pas, mais l’idée est de pouvoir aussi le faire avec un autre langage que je connais et utilisé par de nombreuses équipes de développement : Java.
+
+      Lors de ce talk, je vous présenterai, de manière simple, la notion des opérateurs au sein de Kubernetes : à quoi ils servent et comment ils évoluent dans l’éco-système Kubernetes. Nous verrons qu’ils peuvent être de simples aides à l’installation ou à la mise à jour d’une application au sein de Kubernetes mais aussi aller beaucoup plus loin en devenant de vrais Ops pour gérer vos applications pour vous !
+
+      Puis, nous développerons un opérateur ensemble et en Java : un bon Hello World nous permettant de prendre en main le SDK Java mais aussi les différents éléments présentés au début du talk.
+
+      Enfin, nous essaierons de nous projeter vers un opérateur faisant un peu plus que Hello World afin de voir si vraiment il sait faire de l’Ops !
+
+      A la fin de ce talk, vous aurez les différents éléments pour savoir si vous avez besoin de développer un opérateur, comment le développer, et choisir entre le faire en Java ou dans un autre langage !
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vQDmekVSJd7xXHGyAXRqebx3T92beDEYNVTcanOWyBOZWozML4aUvghwv8wCKbQh6OOoEaNCemdL34a/pub
+    source: https://github.com/philippart-s/java-operator-samples
+    replay: https://youtu.be/uLOCXKtPy4g
+- title: 🎤 Talks donnés à Meetup Programmez 🎤
+  link: /talks/meetup-programmez-2023/
+  description: Liste de talks donnés lors de la conférence Meetup Programmez
+  image: conferences/meetup-programmez-2023.png
+  author: wilda
+  year: '2023'
+  date: '2023-03-15'
+  name: Meetup Programmez
+  postDate: 2023-03-15
+  talksUrl: meetup-programmez-2023
+  displayDate: mars 2023
+  excerpt: Talks donnés lors du meetup Programmez 2023
+  categories: Meetup
+  talks:
+  - title: Développer un opérateur Kubernetes en Java, challenge accepted !
+    id: java-operator
+    location: Paris (🇫🇷)
+    language: Français
+    date: mars 2023
+    duration: 50 minutes
+    time: null
+    pitch: |
+      Il n’est plus, je pense, nécessaire de présenter Kubernetes tellement il fait parti du paysage informatique. Avec sa généralisation, de nouveaux types de développements et de patterns sont apparus. Lors de ce talk j’aborderai l’un d’eux : les opérateurs.
+
+      Merveilleux assistants, aptes à faire énormément de choses. Mais voilà, les nombreuses documentations que l’on trouve tournent principalement autour d’un langage : Go. Ce n’est pas que cela ne me plaise pas, mais l’idée est de pouvoir aussi le faire avec un autre langage que je connais et utilisé par de nombreuses équipes de développement : Java.
+
+      Lors de ce talk, je vous présenterai, de manière simple, la notion des opérateurs au sein de Kubernetes : à quoi ils servent et comment ils évoluent dans l’éco-système Kubernetes. Nous verrons qu’ils peuvent être de simples aides à l’installation ou à la mise à jour d’une application au sein de Kubernetes mais aussi aller beaucoup plus loin en devenant de vrais Ops pour gérer vos applications pour vous !
+
+      Puis, nous développerons un opérateur ensemble et en Java : un bon Hello World nous permettant de prendre en main le SDK Java mais aussi les différents éléments présentés au début du talk.
+
+      Enfin, nous essaierons de nous projeter vers un opérateur faisant un peu plus que Hello World afin de voir si vraiment il sait faire de l’Ops !
+
+      A la fin de ce talk, vous aurez les différents éléments pour savoir si vous avez besoin de développer un opérateur, comment le développer, et choisir entre le faire en Java ou dans un autre langage !
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vQyK1rx2mDLyE2m4QXH-T-GPYmm_gzNdvFOKhV9bGm53MnSTnpj_fbHpND1Yc3IIzP-awYBO87be4Dw/pub
+    source: https://github.com/philippart-s/java-operator-samples
+    replay: https://youtu.be/-SY1dEjOTik
+- title: 🎤 Talks donnés à DevDay 🎤
+  link: /talks/devday-2023/
+  description: Liste de talks donnés lors de la conférence DevDay
+  image: conferences/devday-2023.png
+  author: wilda
+  year: '2023'
+  date: '2023-03-15'
+  name: DevDay
+  postDate: 2023-03-15
+  talksUrl: devday-2023
+  displayDate: mars 2023
+  excerpt: Talks donnés lors de DevDay 2023
+  categories: Conférences
+  talks:
+  - title: Développer un opérateur Kubernetes en Java, challenge accepted !
+    id: java-operator
+    location: Mons (🇧🇪)
+    language: Français
+    date: mars 2023
+    duration: 50 minutes
+    time: null
+    pitch: |
+      Il n’est plus, je pense, nécessaire de présenter Kubernetes tellement il fait parti du paysage informatique. Avec sa généralisation, de nouveaux types de développements et de patterns sont apparus. Lors de ce talk j’aborderai l’un d’eux : les opérateurs.
+
+      Merveilleux assistants, aptes à faire énormément de choses. Mais voilà, les nombreuses documentations que l’on trouve tournent principalement autour d’un langage : Go. Ce n’est pas que cela ne me plaise pas, mais l’idée est de pouvoir aussi le faire avec un autre langage que je connais et utilisé par de nombreuses équipes de développement : Java.
+
+      Lors de ce talk, je vous présenterai, de manière simple, la notion des opérateurs au sein de Kubernetes : à quoi ils servent et comment ils évoluent dans l’éco-système Kubernetes. Nous verrons qu’ils peuvent être de simples aides à l’installation ou à la mise à jour d’une application au sein de Kubernetes mais aussi aller beaucoup plus loin en devenant de vrais Ops pour gérer vos applications pour vous !
+
+      Puis, nous développerons un opérateur ensemble et en Java : un bon Hello World nous permettant de prendre en main le SDK Java mais aussi les différents éléments présentés au début du talk.
+
+      Enfin, nous essaierons de nous projeter vers un opérateur faisant un peu plus que Hello World afin de voir si vraiment il sait faire de l’Ops !
+
+      A la fin de ce talk, vous aurez les différents éléments pour savoir si vous avez besoin de développer un opérateur, comment le développer, et choisir entre le faire en Java ou dans un autre langage !
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vSnKIHMuWaYwvDUicRCk1NNgowYN7j1TNeMem-pLyxF0T2emde7Xkh0kQz5J-kSworGgXO9iAAkO1Xv/pub
+    source: https://github.com/philippart-s/java-operator-samples
+    replay: null
+- title: 🎤 Talks donnés à Kubernetes Community Days France 2023 🎤
+  link: /talks/kcd-france-2023/
+  description: Liste de talks donnés lors de la conférence Kubernetes Community Days France 2023
+  image: conferences/kcd-france-2023.png
+  author: wilda
+  year: '2023'
+  date: '2023-03-15'
+  name: Kubernetes Community Days France 2023
+  postDate: 2023-03-15
+  talksUrl: kcd-france-2023
+  displayDate: mars 2023
+  excerpt: Talks donnés lors de Kubernetes Community Days France 2023 2023
+  categories: Conférences
+  talks:
+  - title: Les opérateurs Kubernetes à la portée de n’importe quel·le développ·euse·eur
+    id: kube-operator
+    location: Paris (🇫🇷)
+    language: Français
+    date: mars 2023
+    duration: 30 minutes
+    time: null
+    pitch: |
+      Développer un opérateur peu, de prime abord, être plutôt impressionnant. Heureusement différents Frameworks ont vu le jour, dont le plus connu, Operator SDK (https://sdk.operatorframework.io/), permettant de développer en Go, Helm ou Ansible un opérateur.
+
+      Avant de se lancer dans la grande aventure de développer un opérateur nous verrons ensemble ce qui se cache derrière la notion des opérateurs au sein de Kubernetes : à quoi ils servent et comment ils évoluent dans l’éco-système Kubernetes.
+
+      Une fois ces bases acquises, il ne reste plus qu’à développer son opérateur !
+
+      Oui mais comment et avec quel langage ? Go ? Helm ? Et pourquoi pas Java ?
+
+      J’ai envie de vous proposer les trois !
+
+      Nous verrons ensemble trois façons possible de développer un opérateur, ce que chaque Framework apporte (ou pas) : Helm, Golang et même en Java avec Quarkus !
+
+      A la fin de ce talk, vous aurez les différents éléments pour savoir si vous avez besoin de développer un opérateur, comment le développer, et choisir quel langage utiliser selon vos connaissances !
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vQijm2DKxZOnpi_kv-e9rQgZoC45hxaZsx482GvvhuUe8SiBWr2P9m4Y0z5XCpw93z-rwi8NB5z_zuG/pub
+    source: https://github.com/philippart-s/java-operator-quarkus-deploy
+    replay: https://youtu.be/ANm7MBpkv1M
+- title: 🎤 Talks donnés à Very Tech Trip 🎤
+  link: /talks/vtt-2023/
+  description: Liste de talks donnés lors de la conférence Very Tech Trip
+  image: conferences/vtt-2023.png
+  author: wilda
+  year: '2023'
+  date: '2023-02-15'
+  name: Very Tech Trip
+  postDate: 2023-02-15
+  talksUrl: vtt-2023
+  displayDate: février 2023
+  excerpt: Talks donnés lors de Very Tech Trip 2023
+  categories: Conférences
+  talks:
+  - title: CaaS, Serverless, scale to zero.
+    id: knative
+    location: Paris (🇫🇷)
+    language: Français
+    date: février 2023
+    duration: 45 minutes
+    time: null
+    pitch: |
+      Kubernetes est, depuis quelques temps, de plus en plus la normalité en entreprise. Avec cette nouvelle façon de concevoir son Système d’Information, de déployer et opérer les applications, de nouveaux besoins se sont faits sentir.
+
+      Lors de ce talk nous verrons ensemble une typologie de ces besoins qui tournent tous autour d’une notion : comment simplifier et optimiser le déploiement et l’exécution de nos containers ? En effet, sans paramétrage particulier, que vos applications soient utilisées ou non, un cluster Kubernetes leur allouera des ressources … et donc vous coûte de l’argent !
+
+      L’autre aspect est de simplifier le cycle de déploiement / configuration d’une application, toutes les développeuses ou développeurs n’ont pas envie de devenir ceinture noire de YAML ou de Kubernetes pour tester leur application en développement sur un cluster 😅.
+
+      C’est là que rentre en jeu les notions de Container as a Service, de Serverless et autre fonctionnalité de “scale to zero”. Différents moyens sont à notre disposition pour arriver à couvrir ces cas d’utilisations. Knative va nous permettre de couvrir une grande partie de ces besoins. Nous verrons ensemble comment le déployer sur un cluster Kubernetes managé et comment l’utiliser afin de nous simplifier la vie.
+
+      Vous repartirez de ce talk, j’espère, en ayant compris les différentes solutions pour répondre à ces problèmes en ayant pris conscience qu’il est possible de s’affranchir de solutions propriétaires pour y arriver 😉.
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vSK73hAFiHAOe3KPLMfg_qlrqnPAUJpiLTIUgvchYCfSANyTKUmWONxbNpliQMnefBouGCR0pdheneF/pub
+    source: https://github.com/philippart-s/kn-serving-samples
+    replay: null
+- title: 🎤 Talks donnés à Snowcamp 2023 🎤
+  link: /talks/snowcamp-2023/
+  description: Liste de talks donnés lors de la conférence Snowcamp 2023
+  image: conferences/snowcamp-2023.png
+  author: wilda
+  year: '2023'
+  date: '2023-01-15'
+  name: Snowcamp 2023
+  postDate: 2023-01-15
+  talksUrl: snowcamp-2023
+  displayDate: janvier 2023
+  excerpt: Talks donnés lors de Snowcamp 2023
+  categories: Conférences
+  talks:
+  - title: Développer un opérateur Kubernetes en Java, challenge accepted !
+    id: java-operator
+    location: Grenoble (🇫🇷)
+    language: Français
+    date: janvier 2023
+    duration: 3h
+    time: null
+    pitch: |
+      Les opérateurs Kubernetes prennent de plus en plus de place de place dans l’éco-système Kubernetes. Un Opérateur simplifie le packaging et le déploiement des applications au sein de Kubernetes mais il permet aussi d’automatiser la partie opérationnelle telle que les mises à jour, les migrations etc …
+
+      Après une rapide présentation sur les concepts clefs des opérateur ce workshop sera l’occasion de plonger concrètement dans les profondeurs du développement d’un opérateur.
+
+      Développer d’accord, mais avec quel langage ?
+
+      Pour nous, vieux développeurs, le choix était évident : Java ! Et comme on adore Quarkus, autant méler l’util à l’agréable, c’est avec Quarkus et le Java Operator SDK que nous allons accompagner les participantes et participants de ce Workshop.
+
+      Nous allons développer une petite application Quarkus puis la packager et la déployer grâce au développement de l’opérateur. Pour terminer, nous automatiserons la partie opérationnelle pour que cette application fonctionne à la perfection et de manière robuste. Tout ceci sans quitter Java et Quarkus !
+
+      Nul besoin d’être un expert en Quarkus ou Kubernetes pour suivre le lab, aimer coder et connaître les bases de Java suffit largement. Vous n’aurez pas non plus besoin d’installer quoi ce ce soit sur la machine, un simple navigateur et le tour est joué grâce à la puissance de GitPod.
+
+      A la sortie de ce workshop non seulement le monde des opérateurs n’aura plus de secret pour toi, mais en plus tu en auras développé un !
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vSAbycTHbdO-BgVV9dzBn0eAHM2q4lsn72D3sK16vupJYYz5C2ks47BpDg1clYdKsSSn5AMXROpQl6U/pub
+    source: https://github.com/k8s-operator-workshop
+    replay: null
+  - title: Si on aidait le capitaine Némo à classifier les monstres marins ?
+    id: nemo
+    location: Grenoble (🇫🇷)
+    language: Français
+    date: janvier 2023
+    duration: 50 minutes
+    time: null
+    pitch: |
+      Intelligence Artificielle, Machine Learning, Deep Learning, … Ces termes on les entend tous les jours mais Iau final que représentent-ils et surtout comment développe-t-on des applications basées sur ces notions ?
+
+      Durant ce talk nous vous ferons découvrir le monde de la data et comment il est, avec les bons outils, facile de se lancer dans l’aventure de l’analyse de données et de la classification.
+
+      Ce talk permettra aux développeuses et développeurs de découvrir comment développer des applications apprenantes et montrera qu’il n’est pas nécessaire d’être un As du développement pour développer son propre algorithme de Machine Learning ou de Deep Learning. Nous vous montrerons comment créer votre premier Notebook avec JupyterLab afin de vous accompagner dans vos premiers pas. Ce sera l’occasion pour vous de plonger dans la découverte du monde sous-marin en développant un modèle permettant d’identifier et classifier les sons de mammifères marins.
+
+      Pour finir, nous verrons ensemble, avec Streamlit, comment développer une application utilisant ce modèle.    slides: https://docs.google.com/presentation/d/e/2PACX-1vSAbycTHbdO-BgVV9dzBn0eAHM2q4lsn72D3sK16vupJYYz5C2ks47BpDg1clYdKsSSn5AMXROpQl6U/pub
+    source: https://github.com/eleapttn/nemo-notebook
+    slides: null
+    replay: null
+- title: 🎤 Talks donnés à Touraine Tech 🎤
+  link: /talks/tnt-2023/
+  description: Liste de talks donnés lors de la conférence Touraine Tech
+  image: conferences/conference.jpg
+  author: wilda
+  year: '2023'
+  date: '2023-01-15'
+  name: Touraine Tech
+  postDate: 2023-01-15
+  talksUrl: tnt-2023
+  displayDate: janvier 2023
+  excerpt: Talks donnés lors de Touraine Tech 2023
+  categories: Conférences
+  talks:
+  - title: Si on aidait le capitaine Némo à classifier les monstres marins ?
+    id: nemo
+    location: Tours (🇫🇷)
+    language: Français
+    date: janvier 2023
+    duration: 50 minutes
+    time: null
+    pitch: |
+      Intelligence Artificielle, Machine Learning, Deep Learning, … Ces termes on les entend tous les jours mais Iau final que représentent-ils et surtout comment développe-t-on des applications basées sur ces notions ?
+
+      Durant ce talk nous vous ferons découvrir le monde de la data et comment il est, avec les bons outils, facile de se lancer dans l’aventure de l’analyse de données et de la classification.
+
+      Ce talk permettra aux développeuses et développeurs de découvrir comment développer des applications apprenantes et montrera qu’il n’est pas nécessaire d’être un As du développement pour développer son propre algorithme de Machine Learning ou de Deep Learning. Nous vous montrerons comment créer votre premier Notebook avec JupyterLab afin de vous accompagner dans vos premiers pas. Ce sera l’occasion pour vous de plonger dans la découverte du monde sous-marin en développant un modèle permettant d’identifier et classifier les sons de mammifères marins.
+
+      Pour finir, nous verrons ensemble, avec Streamlit, comment développer une application utilisant ce modèle.    slides: https://docs.google.com/presentation/d/e/2PACX-1vSAbycTHbdO-BgVV9dzBn0eAHM2q4lsn72D3sK16vupJYYz5C2ks47BpDg1clYdKsSSn5AMXROpQl6U/pub
+    source: https://github.com/eleapttn/nemo-notebook
+    replay: https://youtu.be/l3DTnRJlhdE
+    slides: null
+- title: 🎤 Talks donnés à DevOps D-Day 🎤
+  link: /talks/devops-d-day-2022/
+  description: Liste de talks donnés lors de la conférence DevOps D-Day
+  image: conferences/devops-d-day-2022.png
+  author: wilda
+  year: '2022'
+  date: '2022-12-15'
+  name: DevOps D-Day
+  postDate: 2022-12-15
+  talksUrl: devops-d-day-2022
+  displayDate: décembre 2022
+  excerpt: Liste des talks donnés lors de DevOps D-Day 2022
+  categories: Conférences
+  talks:
+  - title: Développer un opérateur Kubernetes en Java, challenge accepted !
+    id: java-operator
+    location: Marseille (🇫🇷)
+    language: Français
+    date: décembre 2022
+    duration: 50 minutes
+    time: null
+    pitch: |
+      Il n’est plus, je pense, nécessaire de présenter Kubernetes tellement il fait parti du paysage informatique. Avec sa généralisation, de nouveaux types de développements et de patterns sont apparus. Lors de ce talk j’aborderai l’un d’eux : les opérateurs.
+
+      Merveilleux assistants, aptes à faire énormément de choses. Mais voilà, les nombreuses documentations que l’on trouve tournent principalement autour d’un langage : Go. Ce n’est pas que cela ne me plaise pas, mais l’idée est de pouvoir aussi le faire avec un autre langage que je connais et utilisé par de nombreuses équipes de développement : Java.
+
+      Lors de ce talk, je vous présenterai, de manière simple, la notion des opérateurs au sein de Kubernetes : à quoi ils servent et comment ils évoluent dans l’éco-système Kubernetes. Nous verrons qu’ils peuvent être de simples aides à l’installation ou à la mise à jour d’une application au sein de Kubernetes mais aussi aller beaucoup plus loin en devenant de vrais Ops pour gérer vos applications pour vous !
+
+      Puis, nous développerons un opérateur ensemble et en Java : un bon Hello World nous permettant de prendre en main le SDK Java mais aussi les différents éléments présentés au début du talk.
+
+      Enfin, nous essaierons de nous projeter vers un opérateur faisant un peu plus que Hello World afin de voir si vraiment il sait faire de l’Ops !
+
+      A la fin de ce talk, vous aurez les différents éléments pour savoir si vous avez besoin de développer un opérateur, comment le développer, et choisir entre le faire en Java ou dans un autre langage !
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vRjfuc3LgN10i2ZzGQVQXpxodGb3DCDmXdV3IIR5vxO2VpRo74h-s-BnrbFo1BIMGjD8ubOYdsl5aeM/pub
+    source: https://github.com/philippart-s/java-operator-samples
+    replay: https://youtu.be/c3TfZ6pV_ME
+- title: 🎤 Talks donnés à Codeurs en Seine 🎤
+  link: /talks/codeurs-en-seine-2022/
+  description: Liste de talks donnés lors de la conférence Codeurs en Seine
+  image: conferences/codeurs-en-seine-2022.png
+  author: wilda
+  year: '2022'
+  date: '2022-11-15'
+  name: Codeurs en Seine
+  postDate: 2022-11-15
+  talksUrl: codeurs-en-seine-2022
+  displayDate: novembre 2022
+  excerpt: Liste des talks donnés lors de Codeurs en Seine 2022
+  categories: Conférences
+  talks:
+  - title: Au secours je suis speaker 😱 ! Comment bien se préparer ?
+    id: speaker-workshop
+    location: Rouen (🇫🇷)
+    language: Français
+    date: novembre 2022
+    duration: 3 heures
+    time: null
+    pitch: |
+      On aime toutes et tous aller aux conférences et on a toutes et tous nos chouchous en tant que speakers. Et on se dit même parfois que l’on aimerait bien aussi partager des choses, car oui on a toutes et tous quelque chose à partager.
+
+      Mais voilà, passer de l’autre côté de la barrière peut être impressionnant. De l’idéation, en passant par la rédaction d’un CFP (Call For Paper / Appel à proposition), de ses slides, d’éventuellement ses démos jusqu’au fameux jour J. Sans oublier la gestion de l’après. Autant de sujets qui peuvent impressionner pour quelqu’un qui ne connaît pas les codes ou tout simplement se sent perdu et un peu effrayé.
+
+      Durant ce talk / workshop nous vous livrerons, avec humilité, nos tips que nous avons collecté au fil des années avec nos erreurs et nos succès mais aussi les astuces que les autres speakers partagent volontiers.
+
+      Ce sera, pour vous, l’occasion de piocher les tips qui vous permettront de vous améliorer ou de sauter le pas vers la grande aventure de donner un talk.
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vTHPf-f62oZ4F7BNAJL4DvlhoNXBERxbGXkYdjTZ_7I0aBO3HDW-4E7J2IiNsE8YxLLrI731YBS-cnE/pub
+    replay: null
+    source: null
+- title: 🎤 Talks donnés à Volcamp 🎤
+  link: /talks/volcamp-2022/
+  description: Liste de talks donnés lors de la conférence Volcamp
+  image: conferences/conference.jpg
+  author: wilda
+  year: '2022'
+  date: '2022-10-15'
+  name: Volcamp
+  postDate: 2022-10-15
+  talksUrl: volcamp-2022
+  displayDate: octobre 2022
+  excerpt: Talk donné lors de Volcamp 2022
+  categories: Conférences
+  talks:
+  - title: Si on aidait le capitaine Némo à classifier les monstres marins ?
+    id: nemo
+    location: Clermont-Ferrand (🇫🇷)
+    language: Français
+    date: octobre 2022
+    duration: 50 minutes
+    time: null
+    pitch: |
+      Intelligence Artificielle, Machine Learning, Deep Learning, … Ces termes on les entend tous les jours mais Iau final que représentent-ils et surtout comment développe-t-on des applications basées sur ces notions ?
+
+      Durant ce talk nous vous ferons découvrir le monde de la data et comment il est, avec les bons outils, facile de se lancer dans l’aventure de l’analyse de données et de la classification.
+
+      Ce talk permettra aux développeuses et développeurs de découvrir comment développer des applications apprenantes et montrera qu’il n’est pas nécessaire d’être un As du développement pour développer son propre algorithme de Machine Learning ou de Deep Learning. Nous vous montrerons comment créer votre premier Notebook avec JupyterLab afin de vous accompagner dans vos premiers pas. Ce sera l’occasion pour vous de plonger dans la découverte du monde sous-marin en développant un modèle permettant d’identifier et classifier les sons de mammifères marins.
+
+      Pour finir, nous verrons ensemble, avec Streamlit, comment développer une application utilisant ce modèle.    slides: https://docs.google.com/presentation/d/e/2PACX-1vSAbycTHbdO-BgVV9dzBn0eAHM2q4lsn72D3sK16vupJYYz5C2ks47BpDg1clYdKsSSn5AMXROpQl6U/pub
+    source: https://github.com/eleapttn/nemo-notebook
+    replay: null
+    slides: null
+- title: 🎤 Talks donnés à Devoxx Morocco 2022 🎤
+  link: /talks/devoxx-maroc-2022/
+  description: Liste de talks donnés lors de la conférence Devoxx Morocco 2022
+  image: conferences/devoxx-maroc-2022.png
+  author: wilda
+  year: '2022'
+  date: '2022-10-15'
+  name: Devoxx Morocco 2022
+  postDate: 2022-10-15
+  talksUrl: devoxx-maroc-2022
+  displayDate: octobre 2022
+  excerpt: Liste des talks donnés lors de Devoxx Morocco 2022
+  categories: Conférences
+  talks:
+  - title: Toi aussi apprends à développer un opérateur Kubernetes en Java avec Quarkus.
+    id: java-operator-workshop
+    location: Agadir (🇲🇦)
+    language: Français
+    date: octobre 2023
+    duration: 2 heures
+    time: null
+    pitch: |
+      Les opérateurs Kubernetes prennent de plus en plus de place de place dans l’éco-système Kubernetes.
+
+      Un Opérateur simplifie le packaging et le déploiement des applications au sein de Kubernetes mais il permet aussi d’automatiser la partie opérationnelle telle que les mises à jour, les migrations etc …
+
+      Après une rapide présentation sur les concepts clefs des opérateur ce workshop sera l’occasion de plonger concrètement dans les profondeurs du développement d’un opérateur.
+
+      Développer d’accord, mais avec quel langage ?
+
+      Pour nous, vieux développeurs, le choix était évident : Java ! Et comme on adore Quarkus, autant mêler l’util à l’agréable, c’est avec Quarkus et le Java Operator SDK que nous allons accompagner les participantes et participants de ce Workshop.
+
+      Nous allons développer une petite application Quarkus puis la packager et la déployer grâce au développement de l’opérateur. Pour terminer, nous automatiserons la partie opérationnelle pour que cette application fonctionne à la perfection et de manière robuste. Tout ceci sans quitter Java et Quarkus !
+
+      Nul besoin d’être un expert en Quarkus ou Kubernetes pour suivre le lab, aimer coder et connaître les bases de Java suffit largement. Vous n’aurez pas non plus besoin d’installer quoi ce ce soit sur la machine, un simple navigateur et le tour est joué grâce à la puissance de GitPod.
+
+      A la sortie de ce workshop non seulement le monde des opérateurs n’aura plus de secret pour toi, mais en plus tu en auras développé un !
+    source: https://github.com/k8s-operator-workshop
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vSXGRIs4KA10FF4hDF8SwkqLyJshUZ9mrpPZEHNGJM7RIQxMScg4iZ997NIZl8hSfDi3RRWMZ826KCl/pub
+    replay: null
+- title: 🎤 Talks donnés à Cloud Nord 🎤
+  link: /talks/cloud-nord-2022/
+  description: Liste de talks donnés lors de la conférence Cloud Nord
+  image: conferences/cloud-nord-2022.png
+  author: wilda
+  year: '2022'
+  date: '2022-09-15'
+  name: Cloud Nord
+  postDate: 2022-09-15
+  talksUrl: cloud-nord-2022
+  displayDate: septembre 2022
+  excerpt: Talks donnés lors de Cloud Nord 2022
+  categories: Conférences
+  talks:
+  - title: Les opérateurs Kubernetes à la portée de n’importe quel développeur.
+    id: kube-operator
+    location: Lille (🇫🇷)
+    language: Français
+    date: juillet 2023
+    duration: 3h
+    time: null
+    pitch: |
+      Développer un opérateur peu, de prime abord, être plutôt impressionnant. Heureusement différents Frameworks ont vu le jour, dont le plus connu, Operator SDK, permettant de développer en Go, Helm ou Ansible un opérateur.
+
+      Avant de se lancer dans la grande aventure de développer un opérateur nous verrons ensemble ce qui se cache derrière la notion des opérateurs au sein de Kubernetes : à quoi ils servent et comment ils évoluent dans l’éco-système Kubernetes.
+
+      Une fois ces bases acquises, nous développerons ensemble un opérateur permettant la gestion d’un serveur Nginx.
+
+      Oui mais voilà quel Framework / langage choisir ? Go ? Helm ? Et pourquoi pas Java ?
+
+      J’ai envie de vous proposer les trois ! Nous développerons ensemble le même opérateur de trois façons différentes : avec Helm, Golang et même en Java avec Quarkus !
+
+      A la fin de ce talk, vous aurez les différents éléments pour savoir si vous avez besoin de développer un opérateur, comment le développer, et choisir quel langage utiliser selon vos connaissances !
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vRvSKN4nQ9mUNGZGaIQTvtvq5IzeeQ0agScQ_6hU1Aib0mT-a3PxY7odl5JCcmoDwirb6JhPWADeE9e/pub
+    source: https://github.com/philippart-s/java-operator-samples
+    replay: null
+- title: 🎤 Talks donnés à JUG Summer Camp 🎤
+  link: /talks/jug-summer-camp-2022/
+  description: Liste de talks donnés lors de la conférence JUG Summer Camp
+  image: conferences/jug-summer-camp-2022.png
+  author: wilda
+  year: '2022'
+  date: '2022-09-15'
+  name: JUG Summer Camp
+  postDate: 2022-09-15
+  talksUrl: jug-summer-camp-2022
+  displayDate: septembre 2022
+  excerpt: Talks donnés lors du JUG Summer Camp 2022
+  categories: Conférences
+  talks:
+  - title: Si on aidait le capitaine Némo à classifier les monstres marins ?
+    id: nemo
+    location: La Rochelle (🇫🇷)
+    language: Français
+    date: septembre 2022
+    duration: 50 minutes
+    time: null
+    pitch: |
+      Intelligence Artificielle, Machine Learning, Deep Learning, … Ces termes on les entend tous les jours mais Iau final que représentent-ils et surtout comment développe-t-on des applications basées sur ces notions ?
+
+      Durant ce talk nous vous ferons découvrir le monde de la data et comment il est, avec les bons outils, facile de se lancer dans l’aventure de l’analyse de données et de la classification.
+
+      Ce talk permettra aux développeuses et développeurs de découvrir comment développer des applications apprenantes et montrera qu’il n’est pas nécessaire d’être un As du développement pour développer son propre algorithme de Machine Learning ou de Deep Learning. Nous vous montrerons comment créer votre premier Notebook avec JupyterLab afin de vous accompagner dans vos premiers pas. Ce sera l’occasion pour vous de plonger dans la découverte du monde sous-marin en développant un modèle permettant d’identifier et classifier les sons de mammifères marins.
+
+      Pour finir, nous verrons ensemble, avec Streamlit, comment développer une application utilisant ce modèle.    slides: https://docs.google.com/presentation/d/e/2PACX-1vSAbycTHbdO-BgVV9dzBn0eAHM2q4lsn72D3sK16vupJYYz5C2ks47BpDg1clYdKsSSn5AMXROpQl6U/pub
+    source: https://github.com/eleapttn/nemo-notebook
+    replay: https://youtu.be/4bUdZYa8eKQ
+    slides: null
+  - title: L’open source à la portée de toutes et tous !
+    id: oss
+    location: La  Rochelle (🇫🇷)
+    language: Français
+    date: septembre 2022
+    duration: 30 minutes
+    time: null
+    pitch: |
+      Opensource, ce mot parle à toutes les développeuses et tous les développeurs. On utilise toutes et tous ces projets tous les jours mais au final ne devrions-nous pas les aider un peu ?
+
+      Durant ce talk nous verrons comment participer aux projets open source en tant que développeuses et développeurs mais pas que. En effet, l’open source, ce n’est pas seulement du code : il a besoin d’aide à bien des niveaux.
+
+      Nous verrons donc ensemble, comment aider au mieux ces projets. Pour cela, je vous expliquerai comment et pourquoi j’ai franchi le pas pour oser contribuer à un projet opensource mais aussi les difficultés que j’ai rencontrées. Ce sera aussi pour moi l’occasion de partager des astuces découvertes au fil du temps et les erreurs à ne pas commettre afin de vous faciliter la vie lorsque vous allez vous lancer.
+
+      Si à la fin, j’ai pu vous donner envie de vous lancer ou d’oser vous poser la question, alors le pari est gagné !
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vQFg1YF-l29LfBDXCCx83My9I7AD9USta863ZvJ-KLQnZBNW4OYr8JOEvqtXR4AI9-kn4uQZSc4MsVM/pub
+    replay: https://youtu.be/l-_FXpXr9gk
+    source: null
+- title: 🎤 Talks donnés à Cloud Ouest 🎤
+  link: /talks/cloud-ouest-2022/
+  description: Liste de talks donnés lors de la conférence Cloud Ouest
+  image: conferences/cloud-ouest-2022.png
+  author: wilda
+  year: '2022'
+  date: '2022-06-15'
+  name: Cloud Ouest
+  postDate: 2022-06-15
+  talksUrl: cloud-ouest-2022
+  displayDate: juin 2022
+  excerpt: Talks donnés lors de Cloud Ouest 2022
+  categories: Conférences
+  talks:
+  - title: Développer un opérateur Kubernetes en Java, challenge accepted !
+    id: java-operator
+    location: Remote (🇫🇷)
+    language: Français
+    date: juin 2022
+    duration: 50 minutes
+    time: null
+    pitch: |
+      Il n’est plus, je pense, nécessaire de présenter Kubernetes tellement il fait parti du paysage informatique. Avec sa généralisation, de nouveaux types de développements et de patterns sont apparus. Lors de ce talk j’aborderai l’un d’eux : les opérateurs.
+
+      Merveilleux assistants, aptes à faire énormément de choses. Mais voilà, les nombreuses documentations que l’on trouve tournent principalement autour d’un langage : Go. Ce n’est pas que cela ne me plaise pas, mais l’idée est de pouvoir aussi le faire avec un autre langage que je connais et utilisé par de nombreuses équipes de développement : Java.
+
+      Lors de ce talk, je vous présenterai, de manière simple, la notion des opérateurs au sein de Kubernetes : à quoi ils servent et comment ils évoluent dans l’éco-système Kubernetes. Nous verrons qu’ils peuvent être de simples aides à l’installation ou à la mise à jour d’une application au sein de Kubernetes mais aussi aller beaucoup plus loin en devenant de vrais Ops pour gérer vos applications pour vous !
+
+      Puis, nous développerons un opérateur ensemble et en Java : un bon Hello World nous permettant de prendre en main le SDK Java mais aussi les différents éléments présentés au début du talk.
+
+      Enfin, nous essaierons de nous projeter vers un opérateur faisant un peu plus que Hello World afin de voir si vraiment il sait faire de l’Ops !
+
+      A la fin de ce talk, vous aurez les différents éléments pour savoir si vous avez besoin de développer un opérateur, comment le développer, et choisir entre le faire en Java ou dans un autre langage !
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vRwBAUbwyK2kK0jYJnjFwVKlEwLhcQZmRMqqYGP7YrsQzlTSv9WvLz9lZDgDNvjqZJqLqQp8LA03cMw/pub
+    source: https://github.com/philippart-s/java-operator-samples
+    replay: https://youtu.be/MEtnBsL4EGs
+- title: 🎤 Talks donnés à Breizh Camp 🎤
+  link: /talks/breizh-camp-2022/
+  description: Liste de talks donnés lors de la conférence Breizh Camp
+  image: conferences/breizh-camp-2022.png
+  author: wilda
+  year: '2022'
+  date: '2022-06-15'
+  name: Breizh Camp
+  postDate: 2022-06-15
+  talksUrl: breizh-camp-2022
+  displayDate: juin 2022
+  excerpt: Talks donnés lors de Breizh Camp 2022
+  categories: Conférences
+  talks:
+  - title: Les opérateurs Kubernetes à la portée de n’importe quel développeur.
+    id: kube-operator
+    location: Rennes (🇫🇷)
+    language: Français
+    date: juin 2022
+    duration: 2h
+    time: null
+    pitch: |
+      Développer un opérateur peu, de prime abord, être plutôt impressionnant. Heureusement différents Frameworks ont vu le jour, dont le plus connu, Operator SDK, permettant de développer en Go, Helm ou Ansible un opérateur.
+
+      Avant de se lancer dans la grande aventure de développer un opérateur nous verrons ensemble ce qui se cache derrière la notion des opérateurs au sein de Kubernetes : à quoi ils servent et comment ils évoluent dans l’éco-système Kubernetes.
+
+      Une fois ces bases acquises, nous développerons ensemble un opérateur permettant la gestion d’un serveur Nginx.
+
+      Oui mais voilà quel Framework / langage choisir ? Go ? Helm ? Et pourquoi pas Java ?
+
+      J’ai envie de vous proposer les trois ! Nous développerons ensemble le même opérateur de trois façons différentes : avec Helm, Golang et même en Java avec Quarkus !
+
+      A la fin de ce talk, vous aurez les différents éléments pour savoir si vous avez besoin de développer un opérateur, comment le développer, et choisir quel langage utiliser selon vos connaissances !
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vQvRDNpD7Xdp7ZWMTqp-Fw46bQrZ8IaROiDtG4Kb_Xac1En_XrKb5gCdrDW55_cgs4FxURP_q_jDcka/pub
+    source: https://github.com/philippart-s/breizh-camp-java-operator
+    replay: https://youtu.be/-I91DSU8glA?list=PLv7xGPH0RMUS0sDzj_45G9F-iVWWck5kz
+- title: 🎤 Talks donnés à Voxxed Days Luxembourg 🎤
+  link: /talks/voxeed-days-lux-2022/
+  description: Liste de talks donnés lors de la conférence Voxxed Days Luxembourg
+  image: conferences/voxeed-days-lux-2022.png
+  author: wilda
+  year: '2022'
+  date: '2022-06-15'
+  name: Voxxed Days Luxembourg
+  postDate: 2022-06-15
+  talksUrl: voxeed-days-lux-2022
+  displayDate: juin 2022
+  excerpt: Talks donnés lors de Voxxed Days Luxembourg 2022
+  categories: Conférences
+  talks:
+  - title: Les opérateurs Kubernetes à la portée de n’importe quel développeur.
+    id: kube-operator
+    location: Luxembourg (🇱🇺)
+    language: Français
+    date: juin 2022
+    duration: 2h
+    time: null
+    pitch: |
+      … Ou comment en tant que dev faire de l’IA sans être Data Scientist ? L’IA est partout, du moins tout le monde revendique d’avoir de l’IA dans ses applications, ses objets connectés, …
+
+      Oui mais voilà, au final c’est quoi l’Intelligence Artificielle et qu’y a-t-il de caché derrière ce terme ? Comment expliquer simplement les notions techniques impliquées ? La grande IA va-t-elle gouverner le monde ?
+
+      Durant ce talk je vous propose de découvrir simplement, mais de manière la plus exhaustive possible, avec ma vision de développeur, ce qu’est l’intelligence artificielle et quelles technologies sont utilisées dans ce milieu.
+
+      Et tout ça en 15 minutes !
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vTJJ7qAnq_eNvNuQTNneVoIsRX-98wTvcFC8RQIqmZsmpfifP5UWMRAy-LC4RlALxDa8ZtnvKkLy4u5/pub
+    replay: https://youtu.be/r22_RebwL-s
+    source: null
+- title: 🎤 Talks donnés à Le Camping des Speakers 🎤
+  link: /talks/camping-speakers-2022/
+  description: Liste de talks donnés lors de la conférence Le Camping des Speakers
+  image: conferences/camping-speakers-2022.png
+  author: wilda
+  year: '2022'
+  date: '2022-06-15'
+  name: Le Camping des Speakers
+  postDate: 2022-06-15
+  talksUrl: camping-speakers-2022
+  displayDate: juin 2022
+  excerpt: Talks donnés lors du Camping des Speakers 2023
+  categories: Conférences
+  talks:
+  - title: Développer un opérateur Kubernetes en Java, c’est possible !
+    id: java-operator
+    location: Baden (🇫🇷)
+    language: Français
+    date: juin 2022
+    duration: 50 minutes
+    time: null
+    pitch: |
+      Il n’est plus, je pense, nécessaire de présenter Kubernetes tellement il fait parti du paysage informatique. Avec sa généralisation, de nouveaux types de développements et de patterns sont apparus. Lors de ce talk j’aborderai l’un d’eux : les opérateurs.
+
+      Merveilleux assistants, aptes à faire énormément de choses. Mais voilà, les nombreuses documentations que l’on trouve tournent principalement autour d’un langage : Go. Ce n’est pas que cela ne me plaise pas, mais l’idée est de pouvoir aussi le faire avec un autre langage que je connais et utilisé par de nombreuses équipes de développement : Java.
+
+      Lors de ce talk, je vous présenterai, de manière simple, la notion des opérateurs au sein de Kubernetes : à quoi ils servent et comment ils évoluent dans l’éco-système Kubernetes. Nous verrons qu’ils peuvent être de simples aides à l’installation ou à la mise à jour d’une application au sein de Kubernetes mais aussi aller beaucoup plus loin en devenant de vrais Ops pour gérer vos applications pour vous !
+
+      Puis, nous développerons un opérateur ensemble et en Java : un bon Hello World nous permettant de prendre en main le SDK Java mais aussi les différents éléments présentés au début du talk.
+
+      Enfin, nous essaierons de nous projeter vers un opérateur faisant un peu plus que Hello World afin de voir si vraiment il sait faire de l’Ops !
+
+      A la fin de ce talk, vous aurez les différents éléments pour savoir si vous avez besoin développer un opérateur, comment le développer, et choisir entre le faire en Java ou dans un autre langage !
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vT1fqLfKU37J5-N30A6KRvJhK3fvcULX2t_iyL_GJh-Rpx5V_swre3jtNn0UWwr1wvBgz5-LrD54-Wt/pub
+    source: null
+    replay: null
+- title: 🎤 Talks donnés à Cloud Sud 🎤
+  link: /talks/cloud-sud-2022/
+  description: Liste de talks donnés lors de la conférence Cloud Sud
+  image: conferences/cloud-sud-2022.png
+  author: wilda
+  year: '2022'
+  date: '2022-03-15'
+  name: Cloud Sud
+  postDate: 2022-03-15
+  talksUrl: cloud-sud-2022
+  displayDate: mars 2022
+  excerpt: Talks donnés lors de Cloud Sud 2022
+  categories: Conférences
+  talks:
+  - title: Développer un opérateur Kubernetes en Java, c’est possible !
+    id: java-operator
+    location: Remote
+    language: Français
+    date: juin 2022
+    duration: 50 minutes
+    time: null
+    pitch: |
+      Il n’est plus, je pense, nécessaire de présenter Kubernetes tellement il fait parti du paysage informatique. Avec sa généralisation, de nouveaux types de développements et de patterns sont apparus. Lors de ce talk j’aborderai l’un d’eux : les opérateurs.
+
+      Merveilleux assistants, aptes à faire énormément de choses. Mais voilà, les nombreuses documentations que l’on trouve tournent principalement autour d’un langage : Go. Ce n’est pas que cela ne me plaise pas, mais l’idée est de pouvoir aussi le faire avec un autre langage que je connais et utilisé par de nombreuses équipes de développement : Java.
+
+      Lors de ce talk, je vous présenterai, de manière simple, la notion des opérateurs au sein de Kubernetes : à quoi ils servent et comment ils évoluent dans l’éco-système Kubernetes. Nous verrons qu’ils peuvent être de simples aides à l’installation ou à la mise à jour d’une application au sein de Kubernetes mais aussi aller beaucoup plus loin en devenant de vrais Ops pour gérer vos applications pour vous !
+
+      Puis, nous développerons un opérateur ensemble et en Java : un bon Hello World nous permettant de prendre en main le SDK Java mais aussi les différents éléments présentés au début du talk.
+
+      Enfin, nous essaierons de nous projeter vers un opérateur faisant un peu plus que Hello World afin de voir si vraiment il sait faire de l’Ops !
+
+      A la fin de ce talk, vous aurez les différents éléments pour savoir si vous avez besoin développer un opérateur, comment le développer, et choisir entre le faire en Java ou dans un autre langage !
+    slides: https://docs.google.com/presentation/d/e/2PACX-1vQ7xusdUkaEnGFyVuXSQ_bFqX1Bb6RQwmKO0TbbqfHBn1tm5sQDJ2Nl0odh7nPHLJxIyDCEeTwaVvCZ/pub
+    replay: https://youtu.be/LNdXL9OwiFY
+    source: null

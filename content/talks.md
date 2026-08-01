@@ -1,6 +1,6 @@
 ---
 title: Talks
-layout: :theme/page
+layout: page
 tags:
   - talks
   - Conférences
@@ -11,6 +11,13 @@ tags:
 Ici, vous trouverez l'ensemble des sujets de conférences que j'ai donnés.
 
 Vous pouvez aussi lister les retrouver dans [la liste des conférences]({site.url}/conferences) que j'ai données.
+
+## 🤖 Apprendre à notre IA à ... apprendre 🧠️
+---
+{#for talk in cdi:myConfs.getByIds("learn-ai")}
+- [{talk.name} - {talk.date}]({site.url}/talks/{talk.talksUrl}/#{talk.id})
+  {/for}
+
 
 ## ☕️ Full stack Java, du dev à la prod en passant par l’infra 🏗️
 ---

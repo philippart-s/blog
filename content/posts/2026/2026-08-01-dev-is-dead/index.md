@@ -9,17 +9,12 @@ tags:
 author: wildagsx
 ---
 
-🏴󠁧󠁢󠁥󠁮󠁧󠁿 You can find the English version of this article [here]({site.url}2026-07-21-java-and-ai-part1-en) 🏴󠁧󠁢󠁥󠁮󠁧󠁿.
-
-# TL;DR
-> 
-
-<br/>
+🏴󠁧󠁢󠁥󠁮󠁧󠁿 You can find the English version of this article [here]({site.url}2026-08-01-dev-is-dead-en) 🏴󠁧󠁢󠁥󠁮󠁧󠁿.
 
 # 🤔 Encore un article prédisant la fin du métier dev ?
 
-Est-ce un n-ième article où l'auteur va prédire dans sa boule de cristal que le métier de dev est fini et qu'il faut penser à faire autre chose 🤔 ?
-Non, enfin pas tout à fait 😊.
+Est-ce un n-ième article où l'auteur va prédire dans sa boule de cristal que le métier de dev est fini et qu'il faut penser à faire autre chose 🤔 ?  
+Non, enfin pas tout à fait 😊.  
 Il y a quasiment un an, je tentais de mettre des mots sur ma relation entre l'IA générative et le (mon) métier de dev avec cet [article](2025-10-13-ai-as-artisan).
 Je vous propose de nouveau, de se pencher sur les impacts de l'IA sur notre métier.
 Bien entendu, ce n'est que ma vision et je ne prétends en rien avoir la vérité et une meilleure boule de cristal que les autres 😅.

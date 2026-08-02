@@ -1,52 +1,253 @@
 /*
- * Surcharges CSS du site.
+ * Surcharges CSS du site — palette « Miel / Ourson » 🧸🍯
  *
  * Ce fichier remplace le web/_custom.css livré par le thème roq-default.
  * Il est importé en dernier par le roq.css du thème : à spécificité égale,
  * ce qui est écrit ici gagne sur les styles du thème.
  *
- * Le thème est en Tailwind v4 : les couleurs sont pilotées par les variables
- * définies dans web/_config.css du thème (--color-accent-*, --color-pop-*,
- * --color-neutral-*). Pour reteinter tout le site, il suffit de les redéfinir
- * dans un bloc @theme ici, plutôt que de réécrire des règles une par une.
+ * Doc : https://iamroq.dev/theme/default-theme/
  *
- * Mode sombre : le thème pose la classe `dark` sur <html>. Pour cibler
- * uniquement le mode sombre, préfixer le sélecteur par `.dark`, ex :
- *
- *   .dark .ma-classe { ... }
+ * Le mode sombre est piloté par la classe `dark` posée sur <html> par le thème.
+ * Pour ne cibler que le mode sombre, préfixer le sélecteur par `.dark`.
  */
 
-/* Exemple — changer la couleur d'accent du site :
+/* ============================================================================
+ * 1. Palette
+ *
+ * Le thème définit trois familles de couleurs, chacune en 11 nuances :
+ *   accent  → titres, liens, sidebar     (défaut : slate, gris froid)
+ *   pop     → boutons, survols, icônes   (défaut : sky, bleu)
+ *   neutral → textes, cartes, fonds      (défaut : gray, gris froid)
+ *
+ * On bascule les gris froids en gris chauds (stone) et le bleu en ambre.
+ * Rien d'autre à faire : le thème dérive le reste de ces variables, donc le
+ * dégradé de la sidebar (neutral-800 → neutral-900) devient chaud et le fond
+ * clair (--color-bg-light = neutral-100) devient crème, automatiquement.
+ * ========================================================================= */
 @theme {
-    --color-accent-50:  var(--color-indigo-50);
-    --color-accent-100: var(--color-indigo-100);
-    --color-accent-200: var(--color-indigo-200);
-    --color-accent-300: var(--color-indigo-300);
-    --color-accent-400: var(--color-indigo-400);
-    --color-accent-500: var(--color-indigo-500);
-    --color-accent-600: var(--color-indigo-600);
-    --color-accent-700: var(--color-indigo-700);
-    --color-accent-800: var(--color-indigo-800);
-    --color-accent-900: var(--color-indigo-900);
-    --color-accent-950: var(--color-indigo-950);
-}
-*/
+    /* Accent — gris chauds */
+    --color-accent-50: var(--color-stone-50);
+    --color-accent-100: var(--color-stone-100);
+    --color-accent-200: var(--color-stone-200);
+    --color-accent-300: var(--color-stone-300);
+    --color-accent-400: var(--color-stone-400);
+    --color-accent-500: var(--color-stone-500);
+    --color-accent-600: var(--color-stone-600);
+    --color-accent-700: var(--color-stone-700);
+    --color-accent-800: var(--color-stone-800);
+    --color-accent-900: var(--color-stone-900);
+    --color-accent-950: var(--color-stone-950);
 
-/*
- * À vérifier au premier lancement en dev : les blocs de code utilisent le thème
- * « agate » de highlight.js (fond sombre), chargé par web/app/main.js, alors que
- * Tailwind Typography pose son propre cadre autour de <pre> — clair en mode clair.
- * Si le rendu des blocs de code est cassé en mode clair, décommenter :
+    /* Neutral — gris chauds */
+    --color-neutral-50: var(--color-stone-50);
+    --color-neutral-100: var(--color-stone-100);
+    --color-neutral-200: var(--color-stone-200);
+    --color-neutral-300: var(--color-stone-300);
+    --color-neutral-400: var(--color-stone-400);
+    --color-neutral-500: var(--color-stone-500);
+    --color-neutral-600: var(--color-stone-600);
+    --color-neutral-700: var(--color-stone-700);
+    --color-neutral-800: var(--color-stone-800);
+    --color-neutral-900: var(--color-stone-900);
+    --color-neutral-950: var(--color-stone-950);
+
+    /* Pop — ambre / miel */
+    --color-pop-50: var(--color-amber-50);
+    --color-pop-100: var(--color-amber-100);
+    --color-pop-200: var(--color-amber-200);
+    --color-pop-300: var(--color-amber-300);
+    --color-pop-400: var(--color-amber-400);
+    --color-pop-500: var(--color-amber-500);
+    --color-pop-600: var(--color-amber-600);
+    --color-pop-700: var(--color-amber-700);
+    --color-pop-800: var(--color-amber-800);
+    --color-pop-900: var(--color-amber-900);
+    --color-pop-950: var(--color-amber-950);
+}
+
+/* ============================================================================
+ * 2. Cartes d'articles — survol un peu plus vivant
  *
-.prose pre {
-    background: transparent;
-    padding: 0;
+ * Le thème anime déjà la bordure et la vignette au survol ; on ajoute une
+ * légère surélévation et une ombre teintée ambre. La transition est déjà
+ * déclarée par le thème sur .card, il n'y a rien à ajouter pour ça.
+ * ========================================================================= */
+.card.post {
+    border-radius: 1rem;
 }
 
-.prose pre code.hljs {
-    background: #333;
-    color: #fff;
-    padding: 1em;
-    border-radius: .375rem;
+.card.post:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-pop-300);
+    box-shadow: 0 10px 24px color-mix(in srgb, var(--color-pop-500) 18%, transparent);
 }
- */
+
+.dark .card.post:hover {
+    border-color: var(--color-pop-600);
+    box-shadow: 0 10px 24px color-mix(in srgb, var(--color-pop-500) 12%, transparent);
+}
+
+/* Respect de la préférence système « moins d'animations » */
+@media (prefers-reduced-motion: reduce) {
+    .card.post:hover {
+        transform: none;
+    }
+}
+
+/* ============================================================================
+ * 3. Coloration syntaxique assortie (highlight.js)
+ *
+ * Le thème s'efface volontairement quand highlight.js est présent : il cible
+ * `pre code:not(.hljs)`. C'est donc à nous de fournir le fond et les couleurs
+ * de jetons. On remplace le thème « agate » (sombre en permanence, qui était
+ * importé par web/app/main.js) par une palette maison qui suit le mode
+ * clair/sombre et reste dans les tons miel, avec un ancrage teal pour que les
+ * noms de fonctions et de types se détachent.
+ *
+ * Le <pre> reste habillé par le thème (cadre + ombre), le <code> porte le fond.
+ * ========================================================================= */
+:root {
+    --hl-bg: var(--color-stone-50);
+    --hl-fg: var(--color-stone-800);
+    --hl-comment: var(--color-stone-500);
+    --hl-keyword: var(--color-amber-700);
+    --hl-string: var(--color-lime-700);
+    --hl-number: var(--color-rose-700);
+    --hl-title: var(--color-teal-700);
+    --hl-variable: var(--color-orange-800);
+    --hl-attr: var(--color-stone-600);
+    --hl-meta: var(--color-stone-500);
+    --hl-link: var(--color-violet-700);
+    --hl-ln: var(--color-stone-400);
+    --hl-ln-border: var(--color-stone-300);
+}
+
+.dark {
+    --hl-bg: var(--color-stone-950);
+    --hl-fg: var(--color-stone-200);
+    --hl-comment: var(--color-stone-500);
+    --hl-keyword: var(--color-amber-400);
+    --hl-string: var(--color-lime-400);
+    --hl-number: var(--color-rose-400);
+    --hl-title: var(--color-teal-300);
+    --hl-variable: var(--color-orange-300);
+    --hl-attr: var(--color-stone-300);
+    --hl-meta: var(--color-stone-400);
+    --hl-link: var(--color-violet-300);
+    --hl-ln: var(--color-stone-600);
+    --hl-ln-border: var(--color-stone-700);
+}
+
+/* Structure — reprise de ce que fournissait la feuille de style d'agate */
+.hljs {
+    background: var(--hl-bg);
+    color: var(--hl-fg);
+}
+
+pre code.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 1em;
+    border-radius: .5rem;
+}
+
+code.hljs {
+    padding: 3px 5px;
+}
+
+/* Jetons */
+.hljs-doctag,
+.hljs-meta-keyword,
+.hljs-name,
+.hljs-strong {
+    font-weight: 700;
+}
+
+.hljs-code,
+.hljs-emphasis {
+    font-style: italic;
+}
+
+.hljs-comment,
+.hljs-formula {
+    color: var(--hl-comment);
+    font-style: italic;
+}
+
+.hljs-built_in,
+.hljs-keyword,
+.hljs-literal,
+.hljs-selector-tag,
+.hljs-section,
+.hljs-tag {
+    color: var(--hl-keyword);
+}
+
+.hljs-bullet,
+.hljs-meta-string,
+.hljs-string,
+.hljs-template-tag {
+    color: var(--hl-string);
+}
+
+.hljs-number,
+.hljs-symbol {
+    color: var(--hl-number);
+}
+
+.hljs-attribute,
+.hljs-title,
+.hljs-type {
+    color: var(--hl-title);
+}
+
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-template-variable,
+.hljs-variable {
+    color: var(--hl-variable);
+}
+
+.hljs-attr,
+.hljs-quote,
+.hljs-selector-attr {
+    color: var(--hl-attr);
+}
+
+.hljs-meta {
+    color: var(--hl-meta);
+}
+
+.hljs-link,
+.hljs-regexp,
+.hljs-selector-pseudo {
+    color: var(--hl-link);
+}
+
+.hljs-subst,
+.hljs-tag .hljs-attr {
+    color: inherit;
+}
+
+.hljs-deletion {
+    background: color-mix(in srgb, var(--color-rose-500) 22%, transparent);
+}
+
+.hljs-addition {
+    background: color-mix(in srgb, var(--color-lime-500) 22%, transparent);
+}
+
+.hljs a {
+    color: inherit;
+}
+
+.hljs a:focus,
+.hljs a:hover {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.hljs mark {
+    background: color-mix(in srgb, var(--color-amber-500) 25%, transparent);
+    color: inherit;
+}

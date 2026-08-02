@@ -94,6 +94,16 @@
     }
 }
 
+/* La grille d'articles est sur 2 colonnes. La taille de page est paire (voir
+   content/index.html), mais le nombre total d'articles est impair : la dernière
+   page finit donc toujours par une carte seule, avec une case vide à côté.
+   Quand c'est le cas, on lui fait occuper toute la largeur. */
+@media (width >= 64rem) {
+    .blog-grid > .post:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+    }
+}
+
 /* ============================================================================
  * 3. Avatar de la sidebar en cercle
  *

@@ -95,7 +95,30 @@
 }
 
 /* ============================================================================
- * 3. Coloration syntaxique assortie (highlight.js)
+ * 3. Avatar de la sidebar en cercle
+ *
+ * Le thème laisse l'image carrée et en pleine largeur (w-full h-auto). On la
+ * recadre en carré avant de l'arrondir : `aspect-ratio` + `object-fit: cover`
+ * évitent l'ovale si la source n'est pas carrée, quelle que soit sa taille.
+ *
+ * L'anneau ambre est décoratif — supprimer la ligne `outline` pour un cercle nu.
+ * Le léger rétrécissement au survol vient du thème, on le conserve.
+ * ========================================================================= */
+.about .site-logo {
+    width: 10rem;
+    max-width: 100%;
+}
+
+.about .site-logo img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 9999px;
+    outline: 3px solid color-mix(in srgb, var(--color-pop-400) 55%, transparent);
+    outline-offset: 3px;
+}
+
+/* ============================================================================
+ * 4. Coloration syntaxique assortie (highlight.js)
  *
  * Le thème s'efface volontairement quand highlight.js est présent : il cible
  * `pre code:not(.hljs)`. C'est donc à nous de fournir le fond et les couleurs

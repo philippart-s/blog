@@ -1,0 +1,52 @@
+/*
+ * Surcharges CSS du site.
+ *
+ * Ce fichier remplace le web/_custom.css livré par le thème roq-default.
+ * Il est importé en dernier par le roq.css du thème : à spécificité égale,
+ * ce qui est écrit ici gagne sur les styles du thème.
+ *
+ * Le thème est en Tailwind v4 : les couleurs sont pilotées par les variables
+ * définies dans web/_config.css du thème (--color-accent-*, --color-pop-*,
+ * --color-neutral-*). Pour reteinter tout le site, il suffit de les redéfinir
+ * dans un bloc @theme ici, plutôt que de réécrire des règles une par une.
+ *
+ * Mode sombre : le thème pose la classe `dark` sur <html>. Pour cibler
+ * uniquement le mode sombre, préfixer le sélecteur par `.dark`, ex :
+ *
+ *   .dark .ma-classe { ... }
+ */
+
+/* Exemple — changer la couleur d'accent du site :
+@theme {
+    --color-accent-50:  var(--color-indigo-50);
+    --color-accent-100: var(--color-indigo-100);
+    --color-accent-200: var(--color-indigo-200);
+    --color-accent-300: var(--color-indigo-300);
+    --color-accent-400: var(--color-indigo-400);
+    --color-accent-500: var(--color-indigo-500);
+    --color-accent-600: var(--color-indigo-600);
+    --color-accent-700: var(--color-indigo-700);
+    --color-accent-800: var(--color-indigo-800);
+    --color-accent-900: var(--color-indigo-900);
+    --color-accent-950: var(--color-indigo-950);
+}
+*/
+
+/*
+ * À vérifier au premier lancement en dev : les blocs de code utilisent le thème
+ * « agate » de highlight.js (fond sombre), chargé par web/app/main.js, alors que
+ * Tailwind Typography pose son propre cadre autour de <pre> — clair en mode clair.
+ * Si le rendu des blocs de code est cassé en mode clair, décommenter :
+ *
+.prose pre {
+    background: transparent;
+    padding: 0;
+}
+
+.prose pre code.hljs {
+    background: #333;
+    color: #fff;
+    padding: 1em;
+    border-radius: .375rem;
+}
+ */

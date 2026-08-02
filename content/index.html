@@ -1,15 +1,19 @@
 ---
-title: 🧸 Ourson's blog
+title: 🧸 Ourson's blog 🧸
 description: Un blog de tout et de rien, mais surtout de tech 🧸
 name: Ourson's blog
 simple-name: Stéphane Philippart
 image: avatar.jpg
+theme-color: "#1c1917"
 social-twitter: wildagsx
 social-bluesky: wilda.bsky.social
 social-github: philippart-s
 social-linkedin: philippartstephane
 layout: index
-paginate: posts
+# La grille du thème est sur 2 colonnes : une taille de page paire évite une
+# case vide en fin de grille. Le layout `blog` du thème met 2 articles en
+# vedette sur la première page, qui sont pris sur ces 6.
+paginate:
+  collection: posts
+  size: 6
 ---
-
-<h1>🧸 Ourson's blog 🧸</h1>

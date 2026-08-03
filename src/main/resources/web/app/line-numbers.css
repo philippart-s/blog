@@ -24,11 +24,12 @@ table.hljs-ln tr:nth-child(odd) {
     background: none !important;
 }
 
-/* Colonne des numéros — sélecteur assez spécifique pour battre le reset ci-dessus */
+/* Colonne des numéros — sélecteur assez spécifique pour battre le reset ci-dessus.
+   Les couleurs viennent de web/_custom.css et suivent le mode clair/sombre. */
 table.hljs-ln td.hljs-ln-numbers {
     text-align: right;
-    color: #6b7280;
-    border-right: 1px solid #374151 !important;
+    color: var(--hl-ln);
+    border-right: 1px solid var(--hl-ln-border) !important;
     padding-right: .8em !important;
     -webkit-user-select: none;
     -moz-user-select: none;

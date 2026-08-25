@@ -4,7 +4,7 @@ description: "If you strike me down, I shall become more powerful than you can p
 link: /2026-08-01-dev-is-dead
 image: cover.png
 tags:
-  - AI
+  - IA
   - Code
 author: wildagsx
 ---

@@ -16,3 +16,6 @@ target/
 # 🤖AI config
 /.opencode/
 .claude/
+
+# 🛠️ Tools config
+/.quarkus/

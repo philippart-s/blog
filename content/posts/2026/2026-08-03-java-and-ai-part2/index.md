@@ -16,7 +16,6 @@ author: wildagsx
 > 🧠 Deuxième article de la série sur l'IA dans vos applications Java ☕️, cette fois consacré à la **mémoire** de vos chatbots.  
 > 🤖 Les modèles sont `stateless` : sans mémoire côté client, votre chatbot oublie votre prénom d'une question à l'autre.  
 > 💸 Renvoyer toute la conversation à chaque appel coûte des tokens : on voit comment limiter la taille de la mémoire, la compresser ou faire du `prompt caching`.  
-> 🪟 Sans oublier la `fenêtre de contexte` du modèle, qu'il faut prendre en compte pour dimensionner cette mémoire.  
 > ☕️ Le même use case est implémenté du plus bas niveau au plus haut : Bash, Java pur, le SDK OpenAI, LangChain4j, Quarkus et Spring AI.  
 > 🔀 Bonus : une mémoire par personne grâce au `@MemoryId` de LangChain4j.  
 > 🐙 Tous les exemples utilisent [AI Endpoints](https://www.ovhcloud.com/en/public-cloud/ai-endpoints/) d'OVHcloud et sont disponibles [ici](https://github.com/philippart-s/java-ai-area-blog).
@@ -26,18 +25,18 @@ author: wildagsx
 # 📜 Introduction
 
 Petit rappel des épisodes précédents : cet article fait partie d'une série d'articles visant à expliquer comment intégrer de l'IA dans les applications que nous développons en Java ☕️.
-Il est la suite de l'[article précédent](2026-07-21-java-and-ai-part1) qui avait pour but de poser les bases de comment développer une application avec de l'IA, comme un chatbot par exemple.
+Il est la suite de l'[article précédent](/blog/2026-07-21-java-and-ai-part1) qui avait pour but de poser les bases de comment développer une application avec de l'IA, comme un chatbot par exemple.
 
 Je ne reviendrai donc pas sur les éléments à connaître pour débuter votre voyage dans l'IA.
 L'objectif de cet article sera de voir pourquoi la première chose que vous allez vouloir faire avec votre chatbot c'est de gérer la mémoire 💿.
 
-> ℹ️ Au vu de la longueur de l'article, je le scinde en deux : celui-ci pour présenter comment ajouter simplement de la mémoire, et un autre dédié aux alternatives de stockage.
+> ℹ️ Au vu de la longueur de l'article, je le scinde en deux : celui-ci pour présenter comment ajouter simplement de la mémoire, et un autre dédié aux alternatives de stockage (il arrivera plus tard).
 
 # 💿 Mais pourquoi gérer la mémoire ?
 
 Prenons un de nos exemples précédents, par exemple la version [LangChain4j](https://docs.langchain4j.dev/) (au hasard 😇).
 
-Modifions la fin de la sorte, pour poser deux questions l'une après l'autre :
+Modifions la fin, pour poser deux questions l'une après l'autre :
 
 ```java
     var futureResponse = new CompletableFuture<ChatResponse>();
@@ -111,7 +110,7 @@ On voit tout de suite qu'il va falloir mettre en place des mécanismes pour évi
 ## 📦 Limiter la taille de la mémoire
 
 Cela paraît être une approche assez évidente (voire naïve) mais qui fonctionne 👍.
-Voyez ça comme une pile, LIFO (**L**ast **I**n **F**irst **O**ut), à taille fixe.
+Voyez ça comme une pile, FIFO (**F**irst **I**n **F**irst **O**ut), à taille fixe.
 Et une fois la taille maximum atteinte, le message le plus ancien est supprimé.
 
 Simple et efficace.
@@ -120,7 +119,7 @@ Efficace pour la taille, mais potentiellement risqué pour le sens et la précis
 Il se peut que les premiers messages soient importants pour positionner le contexte et que sans eux, votre modèle perde petit à petit le but initial de la conversation.
 Pire : imaginons que votre pile ait une taille de 10 et que les dix derniers messages soient totalement sans rapport avec le début de votre conversation ; à partir du onzième message, votre modèle aura _oublié_ la raison de l'échange que vous avez avec lui 😣.
 
-> J'en profite pour aussi insister sur le fait que lorsque vous utilisez votre chatbot préféré, mélanger les discussions n'est pas une bonne idée.
+> 💡 J'en profite pour aussi insister sur le fait que lorsque vous utilisez votre chatbot préféré, mélanger les discussions n'est pas une bonne idée.
 > La plupart des interfaces permettent de créer plusieurs fils de discussions, faites-le.
 > Un par sujet, afin que votre modèle soit le plus pertinent possible, indépendamment de la façon dont la mémoire est gérée.
 
@@ -249,7 +248,7 @@ echo "$MESSAGES" | jq .
 ```
 |}
 
-Par rapport à la première version de mon [article précédent](2026-07-21-java-and-ai-part1), la chose notable est la gestion manuelle de ma mémoire dans la variable `MESSAGES`.
+Par rapport à la première version de mon [article précédent](/blog/2026-07-21-java-and-ai-part1), la chose notable est la gestion manuelle de ma mémoire dans la variable `MESSAGES`.
 En effet :
  - lignes 12 à 14 : on initialise la liste des messages avec le prompt système
  - lignes 31 & 32 : on ajoute le prompt utilisatrice ou utilisateur

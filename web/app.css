@@ -1,0 +1,7 @@
+.video-centered {
+    display: block;
+    width: 70%;
+    margin: 2rem auto;
+    border: 10px solid #ccc;
+    border-radius: 8px;
+}

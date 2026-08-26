@@ -1,8 +1,8 @@
 ---
 title: "☕️ Java à l'ère de l'IA 🤖 - partie 2 : la mémoire"
-description: "I’m sorry, Dave. I’m afraid I can’t do that. ©HAL 9000"
+description: "Those aren't your memories. They're somebody else's. ©Rick Deckard "
 link: /2026-08-03-java-and-ai-part2
-image: cover.png
+image: cover.webp
 tags:
   - Java
   - IA

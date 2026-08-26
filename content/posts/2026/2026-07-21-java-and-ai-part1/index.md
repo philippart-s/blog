@@ -19,7 +19,7 @@ author: wildagsx
 > ☕️ Le même use case est implémenté du plus bas niveau au plus haut : CURL, Java pur, le SDK OpenAI, LangChain4j, Quarkus et Spring AI.  
 > 🔌 Tous les exemples utilisent [AI Endpoints](https://www.ovhcloud.com/en/public-cloud/ai-endpoints/) d'OVHcloud et le modèle open weight `gpt-oss-120b`.  
 > 🐙 Code et démo disponibles [ici](https://github.com/pigumax/Java-and-AI-Part1).
-> 📖 Aller directement à la [partie 2](2026-08-03-java-and-ai-part2) dédiée à la mémoire
+> 📖 Aller directement à la [partie 2](/blog/2026-08-03-java-and-ai-part2) dédiée à la mémoire
 
 <br/>
 

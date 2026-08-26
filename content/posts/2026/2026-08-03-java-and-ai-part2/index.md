@@ -13,23 +13,31 @@ author: wildagsx
 🏴󠁧󠁢󠁥󠁮󠁧󠁿 You can find the English version of this article [here]({site.url}2026-07-21-java-and-ai-part1-en) 🏴󠁧󠁢󠁥󠁮󠁧󠁿.
 
 ## TL;DR
-> 
+> 🧠 Deuxième article de la série sur l'IA dans vos applications Java ☕️, cette fois consacré à la **mémoire** de vos chatbots.  
+> 🤖 Les modèles sont `stateless` : sans mémoire côté client, votre chatbot oublie votre prénom d'une question à l'autre.  
+> 💸 Renvoyer toute la conversation à chaque appel coûte des tokens : on voit comment limiter la taille de la mémoire, la compresser ou faire du `prompt caching`.  
+> 🪟 Sans oublier la `fenêtre de contexte` du modèle, qu'il faut prendre en compte pour dimensionner cette mémoire.  
+> ☕️ Le même use case est implémenté du plus bas niveau au plus haut : Bash, Java pur, le SDK OpenAI, LangChain4j, Quarkus et Spring AI.  
+> 🔀 Bonus : une mémoire par personne grâce au `@MemoryId` de LangChain4j.  
+> 🐙 Tous les exemples utilisent [AI Endpoints](https://www.ovhcloud.com/en/public-cloud/ai-endpoints/) d'OVHcloud et sont disponibles [ici](https://github.com/philippart-s/java-ai-area-blog).
 
 <br/>
 
 # 📜 Introduction
 
-Petit rappel des épisodes précédent : cet article fait partie d'une série d'articles visant à expliquer comment intégrer de l'IA dans les applications que nous développons en Java ☕️.
+Petit rappel des épisodes précédents : cet article fait partie d'une série d'articles visant à expliquer comment intégrer de l'IA dans les applications que nous développons en Java ☕️.
 Il est la suite de l'[article précédent](2026-07-21-java-and-ai-part1) qui avait pour but de poser les bases de comment développer une application avec de l'IA, comme un chatbot par exemple.
 
 Je ne reviendrai donc pas sur les éléments à connaître pour débuter votre voyage dans l'IA.
 L'objectif de cet article sera de voir pourquoi la première chose que vous allez vouloir faire avec votre chatbot c'est de gérer la mémoire 💿.
 
+> ℹ️ Au vu de la longueur de l'article, je le scinde en deux : celui-ci pour présenter comment ajouter simplement de la mémoire, et un autre dédié aux alternatives de stockage.
+
 # 💿 Mais pourquoi gérer la mémoire ?
 
 Prenons un de nos exemples précédents, par exemple la version [LangChain4j](https://docs.langchain4j.dev/) (au hasard 😇).
 
-Modifions la fin de la sorte, pour poser 2 questions les unes après les autres :
+Modifions la fin de la sorte, pour poser deux questions l'une après l'autre :
 
 ```java
     var futureResponse = new CompletableFuture<ChatResponse>();
@@ -61,7 +69,7 @@ Modifions la fin de la sorte, pour poser 2 questions les unes après les autres 
 ```
 Rien de bien fou ici, on a juste ajouté une question à la suite de la réponse à la première question (lignes `9 à 17`).
 
-Voyons le résultat : 
+Voyons le résultat :
 ```bash
 💬: My name is Stéphane
 
@@ -71,16 +79,16 @@ Nice to meet you, Stéphane! How can I assist you today?
 🤖: I don’t know your name—could you tell me what it is?
 ```
 
-Plutôt étrange non 🤔? 
+Plutôt étrange, non 🤔 ?
 On ne peut pas dire que la demande soit très complexe et que l'information remonte à très loin dans la conversation 💬.
 
-Mais alors pourquoi avec vos chatbots préférés, ils semblent se souvenir parfaitement de toute votre conversation et pas le nôtre avec une conversation ayant simplement deux échanges 😳 ?
+Mais alors, pourquoi vos chatbots préférés semblent-ils se souvenir parfaitement de toute votre conversation, alors que le nôtre s'y perd après seulement deux échanges 😳 ?
 
 Tout simplement parce que vos modèles préférés n'ont pas d'état (on dit donc qu'ils sont `stateless`).
 Et c'est là que l'on se rend compte que sans le client (la CLI, le site web,...) votre chatbot offre une bien piètre expérience utilisatrice et utilisateur.
-Très souvent, c'est donc côté client (au sens de la partie logicielle qui appelle le modèle) qui va gérer cette mémoire.
+Très souvent, c'est donc le client (au sens de la partie logicielle qui appelle le modèle) qui va gérer cette mémoire.
 
-Je vous propose de voir les différents choix qui s'offrent à vous, mais aussi les difficultés qu'il vous faudra solutionner lorsque vous souhaitez ajouter un peu de mémoire à votre chatbot.
+Je vous propose de voir les différents choix qui s'offrent à vous, mais aussi les difficultés qu'il vous faudra résoudre lorsque vous souhaiterez ajouter un peu de mémoire à votre chatbot.
 
 # 🔎 Comment fonctionne la mémoire ?
 
@@ -88,60 +96,60 @@ En soi le mécanisme de la mémoire pour un modèle est assez simple : il suffit
 
 ## 💸 Money, money, money
 
-Et là normalement une lumière s'allume 🚨: des mots étant des tokens, les tokens étant facturés... 
+Et là normalement une lumière s'allume 🚨 : des mots étant des tokens, les tokens étant facturés...
 Plus la mémoire de votre chatbot sera grande, plus vous allez envoyer de tokens.
 Et ce à chaque question !
 
 Oui 💸...
 
 Et même pour une toute petite question.
-Imaginons que vous faites générer un livre de 500 pages par votre chatbot.
-A chaque question ensuite, non seulement votre question sera envoyée mais aussi votre livre de 500 pages 😳.
+Imaginons que vous fassiez générer un livre de 500 pages par votre chatbot.
+À chaque question ensuite, non seulement votre question sera envoyée, mais aussi votre livre de 500 pages 😳.
 
-On voit tout de suite qu'il va falloir mettre en place des mécanismes pour s'éviter cela.
+On voit tout de suite qu'il va falloir mettre en place des mécanismes pour éviter cela.
 
-## 📦 Limiter la taille de la mémoire 
+## 📦 Limiter la taille de la mémoire
 
 Cela paraît être une approche assez évidente (voire naïve) mais qui fonctionne 👍.
-Voyez ça comme une pile, LIFO (**L**ast **I**n **F**irst **O**ut) à taille fixe.
+Voyez ça comme une pile, LIFO (**L**ast **I**n **F**irst **O**ut), à taille fixe.
 Et une fois la taille maximum atteinte, le message le plus ancien est supprimé.
 
 Simple et efficace.
 Efficace pour la taille, mais potentiellement risqué pour le sens et la précision de vos futurs échanges.
 
 Il se peut que les premiers messages soient importants pour positionner le contexte et que sans eux, votre modèle perde petit à petit le but initial de la conversation.
-Pire, imaginons, que votre pile ait une taille de 10, et que les dix derniers messages soient totalement sans rapport avec le début de votre conversation, à partir du onzième message votre modèle aura _oublié_ la raison de l'échange que vous avez avec lui 😣.
+Pire : imaginons que votre pile ait une taille de 10 et que les dix derniers messages soient totalement sans rapport avec le début de votre conversation ; à partir du onzième message, votre modèle aura _oublié_ la raison de l'échange que vous avez avec lui 😣.
 
 > J'en profite pour aussi insister sur le fait que lorsque vous utilisez votre chatbot préféré, mélanger les discussions n'est pas une bonne idée.
 > La plupart des interfaces permettent de créer plusieurs fils de discussions, faites-le.
-> Un par sujet afin que votre modèle soit le plus optimum possible et indépendant de la façon dont la mémoire est gérée.
- 
+> Un par sujet, afin que votre modèle soit le plus pertinent possible, indépendamment de la façon dont la mémoire est gérée.
+
 Bien entendu, il y a des variantes.
 Par exemple vous pouvez choisir ce que vous allez garder en mémoire en fonction de la pertinence de l'échange.
 Ce choix peut être piloté par l'utilisatrice ou l'utilisateur ou via votre chatbot avec un calcul de pertinence de la réponse (souvent délégué à un autre modèle et donc consommant des tokens 💸).
 
-## 🗜️Compresser la mémoire
+## 🗜️ Compresser la mémoire
 
 Et si on avait un moyen de compresser la mémoire comme on le fait avec les fichiers par exemple 💡 ?
 
 C'est effectivement un mécanisme que la plupart des clients implémentent.
 Notamment quand vous voyez le message `compacting...`.
-Mais attention ici, pas question de compression avec perte d'information pour ensuite recréer la totalité de l'information.
-La compression fonctionne de manière différente : le client va déléguer (au modèle courant ou un autre) de lui résumer le fil de la conversation depuis la dernière fois qu'il a fait un résumé (en l'incluant bien entendu).
+Mais attention, ici pas question d'une compression sans perte qui permettrait de recréer ensuite la totalité de l'information.
+La compression fonctionne de manière différente : le client va déléguer (au modèle courant ou à un autre) le résumé du fil de la conversation depuis la dernière fois qu'il en a fait un (en l'incluant bien entendu).
 
 Cela fonctionne plutôt bien et est un bon compromis pour gagner des tokens sans perte totale d'information 🗃️.
 Il y a, cependant, une limite.
 Plus votre session va être longue, plus vous allez faire disparaître petit à petit des notions qui ne reviennent pas souvent dans votre discussion mais qui sont pour autant importantes 😶‍🌫️.
 C'est d'ailleurs ce que vous constatez par vous-même avec vos chatbots habituels.
 
-> Cette impression qu'à un moment donné le chatbot _tourne en rond_ ou répond de manière moins pertinente, voire sans rapport avec votre demande initiale de votre discussion 🔄.
+> Cette impression qu'à un moment donné le chatbot _tourne en rond_ ou répond de manière moins pertinente, voire sans rapport avec la demande initiale de votre discussion 🔄.
 > C'est souvent le signal pour repartir sur une nouvelle session en reposant quelques notions de base.
 
 ## 🥷 Le prompt caching
 
 Ce n'est pas à proprement parler une façon de gérer la mémoire de votre conversation, mais plus un moyen d'optimiser celle-ci.
 L'idée derrière est de stocker les prompts avec leurs réponses, puis de retourner directement la réponse déjà calculée si le même prompt (ou un approchant) est envoyé au modèle.
-La difficulté étant de savoir quels couples _prompts / réponses_ stocker et comment déterminer qu'un prompt ressemble à un autre.
+La difficulté étant de savoir quels couples _prompt / réponse_ stocker et comment déterminer qu'un prompt ressemble à un autre.
 On verra plus tard l'utilisation de bases de données sémantiques (grâce aux vecteurs) qui peuvent être de bons candidats.
 
 > Cela peut être aussi une alternative à la mémoire classique : on stocke tous les échanges dans une base de données sémantique.
@@ -153,7 +161,7 @@ On peut aussi imaginer demander à un modèle plus petit de déterminer si deux 
 
 Souvenez-vous, les modèles ont une taille maximum de nombre de tokens qu'ils peuvent recevoir, on appelle ça la `fenêtre de contexte` 🪟.
 Il faut donc la prendre en compte pour la gestion de la mémoire.
-Si votre mémoire est trop importante le risque est de la saturer très vite et de ne plus pouvoir rien envoyer ou recevoir 💥.
+Si votre mémoire est trop importante, le risque est de la saturer très vite et de ne plus rien pouvoir envoyer ni recevoir 💥.
 Là encore, si vous créez un chatbot permettant de se connecter à plusieurs modèles, il faudra être en capacité de récupérer la taille de cette fenêtre de contexte pour créer une mémoire en correspondance.
 
 # 💿 Stockage des données
@@ -241,11 +249,12 @@ echo "$MESSAGES" | jq .
 ```
 |}
 
-Par rapport à la première version de mon [article précédent](2026-07-21-java-and-ai-part1) la chose notable est la gestion manuelle de ma mémoire dans la variable `MESSAGES`.
+Par rapport à la première version de mon [article précédent](2026-07-21-java-and-ai-part1), la chose notable est la gestion manuelle de ma mémoire dans la variable `MESSAGES`.
 En effet :
- - lignes 12 à 14 on initialise la liste des messages avec le prompt système
- - lignes 31 & 32 on ajoute le prompt utilisatrice ou utilisateur
- - ligne 61 & 62 on ajoute la réponse du modèle (c'est cette étape qui permet d'avoir la mémoire)
+ - lignes 12 à 14 : on initialise la liste des messages avec le prompt système
+ - lignes 31 & 32 : on ajoute le prompt utilisatrice ou utilisateur
+ - lignes 61 & 62 : on ajoute la réponse du modèle (c'est cette étape qui permet d'avoir la mémoire)
+
 Puis on boucle à l'étape de la saisie du prompt utilisatrice / utilisateur.
 
 Ce simple exemple nous permet de bien comprendre en regardant les payloads échangés :
@@ -305,15 +314,15 @@ Votre nom est Stéphane.
 |}
 
 La mémoire est donc simplement un empilement des messages :
- - sur le premier envoi du payload : 
-   - lignes 11 & 12 on met le prompt système
-   - lignes 15 & 16 le prompt de la personne
+ - sur le premier envoi du payload :
+   - lignes 11 & 12 : on met le prompt système
+   - lignes 15 & 16 : le prompt de la personne
  - sur le deuxième envoi du payload :
-   - lignes 30 à 37 ce sont les messages du premier payload envoyé
-   - lignes 39 & 40 ce sont la réponse du modèle
-   - lignes 43 & 44 le nouveau prompt de la personne
+   - lignes 30 à 37 : ce sont les messages du premier payload envoyé
+   - lignes 39 & 40 : c'est la réponse du modèle
+   - lignes 43 & 44 : le nouveau prompt de la personne
 
-Certes cet exemple et sa mise en pratique sont naïfs, mais on comprend de manière visuelle comment fonctionne la mémoire de nos chatbots et pourquoi ça consomme autant de tokens 💸.
+Certes, cet exemple et sa mise en pratique sont naïfs, mais on comprend de manière visuelle comment fonctionne la mémoire de nos chatbots et pourquoi ça consomme autant de tokens 💸.
 
 Pour voir le source complet de cet exemple, c'est [ici](https://github.com/philippart-s/java-ai-area-blog/blob/main/00_bash/00.03_StreamingChatbotMemory.sh) 📜.
 
@@ -440,11 +449,11 @@ void main() throws Exception {
 ```
 |}
 
-Comme vous le constatez le fonctionnement est très proche de la version bash, mais cette fois écrit en Java, merci [JBang](https://www.jbang.dev/) 😍.
+Comme vous le constatez, le fonctionnement est très proche de la version Bash, mais cette fois écrit en Java, merci [JBang](https://www.jbang.dev/) 😍.
  - lignes 26 à 29 : initialisation de notre mémoire en ajoutant le prompt système (_rôle_ `system`)
  - lignes 48 à 50 : ajout du prompt utilisateur (_rôle_ `user`)
- - lignes 61 à 66 : envoie au modèle et réception de la réponse
- - lignes 72 à 89 : extrait de la réponse
+ - lignes 61 à 66 : envoi au modèle et réception de la réponse
+ - lignes 72 à 89 : extraction de la réponse
  - lignes 97 à 99 : ajout de la réponse à la mémoire (_rôle_ `assistant`)
 
 Le source complet est disponible [ici](https://github.com/philippart-s/java-ai-area-blog/blob/main/01_pure_java/_01_03_StreamingChatbotMemory.java) 📜.
@@ -552,10 +561,10 @@ void main() {
 
 Le principe est le même : on enrichit le message que l'on envoie au modèle à chaque A/R 📚.
 La seule différence est que le SDK nous permet d'éviter la construction manuelle de la structure JSON 😎.
- - lignes 28 à 30 : on prépare ce que l'on va envoyer avec le système prompt, ce sera aussi notre _objet_ qui représentera la mémoire,
+ - lignes 28 à 30 : on prépare ce que l'on va envoyer avec le prompt système ; ce sera aussi l'_objet_ qui représentera la mémoire,
  - ligne 45 : on ajoute le prompt utilisatrice ou utilisateur
- - lignes 56 à 64 : on envoie la requête, affiche la réponse et stocke dans un _accumulator_ la réponse pour pouvoir l'ajouter par la suite à la mémoire
- - lignes 72 à 76 : on ajoute la réponse stockée dans l'accumulator dans notre mémoire pour qu'elle soit envoyée lors de la prochaine requête.
+ - lignes 56 à 64 : on envoie la requête, on affiche la réponse et on la stocke dans un _accumulator_ pour pouvoir l'ajouter par la suite à la mémoire
+ - lignes 72 à 76 : on ajoute la réponse stockée dans l'_accumulator_ à notre mémoire pour qu'elle soit envoyée lors de la prochaine requête.
 
 Le source complet est disponible [ici](https://github.com/philippart-s/java-ai-area-blog/blob/main/02_sdk_java/_02_03_StreamingChatbotMemory.java) 📜.
 
@@ -568,7 +577,7 @@ Je pense que l'on peut encore faire plus simple 😎.
 
 ### 🦜 LangChain4j
 
-Eh oui passons à mon Framework préféré : [LangChain4j](https://docs.langchain4j.dev/intro/) 🦜.
+Eh oui, passons à mon framework préféré : [LangChain4j](https://docs.langchain4j.dev/intro/) 🦜.
 
 ```java
 ///usr/bin/env jbang "$0" "$@" ; exit $?
@@ -658,25 +667,25 @@ void main() {
 }
 ```
 
-Notre code commence à être beaucoup plus simple non 😎 ?
-- ligne 41 : on initialise notre mémoire avec une taille de 10. Notez que nous n'avions pas capé la taille dans les exemples précédents. Tout simplement, car il aurait fallu le gérer à la main, là, c'est offert par LangChain4j donc autant ne pas s'en priver 🤗
-- Ligne 46 : on ajoute la fonctionnalité de mémoire à notre modèle
+Notre code commence à être beaucoup plus simple, non 😎 ?
+- ligne 41 : on initialise notre mémoire avec une taille de 10. Notez que nous n'avions pas limité la taille dans les exemples précédents, tout simplement parce qu'il aurait fallu le gérer à la main. Ici, c'est offert par LangChain4j, donc autant ne pas s'en priver 🤗
+- ligne 46 : on ajoute la fonctionnalité de mémoire à notre modèle
 - lignes 69 à 73 : on affiche la réponse du modèle
 
-> ℹ️ les portions de code du style `chatMemory.messages().forEach(IO::println);` ne sont là qu'à des fins de debug / explications
+> ℹ️ les portions de code du style `chatMemory.messages().forEach(IO::println);` ne sont là qu'à des fins de debug / explications.
 
-Le source complet est disponible [ici](https://github.com/philippart-s/java-ai-area-blog/blob/main/03_langchain4j_03_03_StreamingChatbotMemory.java) 📜.
+Le source complet est disponible [ici](https://github.com/philippart-s/java-ai-area-blog/blob/main/03_langchain4j/_03_03_StreamingChatbotMemory.java) 📜.
 
 #### 📽️ Voyons ça en action !
 <video controls class="video-centered">
   <source src="langchain4j-simple-memory.mov" type="video/quicktime">
 </video>
 
-Peut-être qu'en lisant le code une chose vous chiffonne 🤔.
+Peut-être qu'en lisant le code, une chose vous chiffonne 🤔.
 Que se passe-t-il si j'ai plusieurs utilisatrices / utilisateurs ?  
 Iels partagent la même mémoire 🔀 ?  
 Avec le code existant oui 🥺.
-Heureusement LangChain4j nous permet facilement d'avoir une séparation des mémoires par personne.
+Heureusement, LangChain4j nous permet facilement d'avoir une séparation des mémoires par personne.
 
 {|
 ```java
@@ -782,13 +791,13 @@ void ask(Assistant assistant, String sessionId, String userPrompt) {
 
 On voit ici les quelques différences avec une mémoire sans `id`.
  - ligne 24 : on ajoute l'annotation `@MemoryId` afin de pouvoir identifier une mémoire de manière unique
- - ligne 43 : on déclare le _memory store_ en mémoire (cette étape est facultative, car par défaut, mais nous permet ensuite d'afficher le contenu de la mémoire)
+ - ligne 43 : on déclare le _memory store_ en mémoire (cette étape est facultative puisque c'est le comportement par défaut, mais elle nous permet ensuite d'afficher le contenu de la mémoire)
  - lignes 50 à 54 : on déclare un `chatMemoryProvider` pour pouvoir avoir la gestion par identifiant de chaque mémoire
- - lignes 63 à 66 : ce sont des exemples de comment utiliser notre chatbot maintenant avec l'id de mémoire
+ - lignes 63 à 66 : des exemples montrant comment utiliser notre chatbot avec l'id de mémoire
  - ligne 78 : avec l'accès au _memory store_ on peut aussi gérer le nettoyage de celui-ci 💡
 
 > - 💡 bien entendu on aurait pu avoir le même comportement en `Bash` ou en version Java pure / SDK mais cela aurait nécessité plus de code 👩‍💻
-> - 🗑️ il y a pas mal de code afin de debug ou d'explication, si vous le retirez vous arrivez à quelque chose de plus concis
+> - 🗑️ il y a pas mal de code à des fins de debug ou d'explication : si vous le retirez, vous arrivez à quelque chose de bien plus concis
 
 Le source complet est disponible [ici](https://github.com/philippart-s/java-ai-area-blog/blob/main/03_langchain4j/_03_04_StreamingChatbotMultiSessionMemory.java) 📜.
 
@@ -801,7 +810,7 @@ Le source complet est disponible [ici](https://github.com/philippart-s/java-ai-a
 ### ⚡️ Quarkus et LangChain4j
 
 Avançons encore un peu dans la simplification avec l'ajout de [Quarkus](https://quarkus.io/).
-Pour notre exemple, c'est un peu overkill mais cela nous permet de voir comment l'ajouter dans une application Quarkus existante.
+Pour notre exemple, c'est un peu overkill, mais cela nous permet de voir comment l'ajouter dans une application Quarkus existante.
 
 {|
 ```java
@@ -892,15 +901,15 @@ public class _04_03_StreamingChatbotMemory implements QuarkusApplication {
 ```
 |}
 
-Encore une fois le code pourrait être plus concis, mais j'ai rajouté un peu de debug.   
-> - ℹ️ Il n'y a rien à rajouter de particulier pour gérer la mémoire, l'extension Quarkus active la mémoire par défaut 
+Encore une fois, le code pourrait être plus concis, mais j'ai rajouté un peu de debug.   
+> - ℹ️ Il n'y a rien à rajouter de particulier pour gérer la mémoire, l'extension Quarkus active la mémoire par défaut.
 > - ⚠️ il faut donc penser à la désactiver si vous ne la souhaitez pas en positionnant `chatMemoryProviderSupplier = RegisterAiService.NoChatMemoryProviderSupplier.class` dans `@RegisterAiService`
 
-- lignes 21 à 25 : on déclare le _AIService_ (avec la mémoire par défaut) et l'id de mémoire avec `@MemoryId`
+- lignes 21 à 25 : on déclare l'_AIService_ (avec la mémoire par défaut) et l'id de mémoire avec `@MemoryId`
 - lignes 39 & 40 : on injecte le _memory store_ uniquement pour avoir du debug, il est créé par défaut sinon
 - ligne 66 : on appelle le chatbot avec l'id de mémoire pour éviter les conflits
 
-> ℹ️ Le code utilise l'identifiant de mémoire mais au final l'exemple est mono-utilisatrice / utilisateur. Cela permet juste d'avoir un code plus robuste au cas où.
+> ℹ️ Le code utilise l'identifiant de mémoire, mais au final l'exemple est mono-utilisatrice / utilisateur. Cela permet juste d'avoir un code plus robuste au cas où.
 
 Le source complet est disponible [ici](https://github.com/philippart-s/java-ai-area-blog/blob/main/04_quarkus/_04_03_StreamingChatbotMemory.java) 📜.
 
@@ -1019,10 +1028,13 @@ public class _05_03_StreamingChatbotMemory {
 }
 ```
 
-On voit, au final, que le code entre les différents Frameworks se ressemble beaucoup avec l'approche simple d'une gestion volatile en mémoire.
+On voit, au final, que le code se ressemble beaucoup d'un framework à l'autre avec l'approche simple d'une gestion volatile en mémoire.
  - lignes 48 à 51 : création de la mémoire avec une taille de `10`
  - ligne 57 : activation de la mémoire pour notre chatbot
  - ligne 82 : gestion de la multi-conversation avec un `id`
+
+Le source complet est disponible [ici](https://github.com/philippart-s/java-ai-area-blog/tree/main/05_spring/_05_03_StreamingChatbotMemory.java) 📜.
+
 
 #### 📽️ Voyons ça en action !
 <video controls class="video-centered">
@@ -1031,4 +1043,7 @@ On voit, au final, que le code entre les différents Frameworks se ressemble bea
 
 # 🏁 Conclusion
 
-Si vous êtes arrivés là, merci de m'avoir lu et s'il y a des coquilles n'hésitez pas à me faire une [issue ou PR](https://github.com/philippart-s/blog) 😊.
+Cet article est déjà beaucoup trop long et je ne veux pas bâcler la fin, dans laquelle je voulais parler des alternatives de stockage de la mémoire (pour sortir du use case simple en mémoire).
+J'arrête donc là, et je consacrerai un prochain article à cette suite, pour prendre le temps et que ce soit plus digeste 🤗.
+
+Si vous êtes arrivés jusque-là, merci de m'avoir lu et s'il y a des coquilles n'hésitez pas à me faire une [issue ou PR](https://github.com/philippart-s/blog) 😊.

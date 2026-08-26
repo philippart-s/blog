@@ -129,7 +129,7 @@
       A vous les joies du scripting en Java !
     slides: https://docs.google.com/presentation/d/e/2PACX-1vTgTX2QlPi_fmV9f6BcrUq22lz8aE8Q7QioOphQhre_QR5I1KV62inYD3VrmozMYVsKspyO8lGu7dVg/pub
     source: https://github.com/philippart-s/jbang
-    replay: null
+    replay: https://www.youtube.com/watch?v=G6QA4QkBQPQ
   - title: 🧰 Les dev containers, la boîte à outils ultime pour les devs ?
     id: dev-containers
     location: Rennes (🇫🇷)
@@ -149,7 +149,7 @@
       Vous repartirez en sachant utiliser les dev containers mais aussi en sachant construire as-code votre stack de développement.
     source: https://github.com/philippart-s/dev-containers-talk
     slides: https://docs.google.com/presentation/d/e/2PACX-1vRRYh9lPgZ9OXdSOzDDv85cbPWAM4jx7mKHLGPHcozlP7SGN4SwweRqLkUq9FmLdqa-A9FYuxAM9u6i/pub
-    replay: null
+    replay: https://www.youtube.com/watch?v=ld7TpHAj_xo
 - title: 🎤 Talks donnés à Paris JUG 🎤
   link: /talks/paris-jug-2026/
   description: Liste de talks donnés lors de la conférence Paris JUG

@@ -382,20 +382,14 @@ void main() throws Exception {
         // 2) Append the user message to the memory.
         paramsBuilder.addUserMessage(userPrompt);
 
-        // 3) Print the messages of the request (typed SDK objects, the rest of
-        // the params is left out to keep the output readable): on a second run,
-        // the list does not start empty anymore. The WHOLE memory is sent again,
-        // restored part included.
+        // 3) Print the messages of the request.
         var params = paramsBuilder.build();
         IO.println("===== ⬆️ REQUEST (memory sent to the model) ⬆️ =====");
         params.messages().forEach(IO::println);
         IO.println();
 
         // 4) Call the endpoint in streaming mode and print the answer token by
-        // token. The accumulator collects the chunks along the way (peek) and
-        // rebuilds the complete ChatCompletion, exactly as the non-streaming
-        // call would have returned it.
-        // The StreamResponse is AutoCloseable, so we close it with try-with-resources.
+        // token.
         IO.println("===== 🤖 ANSWER (streaming) 🤖 =====");
         var accumulator = ChatCompletionAccumulator.create();
         try (StreamResponse<ChatCompletionChunk> stream =
@@ -411,20 +405,13 @@ void main() throws Exception {
         IO.println();
         IO.println();
 
-        // 5) Append the model answer to the memory, so the next call gets the
-        // full conversation: this is what makes the model look like it
-        // remembers. This is NOT a second pass over the stream: what we add is
-        // the single message reassembled by the accumulator, taken as is.
+        // 5) Append the model answer to the memory.
         paramsBuilder.addMessage(accumulator.chatCompletion()
                 .choices()
                 .getFirst()
                 .message());
 
-        // 6) Save the memory. The SDK's mapper writes its own typed messages
-        // straight to JSON, so this stays as cheap as it was in _01_04 — and it
-        // produces the very same {"role": ..., "content": ...} array.
-        // Writing after every answer (rather than once at the end) means an
-        // interrupted session is still saved.
+        // 6) Save the memory.
         var updated = paramsBuilder.build().messages();
         Files.writeString(memoryFile, mapper.writerWithDefaultPrettyPrinter()
                 .writeValueAsString(updated));
@@ -432,14 +419,38 @@ void main() throws Exception {
         IO.println();
     }
 
-    // Print the final memory: the whole conversation, now kept on disk. Run the
-    // program again and this is exactly what it will start from.
+    // Print the final memory: the whole conversation, now kept on disk. 
     IO.println("===== 🧠 FINAL MEMORY (kept in " + memoryFile + ") 🧠 =====");
     paramsBuilder.build().messages().forEach(IO::println);
     IO.println();
     IO.println("🗑️  Delete " + memoryFile + " to start a fresh conversation.");
 }
 ```
+
+Bon, je ne suis pas sûr que l'on y gagne en simplicité.
+Principalement du fait que le SDK ne prévoit rien pour la peristence et que l'on la gère cela à la main pour ensuite réenvoyer tout l'historique 😨.
+
+ - lignes 23 à 25 : on init la mémoire fichier
+ - ligne 38 : le `params bulder` reste la structure de stockage de la mémoire
+ - lignes 42 à 55 : chargement de la mémoire (si elle existe), grâce à `Jackson` la sérialisation / désérialisation est dans le bon format
+ - lignes 61 à 94 : toujours la même boucle pour interragir avec le modèle
+ - lignes 97 à 107 : ajout des messages dans la mémoire et sauvegarde dans le fichier
+
+Pour voir le source complet de cet exemple, c'est [ici](https://github.com/philippart-s/java-ai-area-blog/blob/main/02_sdk_java/_02_04_StreamingChatbotFileMemory) 📜.
+
+#### 📽️ Voyons ça en action !
+<video controls class="video-centered">
+  <source src="java-sdk-file-memory.mov" type="video/quicktime">
+</video>
+
+### 🦜 LangChain4j
+
+Voyons comment [LangChain4j](https://docs.langchain4j.dev/intro/) nous permet de gérer une mémoire persister dans un fichier.
+
+```java
+
+```
+
 
 # 🏁 Conclusion
 

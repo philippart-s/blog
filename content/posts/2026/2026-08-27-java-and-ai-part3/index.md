@@ -448,9 +448,193 @@ Pour voir le source complet de cet exemple, c'est [ici](https://github.com/phili
 Voyons comment [LangChain4j](https://docs.langchain4j.dev/intro/) nous permet de gérer une mémoire persister dans un fichier.
 
 ```java
+///usr/bin/env jbang "$0" "$@" ; exit $?
+//JAVA 26+
+//DEPS dev.langchain4j:langchain4j:1.18.0
+//DEPS dev.langchain4j:langchain4j-open-ai:1.18.0
+//DEPS org.slf4j:slf4j-simple:2.0.17
 
+import dev.langchain4j.data.message.ChatMessage;
+import dev.langchain4j.data.message.ChatMessageDeserializer;
+import dev.langchain4j.data.message.ChatMessageSerializer;
+import dev.langchain4j.memory.ChatMemory;
+import dev.langchain4j.memory.chat.MessageWindowChatMemory;
+import dev.langchain4j.model.chat.StreamingChatModel;
+import dev.langchain4j.model.chat.response.ChatResponse;
+import dev.langchain4j.model.openai.OpenAiStreamingChatModel;
+import dev.langchain4j.service.AiServices;
+import dev.langchain4j.service.SystemMessage;
+import dev.langchain4j.service.TokenStream;
+import dev.langchain4j.store.memory.chat.ChatMemoryStore;
+
+import java.util.concurrent.CompletableFuture;
+
+
+interface Assistant {
+    @SystemMessage("provide a concise answer")
+    TokenStream chat(String userMessage);
+}
+
+// Helper to save messages in a file.
+class FileChatMemoryStore implements ChatMemoryStore {
+
+    private final Path directory;
+
+    FileChatMemoryStore(Path directory) {
+        this.directory = directory;
+    }
+
+    private Path fileFor(Object memoryId) {
+        return directory.resolve(memoryId + ".json");
+    }
+
+    // Called before every request.
+    @Override
+    public List<ChatMessage> getMessages(Object memoryId) {
+        var file = fileFor(memoryId);
+        try {
+            if (!Files.exists(file) || Files.size(file) == 0) {
+                return List.of();
+            }
+            return ChatMessageDeserializer.messagesFromJson(Files.readString(file));
+        } catch (IOException e) {
+            throw new UncheckedIOException("Cannot read the memory of " + memoryId, e);
+        }
+    }
+
+    // Called once the answer is complete.
+    @Override
+    public void updateMessages(Object memoryId, List<ChatMessage> messages) {
+        try {
+            Files.createDirectories(directory);
+            Files.writeString(fileFor(memoryId), ChatMessageSerializer.messagesToJson(messages));
+        } catch (IOException e) {
+            throw new UncheckedIOException("Cannot write the memory of " + memoryId, e);
+        }
+    }
+
+    // Called when a conversation is dropped. 
+    @Override
+    public void deleteMessages(Object memoryId) {
+        try {
+            Files.deleteIfExists(fileFor(memoryId));
+        } catch (IOException e) {
+            throw new UncheckedIOException("Cannot delete the memory of " + memoryId, e);
+        }
+    }
+}
+
+void main() {
+    // OVHcloud AI Endpoints configuration.
+    final String baseUrl = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1";
+    final String model = "gpt-oss-120b";
+    final String token = System.getenv("OVH_AI_ENDPOINTS_ACCESS_TOKEN");
+
+    // Where the conversations are stored. 
+    final String sessionId = "cli-session";
+    final var memoryDir = Path.of(".memory");
+
+    // Build the underlying LangChain4j streaming model, pointed at OVHcloud AI Endpoints.
+    StreamingChatModel chatModel = OpenAiStreamingChatModel.builder()
+            .baseUrl(baseUrl)
+            .apiKey(token)
+            .modelName(model)
+            .logRequests(false)
+            //.logResponses(true)
+            .build();
+
+    // 1) The memory. 
+    ChatMemoryStore memoryStore = new FileChatMemoryStore(memoryDir);
+    ChatMemory chatMemory = MessageWindowChatMemory.builder()
+            .id(sessionId)
+            .maxMessages(10)
+            .chatMemoryStore(memoryStore)
+            .build();
+
+    // Create the AI Service backed by the streaming model, with memory.
+    Assistant assistant = AiServices.builder(Assistant.class)
+            .streamingChatModel(chatModel)
+            .chatMemory(chatMemory)
+            .build();
+
+    // 2) Only for explanation purpose, not mandatory.
+    var restored = chatMemory.messages();
+    if (restored.isEmpty()) {
+        IO.println("===== 🧠 NO MEMORY YET, STARTING A NEW CONVERSATION 🧠 =====");
+    } else {
+        IO.println("===== 🧠 MEMORY RESTORED FROM DISK (" + restored.size() + " messages) 🧠 =====");
+        restored.forEach(IO::println);
+    }
+    IO.println();
+
+    IO.println("===== 🧠 CHATBOT WITH PERSISTENT MEMORY (type \"exit\" to quit) 🧠 =====");
+    IO.println("💾 stored in " + memoryDir.resolve(sessionId + ".json").toAbsolutePath());
+    IO.println();
+
+    while (true) {
+        // Ask the user for a prompt.
+        var userPrompt = IO.readln("⌨️  Your prompt: ");
+        IO.println();
+
+        // Leave the loop on "exit", or on end of input (Ctrl+D).
+        if (userPrompt == null || userPrompt.equals("exit")) break;
+        if (userPrompt.isBlank()) continue;
+
+        // 3) Print the memory as it is BEFORE the call.
+        IO.println("===== 🧠 MEMORY (resent to the model with the prompt) 🧠 =====");
+        chatMemory.messages().forEach(IO::println);
+        IO.println();
+
+        // 4) Call the endpoint in streaming mode and print the answer token by
+        // token. 
+        IO.println("===== 🤖 ANSWER (streaming) 🤖 =====");
+        var futureResponse = new CompletableFuture<ChatResponse>();
+        assistant.chat(userPrompt)
+                .onPartialResponse(IO::print)
+                .onCompleteResponse(futureResponse::complete)
+                .onError(futureResponse::completeExceptionally)
+                .start();
+        futureResponse.join();
+
+        // Newlines once the stream is complete.
+        IO.println();
+        IO.println();
+    }
+
+    // Print the final memory: the whole conversation .
+    IO.println("===== 🧠 FINAL MEMORY (the whole conversation) 🧠 =====");
+    chatMemory.messages().forEach(IO::println);
+    IO.println();
+
+    // A real application would delete a conversation when it ends. It matters
+    // more now than it did in _03_04: the entries are files, and they outlive
+    // the process.
+    //memoryStore.deleteMessages(sessionId);
+    IO.println("🗑️  Delete " + memoryDir.resolve(sessionId + ".json")
+            + " to start a fresh conversation.");
+}
 ```
 
+Cette fois, on retrouve le confort de LangChain4j : la persistance n'est plus dans la boucle de conversation mais dans une implémentation de `ChatMemoryStore` que le framework appelle pour nous 😎.
+On n'économise pas forcément beaucoup de lignes car on a l'implémentation de notre `FileChatMemoryStore` (qui dans la vraie vie serait dans une autre classe) et du debug assez présent.
+
+ - lignes 29 à 75 : notre `FileChatMemoryStore`, un fichier `JSON` par identifiant de mémoire (⚠️ pour simplifier le code je n'utilise pas l'identifant par la suite ⚠️)
+   - lignes 42 à 53 : chargement de la mémoire depuis le fichier, appelé par LangChain4j avant chaque requête
+   - lignes 56 à 64 : sauvegarde de la mémoire dans le fichier, appelé par LangChain4j une fois la réponse complète
+   - lignes 67 à 74 : suppression du fichier quand la conversation se termine
+   - lignes 49 & 60 : la sérialisation / désérialisation des messages est fournie par LangChain4j via `ChatMessageSerializer` et `ChatMessageDeserializer`
+ - lignes 97 à 102 : on branche notre _memory store_ sur la mémoire, c'est la seule différence avec la version en mémoire volatile
+ - ligne 107 : on ajoute la mémoire à notre chatbot, comme précédemment
+ - ligne 162 : avec l'accès au _memory store_ on peut supprimer le fichier 💡
+
+> ℹ️ les lignes 110 à 118 ne servent qu'à afficher la mémoire restaurée, elles ne sont pas nécessaires au fonctionnement.
+
+Pour voir le source complet de cet exemple, c'est [ici](https://github.com/philippart-s/java-ai-area-blog/blob/main/03_langchain4j/_03_05_StreamingChatbotFileMemory.java) 📜.
+
+#### 📽️ Voyons ça en action !
+<video controls class="video-centered">
+  <source src="langchain4j-file-memory.mov" type="video/quicktime">
+</video>
 
 # 🏁 Conclusion
 

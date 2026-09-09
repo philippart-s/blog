@@ -1,3 +1,37 @@
+- title: 🎤 Talks donnés à JUg Summer Camp 🎤
+  link: /talks/jugsummercamp-2026/
+  description: Liste de talks donnés lors de la conférence JUG Summer Camp
+  image: conferences/logo-jugsummercamp.png
+  author: wilda
+  year: '2026'
+  date: '2026-09-04'
+  name: JUG Summer Camp
+  postDate: 2026-09-09
+  talksUrl: jugsummercamp-2026
+  displayDate: 4 septembre 2026
+  excerpt: Conférences données lors du JUG Summer Camp 2026
+  categories: Conférences
+  talks:
+    - title: 🧰 Les dev containers, la boîte à outils ultime pour les devs ?
+      id: dev-containers
+      location: La Rochelle (🇫🇷)
+      language: Français
+      date: 4 sptembre 2026
+      time: 17h15
+      duration: 30 mins
+      pitch: |
+        On a toutes et tous été confronté•es, un jour, à devoir (ré)installer tout notre environnement de développement lors d'un changement de machine. Que ce soit par choix ou juste en mode "on-boarding" lors d'un changement de société, de mission, ... On a aussi, parfois, passé de longues heures pour comprendre quels outils installer pour proposer une PR ou MR dans un projet Open Source.
+        
+        Dans encore beaucoup d'autres cas, nous sommes vite confrontés à l'enfer de la configuration des outils et autres frameworks pour faire ce que l'on aime : développer. Et je ne vous parle pas des montées de versions et inter-dépendances 😅...
+        
+        Heureusement, il existe une solution à tous ces problèmes : les dev containers.
+        
+        Lors de ce tools-in-action, je vous propose de partir à leur découverte. La seule chose que je m'autorise à installer sur ma machine : Docker ! Le reste sera de la gestion de configuration pour que les outils, les frameworks et la gestion des versions et dépendances soit un non-évènement dans votre process de développement.
+        
+        Vous repartirez en sachant utiliser les dev containers mais aussi en sachant construire as-code votre stack de développement.
+      source: https://github.com/philippart-s/dev-containers-talk
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vTW52NYKkXxzzTMetEPAbxpBxaFZUgfRxQNbv6zr_NSsbjC7U4iboPZACEzXiB7aQjSgTnZ5_qh23hZ/pub
+      replay:
 - title: 🎤 Talks donnés à Riviera Dev 🎤
   link: /talks/riviera-2026/
   description: Liste de talks donnés lors de la conférence Riviera Dev
@@ -58,7 +92,7 @@
       Et qui sait, avec un peu de magie on aura, au final, un vrai assistant intelligent dans notre et terminal 🤖.
     slides: https://docs.google.com/presentation/d/e/2PACX-1vRmBGJcf3r15UZJyxwAsQy05AQZqYUbJV8mNIrimK0ZkvgsjPu9BWJvVvZC_v0N8VycAem6Fyedjf3G/pub#slide=id.g3b53703ef16_0_59
     source: https://github.com/philippart-s/jarvis
-    replay: null
+    replay: https://youtu.be/Ri4UXm_5JHk?si=uvXDygRLDB2Nhg_i
 - title: 🎤 Talks donnés à SunnyTech 🎤
   link: /talks/sunytech-2026/
   description: Liste de talks donnés lors de la conférence SunnyTech

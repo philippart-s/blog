@@ -636,6 +636,251 @@ Pour voir le source complet de cet exemple, c'est [ici](https://github.com/phili
   <source src="langchain4j-file-memory.mov" type="video/quicktime">
 </video>
 
+### ⚡️ Quarkus et LangChain4j
+
+Voyons maintenant comment Quarkus s'en sort pour la gestion de la mémoire dans un fichier.
+
+```java
+///usr/bin/env jbang "$0" "$@" ; exit $?
+//JAVA 26+
+// jboss-threads needs java.lang opened on Java 24+ (thread-local reset capability).
+//JAVA_OPTIONS --add-opens=java.base/java.lang=ALL-UNNAMED
+//DEPS io.quarkus.platform:quarkus-bom:3.33.2@pom
+//DEPS io.quarkiverse.langchain4j:quarkus-langchain4j-openai:1.12.0
+
+// 1) Include application.properties as a classpath resource so Quarkus reads it.
+//FILES application.properties
+
+import dev.langchain4j.data.message.ChatMessage;
+import dev.langchain4j.data.message.ChatMessageDeserializer;
+import dev.langchain4j.data.message.ChatMessageSerializer;
+import dev.langchain4j.memory.ChatMemory;
+import dev.langchain4j.memory.chat.ChatMemoryProvider;
+import dev.langchain4j.memory.chat.MessageWindowChatMemory;
+import dev.langchain4j.service.MemoryId;
+import dev.langchain4j.service.SystemMessage;
+import dev.langchain4j.service.UserMessage;
+import dev.langchain4j.store.memory.chat.ChatMemoryStore;
+import io.quarkiverse.langchain4j.RegisterAiService;
+import io.quarkus.runtime.QuarkusApplication;
+import io.quarkus.runtime.annotations.QuarkusMain;
+import io.smallrye.mutiny.Multi;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.control.ActivateRequestContext;
+import jakarta.inject.Inject;
+import jakarta.inject.Singleton;
+import org.eclipse.microprofile.config.inject.ConfigProperty;
+
+import java.io.IOException;
+import java.io.UncheckedIOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.List;
+
+// 2) The AI Service. 
+@RegisterAiService
+interface Assistant {
+    @SystemMessage("provide a concise answer")
+    Multi<String> chat(@MemoryId String sessionId, @UserMessage String userMessage);
+}
+
+// 3) The persistent store. 
+@ApplicationScoped
+class FileChatMemoryStore implements ChatMemoryStore {
+
+    private final Path directory = Path.of(".memory");
+
+    private Path fileFor(Object memoryId) {
+        return directory.resolve(memoryId + ".json");
+    }
+
+    // Called before every request, to build the context sent to the model.
+    @Override
+    public List<ChatMessage> getMessages(Object memoryId) {
+        var file = fileFor(memoryId);
+        try {
+            if (!Files.exists(file) || Files.size(file) == 0) {
+                return List.of();
+            }
+            return ChatMessageDeserializer.messagesFromJson(Files.readString(file));
+        } catch (IOException e) {
+            throw new UncheckedIOException("Cannot read the memory of " + memoryId, e);
+        }
+    }
+
+    // Called once the answer is complete, with the memory already updated and
+    // already trimmed to the configured window.
+    @Override
+    public void updateMessages(Object memoryId, List<ChatMessage> messages) {
+        try {
+            Files.createDirectories(directory);
+            Files.writeString(fileFor(memoryId), ChatMessageSerializer.messagesToJson(messages));
+        } catch (IOException e) {
+            throw new UncheckedIOException("Cannot write the memory of " + memoryId, e);
+        }
+    }
+
+    // Delete the all messages from the memory
+    @Override
+    public void deleteMessages(Object memoryId) {
+        try {
+            Files.deleteIfExists(fileFor(memoryId));
+        } catch (IOException e) {
+            throw new UncheckedIOException("Cannot delete the memory of " + memoryId, e);
+        }
+    }
+}
+
+// 4) Needed to avoid to delete memory after each restart
+final class PersistentChatMemory implements ChatMemory {
+
+    private final ChatMemory delegate;
+
+    PersistentChatMemory(ChatMemory delegate) {
+        this.delegate = delegate;
+    }
+
+    @Override
+    public Object id() {
+        return delegate.id();
+    }
+
+    @Override
+    public void add(ChatMessage message) {
+        delegate.add(message);
+    }
+
+    @Override
+    public List<ChatMessage> messages() {
+        return delegate.messages();
+    }
+
+    // Deliberately empty. Dropping a conversation stays possible, but only
+    // explicitly, through ChatMemoryStore.deleteMessages().
+    @Override
+    public void clear() {
+    }
+}
+
+// 5) The provider that hands out those memories. 
+@Singleton
+class PersistentChatMemoryProvider implements ChatMemoryProvider {
+
+    @Inject
+    ChatMemoryStore store;
+
+    @ConfigProperty(name = "quarkus.langchain4j.chat-memory.memory-window.max-messages",
+            defaultValue = "10")
+    int maxMessages;
+
+    @Override
+    public ChatMemory get(Object memoryId) {
+        return new PersistentChatMemory(MessageWindowChatMemory.builder()
+                .id(memoryId)
+                .maxMessages(maxMessages)
+                .chatMemoryStore(store)
+                .build());
+    }
+}
+
+// 6) Command-mode entry point: @QuarkusMain + QuarkusApplication run in a shell.
+@QuarkusMain
+public class _04_04_StreamingChatbotFileMemory implements QuarkusApplication {
+
+    // A single conversation here, so a constant id is enough. 
+    private static final String SESSION_ID = "cli-session";
+
+    // 7) The generated AI service is a CDI bean, injected here.
+    @Inject
+    Assistant assistant;
+
+    // The store, injected only so we can print the conversation. only for debug purppose.
+    @Inject
+    ChatMemoryStore memoryStore;
+
+    @Override
+    @ActivateRequestContext
+    public int run(String... args) {
+        // 8) Nothing to restore: reading the store already reads the file.
+        var restored = memoryStore.getMessages(SESSION_ID);
+        if (restored.isEmpty()) {
+            IO.println("===== 🧠 NO MEMORY YET, STARTING A NEW CONVERSATION 🧠 =====");
+        } else {
+            IO.println("===== 🧠 MEMORY RESTORED FROM DISK (" + restored.size() + " messages) 🧠 =====");
+            restored.forEach(IO::println);
+        }
+        IO.println();
+
+        IO.println("===== 🧠 CHATBOT WITH PERSISTENT MEMORY (type \"exit\" to quit) 🧠 =====");
+        IO.println("💾 stored in " + Path.of(".memory", SESSION_ID + ".json").toAbsolutePath());
+        IO.println();
+
+        while (true) {
+            // Ask the user for a prompt.
+            var userPrompt = IO.readln("⌨️  Your prompt: ");
+            IO.println();
+
+            // Leave the loop on "exit", or on end of input (Ctrl+D).
+            if (userPrompt == null || userPrompt.equals("exit")) break;
+            if (userPrompt.isBlank()) continue;
+
+            // 9) Print the memory as it is BEFORE the call.
+            IO.println("===== 🧠 MEMORY (resent to the model with the prompt) 🧠 =====");
+            memoryStore.getMessages(SESSION_ID).forEach(IO::println);
+            IO.println();
+
+            // 10) Call the endpoint in streaming mode and print the answer token
+            // by token.
+            IO.println("===== 🤖 ANSWER (streaming) 🤖 =====");
+            assistant.chat(SESSION_ID, userPrompt)
+                    .subscribe().asStream()
+                    .forEach(IO::print);
+
+            // Newlines once the stream is complete.
+            IO.println();
+            IO.println();
+        }
+
+        // Print the final memory.
+        IO.println("===== 🧠 FINAL MEMORY (the whole conversation) 🧠 =====");
+        memoryStore.getMessages(SESSION_ID).forEach(IO::println);
+        IO.println();
+
+        // Dropping the conversation is now an explicit act, not a side effect of
+        // quitting:
+        //memoryStore.deleteMessages(SESSION_ID);
+        IO.println("🗑️  Delete " + Path.of(".memory", SESSION_ID + ".json")
+                + " to start a fresh conversation.");
+
+        return 0;
+    }
+}
+```
+
+Alors oui, il y a plus de code que dans la version LangChain4j seule, alors que Quarkus est censé nous simplifier la vie 😅.
+L'explication est simple : l'extension Quarkus gère la mémoire toute seule et, par défaut, la vide à la fin de la requête.
+Ce qui est un comportement souhaitable en mémoire volatile devient gênant quand la mémoire est un fichier : on le supprimerait à chaque arrêt 😱.
+Il faut donc reprendre la main sur la création de la mémoire.
+
+ - lignes 37 à 42 : l'_AIService_ avec l'identifiant de mémoire `@MemoryId`, rien ne change par rapport à l'article précédent
+ - lignes 45 à 89 : notre `FileChatMemoryStore`, le même que dans la version LangChain4j, mais déclaré comme bean CDI avec `@ApplicationScoped` pour que Quarkus l'utilise à la place de celui par défaut
+   - lignes 62 & 74 : là aussi la sérialisation / désérialisation est fournie par LangChain4j
+ - lignes 92 à 120 : un simple _wrapper_ autour de la mémoire dont la méthode `clear()` ne fait rien, c'est lui qui empêche Quarkus de supprimer le fichier en fin de requête
+ - lignes 123 à 141 : le `ChatMemoryProvider` qui crée la mémoire avec notre _memory store_, ici aussi c'est un bean CDI qui remplace celui par défaut de l'extension
+   - lignes 129 à 131 : la taille de la fenêtre est lue depuis la configuration de l'extension, avec `10` par défaut
+ - lignes 155 & 156 : on injecte le _memory store_ uniquement pour l'affichage de la mémoire
+ - lignes 192 à 194 : l'appel au chatbot avec l'identifiant de mémoire, comme précédemment
+ - ligne 208 : la suppression de la conversation devient un acte explicite, plus un effet de bord de la fin de la session 💡
+
+> ℹ️ les lignes 162 à 168 ne servent qu'à afficher la mémoire restaurée, elles ne sont pas nécessaires au fonctionnement.
+
+Pour voir le source complet de cet exemple, c'est [ici](https://github.com/philippart-s/java-ai-area-blog/blob/main/04_quarkus/_04_04_StreamingChatbotFileMemory.java) 📜.
+
+#### 📽️ Voyons ça en action !
+<video controls class="video-centered">
+  <source src="quarkus-file-memory.mov" type="video/quicktime">
+</video>
+
 # 🏁 Conclusion
 
 Si vous êtes arrivés jusque-là, merci de m'avoir lu et s'il y a des coquilles n'hésitez pas à me faire une [issue ou PR](https://github.com/philippart-s/blog) 😊.

@@ -881,6 +881,251 @@ Pour voir le source complet de cet exemple, c'est [ici](https://github.com/phili
   <source src="quarkus-file-memory.mov" type="video/quicktime">
 </video>
 
+### ☘️ Avec Spring AI
+
+Terminons notre tour des stacks avec [Spring AI](https://spring.io/projects/spring-ai).
+{|
+```java
+///usr/bin/env jbang "$0" "$@" ; exit $?
+//JAVA 26+
+//DEPS org.springframework.boot:spring-boot-dependencies:4.1.0@pom
+//DEPS org.springframework.ai:spring-ai-bom:2.0.0@pom
+//DEPS org.springframework.boot:spring-boot-starter:4.1.0
+//DEPS org.aspectj:aspectjweaver:1.9.25.1
+//DEPS org.springframework.ai:spring-ai-starter-model-openai:2.0.0
+//DEPS jakarta.servlet:jakarta.servlet-api:6.1.0
+//DEPS com.fasterxml.jackson.core:jackson-databind:2.21.4
+
+// 1) Include application.properties as a classpath resource so Spring reads it.
+//FILES application.properties
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
+import org.springframework.ai.chat.memory.ChatMemory;
+import org.springframework.ai.chat.memory.ChatMemoryRepository;
+import org.springframework.ai.chat.memory.MessageWindowChatMemory;
+import org.springframework.ai.chat.messages.AssistantMessage;
+import org.springframework.ai.chat.messages.Message;
+import org.springframework.ai.chat.messages.SystemMessage;
+import org.springframework.ai.chat.messages.UserMessage;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.SpringBootConfiguration;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.annotation.Bean;
+
+import java.io.IOException;
+import java.io.UncheckedIOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.List;
+import java.util.stream.Stream;
+
+// 2) What we store. 
+record StoredMessage(String type, String text) {}
+
+// 3) The persistent repository. 
+class FileChatMemoryRepository implements ChatMemoryRepository {
+
+    private final Path directory;
+    private final ObjectMapper mapper = new ObjectMapper();
+
+    FileChatMemoryRepository(Path directory) {
+        this.directory = directory;
+    }
+
+    private Path fileFor(String conversationId) {
+        return directory.resolve(conversationId + ".json");
+    }
+
+    // The method LangChain4j's store does not have. With one file per
+    // conversation, the answer is the directory listing.
+    @Override
+    public List<String> findConversationIds() {
+        if (!Files.isDirectory(directory)) {
+            return List.of();
+        }
+        try (Stream<Path> files = Files.list(directory)) {
+            return files.map(path -> path.getFileName().toString())
+                    .filter(name -> name.endsWith(".json"))
+                    .map(name -> name.substring(0, name.length() - ".json".length()))
+                    .toList();
+        } catch (IOException e) {
+            throw new UncheckedIOException("Cannot list the conversations", e);
+        }
+    }
+
+    // Called by the advisor before every request, to build the context sent to
+    // the model. An unknown conversation is not an error: it is an empty one.
+    @Override
+    public List<Message> findByConversationId(String conversationId) {
+        var file = fileFor(conversationId);
+        try {
+            if (!Files.exists(file) || Files.size(file) == 0) {
+                return List.of();
+            }
+            List<StoredMessage> stored = mapper.readValue(Files.readString(file),
+                new TypeReference<>() {
+                });
+            return stored.stream().map(FileChatMemoryRepository::toMessage).toList();
+        } catch (IOException e) {
+            throw new UncheckedIOException("Cannot read the conversation " + conversationId, e);
+        }
+    }
+
+    // Called by the advisor once the answer is complete, with the conversation
+    // already trimmed to the window size.
+    @Override
+    public void saveAll(String conversationId, List<Message> messages) {
+        try {
+            Files.createDirectories(directory);
+            var stored = messages.stream()
+                    .map(message -> new StoredMessage(message.getMessageType().name(),
+                            message.getText()))
+                    .toList();
+            Files.writeString(fileFor(conversationId), mapper.writerWithDefaultPrettyPrinter()
+                    .writeValueAsString(stored));
+        } catch (IOException e) {
+            throw new UncheckedIOException("Cannot write the conversation " + conversationId, e);
+        }
+    }
+
+    // Called only when the application asks for it.
+    @Override
+    public void deleteByConversationId(String conversationId) {
+        try {
+            Files.deleteIfExists(fileFor(conversationId));
+        } catch (IOException e) {
+            throw new UncheckedIOException("Cannot delete the conversation " + conversationId, e);
+        }
+    }
+
+    // Rebuilding the right implementation from the stored type. 
+    private static Message toMessage(StoredMessage stored) {
+        return switch (stored.type()) {
+            case "SYSTEM" -> new SystemMessage(stored.text());
+            case "USER" -> new UserMessage(stored.text());
+            case "ASSISTANT" -> new AssistantMessage(stored.text());
+            default -> throw new IllegalStateException("Unsupported message type: " + stored.type());
+        };
+    }
+}
+
+@SpringBootConfiguration
+@EnableAutoConfiguration
+public class _05_04_StreamingChatbotFileMemory {
+
+   private static final String CONVERSATION_ID = "cli-session";
+
+   private static final Path MEMORY_DIR = Path.of(".memory");
+
+    public static void main(String[] args) {
+        System.exit(SpringApplication.exit(
+                SpringApplication.run(_05_04_StreamingChatbotFileMemory.class, args)));
+    }
+
+    @Bean
+    CommandLineRunner run(ChatClient.Builder builder) {
+        return args -> {
+            // 4) The conversation memory. 
+            ChatMemoryRepository repository = new FileChatMemoryRepository(MEMORY_DIR);
+            ChatMemory chatMemory = MessageWindowChatMemory.builder()
+                    .chatMemoryRepository(repository)
+                    .maxMessages(10)
+                    .build();
+
+            // 5) Build the ChatClient with the memory advisor registered by default.
+            var chatClient = builder
+                    .defaultSystem("provide a concise answer")
+                    .defaultAdvisors(MessageChatMemoryAdvisor.builder(chatMemory).build())
+                    .build();
+
+            // 6) Nothing to restore: reading the memory already reads the file.
+            var restored = chatMemory.get(CONVERSATION_ID);
+            if (restored.isEmpty()) {
+                IO.println("===== 🧠 NO MEMORY YET, STARTING A NEW CONVERSATION 🧠 =====");
+            } else {
+                IO.println("===== 🧠 MEMORY RESTORED FROM DISK (" + restored.size() + " messages) 🧠 =====");
+                restored.forEach(IO::println);
+            }
+            IO.println();
+
+            IO.println("===== 🧠 CHATBOT WITH PERSISTENT MEMORY (type \"exit\" to quit) 🧠 =====");
+            IO.println("💾 stored in " + MEMORY_DIR.resolve(CONVERSATION_ID + ".json").toAbsolutePath());
+            IO.println("🗂️  conversations on disk: " + repository.findConversationIds());
+            IO.println();
+
+            while (true) {
+                // Ask the user for a prompt.
+                var userPrompt = IO.readln("⌨️  Your prompt: ");
+                IO.println();
+
+                // Leave the loop on "exit", or on end of input (Ctrl+D).
+                if (userPrompt == null || userPrompt.equals("exit")) break;
+                if (userPrompt.isBlank()) continue;
+
+                // 7) Print the memory as it is BEFORE the call.
+                IO.println("===== 🧠 MEMORY (resent to the model with the prompt) 🧠 =====");
+                chatMemory.get(CONVERSATION_ID).forEach(IO::println);
+                IO.println();
+
+                // 8) Call the endpoint in streaming mode and print the answer token
+                // by token. 
+                IO.println("===== 🤖 ANSWER (streaming) 🤖 =====");
+                chatClient.prompt()
+                        .user(userPrompt)
+                        .advisors(advisor -> advisor.param(ChatMemory.CONVERSATION_ID, CONVERSATION_ID))
+                        .stream()
+                        .content()
+                        .doOnNext(IO::print)
+                        .blockLast();
+
+                // Newlines once the stream is complete.
+                IO.println();
+                IO.println();
+            }
+
+            // Print the final memory: the whole conversation (up to the window
+            // size), as stored by the advisor. 
+            IO.println("===== 🧠 FINAL MEMORY (the whole conversation) 🧠 =====");
+            chatMemory.get(CONVERSATION_ID).forEach(IO::println);
+            IO.println();
+
+            // Dropping the conversation stays an explicit act.
+            //chatMemory.clear(CONVERSATION_ID);
+            IO.println("🗑️  Delete " + MEMORY_DIR.resolve(CONVERSATION_ID + ".json")
+                    + " to start a fresh conversation.");
+        };
+    }
+}
+```
+|}
+Le principe est le même qu'avec LangChain4j : on remplace le _repository_ en mémoire volatile par une implémentation de `ChatMemoryRepository` qui écrit dans un fichier, le reste du code ne bouge pas 😎.
+Petite différence tout de même : Spring AI ne fournit pas de sérialiseur `JSON` pour ses messages, il faut donc gérer soi-même la conversion, ici avec un simple _record_ et `Jackson`.
+
+ - ligne 39 : le _record_ qui représente un message dans le fichier, le type (`SYSTEM`, `USER`, `ASSISTANT`) et le texte
+ - lignes 42 à 126 : notre `FileChatMemoryRepository`, un fichier `JSON` par identifiant de conversation
+   - lignes 58 à 70 : la liste des conversations existantes, méthode qui n'existe pas dans le _store_ de LangChain4j, ici c'est simplement le contenu du répertoire
+   - lignes 75 à 88 : chargement de la conversation depuis le fichier, appelé par l'_advisor_ avant chaque requête
+   - lignes 93 à 105 : sauvegarde de la conversation dans le fichier, appelé par l'_advisor_ une fois la réponse complète
+   - lignes 109 à 115 : suppression du fichier quand la conversation se termine
+   - lignes 118 à 125 : reconstruction du bon type de message Spring AI à partir de ce qui est stocké
+ - lignes 145 à 149 : on branche notre _repository_ sur la mémoire, c'est la seule différence avec la version en mémoire volatile
+ - ligne 154 : on ajoute la mémoire à notre chatbot via l'_advisor_, comme précédemment
+ - ligne 191 : l'appel au chatbot avec l'identifiant de conversation
+ - ligne 209 : la suppression de la conversation reste un acte explicite 💡
+
+> ℹ️ les lignes 158 à 164 et 169 ne servent qu'à afficher la mémoire restaurée et les conversations présentes sur le disque, elles ne sont pas nécessaires au fonctionnement.
+
+Pour voir le source complet de cet exemple, c'est [ici](https://github.com/philippart-s/java-ai-area-blog/blob/main/05_spring/_05_04_StreamingChatbotFileMemory.java) 📜.
+
+#### 📽️ Voyons ça en action !
+<video controls class="video-centered">
+  <source src="spring-file-memory.mov" type="video/quicktime">
+</video>
+
 # 🏁 Conclusion
 
 Si vous êtes arrivés jusque-là, merci de m'avoir lu et s'il y a des coquilles n'hésitez pas à me faire une [issue ou PR](https://github.com/philippart-s/blog) 😊.

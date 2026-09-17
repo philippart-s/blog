@@ -1,6 +1,6 @@
 ---
 title: "☕️ Java à l'ère de l'IA 🤖 - partie 3 : le stockage de la mémoire"
-description: ""
+description: "All those moments will be lost in time, like tears in rain. ©Roy Batty"
 link: /2026-08-27-java-and-ai-part3
 image: cover.webp
 tags:
@@ -13,7 +13,13 @@ author: wildagsx
 🏴󠁧󠁢󠁥󠁮󠁧󠁿 You can find the English version of this article [here]({site.url}2026-08-03-java-and-ai-part2-en) 🏴󠁧󠁢󠁥󠁮󠁧󠁿.
 
 ## TL;DR
-> 
+> 🗃️ Troisième article de la série sur l'IA dans vos applications Java ☕️, suite directe de la partie sur la **mémoire** : cette fois on la fait **survivre à un redémarrage**.  
+> 📄 L'approche la plus simple pour comprendre : un fichier `JSON` par conversation, le format est déjà celui que l'on envoie au modèle.  
+> ☕️ Le même use case est implémenté du plus bas niveau au plus haut : Bash, Java pur, le SDK OpenAI, LangChain4j, Quarkus et Spring AI.  
+> 🔌 Avec les frameworks, il suffit d'implémenter une interface (`ChatMemoryStore` pour LangChain4j, `ChatMemoryRepository` pour Spring AI) et le reste du code ne bouge pas.  
+> ⚡️ Piège Quarkus : l'extension vide la mémoire en fin de requête, il faut reprendre la main pour ne pas supprimer le fichier à chaque arrêt.  
+> 🔭 L'approche fichier n'est pas _prod ready_, mais la logique est la même pour PostgreSQL, Redis, Cassandra ou Neo4j : des implémentations existent déjà dans chaque framework.  
+> 🐙 Tous les exemples utilisent [AI Endpoints](https://www.ovhcloud.com/en/public-cloud/ai-endpoints/) d'OVHcloud et sont disponibles [ici](https://github.com/philippart-s/java-ai-area-blog).
 
 <br/>
 

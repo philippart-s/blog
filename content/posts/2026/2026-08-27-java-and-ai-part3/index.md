@@ -10,7 +10,7 @@ tags:
 author: wildagsx
 ---
 
-🏴󠁧󠁢󠁥󠁮󠁧󠁿 You can find the English version of this article [here]({site.url}2026-08-03-java-and-ai-part2-en) 🏴󠁧󠁢󠁥󠁮󠁧󠁿.
+🏴󠁧󠁢󠁥󠁮󠁧󠁿 You can find the English version of this article [here]({site.url}2026-08-27-java-and-ai-part3-en) 🏴󠁧󠁢󠁥󠁮󠁧󠁿.
 
 ## TL;DR
 > 🗃️ Troisième article de la série sur l'IA dans vos applications Java ☕️, suite directe de la partie sur la **mémoire** : cette fois on la fait **survivre à un redémarrage**.  
@@ -34,7 +34,7 @@ L'objectif de cet article sera d'aller plus loin dans la partie mémoire : quell
 # 📄 Utiliser un fichier JSON
 
 C'est l'approche simple et naïve mais qui permet de survivre à un redémarrage du processus.
-Le format, `JSON`, permet d'éviter des conversions puisque, au final, cela va être envoyé dans ce format au endpoint.
+Le format, `JSON`, permet d'éviter des conversions puisque, au final, cela va être envoyé dans ce format à l'endpoint.
 
 ### #️⃣  Bash
 
@@ -152,7 +152,7 @@ echo "🗑️  Delete $MEMORY_FILE to start a fresh conversation."
  - lignes 21 à 25 : on initialise la mémoire avec le fichier (s'il est présent)
  - ligne 93 : sauvegarde de la mémoire dans le fichier
 
-Comme toujours cette approche est naïve mais permet de bien comprendre comment cela fonctionne et pourquoi c'est plus avantageux d'utiliser le format `JSON` 😎.
+Comme toujours, cette approche est naïve mais permet de bien comprendre comment cela fonctionne et pourquoi c'est plus avantageux d'utiliser le format `JSON` 😎.
 
 Pour voir le source complet de cet exemple, c'est [ici](https://github.com/philippart-s/java-ai-area-blog/blob/main/00_bash/00.04_StreamingChatbotFileMemory.sh) 📜.
 
@@ -300,11 +300,13 @@ void main() throws Exception {
 ```
 |}
 
-Comme pour les exemples précédents des autres articles l'approche Java pure ressemble beaucoup à celle en Bash. 
+Comme pour les exemples précédents des autres articles, l'approche Java pure ressemble beaucoup à celle en Bash.
 
  - lignes 20 à 23 : création du fichier `JSON` pour stocker la mémoire
  - lignes 36 & 37 : chargement de l'historique de la conversation
  - lignes 112 à 120 : sauvegarde des messages échangés
+
+Pour voir le source complet de cet exemple, c'est [ici](https://github.com/philippart-s/java-ai-area-blog/blob/main/01_pure_java/_01_04_StreamingChatbotFileMemory.java) 📜.
 
 #### 📽️ Voyons ça en action !
 <video controls class="video-centered">
@@ -434,15 +436,15 @@ void main() throws Exception {
 ```
 
 Bon, je ne suis pas sûr que l'on y gagne en simplicité.
-Principalement du fait que le SDK ne prévoit rien pour la peristence et que l'on la gère cela à la main pour ensuite réenvoyer tout l'historique 😨.
+Principalement du fait que le SDK ne prévoit rien pour la persistance et que l'on gère cela à la main pour ensuite renvoyer tout l'historique 😨.
 
- - lignes 23 à 25 : on init la mémoire fichier
- - ligne 38 : le `params bulder` reste la structure de stockage de la mémoire
+ - lignes 23 à 25 : on initialise la mémoire fichier
+ - ligne 38 : le `params builder` reste la structure de stockage de la mémoire
  - lignes 42 à 55 : chargement de la mémoire (si elle existe), grâce à `Jackson` la sérialisation / désérialisation est dans le bon format
- - lignes 61 à 94 : toujours la même boucle pour interragir avec le modèle
+ - lignes 61 à 94 : toujours la même boucle pour interagir avec le modèle
  - lignes 97 à 107 : ajout des messages dans la mémoire et sauvegarde dans le fichier
 
-Pour voir le source complet de cet exemple, c'est [ici](https://github.com/philippart-s/java-ai-area-blog/blob/main/02_sdk_java/_02_04_StreamingChatbotFileMemory) 📜.
+Pour voir le source complet de cet exemple, c'est [ici](https://github.com/philippart-s/java-ai-area-blog/blob/main/02_sdk_java/_02_04_StreamingChatbotFileMemory.java) 📜.
 
 #### 📽️ Voyons ça en action !
 <video controls class="video-centered">
@@ -451,7 +453,7 @@ Pour voir le source complet de cet exemple, c'est [ici](https://github.com/phili
 
 ### 🦜 LangChain4j
 
-Voyons comment [LangChain4j](https://docs.langchain4j.dev/intro/) nous permet de gérer une mémoire persister dans un fichier.
+Voyons comment [LangChain4j](https://docs.langchain4j.dev/intro/) nous permet de gérer une mémoire persistée dans un fichier.
 
 ```java
 ///usr/bin/env jbang "$0" "$@" ; exit $?
@@ -624,9 +626,9 @@ void main() {
 Cette fois, on retrouve le confort de LangChain4j : la persistance n'est plus dans la boucle de conversation mais dans une implémentation de `ChatMemoryStore` que le framework appelle pour nous 😎.
 On n'économise pas forcément beaucoup de lignes car on a l'implémentation de notre `FileChatMemoryStore` (qui dans la vraie vie serait dans une autre classe) et du debug assez présent.
 
- - lignes 29 à 75 : notre `FileChatMemoryStore`, un fichier `JSON` par identifiant de mémoire (⚠️ pour simplifier le code je n'utilise pas l'identifant par la suite ⚠️)
+ - lignes 29 à 75 : notre `FileChatMemoryStore`, un fichier `JSON` par identifiant de mémoire (⚠️ pour simplifier le code je n'utilise pas l'identifiant par la suite ⚠️)
    - lignes 42 à 53 : chargement de la mémoire depuis le fichier, appelé par LangChain4j avant chaque requête
-   - lignes 56 à 64 : sauvegarde de la mémoire dans le fichier, appelé par LangChain4j une fois la réponse complète
+   - lignes 56 à 64 : sauvegarde de la mémoire dans le fichier, appelée par LangChain4j une fois la réponse complète
    - lignes 67 à 74 : suppression du fichier quand la conversation se termine
    - lignes 49 & 60 : la sérialisation / désérialisation des messages est fournie par LangChain4j via `ChatMessageSerializer` et `ChatMessageDeserializer`
  - lignes 97 à 102 : on branche notre _memory store_ sur la mémoire, c'est la seule différence avec la version en mémoire volatile
@@ -876,7 +878,7 @@ Il faut donc reprendre la main sur la création de la mémoire.
    - lignes 129 à 131 : la taille de la fenêtre est lue depuis la configuration de l'extension, avec `10` par défaut
  - lignes 155 & 156 : on injecte le _memory store_ uniquement pour l'affichage de la mémoire
  - lignes 192 à 194 : l'appel au chatbot avec l'identifiant de mémoire, comme précédemment
- - ligne 208 : la suppression de la conversation devient un acte explicite, plus un effet de bord de la fin de la session 💡
+ - ligne 208 : la suppression de la conversation devient un acte explicite, et non plus un effet de bord de la fin de la session 💡
 
 > ℹ️ les lignes 162 à 168 ne servent qu'à afficher la mémoire restaurée, elles ne sont pas nécessaires au fonctionnement.
 
@@ -1115,7 +1117,7 @@ Petite différence tout de même : Spring AI ne fournit pas de sérialiseur `JSO
  - lignes 42 à 126 : notre `FileChatMemoryRepository`, un fichier `JSON` par identifiant de conversation
    - lignes 58 à 70 : la liste des conversations existantes, méthode qui n'existe pas dans le _store_ de LangChain4j, ici c'est simplement le contenu du répertoire
    - lignes 75 à 88 : chargement de la conversation depuis le fichier, appelé par l'_advisor_ avant chaque requête
-   - lignes 93 à 105 : sauvegarde de la conversation dans le fichier, appelé par l'_advisor_ une fois la réponse complète
+   - lignes 93 à 105 : sauvegarde de la conversation dans le fichier, appelée par l'_advisor_ une fois la réponse complète
    - lignes 109 à 115 : suppression du fichier quand la conversation se termine
    - lignes 118 à 125 : reconstruction du bon type de message Spring AI à partir de ce qui est stocké
  - lignes 145 à 149 : on branche notre _repository_ sur la mémoire, c'est la seule différence avec la version en mémoire volatile
@@ -1140,13 +1142,13 @@ C'est utile pour vous expliquer comment cela fonctionne, mais ce n'est pas vraim
 Au final, la logique sera la même pour d'autres types de stockage, mais en plus _sophistiqué_ : base de données relationnelle ou NoSQL, stockage cloud ou _key value_ par exemple.
 Pour cela, il y aura deux approches : soit il y a une implémentation existante fournie par la librairie, soit il faudra la construire soi-même.
 
-Pour les implémentations existantes, je vous laisse aller voir sur la doc de chaque framework, mais par exemple, on va retrouver du POstgrSQL, Cassendra, Reddis, Neo4j, etc.
-Vous retrouvez les détails ici :
+Pour les implémentations existantes, je vous laisse aller voir sur la doc de chaque framework, mais par exemple, on va retrouver du PostgreSQL, Cassandra, Redis, Neo4j, etc.
+Vous retrouverez les détails ici :
 - [LangChain4j](https://docs.langchain4j.dev/integrations/chat-memory-stores/)
 - [Quarkus LangChain4j](https://quarkus.io/extensions/?search-regex=memory%20store)
 - [Spring AI](https://docs.spring.io/spring-ai/reference/api/chat-memory.html#_memory_storage)
 
-Et dans le cas où vous ne trouvez pas votre bonheur, comme vous l'avez vu il suffit, la plus part du temps, d'implémenter une interface et le tour est joué 😎.
+Et dans le cas où vous ne trouvez pas votre bonheur, comme vous l'avez vu, il suffit la plupart du temps d'implémenter une interface et le tour est joué 😎.
 
 
 # 🏁 Conclusion
@@ -1154,7 +1156,7 @@ Et dans le cas où vous ne trouvez pas votre bonheur, comme vous l'avez vu il su
 Voilà pour cette décidément trop longue partie sur la gestion de la mémoire pour un chatbot.
 Mais il me semblait utile de prendre le temps de vous montrer comment faire pour vous rapprocher de ce que vous avez habituellement avec votre assistant préféré.
 
-Le prochain article sera certainement consacré à autre sujet épineux : le RAG (pour _Retrieval Augmented Generation_).
+Le prochain article sera certainement consacré à un autre sujet épineux : le RAG (pour _Retrieval Augmented Generation_).
 Mais ça, c'est une autre histoire.
 
 Si vous êtes arrivés jusque-là, merci de m'avoir lu et s'il y a des coquilles n'hésitez pas à me faire une [issue ou PR](https://github.com/philippart-s/blog) 😊.

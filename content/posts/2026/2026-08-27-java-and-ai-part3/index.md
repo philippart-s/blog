@@ -1126,6 +1126,29 @@ Pour voir le source complet de cet exemple, c'est [ici](https://github.com/phili
   <source src="spring-file-memory.mov" type="video/quicktime">
 </video>
 
+# 🔭 Et après ?
+
+On ne va pas se mentir, le stockage dans un fichier n'est pas des plus pertinents.
+C'est utile pour vous expliquer comment cela fonctionne, mais ce n'est pas vraiment _prod ready_.
+
+Au final, la logique sera la même pour d'autres types de stockage, mais en plus _sophistiqué_ : base de données relationnelle ou NoSQL, stockage cloud ou _key value_ par exemple.
+Pour cela, il y aura deux approches : soit il y a une implémentation existante fournie par la librairie, soit il faudra la construire soi-même.
+
+Pour les implémentations existantes, je vous laisse aller voir sur la doc de chaque framework, mais par exemple, on va retrouver du POstgrSQL, Cassendra, Reddis, Neo4j, etc.
+Vous retrouvez les détails ici :
+- [LangChain4j](https://docs.langchain4j.dev/integrations/chat-memory-stores/)
+- [Quarkus LangChain4j](https://quarkus.io/extensions/?search-regex=memory%20store)
+- [Spring AI](https://docs.spring.io/spring-ai/reference/api/chat-memory.html#_memory_storage)
+
+Et dans le cas où vous ne trouvez pas votre bonheur, comme vous l'avez vu il suffit, la plus part du temps, d'implémenter une interface et le tour est joué 😎.
+
+
 # 🏁 Conclusion
+
+Voilà pour cette décidément trop longue partie sur la gestion de la mémoire pour un chatbot.
+Mais il me semblait utile de prendre le temps de vous montrer comment faire pour vous rapprocher de ce que vous avez habituellement avec votre assistant préféré.
+
+Le prochain article sera certainement consacré à autre sujet épineux : le RAG (pour _Retrieval Augmented Generation_).
+Mais ça, c'est une autre histoire.
 
 Si vous êtes arrivés jusque-là, merci de m'avoir lu et s'il y a des coquilles n'hésitez pas à me faire une [issue ou PR](https://github.com/philippart-s/blog) 😊.

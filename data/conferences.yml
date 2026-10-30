@@ -1,3 +1,92 @@
+- title: 🎤 Talks donnés à Cloud Nord 🎤
+  link: /talks/cloud-nord-2026/
+  description: Liste de talks donnés lors de la conférence Cloud Nord
+  image: conferences/cloud-nord-2026.png
+  author: wilda
+  year: '2026'
+  date: '2026-10-30'
+  name: Cloud Nord
+  postDate: 2026-10-30
+  talksUrl: cloud-nord-2026
+  displayDate: 30 octobre 2026
+  excerpt: Talks donnés lors de Cloud Nord 2026
+  categories: Conférences
+  talks:
+    - title: 'Développer avec l''IA : et si c''était aussi simple qu''ajouter une librairie ?'
+      id: ai-lib-workshop
+      location: BDX I/O (🇫🇷)
+      language: France
+      date: Vendredi 30 octobre 2026
+      time: 15h45 - 17h45
+      duration: 2h
+      pitch: |
+        Intégrer de l'intelligence artificielle (IA) dans nos développements peut nous paraître plus complexe que de les utiliser dans notre quotidien.
+        
+        Dois-je apprendre un nouveau langage ou une nouvelle stack ?
+        Durant ce workshop nous vous proposons de vous donner tous les éléments pour intégrer l'IA sans quitter votre langage de prédilection : Java 😍. Ce sera l'occasion de découvrir les Frameworks du moments : LangChain4j, Quarkus, ...
+        
+        Nous vous invitons à découvrir toutes les facettes d'un chatbot avec l'IA générative (customiser un prompt, rajouter vos données (RAG), appeler des outils locaux ou distants (MCP) et créer des agents) mais aussi parce que l’IA ne se limite pas aux chatbots : faire de la transcription, créer de l'audio ou même faire un traducteur.
+        
+        À la suite de ce talk vous repartirez avec une boîte à outils vous permettant d'intégrer simplement la puissance des modèles d'IA au sein de vos développements de tous les jours.
+        Et, toujours pour vous simplifier la vie, venez juste avec votre ordinateur et un navigateur Internet, on se charge du reste pour vous construire un environnement de développement aux petits oignons grâce aux CDE.
+      source: https://github.com/devrel-workshop/ai-as-lib-workshop
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vRIWh5yRWFtoFHKSkV9BpwaJXOQCzB4YvX9mu7NazcuOPKpqWPT6PNRFGXozNyClgi6GI_cFeeBOAhe/pub
+      replay:
+
+- title: 🎤 Talks donnés à BDX I/0 🎤
+  link: /talks/bdx-io-2026/
+  description: Liste de talks donnés lors de la conférence BDX I/0
+  image: conferences/bdx-io-2026.png
+  author: wilda
+  year: '2026'
+  date: '2026-10-29'
+  name: BDX I/O
+  postDate: 2026-10-30
+  talksUrl: bdx-io-2026
+  displayDate: 29 et 30 octobre 2026
+  excerpt: Talks donnés lors de BDX I/O 2026
+  categories: Conférences
+  talks:
+    - title: 🤖 Apprendre à notre IA à ... apprendre 🧠
+      id: learn-ai
+      location: BDX I/O (🇫🇷)
+      language: France
+      date: Jeudi 29 octobre 2026
+      time: 10h20 - 12h00
+      duration: 1h40
+      pitch: |
+        RAG, MCP, tooling, function calling, agents, fine tuning, training, ...
+        Que de termes barbares mais qui ont tous le même objectif : faire en sorte que le modèle d'intelligence artificielle que vous utilisez réponde correctement à vos questions et attentes 😅.
+        Et pour ça il va falloir ajouter de la connaissance, des données (privée ou publiques, ...).
+        
+        Durant ce talk je vous propose d'y voir un peu plus clair dans cette jungle des acronymes puis, fort de connaître les différences, vous proposer comment l'implémenter en tant que développeuses et développeurs.
+        
+        Chaque approche a ses spécificités, ses avantages et ses inconvénients.
+        A la fin de ce talk, non seulement vous saurez choisir la bonne approche, mais aussi ajouter dans vos développements quotidiens la dose d'IA utile.
+      source: https://github.com/philippart-s/ai-learn
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vSC_EgTnXN9XfGi9QfdSVKydY7ldhUHiz4XoYZyV3G-LsPf46NUF-yXp4uWbAqWO6pip16Rua6hTJIV/pub
+      replay:
+    - title: 'Développer avec l''IA : et si c''était aussi simple qu''ajouter une librairie ?'
+      id: ai-lib-workshop
+      location: BDX I/O (🇫🇷)
+      language: France
+      date: Jeudi 29 octobre 2026
+      time: 15h15 - 16h55
+      duration: 1h40
+      pitch: |
+        Intégrer de l'intelligence artificielle (IA) dans nos développements peut nous paraître plus complexe que de les utiliser dans notre quotidien.
+        
+        Dois-je apprendre un nouveau langage ou une nouvelle stack ?
+        Durant ce workshop nous vous proposons de vous donner tous les éléments pour intégrer l'IA sans quitter votre langage de prédilection : Java 😍. Ce sera l'occasion de découvrir les Frameworks du moments : LangChain4j, Quarkus, ...
+        
+        Nous vous invitons à découvrir toutes les facettes d'un chatbot avec l'IA générative (customiser un prompt, rajouter vos données (RAG), appeler des outils locaux ou distants (MCP) et créer des agents) mais aussi parce que l’IA ne se limite pas aux chatbots : faire de la transcription, créer de l'audio ou même faire un traducteur.
+        
+        À la suite de ce talk vous repartirez avec une boîte à outils vous permettant d'intégrer simplement la puissance des modèles d'IA au sein de vos développements de tous les jours.
+        Et, toujours pour vous simplifier la vie, venez juste avec votre ordinateur et un navigateur Internet, on se charge du reste pour vous construire un environnement de développement aux petits oignons grâce aux CDE.
+      source: https://github.com/devrel-workshop/ai-as-lib-workshop
+      slides: https://docs.google.com/presentation/d/e/2PACX-1vTZjtZ1wL9mwtk3tXjCGBn3_fvcgS7DMuQWuG1p5qMSk7mH5Ouprw10GGkNMoWIdLCcFmtRpkA4GPe5/pub
+      replay:
+
 - title: 🎤 Talks donnés à Devoxx Belgium 🎤
   link: /talks/devoxx-belgium-2026/
   description: Liste de talks donnés lors de la conférence Devoxx Belgium

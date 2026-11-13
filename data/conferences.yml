@@ -1,6 +1,43 @@
+- title: 🎤 Talks donnés à J-Fall 🎤
+  link: /talks/j-fall-2026/
+  description: Liste des talks donnés lors de la conférence J-Fall
+  image: conferences/j-fall-2026.png
+  author: wilda
+  year: '2026'
+  date: '2026-11-12'
+  name: J-Fall
+  postDate: 2026-11-12
+  talksUrl: j-fall-2026
+  displayDate: 12 novembre 2026
+  excerpt: Talks donnés lors de J-Fall 2026
+  categories: Conférences
+  talks:
+    - title: '👩‍💻 Developing with AI: What if it were as simple as adding a library? 🧑‍💻'
+      id: ai-lib-workshop
+      location: J-Fall (🇳🇱)
+      language: English
+      date: Jeudi 12 novembre 2026
+      time: 10h35 - 12h20
+      duration: 1h55
+      pitch: |
+        Integrating Artificial Intelligence (AI) into our applications can seem much more complex than simply using AI tools in our daily lives.
+
+        Do I need to learn a new language or adopt an entirely new technology stack?
+
+        In this workshop, we'll give you everything you need to integrate AI into your applications without leaving your favorite language: Java 😍. It will also be an opportunity to discover some of today's most popular frameworks, including LangChain4j, Quarkus, and more.
+
+        We'll explore every aspect of building applications with generative AI: customizing prompts, enriching models with your own data (RAG), calling local or remote tools (MCP), and creating agents.
+
+        By the end of this workshop, you'll leave with a practical toolbox that will enable you to easily integrate the power of AI models into your everyday development projects.
+
+        And to make things even easier, just bring your laptop and a web browser, we'll take care of the rest and provide a fully configured development environment through EasyLab 😍.
+      source: https://github.com/devrel-workshop/ai-as-lib-workshop
+      slides: https://ovh.to/jfall-2026-slides
+      replay:
+
 - title: 🎤 Talks donnés à Cloud Nord 🎤
   link: /talks/cloud-nord-2026/
-  description: Liste de talks donnés lors de la conférence Cloud Nord
+  description: Liste des talks donnés lors de la conférence Cloud Nord
   image: conferences/cloud-nord-2026.png
   author: wilda
   year: '2026'

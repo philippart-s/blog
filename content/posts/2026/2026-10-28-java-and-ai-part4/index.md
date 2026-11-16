@@ -11,6 +11,8 @@ tags:
 author: wildagsx
 ---
 
+🏴󠁧󠁢󠁥󠁮󠁧󠁿 You can find the English version of this article [here]({site.url}2026-10-28-java-and-ai-part4-en) 🏴󠁧󠁢󠁥󠁮󠁧󠁿.
+
 ## TL;DR
 > 📚 Quatrième article de la série sur l'IA dans vos applications Java ☕️, cette fois consacré au **RAG** (_Retrieval Augmented Generation_).  
 > 🤷 Un modèle ne connaît que ses données d'entraînement : vos documents internes, le programme de votre conférence ou votre doc projet, il ne les a jamais vus.  
@@ -652,7 +654,7 @@ Comme son nom l'indique, son but est de rendre le RAG simple, voire invisible.
 // only thing left here is the question. Everything is in rag.properties.
 //
 // Docs: https://www.ovhcloud.com/en/public-cloud/ai-endpoints/catalog/gpt-oss-120b/
-// Docs: https://docs.quarkiverse.io/quarkus-langchain4j/dev/easy-rag.html
+// Docs: https://docs.quarkiverse.io/quarkus-langchain4j/dev/rag-easy-rag.html
 
 // Mounted as application.properties, so the other examples keep theirs.
 //FILES application.properties=rag.properties

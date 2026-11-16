@@ -2,7 +2,7 @@
 title: "☕️ Java à l'ère de l'IA 🤖 - partie 4 : le RAG simple"
 description: "I've seen things you people wouldn't believe. ©Roy Batty"
 link: /2026-10-28-java-and-ai-part4
-image: cover.webp
+image: cover.jpeg
 tags:
   - Java
   - IA

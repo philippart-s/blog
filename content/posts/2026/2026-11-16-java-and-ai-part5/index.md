@@ -173,11 +173,13 @@ QUESTION="What is the capacity of the Nautilus room?"
 # The function the model is allowed to ask for. A random number stands in for a
 # real lookup: the model cannot guess it, so the answer has to come from here.
 get_room_capacity() {
+  local capacity=$(( RANDOM % 451 + 50 ))
+
   # Printed on stderr: stdout is the result handed back to the model.
   echo "🐞 get_room_capacity called for room \"$1\", returning capacity $capacity" >&2
   echo >&2
 
-  jq -nc --arg room "$1" --argjson capacity $(( RANDOM % 451 + 50 )) \
+  jq -nc --arg room "$1" --argjson capacity "$capacity" \
     '{ room: $room, capacity: $capacity }'
 }
 
@@ -231,15 +233,31 @@ echo
 # 2) The model answered with a tool call instead of a text: a function name and
 #    its arguments, themselves a JSON document carried in a string.
 ASSISTANT_MESSAGE=$(echo "$RESPONSE" | jq '.choices[0].message')
-TOOL_CALL_ID=$(echo "$ASSISTANT_MESSAGE" | jq -r '.tool_calls[0].id')
-FUNCTION_NAME=$(echo "$ASSISTANT_MESSAGE" | jq -r '.tool_calls[0].function.name')
-ARGUMENTS=$(echo "$ASSISTANT_MESSAGE" | jq -r '.tool_calls[0].function.arguments')
+TOOL_CALL=$(echo "$ASSISTANT_MESSAGE" | jq -c '.tool_calls[0] // empty')
+
+# Asking for a function is a choice of the model, not an obligation: without a
+# tool call its message already holds the answer and there is nothing to run.
+if [ -z "$TOOL_CALL" ]; then
+  echo "===== 🤖 ANSWER 🤖 ====="
+  echo "$ASSISTANT_MESSAGE" | jq -r '.content'
+  exit 0
+fi
+
+TOOL_CALL_ID=$(echo "$TOOL_CALL" | jq -r '.id')
+FUNCTION_NAME=$(echo "$TOOL_CALL" | jq -r '.function.name')
+ARGUMENTS=$(echo "$TOOL_CALL" | jq -r '.function.arguments')
 
 echo "===== 🛠️ TOOL CALL (requested by the model) 🛠️ ====="
 echo "$FUNCTION_NAME $ARGUMENTS"
 echo
 
-# 3) Run the function. The model only named it, calling it is up to the script.
+# 3) Run the function. The model only named it, calling it is up to the script,
+#    which dispatches on the name instead of trusting it to be the right one.
+if [ "$FUNCTION_NAME" != "get_room_capacity" ]; then
+  echo "Unexpected function requested by the model: $FUNCTION_NAME" >&2
+  exit 1
+fi
+
 ROOM=$(echo "$ARGUMENTS" | jq -r '.room')
 RESULT=$(get_room_capacity "$ROOM")
 
@@ -266,14 +284,17 @@ echo "$RESPONSE" | jq -r '.choices[0].message.content'
 ```
 |}
 
- - lignes 22 à 29 : notre fonction, qui renvoie un nombre de places aléatoire
- - lignes 33 à 48 : la description de la fonction, celle vue plus haut
- - lignes 56 à 65 : l'appel au modèle, qui envoie à chaque fois la conversation **et** la liste des fonctions (`tools`)
- - ligne 72 : le premier appel
- - lignes 80 à 83 : on récupère la demande d'appel, son identifiant, le nom de la fonction et ses arguments
- - lignes 90 et 91 : on parse les arguments et on exécute la fonction, c'est le script qui appelle la fonction, pas le modèle 😉
- - lignes 99 à 103 : on ajoute à la conversation le message de l'assistant et le résultat, reliés par le `tool_call_id`
- - ligne 109 : le deuxième appel, qui renvoie enfin la réponse
+ - lignes 22 à 31 : notre fonction, qui renvoie un nombre de places aléatoire. Elle affiche aussi une trace 🐞 sur la sortie d'erreur, pour bien voir quand elle est appelée : la sortie standard, elle, est le résultat renvoyé au modèle
+ - lignes 35 à 50 : la description de la fonction, celle vue plus haut
+ - lignes 58 à 67 : l'appel au modèle, qui envoie à chaque fois la conversation **et** la liste des fonctions (`tools`)
+ - ligne 74 : le premier appel
+ - lignes 82 et 83 : on récupère la demande d'appel dans la réponse
+ - lignes 87 à 91 : si le modèle n'a pas demandé d'appel, sa réponse est déjà là et il n'y a rien à exécuter. Appeler une fonction est un choix du modèle, pas une obligation
+ - lignes 93 à 95 : l'identifiant de la demande, le nom de la fonction et ses arguments
+ - lignes 103 à 106 : on vérifie le nom de la fonction demandée plutôt que de faire confiance au modèle
+ - lignes 108 et 109 : on parse les arguments et on exécute la fonction, c'est le script qui appelle la fonction, pas le modèle 😉
+ - lignes 117 à 121 : on ajoute à la conversation le message de l'assistant et le résultat, reliés par le `tool_call_id`
+ - ligne 127 : le deuxième appel, qui renvoie enfin la réponse
 
 Et voici le résultat :
 
@@ -396,7 +417,7 @@ The Nautilus room can accommodate **430** people.
 
 430 places, tirées au hasard par notre fonction, et reprises telles quelles par le modèle 🎉.
 
-> ⚠️ Pour garder l'exemple lisible, le script part du principe que le modèle demande exactement un appel de fonction. Dans la vraie vie, il peut ne pas en demander (s'il sait répondre seul), en demander plusieurs d'un coup, ou en redemander un après avoir vu le résultat du premier. Il faut alors boucler jusqu'à obtenir un `finish_reason` à `stop`.
+> ⚠️ Pour garder l'exemple lisible, le script ne traite que la première demande d'appel. Dans la vraie vie, le modèle peut en demander plusieurs d'un coup, ou en redemander une après avoir vu le résultat de la première. Il faut alors boucler jusqu'à obtenir un `finish_reason` à `stop`.
 
 Pour voir le source complet de cet exemple, c'est [ici](https://github.com/philippart-s/java-ai-area-blog/blob/main/00_bash/00.05_FunctionCalling.sh) 📜.
 
@@ -446,9 +467,14 @@ final HttpClient CLIENT = HttpClient.newHttpClient();
 // The function the model is allowed to ask for. A random number stands in for a
 // real lookup: the model cannot guess it, so the answer has to come from here.
 String getRoomCapacity(String room) {
+    var capacity = ThreadLocalRandom.current().nextInt(50, 501);
+
+    IO.println("🐞 getRoomCapacity called for room \"" + room + "\", returning capacity " + capacity);
+    IO.println();
+
     return MAPPER.createObjectNode()
             .put("room", room)
-            .put("capacity", ThreadLocalRandom.current().nextInt(50, 501))
+            .put("capacity", capacity)
             .toString();
 }
 
@@ -502,6 +528,15 @@ void main() throws Exception {
     //    its arguments, themselves a JSON document carried in a string.
     JsonNode assistantMessage = response.at("/choices/0/message");
     JsonNode toolCall = assistantMessage.at("/tool_calls/0");
+
+    // Asking for a function is a choice of the model, not an obligation: without a
+    // tool call its message already holds the answer and there is nothing to run.
+    if (toolCall.isMissingNode()) {
+        IO.println("===== 🤖 ANSWER 🤖 =====");
+        IO.println(assistantMessage.at("/content").asText());
+        return;
+    }
+
     var functionName = toolCall.at("/function/name").asText();
     var arguments = toolCall.at("/function/arguments").asText();
 
@@ -509,7 +544,13 @@ void main() throws Exception {
     IO.println(functionName + " " + arguments);
     IO.println();
 
-    // 3) Run the function. The model only named it, calling it is up to the program.
+    // 3) Run the function. The model only named it, calling it is up to the program,
+    //    which dispatches on the name instead of trusting it to be the right one.
+    if (!"get_room_capacity".equals(functionName)) {
+        IO.println("Unexpected function requested by the model: " + functionName);
+        return;
+    }
+
     var room = MAPPER.readTree(arguments).get("room").asText();
     var result = getRoomCapacity(room);
 
@@ -546,14 +587,15 @@ JsonNode post(String body) throws Exception {
 ```
 |}
 
- - lignes 33 à 38 : notre fonction, une simple méthode Java
- - lignes 45 à 61 : la description de la fonction, écrite à la main en `JSON`
- - ligne 73 : les fonctions sont ajoutées au corps de la requête, qui sera envoyé deux fois
- - ligne 80 : le premier appel
- - lignes 88 à 91 : la lecture de la demande d'appel dans la réponse
- - lignes 98 et 99 : le parsing des arguments et l'exécution de la fonction
- - lignes 107 à 111 : l'ajout du message de l'assistant et du résultat dans la conversation
- - ligne 117 : le deuxième appel
+ - lignes 33 à 43 : notre fonction, une simple méthode Java, avec sa trace 🐞
+ - lignes 50 à 66 : la description de la fonction, écrite à la main en `JSON`
+ - ligne 78 : les fonctions sont ajoutées au corps de la requête, qui sera envoyé deux fois
+ - ligne 85 : le premier appel
+ - lignes 93 à 105 : la lecture de la demande d'appel dans la réponse, avec le cas où le modèle répond directement (lignes 98 à 102)
+ - lignes 113 à 116 : la vérification du nom de la fonction demandée
+ - lignes 118 et 119 : le parsing des arguments et l'exécution de la fonction
+ - lignes 127 à 131 : l'ajout du message de l'assistant et du résultat dans la conversation
+ - ligne 137 : le deuxième appel
 
 C'est exactement la même chose qu'en Bash, avec le même problème : rien ne relie la méthode `getRoomCapacity` et sa description `JSON`.
 Si on ajoute un paramètre à l'une sans modifier l'autre, c'est au moment de l'exécution qu'on s'en rendra compte 💥.
@@ -564,13 +606,15 @@ Si on ajoute un paramètre à l'une sans modifier l'autre, c'est au moment de l'
 ===== 🛠️ TOOL CALL (requested by the model) 🛠️ =====
 get_room_capacity {"room": "Nautilus"}
 
+🐞 getRoomCapacity called for room "Nautilus", returning capacity 367
+
 ===== 🛠️ TOOL RESULT (sent back to the model) 🛠️ =====
-{"room":"Nautilus","capacity":79}
+{"room":"Nautilus","capacity":367}
 
 ...
 
 ===== 🤖 ANSWER 🤖 =====
-The Nautilus room can accommodate **79 people**.
+The Nautilus room can accommodate **367 people**.
 ```
 
 Pour voir le source complet de cet exemple, c'est [ici](https://github.com/philippart-s/java-ai-area-blog/blob/main/01_pure_java/_01_06_FunctionCalling.java) 📜.
@@ -617,7 +661,12 @@ import com.openai.models.chat.completions.ChatCompletionToolMessageParam;
 @JsonClassDescription("Returns the number of seats of a conference room")
 record GetRoomCapacity(@JsonPropertyDescription("Name of the room, e.g. Coral") String room) {
     RoomCapacity call() {
-        return new RoomCapacity(room, ThreadLocalRandom.current().nextInt(50, 501));
+        var capacity = ThreadLocalRandom.current().nextInt(50, 501);
+
+        IO.println("🐞 GetRoomCapacity called for room \"" + room + "\", returning capacity " + capacity);
+        IO.println();
+
+        return new RoomCapacity(room, capacity);
     }
 }
 
@@ -662,14 +711,30 @@ void main() {
     // 2) The model answered with a tool call instead of a text: a function name and
     //    its arguments, themselves a JSON document carried in a string.
     ChatCompletionMessage assistantMessage = response.choices().getFirst().message();
-    var toolCall = assistantMessage.toolCalls().orElseThrow().getFirst().asFunction();
+    var toolCalls = assistantMessage.toolCalls().orElse(List.of());
+
+    // Asking for a function is a choice of the model, not an obligation: without a
+    // tool call its message already holds the answer and there is nothing to run.
+    if (toolCalls.isEmpty()) {
+        IO.println("===== 🤖 ANSWER 🤖 =====");
+        IO.println(assistantMessage.content().orElse(""));
+        return;
+    }
+
+    var toolCall = toolCalls.getFirst().asFunction();
 
     IO.println("===== 🛠️ TOOL CALL (requested by the model) 🛠️ =====");
     IO.println(toolCall.function().name() + " " + toolCall.function().arguments());
     IO.println();
 
-    // 3) Run the function. The model only named it, calling it is up to the program.
+    // 3) Run the function. The model only named it, calling it is up to the program,
+    //    which dispatches on the name instead of trusting it to be the right one.
     //    arguments(Class) parses the JSON arguments into the record.
+    if (!"get_room_capacity".equals(toolCall.function().name())) {
+        IO.println("Unexpected function requested by the model: " + toolCall.function().name());
+        return;
+    }
+
     var result = toolCall.function().arguments(GetRoomCapacity.class).call();
 
     var toolMessage = ChatCompletionToolMessageParam.builder()
@@ -702,14 +767,15 @@ void main() {
 ```
 |}
 
- - lignes 28 à 34 : la fonction est un `record` : ses annotations Jackson donnent le nom (`@JsonTypeName`), la description (`@JsonClassDescription`) et la description du paramètre (`@JsonPropertyDescription`), sa méthode `call()` contient le code
- - ligne 59 : `addTool` génère le JSON Schema de la fonction à partir du `record`
- - ligne 68 : le premier appel
- - lignes 76 et 77 : la lecture de la demande d'appel
- - ligne 85 : `arguments(GetRoomCapacity.class)` transforme directement les arguments `JSON` en `record`, plus besoin de les parser à la main
- - lignes 87 à 90 : le message `tool`, avec le résultat sérialisé en `JSON` par le SDK
- - lignes 98 à 100 : l'ajout des deux messages dans la conversation
- - ligne 107 : le deuxième appel
+ - lignes 28 à 39 : la fonction est un `record` : ses annotations Jackson donnent le nom (`@JsonTypeName`), la description (`@JsonClassDescription`) et la description du paramètre (`@JsonPropertyDescription`), sa méthode `call()` contient le code (et la trace 🐞)
+ - ligne 64 : `addTool` génère le JSON Schema de la fonction à partir du `record`
+ - ligne 73 : le premier appel
+ - lignes 81 à 92 : la lecture de la demande d'appel, avec le cas où le modèle répond directement (lignes 86 à 90)
+ - lignes 101 à 104 : la vérification du nom de la fonction demandée
+ - ligne 106 : `arguments(GetRoomCapacity.class)` transforme directement les arguments `JSON` en `record`, plus besoin de les parser à la main
+ - lignes 108 à 111 : le message `tool`, avec le résultat sérialisé en `JSON` par le SDK
+ - lignes 119 à 121 : l'ajout des deux messages dans la conversation
+ - ligne 128 : le deuxième appel
 
 La description et le code de la fonction sont maintenant au même endroit, et le compilateur veille à ce qu'ils restent cohérents 😎.
 En revanche, l'orchestration reste à notre charge : c'est toujours nous qui lisons la demande d'appel, exécutons la fonction et rappelons le modèle.
@@ -728,13 +794,15 @@ Et à la fin :
 ===== 🛠️ TOOL CALL (requested by the model) 🛠️ =====
 get_room_capacity {"room": "Nautilus"}
 
+🐞 GetRoomCapacity called for room "Nautilus", returning capacity 272
+
 ===== 🛠️ TOOL RESULT (sent back to the model) 🛠️ =====
-{"room":"Nautilus","capacity":132}
+{"room":"Nautilus","capacity":272}
 
 ...
 
 ===== 🤖 ANSWER 🤖 =====
-The Nautilus room can accommodate **132 people**.
+The Nautilus room can accommodate **272 people**.
 ```
 
 Pour voir le source complet de cet exemple, c'est [ici](https://github.com/philippart-s/java-ai-area-blog/blob/main/02_sdk_java/_02_06_FunctionCalling.java) 📜.

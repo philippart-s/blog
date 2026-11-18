@@ -854,7 +854,12 @@ record RoomCapacity(String room, int capacity) {}
 class RoomTools {
     @Tool("Returns the number of seats of a conference room")
     RoomCapacity getRoomCapacity(@P("Name of the room, e.g. Coral") String room) {
-        return new RoomCapacity(room, ThreadLocalRandom.current().nextInt(50, 501));
+        var capacity = ThreadLocalRandom.current().nextInt(50, 501);
+
+        IO.println("🐞 getRoomCapacity called for room \"" + room + "\", returning capacity " + capacity);
+        IO.println();
+
+        return new RoomCapacity(room, capacity);
     }
 }
 
@@ -905,10 +910,10 @@ void main() {
 ```
 |}
 
- - lignes 34 à 39 : la fonction est une méthode Java annotée avec `@Tool` (sa description) et `@P` (la description du paramètre)
- - ligne 62 : on branche les outils sur l'AI Service, comme la mémoire dans la partie 2 ou le _retriever_ dans la partie 4
- - lignes 63 à 72 : deux _callbacks_, appelés avant et après l'exécution de l'outil, qui ne servent qu'à afficher ce qui se passe
- - ligne 80 : l'appel à l'assistant, qui ne prend que la question
+ - lignes 34 à 44 : la fonction est une méthode Java annotée avec `@Tool` (sa description) et `@P` (la description du paramètre), avec sa trace 🐞
+ - ligne 67 : on branche les outils sur l'AI Service, comme la mémoire dans la partie 2 ou le _retriever_ dans la partie 4
+ - lignes 68 à 77 : deux _callbacks_, appelés avant et après l'exécution de l'outil, qui ne servent qu'à afficher ce qui se passe
+ - ligne 85 : l'appel à l'assistant, qui ne prend que la question
 
 Et c'est tout 🤯.
 Pendant l'appel à `chat`, LangChain4j envoie la question et la description de l'outil, détecte la demande d'appel, exécute la méthode, renvoie le résultat au modèle et nous rend la réponse finale.
@@ -921,11 +926,13 @@ What is the capacity of the Nautilus room?
 ===== 🛠️ TOOL CALL (requested by the model) 🛠️ =====
 getRoomCapacity {"room": "Nautilus"}
 
+🐞 getRoomCapacity called for room "Nautilus", returning capacity 95
+
 ===== 🛠️ TOOL RESULT (sent back to the model) 🛠️ =====
-{"room":"Nautilus","capacity":412}
+{"room":"Nautilus","capacity":95}
 
 ===== 🤖 ANSWER 🤖 =====
-The Nautilus room can accommodate **412** people.
+The Nautilus room can accommodate **95 people**.
 ```
 
 Notez que la fonction s'appelle maintenant `getRoomCapacity` : par défaut, LangChain4j utilise le nom de la méthode Java comme nom de fonction.
@@ -992,7 +999,12 @@ record RoomCapacity(String room, int capacity) {}
 class RoomTools {
     @Tool("Returns the number of seats of a conference room")
     RoomCapacity getRoomCapacity(@P("Name of the room, e.g. Coral") String room) {
-        return new RoomCapacity(room, ThreadLocalRandom.current().nextInt(50, 501));
+        var capacity = ThreadLocalRandom.current().nextInt(50, 501);
+
+        IO.println("🐞 getRoomCapacity called for room \"" + room + "\", returning capacity " + capacity);
+        IO.println();
+
+        return new RoomCapacity(room, capacity);
     }
 }
 
@@ -1043,10 +1055,10 @@ public class _04_06_FunctionCalling implements QuarkusApplication {
 |}
 
  - ligne 5 : l'option `-parameters` du compilateur conserve le nom des paramètres dans le bytecode, c'est de là que Quarkus tire le nom du paramètre `room` dans la description envoyée au modèle
- - lignes 44 à 50 : l'outil, le même qu'avec LangChain4j, mais en tant que bean CDI (`@ApplicationScoped`)
- - ligne 54 : les outils sont déclarés directement dans l'annotation `@RegisterAiService`
- - ligne 77 : l'appel, avec uniquement la question
- - lignes 85 à 93 : un _observer_ CDI de l'événement `ToolExecutedEvent`, émis après chaque exécution d'outil, qui ne sert qu'à l'affichage
+ - lignes 44 à 55 : l'outil, le même qu'avec LangChain4j (trace 🐞 comprise), mais en tant que bean CDI (`@ApplicationScoped`)
+ - ligne 59 : les outils sont déclarés directement dans l'annotation `@RegisterAiService`
+ - ligne 82 : l'appel, avec uniquement la question
+ - lignes 90 à 98 : un _observer_ CDI de l'événement `ToolExecutedEvent`, émis après chaque exécution d'outil, qui ne sert qu'à l'affichage
 
 La configuration est celle des articles précédents (`application.properties`), il n'y a rien à ajouter pour le function calling.
 
@@ -1054,18 +1066,22 @@ La configuration est celle des articles précédents (`application.properties`),
 ===== ❓ QUESTION ❓ =====
 What is the capacity of the Nautilus room?
 
+🐞 getRoomCapacity called for room "Nautilus", returning capacity 391
+
 ===== 🛠️ TOOL CALL (requested by the model) 🛠️ =====
 getRoomCapacity {"room": "Nautilus"}
 
 ===== 🛠️ TOOL RESULT (sent back to the model) 🛠️ =====
 {
   "room" : "Nautilus",
-  "capacity" : 412
+  "capacity" : 391
 }
 
 ===== 🤖 ANSWER 🤖 =====
-The Nautilus room can accommodate **412** people.
+The Nautilus room can accommodate **391** people.
 ```
+
+Vous remarquerez que la trace 🐞 apparaît **avant** la demande d'appel : l'événement `ToolExecutedEvent` n'est émis qu'une fois l'outil exécuté, l'_observer_ affiche donc la demande et le résultat après coup.
 
 Petite différence amusante : avec Quarkus, le résultat est sérialisé en `JSON` indenté.
 Le modèle, lui, s'en moque complètement 😉.
@@ -1133,7 +1149,12 @@ record RoomCapacity(String room, int capacity) {}
 class RoomTools {
     @Tool(description = "Returns the number of seats of a conference room")
     RoomCapacity getRoomCapacity(@ToolParam(description = "Name of the room, e.g. Coral") String room) {
-        return new RoomCapacity(room, ThreadLocalRandom.current().nextInt(50, 501));
+        var capacity = ThreadLocalRandom.current().nextInt(50, 501);
+
+        IO.println("🐞 getRoomCapacity called for room \"" + room + "\", returning capacity " + capacity);
+        IO.println();
+
+        return new RoomCapacity(room, capacity);
     }
 }
 
@@ -1203,10 +1224,10 @@ public class _05_06_FunctionCalling {
 |}
 
  - ligne 5 : comme pour Quarkus, `-parameters` pour que Spring AI connaisse le nom du paramètre
- - lignes 48 à 53 : l'outil, avec les annotations `@Tool` et `@ToolParam` de Spring AI (même principe, autre package 😉)
- - lignes 57 à 76 : un `ToolCallback` qui enveloppe l'outil pour afficher l'appel et le résultat, il n'est pas nécessaire au fonctionnement
- - ligne 97 : on branche l'outil sur le `ChatClient`, sans l'affichage, un simple `.defaultTools(new RoomTools())` suffirait
- - lignes 107 à 110 : l'appel, avec uniquement la question
+ - lignes 48 à 58 : l'outil, avec les annotations `@Tool` et `@ToolParam` de Spring AI (même principe, autre package 😉), et toujours la trace 🐞
+ - lignes 62 à 81 : un `ToolCallback` qui enveloppe l'outil pour afficher l'appel et le résultat, il n'est pas nécessaire au fonctionnement
+ - ligne 102 : on branche l'outil sur le `ChatClient`, sans l'affichage, un simple `.defaultTools(new RoomTools())` suffirait
+ - lignes 112 à 115 : l'appel, avec uniquement la question
 
 Comme avec LangChain4j, c'est le framework qui orchestre tout pendant l'appel : le `ChatClient` détecte la demande d'appel, exécute l'outil (via son `ToolCallingManager`), renvoie le résultat au modèle et boucle jusqu'à obtenir la réponse finale.
 
@@ -1217,11 +1238,13 @@ What is the capacity of the Nautilus room?
 ===== 🛠️ TOOL CALL (requested by the model) 🛠️ =====
 getRoomCapacity {"room": "Nautilus"}
 
+🐞 getRoomCapacity called for room "Nautilus", returning capacity 446
+
 ===== 🛠️ TOOL RESULT (sent back to the model) 🛠️ =====
-{"room":"Nautilus","capacity":350}
+{"room":"Nautilus","capacity":446}
 
 ===== 🤖 ANSWER 🤖 =====
-The Nautilus room has a capacity of **350** seats.
+The Nautilus room can accommodate **446** people.
 ```
 
 Pour voir le source complet de cet exemple, c'est [ici](https://github.com/philippart-s/java-ai-area-blog/blob/main/05_spring/_05_06_FunctionCalling.java) 📜.

@@ -1254,7 +1254,7 @@ Dans une vraie application, quelques points méritent votre attention :
  - **la sécurité** ⚠️ : ce sont les arguments générés par le modèle qui sont passés à votre code, il faut donc les traiter comme n'importe quelle entrée utilisateur (validation, droits d'accès, ...), surtout si la fonction modifie des données
  - **le coût** 💸 : chaque outil déclaré est envoyé à chaque appel, et chaque demande d'appel ajoute un aller-retour avec le modèle
 
-Vous retrouverez les détails sur oe function calling ici :
+Vous retrouverez les détails sur le function calling ici :
 - [LangChain4j](https://docs.langchain4j.dev/tutorials/tools)
 - [Quarkus LangChain4j](https://docs.quarkiverse.io/quarkus-langchain4j/dev/function-calling.html)
 - [Spring AI](https://docs.spring.io/spring-ai/reference/api/tools.html)

@@ -10,6 +10,8 @@ tags:
 author: wildagsx
 ---
 
+🏴󠁧󠁢󠁥󠁮󠁧󠁿 You can find the English version of this article [here]({site.url}2026-11-16-java-and-ai-part5-en) 🏴󠁧󠁢󠁥󠁮󠁧󠁿.
+
 ## TL;DR
 > 🛠️ Cinquième article de la série sur l'IA dans vos applications Java ☕️, cette fois consacré au **function calling** (ou _tool calling_).  
 > 🤷 Un modèle ne connaît pas les données qui changent (la capacité d'une salle, la météo, l'état d'une commande) et ne sait rien faire d'autre que produire du texte.  

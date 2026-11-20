@@ -954,9 +954,6 @@ Avec Quarkus, l'outil devient un bean CDI, déclaré sur l'AI Service.
 ```java
 ///usr/bin/env jbang "$0" "$@" ; exit $?
 //JAVA 26+
-// Keeps the parameter names in the bytecode: the name of the tool parameter is
-// read from there.
-//JAVAC_OPTIONS -parameters
 // jboss-threads needs java.lang opened on Java 24+ (thread-local reset capability).
 //JAVA_OPTIONS --add-opens=java.base/java.lang=ALL-UNNAMED
 //DEPS io.quarkus.platform:quarkus-bom:3.33.4.1@pom
@@ -1054,11 +1051,10 @@ public class _04_06_FunctionCalling implements QuarkusApplication {
 ```
 |}
 
- - ligne 5 : l'option `-parameters` du compilateur conserve le nom des paramètres dans le bytecode, c'est de là que Quarkus tire le nom du paramètre `room` dans la description envoyée au modèle
- - lignes 44 à 55 : l'outil, le même qu'avec LangChain4j (trace 🐞 comprise), mais en tant que bean CDI (`@ApplicationScoped`)
- - ligne 59 : les outils sont déclarés directement dans l'annotation `@RegisterAiService`
- - ligne 82 : l'appel, avec uniquement la question
- - lignes 90 à 98 : un _observer_ CDI de l'événement `ToolExecutedEvent`, émis après chaque exécution d'outil, qui ne sert qu'à l'affichage
+ - lignes 41 à 52 : l'outil, le même qu'avec LangChain4j, mais en tant que bean CDI (`@ApplicationScoped`)
+ - ligne 56 : les outils sont déclarés directement dans l'annotation `@RegisterAiService`
+ - ligne 79 : l'appel, avec uniquement la question
+ - lignes 87 à 95 : un _observer_ CDI de l'événement `ToolExecutedEvent`, émis après chaque exécution d'outil, qui ne sert qu'à l'affichage
 
 La configuration est celle des articles précédents (`application.properties`), il n'y a rien à ajouter pour le function calling.
 
@@ -1081,10 +1077,7 @@ getRoomCapacity {"room": "Nautilus"}
 The Nautilus room can accommodate **391** people.
 ```
 
-Vous remarquerez que la trace 🐞 apparaît **avant** la demande d'appel : l'événement `ToolExecutedEvent` n'est émis qu'une fois l'outil exécuté, l'_observer_ affiche donc la demande et le résultat après coup.
-
-Petite différence amusante : avec Quarkus, le résultat est sérialisé en `JSON` indenté.
-Le modèle, lui, s'en moque complètement 😉.
+Vous remarquerez que la trace 🐞 apparaît **avant** la demande d'appel : l'événement `ToolExecutedEvent` (on verra qu'il y a d'autres moyens de faire des actions avant l'appel de l'outil) n'est émis qu'une fois l'outil exécuté, l'_observer_ affiche donc la demande et le résultat après coup.
 
 Pour voir le source complet de cet exemple, c'est [ici](https://github.com/philippart-s/java-ai-area-blog/blob/main/04_quarkus/_04_06_FunctionCalling.java) 📜.
 
@@ -1101,9 +1094,6 @@ Pour finir, voyons comment [Spring AI](https://docs.spring.io/spring-ai/referenc
 ```java
 ///usr/bin/env jbang "$0" "$@" ; exit $?
 //JAVA 26+
-// Keeps the parameter names in the bytecode: the name of the tool parameter is
-// read from there.
-//JAVAC_OPTIONS -parameters
 //DEPS org.springframework.boot:spring-boot-dependencies:4.1.2@pom
 //DEPS org.springframework.ai:spring-ai-bom:2.0.2@pom
 //DEPS org.springframework.boot:spring-boot-starter:4.1.2
@@ -1223,11 +1213,10 @@ public class _05_06_FunctionCalling {
 ```
 |}
 
- - ligne 5 : comme pour Quarkus, `-parameters` pour que Spring AI connaisse le nom du paramètre
- - lignes 48 à 58 : l'outil, avec les annotations `@Tool` et `@ToolParam` de Spring AI (même principe, autre package 😉), et toujours la trace 🐞
- - lignes 62 à 81 : un `ToolCallback` qui enveloppe l'outil pour afficher l'appel et le résultat, il n'est pas nécessaire au fonctionnement
- - ligne 102 : on branche l'outil sur le `ChatClient`, sans l'affichage, un simple `.defaultTools(new RoomTools())` suffirait
- - lignes 112 à 115 : l'appel, avec uniquement la question
+ - lignes 45 à 55 : l'outil, avec les annotations `@Tool` et `@ToolParam` de Spring AI (même principe, autre package 😉), et toujours la trace 🐞
+ - lignes 59 à 78 : un `ToolCallback` qui enveloppe l'outil pour afficher l'appel et le résultat, il n'est pas nécessaire au fonctionnement
+ - ligne 99 : on branche l'outil sur le `ChatClient`, sans l'affichage, un simple `.defaultTools(new RoomTools())` suffirait
+ - lignes 109 à 112 : l'appel, avec uniquement la question
 
 Comme avec LangChain4j, c'est le framework qui orchestre tout pendant l'appel : le `ChatClient` détecte la demande d'appel, exécute l'outil (via son `ToolCallingManager`), renvoie le résultat au modèle et boucle jusqu'à obtenir la réponse finale.
 
@@ -1263,14 +1252,16 @@ Dans une vraie application, quelques points méritent votre attention :
  - **la sécurité** ⚠️ : ce sont les arguments générés par le modèle qui sont passés à votre code, il faut donc les traiter comme n'importe quelle entrée utilisateur (validation, droits d'accès, ...), surtout si la fonction modifie des données
  - **le coût** 💸 : chaque outil déclaré est envoyé à chaque appel, et chaque demande d'appel ajoute un aller-retour avec le modèle
 
+Vous retrouverez les détails sur oe function calling ici :
+- [LangChain4j](https://docs.langchain4j.dev/tutorials/tools)
+- [Quarkus LangChain4j](https://docs.quarkiverse.io/quarkus-langchain4j/dev/function-calling.html)
+- [Spring AI](https://docs.spring.io/spring-ai/reference/api/tools.html)
+
 Et si on pousse le principe un peu plus loin :
  - laisser le modèle enchaîner les appels d'outils en autonomie jusqu'à atteindre un objectif, c'est le principe des **agents** 🤖
  - partager des outils entre applications plutôt que de les coder dans chacune, c'est le principe de [MCP](https://modelcontextprotocol.io/) (_Model Context Protocol_) 🔌
 
-Vous retrouverez les détails ici :
-- [LangChain4j](https://docs.langchain4j.dev/tutorials/tools)
-- [Quarkus LangChain4j](https://docs.quarkiverse.io/quarkus-langchain4j/dev/function-calling.html)
-- [Spring AI](https://docs.spring.io/spring-ai/reference/api/tools.html)
+Ce sera l'objet d'articles suivants 😆.
 
 # 🏁 Conclusion
 
